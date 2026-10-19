@@ -1,0 +1,64 @@
+{
+ "product": {
+  "title": "Corsa PRO Limited Edition",
+  "images": [
+   {
+    "src": "https://vittoria.com/cdn/shop/files/corsa-pro-pink-01.webp"
+   },
+   {
+    "src": "https://vittoria.com/cdn/shop/files/corsa-pro-pink-02.webp"
+   },
+   {
+    "src": "https://vittoria.com/cdn/shop/files/corsa-pro-pink-04.webp"
+   }
+  ],
+  "variants": [
+   {
+    "option1": "700x28c",
+    "option2": "Pink",
+    "sku": ""
+   },
+   {
+    "option1": "700x30c",
+    "option2": "Pink",
+    "sku": ""
+   },
+   {
+    "option1": "700x28c",
+    "option2": "Black",
+    "sku": "11A01158"
+   },
+   {
+    "option1": "700x30c",
+    "option2": "Black",
+    "sku": "11A01159"
+   },
+   {
+    "option1": "700x28c",
+    "option2": "Red",
+    "sku": ""
+   },
+   {
+    "option1": "700x30c",
+    "option2": "Red",
+    "sku": ""
+   }
+  ],
+  "color_images": {
+   "Pink": [
+    "https://vittoria.com/cdn/shop/files/corsa-pro-pink-01.webp",
+    "https://vittoria.com/cdn/shop/files/corsa-pro-pink-02.webp",
+    "https://vittoria.com/cdn/shop/files/corsa-pro-pink-04.webp"
+   ],
+   "Black": [
+    "https://vittoria.com/cdn/shop/files/CorsaProBlack_01.webp",
+    "https://vittoria.com/cdn/shop/files/CorsaProBlack_02.webp"
+   ],
+   "Red": [
+    "https://vittoria.com/cdn/shop/files/corsa-pro-red-01.webp",
+    "https://vittoria.com/cdn/shop/files/corsa-pro-red-02.webp",
+    "https://vittoria.com/cdn/shop/files/corsa-pro-red-03.webp"
+   ]
+  }
+ }
+}

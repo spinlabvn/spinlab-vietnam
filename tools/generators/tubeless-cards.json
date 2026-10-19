@@ -1,0 +1,67 @@
+[
+ {
+  "file": "vittoria-universal-sealant.html",
+  "group": "sealant",
+  "name": "Universal Tubeless Sealant",
+  "cat": "Keo tự vá",
+  "tag": "Không amoniac",
+  "desc": "Vá tức thì lỗ thủng tới 7mm",
+  "imgs": [
+   "universal-tire-sealant-family",
+   "vittoria-Universal-Tire-Sealant-80ml",
+   "vittoria-Universal-Tire-Sealant-250ml",
+   "vittoria-Universal-Tire-Sealant-500ml"
+  ]
+ },
+ {
+  "file": "vittoria-air-liner-light-xc.html",
+  "group": "air-liner",
+  "name": "Air-Liner Light XC",
+  "cat": "Air-Liner Light",
+  "tag": "MTB · XC",
+  "desc": "Chỉ 55g · Run-flat tới 25 km",
+  "imgs": [
+   "air-liner-light-tire-insert-1",
+   "air-liner-light-tire-insert-2",
+   "air-liner-light-xc"
+  ]
+ },
+ {
+  "file": "vittoria-air-liner-light-gravel.html",
+  "group": "air-liner",
+  "name": "Air-Liner Light Gravel",
+  "cat": "Air-Liner Light",
+  "tag": "Gravel",
+  "desc": "40–45g · 650b & 700c",
+  "imgs": [
+   "air-liner-light-gravel-tire-insert-1",
+   "air-liner-light-gravel",
+   "air-liner-gravel-light-packaging"
+  ]
+ },
+ {
+  "file": "vittoria-air-liner-light-road.html",
+  "group": "air-liner",
+  "name": "Air-Liner Light Road",
+  "cat": "Air-Liner Light",
+  "tag": "Road",
+  "desc": "29–40g · Run-flat tới 50 km",
+  "imgs": [
+   "air-liner-light-road-insert-01",
+   "air-liner-light-road",
+   "air-liner-light-road-insert-03",
+   "air-liner-light-road-insert-02"
+  ]
+ },
+ {
+  "file": "vittoria-multiway-valve.html",
+  "group": "valve",
+  "name": "Chân van Multiway (bộ 2 van)",
+  "cat": "Chân van",
+  "tag": "Bộ 2 van",
+  "desc": "Nhôm · 40 / 60 / 80 / 100mm · bộ 2 van",
+  "imgs": [
+   "multiway-valves"
+  ]
+ }
+]

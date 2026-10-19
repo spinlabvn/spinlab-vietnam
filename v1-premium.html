@@ -1,0 +1,783 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spinlab — Bản thiết kế trang chủ</title>
+<meta name="description" content="Spinlab — Nhà phân phối xe đạp và phụ tùng chính hãng. Bản thiết kế xem trước.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Be+Vietnam+Pro:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Brand */
+  --brand-yellow:#FDD752;
+  --brand-red:#8E210A;
+  --brand-red-deep:#6E1807;
+  /* Neutrals (warm) */
+  --paper:#FBF8F1;
+  --paper-2:#F3EEE2;
+  --ink:#1C1712;
+  --ink-2:#4A423A;
+  --ink-3:#6B6259;
+  --line:#E3DCCD;
+  --white:#FFFFFF;
+  /* Semantic */
+  --bg:var(--paper);
+  --surface:var(--white);
+  --text:var(--ink);
+  --muted:var(--ink-3);
+  --primary:var(--brand-red);
+  --on-primary:var(--brand-yellow);
+  --accent:var(--brand-yellow);
+  --on-accent:var(--brand-red);
+  --focus:#1C1712;
+  /* Type */
+  --f-display:"Archivo", system-ui, sans-serif;
+  --f-body:"Be Vietnam Pro", system-ui, sans-serif;
+  --f-mono:"JetBrains Mono", ui-monospace, monospace;
+  /* Space (8pt) */
+  --s1:4px;--s2:8px;--s3:16px;--s4:24px;--s5:32px;--s6:48px;--s7:64px;--s8:96px;--s9:128px;
+  --radius:4px;
+  --container:1280px;
+  --ease:cubic-bezier(.2,.7,.2,1);
+  --logo:url("data:image/png;base64,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");
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:400 16px/1.6 var(--f-body);-webkit-font-smoothing:antialiased}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--focus);outline-offset:3px;border-radius:2px}
+.on-dark :focus-visible,.on-dark:focus-visible{outline-color:var(--brand-yellow)}
+.skip{position:absolute;left:-9999px;top:8px;z-index:1000;background:var(--ink);color:var(--paper);padding:12px 16px}
+.skip:focus{left:16px}
+.container{width:100%;max-width:var(--container);margin:0 auto;padding:0 16px}
+@media (min-width:768px){.container{padding:0 32px}}
+@media (min-width:1280px){.container{padding:0 48px}}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* Logo (white PNG recoloured via mask) */
+.logo{display:block;aspect-ratio:886/188;background:currentColor;-webkit-mask:var(--logo) center/contain no-repeat;mask:var(--logo) center/contain no-repeat}
+
+/* Type */
+.display{font-family:var(--f-display);font-variation-settings:"wdth" 118;font-weight:800;letter-spacing:-.025em;line-height:.95;margin:0;text-wrap:balance}
+.h2{font-family:var(--f-display);font-variation-settings:"wdth" 112;font-weight:750;font-size:clamp(32px,4.4vw,56px);letter-spacing:-.02em;line-height:1;margin:0;text-wrap:balance}
+.h3{font-family:var(--f-display);font-variation-settings:"wdth" 105;font-weight:700;font-size:20px;line-height:1.2;margin:0}
+.eyebrow{font-family:var(--f-mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);display:flex;gap:12px;align-items:center}
+.eyebrow::before{content:"";width:24px;height:1px;background:currentColor}
+.lead{font-size:18px;line-height:1.65;color:var(--ink-2);max-width:52ch}
+.mono{font-family:var(--f-mono);font-variant-numeric:tabular-nums}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 24px;border:1px solid transparent;border-radius:var(--radius);font-weight:600;font-size:15px;transition:background-color .2s var(--ease),color .2s var(--ease),border-color .2s var(--ease),transform .15s var(--ease);touch-action:manipulation}
+.btn:active{transform:scale(.98)}
+.btn svg{width:18px;height:18px;transition:transform .25s var(--ease)}
+.btn:hover svg{transform:translateX(3px)}
+.btn-primary{background:var(--primary);color:var(--on-primary)}
+.btn-primary:hover{background:var(--brand-red-deep)}
+.btn-ghost{border-color:var(--ink);color:var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:var(--paper)}
+.btn-yellow{background:var(--brand-yellow);color:var(--brand-red)}
+.btn-yellow:hover{background:#FFE27F}
+.link{display:inline-flex;align-items:center;gap:8px;font-weight:600;border-bottom:1px solid currentColor;padding-bottom:2px}
+.link svg{width:16px;height:16px;transition:transform .25s var(--ease)}
+.link:hover svg{transform:translateX(3px)}
+
+/* Topbar */
+.topbar{background:var(--brand-red);color:var(--brand-yellow);font-size:13px}
+.topbar .container{display:flex;justify-content:space-between;align-items:center;min-height:40px;gap:16px}
+.topbar a{text-decoration:underline;text-underline-offset:3px}
+.topbar .tb-right{display:none;gap:24px}
+@media (min-width:768px){.topbar .tb-right{display:flex}}
+
+/* Header */
+.header{position:sticky;top:0;z-index:40;background:rgba(251,248,241,.92);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line)}
+.header .container{display:flex;align-items:center;gap:32px;min-height:72px}
+.header .logo{width:128px;color:var(--brand-red);flex:none}
+.nav{display:none;gap:4px;flex:1}
+.nav a{padding:10px 14px;font-weight:500;font-size:15px;border-radius:var(--radius);position:relative}
+.nav a:hover{background:var(--paper-2)}
+.nav a[aria-current="page"]::after{content:"";position:absolute;left:14px;right:14px;bottom:4px;height:2px;background:var(--brand-red)}
+.h-actions{display:flex;align-items:center;gap:8px;margin-left:auto}
+.icon-btn{display:inline-grid;place-items:center;width:44px;height:44px;border:0;background:none;border-radius:var(--radius)}
+.icon-btn:hover{background:var(--paper-2)}
+.icon-btn svg{width:22px;height:22px}
+.lang{display:inline-flex;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;font-family:var(--f-mono);font-size:12px}
+.lang a{padding:8px 10px;min-width:40px;text-align:center}
+.lang a[aria-current="true"]{background:var(--ink);color:var(--paper)}
+.h-cta{display:none}
+@media (max-width:479px){.header .container{gap:12px}.header .logo{width:104px}.h-actions{gap:0}.lang{display:none}}
+@media (min-width:1080px){.nav{display:flex}.h-cta{display:inline-flex}.menu-btn{display:none}}
+
+/* Hero */
+.hero{padding:48px 0 0;overflow:hidden}
+.hero-grid{display:grid;gap:40px}
+.hero h1{font-size:clamp(42px,6vw,88px)}
+.hero h1 em{font-style:normal;color:var(--brand-red)}
+.hero .lead{margin:24px 0 32px}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px}
+.hero-meta{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px;padding-top:24px;border-top:1px solid var(--line)}
+.hero-meta b{display:block;font-family:var(--f-display);font-variation-settings:"wdth" 115;font-size:clamp(24px,3vw,36px);font-weight:750;line-height:1;letter-spacing:-.02em}
+.hero-meta span{font-size:13px;color:var(--muted)}
+.hero-visual{position:relative;background:var(--brand-yellow);border-radius:var(--radius);aspect-ratio:5/4;display:grid;place-items:center;overflow:hidden}
+.hero-visual .grid-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(142,33,10,.09) 1px,transparent 1px),linear-gradient(90deg,rgba(142,33,10,.09) 1px,transparent 1px);background-size:40px 40px}
+.hero-visual .bike{position:relative;width:92%;height:auto;filter:drop-shadow(0 24px 24px rgba(110,24,7,.18))}
+.callout{position:absolute;font-family:var(--f-mono);font-size:11px;color:var(--brand-red);display:flex;align-items:center;gap:8px;letter-spacing:.04em}
+.callout i{width:8px;height:8px;border-radius:50%;background:var(--brand-red);box-shadow:0 0 0 4px rgba(142,33,10,.15)}
+.c1{top:14%;left:8%}.c2{top:20%;right:7%}.c3{bottom:9%;right:7%}
+.hero-tag{position:absolute;left:16px;bottom:16px;background:var(--paper);padding:12px 14px;border-radius:var(--radius);font-size:13px;max-width:220px;box-shadow:0 1px 0 var(--line)}
+.hero-tag b{display:block;font-family:var(--f-display);font-variation-settings:"wdth" 108;font-size:15px}
+@media (min-width:960px){.hero{padding-top:72px}.hero-grid{grid-template-columns:1.15fr 1fr;align-items:center;gap:64px}}
+
+/* Brand strip */
+.brands{margin-top:72px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--paper)}
+.brands .container{display:flex;flex-wrap:wrap;align-items:center;gap:24px 48px;min-height:104px;padding-top:20px;padding-bottom:20px}
+.brands p{margin:0;font-size:13px;color:var(--muted);line-height:1.4}
+.brand-row{display:flex;gap:48px;align-items:center}
+.brand-row img{height:26px;width:auto}
+.brand-row img.poly,.partner-body .p-logo.poly{height:56px}
+
+/* Brand partners */
+.partners{display:grid;gap:16px}
+@media (min-width:960px){.partners{grid-template-columns:1fr 1fr}}
+.partner{position:relative;display:flex;flex-direction:column;border-radius:var(--radius);overflow:hidden;background:var(--surface);border:1px solid var(--line)}
+.partner-media{position:relative;aspect-ratio:16/9;overflow:hidden;background:var(--paper-2)}
+.partner-media img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+.partner:hover .partner-media img{transform:scale(1.03)}
+.partner-media.contain{display:grid;place-items:center;background:#F4F4F2}
+.partner-media.contain img{width:auto;height:88%;object-fit:contain;mix-blend-mode:multiply}
+.partner-body{padding:28px;display:flex;flex-direction:column;gap:14px;flex:1}
+.partner-body .p-logo{height:28px;width:auto;align-self:flex-start}
+.partner-body p{margin:0;color:var(--ink-2);max-width:52ch}
+.partner-tags{display:flex;flex-wrap:wrap;gap:6px;list-style:none;margin:0;padding:0}
+.partner-tags li{font-size:12px;padding:4px 10px;border:1px solid var(--line);border-radius:999px}
+.partner .link{margin-top:auto;align-self:flex-start}
+
+/* Sections */
+.section{padding:96px 0}
+@media (min-width:960px){.section{padding:128px 0}}
+.section-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:24px;margin-bottom:48px}
+.section-head .h2{margin-top:16px;max-width:16ch}
+
+/* Categories */
+.cats{display:grid;gap:16px;grid-template-columns:1fr}
+@media (min-width:640px){.cats{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1024px){.cats{grid-template-columns:repeat(6,1fr)}.cat:nth-child(1),.cat:nth-child(2){grid-column:span 3}.cat:nth-child(n+3){grid-column:span 2}}
+.cat{position:relative;display:flex;flex-direction:column;justify-content:space-between;min-height:280px;padding:24px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:border-color .25s var(--ease)}
+.cat:hover{border-color:var(--ink)}
+.cat .num{font-family:var(--f-mono);font-size:12px;color:var(--muted)}
+.cat .art{color:var(--ink);width:78%;margin:16px auto;transition:transform .5s var(--ease)}
+.cat img.art{width:100%;max-width:420px;height:auto;aspect-ratio:3/2;object-fit:contain;mix-blend-mode:multiply}
+.cat.cover{background:var(--ink);border-color:var(--ink);color:var(--white);min-height:420px}
+.cat.cover .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+.cat.cover:hover .bg{transform:scale(1.04)}
+.cat.cover::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(28,23,18,.45),rgba(28,23,18,0) 22%,rgba(28,23,18,0) 50%,rgba(28,23,18,.8))}
+.cat.cover>*:not(.bg){position:relative;z-index:1}
+.cat.cover .num,.cat.cover small{color:rgba(255,255,255,.8)}
+.cat.cover .arrow{border-color:rgba(255,255,255,.5)}
+.cat.cover:hover .arrow{background:var(--brand-yellow);border-color:var(--brand-yellow);color:var(--brand-red)}
+.cat:hover .art{transform:translateX(8px)}
+.cat-foot{display:flex;justify-content:space-between;align-items:end;gap:16px}
+.cat-foot small{display:block;color:var(--muted);font-size:13px;margin-top:4px}
+.cat .arrow{flex:none;display:grid;place-items:center;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);transition:background-color .25s var(--ease),color .25s var(--ease),border-color .25s var(--ease)}
+.cat:hover .arrow{background:var(--brand-red);border-color:var(--brand-red);color:var(--brand-yellow)}
+.cat .arrow svg{width:18px;height:18px}
+.cat.feature{background:var(--brand-red);color:var(--brand-yellow);border-color:var(--brand-red)}
+.cat.feature .art{color:var(--brand-yellow)}
+.cat.feature .num,.cat.feature small{color:rgba(253,215,82,.75)}
+.cat.feature .arrow{border-color:rgba(253,215,82,.4)}
+.cat.feature:hover .arrow{background:var(--brand-yellow);color:var(--brand-red)}
+
+/* Products */
+.products-bg{background:var(--paper-2)}
+.tabs{display:flex;gap:8px;flex-wrap:wrap}
+.tab{min-height:44px;padding:0 18px;border:1px solid var(--line);background:var(--paper);border-radius:999px;font-size:14px;font-weight:500;transition:all .2s var(--ease)}
+.tab:hover{border-color:var(--ink)}
+.tab[aria-selected="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.products{display:grid;gap:16px;grid-template-columns:1fr}
+@media (min-width:640px){.products{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1024px){.products{grid-template-columns:repeat(4,1fr)}}
+.card{display:flex;flex-direction:column;background:var(--surface);border-radius:var(--radius);overflow:hidden;transition:box-shadow .3s var(--ease),transform .3s var(--ease)}
+.card:hover{box-shadow:0 18px 40px -24px rgba(28,23,18,.35);transform:translateY(-2px)}
+.card-media{position:relative;aspect-ratio:4/3;background:var(--paper);display:grid;place-items:center;border-bottom:1px solid var(--line)}
+.card-media .art{width:76%;color:var(--ink)}
+.card-media img.art{width:88%;height:auto;aspect-ratio:3/2;object-fit:contain}
+.card-media img.tire{width:58%;height:auto;aspect-ratio:auto;mix-blend-mode:multiply}
+.post-media img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+.post:hover .post-media img{transform:scale(1.04)}
+.badge{position:absolute;top:12px;left:12px;font-family:var(--f-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:5px 8px;border-radius:2px;background:var(--brand-yellow);color:var(--brand-red);font-weight:500}
+.badge.dark{background:var(--ink);color:var(--paper)}
+.swatches{position:absolute;right:12px;bottom:12px;display:flex;gap:6px}
+.swatches i{width:14px;height:14px;border-radius:50%;border:2px solid var(--white);box-shadow:0 0 0 1px var(--line)}
+.card-body{padding:20px;display:flex;flex-direction:column;gap:12px;flex:1}
+.card-brand{font-family:var(--f-mono);font-size:12px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.specs{display:flex;flex-wrap:wrap;gap:6px;margin:0;padding:0;list-style:none}
+.specs li{font-size:12px;padding:4px 8px;border:1px solid var(--line);border-radius:2px;color:var(--ink-2)}
+.card-foot{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:12px;border-top:1px dashed var(--line);gap:12px}
+.price small{display:block;font-size:11px;color:var(--muted)}
+.price b{font-family:var(--f-mono);font-weight:500;font-size:15px}
+.quote-btn{min-height:40px;padding:0 14px;border:1px solid var(--ink);background:none;border-radius:var(--radius);font-size:13px;font-weight:600;transition:all .2s var(--ease)}
+.quote-btn:hover{background:var(--ink);color:var(--paper)}
+
+/* Lab / story */
+.lab{display:grid;gap:48px}
+@media (min-width:960px){.lab{grid-template-columns:1fr 1fr;gap:96px;align-items:center}}
+.lab-visual{position:relative;aspect-ratio:1;background:var(--ink);border-radius:var(--radius);display:grid;place-items:center;overflow:hidden;color:var(--brand-yellow)}
+.lab-visual svg{width:72%}
+.lab-visual .mono{position:absolute;font-size:11px;color:rgba(253,215,82,.7)}
+.pillars{display:grid;gap:0;margin-top:40px;border-top:1px solid var(--line)}
+.pillar{display:grid;grid-template-columns:56px 1fr;gap:16px;padding:24px 0;border-bottom:1px solid var(--line)}
+.pillar .mono{color:var(--brand-red);font-size:13px;padding-top:2px}
+.pillar p{margin:6px 0 0;color:var(--ink-2);font-size:15px}
+
+/* Dealer */
+.dealer{background:var(--brand-yellow);color:var(--brand-red)}
+.dealer-grid{display:grid;gap:48px}
+@media (min-width:960px){.dealer-grid{grid-template-columns:1.1fr 1fr;gap:96px}}
+.dealer .eyebrow{color:var(--brand-red)}
+.dealer .h2{max-width:14ch;margin-top:16px}
+.dealer .lead{color:var(--brand-red)}
+.stats{display:grid;align-self:center;grid-template-columns:repeat(2,1fr);border-top:2px solid var(--brand-red)}
+.stat{padding:24px 0;border-bottom:1px solid rgba(142,33,10,.25)}
+.stat:nth-child(odd){padding-right:16px;border-right:1px solid rgba(142,33,10,.25)}
+.stat:nth-child(even){padding-left:24px}
+.stat b{display:block;font-family:var(--f-display);font-variation-settings:"wdth" 120;font-weight:800;font-size:clamp(40px,5vw,64px);line-height:1;letter-spacing:-.03em}
+.stat span{font-size:14px}
+.benefits{list-style:none;margin:32px 0;padding:0;display:grid;gap:12px}
+.benefits li{display:flex;gap:12px;align-items:flex-start;font-weight:500}
+.benefits svg{flex:none;width:22px;height:22px;margin-top:1px}
+
+/* Store finder */
+.finder{display:grid;gap:32px}
+@media (min-width:960px){.finder{grid-template-columns:380px 1fr;gap:48px}}
+.field{display:flex;flex-direction:column;gap:8px}
+.field label{font-size:14px;font-weight:600}
+.input-wrap{display:flex;border:1px solid var(--ink);border-radius:var(--radius);background:var(--surface);overflow:hidden}
+.input-wrap input,.input-wrap select{flex:1;min-width:0;min-height:52px;border:0;padding:0 16px;font:inherit;background:transparent;color:var(--text)}
+.input-wrap input:focus{outline:none}
+.input-wrap:focus-within{outline:2px solid var(--focus);outline-offset:2px}
+.input-wrap button{border:0;background:var(--brand-red);color:var(--brand-yellow);padding:0 18px;display:grid;place-items:center}
+.input-wrap button svg{width:20px;height:20px}
+.store-list{list-style:none;margin:24px 0 0;padding:0;border-top:1px solid var(--line)}
+.store{display:flex;justify-content:space-between;gap:16px;padding:18px 0;border-bottom:1px solid var(--line)}
+.store p{margin:4px 0 0;font-size:14px;color:var(--muted)}
+.store .tag{font-family:var(--f-mono);font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--brand-red);white-space:nowrap}
+.map{position:relative;min-height:420px;border-radius:var(--radius);background:var(--paper-2);overflow:hidden;border:1px solid var(--line)}
+.map svg{position:absolute;inset:0;width:100%;height:100%}
+.pin{position:absolute;transform:translate(-50%,-100%);display:flex;flex-direction:column;align-items:center}
+.pin span{background:var(--ink);color:var(--paper);font-size:12px;padding:4px 8px;border-radius:2px;white-space:nowrap;font-weight:500}
+.pin i{width:12px;height:12px;border-radius:50%;background:var(--brand-red);border:3px solid var(--paper);margin-top:4px;box-shadow:0 0 0 1px var(--brand-red)}
+.pin.active span{background:var(--brand-red);color:var(--brand-yellow)}
+
+/* Journal */
+.posts{display:grid;gap:32px}
+@media (min-width:768px){.posts{grid-template-columns:repeat(3,1fr);gap:24px}}
+.post-media{aspect-ratio:4/3;border-radius:var(--radius);display:grid;place-items:center;overflow:hidden;margin-bottom:20px}
+.post-media svg{width:60%;transition:transform .6s var(--ease)}
+.post:hover .post-media svg{transform:scale(1.04) rotate(-2deg)}
+.post .meta{font-family:var(--f-mono);font-size:12px;color:var(--muted);display:flex;gap:12px;margin-bottom:10px}
+.post h3{font-family:var(--f-display);font-variation-settings:"wdth" 105;font-weight:700;font-size:22px;line-height:1.2;margin:0 0 10px;text-wrap:balance}
+.post p{margin:0;color:var(--ink-2);font-size:15px}
+
+/* Footer */
+.footer{background:var(--brand-red);color:var(--brand-yellow);padding:96px 0 32px}
+.footer .big-logo{width:100%;max-width:1180px;color:var(--brand-yellow);margin-bottom:64px}
+.f-grid{display:grid;gap:40px;grid-template-columns:1fr 1fr}
+@media (min-width:960px){.f-grid{grid-template-columns:1.6fr repeat(3,1fr)}}
+.f-grid h4{font-family:var(--f-mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:500;margin:0 0 16px;opacity:.75}
+.f-grid ul{list-style:none;margin:0;padding:0;display:grid;gap:10px;font-size:15px}
+.f-grid a:hover{text-decoration:underline;text-underline-offset:3px}
+.f-news{grid-column:1/-1}
+@media (min-width:960px){.f-news{grid-column:auto}}
+.f-news p{margin:0 0 16px;max-width:36ch;font-size:15px}
+.f-news .input-wrap{border-color:var(--brand-yellow);background:transparent}
+.f-news input{color:var(--brand-yellow)}
+.f-news input::placeholder{color:rgba(253,215,82,.65)}
+.f-news .input-wrap button{background:var(--brand-yellow);color:var(--brand-red);font-weight:600;padding:0 18px}
+.f-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;margin-top:64px;padding-top:24px;border-top:1px solid rgba(253,215,82,.3);font-size:13px;opacity:.85}
+
+/* Preview ribbon */
+.ribbon{position:fixed;right:16px;bottom:16px;z-index:100;background:var(--ink);color:var(--paper);font-family:var(--f-mono);font-size:11px;padding:8px 12px;border-radius:2px;letter-spacing:.06em}
+
+/* Reveal */
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+.spin{transform-origin:center;transform-box:fill-box;animation:spin 14s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Bỏ qua đến nội dung chính</a>
+
+<!-- SVG library -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="search" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></g></symbol>
+    <symbol id="menu" viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="check" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.5"/><path d="m7.5 12.2 3 3 6-6.4"/></g></symbol>
+    <symbol id="pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></g></symbol>
+
+    <!-- Road bike -->
+    <symbol id="bike-road" viewBox="0 0 640 380">
+      <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <g stroke-width="3"><circle cx="140" cy="262" r="104"/><circle cx="500" cy="262" r="104"/></g>
+        <g stroke-width="1.2" opacity=".55"><circle cx="140" cy="262" r="92"/><circle cx="500" cy="262" r="92"/><circle cx="140" cy="262" r="9"/><circle cx="500" cy="262" r="9"/>
+          <path d="M140 170v184M48 262h184M75 197l130 130M75 327l130-130M432 197l136 130M432 327l136-130M500 170v184M408 262h184"/></g>
+        <g stroke-width="7">
+          <path d="M140 262 300 268 272 120Z"/>
+          <path d="M272 120 462 106 300 268"/>
+          <path d="M462 106 452 82"/>
+        </g>
+        <path d="M462 112 Q 490 190 500 262" stroke-width="6"/>
+        <path d="M272 120 264 84" stroke-width="5"/>
+        <path d="M232 78h66c6 0 6 8 0 8h-56c-10 0-14-8-10-8Z" stroke-width="4" fill="currentColor"/>
+        <path d="M452 82 l40 -8 c22 -4 28 12 22 28 -6 16 -24 18 -26 30" stroke-width="5"/>
+        <circle cx="300" cy="268" r="26" stroke-width="4"/>
+        <circle cx="300" cy="268" r="26" stroke-width="5" stroke-dasharray="2 5" opacity=".6"/>
+        <path d="M300 268 330 300" stroke-width="5"/><path d="M320 302h22" stroke-width="5"/>
+        <path d="M140 262 L 286 246 M140 262 L 296 292" stroke-width="1.5" opacity=".5"/>
+      </g>
+    </symbol>
+
+    <!-- Mountain bike -->
+    <symbol id="bike-mtb" viewBox="0 0 640 380">
+      <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <g stroke-width="10" stroke-dasharray="3 7"><circle cx="138" cy="262" r="104"/><circle cx="502" cy="262" r="104"/></g>
+        <g stroke-width="3"><circle cx="138" cy="262" r="96"/><circle cx="502" cy="262" r="96"/></g>
+        <g stroke-width="1.2" opacity=".5"><circle cx="138" cy="262" r="30"/><circle cx="502" cy="262" r="30"/><circle cx="138" cy="262" r="9"/><circle cx="502" cy="262" r="9"/></g>
+        <g stroke-width="9">
+          <path d="M138 262 296 270 266 132"/>
+          <path d="M138 262 250 158"/>
+          <path d="M262 150 452 118"/>
+          <path d="M296 270 452 140"/>
+          <path d="M452 118 446 96"/>
+        </g>
+        <path d="M250 158 300 196" stroke-width="12" opacity=".9"/>
+        <g stroke-width="10"><path d="M454 132 474 196"/></g>
+        <path d="M474 196 502 262" stroke-width="6"/>
+        <path d="M266 132 258 92" stroke-width="6"/>
+        <path d="M226 86h64c6 0 6 9 0 9h-54c-10 0-14-9-10-9Z" stroke-width="4" fill="currentColor"/>
+        <path d="M446 96 476 86 M450 92h-14 M476 86h38" stroke-width="6"/>
+        <circle cx="296" cy="270" r="22" stroke-width="4"/>
+        <path d="M296 270 272 306" stroke-width="6"/><path d="M262 308h22" stroke-width="5"/>
+        <circle cx="502" cy="262" r="38" stroke-width="2" opacity=".7"/>
+      </g>
+    </symbol>
+
+    <!-- City bike -->
+    <symbol id="bike-city" viewBox="0 0 640 380">
+      <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <g stroke-width="4"><circle cx="140" cy="262" r="100"/><circle cx="500" cy="262" r="100"/></g>
+        <g stroke-width="1.2" opacity=".5"><circle cx="140" cy="262" r="90"/><circle cx="500" cy="262" r="90"/><circle cx="140" cy="262" r="8"/><circle cx="500" cy="262" r="8"/></g>
+        <path d="M40 240 A100 100 0 0 1 200 170" stroke-width="6" opacity=".7"/>
+        <path d="M430 186 A100 100 0 0 1 594 228" stroke-width="6" opacity=".7"/>
+        <g stroke-width="8">
+          <path d="M140 262 296 268 262 130"/>
+          <path d="M140 262 258 150"/>
+          <path d="M296 268 Q 330 150 446 136"/>
+          <path d="M446 136 434 92"/>
+        </g>
+        <path d="M450 140 500 262" stroke-width="6"/>
+        <path d="M262 130 256 96" stroke-width="5"/>
+        <path d="M226 90c10-10 56-10 62 0 4 8-6 12-30 12s-38-4-32-12Z" stroke-width="4" fill="currentColor"/>
+        <path d="M434 92 c-30-4-44 4-46 14 M434 92 l26-6" stroke-width="6"/>
+        <path d="M150 168 h96 M150 168 v18 M246 168 v18" stroke-width="4"/>
+        <rect x="478" y="140" width="56" height="34" rx="4" stroke-width="4"/>
+        <circle cx="296" cy="268" r="22" stroke-width="4"/>
+        <path d="M296 268 320 300" stroke-width="5"/>
+      </g>
+    </symbol>
+
+    <!-- Kids bike -->
+    <symbol id="bike-kids" viewBox="0 0 640 380">
+      <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <g stroke-width="6"><circle cx="190" cy="272" r="80"/><circle cx="450" cy="272" r="80"/></g>
+        <g stroke-width="1.2" opacity=".5"><circle cx="190" cy="272" r="66"/><circle cx="450" cy="272" r="66"/><circle cx="190" cy="272" r="10"/><circle cx="450" cy="272" r="10"/></g>
+        <g stroke-width="10">
+          <path d="M190 272 320 270 296 166"/>
+          <path d="M190 272 290 180"/>
+          <path d="M320 270 Q 360 190 420 166"/>
+          <path d="M420 166 412 130"/>
+        </g>
+        <path d="M422 170 450 272" stroke-width="8"/>
+        <path d="M296 166 290 136" stroke-width="6"/>
+        <path d="M262 128h58c6 0 6 10 0 10h-48c-12 0-16-10-10-10Z" stroke-width="4" fill="currentColor"/>
+        <path d="M412 130 c-24 0-30 8-30 16 M412 130 l30-4" stroke-width="7"/>
+        <circle cx="320" cy="270" r="18" stroke-width="4"/>
+        <path d="M120 300 h-20 v38 M100 338 h-12" stroke-width="5" opacity=".7"/><circle cx="92" cy="338" r="10" stroke-width="4" opacity=".7"/>
+      </g>
+    </symbol>
+
+    <!-- Parts -->
+    <symbol id="part-chainring" viewBox="0 0 200 200">
+      <g fill="none" stroke="currentColor" stroke-linecap="round">
+        <circle cx="100" cy="100" r="84" stroke-width="8" stroke-dasharray="4 4.8"/>
+        <circle cx="100" cy="100" r="76" stroke-width="3"/>
+        <circle cx="100" cy="100" r="24" stroke-width="3"/>
+        <g stroke-width="10" stroke-linejoin="round"><path d="M100 76V30M120.8 112l39.8 23M79.2 112l-39.8 23M120.8 88l39.8-23M79.2 88 39.4 65M100 124v46"/></g>
+        <circle cx="100" cy="100" r="8" fill="currentColor"/>
+      </g>
+    </symbol>
+    <symbol id="part-wheel" viewBox="0 0 200 200">
+      <g fill="none" stroke="currentColor" stroke-linecap="round">
+        <circle cx="100" cy="100" r="88" stroke-width="10"/><circle cx="100" cy="100" r="74" stroke-width="5"/>
+        <circle cx="100" cy="100" r="10" stroke-width="3"/>
+        <g stroke-width="1.4" opacity=".75"><path d="M100 26v148M26 100h148M48 48l104 104M48 152 152 48M72 31l56 138M31 128 169 72M128 31 72 169M31 72l138 56"/></g>
+      </g>
+    </symbol>
+    <symbol id="part-disc" viewBox="0 0 200 200">
+      <g fill="none" stroke="currentColor">
+        <circle cx="100" cy="100" r="86" stroke-width="4"/><circle cx="100" cy="100" r="66" stroke-width="20" stroke-dasharray="10 6"/>
+        <circle cx="100" cy="100" r="34" stroke-width="3"/>
+        <g stroke-width="5" stroke-linecap="round"><path d="M100 66V40M134 100h26M100 134v26M66 100H40"/></g>
+        <circle cx="100" cy="100" r="14" stroke-width="3"/>
+      </g>
+    </symbol>
+    <symbol id="part-saddle" viewBox="0 0 200 200">
+      <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M18 78c24-14 70-18 112-14 30 3 52 12 56 22 4 12-14 18-44 18-26 0-48 8-80 8-30 0-48-10-50-20-1-6 2-10 6-14Z" stroke-width="5"/>
+        <path d="M40 96c30 2 66-2 100-8" stroke-width="2" opacity=".6"/>
+        <path d="M70 112 92 140h40l14-34" stroke-width="4"/>
+        <path d="M112 140v48" stroke-width="10"/>
+      </g>
+    </symbol>
+    <symbol id="part-cassette" viewBox="0 0 200 200">
+      <g fill="none" stroke="currentColor">
+        <circle cx="100" cy="100" r="84" stroke-width="6" stroke-dasharray="3 4"/>
+        <circle cx="100" cy="100" r="68" stroke-width="5" stroke-dasharray="3 4"/>
+        <circle cx="100" cy="100" r="52" stroke-width="5" stroke-dasharray="3 4"/>
+        <circle cx="100" cy="100" r="36" stroke-width="4" stroke-dasharray="3 4"/>
+        <circle cx="100" cy="100" r="16" stroke-width="3"/>
+      </g>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="topbar on-dark">
+  <div class="container">
+    <span>Nhà phân phối chính hãng — Bảo hành toàn quốc. <a href="#dealer">Tìm hiểu chương trình đại lý</a></span>
+    <span class="tb-right"><span class="mono">Hotline 1900 0000</span><a href="#finder">Hệ thống cửa hàng</a></span>
+  </div>
+</div>
+
+<header class="header">
+  <div class="container">
+    <a href="#" aria-label="Spinlab — Trang chủ"><span class="logo" role="img" aria-label="Spinlab"></span></a>
+    <nav class="nav" aria-label="Điều hướng chính">
+      <a href="#bikes" aria-current="page">Xe đạp</a>
+      <a href="#bikes">Lốp xe</a>
+      <a href="#brands">Thương hiệu</a>
+      <a href="#dealer">Đại lý</a>
+      <a href="#journal">Tin tức</a>
+      <a href="#finder">Liên hệ</a>
+    </nav>
+    <div class="h-actions">
+      <button class="icon-btn" aria-label="Tìm kiếm"><svg aria-hidden="true"><use href="#search"/></svg></button>
+      <div class="lang" role="group" aria-label="Ngôn ngữ"><a href="#" aria-current="true" lang="vi">VI</a><a href="#" lang="en">EN</a></div>
+      <a class="btn btn-primary h-cta" href="#dealer">Trở thành đại lý</a>
+      <button class="icon-btn menu-btn" aria-label="Mở menu" aria-expanded="false"><svg aria-hidden="true"><use href="#menu"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <p class="eyebrow">Polygon Bikes · Vittoria Tires</p>
+        <h1 class="display" style="margin-top:20px">Chuẩn xác trong <em>từng vòng quay.</em></h1>
+        <p class="lead">Spinlab phân phối xe đạp Polygon và lốp xe Vittoria chính hãng cho hệ thống đại lý trên toàn quốc. Mỗi chiếc xe qua tay chúng tôi đều được kiểm tra như trong phòng thí nghiệm.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="#bikes">Khám phá sản phẩm <svg aria-hidden="true"><use href="#arrow"/></svg></a>
+          <a class="btn btn-ghost" href="#finder">Tìm đại lý gần bạn</a>
+        </div>
+        <div class="hero-meta">
+          <div><b>2</b><span>Thương hiệu chính hãng</span></div>
+          <div><b>1.800</b><span>Mã sản phẩm</span></div>
+          <div><b>120</b><span>Đại lý toàn quốc</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="grid-bg" aria-hidden="true"></div>
+        <img class="bike" src="https://media.polygonbikes.com/wp-content/uploads/2021/10/14141103/PJ-MY24-HELIOS-A8X-TSG-TEAM-EDITION-P-ULTEGRA.png" width="1200" height="800" alt="Xe đạp road Polygon Helios A8X TSG Team Edition" fetchpriority="high">
+        <span class="callout c1"><i></i>Khung carbon</span>
+        <span class="callout c2"><i></i>Shimano Ultegra</span>
+        <div class="hero-tag"><b>Polygon Helios A8X</b>TSG Team Edition</div>
+      </div>
+    </div>
+
+    <div class="brands">
+      <div class="container">
+        <p>Nhà phân phối các thương hiệu</p>
+        <div class="brand-row">
+          <img src="https://media.polygonbikes.com/wp-content/uploads/2025/04/24113007/logo-polygon-e1745469054171.jpg" style="mix-blend-mode:multiply" alt="Polygon Bikes" height="56" class="poly">
+          <img src="https://vittoria.com/cdn/shop/files/Vittoria_logo_black.svg?v=1696407669" alt="Vittoria" height="26">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BRANDS -->
+  <section class="section" id="brands" style="padding-bottom:0">
+    <div class="container">
+      <div class="section-head">
+        <div><p class="eyebrow">01 — Thương hiệu</p><h2 class="h2">Hai cái tên, một tiêu chuẩn.</h2></div>
+      </div>
+      <div class="partners">
+        <a class="partner reveal" href="#">
+          <div class="partner-media"><img src="https://media.polygonbikes.com/wp-content/uploads/2026/01/22110900/plg-strattos-c-header.jpg" alt="Polygon Strattos C trên đường đèo" loading="lazy" width="1200" height="800"></div>
+          <div class="partner-body">
+            <img src="https://media.polygonbikes.com/wp-content/uploads/2025/04/24113007/logo-polygon-e1745469054171.jpg" style="mix-blend-mode:multiply" alt="Polygon Bikes" loading="lazy" class="p-logo poly">
+            <p>Thương hiệu xe đạp với đầy đủ dòng Road, MTB, Adventure, Urban và Junior — cho người mới bắt đầu đến tay đua chuyên nghiệp.</p>
+            <ul class="partner-tags"><li>Road</li><li>Mountain</li><li>Adventure</li><li>Urban</li><li>Junior</li></ul>
+            <span class="link">Xem xe đạp Polygon <svg aria-hidden="true"><use href="#arrow"/></svg></span>
+          </div>
+        </a>
+        <a class="partner reveal" href="#">
+          <div class="partner-media contain"><img src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/corsa-pro-tlr-01.webp?width=900" alt="Lốp Vittoria Corsa PRO Tubeless-Ready" loading="lazy" width="900" height="900"></div>
+          <div class="partner-body">
+            <img class="p-logo" src="https://vittoria.com/cdn/shop/files/Vittoria_logo_black.svg?v=1696407669" alt="Vittoria" loading="lazy">
+            <p>Thương hiệu lốp xe đạp đến từ Ý, với các dòng lốp đua, gravel, MTB và thành phố — từ Corsa PRO đến Terreno và Mezcal.</p>
+            <ul class="partner-tags"><li>Road</li><li>Gravel</li><li>MTB</li><li>City</li><li>Săm & phụ kiện lốp</li></ul>
+            <span class="link">Xem lốp Vittoria <svg aria-hidden="true"><use href="#arrow"/></svg></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section class="section" id="bikes">
+    <div class="container">
+      <div class="section-head">
+        <div><p class="eyebrow">02 — Danh mục</p><h2 class="h2">Tìm đúng chiếc xe cho mọi cung đường.</h2></div>
+        <a class="link" href="#">Xem toàn bộ danh mục <svg aria-hidden="true"><use href="#arrow"/></svg></a>
+      </div>
+      <div class="cats">
+        <a class="cat cover reveal" href="#">
+          <img class="bg" src="https://media.polygonbikes.com/wp-content/uploads/2026/02/02161557/plg-media-review-bikerada-strattos-c-review-header.jpg" alt="" loading="lazy">
+          <span class="num">01 / Road</span>
+          <div class="cat-foot"><div><h3 class="h3">Xe đạp đường trường</h3><small>Polygon Strattos C · Helios</small></div><span class="arrow"><svg aria-hidden="true"><use href="#arrow"/></svg></span></div>
+        </a>
+        <a class="cat reveal" href="#">
+          <span class="num">02 / Mountain</span>
+          <img class="art" src="https://media.polygonbikes.com/wp-content/uploads/2021/11/14143728/Syncline-C5-BA-P-450x300.png" alt="" loading="lazy" width="450" height="300">
+          <div class="cat-foot"><div><h3 class="h3">Xe đạp địa hình</h3><small>Polygon Siskiu · Xtrada · Collosus</small></div><span class="arrow"><svg aria-hidden="true"><use href="#arrow"/></svg></span></div>
+        </a>
+        <a class="cat reveal" href="#">
+          <span class="num">03 / Urban & Adventure</span>
+          <img class="art" src="https://media.polygonbikes.com/wp-content/uploads/2022/09/14144207/MY23-PATH-X5-P-450x300.png" alt="" loading="lazy" width="450" height="300">
+          <div class="cat-foot"><div><h3 class="h3">Xe đạp thành phố</h3><small>Polygon Path · Heist</small></div><span class="arrow"><svg aria-hidden="true"><use href="#arrow"/></svg></span></div>
+        </a>
+        <a class="cat reveal" href="#">
+          <span class="num">04 / Junior</span>
+          <img class="art" src="https://media.polygonbikes.com/wp-content/uploads/2021/11/14143530/MY21-RELIC20-ORG-P-450x300.png" alt="" loading="lazy" width="450" height="300">
+          <div class="cat-foot"><div><h3 class="h3">Xe đạp trẻ em</h3><small>Polygon Relic · Xtrada 20/24</small></div><span class="arrow"><svg aria-hidden="true"><use href="#arrow"/></svg></span></div>
+        </a>
+        <a class="cat feature reveal" href="#">
+          <span class="num">05 / Tires</span>
+          <img class="art" src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/mezcal-mtb-cross-country-race-1_2724a060-7d95-4efc-8ac6-1b67b1ff2160.webp?width=600" alt="" loading="lazy" style="aspect-ratio:auto;max-height:200px;width:auto">
+          <div class="cat-foot"><div><h3 class="h3">Lốp xe Vittoria</h3><small>Road · Gravel · MTB · City</small></div><span class="arrow"><svg aria-hidden="true"><use href="#arrow"/></svg></span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="section products-bg">
+    <div class="container">
+      <div class="section-head">
+        <div><p class="eyebrow">03 — Sản phẩm nổi bật</p><h2 class="h2">Mới về kho mùa này.</h2></div>
+        <div class="tabs" role="tablist" aria-label="Lọc sản phẩm">
+          <button class="tab" role="tab" aria-selected="true">Tất cả</button>
+          <button class="tab" role="tab" aria-selected="false">Xe đạp Polygon</button>
+          <button class="tab" role="tab" aria-selected="false">Lốp Vittoria</button>
+        </div>
+      </div>
+      <div class="products">
+        <article class="card reveal">
+          <div class="card-media"><span class="badge">Mới</span><img class="art" src="https://media.polygonbikes.com/wp-content/uploads/2021/11/13150642/MY25-SISKIU-D7-NEW-COLOR-P-450x300.png" alt="Polygon Siskiu D7" loading="lazy" width="450" height="300"></div>
+          <div class="card-body">
+            <span class="card-brand">Polygon · Mountain</span>
+            <h3 class="h3">Siskiu D7</h3>
+            <ul class="specs"><li>Full suspension</li><li>Trail</li><li>MY25</li></ul>
+            <div class="card-foot"><div class="price"><small>Giá bán lẻ</small><b>Liên hệ</b></div><button class="quote-btn">Báo giá</button></div>
+          </div>
+        </article>
+        <article class="card reveal">
+          <div class="card-media"><span class="badge dark">Bán chạy</span><img class="art" src="https://media.polygonbikes.com/wp-content/uploads/2022/09/14144207/MY23-PATH-X5-P-450x300.png" alt="Polygon Path X5" loading="lazy" width="450" height="300"></div>
+          <div class="card-body">
+            <span class="card-brand">Polygon · Urban</span>
+            <h3 class="h3">Path X5</h3>
+            <ul class="specs"><li>Hybrid</li><li>Đi phố & thể dục</li></ul>
+            <div class="card-foot"><div class="price"><small>Giá bán lẻ</small><b>Liên hệ</b></div><button class="quote-btn">Báo giá</button></div>
+          </div>
+        </article>
+        <article class="card reveal">
+          <div class="card-media"><img class="art tire" src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/corsa-pro-tlr-01.webp?width=600" alt="Lốp Vittoria Corsa PRO Tubeless-Ready" loading="lazy"></div>
+          <div class="card-body">
+            <span class="card-brand">Vittoria · Lốp Road</span>
+            <h3 class="h3">Corsa PRO TLR</h3>
+            <ul class="specs"><li>Tubeless-ready</li><li>320 TPI</li><li>Graphene + Silica</li></ul>
+            <div class="card-foot"><div class="price"><small>Giá bán lẻ</small><b>Liên hệ</b></div><button class="quote-btn">Báo giá</button></div>
+          </div>
+        </article>
+        <article class="card reveal">
+          <div class="card-media"><span class="badge">Mới</span><img class="art tire" src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/terreno-PRO-T30-fineloose-gravel-01.webp?width=600" alt="Lốp Vittoria Terreno PRO T30" loading="lazy"></div>
+          <div class="card-body">
+            <span class="card-brand">Vittoria · Lốp Gravel</span>
+            <h3 class="h3">Terreno PRO T30</h3>
+            <ul class="specs"><li>Gravel race</li><li>Sỏi mịn, đất tơi</li></ul>
+            <div class="card-foot"><div class="price"><small>Giá bán lẻ</small><b>Liên hệ</b></div><button class="quote-btn">Báo giá</button></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- LAB STORY -->
+  <section class="section">
+    <div class="container lab">
+      <div class="lab-visual on-dark reveal" aria-hidden="true">
+        <svg viewBox="0 0 200 200"><g class="spin"><use href="#part-chainring"/></g></svg>
+        <span class="mono" style="top:20px;left:20px">SPINLAB / QC-04</span>
+        <span class="mono" style="top:20px;right:20px">TORQUE 12 N·m</span>
+        <span class="mono" style="bottom:20px;left:20px">53/39T · 172.5mm</span>
+        <span class="mono" style="bottom:20px;right:20px">PASS ✓</span>
+      </div>
+      <div>
+        <p class="eyebrow">04 — The Lab</p>
+        <h2 class="h2" style="margin-top:16px">Không chỉ phân phối. Chúng tôi kiểm định.</h2>
+        <p class="lead" style="margin-top:24px">Trước khi đến tay đại lý, mỗi lô hàng đều đi qua quy trình kiểm tra kỹ thuật tại trung tâm Spinlab.</p>
+        <div class="pillars">
+          <div class="pillar"><span class="mono">/01</span><div><h3 class="h3">Kiểm định 32 điểm</h3><p>Khung, lực siết, độ đồng tâm bánh và hệ truyền động đều được đo và ghi nhận.</p></div></div>
+          <div class="pillar"><span class="mono">/02</span><div><h3 class="h3">Bảo hành chính hãng</h3><p>Hồ sơ bảo hành điện tử theo số khung, tra cứu ngay tại bất kỳ đại lý nào.</p></div></div>
+          <div class="pillar"><span class="mono">/03</span><div><h3 class="h3">Kho hàng sẵn có</h3><p>Lốp, săm Vittoria và phụ tùng thay thế Polygon luôn sẵn kho, giao trong 24–48 giờ.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEALER -->
+  <section class="section dealer" id="dealer">
+    <div class="container dealer-grid">
+      <div>
+        <p class="eyebrow">05 — Chương trình đại lý</p>
+        <h2 class="h2">Cùng Spinlab mở rộng cửa hàng của bạn.</h2>
+        <p class="lead" style="margin-top:24px">Chính sách giá sỉ minh bạch, hỗ trợ trưng bày và đào tạo kỹ thuật cho đội ngũ của bạn.</p>
+        <ul class="benefits">
+          <li><svg aria-hidden="true"><use href="#check"/></svg>Chiết khấu theo bậc doanh số, công khai trên cổng đại lý</li>
+          <li><svg aria-hidden="true"><use href="#check"/></svg>Bộ trưng bày, POSM và hình ảnh sản phẩm chuẩn thương hiệu</li>
+          <li><svg aria-hidden="true"><use href="#check"/></svg>Đào tạo kỹ thuật lắp ráp & bảo dưỡng định kỳ</li>
+        </ul>
+        <a class="btn btn-primary" href="#">Đăng ký làm đại lý <svg aria-hidden="true"><use href="#arrow"/></svg></a>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>120</b><span>Đại lý đang hoạt động</span></div>
+        <div class="stat"><b>34</b><span>Tỉnh thành có mặt</span></div>
+        <div class="stat"><b>48h</b><span>Giao hàng tối đa</span></div>
+        <div class="stat"><b>96%</b><span>Đại lý gia hạn hợp đồng</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORE FINDER -->
+  <section class="section" id="finder">
+    <div class="container">
+      <div class="section-head"><div><p class="eyebrow">06 — Hệ thống cửa hàng</p><h2 class="h2">Tìm đại lý Spinlab gần bạn.</h2></div></div>
+      <div class="finder">
+        <div>
+          <div class="field">
+            <label for="city">Tỉnh / thành phố</label>
+            <div class="input-wrap"><input id="city" type="search" placeholder="VD: Hà Nội, Đà Nẵng…" autocomplete="address-level1"><button aria-label="Tìm đại lý"><svg aria-hidden="true"><use href="#search"/></svg></button></div>
+          </div>
+          <ul class="store-list">
+            <li class="store"><div><b>Spinlab Flagship Hà Nội</b><p>12 Phố Mẫu, Hoàn Kiếm · 0900 000 001</p></div><span class="tag">Flagship</span></li>
+            <li class="store"><div><b>Đại lý Velo Đà Nẵng</b><p>45 Đường Mẫu, Hải Châu · 0900 000 002</p></div><span class="tag">Service</span></li>
+            <li class="store"><div><b>Spinlab Studio TP.HCM</b><p>88 Đường Mẫu, Quận 1 · 0900 000 003</p></div><span class="tag">Flagship</span></li>
+          </ul>
+        </div>
+        <div class="map" role="img" aria-label="Bản đồ minh hoạ vị trí đại lý">
+          <svg viewBox="0 0 600 420" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <g stroke="#E3DCCD" stroke-width="1"><path d="M0 60h600M0 140h600M0 220h600M0 300h600M0 380h600M80 0v420M200 0v420M320 0v420M440 0v420M560 0v420"/></g>
+            <path d="M-20 300 C 120 260 180 330 300 290 S 520 180 640 230" fill="none" stroke="#D8CFBD" stroke-width="18"/>
+            <path d="M260 -20 C 240 120 330 200 290 440" fill="none" stroke="#fff" stroke-width="10"/>
+            <path d="M-20 120 L 640 170" fill="none" stroke="#fff" stroke-width="7"/>
+            <path d="M420 -20 L 380 440" fill="none" stroke="#fff" stroke-width="5"/>
+          </svg>
+          <div class="pin" style="left:30%;top:30%"><span>Hà Nội</span><i></i></div>
+          <div class="pin active" style="left:66%;top:52%"><span>Đà Nẵng</span><i></i></div>
+          <div class="pin" style="left:44%;top:80%"><span>TP.HCM</span><i></i></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JOURNAL -->
+  <section class="section" id="journal" style="padding-top:0">
+    <div class="container">
+      <div class="section-head">
+        <div><p class="eyebrow">07 — Journal</p><h2 class="h2">Kiến thức từ phòng lab.</h2></div>
+        <a class="link" href="#">Tất cả bài viết <svg aria-hidden="true"><use href="#arrow"/></svg></a>
+      </div>
+      <div class="posts">
+        <a class="post reveal" href="#">
+          <div class="post-media"><img src="https://media.polygonbikes.com/wp-content/uploads/2026/02/23154155/Header-Strattos-C-by-Velo-450x300.jpg" alt="" loading="lazy" width="450" height="300"></div>
+          <div class="meta"><span>Sản phẩm mới</span><span>5 phút đọc</span></div>
+          <h3>Polygon Strattos C: chiếc road bike cho chặng đường tiếp theo</h3>
+          <p>Khung carbon endurance, thiết kế seatstay mới và những điểm đáng chú ý.</p>
+        </a>
+        <a class="post reveal" href="#">
+          <div class="post-media" style="background:var(--ink);color:var(--brand-yellow)"><svg viewBox="0 0 200 200" aria-hidden="true"><use href="#part-saddle"/></svg></div>
+          <div class="meta"><span>Hướng dẫn</span><span>4 phút đọc</span></div>
+          <h3>Căn chỉnh yên xe: 3 thông số quyết định sự thoải mái</h3>
+          <p>Chiều cao, độ lùi và góc nghiêng — cách đo tại nhà chỉ với thước dây.</p>
+        </a>
+        <a class="post reveal" href="#">
+          <div class="post-media" style="background:var(--brand-yellow);display:grid;place-items:center"><img src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/corsa-next-tlr-01.webp?width=600" alt="" loading="lazy" style="width:62%;height:auto;object-fit:contain;mix-blend-mode:multiply"></div>
+          <div class="meta"><span>Kỹ thuật lốp</span><span>4 phút đọc</span></div>
+          <h3>Áp suất lốp tubeless: bơm bao nhiêu là đúng?</h3>
+          <p>Cách chọn áp suất lốp Vittoria theo cân nặng, cỡ lốp và mặt đường.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer on-dark">
+  <div class="container">
+    <span class="logo big-logo" role="img" aria-label="Spinlab"></span>
+    <div class="f-grid">
+      <div class="f-news">
+        <h4>Bản tin</h4>
+        <p>Nhận thông tin sản phẩm mới và chính sách đại lý mỗi tháng.</p>
+        <form class="input-wrap" onsubmit="return false">
+          <label for="nl" class="sr-only">Email</label>
+          <input id="nl" type="email" placeholder="email@congty.vn" autocomplete="email">
+          <button type="submit">Đăng ký</button>
+        </form>
+      </div>
+      <div><h4>Sản phẩm</h4><ul><li><a href="#">Xe đạp Road</a></li><li><a href="#">Xe đạp MTB</a></li><li><a href="#">Xe thành phố</a></li><li><a href="#">Xe trẻ em</a></li><li><a href="#">Lốp Vittoria</a></li></ul></div>
+      <div><h4>Spinlab</h4><ul><li><a href="#">Về chúng tôi</a></li><li><a href="#">The Lab</a></li><li><a href="#">Chương trình đại lý</a></li><li><a href="#">Tuyển dụng</a></li></ul></div>
+      <div><h4>Liên hệ</h4><ul><li>Số 00 Đường Mẫu, Quận Mẫu, TP.HCM</li><li class="mono">1900 0000</li><li><a href="#">hello@spinlab.vn</a></li></ul></div>
+    </div>
+    <div class="f-bottom"><span>© 2026 Spinlab. Thông tin trên trang là dữ liệu mẫu.</span><span>Chính sách bảo mật · Điều khoản</span></div>
+  </div>
+</footer>
+
+<div class="ribbon">BẢN THIẾT KẾ XEM TRƯỚC</div>
+
+<script>
+  // Reveal on scroll
+  const io = 'IntersectionObserver' in window ? new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{rootMargin:'0px 0px -8% 0px'}) : null;
+  document.querySelectorAll('.reveal').forEach((el,i)=>{ el.style.transitionDelay=(i%4)*60+'ms'; io ? io.observe(el) : el.classList.add('in'); });
+  // Tabs (visual only)
+  document.querySelectorAll('[role=tab]').forEach(t=>t.addEventListener('click',()=>{t.parentElement.querySelectorAll('[role=tab]').forEach(x=>x.setAttribute('aria-selected',x===t));}));
+</script>
+</body>
+</html>

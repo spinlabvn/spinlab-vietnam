@@ -1,0 +1,1690 @@
+{
+ "corsa-n-ext-tube-type": {
+  "tech_intro": "Engineered with the revolutionary, World Tour-proven technology of Graphene + Silica compounds and the high longevity of a nylon casing. The Corsa N.EXT provides an impossibly supple connection to the road, erasing rolling resistance, denying road debris, and inspiring confidence through sweeping corners.",
+  "chart": [
+   {
+    "Size": "700x24c",
+    "ETRTO": "24-622",
+    "Color": "Black",
+    "Weight": "200 g"
+   },
+   {
+    "Size": "700x26c",
+    "ETRTO": "26-622",
+    "Color": "Black",
+    "Weight": "205 g"
+   },
+   {
+    "Size": "700x28c",
+    "ETRTO": "28-622",
+    "Color": "Black",
+    "Weight": "220 g"
+   },
+   {
+    "Size": "700x30c",
+    "ETRTO": "30-622",
+    "Color": "Black",
+    "Weight": "225 g"
+   },
+   {
+    "Size": "700x32c",
+    "ETRTO": "32-622",
+    "Color": "Black",
+    "Weight": "245 g"
+   },
+   {
+    "Size": "700x34c",
+    "ETRTO": "34-622",
+    "Color": "Black",
+    "Weight": "250 g"
+   }
+  ],
+  "features": [
+   {
+    "title": "Race Formulation Graphene + Silica",
+    "text": "The Race Formulation powered by Graphene + Silica is a durable compound mix optimized for long-lasting grip and low rolling resistance with extended durability."
+   },
+   {
+    "title": "100 TPI Nylon casing",
+    "text": "Durability. Longevity. Reliability. A reliable, puncture-resistant platform engineered for racing and long training miles alike, with thicker threads that better withstand the grind of daily intervals while still transitioning to the speed of the weekly crit series."
+   },
+   {
+    "title": "Bead Shield",
+    "text": "Additional layer on the bead provides extra protection."
+   },
+   {
+    "title": "Anti-Puncture Belt",
+    "text": "Designed to provide extra puncture resistance, ensuring your ride stays smooth and uninterrupted."
+   }
+  ],
+  "wide_rim": "",
+  "tagline": "The performance clincher racing tire",
+  "summary": "Race day, interval training, multi-summit days, unsupported base miles – the Corsa N.EXT clincher combines high cornering grip, low rolling resistance, and the ultra-durable construction of a daily workhorse. Those qualities are complemented by the universal convenience of a clincher design."
+ },
+ "corsa-n-ext-tubeless-ready": {
+  "tech_intro": "Engineered with the revolutionary, WorldTour-proven technology of Graphene + Silica compounds and the high longevity of a nylon casing. The Corsa N.EXT provides an impossibly supple connection to the road, erasing rolling resistance, denying road debris, and inspiring confidence through sweeping corners.",
+  "chart": [
+   {
+    "Size": "700x24c",
+    "ETRTO": "24-622",
+    "Color": "Black",
+    "Weight": "265 g"
+   },
+   {
+    "Size": "700x26c",
+    "ETRTO": "26-622",
+    "Color": "Black",
+    "Weight": "280 g"
+   },
+   {
+    "Size": "700x28c",
+    "ETRTO": "28-622",
+    "Color": "Black",
+    "Weight": "305 g"
+   },
+   {
+    "Size": "700x29cWR",
+    "ETRTO": "29-622",
+    "Color": "Black",
+    "Weight": "310 g"
+   },
+   {
+    "Size": "700x30c",
+    "ETRTO": "30-622",
+    "Color": "Black",
+    "Weight": "320 g"
+   },
+   {
+    "Size": "700x32c",
+    "ETRTO": "32-622",
+    "Color": "Black",
+    "Weight": "340 g"
+   },
+   {
+    "Size": "700x34c",
+    "ETRTO": "34-622",
+    "Color": "Black",
+    "Weight": "350 g"
+   }
+  ],
+  "features": [
+   {
+    "title": "Race Formulation Graphene + Silica",
+    "text": "The Race Formulation powered by Graphene + Silica is a durable compound mix optimized for long-lasting grip and low rolling resistance with extended durability."
+   },
+   {
+    "title": "100 TPI Nylon casing",
+    "text": "Durability. Longevity. Reliability. A reliable, puncture-resistant platform engineered for racing and long training miles alike, with thicker threads that better withstand the grind of daily intervals while still transitioning to the speed of the weekly crit series."
+   },
+   {
+    "title": "Bead Shield",
+    "text": "Additional layer on the bead provides extra protection."
+   },
+   {
+    "title": "Anti-Puncture Belt",
+    "text": "Designed to provide extra puncture resistance, ensuring your ride stays smooth and uninterrupted."
+   },
+   {
+    "title": "Inner shield",
+    "text": "Extra sheet for enhanced protection ensures peace of mind wherever the road takes you."
+   }
+  ],
+  "wide_rim": "29 mm tire section width on 25 mm internal rim width, with optimized casing shape and tread width for modern wide rims, to improve aerodynamics, puncture resistance and cornering capabilities at maximum lean angles.",
+  "tagline": "Road racing inspired speed and feel, with the everyday durability of a tubeless ready nylon system",
+  "summary": "Race day, interval training, multi-summit days, unsupported base miles – the Corsa N.EXT clincher combines high cornering grip, low rolling resistance, and the ultra-durable construction of a daily workhorse. Those qualities are complemented by the universal convenience of a clincher design."
+ },
+ "corsa-pro-speed-tubeless-ready": {
+  "tech_intro": "By seamlessly tapering the tread into the sidewall, the Corsa PRO Speed construction combines the Graphene + Silica compound, the ultra-supple Corespun 320 TPI cotton casing - Vittoria's finest - and updated tread pattern, all electrically cured to minimize rolling resistance. The results of internal testing show an improvement in rolling performance of 5%, with 2% savings in weight.",
+  "chart": [
+   {
+    "Size": "700x24c",
+    "ETRTO": "24-622",
+    "Color": "Para",
+    "Weight": "220 g"
+   },
+   {
+    "Size": "700x26c",
+    "ETRTO": "26-622",
+    "Color": "Para",
+    "Weight": "235 g"
+   },
+   {
+    "Size": "700x28c",
+    "ETRTO": "28-622",
+    "Color": "Para",
+    "Weight": "250 g"
+   },
+   {
+    "Size": "700x29cWR",
+    "ETRTO": "29-622",
+    "Color": "Para",
+    "Weight": "255 g"
+   },
+   {
+    "Size": "700x30c",
+    "ETRTO": "30-622",
+    "Color": "Para",
+    "Weight": "220 g"
+   }
+  ],
+  "features": [
+   {
+    "title": "Race Formulation Graphene + Silica",
+    "text": "The Race Formulation powered by Graphene + Silica is a reinforced compound mix tailored for technical racing and harsh conditions. It features elevated puncture resistance and boosted side grip, enhancing control on unpredictable or wet surfaces."
+   },
+   {
+    "title": "320 TPI Cotton-corespun casing",
+    "text": "Lightweight cotton and durable aramid, spun in a 320 TPI casing that combines the former’s intuitive, supple road feel with the latter’s puncture resistance."
+   },
+   {
+    "title": "Bead Shield",
+    "text": "Additional layer on the bead provides extra protection."
+   }
+  ],
+  "wide_rim": "",
+  "tagline": "Featuring an advanced Graphene + Silica compound specifically designed to provide unparalleled efficiency, Corsa PRO Speed maximizes speed, grip, and control ensuring faster times and smoother rides.",
+  "summary": "Whether you're a professional racer or amateur racer, the Corsa PRO Speed is made to enhance your riding experience and achieve your best performance in Time Trial and Triathlon use."
+ },
+ "corsa-pro-tubeless-ready": {
+  "tech_intro": "Engineered with the revolutionary, WorldTour-proven technology of Graphene + Silica compounds and the timeless perfection of a 320 TPI cotton-blend casing. Electrically cured to eliminate seams and increase aerodynamics. The Corsa provides an impossibly supple connection to the road, erasing rolling resistance, denying road debris, and inspiring confidence through sweeping corners.",
+  "chart": [
+   {
+    "Size": "700x24c",
+    "ETRTO": "24-622",
+    "Color": "Para",
+    "Weight": "245 g"
+   },
+   {
+    "Size": "700x26c",
+    "ETRTO": "26-622",
+    "Color": "Para",
+    "Weight": "260 g"
+   },
+   {
+    "Size": "700x28c",
+    "ETRTO": "28-622",
+    "Color": "Para",
+    "Weight": "280 g"
+   },
+   {
+    "Size": "700x29cWR",
+    "ETRTO": "29-622",
+    "Color": "Para",
+    "Weight": "290 g"
+   },
+   {
+    "Size": "700x30c",
+    "ETRTO": "30-622",
+    "Color": "Para",
+    "Weight": "285 g"
+   },
+   {
+    "Size": "700x32c",
+    "ETRTO": "32-622",
+    "Color": "Para",
+    "Weight": "305 g"
+   }
+  ],
+  "features": [
+   {
+    "title": "Race Formulation Graphene + Silica",
+    "text": "The Race Formulation powered by Graphene + Silica is a reinforced compound mix tailored for technical racing and harsh conditions. It features elevated puncture resistance and boosted side grip, enhancing control on unpredictable or wet surfaces."
+   },
+   {
+    "title": "320 TPI Cotton-corespun casing",
+    "text": "Lightweight cotton and durable aramid, spun in a 320 TPI casing that combines the former’s intuitive, supple road feel with the latter’s puncture resistance."
+   },
+   {
+    "title": "Bead Shield",
+    "text": "Additional layer on the bead provides extra protection."
+   },
+   {
+    "title": "Anti-Puncture Belt",
+    "text": "Designed to provide extra puncture resistance, ensuring your ride stays smooth and uninterrupted."
+   }
+  ],
+  "wide_rim": "29 mm tire section width on 25 mm internal rim width, with optimized casing shape and tread width for modern wide rims, to improve aerodynamics, puncture resistance and cornering capabilities at maximum lean angles.",
+  "tagline": "Ultimate cornering grip in wet or dry conditions. Reinforced puncture resistance. A supple construction that reduces rolling resistance and makes chattery chip seal feel like freshly laid tarmac. The Corsa PRO combines the convenience of a tubeless-ready clincher platform with the pedigree of the world’s most successful racing tire, proven in the rarefied air of France’s highest passes and the punchy finales of the classics alike.",
+  "summary": "Grand tours, monuments, one-days, criteriums – the Corsa PRO Tubeless-Ready is the platform of choice for the world’s strongest riders claiming the highest podium steps in the most prestigious races. And the only things more impressive than its palmarès are its sensation of speed and unequaled ride quality."
+ },
+ "martello-enduro-race": {
+  "tech_intro": "The 1C Race tread is a soft, tacky, supple Graphene + Silica-infused compound, the ultimate enduro racing technology. It’s electrically bonded to an ultra-durable Enduro Race nylon casing, which is further reinforced with a center-strip breaker, bead-to-bead puncture resistance, and protection against pinch flats from rim strikes.",
+  "chart": [
+   {
+    "Size": "27.5x2.4",
+    "ETRTO": "60-584",
+    "Color": "Black",
+    "Weight": "1205 g"
+   },
+   {
+    "Size": "27.5x2.6",
+    "ETRTO": "65-584",
+    "Color": "Black",
+    "Weight": "1245 g"
+   },
+   {
+    "Size": "29x2.4",
+    "ETRTO": "60-622",
+    "Color": "Black",
+    "Weight": "1290 g"
+   },
+   {
+    "Size": "29x2.6",
+    "ETRTO": "65-622",
+    "Color": "Black",
+    "Weight": "1320 g"
+   }
+  ],
+  "features": [
+   {
+    "title": "Race formulation powered by Graphene and Silica",
+    "text": "Speed and grip without compromise. Designed to be the absolute fastest option from point A to point B."
+   },
+   {
+    "title": "Race casing",
+    "text": "Supple feel and dependable multi-layer nylon construction. Providing reduced rider fatigue and increased race-day reliability."
+   },
+   {
+    "title": "Bead Shield",
+    "text": "Additional layer on the bead provides extra protection."
+   },
+   {
+    "title": "Anti-Puncture Belt",
+    "text": "Designed to provide extra puncture resistance, ensuring your ride stays smooth and uninterrupted."
+   },
+   {
+    "title": "Bead-To-Bead Protection Layer",
+    "text": "Flexible Nylon-made anti-puncture layer"
+   },
+   {
+    "title": "Sidewall stability insert",
+    "text": "Insert made with high-tech rubber material offering rim strike protection and sidewall support."
+   }
+  ],
+  "wide_rim": "",
+  "tagline": "The enduro racing classic, evolved with a new race-tuned construction. It’s grabby, it mutes chatter, and it rebounds with the kind of supple predictability that makes the difference on technical stretches and off-camber sections. On dry, mixed terrain, the Martello Enduro Race provides surgical control.",
+  "summary": "The tread’s moto-inspired blocks are reliable, durable, and thrive on technical terrain in wet or dry conditions. Progressive siping throughout varies the tread’s edges – thick and thin – to balance responsive trail-feel with tenacious grab and no instability. Glued, in control, and with predictable rebound. Between the knobs, voracious spacing gobbles and clears loose, loamy soil and clingy muck."
+ },
+ "martello-enduro": {
+  "tech_intro": "The Martello Enduro blends four Graphene-infused compounds to minimize rolling resistance on the center strip and maximize confident grip on the shoulders. The 120-TPI double-ply nylon Enduro TLR casing features a two-ply construction that’s durable, supple, and puncture resistant, reinforced with added protection against rim strikes, pinch flats, and low sidewall cuts.",
+  "chart": [
+   {
+    "Size": "27.5x2.4",
+    "ETRTO": "60-622",
+    "Color": "Black",
+    "Weight": "1190 g"
+   },
+   {
+    "Size": "27.5x2.6",
+    "ETRTO": "65-584",
+    "Color": "Black",
+    "Weight": "1270 g"
+   },
+   {
+    "Size": "29x2.4",
+    "ETRTO": "60-622",
+    "Color": "Black",
+    "Weight": "1265 g"
+   },
+   {
+    "Size": "29x2.6",
+    "ETRTO": "65-622",
+    "Color": "Black",
+    "Weight": "1340 g"
+   }
+  ],
+  "features": [
+   {
+    "title": "4Compound formulation powered by Graphene",
+    "text": "4 optimized compounds strategically placed where they are needed for an unparalleled blend of speed, grip, and durability."
+   },
+   {
+    "title": "Enduro casing",
+    "text": "Abrasion and puncture resistant double ply nylon casing engineered for enduro and shuttle laps."
+   },
+   {
+    "title": "Bead Shield",
+    "text": "Additional layer on the bead provides extra protection."
+   },
+   {
+    "title": "Sidewall stability insert",
+    "text": "Insert made with high-tech rubber material offering rim strike protection and sidewall support"
+   }
+  ],
+  "wide_rim": "",
+  "tagline": "The Martello Enduro is engineered for everything from gravity competition to exploring to competing again. Any technical trail, any challenging weather conditions, any chance it has to glue itself to obstacles – the Martello is proven in enduro and DH at the highest level. Dry terrain, will party.",
+  "summary": "The tread’s moto-inspired blocks are reliable, durable, and thrive on technical terrain in wet or dry conditions. Progressive siping throughout varies the tread’s edges – thick and thin – to balance responsive trail-feel with tenacious grab and no instability. Glued, in control, and with predictable rebound. Between the knobs, voracious spacing gobbles and clears loose, loamy soil and clingy muck."
+ },
+ "martello-trail": {
+  "tech_intro": "Confident traction on technical terrain from hardpack to mixed conditions with durable, moto-inspired tread blocks.",
+  "chart": [
+   {
+    "Size": "27.5x2.4",
+    "ETRTO": "60-584​",
+    "Color": "Black",
+    "Weight": "1010 g"
+   },
+   {
+    "Size": "27.5x2.6",
+    "ETRTO": "65-584​",
+    "Color": "Black",
+    "Weight": "1100 g"
+   },
+   {
+    "Size": "27.5x2.8",
+    "ETRTO": "70-584​",
+    "Color": "Black",
+    "Weight": "1180 g"
+   },
+   {
+    "Size": "29x2.4",
+    "ETRTO": "60-622​",
+    "Color": "Black",
+    "Weight": "1100 g"
+   },
+   {
+    "Size": "29x2.6",
+    "ETRTO": "65-622​",
+    "Color": "Black",
+    "Weight": "1150 g"
+   },
+   {
+    "Size": "29x2.4",
+    "ETRTO": "60-622​",
+    "Color": "Brown",
+    "Weight": "1080 g"
+   }
+  ],
+  "features": [
+   {
+    "title": "4Compound Formulation powered by Graphene",
+    "text": "4 optimized compounds strategically placed where they are needed for an unparalleled blend of speed, grip, and durability."
+   },
+   {
+    "title": "Trail casing",
+    "text": "A durable 60-TPI nylon casing built for exploration. It resists abrasion and punctures while maintaining your connection to the trail with a mid-tier suppleness."
+   },
+   {
+    "title": "Bead Shield",
+    "text": "Additional layer on the bead provides extra protection."
+   },
+   {
+    "title": "Anti-Puncture Belt",
+    "text": "Designed to provide extra puncture resistance, ensuring your ride stays smooth and uninterrupted."
+   },
+   {
+    "title": "Sidewall Protection",
+    "text": "Reinforcing nylon layer for extra protection and lateral stability."
+   }
+  ],
+  "wide_rim": "",
+  "tagline": "Vittoria’s 4Compound Formulation strategically places four optimized rubber compounds where they’re needed, giving a perfect blend of speed, grip, and long-lasting durability.",
+  "summary": "The Trail casing combines lightweight design with toughness, featuring a tubeless-ready nylon construction, reinforced sidewalls, and an anti-puncture belt—ready for technical climbs, challenging descents, and everything in between."
+ },
+ "mazza-enduro-race": {
+  "tech_intro": "The 1C Race tread is a soft, tacky, supple Graphene + Silica-infused compound, the ultimate enduro racing technology. It’s electrically bonded to an ultra-durable Enduro Race nylon casing, which is further reinforced with a center-strip breaker, bead-to-bead puncture resistance, and added protection against pinch flats from rim strikes.",
+  "chart": [
+   {
+    "Size": "27.5x2.4",
+    "ETRTO": "60-584",
+    "Color": "Black",
+    "Weight": "1260 g"
+   },
+   {
+    "Size": "27.5x2.6",
+    "ETRTO": "65-584",
+    "Color": "Black",
+    "Weight": "1340 g"
+   },
+   {
+    "Size": "29x2.4",
+    "ETRTO": "60-622",
+    "Color": "Black",
+    "Weight": "1345 g"
+   },
+   {
+    "Size": "29x2.6",
+    "ETRTO": "65-622",
+    "Color": "Black",
+    "Weight": "1430 g"
+   }
+  ],
+  "features": [
+   {
+    "title": "Race formulation powered by Graphene and Silica",
+    "text": "Speed and grip without compromise. Designed to be the absolute fastest option from point A to point B."
+   },
+   {
+    "title": "Race casing",
+    "text": "Supple feel and dependable multi-layer nylon construction. Providing reduced rider fatigue and increased race-day reliability."
+   },
+   {
+    "title": "Bead Shield",
+    "text": "Additional layer on the bead provides extra protection."
+   },
+   {
+    "title": "Anti-Puncture Belt",
+    "text": "Designed to provide extra puncture resistance, ensuring your ride stays smooth and uninterrupted."
+   },
+   {
+    "title": "Bead-To-Bead Protection Layer",
+    "text": "Flexible Nylon-made anti-puncture layer"
+   },
+   {
+    "title": "Sidewall stability insert",
+    "text": "Insert made with high-tech rubber material offering rim strike protection and sidewall support."
+   }
+  ],
+  "wide_rim": "",
+  "tagline": "Engineered for the aggression, technical expertise, and pedaling power of EWS pros, no tire responds as intuitively or as predictably on mixed-terrain gravity runs as the Mazza Enduro Race. The Race variant’s revolutionary compound maximizes grip, mutes chatter, and rebounds with supple predictability on any technical course. Just get the tire on an obstacle. It’ll stick.",
+  "summary": "While cornering or gripping off-camber rock faces, progressive siping on the shoulders varies the tread’s edges to balance responsive trail-feel with tenacious grab and no instability – glued, in control, and predictable. On climbs, the Mazza digs in with staircase leading edges that thrive on punchy rollers and technical rocky cruxes alike. Between the two, voracious spacing gobbles and clears loose, loamy soil and clingy muck."
+ },
+ "mazza-enduro": {
+  "tech_intro": "The Mazza Enduro’s 4C tread blends four Graphene-infused compounds to minimize rolling resistance, maximize confident grip, and boost durability. The 120-TPI double-ply nylon Enduro TLR casing features a two-ply construction that’s abrasion-resistant, supple, and puncture resistant, reinforced with added protection against rim strikes, pinch flats, and low sidewall cuts.",
+  "chart": [
+   {
+    "Size": "27.5x2.4",
+    "ETRTO": "60-584",
+    "Color": "Black",
+    "Weight": "1200 g"
+   },
+   {
+    "Size": "27.5x2.6",
+    "ETRTO": "65-584",
+    "Color": "Black",
+    "Weight": "1265 g"
+   },
+   {
+    "Size": "29x2.4",
+    "ETRTO": "60-622",
+    "Color": "Black",
+    "Weight": "1375 g"
+   },
+   {
+    "Size": "29x2.6",
+    "ETRTO": "65-622",
+    "Color": "Black",
+    "Weight": "1400 g"
+   }
+  ],
+  "features": [
+   {
+    "title": "4Compound formulation powered by Graphene",
+    "text": "4 optimized compounds strategically placed where they are needed for an unparalleled blend of speed, grip, and durability."
+   },
+   {
+    "title": "Enduro casing",
+    "text": "Abrasion and puncture resistant double ply nylon casing engineered for enduro and shuttle laps."
+   },
+   {
+    "title": "Bead Shield",
+    "text": "Additional layer on the bead provides extra protection."
+   },
+   {
+    "title": "Sidewall stability insert",
+    "text": "Insert made with high-tech rubber material offering rim strike protection and sidewall support"
+   }
+  ],
+  "wide_rim": "",
+  "tagline": "Engineered for reliability, control, grip, and speed on mixed courses, the Mazza Enduro is the do-it-all tire for shuttle laps, timed gravity runs, and any time your day on the bike involves dicing technical terrain. Engineered with EWS-proven technology and designed to the specs of top athletes, the Mazza is equal to anything the trail can throw at it.",
+  "summary": "While cornering or gripping off-camber rock faces, progressive siping on the shoulders varies the tread’s edges to balance responsive trail-feel with tenacious grab and no instability – glued, in control, and predictable. On climbs, the Mazza digs in with staircase leading edges that thrive on punchy rollers and technical rocky cruxes alike. Between the two, voracious spacing gobbles and clears loose, loamy soil and clingy muck."
+ },
+ "mazza-trail": {
+  "tech_intro": "Confident cornering and off-camber grip with progressive siping that balances control and stability.",
+  "chart": [
+   {
+    "Size": "27.5x2.6",
+    "ETRTO": "65-584​",
+    "Color": "Black",
+    "Weight": "1100 g"
+   },
+   {
+    "Size": "29x2.4",
+    "ETRTO": "60-622​",
+    "Color": "Black",
+    "Weight": "1150 g"
+   },
+   {
+    "Size": "29x2.6",
+    "ETRTO": "65-622​",
+    "Color": "Black",
+    "Weight": "1180 g"
+   },
+   {
+    "Size": "29x2.4",
+    "ETRTO": "60-622​",
+    "Color": "Brown",
+    "Weight": "1130 g"
+   },
+   {
+    "Size": "27.5x2.4",
+    "ETRTO": "60-584​",
+    "Color": "Black",
+    "Weight": "1070 g"
+   }
+  ],
+  "features": [
+   {
+    "title": "4Compound Formulation powered by Graphene",
+    "text": "4 optimized compounds strategically placed where they are needed for an unparalleled blend of speed, grip, and durability."
+   },
+   {
+    "title": "Trail casing",
+    "text": "A durable 60-TPI nylon casing built for exploration. It resists abrasion and punctures while maintaining your connection to the trail with a mid-tier suppleness."
+   },
+   {
+    "title": "Bead Shield",
+    "text": "Additional layer on the bead provides extra protection."
+   },
+   {
+    "title": "Anti-Puncture Belt",
+    "text": "Designed to provide extra puncture resistance, ensuring your ride stays smooth and uninterrupted."
+   },
+   {
+    "title": "Sidewall Protection",
+    "text": "Reinforcing nylon layer for extra protection and lateral stability."
+   }
+  ],
+  "wide_rim": "",
+  "tagline": "Vittoria’s 4Compound Formulation strategically places four optimized rubber compounds exactly where they’re needed, delivering a harmonious blend of speed, grip, and durability.",
+  "summary": "The Trail casing brings it all together with a tubeless-ready nylon construction, reinforced sidewalls, and an anti-puncture belt—light for long rides, strong for the roughest trails."
+ },
+ "mezcal-xc-race": {
+  "tech_intro": "The Mezcal XC Race’s Race Formulation with Graphene + Silica​ is made for speed and grip without compromise. Designed to be the absolute fastest option from point A to point B. 60 TPI Nylon Casing​. Supple feel and dependable nylon construction. Providing reduced rider fatigue and increased race-day reliability.",
+  "chart": [
+   {
+    "Size": "29x2.25",
+    "ETRTO": "55-622​",
+    "Color": "Black",
+    "Weight": "700 g"
+   },
+   {
+    "Size": "29x2.25",
+    "ETRTO": "55-622​",
+    "Color": "Brown",
+    "Weight": "680 g"
+   },
+   {
+    "Size": "29x2.4",
+    "ETRTO": "60-622",
+    "Color": "Black",
+    "Weight": "740 g"
+   },
+   {
+    "Size": "29x2.4",
+    "ETRTO": "60-622",
+    "Color": "Brown",
+    "Weight": "720 g"
+   }
+  ],
+  "features": [
+   {
+    "title": "Race Formulation powered by Graphene + Silica",
+    "text": "Optimized for fast and technical terrains, this race-ready compound blend balances speed with control."
+   }
+  ],
+  "wide_rim": "",
+  "tagline": "The new Mezcal XC Race; A never-ending success in a new size. The Mezcal XC Race is built using the new XC Race Formulation and have been torture tested at the UCI elite levels. The Race Formulation employs Graphene and Silica, providing increased wet grip and suppleness, and combines a 60TPI tubeless ready casing to optimize deformation. This combination has been shown to reduce rider fatigue while simultaneously increasing race-day reliability.",
+  "summary": "The continuous center line maintains fast-rolling contact, and its offset extensions are siped to multiply the number of leading and trailing edges, propelling you up the trail on climbs and increasing bite while braking. The rear siping on the shoulder knobs runs parallel to the trail with variable widths and open trailing edges, so the Mezcal corners fast on hard, slippery surfaces – despite being such a fast-rolling tire. For climbing, cornering, or careening down hill, no tire cooks like the Mezcal."
+ },
+ "mezcal-xc-trail": {
+  "tech_intro": "Engineered for pure XC speed and proven with multiple UCI World Championship and XCO European Championship wins.",
+  "chart": [
+   {
+    "Size": "26x2.1",
+    "ETRTO": "52-559​",
+    "Color": "Black",
+    "Weight": "770 g"
+   },
+   {
+    "Size": "27.5x2.1",
+    "ETRTO": "52-584​",
+    "Color": "Black",
+    "Weight": "760 g"
+   },
+   {
+    "Size": "27.5x2.25",
+    "ETRTO": "55-584​",
+    "Color": "Black",
+    "Weight": "800 g"
+   },
+   {
+    "Size": "27.5x2.4",
+    "ETRTO": "60-584​",
+    "Color": "Black",
+    "Weight": "820 g"
+   },
+   {
+    "Size": "27.5x2.6",
+    "ETRTO": "65-584​",
+    "Color": "Black",
+    "Weight": "950 g"
+   },
+   {
+    "Size": "29x2.1",
+    "ETRTO": "52-622​",
+    "Color": "Black",
+    "Weight": "840 g"
+   },
+   {
+    "Size": "29x2.25",
+    "ETRTO": "55-622​",
+    "Color": "Black",
+    "Weight": "880 g"
+   },
+   {
+    "Size": "29x2.4",
+    "ETRTO": "60-622​",
+    "Color": "Black",
+    "Weight": "920 g"
+   },
+   {
+    "Size": "29x2.4",
+    "ETRTO": "60-622​",
+    "Color": "Brown",
+    "Weight": "900 g"
+   },
+   {
+    "Size": "29x2.6",
+    "ETRTO": "65-622​",
+    "Color": "Black",
+    "Weight": "980 g"
+   }
+  ],
+  "features": [
+   {
+    "title": "4Compound Formulation powered by Graphene",
+    "text": "4 optimized compounds strategically placed where they are needed for an unparalleled blend of speed, grip, and durability."
+   },
+   {
+    "title": "Trail casing",
+    "text": "A durable 60-TPI nylon casing built for exploration. It resists abrasion and punctures while maintaining your connection to the trail with a mid-tier suppleness."
+   },
+   {
+    "title": "Bead Shield",
+    "text": "Additional layer on the bead provides extra protection."
+   },
+   {
+    "title": "Anti-Puncture Belt",
+    "text": "Designed to provide extra puncture resistance, ensuring your ride stays smooth and uninterrupted."
+   },
+   {
+    "title": "Sidewall Protection",
+    "text": "Reinforcing nylon layer for extra protection and lateral stability."
+   }
+  ],
+  "wide_rim": "",
+  "tagline": "Vittoria’s 4Compound Formulation places four optimized rubber compounds exactly where they’re needed, creating a perfect balance of speed, traction, and long-lasting durability.",
+  "summary": "The Trail casing ties it all together with a tubeless-ready nylon construction, reinforced sidewalls, and an anti-puncture belt—light enough for long rides, strong enough for the roughest lines."
+ },
+ "peyote-xc-race": {
+  "tech_intro": "The Race Formulation, using Graphene + Silica compound, minimizes rolling resistance on the center strip and maximizes confident grip on the shoulders. The 60-TPI nylon XC Race TLR casing is durable, supple, and puncture resistant – reliability and longevity don’t come at the cost of your connection to the trail.",
+  "chart": [
+   {
+    "Size": "29x2.25",
+    "ETRTO": "55-622​",
+    "Color": "Brown",
+    "Weight": "690 g"
+   },
+   {
+    "Size": "29x2.25",
+    "ETRTO": "55-622​",
+    "Color": "Black",
+    "Weight": "710 g"
+   },
+   {
+    "Size": "29x2.4",
+    "ETRTO": "60-622",
+    "Color": "Brown",
+    "Weight": "730 g"
+   },
+   {
+    "Size": "29x2.4",
+    "ETRTO": "60-622",
+    "Color": "Black",
+    "Weight": "750 g"
+   }
+  ],
+  "features": [
+   {
+    "title": "Race Formulation powered by Graphene + Silica",
+    "text": "Optimized for fast and technical terrains, this race-ready compound blend balances speed with control."
+   }
+  ],
+  "wide_rim": "",
+  "tagline": "The Peyote delivers World Cup level speed and confidence in a range of terrain thanks to its revolutionary new tread pattern. Positioned between Terreno and Mezcal, the tread features a low-profile alternating center ribbon designed to increase speed and grip. The familiar Vittoria v-formation used in the Peyote allows the tire to dig through loose terrain to find traction while evacuating debris laterally.",
+  "summary": "The alternating mid-tread tapers up to capable cornering tread, providing responsive handling and a predictable feel. These traits work to boost cornering performance by placing effective edges directly opposing the path of cornering forces, regardless of lean or cornering angles."
+ },
+ "peyote-xc-trail": {
+  "tech_intro": "World Cup-level speed and confidence across varied terrain with a revolutionary tread design.",
+  "chart": [
+   {
+    "Size": "29x2.1",
+    "ETRTO": "52-622​",
+    "Color": "Black",
+    "Weight": "790 g"
+   },
+   {
+    "Size": "29x2.25",
+    "ETRTO": "55-622​",
+    "Color": "Black",
+    "Weight": "840 g"
+   },
+   {
+    "Size": "29x2.4",
+    "ETRTO": "60-622​",
+    "Color": "Black",
+    "Weight": "890 g"
+   },
+   {
+    "Size": "29x2.4",
+    "ETRTO": "60-622​",
+    "Color": "Brown",
+    "Weight": "870 g"
+   },
+   {
+    "Size": "29x2.6",
+    "ETRTO": "65-622​",
+    "Color": "Black",
+    "Weight": "960 g"
+   }
+  ],
+  "features": [
+   {
+    "title": "4Compound Formulation powered by Graphene",
+    "text": "4 optimized compounds strategically placed where they are needed for an unparalleled blend of speed, grip, and durability."
+   },
+   {
+    "title": "Trail casing",
+    "text": "A durable 60-TPI nylon casing built for exploration. It resists abrasion and punctures while maintaining your connection to the trail with a mid-tier suppleness."
+   },
+   {
+    "title": "Bead Shield",
+    "text": "Additional layer on the bead provides extra protection."
+   },
+   {
+    "title": "Anti-Puncture Belt",
+    "text": "Designed to provide extra puncture resistance, ensuring your ride stays smooth and uninterrupted."
+   },
+   {
+    "title": "Sidewall Protection",
+    "text": "Reinforcing nylon layer for extra protection and lateral stability."
+   }
+  ],
+  "wide_rim": "",
+  "tagline": "Performance goes even deeper with Vittoria’s 4Compound Formulation, which strategically places four optimized rubber compounds exactly where they’re needed. The result is an unrivaled fusion of speed, grip, and durability.",
+  "summary": "Built on our advanced Trail casing, this tire balances low weight with toughness: a tubeless-ready nylon construction reinforced with sidewall protection and an anti-puncture belt—confidence for every line you choose."
+ },
+ "rubino-tube-type": {
+  "tech_intro": "Graphene + Silica compound is engineered for long mileage, puncture resistance, high grip & speed for everyday use.",
+  "chart": [
+   {
+    "Size": "700x28c",
+    "ETRTO": "28-622",
+    "Color": "Black",
+    "Weight": "240 g"
+   },
+   {
+    "Size": "700x28c",
+    "ETRTO": "28-622",
+    "Color": "Tan",
+    "Weight": "230 g"
+   },
+   {
+    "Size": "700x28c",
+    "ETRTO": "28-622",
+    "Color": "Blue",
+    "Weight": "230 g"
+   },
+   {
+    "Size": "700x28c",
+    "ETRTO": "28-622",
+    "Color": "Red",
+    "Weight": "230 g"
+   },
+   {
+    "Size": "700x28c",
+    "ETRTO": "28-622",
+    "Color": "Yellow",
+    "Weight": "230 g"
+   },
+   {
+    "Size": "700x28c",
+    "ETRTO": "28-622",
+    "Color": "White",
+    "Weight": "230 g"
+   },
+   {
+    "Size": "700x26c",
+    "ETRTO": "26-622",
+    "Color": "Black",
+    "Weight": "230 g"
+   },
+   {
+    "Size": "700x30c",
+    "ETRTO": "30-622",
+    "Color": "Black",
+    "Weight": "260 g"
+   },
+   {
+    "Size": "700x30c",
+    "ETRTO": "30-622",
+    "Color": "Tan",
+    "Weight": "250 g"
+   },
+   {
+    "Size": "700x32c",
+    "ETRTO": "32-622",
+    "Color": "Black",
+    "Weight": "290 g"
+   },
+   {
+    "Size": "700x32c",
+    "ETRTO": "32-622",
+    "Color": "Tan",
+    "Weight": "280 g"
+   },
+   {
+    "Size": "700x34c",
+    "ETRTO": "34-622",
+    "Color": "Black",
+    "Weight": "310 g"
+   },
+   {
+    "Size": "700x34c",
+    "ETRTO": "34-622",
+    "Color": "Tan",
+    "Weight": "300 g"
+   }
+  ],
+  "features": [
+   {
+    "title": "Graphene + Silica",
+    "text": "Rubber, infused with Graphene and Silica, in a formulation engineered for long mileage, puncture resistance, high grip & speed for everyday use."
+   },
+   {
+    "title": "100 TPI Nylon casing",
+    "text": "Durability. Longevity. Reliability. A reliable, puncture-resistant platform engineered for long training miles and racing alike, with thicker threads that better withstand the grind of daily intervals while still transitioning to the speed of the weekly crit series."
+   },
+   {
+    "title": "Bead Shield",
+    "text": "Additional layer on the bead provides extra protection."
+   },
+   {
+    "title": "Anti-Puncture Belt",
+    "text": "Designed to provide extra puncture resistance, ensuring your ride stays smooth and uninterrupted."
+   }
+  ],
+  "wide_rim": "",
+  "tagline": "&nbsp;",
+  "summary": "Compared to its predecessor, the new Rubino Tube-Type delivers remarkable performance gains: 5% improvement in rolling efficiency, 5% in grip, 11% in puncture resistance, 9% in riding comfort, 37% in durability, and a 12% reduction in weight."
+ },
+ "rubino-tubeless-ready": {
+  "tech_intro": "Graphene + Silica compound is engineered for long mileage, puncture resistance, high grip & speed for everyday use.",
+  "chart": [
+   {
+    "Size": "700x26c",
+    "ETRTO": "26-622",
+    "Color": "Black",
+    "Weight": "300 g"
+   },
+   {
+    "Size": "700x28c",
+    "ETRTO": "28-622",
+    "Color": "Tan",
+    "Weight": "320 g"
+   },
+   {
+    "Size": "700x28c",
+    "ETRTO": "28-622",
+    "Color": "Black",
+    "Weight": "330 g"
+   },
+   {
+    "Size": "700x30c",
+    "ETRTO": "30-622",
+    "Color": "Tan",
+    "Weight": "340 g"
+   },
+   {
+    "Size": "700x30c",
+    "ETRTO": "30-622",
+    "Color": "Black",
+    "Weight": "350 g"
+   },
+   {
+    "Size": "700x32c",
+    "ETRTO": "32-622",
+    "Color": "Tan",
+    "Weight": "360 g"
+   },
+   {
+    "Size": "700x32c",
+    "ETRTO": "32-622",
+    "Color": "Black",
+    "Weight": "370 g"
+   },
+   {
+    "Size": "700x34c",
+    "ETRTO": "34-622",
+    "Color": "Tan",
+    "Weight": "380 g"
+   },
+   {
+    "Size": "700x34c",
+    "ETRTO": "34-622",
+    "Color": "Black",
+    "Weight": "390 g"
+   }
+  ],
+  "features": [
+   {
+    "title": "Graphene + Silica",
+    "text": "Rubber, infused with Graphene and Silica, in a formulation engineered for long mileage, puncture resistance, high grip & speed for everyday use."
+   },
+   {
+    "title": "100 TPI Nylon casing",
+    "text": "Durability. Longevity. Reliability. A reliable, puncture-resistant platform engineered for long training miles and racing alike, with thicker threads that better withstand the grind of daily intervals while still transitioning to the speed of the weekly crit series."
+   },
+   {
+    "title": "Bead Shield",
+    "text": "Additional layer on the bead provides extra protection."
+   },
+   {
+    "title": "Anti-Puncture Belt",
+    "text": "Designed to provide extra puncture resistance, ensuring your ride stays smooth and uninterrupted."
+   },
+   {
+    "title": "Inner shield",
+    "text": "Extra sheet for enhanced air retention. Applies to sizes 26 to 32."
+   }
+  ],
+  "wide_rim": "",
+  "tagline": "The modernized Rubino tread increases speed, grip, and durability by utilizing a smooth center, which transitions smoothly into updated chevron clusters, while retaining the familiar grid texture at the limit. The new Graphene + Silica compound is engineered for long mileage, puncture resistance, high grip, and speed for everyday use.",
+  "summary": "Compared to its predecessor, the new Rubino Tubeless-Ready delivers remarkable performance gains: 18% improvement in rolling efficiency, 5% in grip, 21% in puncture resistance, 13% in riding comfort, 37% in durability, and a 10% reduction in weight."
+ },
+ "terreno-pro-t10-hardpack-gravel-race": {
+  "tech_intro": "Reduced rolling resistance thanks to the Corsa-inspired slick center strip.",
+  "chart": [
+   {
+    "Size": "700x35c",
+    "ETRTO": "35-622",
+    "Color": "Brown",
+    "Weight": "550 g"
+   },
+   {
+    "Size": "700x40c",
+    "ETRTO": "40-622",
+    "Color": "Brown",
+    "Weight": "600 g"
+   },
+   {
+    "Size": "700x45c",
+    "ETRTO": "45-622",
+    "Color": "Brown",
+    "Weight": "670 g"
+   }
+  ],
+  "features": [
+   {
+    "title": "Eco Race Formulation",
+    "text": "Next-generation compound blend developed specifically for competitive gravel racing, delivering exceptional speed and grip across varied terrain. Renewable and recycled ingredients include Fair-Rubber certified natural rubber, soybean oil and rice husk ash silica."
+   },
+   {
+    "title": "Organic Cotton Casing",
+    "text": "Multi-layer organic cotton casing, reinforced with natural latex, providing a more supple ride feel while reducing agricultural pollution."
+   },
+   {
+    "title": "Bead Shield",
+    "text": "Additional layer on the bead provides extra protection."
+   },
+   {
+    "title": "Recycled Nylon Anti-Puncture Belt",
+    "text": "Designed to provide extra puncture resistance, ensuring your ride stays smooth and uninterrupted.  This anti-puncture belt is made of Seawastex® recycled nylon, obtained from the recycling of fish nets that are no longer usable."
+   },
+   {
+    "title": "Recycled Nylon Sidewall Protection",
+    "text": "Reinforcing recycled nylon layer for extra protection and lateral stability. The Seawastex® nylon comes from the recycling of fish nets that are no longer usable."
+   }
+  ],
+  "wide_rim": "",
+  "tagline": "But performance alone isn't enough. The Terreno PRO range is built with 92% renewable and recycled materials, making it the most sustainable tire Vittoria has ever created. Compared to the average competitor, it is 7% faster, 9% grippier, and 34% more puncture resistant, proving that going green doesn’t mean compromising on winning.",
+  "summary": "With a 52% lower carbon footprint versus the Gravel Endurance construction, Terreno PRO T10 Hardpack shows that sustainability and speed can ride side by side. Awarded the Gold Award and Green Prize at the 2024 Taipei Cycle Show d&i Awards, the Terreno Pro range represents the new era of cycling."
+ },
+ "terreno-pro-t30-fine-loose-gravel-race": {
+  "tech_intro": "Optimized for speed on dry, fast courses with a unique fish scale center strip that minimizes rolling resistance while maintaining control under braking and cornering.",
+  "chart": [
+   {
+    "Size": "700x35c",
+    "ETRTO": "35-622",
+    "Color": "Brown",
+    "Weight": "550 g"
+   },
+   {
+    "Size": "700x40c",
+    "ETRTO": "40-622",
+    "Color": "Brown",
+    "Weight": "600 g"
+   },
+   {
+    "Size": "700x45c",
+    "ETRTO": "45-622",
+    "Color": "Brown",
+    "Weight": "670 g"
+   }
+  ],
+  "features": [
+   {
+    "title": "Eco Race Formulation",
+    "text": "Next-generation compound blend developed specifically for competitive gravel racing, delivering exceptional speed and grip across varied terrain. Renewable and recycled ingredients include Fair-Rubber certified natural rubber, soybean oil and rice husk ash silica."
+   },
+   {
+    "title": "Organic Cotton Casing",
+    "text": "Multi-layer organic cotton casing, reinforced with natural latex, providing a more supple ride feel while reducing agricultural pollution."
+   },
+   {
+    "title": "Bead Shield",
+    "text": "Additional layer on the bead provides extra protection."
+   },
+   {
+    "title": "Recycled Nylon Anti-Puncture Belt",
+    "text": "Designed to provide extra puncture resistance, ensuring your ride stays smooth and uninterrupted.  This anti-puncture belt is made of Seawastex® recycled nylon, obtained from the recycling of fish nets that are no longer usable."
+   },
+   {
+    "title": "Recycled Nylon Sidewall Protection",
+    "text": "Reinforcing recycled nylon layer for extra protection and lateral stability. The Seawastex® nylon comes from the recycling of fish nets that are no longer usable."
+   }
+  ],
+  "wide_rim": "",
+  "tagline": "But we wanted more from this range. The Terreno PRO range is built with 92% renewable and recycled materials, making it the most sustainable tire Vittoria has ever created, proving that going green doesn’t mean compromising on winning.",
+  "summary": "With a 49% lower carbon footprint versus the Gravel Endurance construction, Terreno PRO T30 Fine Loose Gravel Race shows that sustainability and speed can ride side by side. Awarded the Gold Award and Green Prize at the 2024 Taipei Cycle Show d&i Awards, the Terreno Pro range represents the new era of cycling."
+ },
+ "terreno-pro-t50-mixed-gravel-race": {
+  "tech_intro": "Enhanced traction thanks to a directional siping texture that works with the knob placement for optimal grip.",
+  "chart": [
+   {
+    "Size": "700x35c",
+    "ETRTO": "35-622",
+    "Color": "Brown",
+    "Weight": "550 g"
+   },
+   {
+    "Size": "700x40c",
+    "ETRTO": "40-622",
+    "Color": "Brown",
+    "Weight": "600 g"
+   },
+   {
+    "Size": "700x45c",
+    "ETRTO": "45-622",
+    "Color": "Brown",
+    "Weight": "670 g"
+   }
+  ],
+  "features": [
+   {
+    "title": "Eco Race Formulation",
+    "text": "Next-generation compound blend developed specifically for competitive gravel racing, delivering exceptional speed and grip across varied terrain. Renewable and recycled ingredients include Fair-Rubber certified natural rubber, soybean oil and rice husk ash silica."
+   },
+   {
+    "title": "Organic Cotton Casing",
+    "text": "Multi-layer organic cotton casing, reinforced with natural latex, providing a more supple ride feel while reducing agricultural pollution."
+   },
+   {
+    "title": "Bead Shield",
+    "text": "Additional layer on the bead provides extra protection."
+   },
+   {
+    "title": "Recycled Nylon Anti-Puncture Belt",
+    "text": "Designed to provide extra puncture resistance, ensuring your ride stays smooth and uninterrupted.  This anti-puncture belt is made of Seawastex® recycled nylon, obtained from the recycling of fish nets that are no longer usable."
+   },
+   {
+    "title": "Recycled Nylon Sidewall Protection",
+    "text": "Reinforcing recycled nylon layer for extra protection and lateral stability. The Seawastex® nylon comes from the recycling of fish nets that are no longer usable."
+   }
+  ],
+  "wide_rim": "",
+  "tagline": "Fast is fun, but we aimed higher. The Terreno PRO range is built with 92% renewable and recycled materials, making it the most sustainable tire Vittoria has ever created. Compared to the average competitor, it is 7% faster, 9% grippier, and 34% more puncture resistant, proving that going green doesn’t mean compromising.",
+  "summary": "This award winning tire rolls with a 53% lower carbon footprint versus the Gravel Endurance construction, Terreno PRO T50 Mixed shows that sustainability and speed can ride side by side, representing a new era of cycling."
+ },
+ "terreno-pro-t60-tubeless-ready": {
+  "tech_intro": "Confident cornering and consistent handling with the proven V-formation design and uniform tread profile.",
+  "chart": [
+   {
+    "Size": "700x35c",
+    "ETRTO": "35-622",
+    "Color": "Brown",
+    "Weight": "550 g"
+   },
+   {
+    "Size": "700x40c",
+    "ETRTO": "40-622",
+    "Color": "Brown",
+    "Weight": "600 g"
+   },
+   {
+    "Size": "700x45c",
+    "ETRTO": "45-622",
+    "Color": "Brown",
+    "Weight": "670 g"
+   }
+  ],
+  "features": [
+   {
+    "title": "Eco Race Formulation",
+    "text": "Our Eco Race Formulation is a sustainably developed compound containing natural rubber, soybean oil, and rice husk ash silica, providing speed and grip without compromise. It is designed to be the fastest option from point A to point B."
+   },
+   {
+    "title": "Eco Race casing",
+    "text": "Our Eco Race casing consists of a multi-layer organic cotton casing, reinforced with natural latex, recycled nylon sidewall protection and anti-puncture belt. It is engineered to ensure reduced rider fatigue with increased race-day speed and reliability."
+   },
+   {
+    "title": "Bead Shield",
+    "text": "Additional layer on the bead provides extra protection."
+   },
+   {
+    "title": "Recycled Nylon anti-puncture belt",
+    "text": "Designed to provide extra puncture resistance, ensuring your ride stays smooth and uninterrupted. This anti-puncture belt is made of Seawastex® recycled nylon, obtained from the recycling of fish nets that are no longer usable and have been thrown away."
+   },
+   {
+    "title": "Recycled Nylon Sidewall Protection",
+    "text": "Reinforcing recycled nylon layer for extra protection and lateral stability. The Seawastex® nylon comes from the recycling of fish nets that are no longer usable and have been thrown away."
+   },
+   {
+    "title": "Natural brown color",
+    "text": "This product is made from natural materials that may vary in color and appearance. Vittoria guarantees identical performance without contrasting these variations that contribute to the uniqueness of each piece."
+   }
+  ],
+  "wide_rim": "",
+  "tagline": "But performance alone wasn’t enough. Every Terreno PRO is built with 92% renewable and recycled materials, making it the most sustainable tire Vittoria has ever created. Compared to the average competitor, it is 7% faster, 9% grippier, and 34% more puncture resistant, showcasing performance and sustainability without compromise.",
+  "summary": "Compared to the Gravel Endurance construction, the new PRO one achieves an average carbon footprint reduction of 35% (based on a 2024 modelling scenario), showing that sustainability and speed can ride side by side. Awarded at the Taipei Cycle Show 2024, this tire represents the new era of cycling."
+ },
+ "terreno-t10-hardpack-gravel-endurance": {
+  "tech_intro": "Reduced rolling resistance thanks to the Corsa-inspired slick center strip.",
+  "chart": [
+   {
+    "Size": "650x47b",
+    "ETRTO": "47-584​",
+    "Color": "Black",
+    "Weight": "570 g"
+   },
+   {
+    "Size": "700x37c",
+    "ETRTO": "37-622​",
+    "Color": "Black",
+    "Weight": "470 g"
+   },
+   {
+    "Size": "700x40c",
+    "ETRTO": "40-622​",
+    "Color": "Black",
+    "Weight": "510 g"
+   },
+   {
+    "Size": "700x40c",
+    "ETRTO": "40-622​",
+    "Color": "Brown",
+    "Weight": "490 g"
+   },
+   {
+    "Size": "700x45c",
+    "ETRTO": "45-622​",
+    "Color": "Black",
+    "Weight": "560 g"
+   },
+   {
+    "Size": "700x45c",
+    "ETRTO": "45-622​",
+    "Color": "Brown",
+    "Weight": "540 g"
+   },
+   {
+    "Size": "700x50c",
+    "ETRTO": "50-622​",
+    "Color": "Black",
+    "Weight": "640 g"
+   },
+   {
+    "Size": "700x50c",
+    "ETRTO": "50-622",
+    "Color": "Brown",
+    "Weight": "620 g"
+   },
+   {
+    "Size": "700x55c",
+    "ETRTO": "55-622",
+    "Color": "Black",
+    "Weight": "710 g"
+   },
+   {
+    "Size": "700x55c",
+    "ETRTO": "55-622",
+    "Color": "Brown",
+    "Weight": "690 g"
+   }
+  ],
+  "features": [
+   {
+    "title": "Endurance Formulation powered by Graphene",
+    "text": "Developed for maximum durability, grip, and longevity, this advanced rubber compound is infused with Graphene to boost performance across a wide range of conditions. Built for all-weather dependability and long-distance use, it ensures consistent traction and efficiency when it matters most."
+   },
+   {
+    "title": "Endurance Casing",
+    "text": "Engineered with 100 TPI nylon, the Endurance Casing is built to handle the harsh demands of gravel riding. Its durable threads reduce rolling resistance while preserving a responsive ride feel, and help absorb trail chatter for added comfort and control on rough terrain. Designed for long-distance durability, it’s the foundation of reliable performance on every ride."
+   },
+   {
+    "title": "Bead Shield",
+    "text": "Additional layer on the bead provides extra protection."
+   },
+   {
+    "title": "Anti-Puncture Belt",
+    "text": "Designed to provide extra puncture resistance, ensuring your ride stays smooth and uninterrupted."
+   },
+   {
+    "title": "Sidewall Protection",
+    "text": "Reinforcing nylon layer for extra protection and lateral stability"
+   }
+  ],
+  "wide_rim": "",
+  "tagline": "The Terreno T10 Hardpack Gravel Endurance tire is the most road-efficient model in the Vittoria Gravel Endurance range, engineered for speed and control on compact surfaces.  The heart of the T10 is Vittoria’s Endurance Formulation powered by Graphene, delivering proven durability, weather resistance, and consistent performance across seasons and surfaces. A Corsa-inspired and fast rolling slick center strip is paired with revolutionary fish scale shoulders, adapted from the Terreno T30, for added cornering grip and navigating wet or variable terrain. Built with our Endurance Casing, the T10 offers high adaptability and structural strength for long-distance riding, reinforced with a nylon sidewall protection layer and an anti-puncture belt to ensure maximum reliability and peace of mind.",
+  "summary": "From tarmac to fast rolling hardpack, the T10 brings road-like efficiency to the gravel world—with the endurance pedigree to match."
+ },
+ "terreno-t30-gravel-endurance": {
+  "tech_intro": "Optimized for speed on dry, fast courses with a unique fish scale center strip that minimizes rolling resistance while maintaining control under braking and cornering.",
+  "chart": [
+   {
+    "Size": "650x47b",
+    "ETRTO": "47-584​",
+    "Color": "Black",
+    "Weight": "570 g"
+   },
+   {
+    "Size": "700x37c",
+    "ETRTO": "37-622​",
+    "Color": "Black",
+    "Weight": "480 g"
+   },
+   {
+    "Size": "700x40c",
+    "ETRTO": "40-622​",
+    "Color": "Black",
+    "Weight": "520 g"
+   },
+   {
+    "Size": "700x40c",
+    "ETRTO": "40-622​",
+    "Color": "Brown",
+    "Weight": "500 g"
+   },
+   {
+    "Size": "700x45c",
+    "ETRTO": "45-622​",
+    "Color": "Black",
+    "Weight": "560 g"
+   },
+   {
+    "Size": "700x45c",
+    "ETRTO": "45-622​",
+    "Color": "Brown",
+    "Weight": "540 g"
+   },
+   {
+    "Size": "700x50c",
+    "ETRTO": "50-622​",
+    "Color": "Black",
+    "Weight": "610 g"
+   },
+   {
+    "Size": "700x50c",
+    "ETRTO": "50-622",
+    "Color": "Brown",
+    "Weight": "590 g"
+   },
+   {
+    "Size": "700x55c",
+    "ETRTO": "55-622",
+    "Color": "Black",
+    "Weight": "690 g"
+   },
+   {
+    "Size": "700x55c",
+    "ETRTO": "55-622",
+    "Color": "Brown",
+    "Weight": "670 g"
+   }
+  ],
+  "features": [
+   {
+    "title": "Endurance Formulation powered by Graphene",
+    "text": "Developed for maximum durability, grip, and longevity, this advanced rubber compound is infused with Graphene to boost performance across a wide range of conditions. Built for all-weather dependability and long-distance use, it ensures consistent traction and efficiency when it matters most."
+   },
+   {
+    "title": "Endurance Casing",
+    "text": "Engineered with 100 TPI nylon, the Endurance Casing is built to handle the harsh demands of gravel riding. Its durable threads reduce rolling resistance while preserving a responsive ride feel, and help absorb trail chatter for added comfort and control on rough terrain. Designed for long-distance durability, it’s the foundation of reliable performance on every ride."
+   },
+   {
+    "title": "Bead Shield",
+    "text": "Additional layer on the bead provides extra protection."
+   },
+   {
+    "title": "Anti-puncture belt",
+    "text": "Designed to provide extra puncture resistance, ensuring your ride stays smooth and uninterrupted."
+   },
+   {
+    "title": "Sidewall protection",
+    "text": "Reinforcing nylon layer for extra protection and lateral stability."
+   }
+  ],
+  "wide_rim": "",
+  "tagline": "With Vittoria’s Endurance Casing, the T30 delivers high adaptability and strength across long distances. Reinforced nylon sidewall protection and an anti-puncture belt add critical resilience and stability, ensuring riders stay protected against sharp rocks, roots, and unpredictable terrain.",
+  "summary": "The T30 is built for fast gravel, offering a race-ready feel with the confidence to handle off-camber turns, tricky corners in the wet or dry, and shifting surfaces without hesitation."
+ },
+ "terreno-t50-tubeless-ready": {
+  "tech_intro": "Enhanced traction from a directional siping texture that works together with the angled edges of the tread blocks.",
+  "chart": [
+   {
+    "Size": "700x40c",
+    "ETRTO": "40-622",
+    "Color": "Brown",
+    "Weight": "530 g"
+   },
+   {
+    "Size": "700x40c",
+    "ETRTO": "40-622",
+    "Color": "Black",
+    "Weight": "530 g"
+   },
+   {
+    "Size": "700x45c",
+    "ETRTO": "45-622",
+    "Color": "Brown",
+    "Weight": "540 g"
+   },
+   {
+    "Size": "700x45c",
+    "ETRTO": "45-622",
+    "Color": "Black",
+    "Weight": "545 g"
+   },
+   {
+    "Size": "700x50c",
+    "ETRTO": "50-622",
+    "Color": "Black",
+    "Weight": "590 g"
+   },
+   {
+    "Size": "700x50c",
+    "ETRTO": "50-622",
+    "Color": "Brown",
+    "Weight": "570 g"
+   },
+   {
+    "Size": "700x55c",
+    "ETRTO": "55-622",
+    "Color": "Brown",
+    "Weight": "650 g"
+   },
+   {
+    "Size": "700x55c",
+    "ETRTO": "55-622",
+    "Color": "Black",
+    "Weight": "670 g"
+   }
+  ],
+  "features": [
+   {
+    "title": "Endurance Formulation Graphene",
+    "text": "Dependability, durability, and performance, made for the long haul, no matter the weather."
+   },
+   {
+    "title": "Endurance casing",
+    "text": "Nylon’s durable threads withstand the punishment of mixed-terrain cycling, and the relatively high thread count sheds rolling resistance and maintains the feel of the terrain while muting chatter."
+   },
+   {
+    "title": "Bead Shield",
+    "text": "Additional layer on the bead provides extra protection."
+   },
+   {
+    "title": "Anti-Puncture Belt",
+    "text": "Designed to provide extra puncture resistance, ensuring your ride stays smooth and uninterrupted."
+   },
+   {
+    "title": "Sidewall protection",
+    "text": "Reinforcing nylon layer for extra protection and lateral stability"
+   }
+  ],
+  "wide_rim": "",
+  "tagline": "Built with Vittoria’s Endurance Formulation powered by Graphene, the T50 is designed for dependable performance over long distances and changing weather conditions. An anti-puncture belt and reinforced sidewall protection enhance durability, stability, and puncture resistance.",
+  "summary": "For riders who want one tire for a wide range of gravel conditions, the T50 is a true set-it-and-forget-it solution—fast enough for smooth roads, capable enough when the terrain gets rougher."
+ },
+ "terreno-t60-gravel-endurance": {
+  "tech_intro": "Confident cornering and consistent handling with the proven V-formation and uniform tread profile.",
+  "chart": [
+   {
+    "Size": "700x40c",
+    "ETRTO": "40-622​",
+    "Color": "Brown",
+    "Weight": "470 g"
+   },
+   {
+    "Size": "700x40c",
+    "ETRTO": "40-622​",
+    "Color": "Black",
+    "Weight": "490 g"
+   },
+   {
+    "Size": "700x45c",
+    "ETRTO": "45-622​",
+    "Color": "Brown",
+    "Weight": "490 g"
+   },
+   {
+    "Size": "700x45c",
+    "ETRTO": "45-622​",
+    "Color": "Black",
+    "Weight": "510 g"
+   }
+  ],
+  "features": [
+   {
+    "title": "Endurance Formulation powered by Graphene",
+    "text": "Developed for maximum durability, grip, and longevity, this advanced rubber compound is infused with Graphene to boost performance across a wide range of conditions. Built for all-weather dependability and long-distance use, it ensures consistent traction and efficiency when it matters most."
+   },
+   {
+    "title": "Endurance Casing",
+    "text": "Engineered with 100 TPI nylon, the Endurance Casing is built to handle the harsh demands of gravel riding. Its durable threads reduce rolling resistance while preserving a responsive ride feel, and help absorb trail chatter for added comfort and control on rough terrain. Designed for long-distance durability, it’s the foundation of reliable performance on every ride."
+   },
+   {
+    "title": "Bead Shield",
+    "text": "Additional layer on the bead provides extra protection."
+   },
+   {
+    "title": "Anti-puncture belt",
+    "text": "Designed to provide extra puncture resistance, ensuring your ride stays smooth and uninterrupted."
+   },
+   {
+    "title": "Sidewall protection",
+    "text": "Reinforcing nylon layer for extra protection and lateral stability."
+   }
+  ],
+  "wide_rim": "",
+  "tagline": "The grip comes from our Endurance Formulation powered by Graphene, delivering weather-resistant performance, long-lasting durability, and the confidence to go deep into untamed territory—rain or shine.",
+  "summary": "The T60 is designed to thrive in the unpredictable middle ground between dry and loose conditions, and is ideal for adventurous gravel riders, racers, and endurance athletes who need confidence and capability across every mile."
+ },
+ "terreno-t70-gravel-endurance": {
+  "tech_intro": "XCO-proven speed and grip, adapted for gravel to excel on coarse loose surfaces.",
+  "chart": [
+   {
+    "Size": "700x37c",
+    "ETRTO": "37-622​",
+    "Color": "Black",
+    "Weight": "460 g"
+   },
+   {
+    "Size": "700x40c",
+    "ETRTO": "40-622​",
+    "Color": "Black",
+    "Weight": "510 g"
+   },
+   {
+    "Size": "700x40c",
+    "ETRTO": "40-622​",
+    "Color": "Brown",
+    "Weight": "490 g"
+   },
+   {
+    "Size": "700x45c",
+    "ETRTO": "45-622​",
+    "Color": "Black",
+    "Weight": "550 g"
+   },
+   {
+    "Size": "700x45c",
+    "ETRTO": "45-622​",
+    "Color": "Brown",
+    "Weight": "530 g"
+   },
+   {
+    "Size": "700x50c",
+    "ETRTO": "50-622",
+    "Color": "Black",
+    "Weight": "610 g"
+   },
+   {
+    "Size": "700x50c",
+    "ETRTO": "50-622",
+    "Color": "Brown",
+    "Weight": "600 g"
+   },
+   {
+    "Size": "700x55c",
+    "ETRTO": "55-622",
+    "Color": "Black",
+    "Weight": "700 g"
+   },
+   {
+    "Size": "700x55c",
+    "ETRTO": "55-622",
+    "Color": "Brown",
+    "Weight": "690 g"
+   }
+  ],
+  "features": [
+   {
+    "title": "Endurance Formulation powered by Graphene",
+    "text": "Developed for maximum durability, grip, and longevity, this advanced rubber compound is infused with Graphene to boost performance across a wide range of conditions. Built for all-weather dependability and long-distance use, it ensures consistent traction and efficiency when it matters most."
+   },
+   {
+    "title": "Endurance Casing",
+    "text": "Engineered with 100 TPI nylon, the Endurance Casing is built to handle the harsh demands of gravel riding. Its durable threads reduce rolling resistance while preserving a responsive ride feel, and help absorb trail chatter for added comfort and control on rough terrain. Designed for long-distance durability, it’s the foundation of reliable performance on every ride."
+   },
+   {
+    "title": "Bead Shield",
+    "text": "Additional layer on the bead provides extra protection."
+   },
+   {
+    "title": "Anti-puncture belt",
+    "text": "Designed to provide extra puncture resistance, ensuring your ride stays smooth and uninterrupted."
+   },
+   {
+    "title": "Sidewall protection",
+    "text": "Reinforcing nylon layer for extra protection and lateral stability."
+   }
+  ],
+  "wide_rim": "",
+  "tagline": "Adapted from the proven Mezcal XC tread design, the T70 delivers XC race-level speed and grip, and is now optimized for coarse, loose gravel. Built from the Endurance Formulation powered by Graphene, the T70 tread offers weather-resistant dependability, all-condition performance, and the long-lasting resilience needed for epic gravel outings. A fast-rolling center tread ensures momentum on straights, while aggressive shoulder knobs and full-depth tread siping bring control and confidence in corners, offering exceptional traction when terrain gets technical.",
+  "summary": "Built on Vittoria’s Endurance Casing, the T70 offers high adaptability and toughness for long-distance adventures. Reinforced nylon sidewall protection and an anti-puncture belt provide the durability and stability needed to handle rough terrain and sharp impacts."
+ },
+ "terreno-xc-race": {
+  "tech_intro": "Unmatched speed on smooth, dry hardpack with a design built for pure racing performance.",
+  "chart": [
+   {
+    "Size": "29x2.25",
+    "ETRTO": "55-622",
+    "Color": "Brown",
+    "Weight": "660 g"
+   },
+   {
+    "Size": "29x2.25",
+    "ETRTO": "55-622",
+    "Color": "Black",
+    "Weight": "680 g"
+   },
+   {
+    "Size": "29x2.4",
+    "ETRTO": "60-622",
+    "Color": "Brown",
+    "Weight": "700 g"
+   },
+   {
+    "Size": "29x2.4",
+    "ETRTO": "60-622",
+    "Color": "Black",
+    "Weight": "720 g"
+   }
+  ],
+  "features": [
+   {
+    "title": "Race Formulation powered by Graphene + Silica",
+    "text": "Optimized for fast and technical terrains, this race-ready compound blend balances speed with control."
+   }
+  ],
+  "wide_rim": "",
+  "tagline": "The 60 TPI nylon Race Casing strikes the perfect balance between suppleness and strength, boosting puncture resistance and absorbing impacts without compromising rolling efficiency. With uniform tread and sidewall deformation, you get predictable handling and peak responsiveness in every section of the course.",
+  "summary": "The new XC Race construction delivers an exceptional performance upgrade over its predecessor: 20% more speed, 8% more grip, 44% better puncture resistance, and 9% improved riding comfort."
+ },
+ "terreno-xc-trail": {
+  "tech_intro": "Unmatched speed on smooth, dry hardpack.",
+  "chart": [
+   {
+    "Size": "29x2.1",
+    "ETRTO": "52-622​",
+    "Color": "Black",
+    "Weight": "780 g"
+   },
+   {
+    "Size": "29x2.25",
+    "ETRTO": "55-622​",
+    "Color": "Black",
+    "Weight": "750 g"
+   },
+   {
+    "Size": "29x2.4",
+    "ETRTO": "60-622​",
+    "Color": "Brown",
+    "Weight": "800 g"
+   },
+   {
+    "Size": "29x2.4",
+    "ETRTO": "60-622​",
+    "Color": "Black",
+    "Weight": "820 g"
+   }
+  ],
+  "features": [
+   {
+    "title": "4Compound Formulation powered by Graphene",
+    "text": "4 optimized compounds strategically placed where they are needed for an unparalleled blend of speed, grip, and durability."
+   },
+   {
+    "title": "Trail casing",
+    "text": "A durable 60-TPI nylon casing built for exploration. It resists abrasion and punctures while maintaining your connection to the trail with a mid-tier suppleness."
+   },
+   {
+    "title": "Bead Shield",
+    "text": "Additional layer on the bead provides extra protection."
+   },
+   {
+    "title": "Anti-Puncture Belt",
+    "text": "Designed to provide extra puncture resistance, ensuring your ride stays smooth and uninterrupted."
+   },
+   {
+    "title": "Sidewall Protection",
+    "text": "Reinforcing nylon layer for extra protection and lateral stability."
+   }
+  ],
+  "wide_rim": "",
+  "tagline": "Performance goes even deeper with Vittoria’s 4Compound Formulation, which strategically places four optimized rubber compounds exactly where they’re needed. The result is an unrivaled fusion of speed, grip, and durability.",
+  "summary": "Built on our advanced Trail casing, this tire balances low weight with toughness: a tubeless-ready nylon construction reinforced with sidewall protection and an anti-puncture belt—confidence for every line you choose."
+ }
+}

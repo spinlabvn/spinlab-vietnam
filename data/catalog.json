@@ -1,0 +1,503 @@
+{
+ "note": "Ngày đăng sản phẩm — do tools/build_new_products.py quản lý",
+ "products": [
+  {
+   "href": "vittoria-multiway-valve.html",
+   "added": "2026-10-17 17:33",
+   "seq": 83,
+   "name": "Chân van Multiway (bộ 2 van)"
+  },
+  {
+   "href": "emume-basic.html",
+   "added": "2026-10-17 13:13",
+   "seq": 82,
+   "name": "Basic"
+  },
+  {
+   "href": "emume-bastet.html",
+   "added": "2026-10-17 13:13",
+   "seq": 81,
+   "name": "Bastet"
+  },
+  {
+   "href": "emume-bastet-ra.html",
+   "added": "2026-10-17 13:13",
+   "seq": 80,
+   "name": "Bastet RA đổi màu"
+  },
+  {
+   "href": "emume-bastet-tricolor.html",
+   "added": "2026-10-17 13:13",
+   "seq": 79,
+   "name": "Bastet Tricolor"
+  },
+  {
+   "href": "emume-bastet-ultra-graphic.html",
+   "added": "2026-10-17 13:13",
+   "seq": 78,
+   "name": "Bastet Ultra Graphic"
+  },
+  {
+   "href": "emume-galaxy.html",
+   "added": "2026-10-17 13:13",
+   "seq": 77,
+   "name": "Galaxy"
+  },
+  {
+   "href": "emume-anubis-feather.html",
+   "added": "2026-10-17 13:13",
+   "seq": 76,
+   "name": "Anubis Feather"
+  },
+  {
+   "href": "emume-end-tape.html",
+   "added": "2026-10-17 13:13",
+   "seq": 75,
+   "name": "Băng keo kết thúc"
+  },
+  {
+   "href": "emume-titanium-bar-plug.html",
+   "added": "2026-10-17 13:13",
+   "seq": 74,
+   "name": "Nút bịt ghi đông titan"
+  },
+  {
+   "href": "emume-titanium-3d-bar-plug.html",
+   "added": "2026-10-17 13:13",
+   "seq": 73,
+   "name": "Nút bịt titan in 3D"
+  },
+  {
+   "href": "story-curvet-c2-ultra.html",
+   "added": "2026-10-17 12:44",
+   "seq": 72,
+   "name": "Curvet C2.0 Ultra"
+  },
+  {
+   "href": "story-continue-pro.html",
+   "added": "2026-10-17 11:09",
+   "seq": 71,
+   "name": "Continue Pro"
+  },
+  {
+   "href": "polygon-tambora-9-axs.html",
+   "added": "2026-10-16 09:00",
+   "seq": 70,
+   "name": "TAMBORA 9 AXS"
+  },
+  {
+   "href": "polygon-tambora-7-di2.html",
+   "added": "2026-10-16 09:00",
+   "seq": 69,
+   "name": "TAMBORA 7 Di2"
+  },
+  {
+   "href": "polygon-tambora-6.html",
+   "added": "2026-10-16 09:00",
+   "seq": 68,
+   "name": "TAMBORA 6"
+  },
+  {
+   "href": "polygon-tambora-4.html",
+   "added": "2026-10-16 09:00",
+   "seq": 67,
+   "name": "TAMBORA 4"
+  },
+  {
+   "href": "polygon-helios-a0-axs.html",
+   "added": "2026-10-14 20:00",
+   "seq": 66,
+   "name": "HELIOS A0 AXS"
+  },
+  {
+   "href": "polygon-helios-a9-di2-power.html",
+   "added": "2026-10-14 20:00",
+   "seq": 65,
+   "name": "HELIOS A9 Di2 Power"
+  },
+  {
+   "href": "polygon-helios-a8-di2-power.html",
+   "added": "2026-10-14 20:00",
+   "seq": 64,
+   "name": "HELIOS A8 Di2 Power"
+  },
+  {
+   "href": "polygon-helios-a8-di2.html",
+   "added": "2026-10-14 20:00",
+   "seq": 63,
+   "name": "HELIOS A8 Di2"
+  },
+  {
+   "href": "polygon-helios-a7-di2.html",
+   "added": "2026-10-14 20:00",
+   "seq": 62,
+   "name": "HELIOS A7 Di2"
+  },
+  {
+   "href": "vittoria-air-liner-light-road.html",
+   "added": "2026-10-14 17:00",
+   "seq": 61,
+   "name": "Air-Liner Light Road"
+  },
+  {
+   "href": "vittoria-air-liner-light-gravel.html",
+   "added": "2026-10-14 17:00",
+   "seq": 60,
+   "name": "Air-Liner Light Gravel"
+  },
+  {
+   "href": "vittoria-air-liner-light-xc.html",
+   "added": "2026-10-14 17:00",
+   "seq": 59,
+   "name": "Air-Liner Light XC"
+  },
+  {
+   "href": "vittoria-universal-sealant.html",
+   "added": "2026-10-14 17:00",
+   "seq": 58,
+   "name": "Universal Tubeless Sealant"
+  },
+  {
+   "href": "polygon-collosus-n7.html",
+   "added": "2026-10-14 14:00",
+   "seq": 57,
+   "name": "COLLOSUS N7"
+  },
+  {
+   "href": "polygon-collosus-n9-alloy.html",
+   "added": "2026-10-14 14:00",
+   "seq": 56,
+   "name": "COLLOSUS N9"
+  },
+  {
+   "href": "polygon-collosus-n8-carbon.html",
+   "added": "2026-10-14 14:00",
+   "seq": 55,
+   "name": "COLLOSUS N8 CARBON"
+  },
+  {
+   "href": "polygon-collosus-dh7.html",
+   "added": "2026-10-14 14:00",
+   "seq": 54,
+   "name": "COLLOSUS DH7"
+  },
+  {
+   "href": "polygon-siskiu-t6.html",
+   "added": "2026-10-14 11:00",
+   "seq": 53,
+   "name": "SISKIU T6"
+  },
+  {
+   "href": "polygon-siskiu-t7.html",
+   "added": "2026-10-14 11:00",
+   "seq": 52,
+   "name": "SISKIU T7"
+  },
+  {
+   "href": "polygon-collosus-t5.html",
+   "added": "2026-10-14 11:00",
+   "seq": 51,
+   "name": "COLLOSUS T5"
+  },
+  {
+   "href": "polygon-collosus-t6.html",
+   "added": "2026-10-14 11:00",
+   "seq": 50,
+   "name": "COLLOSUS T6"
+  },
+  {
+   "href": "polygon-collosus-t8.html",
+   "added": "2026-10-14 11:00",
+   "seq": 49,
+   "name": "COLLOSUS T8"
+  },
+  {
+   "href": "polygon-collosus-t6-carbon.html",
+   "added": "2026-10-14 11:00",
+   "seq": 48,
+   "name": "COLLOSUS T6 CARBON"
+  },
+  {
+   "href": "polygon-collosus-t8-carbon.html",
+   "added": "2026-10-14 11:00",
+   "seq": 47,
+   "name": "COLLOSUS T8 CARBON"
+  },
+  {
+   "href": "polygon-siskiu-d5.html",
+   "added": "2026-10-14 09:00",
+   "seq": 46,
+   "name": "SISKIU D5"
+  },
+  {
+   "href": "polygon-siskiu-d6.html",
+   "added": "2026-10-14 09:00",
+   "seq": 45,
+   "name": "SISKIU D6"
+  },
+  {
+   "href": "polygon-siskiu-dse.html",
+   "added": "2026-10-14 09:00",
+   "seq": 44,
+   "name": "SISKIU DSE"
+  },
+  {
+   "href": "polygon-syncline-dr6.html",
+   "added": "2026-10-14 09:00",
+   "seq": 43,
+   "name": "SYNCLINE DR6"
+  },
+  {
+   "href": "polygon-syncline-dr8.html",
+   "added": "2026-10-14 09:00",
+   "seq": 42,
+   "name": "SYNCLINE DR8"
+  },
+  {
+   "href": "polygon-xtrada-5.html",
+   "added": "2026-10-13 21:00",
+   "seq": 41,
+   "name": "XTRADA 5"
+  },
+  {
+   "href": "polygon-xtrada-7.html",
+   "added": "2026-10-13 21:00",
+   "seq": 40,
+   "name": "XTRADA 7"
+  },
+  {
+   "href": "vittoria-tattoo.html",
+   "added": "2026-10-13 09:00",
+   "seq": 39,
+   "name": "Tattoo"
+  },
+  {
+   "href": "terreno-t70.html",
+   "added": "2026-10-13 09:00",
+   "seq": 38,
+   "name": "Terreno T70 Coarse Loose Endurance"
+  },
+  {
+   "href": "terreno-t60.html",
+   "added": "2026-10-13 09:00",
+   "seq": 37,
+   "name": "Terreno T60 Mixed Endurance"
+  },
+  {
+   "href": "terreno-t50.html",
+   "added": "2026-10-13 09:00",
+   "seq": 36,
+   "name": "Terreno T50 Mixed Endurance"
+  },
+  {
+   "href": "terreno-t30.html",
+   "added": "2026-10-13 09:00",
+   "seq": 35,
+   "name": "Terreno T30 Fine Loose Endurance"
+  },
+  {
+   "href": "terreno-t10.html",
+   "added": "2026-10-13 09:00",
+   "seq": 34,
+   "name": "Terreno T10 Hardpack Endurance"
+  },
+  {
+   "href": "terreno-pro-t60.html",
+   "added": "2026-10-13 09:00",
+   "seq": 33,
+   "name": "Terreno PRO T60 Mixed"
+  },
+  {
+   "href": "terreno-pro-t50.html",
+   "added": "2026-10-13 09:00",
+   "seq": 32,
+   "name": "Terreno PRO T50 Mixed"
+  },
+  {
+   "href": "terreno-pro-t30.html",
+   "added": "2026-10-13 09:00",
+   "seq": 31,
+   "name": "Terreno PRO T30 Fine Loose"
+  },
+  {
+   "href": "terreno-pro-t10.html",
+   "added": "2026-10-13 09:00",
+   "seq": 30,
+   "name": "Terreno PRO T10 Hardpack"
+  },
+  {
+   "href": "vittoria-martello.html",
+   "added": "2026-10-13 09:00",
+   "seq": 29,
+   "name": "Martello"
+  },
+  {
+   "href": "vittoria-mazza.html",
+   "added": "2026-10-13 09:00",
+   "seq": 28,
+   "name": "Mazza"
+  },
+  {
+   "href": "vittoria-mezcal.html",
+   "added": "2026-10-13 09:00",
+   "seq": 27,
+   "name": "Mezcal"
+  },
+  {
+   "href": "vittoria-peyote.html",
+   "added": "2026-10-13 09:00",
+   "seq": 26,
+   "name": "Peyote"
+  },
+  {
+   "href": "vittoria-terreno-xc.html",
+   "added": "2026-10-13 09:00",
+   "seq": 25,
+   "name": "Terreno XC"
+  },
+  {
+   "href": "vittoria-rubino.html",
+   "added": "2026-10-13 09:00",
+   "seq": 24,
+   "name": "Rubino"
+  },
+  {
+   "href": "vittoria-corsa-next.html",
+   "added": "2026-10-13 09:00",
+   "seq": 23,
+   "name": "Corsa N.Ext"
+  },
+  {
+   "href": "vittoria-corsa-pro-speed.html",
+   "added": "2026-10-13 09:00",
+   "seq": 22,
+   "name": "Corsa PRO Speed"
+  },
+  {
+   "href": "vittoria-corsa-pro-limited.html",
+   "added": "2026-10-13 09:00",
+   "seq": 21,
+   "name": "Corsa PRO Limited Edition"
+  },
+  {
+   "href": "corsa-pro.html",
+   "added": "2026-10-13 09:00",
+   "seq": 20,
+   "name": "Corsa PRO"
+  },
+  {
+   "href": "polygon-relic-20.html",
+   "added": "2026-10-13 09:00",
+   "seq": 19,
+   "name": "RELIC 20"
+  },
+  {
+   "href": "polygon-cleo-2.html",
+   "added": "2026-10-13 09:00",
+   "seq": 18,
+   "name": "CLEO 2"
+  },
+  {
+   "href": "polygon-heist-x7.html",
+   "added": "2026-10-13 09:00",
+   "seq": 17,
+   "name": "HEIST X7"
+  },
+  {
+   "href": "polygon-path-x5.html",
+   "added": "2026-10-13 09:00",
+   "seq": 16,
+   "name": "PATH X5"
+  },
+  {
+   "href": "polygon-siskiu-d7.html",
+   "added": "2026-10-13 09:00",
+   "seq": 15,
+   "name": "SISKIU D7"
+  },
+  {
+   "href": "polygon-xtrada-6.html",
+   "added": "2026-10-13 09:00",
+   "seq": 14,
+   "name": "XTRADA 6"
+  },
+  {
+   "href": "polygon-syncline-dr9.html",
+   "added": "2026-10-13 09:00",
+   "seq": 13,
+   "name": "SYNCLINE DR9"
+  },
+  {
+   "href": "polygon-siskiu-t8.html",
+   "added": "2026-10-13 09:00",
+   "seq": 12,
+   "name": "SISKIU T8"
+  },
+  {
+   "href": "polygon-collosus-t9.html",
+   "added": "2026-10-13 09:00",
+   "seq": 11,
+   "name": "COLLOSUS T9 Di2 CARBON"
+  },
+  {
+   "href": "polygon-collosus-n9.html",
+   "added": "2026-10-13 09:00",
+   "seq": 10,
+   "name": "COLLOSUS N9 Di2 CARBON"
+  },
+  {
+   "href": "polygon-collosus-dh9.html",
+   "added": "2026-10-13 09:00",
+   "seq": 9,
+   "name": "COLLOSUS DH9"
+  },
+  {
+   "href": "polygon-strattos-6.html",
+   "added": "2026-10-13 09:00",
+   "seq": 8,
+   "name": "STRATTOS 6"
+  },
+  {
+   "href": "polygon-strattos-7.html",
+   "added": "2026-10-13 09:00",
+   "seq": 7,
+   "name": "STRATTOS 7"
+  },
+  {
+   "href": "polygon-strattos-7-di2.html",
+   "added": "2026-10-13 09:00",
+   "seq": 6,
+   "name": "STRATTOS 7 Di2"
+  },
+  {
+   "href": "polygon-strattos-8-di2.html",
+   "added": "2026-10-13 09:00",
+   "seq": 5,
+   "name": "STRATTOS 8 Di2"
+  },
+  {
+   "href": "polygon-strattos-c7.html",
+   "added": "2026-10-13 09:00",
+   "seq": 4,
+   "name": "STRATTOS C7 Di2"
+  },
+  {
+   "href": "polygon-strattos-c8.html",
+   "added": "2026-10-13 09:00",
+   "seq": 3,
+   "name": "STRATTOS C8 Di2"
+  },
+  {
+   "href": "polygon-strattos-c9.html",
+   "added": "2026-10-13 09:00",
+   "seq": 2,
+   "name": "STRATTOS C9 AXS"
+  },
+  {
+   "href": "polygon-helios-a9-di2.html",
+   "added": "2026-10-13 09:00",
+   "seq": 1,
+   "name": "HELIOS A9 Di2"
+  }
+ ]
+}
