@@ -10,6 +10,7 @@ python3 brands.py ../.. bikes.json        # tạo lại 4 trang thương hiệu
 python3 ../build_new_products.py      # cập nhật "Sản phẩm mới" (trang chủ + san-pham-moi.html)
 python3 ../apply_prices.py            # giá Vittoria theo từng mã (data/vittoria-stock.json)
 python3 ../build_compare.py           # cập nhật dữ liệu so sánh (so-sanh.html) + nút So sánh trên mọi trang
+python3 ../brand_logos.py             # logo thương hiệu cùng cỡ (trang chủ, menu, /thuong-hieu)
 python3 ../build_hubs.py              # trang tổng hợp /xe-dap, /phu-tung, /thuong-hieu
 python3 ../clean_urls.py              # LUÔN chạy cuối: đổi link sang dạng gọn (/xe-road, /trangchu)
 ```

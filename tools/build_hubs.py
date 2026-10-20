@@ -23,7 +23,6 @@ CSS = '''/* Hub pages */
 .hub .n{font-size:13px;font-weight:700;color:var(--brand-red)}
 .hub a.stretch::after{content:"";position:absolute;inset:0}
 .hub-logo .hi{aspect-ratio:3/1;background:#fff;border-bottom:1px solid var(--line)}
-.hub-logo .hi img{max-height:56px}
 '''
 
 
