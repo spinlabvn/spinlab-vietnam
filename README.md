@@ -33,5 +33,6 @@ Rồi mở http://127.0.0.1:8765/index.html
 ```bash
 cd tools/generators && python3 brands.py ../.. bikes.json && cd ../..
 python3 tools/build_new_products.py
+python3 tools/apply_prices.py
 python3 tools/build_compare.py
 ```

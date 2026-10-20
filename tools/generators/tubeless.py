@@ -1,6 +1,8 @@
 """Vittoria tubeless accessories (Universal sealant + Air-Liner Light): detail pages + tubeless.html listing.
 Shell = vittoria-tattoo.html (tire PDP). Usage: python3 tubeless.py <design-preview dir>"""
 import sys, os, re, json, html
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import stock
 E = html.escape
 D = sys.argv[1]
 CDN = 'https://cdn.shopify.com/s/files/1/0800/0549/7120/files/'
@@ -21,7 +23,7 @@ P = [
                 ('Không chứa amoniac', 'Không làm hại lốp; an toàn khi dùng cùng miếng lót Air-Liner.'),
                 ('Cho mọi loại xe', 'Một công thức cho road, gravel và MTB — không cần chọn keo riêng cho từng xe.')],
       cols=['Dung tích', 'Mã sản phẩm'],
-      rows=[('80ml', '1AA00095'), ('150ml', '1AA00096'), ('250ml', '1AA00097'), ('500ml', '1AA00098'), ('1000ml', '1AA00099')],
+      rows=[('80ml', '1AA00095'), ('150ml', '1AA00096'), ('250ml', '1AA00097'), ('500ml', '1AA00098'), ('1000ml', '1AA00099'), ('5 lít', '1AA00458')],
       note='Lượng keo cần dùng tùy cỡ lốp — liên hệ Spinlab để được tư vấn.',
       faq=[('Cần bao nhiêu keo cho một lốp?', 'Lượng keo phụ thuộc cỡ lốp: lốp road cần ít, lốp gravel và MTB bản to cần nhiều hơn. Đội kỹ thuật Spinlab sẽ tư vấn lượng phù hợp với lốp của bạn.'),
            ('Có dùng chung với Air-Liner được không?', 'Được. Keo Universal không chứa amoniac nên an toàn với miếng lót Air-Liner; Vittoria yêu cầu chỉ dùng keo không amoniac cùng Air-Liner.'),
@@ -101,13 +103,98 @@ P = [
       faq=[('Chọn chiều dài van thế nào?', 'Chọn van dài hơn chiều cao vành để đầu van nhô ra đủ cho đầu bơm. Vành thấp thường dùng 40mm, vành cao (carbon aero) cần 60–100mm. Liên hệ Spinlab kèm thông tin vành để được tư vấn đúng cỡ.'),
            ('Có dùng với Air-Liner được không?', 'Được. Vittoria thiết kế van Multiway tương thích với miếng lót Air-Liner; các bộ Air-Liner Light cũng đi kèm van Multiway.'),
            ('Một bộ có mấy van?', 'Mỗi bộ gồm 2 chân van, đủ cho cả bánh trước và bánh sau.')]),
+ dict(file='vittoria-air-liner-protect-trail.html', group='air-liner', name='Air-Liner Protect Trail', short='Air-Liner Protect Trail',
+      cat='Air-Liner Protect', tag='MTB · Trail', headline='Lót tubeless đa năng nhất cho đường mòn',
+      desc='29x2.1–2.6 · Run-flat tới 50 km',
+      intro=['Air-Liner Protect Trail là hệ thống lót tubeless MTB đa năng nhất của Vittoria, cân bằng giữa khả năng bảo vệ, độ ổn định thành lốp và trọng lượng — hoạt động tốt trên nhiều loại địa hình.',
+             'Miếng lót giảm va đập và làm êm những đoạn đường mòn gồ ghề, tăng khả năng chống thủng, giảm rung, giữ xe ổn định và lái chính xác khi đổ dốc kỹ thuật.'],
+      fit=['Trail', 'All-mountain', 'Bánh 29"'],
+      imgs=['air-liner-protect-trail.webp', 'air-liner-protect-trail-insert-01_e6908d12-899a-47d3-a5f0-2c79ec1b74f9.png', 'air-liner-protect-trail-insert-03.jpg'],
+      opt='Kích thước',
+      features=[('Bảo vệ vành', 'Chống những cú va đập mạnh nhất và ngăn thủng kiểu rắn cắn.'),
+                ('Run-flat tới 50 km', 'Khi thủng lốp, vẫn có thể đạp tiếp tới 50 km ở chế độ run-flat.'),
+                ('Ổn định thành lốp', 'Giữ thành lốp vững khi vào cua và tiếp đất.'),
+                ('Giảm rung', 'Làm êm đường mòn gồ ghề, lái chính xác hơn.')],
+      cols=['Cỡ lốp', 'Mã sản phẩm'],
+      rows=[('29x2.1-2.6', '1AA00496')],
+      note='Chỉ dùng với lốp tubeless, van multiway và keo không amoniac.',
+      faq=[('Hợp với lốp nào?', 'Bánh 29 inch, lốp bản 2.1–2.6 inch.'),
+           ('Dùng keo gì đi kèm?', 'Chỉ dùng keo không amoniac, ví dụ Vittoria Universal Sealant.')]),
+ dict(file='vittoria-tubeless-rim-tape.html', group='rim-tape', name='Băng keo vành tubeless', short='Băng keo vành tubeless',
+      cat='Băng keo vành', tag='Tubeless', headline='Bịt kín lòng vành để lên tubeless',
+      desc='23 – 32mm · cuộn 9m / 66m',
+      intro=['Băng keo vành tubeless Vittoria dán kín các lỗ căm trong lòng vành để giữ hơi khi chạy lốp không săm (tubeless).',
+             'Chọn bản băng keo theo bề rộng lòng trong của vành. Cuộn 9m đủ dán nhiều bộ vành; cuộn 66m dành cho xưởng sửa xe.'],
+      fit=['Road', 'Gravel', 'MTB'],
+      imgs=['tubeless-rim-tape-01_1.webp', 'tubeless-rim-tape-04_1.webp', 'tubeless-rim-tape-03_1.webp'],
+      opt='Bản rộng x chiều dài',
+      features=[('Kín hơi cho tubeless', 'Bịt kín lòng vành và lỗ căm để giữ hơi khi chạy không săm.'),
+                ('Nhiều bản rộng', 'Chọn theo lòng trong vành: 23, 25, 27, 29 hoặc 32mm.'),
+                ('Cuộn cho xưởng', 'Bản 32mm x 66m tiết kiệm cho cửa hàng và xưởng.')],
+      cols=['Bản rộng x chiều dài', 'Mã sản phẩm'],
+      rows=[('23mm x 9m', '1AA00549'), ('25mm x 9m', '1AA00550'), ('27mm x 9m', '1AA00551'), ('29mm x 9m', '1AA00552'), ('32mm x 66m', '1AA00561')],
+      note='Chọn bản rộng bằng hoặc lớn hơn lòng trong của vành một chút.',
+      faq=[('Chọn bản rộng nào?', 'Chọn theo bề rộng lòng trong của vành (thường in trên vành hoặc trong thông số bánh). Liên hệ Spinlab để được tư vấn đúng bản.')]),
+ dict(file='vittoria-sidewall-cleaner.html', group='care', name='Dung dịch vệ sinh thành lốp', short='Sidewall Cleaner',
+      cat='Vệ sinh lốp', tag='Vệ sinh', headline='Làm sạch thành lốp, kể cả lốp cotton',
+      desc='Dùng được cho lốp cotton và nylon',
+      intro=['Vittoria Sidewall Cleaner làm sạch và phục hồi vẻ ngoài của thành lốp xe đạp mà không ảnh hưởng tới cấu trúc lốp.',
+             'Theo Vittoria, đây là sản phẩm duy nhất trên thị trường dùng được cho lốp cotton, giúp thành lốp sáng đẹp như mới. Đầu bọt biển tích hợp giúp thao tác nhanh và gọn.'],
+      fit=['Lốp cotton', 'Lốp nylon', 'Bảo dưỡng định kỳ'],
+      imgs=['sidewall-cleaner-01_1.webp', 'sidewall-cleaner-03_1.webp', 'sidewall-cleaner-04_1.webp'],
+      opt='Quy cách',
+      features=[('Cho lốp cotton và nylon', 'Công thức dành riêng cho cả thân lốp cotton và nylon.'),
+                ('Đầu bọt biển tích hợp', 'Thoa chính xác, không cần dụng cụ khác.'),
+                ('Nhẹ nhàng với lốp', 'Làm sạch bụi bẩn mà không ảnh hưởng cấu trúc lốp.')],
+      cols=['Quy cách', 'Mã sản phẩm'],
+      rows=[('Chai kèm đầu bọt biển', '1AA00455')],
+      note='',
+      faq=[('Dùng cho lốp nào?', 'Dùng cho thành lốp cotton (như Corsa PRO) và nylon.')]),
+ dict(file='vittoria-standard-inner-tube.html', group='other', name='Săm Standard 700x20/28c', short='Săm Standard',
+      cat='Săm', tag='Săm butyl', headline='Săm butyl bền, giữ hơi lâu',
+      desc='700x20/28c · van Presta 48 / 60 / 80mm',
+      intro=['Săm butyl Standard của Vittoria giữ hơi tốt qua nhiều ngày và đủ bền để mang theo trong túi áo hay túi yên, thay nhanh bên đường khi cần.',
+             'Cỡ 700x20/28c cho xe road, van Presta (FV) với 3 chiều dài 48, 60 và 80mm cho các độ cao vành khác nhau.'],
+      fit=['Road', 'Dự phòng khi đi tour', 'Tập luyện hằng ngày'],
+      imgs=['standard-inner-tube.webp', 'vittoria-standard-tube-700x20-28c-valve-48-mm.jpg'],
+      opt='Van Presta',
+      features=[('Butyl bền bỉ', 'Giữ hơi qua nhiều ngày, chịu được va chạm khi mang theo.'),
+                ('3 chiều dài van', '48mm, 60mm và 80mm cho vành thấp đến vành cao.')],
+      cols=['Van Presta (FV)', 'Cỡ', 'Mã sản phẩm'],
+      rows=[('48mm (RVC)', '700x20/28c', '1TA00010'), ('60mm (RVC)', '700x20/28c', '1TA00011'), ('80mm', '700x20/28c', '1TA00012')],
+      note='RVC: ruột van tháo được.',
+      faq=[('Chọn chiều dài van nào?', 'Chọn van dài hơn chiều cao vành để đủ chỗ gắn đầu bơm; vành cao (aero) cần van 60–80mm.')]),
+ dict(file='vittoria-bottle-550.html', group='other', name='Bình nước Vittoria 550ml', short='Bình nước 550ml',
+      cat='Bình nước', tag='550ml', headline='Bình nước siêu nhẹ của Vittoria',
+      desc='550ml · xám than + đen',
+      intro=['Bình nước Vittoria 550ml màu xám than kết hợp đen. Dòng bình FLY của Vittoria do Elite — nhà sản xuất bình nước hàng đầu — sản xuất, cùng công nghệ với bình của các đội World Tour.',
+             'Theo Vittoria, bình FLY chỉ nặng 54g cho dung tích 550ml; thân bình dễ bóp, cho dòng nước mạnh mà không cần bóp mạnh tay.'],
+      fit=['Road', 'Gravel', 'MTB'],
+      imgs=['vittoria-bottle.webp', 'vittoria-bottle-cage.webp'],
+      opt='Màu',
+      features=[('Siêu nhẹ', 'Thân bình mỏng nhẹ, ít nhựa.'),
+                ('Dễ bóp', 'Dòng nước mạnh với lực bóp nhẹ.')],
+      cols=['Màu', 'Dung tích', 'Mã sản phẩm'],
+      rows=[('Xám than + đen', '550ml', '1AA00577')],
+      note='Ảnh minh họa dòng bình FLY 550ml của Vittoria.',
+      faq=[('Bình có vừa giá đỡ bình thông thường không?', 'Có, bình 550ml dùng với giá đỡ bình tiêu chuẩn.')]),
 ]
 GROUPS = [('sealant', 'Keo tự vá', 'Keo tubeless không amoniac cho road, gravel và MTB.'),
           ('valve', 'Chân van', 'Van tubeless Multiway bằng nhôm, bộ 2 van, 4 chiều dài.'),
-          ('air-liner', 'Air-Liner Light', 'Miếng lót tubeless siêu nhẹ: chống va vành, chống thủng rắn cắn và chạy run-flat khi xì lốp.')]
+          ('rim-tape', 'Băng keo vành', 'Băng keo bịt kín lòng vành để lên tubeless.'),
+          ('air-liner', 'Air-Liner', 'Miếng lót tubeless: chống va vành, chống thủng rắn cắn và chạy run-flat khi xì lốp.'),
+          ('care', 'Vệ sinh lốp', 'Dung dịch làm sạch thành lốp cotton và nylon.'),
+          ('other', 'Săm & phụ kiện khác', 'Săm butyl và bình nước Vittoria.')]
 
-price = lambda p: '1.250.000₫' if p['group'] == 'air-liner' else '1.980.000₫'
-img = lambda n, w: f'{CDN}{n}.webp?width={w}'
+# Spinlab's stock list decides which rows (sizes) are shown; a product with no row in stock is not published
+for _p in P:
+    _p['rows'] = [r for r in _p['rows'] if stock.ok(r[-1])]
+ALL_P = list(P)
+P[:] = [p for p in P if p['rows']]
+
+price = lambda p: stock.label(r[-1] for r in p['rows'])
+_EXT = re.compile(r'\.(webp|png|jpe?g)$')
+img = lambda n, w: CDN + n + ('' if _EXT.search(n) else '.webp') + f'?width={w}'
 
 
 def card(p):
@@ -205,14 +292,14 @@ for g, t, s_ in GROUPS:
     secs += (f'  <section class="brand-cat" id="{g}"><div class="container"><h2 class="bc-title">{E(t)}</h2><p class="bc-sub">{E(s_)}</p>'
              f'<div class="grid">{cs}</div></div></section>\n')
 main = f'''<main id="main" class="pdp listing">
-  <div class="container"><nav class="crumbs" aria-label="Đường dẫn"><ol><li><a href="index.html">Trang chủ</a></li><li><a href="index.html#hot">Phụ tùng</a></li><li aria-current="page">Tubeless</li></ol></nav></div>
+  <div class="container"><nav class="crumbs" aria-label="Đường dẫn"><ol><li><a href="index.html">Trang chủ</a></li><li><a href="index.html#hot">Phụ tùng</a></li><li aria-current="page">Tubeless &amp; phụ kiện</li></ol></nav></div>
   <section class="list-hero">
     <img src="{img("air-liner-light-road", 1920)}" alt="Miếng lót tubeless Vittoria Air-Liner Light Road">
-    <div class="container"><div class="lh-copy"><span class="kicker">Vittoria Tubeless</span><h1>Tubeless</h1><p>Keo tự vá và miếng lót Air-Liner Light chính hãng Vittoria — đi tubeless nhẹ hơn, ít thủng hơn.</p></div></div>
+    <div class="container"><div class="lh-copy"><span class="kicker">Vittoria</span><h1>Tubeless &amp; phụ kiện</h1><p>Keo tự vá, chân van, băng keo vành, miếng lót Air-Liner, săm và phụ kiện chính hãng Vittoria.</p></div></div>
   </section>
   <nav class="brand-nav" aria-label="Danh mục tubeless"><div class="container"><ul>{"".join(f'<li><a href="#{g}">{E(t)}<small>{sum(p["group"] == g for p in P)}</small></a></li>' for g, t, s_ in GROUPS)}</ul></div></nav>
 {secs}</main>'''
-L = re.sub(r'<title>.*?</title>', '<title>Tubeless — Keo tự vá &amp; Air-Liner Vittoria — Spinlab</title>', L, 1, flags=re.S)
+L = re.sub(r'<title>.*?</title>', '<title>Tubeless &amp; phụ kiện Vittoria — Spinlab</title>', L, 1, flags=re.S)
 L = re.sub(r'<meta name="description"[^>]*>', '<meta name="description" content="Phụ kiện tubeless Vittoria chính hãng tại Spinlab: keo tự vá Universal Sealant và miếng lót Air-Liner Light cho road, gravel, MTB.">', L, 1)
 L = re.sub(r'<main id="main".*?</main>', lambda m: main, L, 1, flags=re.S)
 L = re.sub(r'\n// Tire listing[^\n]*\n.*?\}\)\(\);\n', '\n', L, 1, flags=re.S)

@@ -54,9 +54,38 @@ LINES = [
       versions=[('rubino-tubeless-ready', 'Tubeless-Ready', 'Có lớp Inner Shield. Theo Vittoria, so với thế hệ trước: lăn hiệu quả hơn 18%, bám hơn 5%, chống thủng tốt hơn 21%, êm hơn 13%, bền hơn 37% và nhẹ hơn 10%.'),
                 ('rubino-tube-type', 'Dùng săm', 'Bản dùng săm với nhiều màu thành lốp: đen, nâu nhạt, xanh dương, đỏ, trắng, vàng.')]),
  dict(type='road', file='vittoria-corsa-pro-limited.html', name='Corsa PRO Limited Edition', cat='Phiên bản giới hạn', headline='Corsa PRO, khoác màu mới',
-      intro='Phiên bản đặc biệt của Corsa PRO — một trong những lốp road giành nhiều chiến thắng nhất — với thành lốp màu hồng, đỏ hoặc đen toàn phần. Theo Vittoria, hiệu năng giống hệt Corsa PRO tiêu chuẩn: thân lốp cotton 320 TPI, hợp chất Graphene + Silica và mặt gai được lưu hóa liền vào thân lốp. Có cỡ 700x28c và 700x30c.',
+      intro='Phiên bản đặc biệt của Corsa PRO — một trong những lốp road giành nhiều chiến thắng nhất — với thành lốp màu hồng hoặc đen toàn phần. Theo Vittoria, hiệu năng giống hệt Corsa PRO tiêu chuẩn: thân lốp cotton 320 TPI, hợp chất Graphene + Silica và mặt gai được lưu hóa liền vào thân lốp. Có cỡ 700x28c và 700x30c.',
       terrain=['Đua road', 'Gran Fondo', 'Phong cách riêng'],
       versions=[('corsa-pro-limited', 'Tubeless-Ready', 'Phiên bản giới hạn, số lượng có hạn. Hiệu năng như Corsa PRO tiêu chuẩn, khác biệt ở màu thành lốp.')]),
+
+ dict(type='road', file='vittoria-corsa-pro-tube-type.html', name='Corsa PRO Tube-Type', cat='Thi đấu · Dùng săm', headline='Corsa PRO cho người dùng săm',
+      intro='Corsa PRO Tube-Type mang công nghệ của lốp đua thành công nhất thế giới lên nền lốp dùng săm (clincher) quen thuộc: bám vào cua tuyệt vời cả khi khô lẫn ướt, chống thủng được gia cường và thân lốp mềm mại giúp mặt đường xấu êm như đường mới trải nhựa. Theo Vittoria, so với Corsa Tube-Type thế hệ trước: lăn hiệu quả hơn 12%, chống thủng tốt hơn 18% và nhẹ hơn 9%.',
+      terrain=['Đua road', 'Tập luyện cường độ cao', 'Đèo dốc'],
+      versions=[('corsa-pro-tube-type', 'Dùng săm', 'Thân lốp cotton 320 TPI, hợp chất Graphene + Silica, thành lốp màu da (Para).')]),
+ dict(type='road', file='vittoria-corsa-pro-tubular.html', name='Corsa PRO Tubular', cat='Thi đấu · Lốp ống', headline='Lốp ống (tubular) đua đỉnh cao',
+      intro='Không loại lốp nào phản hồi như lốp ống, và không lốp ống nào có cảm giác như Corsa PRO: bám vào cua cao cả khi khô lẫn ướt, lực cản lăn thấp và thân lốp mềm mại ôm mặt đường. Corsa PRO Tubular còn cực nhẹ — theo Vittoria, mỗi cặp nhẹ hơn 190g so với Corsa PRO tubeless-ready dùng keo hoặc săm latex.',
+      terrain=['Đua road', 'Leo đèo', 'Vành dùng lốp ống'],
+      versions=[('corsa-pro-tubular', 'Lốp ống', 'Thân lốp cotton-corespun 320 TPI, hợp chất Graphene + Silica, đai chống thủng; dùng cho vành lốp ống (tubular).')]),
+ dict(type='road', file='vittoria-juniores-tubular.html', name='Juniores Tubular', cat='Lốp ống cho tay đua trẻ', headline='Lốp ống cho thế hệ tay đua kế tiếp',
+      intro='Juniores Tubular đưa lốp ống — công nghệ gắn với mọi thế hệ tay đua huyền thoại — đến với các tay đua trẻ. Cấu trúc tương tự lốp Rally nhưng thu nhỏ cho bánh xe cỡ nhỏ; thân lốp cotton giữ cảm giác mặt đường mềm mại đặc trưng của lốp ống, hợp chất ưu tiên độ bền và chống thủng.',
+      terrain=['Xe đua trẻ em / thiếu niên', 'Tập luyện', 'Vành lốp ống 24"'],
+      versions=[('juniores-tubular', 'Lốp ống 24"', 'Cỡ 21-24, thành lốp màu da (Para); hợp chất 1C, thân lốp cotton 220 TPI.')]),
+ dict(type='road', file='vittoria-zaffiro.html', name='Zaffiro V', cat='Tập luyện · Đi phố', headline='Lốp road tập luyện bền bỉ',
+      intro='Zaffiro là dòng lốp road tập luyện mọi điều kiện của Vittoria: bền, chống thủng tốt và ổn định cho những chặng đường dài, tập luyện đầu mùa hay đi làm hằng ngày. Bản Spinlab đang có là Zaffiro V 700x25c, tanh cứng (rigid), màu đen toàn phần.',
+      terrain=['Tập luyện', 'Đi làm, đạp phố', 'Mọi thời tiết'],
+      versions=[('zaffiro-v', 'Tanh cứng', 'Zaffiro V 25-622, tanh cứng, đen toàn phần. Ảnh minh họa dòng Zaffiro.')]),
+ dict(type='road', file='vittoria-combo-corsa-n-ext.html', name='Combo 2 lốp Corsa N.Ext TLR + keo 80ml', cat='Combo tiết kiệm', headline='Trọn bộ lên tubeless cho xe road',
+      intro='Combo gồm 2 lốp Corsa N.Ext 700x28c tubeless-ready màu đen kèm 1 chai keo tự vá 80ml — đủ để chuyển cả hai bánh sang tubeless. Corsa N.Ext kết hợp độ bám vào cua cao, lực cản lăn thấp với độ bền của lốp tập luyện.',
+      terrain=['Thi đấu', 'Tập luyện dài', 'Lên tubeless'],
+      versions=[('combo-corsa-n-ext-tlr', 'Combo', '2 lốp Corsa N.Ext 28-622 TLR đen + keo 80ml.')]),
+ dict(type='road', file='vittoria-combo-rubino.html', name='Combo 2 lốp Rubino + 2 săm', cat='Combo tiết kiệm', headline='Trọn bộ lốp tập luyện kèm săm',
+      intro='Combo gồm 2 lốp Rubino V 700x28c gấp được (fold) màu đen kèm 2 săm — bộ lốp tập luyện hằng ngày đầy đủ cho cả hai bánh.',
+      terrain=['Tập luyện hằng ngày', 'Đi làm, đạp phố', 'Đường dài'],
+      versions=[('combo-rubino', 'Combo', '2 lốp Rubino V 28-622 fold đen + 2 săm.')]),
+ dict(type='mtb', file='vittoria-barzo.html', name='Barzo', cat='Cross Country', headline='Biến địa hình hỗn loạn thành kiểm soát',
+      intro='Barzo có mẫu gai đã giành chức vô địch thế giới cho địa hình sỏi to, đất rời, nay trên cấu trúc XC Race thế hệ mới. Gai giữa xen kẽ lăn nhanh trên mặt đường gồ ghề mà vẫn bám khi leo dốc; núm vai lấy cảm hứng từ lốp mô tô bám sâu khi vào cua mạnh; rãnh cắt toàn bộ và khoảng cách gai rộng giúp bám tốt và tự làm sạch.',
+      terrain=['Sỏi to, đất rời', 'Đá, gồ ghề', 'Đua XC'],
+      versions=[('barzo-xc-race', 'XC Race', 'Theo Vittoria, cấu trúc XC Race mới nhanh hơn 20%, bám hơn 8%, chống thủng tốt hơn 44% và êm hơn 9%.')]),
 
  dict(type='dirtjump', file='vittoria-tattoo.html', name='Tattoo', cat='BMX · Dirt Jump · Street', headline='Bám dính trên mọi bề mặt',
       intro='Mặt gai siêu mịn như giũa kim cương cùng đặc tính mềm, bám của công nghệ Vittoria giúp Tattoo tăng độ bám, khả năng kiểm soát và độ bền cho mọi buổi chơi — pump track, freestyle park, ramp hay đường phố. Gai phủ kín từ tanh này sang tanh kia, bảo vệ lốp trên mọi bề mặt và luôn bám tốt khi lướt trên rail hay ramp.',
@@ -68,15 +97,34 @@ LINES = [
 TYPE = {'mtb': ('MTB', 'lop-xe.html#mtb', 'Lốp MTB'), 'road': ('Road', 'lop-xe.html#road', 'Lốp Road'), 'dirtjump': ('DirtJump', 'lop-xe.html#dirtjump', 'Lốp DirtJump')}
 
 
+# versions sold by Spinlab that Vittoria's shop data does not list: images/tech from a base handle, variants given here
+CUSTOM = {
+    'zaffiro-v': dict(base='zaffiro-evo', variants=[dict(size='700x25c', color='Black', sku='11A00304')]),
+    'combo-corsa-n-ext-tlr': dict(base='corsa-n-ext-tubeless-ready', variants=[dict(size='2 x 700x28c + keo 80ml', color='Black', sku='11P00084')]),
+    'combo-rubino': dict(base='rubino-tube-type', variants=[dict(size='2 x 700x28c + 2 săm', color='Black', sku='11P00089')]),
+}
+for _h, _c in CUSTOM.items():   # share the base product's technology section (not its size chart)
+    if _c['base'] in vcommon.TECH:
+        vcommon.TECH.setdefault(_h, dict(vcommon.TECH[_c['base']], chart=[]))
+
+
 def load(h):
-    p = json.load(open(os.path.join(J, h + '.json'), encoding='utf-8'))['product']
+    c = CUSTOM.get(h)
+    p = json.load(open(os.path.join(J, (c['base'] if c else h) + '.json'), encoding='utf-8'))['product']
     imgs = [i['src'].split('?')[0] for i in p['images']][:6]
-    return dict(images=imgs, cimg=p.get('color_images', {}), variants=[dict(size=v['option1'], color=v['option2'], sku=v['sku']) for v in p['variants'] if v['option1'] not in vcommon.EXCLUDE_SIZES.get(h, ())])
+    raw = c['variants'] if c else [dict(size=v['option1'], color=v['option2'], sku=v['sku']) for v in p['variants']]
+    return dict(images=imgs, cimg=p.get('color_images', {}), variants=vcommon.in_stock(h, raw))
+
+
+def live(L):
+    """Versions of line L with at least one in-stock variant."""
+    return [v for v in L['versions'] if load(v[0])['variants']]
 
 
 def card(L):
-    v0 = load(L['versions'][0][0])
-    vers = ' · '.join(v[1] for v in L['versions'])
+    lv = live(L) or L['versions']
+    v0 = load(lv[0][0])
+    vers = ' · '.join(v[1] for v in lv)
     return (f'<article class="p-card" data-type="{L["type"]}"><div class="p-img tire"><span class="tag dark">{E(L["cat"])}</span>'
             f'<img src="{v0["images"][0]}?width=600" alt="Lốp Vittoria {E(L["name"])}" loading="lazy"></div>'
             f'<div class="p-body"><span class="p-brand">Vittoria · {TYPE[L["type"]][0]}</span>'
@@ -110,7 +158,9 @@ FAQ_DJ = [('Chọn cỡ lốp nào?', 'Cỡ 20x2.4 dành cho xe BMX; 26x2.3 dàn
 
 
 def page(L):
-    vers = [(h, lab, b, load(h)) for h, lab, b in L['versions']]
+    vers = [(h, lab, b, load(h)) for h, lab, b in live(L)]
+    if not vers:
+        return None
     name = L['name']
     imgs0 = vers[0][3]['images']
     thumbs = ''.join(f'<li><button aria-pressed="{"true" if k == 0 else "false"}" data-src="{u}?width=1000" data-alt="{E(name)} – ảnh {k+1}"><img src="{u}?width=160" alt="Ảnh {k+1}"></button></li>' for k, u in enumerate(imgs0))
@@ -119,9 +169,9 @@ def page(L):
                     f'<td>{E(", ".join(dict.fromkeys(COLOR_VI.get(v["color"], v["color"]) for v in d["variants"])))}</td><td>{E(b)}</td></tr>' for h, lab, b, d in vers)
     srows = ''.join(f'<tr data-sku="{v["sku"]}"><td>{E(lab)}</td><td>{E(v["size"])}</td><td>{E(COLOR_VI.get(v["color"], v["color"]))}</td><td>{v["sku"]}</td></tr>'
                     for h, lab, b, d in vers for v in d['variants'])
-    same = [o for o in LINES if o is not L and o['type'] == L['type']]
+    same = [o for o in LIVE if o is not L and o['type'] == L['type']]
     RT = TYPE[L['type']] if same else TYPE['mtb']
-    related = ''.join(card(o) for o in (same or [o for o in LINES if o['type'] == 'mtb']))
+    related = ''.join(card(o) for o in (same or [o for o in LIVE if o['type'] == 'mtb']))
     TL = TYPE[L['type']]
     tech_html = vcommon.tech_section([(h, lab) for h, lab, b, d in vers])
     spec_html = vcommon.spec_section([(h, lab) for h, lab, b, d in vers], lambda h: load(h)['variants'])
@@ -226,8 +276,11 @@ def page(L):
     return L['file']
 
 
+LIVE = [L for L in LINES if live(L)]
+
 if __name__ == '__main__':
     for L in LINES:
-        print(page(L))
+        f = page(L)
+        print(f or f'-- hết hàng, không tạo trang: {L["file"]}')
     for ty in ('mtb', 'road', 'dirtjump'):
-        open(os.path.join(J, '..', f'{ty}-cards.html'), 'w', encoding='utf-8').write('\n'.join(card(L) for L in LINES if L['type'] == ty))
+        open(os.path.join(J, '..', f'{ty}-cards.html'), 'w', encoding='utf-8').write('\n'.join(card(L) for L in LIVE if L['type'] == ty))

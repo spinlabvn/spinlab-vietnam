@@ -1,0 +1,642 @@
+{
+ "source": "nmt.xlsx (Spinlab, 2026-10-20) — giá bán lẻ & hàng có sẵn Vittoria",
+ "items": [
+  {
+   "sku": "11A00734",
+   "segment": "MTB",
+   "name": "Barzo 29x2.4 XC Race Brown-blk-blk G2.0",
+   "price": 1400000,
+   "note": ""
+  },
+  {
+   "sku": "11A00735",
+   "segment": "MTB",
+   "name": "Barzo 29x2.25 XC Race Full Black G2.0",
+   "price": 1400000,
+   "note": ""
+  },
+  {
+   "sku": "11A00736",
+   "segment": "MTB",
+   "name": "Barzo 29x2.25 XC Race Brown-blk-blk G2.0",
+   "price": 1400000,
+   "note": ""
+  },
+  {
+   "sku": "11A00785",
+   "segment": "MTB",
+   "name": "Martello 29x2.4 Trail Full Black G2.0",
+   "price": 1345000,
+   "note": ""
+  },
+  {
+   "sku": "11A00786",
+   "segment": "MTB",
+   "name": "Martello 29x2.6 Trail Full Black G2.0",
+   "price": 1345000,
+   "note": ""
+  },
+  {
+   "sku": "11A01142",
+   "segment": "MTB",
+   "name": "Martello 29x2.4 Trail Brown-Blk-Blk G2.0",
+   "price": 1345000,
+   "note": ""
+  },
+  {
+   "sku": "11A00427",
+   "segment": "MTB",
+   "name": "Mazza Race 27.5x2.4 Enduro full black",
+   "price": 1605000,
+   "note": ""
+  },
+  {
+   "sku": "11A00429",
+   "segment": "MTB",
+   "name": "Mazza Race 29x2.4 Enduro full black",
+   "price": 1605000,
+   "note": ""
+  },
+  {
+   "sku": "11A00229",
+   "segment": "MTB",
+   "name": "Mazza 27.5x2.4 Trail anth-blk-blk G2.0",
+   "price": 1555000,
+   "note": ""
+  },
+  {
+   "sku": "11A00230",
+   "segment": "MTB",
+   "name": "Mazza 29x2.4 Trail anth-blk-blk G2.0",
+   "price": 1555000,
+   "note": ""
+  },
+  {
+   "sku": "11A00711",
+   "segment": "MTB",
+   "name": "Mezcal III 29x2.4 XC Race full black G2.0",
+   "price": 1400000,
+   "note": ""
+  },
+  {
+   "sku": "11A00712",
+   "segment": "MTB",
+   "name": "Mezcal III 29x2.4 XC Race brown-blk-blk G2.0",
+   "price": 1400000,
+   "note": ""
+  },
+  {
+   "sku": "11A00729",
+   "segment": "MTB",
+   "name": "Mezcal III 29x2.25 XC Race full black G2.0",
+   "price": 1400000,
+   "note": ""
+  },
+  {
+   "sku": "11A00730",
+   "segment": "MTB",
+   "name": "Mezcal III 29x2.25 XC Race brown-blk-blk G2.0",
+   "price": 1400000,
+   "note": ""
+  },
+  {
+   "sku": "11A00737",
+   "segment": "MTB",
+   "name": "Terreno 29x2.4 XC Race Full Black G2.0",
+   "price": 1400000,
+   "note": ""
+  },
+  {
+   "sku": "11A00738",
+   "segment": "MTB",
+   "name": "Terreno 29x2.4 XC Race Brown-blk-blk G2.0",
+   "price": 1400000,
+   "note": ""
+  },
+  {
+   "sku": "11A00739",
+   "segment": "MTB",
+   "name": "Terreno 29x2.25 XC Race Full Black G2.0",
+   "price": 1400000,
+   "note": ""
+  },
+  {
+   "sku": "11A00740",
+   "segment": "MTB",
+   "name": "Terreno 29x2.25 XC Race Brown-blk-blk G2.0",
+   "price": 1400000,
+   "note": ""
+  },
+  {
+   "sku": "11A00713",
+   "segment": "MTB",
+   "name": "Peyote II 29x2.4 XC Race full black G2.0",
+   "price": 1400000,
+   "note": ""
+  },
+  {
+   "sku": "11A00714",
+   "segment": "MTB",
+   "name": "Peyote II 29x2.4 XC Race brown-blk-blk G2.0",
+   "price": 1400000,
+   "note": ""
+  },
+  {
+   "sku": "11E00714",
+   "segment": "MTB",
+   "name": "Peyote II 29x2.4 XC Race brown-blk-blk G2.0 OEM",
+   "price": 1400000,
+   "note": ""
+  },
+  {
+   "sku": "11A00731",
+   "segment": "MTB",
+   "name": "Peyote II 29x2.25 XC Race full black G2.0",
+   "price": 1400000,
+   "note": ""
+  },
+  {
+   "sku": "11A00732",
+   "segment": "MTB",
+   "name": "Peyote II 29x2.25 XC Race brown-blk-blk G2.0",
+   "price": 1400000,
+   "note": ""
+  },
+  {
+   "sku": "11A00746",
+   "segment": "MTB",
+   "name": "Terreno 29x2.25 XC Trail Full Black G2.0",
+   "price": 1345000,
+   "note": ""
+  },
+  {
+   "sku": "11A00747",
+   "segment": "MTB",
+   "name": "Terreno 29x2.4 XC Trail Brown-blk-blk G2.0",
+   "price": 1345000,
+   "note": ""
+  },
+  {
+   "sku": "11A00748",
+   "segment": "MTB",
+   "name": "Terreno 29x2.4 XC Trail Full Black G2.0",
+   "price": 1345000,
+   "note": ""
+  },
+  {
+   "sku": "11A00750",
+   "segment": "MTB",
+   "name": "Peyote II 29x2.25 XC Trail Full Black G2.0",
+   "price": 1345000,
+   "note": ""
+  },
+  {
+   "sku": "11A00821",
+   "segment": "Gravel",
+   "name": "Terreno T10 hardpack 37-622 TLR Gravel Endurance Full Black G2.0",
+   "price": 1295000,
+   "note": ""
+  },
+  {
+   "sku": "11A00800",
+   "segment": "Gravel",
+   "name": "Terreno T10 hardpack 40-622 TLR Gravel Endurance Full Black G2.0",
+   "price": 1295000,
+   "note": ""
+  },
+  {
+   "sku": "11A00823",
+   "segment": "Gravel",
+   "name": "Terreno T10 hardpack 40-622 TLR Gravel Endurance Brown-blk-blk G2.0",
+   "price": 1295000,
+   "note": ""
+  },
+  {
+   "sku": "11A00805",
+   "segment": "Gravel",
+   "name": "Terreno T30 fine loose 40-622 Gravel Endurance Brown-blk-blk G2.0",
+   "price": 1295000,
+   "note": ""
+  },
+  {
+   "sku": "11A00806",
+   "segment": "Gravel",
+   "name": "Terreno T30 fine loose 40-622 TLR Gravel Endurance Full Black G2.0",
+   "price": 1295000,
+   "note": ""
+  },
+  {
+   "sku": "11A00808",
+   "segment": "Gravel",
+   "name": "Terreno T30 fine loose 45-622 TLR Gravel Endurance Full Black G2.0",
+   "price": 1295000,
+   "note": ""
+  },
+  {
+   "sku": "11A00809",
+   "segment": "Gravel",
+   "name": "Terreno T30 fine loose 47-584 TLR Gravel Endurance Full Black G2.0",
+   "price": 1295000,
+   "note": ""
+  },
+  {
+   "sku": "11A00833",
+   "segment": "Gravel",
+   "name": "Terreno T30 fine loose 45-622 TLR Gravel Endurance Brown-blk-blk G2.0",
+   "price": 1295000,
+   "note": ""
+  },
+  {
+   "sku": "11A00610",
+   "segment": "Gravel",
+   "name": "Terreno T50 mixed 40-622 TLR Gravel Endurance brown-blk-blk G2.0",
+   "price": 1295000,
+   "note": ""
+  },
+  {
+   "sku": "11A00611",
+   "segment": "Gravel",
+   "name": "Terreno T50 mixed 45-622 TLR Gravel Endurance full black G2.0",
+   "price": 1295000,
+   "note": ""
+  },
+  {
+   "sku": "11A00612",
+   "segment": "Gravel",
+   "name": "Terreno T50 mixed 45-622 TLR Gravel Endurance brown-blk-blk G2.0",
+   "price": 1295000,
+   "note": ""
+  },
+  {
+   "sku": "11A00613",
+   "segment": "Gravel",
+   "name": "Terreno T50 mixed 50-622 Gravel Endurance full black G2.0",
+   "price": 1295000,
+   "note": ""
+  },
+  {
+   "sku": "11A00803",
+   "segment": "Gravel",
+   "name": "Terreno T70 Coarse loose 45-622 Gravel Endurance full black G2.0",
+   "price": 1295000,
+   "note": ""
+  },
+  {
+   "sku": "11A00847",
+   "segment": "Gravel",
+   "name": "Terreno Pro T30 Fine Loose 40-622 Gravel Race Natural Brown",
+   "price": 1815000,
+   "note": ""
+  },
+  {
+   "sku": "11A01145",
+   "segment": "Gravel",
+   "name": "Terreno Pro T50 Mixed 40-622 Gravel Race Natural Brown",
+   "price": 1815000,
+   "note": ""
+  },
+  {
+   "sku": "11A01146",
+   "segment": "Gravel",
+   "name": "Terreno Pro T50 Mixed 45-622 Gravel Race Natural Brown",
+   "price": 1815000,
+   "note": ""
+  },
+  {
+   "sku": "1111J40921411TG",
+   "segment": "Road",
+   "name": "Juniores 24\" 21024\" tub para-blk-blk",
+   "price": 880000,
+   "note": ""
+  },
+  {
+   "sku": "11A00448",
+   "segment": "Road",
+   "name": "Corsa Pro 25-28\" tub para-blk-blk G2.0",
+   "price": 2250000,
+   "note": ""
+  },
+  {
+   "sku": "11A00449",
+   "segment": "Road",
+   "name": "Corsa Pro 28-28\" tub para-blk-blk G2.0",
+   "price": 2250000,
+   "note": ""
+  },
+  {
+   "sku": "11A00304",
+   "segment": "Road",
+   "name": "Zaffiro V 25-622 rigid full black",
+   "price": 480000,
+   "note": ""
+  },
+  {
+   "sku": "11A00599",
+   "segment": "Road",
+   "name": "Rubino V 26-622 fold full black G2.0",
+   "price": 800000,
+   "note": ""
+  },
+  {
+   "sku": "11P00084",
+   "segment": "Road",
+   "name": "2x Corsa N.EXT 28-622 TLR full black G2.0 w/80ml Sealant",
+   "price": 1965000,
+   "note": ""
+  },
+  {
+   "sku": "11P00089",
+   "segment": "Road",
+   "name": "2x Rubino V 28-622 fold Full Black G2.0 w/2x IT",
+   "price": 1555000,
+   "note": ""
+  },
+  {
+   "sku": "11A00862",
+   "segment": "Road",
+   "name": "Corsa Pro 26-622 Tube Type cotton tan-blk-blk G2.0",
+   "price": 1450000,
+   "note": ""
+  },
+  {
+   "sku": "11A00863",
+   "segment": "Road",
+   "name": "Corsa Pro 28-622 Tube Type cotton tan-blk-blk G2.0",
+   "price": 1450000,
+   "note": ""
+  },
+  {
+   "sku": "11A00866",
+   "segment": "Road",
+   "name": "Corsa Pro 30-622 Tube Type cotton tan-blk-blk G2.0",
+   "price": 1450000,
+   "note": ""
+  },
+  {
+   "sku": "11A00389",
+   "segment": "Road",
+   "name": "Corsa Pro 28-622 fold TLR para-blk-blk G2.0",
+   "price": 1815000,
+   "note": ""
+  },
+  {
+   "sku": "11A00390",
+   "segment": "Road",
+   "name": "Corsa Pro 30-622 fold TLR para-blk-blk G2.0",
+   "price": 1815000,
+   "note": ""
+  },
+  {
+   "sku": "11A00391",
+   "segment": "Road",
+   "name": "Corsa Pro 32-622 fold TLR para-blk-blk G2.0",
+   "price": 1815000,
+   "note": ""
+  },
+  {
+   "sku": "11A01158",
+   "segment": "Road",
+   "name": "Corsa Pro 28-622 fold TLR Full Black G2.0",
+   "price": 1895000,
+   "note": "Limited"
+  },
+  {
+   "sku": "11A01159",
+   "segment": "Road",
+   "name": "Corsa Pro 30-622 fold TLR Full Black G2.0",
+   "price": 1895000,
+   "note": "Limited"
+  },
+  {
+   "sku": "11A00546",
+   "segment": "Road",
+   "name": "Corsa Pro 28-622 fold TLR pink-blk-blk G2.0",
+   "price": 1895000,
+   "note": "Limited"
+  },
+  {
+   "sku": "11A01261",
+   "segment": "Road",
+   "name": "Corsa Pro 30-622 fold TLR pink-blk-blk G2.0",
+   "price": 1895000,
+   "note": "Limited"
+  },
+  {
+   "sku": "11A00630",
+   "segment": "Road",
+   "name": "Corsa Pro 29-622 TLR wide rim G2.0",
+   "price": 1815000,
+   "note": ""
+  },
+  {
+   "sku": "11A00393",
+   "segment": "Road",
+   "name": "Corsa N.EXT 26-622 fold full black G2.0",
+   "price": 1295000,
+   "note": ""
+  },
+  {
+   "sku": "11A00394",
+   "segment": "Road",
+   "name": "Corsa N.EXT 28-622 fold full black G2.0",
+   "price": 1295000,
+   "note": ""
+  },
+  {
+   "sku": "11A00400",
+   "segment": "Road",
+   "name": "Corsa N.EXT 28-622 TLR full black G2.0",
+   "price": 1295000,
+   "note": ""
+  },
+  {
+   "sku": "11A00401",
+   "segment": "Road",
+   "name": "Corsa N.EXT 30-622 TLR full black G2.0",
+   "price": 1295000,
+   "note": ""
+  },
+  {
+   "sku": "11A00446",
+   "segment": "Road",
+   "name": "Corsa Pro Speed 28-622 TLR para-blk-blk G2.0",
+   "price": 1815000,
+   "note": ""
+  },
+  {
+   "sku": "11A01147",
+   "segment": "Road",
+   "name": "Corsa Pro Speed 30-622 fold TLR cotton tan-blk-blk G2.0",
+   "price": 1815000,
+   "note": ""
+  },
+  {
+   "sku": "1AA00549",
+   "segment": "Accessories",
+   "name": "Vittoria Tubeless Rim Tape 23mm x 9m",
+   "price": 620000,
+   "note": ""
+  },
+  {
+   "sku": "1AA00550",
+   "segment": "Accessories",
+   "name": "Vittoria Tubeless Rim Tape 25mm x 9m",
+   "price": 620000,
+   "note": ""
+  },
+  {
+   "sku": "1AA00551",
+   "segment": "Accessories",
+   "name": "Vittoria Tubeless Rim Tape 27mm x 9m",
+   "price": 620000,
+   "note": ""
+  },
+  {
+   "sku": "1AA00552",
+   "segment": "Accessories",
+   "name": "Vittoria Tubeless Rim Tape 29mm x 9m",
+   "price": 620000,
+   "note": ""
+  },
+  {
+   "sku": "1AA00561",
+   "segment": "Accessories",
+   "name": "Vittoria Tubeless Rim Tape 32mm x 66m",
+   "price": 2100000,
+   "note": ""
+  },
+  {
+   "sku": "1AA00091",
+   "segment": "Accessories",
+   "name": "Vittoria Multiway tubeless valve alloy black 40mm (2 pcs)",
+   "price": 685000,
+   "note": ""
+  },
+  {
+   "sku": "1AA00092",
+   "segment": "Accessories",
+   "name": "Vittoria Multiway tubeless valve alloy black 60mm (2 pcs)",
+   "price": 620000,
+   "note": ""
+  },
+  {
+   "sku": "1AA00093",
+   "segment": "Accessories",
+   "name": "Vittoria Multiway tubeless valve alloy black 80mm (2 pcs)",
+   "price": 675000,
+   "note": ""
+  },
+  {
+   "sku": "1AA00094",
+   "segment": "Accessories",
+   "name": "Vittoria Multiway tubeless valve alloy black 100mm (2 pcs)",
+   "price": 725000,
+   "note": ""
+  },
+  {
+   "sku": "1TA00010",
+   "segment": "Accessories",
+   "name": "Standard 700x20/28c FV presta RVC 48mm",
+   "price": 165000,
+   "note": ""
+  },
+  {
+   "sku": "1TA00011",
+   "segment": "Accessories",
+   "name": "Standard 700x20/28c FV presta RVC 60mm",
+   "price": 165000,
+   "note": ""
+  },
+  {
+   "sku": "1TA00012",
+   "segment": "Accessories",
+   "name": "Standard 700x20/28c FV presta 80mm",
+   "price": 180000,
+   "note": ""
+  },
+  {
+   "sku": "1AA00455",
+   "segment": "Accessories",
+   "name": "Sidewall Cleaner",
+   "price": 380000,
+   "note": ""
+  },
+  {
+   "sku": "1AA00096",
+   "segment": "Accessories",
+   "name": "Universal Tubeless Tire Sealant - 150ml",
+   "price": 360000,
+   "note": ""
+  },
+  {
+   "sku": "1AA00098",
+   "segment": "Accessories",
+   "name": "Universal Tubeless Tire Sealant - 500ml",
+   "price": 675000,
+   "note": ""
+  },
+  {
+   "sku": "1AA00099",
+   "segment": "Accessories",
+   "name": "Universal Tubeless Tire Sealant - 1000ml",
+   "price": 1090000,
+   "note": ""
+  },
+  {
+   "sku": "1AA00458",
+   "segment": "Accessories",
+   "name": "Universal Tubeless Tire Sealant - 5 Liters",
+   "price": 3915000,
+   "note": ""
+  },
+  {
+   "sku": "1AA00412",
+   "segment": "Accessories",
+   "name": "Air-Liner Light XC 29x2.1/2.4",
+   "price": 1250000,
+   "note": ""
+  },
+  {
+   "sku": "1AA00546",
+   "segment": "Accessories",
+   "name": "Air-Liner Light Gravel 700x37-40",
+   "price": 1250000,
+   "note": ""
+  },
+  {
+   "sku": "1AA00495",
+   "segment": "Accessories",
+   "name": "Air-Liner Light Gravel 700x42/50",
+   "price": 1250000,
+   "note": ""
+  },
+  {
+   "sku": "1AA00496",
+   "segment": "Accessories",
+   "name": "Air-Liner Protect Trail 29\"x2.1/2.6\"",
+   "price": 1250000,
+   "note": ""
+  },
+  {
+   "sku": "1AA00541",
+   "segment": "Accessories",
+   "name": "Air-Liner Light Road 28-30",
+   "price": 1250000,
+   "note": ""
+  },
+  {
+   "sku": "1AA00542",
+   "segment": "Accessories",
+   "name": "Air-Liner Light Road 32-36",
+   "price": 1250000,
+   "note": ""
+  },
+  {
+   "sku": "1AA00577",
+   "segment": "Accessories",
+   "name": "Vittoria Bottle 550ml - anthracite+black",
+   "price": 485000,
+   "note": ""
+  }
+ ]
+}

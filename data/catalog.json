@@ -2,6 +2,78 @@
  "note": "Ngày đăng sản phẩm — do tools/build_new_products.py quản lý",
  "products": [
   {
+   "href": "vittoria-tubeless-rim-tape.html",
+   "added": "2026-10-20 11:51",
+   "seq": 95,
+   "name": "Băng keo vành tubeless"
+  },
+  {
+   "href": "vittoria-sidewall-cleaner.html",
+   "added": "2026-10-20 11:51",
+   "seq": 94,
+   "name": "Dung dịch vệ sinh thành lốp"
+  },
+  {
+   "href": "vittoria-standard-inner-tube.html",
+   "added": "2026-10-20 11:51",
+   "seq": 93,
+   "name": "Săm Standard 700x20/28c"
+  },
+  {
+   "href": "vittoria-bottle-550.html",
+   "added": "2026-10-20 11:51",
+   "seq": 92,
+   "name": "Bình nước Vittoria 550ml"
+  },
+  {
+   "href": "vittoria-corsa-pro-tube-type.html",
+   "added": "2026-10-20 11:51",
+   "seq": 91,
+   "name": "Corsa PRO Tube-Type"
+  },
+  {
+   "href": "vittoria-corsa-pro-tubular.html",
+   "added": "2026-10-20 11:51",
+   "seq": 90,
+   "name": "Corsa PRO Tubular"
+  },
+  {
+   "href": "vittoria-juniores-tubular.html",
+   "added": "2026-10-20 11:51",
+   "seq": 89,
+   "name": "Juniores Tubular"
+  },
+  {
+   "href": "vittoria-zaffiro.html",
+   "added": "2026-10-20 11:51",
+   "seq": 88,
+   "name": "Zaffiro V"
+  },
+  {
+   "href": "vittoria-combo-corsa-n-ext.html",
+   "added": "2026-10-20 11:51",
+   "seq": 87,
+   "name": "Combo 2 lốp Corsa N.Ext TLR + keo 80ml"
+  },
+  {
+   "href": "vittoria-combo-rubino.html",
+   "added": "2026-10-20 11:51",
+   "seq": 86,
+   "name": "Combo 2 lốp Rubino + 2 săm"
+  },
+  {
+   "href": "vittoria-barzo.html",
+   "added": "2026-10-20 11:51",
+   "seq": 85,
+   "name": "Barzo"
+  },
+  {
+   "href": "vittoria-air-liner-protect-trail.html",
+   "added": "2026-10-20 11:51",
+   "seq": 84,
+   "name": "Air-Liner Protect Trail"
+  },
+  {
    "href": "vittoria-multiway-valve.html",
    "added": "2026-10-17 17:33",
    "seq": 83,
@@ -266,22 +338,10 @@
    "name": "XTRADA 7"
   },
   {
-   "href": "vittoria-tattoo.html",
-   "added": "2026-10-13 09:00",
-   "seq": 39,
-   "name": "Tattoo"
-  },
-  {
    "href": "terreno-t70.html",
    "added": "2026-10-13 09:00",
    "seq": 38,
    "name": "Terreno T70 Coarse Loose Endurance"
-  },
-  {
-   "href": "terreno-t60.html",
-   "added": "2026-10-13 09:00",
-   "seq": 37,
-   "name": "Terreno T60 Mixed Endurance"
   },
   {
    "href": "terreno-t50.html",
@@ -302,12 +362,6 @@
    "name": "Terreno T10 Hardpack Endurance"
   },
   {
-   "href": "terreno-pro-t60.html",
-   "added": "2026-10-13 09:00",
-   "seq": 33,
-   "name": "Terreno PRO T60 Mixed"
-  },
-  {
    "href": "terreno-pro-t50.html",
    "added": "2026-10-13 09:00",
    "seq": 32,
@@ -318,12 +372,6 @@
    "added": "2026-10-13 09:00",
    "seq": 31,
    "name": "Terreno PRO T30 Fine Loose"
-  },
-  {
-   "href": "terreno-pro-t10.html",
-   "added": "2026-10-13 09:00",
-   "seq": 30,
-   "name": "Terreno PRO T10 Hardpack"
   },
   {
    "href": "vittoria-martello.html",

@@ -127,9 +127,9 @@ for k, t, s in [('road', 'Lốp Road', 'Lốp đua và tập luyện cho xe đư
     h = ''.join(c for t_, c in zip(cards, full) if t_ == k)
     if h:
         vc.append((k, t, s, '<div class="grid">' + h + '</div>'))
-tl = re.findall(r'<article class="p-card" data-type="(?:sealant|air-liner|valve)".*?</article>', rd('tubeless.html'), re.S)
+tl = re.findall(r'<article class="p-card" data-type="[a-z-]+".*?</article>', rd('tubeless.html'), re.S)
 if tl:
-    vc.append(('tubeless', 'Tubeless', 'Keo tự vá, chân van Multiway và miếng lót Air-Liner Light.', '<div class="grid">' + ''.join(tl) + '</div>'))
+    vc.append(('tubeless', 'Tubeless', 'Keo tự vá, chân van, băng keo vành, Air-Liner, săm và phụ kiện.', '<div class="grid">' + ''.join(tl) + '</div>'))
 total = sum(ncards(c[3]) for c in vc)
 body = nav([(k, t.replace('Lốp ', ''), ncards(h)) for k, t, s, h in vc]) + '\n' + '\n'.join(cat(k, t, s, h) for k, t, s, h in vc)
 out = shell('lop-xe.html', 'Vittoria — Toàn bộ sản phẩm — Spinlab', f'Toàn bộ {total} sản phẩm Vittoria chính hãng tại Spinlab: lốp Road, MTB, Gravel, DirtJump và phụ kiện tubeless.',

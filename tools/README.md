@@ -8,6 +8,7 @@ Các lệnh dưới đây chạy từ thư mục `design-preview/tools/generator
 ```bash
 python3 brands.py ../.. bikes.json        # tạo lại 4 trang thương hiệu
 python3 ../build_new_products.py      # cập nhật "Sản phẩm mới" (trang chủ + san-pham-moi.html)
+python3 ../apply_prices.py            # giá Vittoria theo từng mã (data/vittoria-stock.json)
 python3 ../build_compare.py           # cập nhật dữ liệu so sánh (so-sanh.html) + nút So sánh trên mọi trang
 ```
 
@@ -27,6 +28,8 @@ python3 ../build_compare.py           # cập nhật dữ liệu so sánh (so-sa
 Thêm một xe mới: lấy dữ liệu (extract.py hoặc nhập tay như tambora.py) → gộp vào `bikes.json` → thêm mục trong `vi.py` → chạy `gen.py` cho slug đó → thêm thẻ vào trang danh sách (xe-road / xe-mtb / xe-gravel) → chạy hai lệnh ở trên.
 
 ## Lốp và phụ kiện Vittoria
+
+Giá bán lẻ và hàng có sẵn lấy từ `data/vittoria-stock.json` (chuyển từ bảng giá của Spinlab). Chỉ những mã có trong file này mới hiện trên web; dòng lốp không còn mã nào thì không tạo trang. Sau khi chạy `vtires.py` / `terreno.py`, chạy `python3 tires_listing.py ../..` để dựng lại lưới sản phẩm của `lop-xe.html`.
 
 | File | Vai trò |
 |---|---|

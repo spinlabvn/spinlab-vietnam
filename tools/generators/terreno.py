@@ -63,8 +63,12 @@ def load(h):
     p = json.load(open(os.path.join(J, h + '.json'), encoding='utf-8'))['product']
     imgs = [i['src'].split('?')[0] for i in p['images']]
     imgs = [u for u in imgs if not re.search(r'-08(_[0-9a-f-]+)?\.(webp|jpg)$', u)][:6]   # drop carbon-neutral graphics
-    variants = [dict(size=v['option1'], color=v['option2'], sku=v['sku']) for v in p['variants']]
+    variants = vcommon.in_stock(h, [dict(size=v['option1'], color=v['option2'], sku=v['sku']) for v in p['variants']])
     return dict(title=p['title'], url=f'https://vittoria.com/products/{h}', images=imgs, variants=variants)
+
+
+ALL_PRODUCTS = list(PRODUCTS)
+PRODUCTS[:] = [P for P in PRODUCTS if load(P['versions'][0][0])['variants']]   # only lines with in-stock sizes
 
 
 def meter(P):
@@ -242,5 +246,8 @@ def page(P):
 if __name__ == '__main__':
     for P in PRODUCTS:
         print(page(P))
+    for P in ALL_PRODUCTS:
+        if P not in PRODUCTS:
+            print('-- hết hàng, không tạo trang:', P['file'])
     # cards HTML for listing pages
     open(os.path.join(J, '..', 'terreno-cards.html'), 'w', encoding='utf-8').write('\n'.join(card(P) for P in sorted(PRODUCTS, key=lambda q: (q['fam'] != 'pro', q['t']))))

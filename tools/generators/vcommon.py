@@ -1,13 +1,25 @@
 """Shared helpers for Vittoria tire pages: Vietnamese technology copy, spec table (size/ETRTO/colour/weight/SKU)."""
 import json, os, html
+import stock
 E = html.escape
 HERE = os.path.dirname(os.path.abspath(__file__))
 TECH = json.load(open(os.path.join(HERE, 'vtech.json'), encoding='utf-8'))
 
-# Sizes Spinlab does not sell, per Vittoria product handle (hidden from selectors and spec charts)
-EXCLUDE_SIZES = {'corsa-pro-speed-tubeless-ready': {'700x24c', '700x26c'}}
+# Spinlab's stock list decides what is shown (stock.py). Variants Vittoria's shop data lacks or lists without a SKU:
+OVERRIDES = {
+    'mazza-trail': {'add': [dict(size='27.5x2.4', color='Anthracite', sku='11A00229'), dict(size='29x2.4', color='Anthracite', sku='11A00230')]},
+    'corsa-pro-limited': {'sku': {('700x28c', 'Pink'): '11A00546', ('700x30c', 'Pink'): '11A01261'}},
+}
+EXCLUDE_SIZES = {}   # kept for older callers; stock filtering replaces it
 
-COLOR_VI = {'Brown': 'Thành nâu', 'Black': 'Đen', 'Para': 'Thành da (Para)', 'Tan': 'Thành nâu nhạt (Tan)',
+
+def in_stock(h, variants):
+    """Apply OVERRIDES for handle h, then keep only SKUs on Spinlab's stock list."""
+    o = OVERRIDES.get(h, {})
+    vs = [dict(v, sku=o.get('sku', {}).get((v['size'], v['color']), v['sku'])) for v in variants] + [dict(v) for v in o.get('add', [])]
+    return [v for v in vs if stock.ok(v['sku'])]
+
+COLOR_VI = {'Anthracite': 'Xám than', 'Brown': 'Thành nâu', 'Black': 'Đen', 'Para': 'Thành da (Para)', 'Tan': 'Thành nâu nhạt (Tan)',
             'Blue': 'Xanh dương', 'Red': 'Đỏ', 'Pink': 'Hồng', 'White': 'Trắng', 'Yellow': 'Vàng'}
 
 # Vietnamese technology names/descriptions keyed by lower-cased Vittoria title
@@ -85,14 +97,19 @@ def spec_section(vers, variants_of):
     rows = ''
     multi = len(vers) > 1
     for k, (h, lab) in enumerate(vers):
-        sku = {(v['size'], v['color']): v['sku'] for v in variants_of(h)}
-        chart = TECH.get(h, {}).get('chart') or [{'Size': v['size'], 'Color': v['color']} for v in variants_of(h)]
-        chart = [r for r in chart if r.get('Size', '') not in EXCLUDE_SIZES.get(h, ())]
+        vs = variants_of(h)
+        sku = {(v['size'], v['color']): v['sku'] for v in vs}
+        full = TECH.get(h, {}).get('chart') or []
+        chart = [r for r in full if (r.get('Size', ''), r.get('Color', '')) in sku]
+        for (sz, col) in sku:   # in-stock variants missing from Vittoria's chart: borrow the same size's row
+            if not any(r.get('Size') == sz and r.get('Color') == col for r in chart):
+                base = next((r for r in full if r.get('Size') == sz), {'Size': sz})
+                chart.append(dict(base, Color=col))
         for r in chart:
             s, c = r.get('Size', ''), r.get('Color', '')
             code = sku.get((s, c), '')
             rows += (f'<tr data-sku="{code}" data-key="{E(s)}|{E(c)}">' + (f'<td>{E(lab)}</td>' if multi else '') +
-                     f'<td>{E(s)}</td><td>{E(r.get("ETRTO", "—"))}</td><td>{E(COLOR_VI.get(c, c))}</td><td>{E(r.get("Weight", "—"))}</td><td>{code or "—"}</td></tr>')
+                     f'<td>{E(s)}</td><td>{E(r.get("ETRTO", "—").replace(chr(8203), ""))}</td><td>{E(COLOR_VI.get(c, c))}</td><td>{E(r.get("Weight", "—"))}</td><td>{code or "—"}</td></tr>')
     head = ('<th scope="col">Phiên bản</th>' if multi else '') + '<th scope="col">Kích thước</th><th scope="col">ETRTO</th><th scope="col">Màu</th><th scope="col">Trọng lượng</th><th scope="col">Mã sản phẩm</th>'
     return (f'<section class="pdp-sec" id="ma-san-pham"><h2>Bảng kỹ thuật</h2>'
             f'<div class="table-wrap"><table class="sku-table spec-table"><thead><tr>{head}</tr></thead><tbody>{rows}</tbody></table></div>'

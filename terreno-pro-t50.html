@@ -394,39 +394,6 @@ tbody tr.on{background:#FFF7D6}
 .faq details p{margin:0;padding:0 18px 16px;color:var(--muted);line-height:1.6}
 .related{grid-template-columns:repeat(2,minmax(0,1fr))}
 @media (min-width:1024px){.related{grid-template-columns:repeat(3,minmax(0,1fr))}}
-
-/* Terreno pages */
-.opt-group{border:0;margin:8px 0 0;padding:0}
-.opt-group legend{padding:0;margin-bottom:10px;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.04em;display:flex;gap:10px;flex-wrap:wrap;align-items:baseline}
-.siblings{margin:16px 0 0;font-size:14px;color:var(--muted)}
-.siblings b{color:var(--text)}
-.geo-note{font-size:13px;color:var(--muted);margin:10px 0 0}
-.tscore{margin:4px 0 6px}
-.ts-track{position:relative;height:40px;margin:0 14px;border-radius:999px;background:linear-gradient(90deg,#C9C3B6,#8B6B47 55%,#4B3621)}
-.ts-track a{position:absolute;top:50%;transform:translate(-50%,-50%);display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#fff;color:var(--text);font-size:11px;font-weight:800;box-shadow:0 1px 3px rgba(0,0,0,.25);transition:transform .15s}
-.ts-track a:hover{transform:translate(-50%,-50%) scale(1.08)}
-.ts-track a[aria-current]{background:var(--brand-red);color:#fff;width:40px;height:40px;box-shadow:0 0 0 3px var(--brand-yellow)}
-.ts-ends{display:flex;justify-content:space-between;margin-top:8px;font-size:12px;color:var(--muted)}
-.ver-desc{margin:8px 0 0;font-size:14px;color:var(--muted);line-height:1.55}
-.aka{font-size:13px;color:var(--muted)}
-.vtable td,.vtable th{vertical-align:top}
-.vtable td:last-child{min-width:240px}
-.sku-table td:nth-child(3){font-variant-numeric:tabular-nums}
-.sku-table tr.on{background:#FFF7D6}
-
-/* Vittoria technology + spec chart */
-.tech-v[hidden]{display:none}
-.tech{display:grid;gap:12px;grid-template-columns:repeat(2,minmax(0,1fr))}
-@media (min-width:1024px){.tech{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}}
-@media (max-width:479px){.tech{grid-template-columns:1fr}}
-.tech article{padding:20px;border:1px solid var(--line);border-radius:var(--radius);background:#fff}
-.tech .num{display:inline-block;font-weight:800;color:var(--brand-red);font-size:14px;margin-bottom:8px}
-.tech h3{margin:0 0 8px;font-size:16px;line-height:1.3}
-.tech p{margin:0;font-size:14px;color:var(--muted);line-height:1.6}
-.tech-of{margin:0 0 14px;font-size:14px;color:var(--muted)}
-.spec-table td,.spec-table th{white-space:nowrap}
-.spec-table td:nth-child(5){font-variant-numeric:tabular-nums;font-weight:600}
-.spec-table tr.on{background:#FFF7D6}
 /* Header in brand yellow (announcement bar removed) */
 .header{background:var(--brand-yellow);border-bottom-color:rgba(0,0,0,.08)}
 .header .nav{background:#fff;border-top-color:rgba(0,0,0,.08)}
@@ -494,6 +461,38 @@ tbody tr.on{background:#FFF7D6}
 body.cmp-open .zalo-fab{bottom:96px}
 body.cmp-open .ribbon{bottom:96px}
 @media (max-width:600px){.cmp-items li{width:52px;height:52px}.cmp-items img{max-width:44px;max-height:44px}.cmp-clear{display:none}}
+/* Terreno pages */
+.opt-group{border:0;margin:8px 0 0;padding:0}
+.opt-group legend{padding:0;margin-bottom:10px;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.04em;display:flex;gap:10px;flex-wrap:wrap;align-items:baseline}
+.siblings{margin:16px 0 0;font-size:14px;color:var(--muted)}
+.siblings b{color:var(--text)}
+.geo-note{font-size:13px;color:var(--muted);margin:10px 0 0}
+.tscore{margin:4px 0 6px}
+.ts-track{position:relative;height:40px;margin:0 14px;border-radius:999px;background:linear-gradient(90deg,#C9C3B6,#8B6B47 55%,#4B3621)}
+.ts-track a{position:absolute;top:50%;transform:translate(-50%,-50%);display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#fff;color:var(--text);font-size:11px;font-weight:800;box-shadow:0 1px 3px rgba(0,0,0,.25);transition:transform .15s}
+.ts-track a:hover{transform:translate(-50%,-50%) scale(1.08)}
+.ts-track a[aria-current]{background:var(--brand-red);color:#fff;width:40px;height:40px;box-shadow:0 0 0 3px var(--brand-yellow)}
+.ts-ends{display:flex;justify-content:space-between;margin-top:8px;font-size:12px;color:var(--muted)}
+.ver-desc{margin:8px 0 0;font-size:14px;color:var(--muted);line-height:1.55}
+.aka{font-size:13px;color:var(--muted)}
+.vtable td,.vtable th{vertical-align:top}
+.vtable td:last-child{min-width:240px}
+.sku-table td:nth-child(3){font-variant-numeric:tabular-nums}
+.sku-table tr.on{background:#FFF7D6}
+
+/* Vittoria technology + spec chart */
+.tech-v[hidden]{display:none}
+.tech{display:grid;gap:12px;grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (min-width:1024px){.tech{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}}
+@media (max-width:479px){.tech{grid-template-columns:1fr}}
+.tech article{padding:20px;border:1px solid var(--line);border-radius:var(--radius);background:#fff}
+.tech .num{display:inline-block;font-weight:800;color:var(--brand-red);font-size:14px;margin-bottom:8px}
+.tech h3{margin:0 0 8px;font-size:16px;line-height:1.3}
+.tech p{margin:0;font-size:14px;color:var(--muted);line-height:1.6}
+.tech-of{margin:0 0 14px;font-size:14px;color:var(--muted)}
+.spec-table td,.spec-table th{white-space:nowrap}
+.spec-table td:nth-child(5){font-variant-numeric:tabular-nums;font-weight:600}
+.spec-table tr.on{background:#FFF7D6}
 </style>
 </head>
 <body>
@@ -591,20 +590,22 @@ body.cmp-open .ribbon{bottom:96px}
                     <li><a href="lop-xe.html#road">Road</a></li>
                     <li><a href="lop-xe.html#mtb">MTB</a></li>
                     <li><a href="lop-xe.html#gravel">Gravel</a></li>
-                    <li><a href="lop-xe.html#dirtjump">DirtJump</a></li>
                   </ul>
                   <a class="sub-all" href="lop-xe.html">Xem tất cả lốp xe</a>
                 </div>
               </li>
               <li class="has-fly">
-                <a class="fly-top" href="tubeless.html" aria-expanded="false" aria-controls="fly-tubeless">Tubeless <svg aria-hidden="true"><use href="#i-right"/></svg></a>
+                <a class="fly-top" href="tubeless.html" aria-expanded="false" aria-controls="fly-tubeless">Tubeless &amp; phụ kiện <svg aria-hidden="true"><use href="#i-right"/></svg></a>
                 <div class="fly" id="fly-tubeless">
                   <ul>
                     <li><a href="tubeless.html#sealant">Keo tự vá</a></li>
-                    <li><a href="tubeless.html#air-liner">Air-Liner Light</a></li>
+                    <li><a href="tubeless.html#air-liner">Air-Liner</a></li>
                     <li><a href="tubeless.html#valve">Chân van</a></li>
+                    <li><a href="tubeless.html#rim-tape">Băng keo vành</a></li>
+                    <li><a href="tubeless.html#care">Vệ sinh lốp</a></li>
+                    <li><a href="tubeless.html#other">Săm &amp; phụ kiện khác</a></li>
                   </ul>
-                  <a class="sub-all" href="tubeless.html">Xem tất cả tubeless</a>
+                  <a class="sub-all" href="tubeless.html">Xem tất cả tubeless &amp; phụ kiện</a>
                 </div>
               </li>
               <li><a href="day-cuon-tay-lai.html">Dây cuốn tay lái</a></li>
@@ -644,12 +645,12 @@ body.cmp-open .ribbon{bottom:96px}
         <h1>Terreno PRO T50 Mixed</h1>
         <p class="tagline">Một bộ lốp cho mọi cung đường — địa hình hỗn hợp. <span class="aka">· Nằm giữa T30 và T70</span></p>
         <div class="tscore" aria-label="Thang T-score của Vittoria">
-      <div class="ts-track"><a href="terreno-pro-t10.html" style="left:0.0%" title="Terreno PRO T10 — Đường cứng, đất nén"><span>T10</span></a><a href="terreno-pro-t30.html" style="left:40.0%" title="Terreno PRO T30 — Sỏi mịn, đất tơi"><span>T30</span></a><a href="terreno-pro-t50.html" style="left:80.0%" aria-current="page" title="Terreno PRO T50 — Địa hình hỗn hợp"><span>T50</span></a><a href="terreno-pro-t60.html" style="left:100.0%" title="Terreno PRO T60 — Hỗn hợp, gồ ghề"><span>T60</span></a></div>
+      <div class="ts-track"><a href="terreno-pro-t30.html" style="left:0.0%" title="Terreno PRO T30 — Sỏi mịn, đất tơi"><span>T30</span></a><a href="terreno-pro-t50.html" style="left:100.0%" aria-current="page" title="Terreno PRO T50 — Địa hình hỗn hợp"><span>T50</span></a></div>
       <div class="ts-ends"><span>Nhanh · đường cứng</span><span>Bám · sỏi to, rời</span></div></div>
         <p class="ver-desc"><b>PRO Race</b> — Phiên bản thi đấu cao cấp nhất. Dòng Terreno PRO được làm từ 92% vật liệu tái tạo và tái chế — lốp bền vững nhất Vittoria từng sản xuất.</p>
         <fieldset class="opt-group" id="color-field"><legend>Màu <span class="size-meta" id="color-name"></span></legend><div class="size-opts" id="color-opts"></div></fieldset>
         <fieldset class="sizes"><legend>Kích thước <span class="size-meta" aria-live="polite">Mã <span id="sz-sku">—</span></span></legend><div class="size-opts" id="size-opts"></div></fieldset>
-        <div class="price-row"><span class="label">Giá bán lẻ</span><span class="p-price big">1.980.000₫</span></div>
+        <div class="price-row"><span class="label">Giá bán lẻ</span><span class="p-price big">1.815.000₫</span></div>
         <div class="buy-ctas">
           <a class="btn btn-zalo outline" href="https://zalo.me/0399337533" target="_blank" rel="noopener"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="" width="22" height="22">Chat Zalo</a>
           <a class="btn btn-outline" href="tel:0399337533">Gọi 0399 337 533</a>
@@ -670,16 +671,16 @@ body.cmp-open .ribbon{bottom:96px}
       <figure><img src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/terreno-PRO-T50-mixed-gravel-06.webp?width=900" alt="Lốp Terreno T50 khi sử dụng" loading="lazy"></figure>
     </section>
 
-    <section class="pdp-sec" id="phien-ban"><h2>Phiên bản khác của T50</h2><div class="grid related" style="grid-template-columns:repeat(auto-fill,minmax(220px,1fr))"><article class="p-card" data-type="gravel"><div class="p-img tire"><span class="tag dark">T50</span><img src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/Terreno-T50-Mixed-01.webp?width=600" alt="Lốp Vittoria Terreno T50 Mixed Endurance" loading="lazy"></div><div class="p-body"><span class="p-brand">Vittoria · Gravel</span><h3 class="p-name"><a class="stretch" href="terreno-t50.html">Terreno T50 Mixed Endurance</a></h3><p class="p-desc">Địa hình hỗn hợp</p><ul class="models"><li>Endurance · Tập luyện, đường dài</li></ul><span class="p-price">1.980.000₫</span></div></article></div></section>
+    <section class="pdp-sec" id="phien-ban"><h2>Phiên bản khác của T50</h2><div class="grid related" style="grid-template-columns:repeat(auto-fill,minmax(220px,1fr))"><article class="p-card" data-type="gravel"><div class="p-img tire"><span class="tag dark">T50</span><img src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/Terreno-T50-Mixed-01.webp?width=600" alt="Lốp Vittoria Terreno T50 Mixed Endurance" loading="lazy"></div><div class="p-body"><span class="p-brand">Vittoria · Gravel</span><h3 class="p-name"><a class="stretch" href="terreno-t50.html">Terreno T50 Mixed Endurance</a></h3><p class="p-desc">Địa hình hỗn hợp</p><ul class="models"><li>Endurance · Tập luyện, đường dài</li></ul><span class="p-price">1.295.000₫</span></div></article></div></section>
 
     <section class="pdp-sec" id="cong-nghe"><h2>Công nghệ</h2><div class="tech-v" data-tech="0"><div class="tech"><article><span class="num">01</span><h3>Hợp chất Eco Race</h3><p>Hợp chất thế hệ mới dành riêng cho đua gravel, tốc độ và độ bám vượt trội trên nhiều địa hình. Thành phần tái tạo và tái chế gồm cao su thiên nhiên chứng nhận Fair-Rubber, dầu đậu nành và silica từ tro vỏ trấu.</p></article><article><span class="num">02</span><h3>Thân lốp cotton hữu cơ</h3><p>Thân lốp cotton hữu cơ nhiều lớp gia cường bằng latex tự nhiên — cảm giác đạp mềm mại hơn, giảm ô nhiễm nông nghiệp.</p></article><article><span class="num">03</span><h3>Bead Shield</h3><p>Lớp bảo vệ bổ sung ở vùng tanh lốp.</p></article><article><span class="num">04</span><h3>Đai chống thủng nylon tái chế</h3><p>Tăng khả năng chống thủng; làm từ nylon tái chế Seawastex® từ lưới đánh cá đã qua sử dụng.</p></article><article><span class="num">05</span><h3>Bảo vệ thành lốp nylon tái chế</h3><p>Lớp nylon tái chế Seawastex® gia cường, tăng bảo vệ và độ ổn định bên hông lốp.</p></article></div></div></section>
 
-    <section class="pdp-sec" id="ma-san-pham"><h2>Bảng kỹ thuật</h2><div class="table-wrap"><table class="sku-table spec-table"><thead><tr><th scope="col">Kích thước</th><th scope="col">ETRTO</th><th scope="col">Màu</th><th scope="col">Trọng lượng</th><th scope="col">Mã sản phẩm</th></tr></thead><tbody><tr data-sku="11A01144" data-key="700x35c|Brown"><td>700x35c</td><td>35-622</td><td>Thành nâu</td><td>550 g</td><td>11A01144</td></tr><tr data-sku="11A01145" data-key="700x40c|Brown"><td>700x40c</td><td>40-622</td><td>Thành nâu</td><td>600 g</td><td>11A01145</td></tr><tr data-sku="11A01146" data-key="700x45c|Brown"><td>700x45c</td><td>45-622</td><td>Thành nâu</td><td>670 g</td><td>11A01146</td></tr></tbody></table></div><p class="geo-note">Dòng đang chọn được tô màu. Trọng lượng và ETRTO theo công bố của Vittoria; vui lòng liên hệ Spinlab để kiểm tra hàng có sẵn.</p></section>
+    <section class="pdp-sec" id="ma-san-pham"><h2>Bảng kỹ thuật</h2><div class="table-wrap"><table class="sku-table spec-table"><thead><tr><th scope="col">Kích thước</th><th scope="col">ETRTO</th><th scope="col">Màu</th><th scope="col">Trọng lượng</th><th scope="col">Mã sản phẩm</th></tr></thead><tbody><tr data-sku="11A01145" data-key="700x40c|Brown"><td>700x40c</td><td>40-622</td><td>Thành nâu</td><td>600 g</td><td>11A01145</td></tr><tr data-sku="11A01146" data-key="700x45c|Brown"><td>700x45c</td><td>45-622</td><td>Thành nâu</td><td>670 g</td><td>11A01146</td></tr></tbody></table></div><p class="geo-note">Dòng đang chọn được tô màu. Trọng lượng và ETRTO theo công bố của Vittoria; vui lòng liên hệ Spinlab để kiểm tra hàng có sẵn.</p></section>
 
     <section class="pdp-sec" id="hoi-dap"><h2>Hỏi đáp</h2><div class="faq"><details><summary>Nên chọn T-score nào?</summary><p>T-score càng thấp, lốp càng lăn nhanh trên mặt đường cứng; càng cao, lốp càng bám trên sỏi to và rời. Nếu bạn đạp nhiều đường nhựa và đất nén, hãy chọn T10–T30; đường hỗn hợp chọn T50–T60; sỏi to, rời chọn T70.</p></details><details><summary>Terreno PRO và Terreno Endurance khác nhau thế nào?</summary><p>Terreno PRO là dòng thi đấu cao cấp nhất, làm từ 92% vật liệu tái tạo và tái chế, có các mẫu T10–T60. Terreno Endurance bền bỉ cho tập luyện và đạp đường dài, có nhiều kích thước hơn, hai màu thành lốp và các mẫu T10–T70.</p></details><details><summary>Có lắp không săm (tubeless) được không?</summary><p>Liên hệ Spinlab để được xác nhận khả năng lắp tubeless của từng phiên bản và kích thước, cũng như tư vấn vành, van và dung dịch sealant phù hợp.</p></details></div></section>
 
     <section class="pdp-sec"><div class="sec-head"><h2>Các mẫu Terreno PRO khác</h2><a class="see-all" href="lop-xe.html#gravel">Xem tất cả lốp gravel</a></div>
-      <div class="grid related" style="grid-template-columns:repeat(auto-fill,minmax(220px,1fr))"><article class="p-card" data-type="gravel"><div class="p-img tire"><span class="tag">PRO</span><img src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/terreno-PRO-T10-hardpack-gravel-01.webp?width=600" alt="Lốp Vittoria Terreno PRO T10 Hardpack" loading="lazy"></div><div class="p-body"><span class="p-brand">Vittoria · Gravel</span><h3 class="p-name"><a class="stretch" href="terreno-pro-t10.html">Terreno PRO T10 Hardpack</a></h3><p class="p-desc">Đường cứng, đất nén</p><ul class="models"><li>PRO Race · Thi đấu</li></ul><span class="p-price">1.980.000₫</span></div></article><article class="p-card" data-type="gravel"><div class="p-img tire"><span class="tag">PRO</span><img src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/terreno-PRO-T30-fineloose-gravel-01.webp?width=600" alt="Lốp Vittoria Terreno PRO T30 Fine Loose" loading="lazy"></div><div class="p-body"><span class="p-brand">Vittoria · Gravel</span><h3 class="p-name"><a class="stretch" href="terreno-pro-t30.html">Terreno PRO T30 Fine Loose</a></h3><p class="p-desc">Sỏi mịn, đất tơi</p><ul class="models"><li>PRO Race · Thi đấu</li></ul><span class="p-price">1.980.000₫</span></div></article><article class="p-card" data-type="gravel"><div class="p-img tire"><span class="tag">PRO</span><img src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/terreno-proT60-mixed.webp?width=600" alt="Lốp Vittoria Terreno PRO T60 Mixed" loading="lazy"></div><div class="p-body"><span class="p-brand">Vittoria · Gravel</span><h3 class="p-name"><a class="stretch" href="terreno-pro-t60.html">Terreno PRO T60 Mixed</a></h3><p class="p-desc">Hỗn hợp, gồ ghề</p><ul class="models"><li>PRO Race · Thi đấu</li></ul><span class="p-price">1.980.000₫</span></div></article></div></section>
+      <div class="grid related" style="grid-template-columns:repeat(auto-fill,minmax(220px,1fr))"><article class="p-card" data-type="gravel"><div class="p-img tire"><span class="tag">PRO</span><img src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/terreno-PRO-T30-fineloose-gravel-01.webp?width=600" alt="Lốp Vittoria Terreno PRO T30 Fine Loose" loading="lazy"></div><div class="p-body"><span class="p-brand">Vittoria · Gravel</span><h3 class="p-name"><a class="stretch" href="terreno-pro-t30.html">Terreno PRO T30 Fine Loose</a></h3><p class="p-desc">Sỏi mịn, đất tơi</p><ul class="models"><li>PRO Race · Thi đấu</li></ul><span class="p-price">1.815.000₫</span></div></article></div></section>
   </div>
 </main>
 
@@ -756,7 +757,7 @@ body.cmp-open .ribbon{bottom:96px}
 
 // Terreno page: version -> colour -> size selector, gallery
 (() => {
-  const V = [{"label": "PRO Race", "blurb": "Phiên bản thi đấu cao cấp nhất. Dòng Terreno PRO được làm từ 92% vật liệu tái tạo và tái chế — lốp bền vững nhất Vittoria từng sản xuất.", "images": ["https://cdn.shopify.com/s/files/1/0800/0549/7120/files/terreno-PRO-T50-mixed-gravel-01.webp", "https://cdn.shopify.com/s/files/1/0800/0549/7120/files/terreno-PRO-T50-mixed-gravel-02.webp", "https://cdn.shopify.com/s/files/1/0800/0549/7120/files/terreno-PRO-T50-mixed-gravel-05.webp", "https://cdn.shopify.com/s/files/1/0800/0549/7120/files/terreno-PRO-T50-mixed-gravel-06.webp", "https://cdn.shopify.com/s/files/1/0800/0549/7120/files/terreno-PRO-T50-mixed-gravel-07.webp", "https://cdn.shopify.com/s/files/1/0800/0549/7120/files/terreno-PRO-T50-mixed-gravel-03.webp"], "variants": [{"size": "700x35c", "color": "Brown", "sku": "11A01144"}, {"size": "700x40c", "color": "Brown", "sku": "11A01145"}, {"size": "700x45c", "color": "Brown", "sku": "11A01146"}]}], CV = {"Brown": "Thành nâu", "Black": "Đen", "Para": "Thành da (Para)", "Tan": "Thành nâu nhạt (Tan)", "Blue": "Xanh dương", "Red": "Đỏ", "Pink": "Hồng", "White": "Trắng", "Yellow": "Vàng"};
+  const V = [{"label": "PRO Race", "blurb": "Phiên bản thi đấu cao cấp nhất. Dòng Terreno PRO được làm từ 92% vật liệu tái tạo và tái chế — lốp bền vững nhất Vittoria từng sản xuất.", "images": ["https://cdn.shopify.com/s/files/1/0800/0549/7120/files/terreno-PRO-T50-mixed-gravel-01.webp", "https://cdn.shopify.com/s/files/1/0800/0549/7120/files/terreno-PRO-T50-mixed-gravel-02.webp", "https://cdn.shopify.com/s/files/1/0800/0549/7120/files/terreno-PRO-T50-mixed-gravel-05.webp", "https://cdn.shopify.com/s/files/1/0800/0549/7120/files/terreno-PRO-T50-mixed-gravel-06.webp", "https://cdn.shopify.com/s/files/1/0800/0549/7120/files/terreno-PRO-T50-mixed-gravel-07.webp", "https://cdn.shopify.com/s/files/1/0800/0549/7120/files/terreno-PRO-T50-mixed-gravel-03.webp"], "variants": [{"size": "700x40c", "color": "Brown", "sku": "11A01145"}, {"size": "700x45c", "color": "Brown", "sku": "11A01146"}]}], CV = {"Anthracite": "Xám than", "Brown": "Thành nâu", "Black": "Đen", "Para": "Thành da (Para)", "Tan": "Thành nâu nhạt (Tan)", "Blue": "Xanh dương", "Red": "Đỏ", "Pink": "Hồng", "White": "Trắng", "Yellow": "Vàng"};
   const $ = id => document.getElementById(id), main = $('g-main'), list = document.querySelector('.g-thumbs');
   let ver = 0, color = null, size = null;
   const radios = (box, name, items, cur) => { box.innerHTML = items.map(x => `<label><input type="radio" name="${name}" value="${x}"${x===cur?' checked':''}><span>${CV[x]||x}</span></label>`).join(''); };
@@ -801,6 +802,14 @@ body.cmp-open .ribbon{bottom:96px}
   document.addEventListener('keydown',e=>{ if(e.key==='Escape'&&document.body.classList.contains('nav-open')){ set(false); btn.focus(); } });
   const sync=()=>{ if(mq.matches){ nav.toggleAttribute('inert',!document.body.classList.contains('nav-open')); } else { set(false); nav.removeAttribute('inert'); } };
   mq.addEventListener('change',sync); sync();
+})();
+// Vittoria retail price: follows the selected SKU
+(() => {
+  const P = {"11A01145": "1.815.000₫", "11A01146": "1.815.000₫"}, el = document.querySelector('.p-price.big'), code = document.getElementById('sz-sku');
+  if (!el || !code) return;
+  const upd = () => { const p = P[(code.textContent || '').trim()]; if (p) el.textContent = p; };
+  new MutationObserver(upd).observe(code, {childList: true, characterData: true, subtree: true});
+  upd();
 })();
 // Compare products: toggles on cards / product page, tray, link to so-sanh.html (max 4)
 (() => {

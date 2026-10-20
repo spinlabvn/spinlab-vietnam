@@ -1722,5 +1722,193 @@
   "wide_rim": "",
   "tagline": "Performance goes even deeper with Vittoria’s 4Compound Formulation, which strategically places four optimized rubber compounds exactly where they’re needed. The result is an unrivaled fusion of speed, grip, and durability.",
   "summary": "Built on our advanced Trail casing, this tire balances low weight with toughness: a tubeless-ready nylon construction reinforced with sidewall protection and an anti-puncture belt—confidence for every line you choose."
+ },
+ "air-liner-protect-trail": {
+  "tech_intro": "The Air-Liner Protect Trail, weighing just 100g, is specifically designed for 29” wheels and tire widths from 2.1” to 2.6”.",
+  "chart": [],
+  "features": [
+   {
+    "title": "Protection",
+    "text": "It saves your rims from the most extreme impacts and prevents snake bites."
+   },
+   {
+    "title": "Run flat support",
+    "text": "In case of a puncture, you can ride up to 50km in run-flat mode."
+   }
+  ],
+  "wide_rim": "",
+  "tagline": "The design effectively dampens shocks and vibrations, enhancing stability and comfort for both casual riders and professionals.",
+  "summary": "Experience unmatched performance and durability with the Air-Liner Protect Trail, designed to elevate your off-road adventures."
+ },
+ "barzo-xc-race": {
+  "tech_intro": "Maximum speed on coarse loose terrain thanks to the fast-rolling alternating center knobs.",
+  "chart": [
+   {
+    "Size": "29x2.25",
+    "ETRTO": "55-622",
+    "Color": "Brown",
+    "Weight": "680 g"
+   },
+   {
+    "Size": "29x2.25",
+    "ETRTO": "55-622",
+    "Color": "Black",
+    "Weight": "700 g"
+   },
+   {
+    "Size": "29x2.4",
+    "ETRTO": "60-622",
+    "Color": "Brown",
+    "Weight": "720 g"
+   },
+   {
+    "Size": "29x2.4",
+    "ETRTO": "60-622",
+    "Color": "Black",
+    "Weight": "740 g"
+   }
+  ],
+  "features": [
+   {
+    "title": "Race Formulation powered by Graphene + Silica",
+    "text": "Optimized for fast and technical terrains, this race-ready compound blend balances speed with control."
+   }
+  ],
+  "wide_rim": "",
+  "tagline": "The Race Formulation Graphene + Silica compound delivers championship-level grip while preserving low rolling resistance and long-lasting durability. Paired with a 60 TPI nylon Race Casing, this tire absorbs impacts, resists punctures, and deforms consistently for optimal race feel and control.",
+  "summary": "The new XC Race construction delivers the numbers: 20% more speed, 8% more grip, 44% better puncture resistance, and 9% improved riding comfort."
+ },
+ "bottles": {
+  "tech_intro": "",
+  "chart": [],
+  "features": [],
+  "wide_rim": ""
+ },
+ "corsa-pro-tube-type": {
+  "tech_intro": "Engineered with the revolutionary, WorldTour-proven technology of Graphene + Silica compounds and the timeless perfection of a 320 TPI cotton-blend casing. Electrically cured to eliminate seams and increase aerodynamics. The Corsa Pro Tube Type provides an impossibly supple connection to the road, erasing rolling resistance, denying road debris, and inspiring confidence through sweeping corners.",
+  "chart": [
+   {
+    "Size": "700x28c",
+    "ETRTO": "28-622",
+    "Color": "Para",
+    "Weight": "245 g"
+   },
+   {
+    "Size": "700x26c",
+    "ETRTO": "26-622",
+    "Color": "Para",
+    "Weight": "245 g"
+   },
+   {
+    "Size": "700x30c",
+    "ETRTO": "30-622",
+    "Color": "Para",
+    "Weight": "270 g"
+   }
+  ],
+  "features": [
+   {
+    "title": "Race Formulation Graphene + Silica",
+    "text": "The Race Formulation powered by Graphene + Silica is a high-performance compound mix developed for pro-level racing. It delivers an optimal balance of speed and grip, offering maximum efficiency in straight-line performance with confident handling in corners."
+   },
+   {
+    "title": "320 TPI Cotton casing",
+    "text": "This casing is engineered to provide increased suppleness, comfort and lightweight."
+   },
+   {
+    "title": "Bead Shield",
+    "text": "Additional layer on the bead provides extra protection."
+   },
+   {
+    "title": "Anti-Puncture Belt",
+    "text": "Designed to provide extra puncture resistance, ensuring your ride stays smooth and uninterrupted."
+   }
+  ],
+  "wide_rim": "",
+  "tagline": "Ultimate cornering grip in wet or dry conditions. Reinforced puncture resistance. A supple construction that reduces rolling resistance and makes chattery chip seal feel like freshly laid tarmac. The Corsa PRO combines the convenience of a tube-type clincher platform with the pedigree of the world’s most successful racing tire, proven in the rarefied air of France’s highest passes and the punchy finales of the classics alike.",
+  "summary": "The new Corsa PRO Tube-type y delivers a 12% improvement in rolling efficiency, 18% extra puncture resistance, and a 9% weight reduction compared to its predecessor, Corsa Tube-type."
+ },
+ "corsa-pro-tubular": {
+  "tech_intro": "The revolutionary grip and durability of Graphene + Silica compounds. The timeless perfection of a 320 TPI cotton casing. The inimitable ride quality of a latex innertube. The Corsa PRO Tubular creates an impossibly supple connection to the road, erasing rolling resistance, denying road debris, and inspiring confidence through sweeping corners. It even boosts aerodynamics with its seamless, electrical curing.",
+  "chart": [],
+  "features": [
+   {
+    "title": "Race Formulation Graphene + Silica",
+    "text": "The Race Formulation powered by Graphene + Silica is a high-performance compound mix developed for pro-level racing. It delivers an optimal balance of speed and grip, offering maximum efficiency in straight-line performance with confident handling in corners."
+   },
+   {
+    "title": "320 TPI Cotton-corespun casing",
+    "text": "Lightweight cotton and durable aramid, spun in a 320 TPI casing that combines the former’s intuitive, supple road feel with the latter’s puncture resistance."
+   },
+   {
+    "title": "Anti-Puncture Belt",
+    "text": "Designed to provide extra puncture resistance, ensuring your ride stays smooth and uninterrupted."
+   }
+  ],
+  "wide_rim": "",
+  "tagline": "No tire responds like a tubular, and no tubular feels like the Corsa PRO. High cornering grip in wet or dry conditions, low rolling resistance, and an impossibly supple conformity that smooths rough roads and connects you intuitively to the tarmac – The tubular Corsa PRO is the ultimate racing tire. It’s also extremely light: each pair is 190g lighter than tubeless-ready Corsa PRO tires run with sealant or with latex tubes.",
+  "summary": "With material technology proven in the WorldTour peloton – from the punchiest monuments to the most punishing grand tours – and incomparable weight savings, the Corsa PRO Tubular is the world’s fastest tire for pure speed."
+ },
+ "juniores-tubular": {
+  "tech_intro": "The Juniores’ cotton casing preserves the supple road feel that only a tubular can provide while maintaining an entry-level price point. It’s mated to a compound that privileges longevity, durability, and puncture resistance over outright speed – ideal qualities for a young riders taking to their first start lines.",
+  "chart": [],
+  "features": [
+   {
+    "title": "1C compound",
+    "text": "A revolutionary compound engineered with Graphene for high grip, minimal rolling resistance, and low weight. Simple, supple, superlative, and ideal for the velodrome."
+   },
+   {
+    "title": "220 TPI Cotton casing",
+    "text": "Cotton provides an inimitable connection to the road. Compared to synthetic casing, cotton is smoother, more supple, and lower weight – the foundational truth behind the legendary ride quality of tubular tires."
+   }
+  ],
+  "wide_rim": "",
+  "tagline": "Coppi apocryphally said that age and treachery will defeat youth and skill, but with the Juniores Tubular, youth and skill may have a chance. The Juniores introduces the next generation of champions to the time-tested technology ridden by every previous generation’s heroes: the tubular tire.",
+  "summary": "The Juniores’ construction is similar to the Rally, just sized down for smaller wheels. Its buttery-smooth ride helps neo-pros – who are just learning to read a race – also learn to feel the road in a way traditional clinchers and tubeless tires simply can’t."
+ },
+ "sidewall-cleaner": {
+  "tech_intro": "Vittoria Sidewall Cleaner is a high-performance solution designed to effortlessly clean and restore the appearance of your bicycle tire sidewalls.",
+  "chart": [],
+  "features": [],
+  "wide_rim": "",
+  "tagline": "Its powerful yet gentle formula ensures that your tires look pristine without compromising their structure, making it an essential addition to any cyclist's maintenance routine.",
+  "summary": "This is the only product available in the market that can be used for cotton tires, bringing them back to shine with their original beauty. The application sponge makes the cleaning operation super easy and quick."
+ },
+ "standard-butyl-inner-tube": {
+  "tech_intro": "High air retention, easy mounting, reliable puncture resistance, and a 0.9mm tube wall – butyl inner tubes define the reliable convenience of clinchers.",
+  "chart": [],
+  "features": [],
+  "wide_rim": "",
+  "tagline": "The classic tube for all applications",
+  "summary": "When you ride daily, reliability means everything, and no inner tube handles the grind like butyl. It retains air across multiple days and its more rugged qualities mean it can be tossed around in a jersey pocket or saddlebag and installed on the side of the road or trail when needed."
+ },
+ "tubeless-rim-tape-new": {
+  "tech_intro": "Vittoria Tubeless Rim Tape is a key component for any tubeless application.",
+  "chart": [],
+  "features": [],
+  "wide_rim": "",
+  "tagline": "Vittoria Tubeless Rim Tape is a key component for any tubeless application.",
+  "summary": "Designed to save weight and ensure an airtight seal, Vittoria Tubeless Rim Tape prevents air from leaking through the rim and facilitates the installation of tubeless tires."
+ },
+ "zaffiro-evo": {
+  "tech_intro": "Clustered textured shoulders, centered circumferential grooves, and an alternating V-formation tread pattern deliver a balance of speed and control.",
+  "chart": [],
+  "features": [
+   {
+    "title": "1C Formulation Graphene",
+    "text": "The 1C Formulation enhanced with Graphene ensures durability, puncture resistance and grip for everyday use."
+   },
+   {
+    "title": "60 TPI Nylon casing",
+    "text": "An ultra-durable sheath of long-lasting protection. This casing is engineered to resist the roughest roads in the most challenging conditions without puncturing. V"
+   },
+   {
+    "title": "Bead Shield",
+    "text": "Additional layer on the bead provides extra protection."
+   }
+  ],
+  "wide_rim": "",
+  "tagline": "It provides the confidence and proven performance you need to keep going, ride after ride. As a durable road bike tire designed for everyday use, it combines reliability, puncture resistance, and consistent performance in all conditions. Zaffiro Evo is inspired by WorldTour-proven technology, adapting race-derived performance to real-world roads. Take on rough chip seal, potholes, and unpredictable weather with ease.",
+  "summary": "Whether you're logging base miles or commuting through changing conditions, Zaffiro EVO transforms daily road challenges into smooth, controlled performance. A reliable road bike tire built to last, it proves its value every time the road gets tough."
  }
 }

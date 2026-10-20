@@ -507,29 +507,6 @@ body.cmp-open .ribbon{bottom:96px}
 .brand-empty .lines li{padding:6px 14px;border-radius:999px;background:var(--surface);font-weight:600;font-size:14px}
 .brand-empty .cta{display:flex;justify-content:center;flex-wrap:wrap;gap:12px}
 .list-hero.plain{background:var(--text)}
-.p-img{min-height:0;overflow:hidden;grid-template-rows:minmax(0,1fr);grid-template-columns:minmax(0,1fr)}
-.p-img>img{min-height:0;max-height:100%;max-width:100%;object-fit:contain}
-/* Compare */
-.cmp-toggle{position:absolute;top:10px;right:10px;z-index:3;display:inline-flex;align-items:center;gap:6px;min-height:32px;padding:0 10px;border-radius:999px;background:rgba(255,255,255,.92);border:1px solid var(--line);font-size:12px;font-weight:600;cursor:pointer;user-select:none}
-.cmp-toggle input{width:16px;height:16px;margin:0;accent-color:var(--brand-red)}
-.cmp-toggle:has(input:checked){border-color:var(--brand-red);color:var(--brand-red)}
-.cmp-add{margin-top:10px}
-.cmp-add[aria-pressed="true"]{border-color:var(--brand-red);color:var(--brand-red)}
-.cmp-tray{position:fixed;left:0;right:0;bottom:0;z-index:70;background:#fff;border-top:1px solid var(--line);box-shadow:0 -8px 24px rgba(0,0,0,.08);transform:translateY(110%);transition:transform .25s ease}
-.cmp-tray.on{transform:none}
-.cmp-tray .container{display:flex;align-items:center;gap:12px;padding-top:10px;padding-bottom:10px}
-.cmp-items{display:flex;gap:8px;flex:1;min-width:0;overflow-x:auto;list-style:none;margin:0;padding:0}
-.cmp-items li{position:relative;flex:0 0 auto;width:64px;height:64px;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);display:grid;place-items:center}
-.cmp-items li.empty{border-style:dashed;font-size:11px;color:var(--muted);text-align:center;padding:4px}
-.cmp-items img{max-width:56px;max-height:56px;object-fit:contain;mix-blend-mode:multiply}
-.cmp-items button{position:absolute;top:-8px;right:-8px;width:24px;height:24px;border-radius:50%;border:1px solid var(--line);background:#fff;font-size:14px;line-height:1;display:grid;place-items:center}
-.cmp-actions{display:flex;gap:8px;align-items:center;flex:0 0 auto}
-.cmp-actions .btn{min-height:44px;padding:0 16px;font-size:13px}
-.cmp-actions .btn[aria-disabled="true"]{opacity:.45;pointer-events:none}
-.cmp-clear{border:0;background:none;font-size:13px;text-decoration:underline;color:var(--muted);min-height:44px}
-body.cmp-open .zalo-fab{bottom:96px}
-body.cmp-open .ribbon{bottom:96px}
-@media (max-width:600px){.cmp-items li{width:52px;height:52px}.cmp-items img{max-width:44px;max-height:44px}.cmp-clear{display:none}}
 </style>
 </head>
 <body>
@@ -627,20 +604,22 @@ body.cmp-open .ribbon{bottom:96px}
                     <li><a href="lop-xe.html#road">Road</a></li>
                     <li><a href="lop-xe.html#mtb">MTB</a></li>
                     <li><a href="lop-xe.html#gravel">Gravel</a></li>
-                    <li><a href="lop-xe.html#dirtjump">DirtJump</a></li>
                   </ul>
                   <a class="sub-all" href="lop-xe.html">Xem tất cả lốp xe</a>
                 </div>
               </li>
               <li class="has-fly">
-                <a class="fly-top" href="tubeless.html" aria-expanded="false" aria-controls="fly-tubeless">Tubeless <svg aria-hidden="true"><use href="#i-right"/></svg></a>
+                <a class="fly-top" href="tubeless.html" aria-expanded="false" aria-controls="fly-tubeless">Tubeless &amp; phụ kiện <svg aria-hidden="true"><use href="#i-right"/></svg></a>
                 <div class="fly" id="fly-tubeless">
                   <ul>
                     <li><a href="tubeless.html#sealant">Keo tự vá</a></li>
-                    <li><a href="tubeless.html#air-liner">Air-Liner Light</a></li>
+                    <li><a href="tubeless.html#air-liner">Air-Liner</a></li>
                     <li><a href="tubeless.html#valve">Chân van</a></li>
+                    <li><a href="tubeless.html#rim-tape">Băng keo vành</a></li>
+                    <li><a href="tubeless.html#care">Vệ sinh lốp</a></li>
+                    <li><a href="tubeless.html#other">Săm &amp; phụ kiện khác</a></li>
                   </ul>
-                  <a class="sub-all" href="tubeless.html">Xem tất cả tubeless</a>
+                  <a class="sub-all" href="tubeless.html">Xem tất cả tubeless &amp; phụ kiện</a>
                 </div>
               </li>
               <li><a href="day-cuon-tay-lai.html">Dây cuốn tay lái</a></li>

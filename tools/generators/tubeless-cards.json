@@ -63,5 +63,68 @@
   "imgs": [
    "multiway-valves"
   ]
+ },
+ {
+  "file": "vittoria-air-liner-protect-trail.html",
+  "group": "air-liner",
+  "name": "Air-Liner Protect Trail",
+  "cat": "Air-Liner Protect",
+  "tag": "MTB · Trail",
+  "desc": "29x2.1–2.6 · Run-flat tới 50 km",
+  "imgs": [
+   "air-liner-protect-trail.webp",
+   "air-liner-protect-trail-insert-01_e6908d12-899a-47d3-a5f0-2c79ec1b74f9.png",
+   "air-liner-protect-trail-insert-03.jpg"
+  ]
+ },
+ {
+  "file": "vittoria-tubeless-rim-tape.html",
+  "group": "rim-tape",
+  "name": "Băng keo vành tubeless",
+  "cat": "Băng keo vành",
+  "tag": "Tubeless",
+  "desc": "23 – 32mm · cuộn 9m / 66m",
+  "imgs": [
+   "tubeless-rim-tape-01_1.webp",
+   "tubeless-rim-tape-04_1.webp",
+   "tubeless-rim-tape-03_1.webp"
+  ]
+ },
+ {
+  "file": "vittoria-sidewall-cleaner.html",
+  "group": "care",
+  "name": "Dung dịch vệ sinh thành lốp",
+  "cat": "Vệ sinh lốp",
+  "tag": "Vệ sinh",
+  "desc": "Dùng được cho lốp cotton và nylon",
+  "imgs": [
+   "sidewall-cleaner-01_1.webp",
+   "sidewall-cleaner-03_1.webp",
+   "sidewall-cleaner-04_1.webp"
+  ]
+ },
+ {
+  "file": "vittoria-standard-inner-tube.html",
+  "group": "other",
+  "name": "Săm Standard 700x20/28c",
+  "cat": "Săm",
+  "tag": "Săm butyl",
+  "desc": "700x20/28c · van Presta 48 / 60 / 80mm",
+  "imgs": [
+   "standard-inner-tube.webp",
+   "vittoria-standard-tube-700x20-28c-valve-48-mm.jpg"
+  ]
+ },
+ {
+  "file": "vittoria-bottle-550.html",
+  "group": "other",
+  "name": "Bình nước Vittoria 550ml",
+  "cat": "Bình nước",
+  "tag": "550ml",
+  "desc": "550ml · xám than + đen",
+  "imgs": [
+   "vittoria-bottle.webp",
+   "vittoria-bottle-cage.webp"
+  ]
  }
 ]
