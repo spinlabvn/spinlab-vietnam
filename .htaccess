@@ -1,0 +1,26 @@
+# Đường dẫn gọn cho Hostinger (Apache / LiteSpeed)
+#   spinlab.vn/            -> chuyển tới /trangchu
+#   spinlab.vn/trangchu    -> index.html
+#   spinlab.vn/xe-road     -> xe-road.html
+#   spinlab.vn/xe-road.html -> chuyển (301) tới /xe-road
+Options -MultiViews -Indexes
+DirectoryIndex index.html
+RewriteEngine On
+
+# Không công khai công cụ nội bộ và dữ liệu git
+RewriteRule ^(tools|\.git)(/|$) - [F,L]
+
+# Trang chủ
+RewriteRule ^$ /trangchu [R=301,L]
+RewriteCond %{THE_REQUEST} \s/+index\.html[\s?]
+RewriteRule ^ /trangchu [R=301,L]
+RewriteRule ^trangchu/?$ index.html [L]
+
+# Link cũ .html -> link gọn
+RewriteCond %{THE_REQUEST} \s/+([a-z0-9-]+)\.html[\s?]
+RewriteRule ^ /%1 [R=301,L]
+
+# Link gọn -> file .html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule ^([a-z0-9-]+)/?$ $1.html [L]

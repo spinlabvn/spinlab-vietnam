@@ -184,7 +184,7 @@ def page(L):
     main = f'''<main id="main" class="pdp">
   <div class="container">
     <nav class="crumbs" aria-label="Đường dẫn"><ol>
-      <li><a href="index.html">Trang chủ</a></li><li><a href="index.html#hot">Phụ tùng</a></li><li><a href="lop-xe.html">Lốp xe</a></li>
+      <li><a href="index.html">Trang chủ</a></li><li><a href="phu-tung.html">Phụ tùng</a></li><li><a href="lop-xe.html">Lốp xe</a></li>
       <li><a class="crumb" href="{TL[1]}">{TL[0]}</a></li><li aria-current="page">{E(name)}</li></ol></nav>
     <div class="pdp-top">
       <div class="gallery">

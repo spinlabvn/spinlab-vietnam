@@ -9,9 +9,9 @@ CATS = {
     'dj': ('Dirt Jump', 'xe-mtb.html#dj'),
     'trial': ('Trial', 'xe-trial.html'),
     'gravel': ('Gravel', 'xe-gravel.html'),
-    'city': ('Xe thành phố', 'index.html#hot'),
-    'kids': ('Xe trẻ em', 'index.html#hot'),
-    'leisure': ('Xe địa hình phổ thông', 'index.html#hot'),
+    'city': ('Xe thành phố', 'xe-dap.html'),
+    'kids': ('Xe trẻ em', 'xe-dap.html'),
+    'leisure': ('Xe địa hình phổ thông', 'xe-dap.html'),
 }
 
 VI = {

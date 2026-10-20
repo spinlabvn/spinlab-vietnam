@@ -6,13 +6,15 @@ Website phân phối xe đạp và phụ kiện của **Spinlab Việt Nam**: xe
 
 ## Xem thử trên máy
 
-Ảnh sản phẩm lưu trong thư mục `img/` cần mở qua server thì mới hiện:
+Website dùng đường dẫn gọn (`/trangchu`, `/xe-road`, `/polygon-xtrada-7`…), nên cần mở qua server:
 
 ```bash
-python3 -m http.server 8765 --bind 127.0.0.1
+python3 tools/serve.py
 ```
 
-Rồi mở http://127.0.0.1:8765/index.html
+Rồi mở http://127.0.0.1:8765/trangchu
+
+Trên Hostinger, file `.htaccess` lo việc này: `/` chuyển tới `/trangchu`, `/xe-road` trả về `xe-road.html`, link cũ `…html` tự chuyển sang link gọn, thư mục `tools/` bị chặn truy cập.
 
 ## Cấu trúc
 
@@ -35,4 +37,6 @@ cd tools/generators && python3 brands.py ../.. bikes.json && cd ../..
 python3 tools/build_new_products.py
 python3 tools/apply_prices.py
 python3 tools/build_compare.py
+python3 tools/build_hubs.py
+python3 tools/clean_urls.py      # luôn chạy cuối cùng
 ```

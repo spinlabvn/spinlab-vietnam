@@ -118,6 +118,7 @@ body.cmp-open .ribbon{bottom:96px}
 JS = '''// Compare products: toggles on cards / product page, tray, link to so-sanh.html (max %d)
 (() => {
   const MAX=%d, KEY='spinlab-compare';
+  const norm=h=>{ h=(h||'').split('#')[0].split('?')[0].replace(/^\//,''); if(h===''||h==='trangchu') h='index'; return /\.html$/.test(h)?h:h+'.html'; };
   let mem=[];
   const load=()=>{ try{ return JSON.parse(localStorage.getItem(KEY)||'[]'); }catch(e){ return mem; } };
   const save=l=>{ mem=l; try{ localStorage.setItem(KEY,JSON.stringify(l)); }catch(e){} render(); };
@@ -130,7 +131,7 @@ JS = '''// Compare products: toggles on cards / product page, tray, link to so-s
   if(!home && !compare) document.querySelectorAll('.p-card').forEach(c=>{
     if(c.closest('.related')) return;
     const a=c.querySelector('a.stretch'), box=c.querySelector('.p-img'); if(!a||!box) return;
-    const id=a.getAttribute('href').split('#')[0], img=box.querySelector('img');
+    const id=norm(a.getAttribute('href')), img=box.querySelector('img');
     const lab=document.createElement('label'); lab.className='cmp-toggle';
     lab.innerHTML='<input type="checkbox"> So sánh';
     const inp=lab.querySelector('input'); inp.dataset.cmp=id;
@@ -144,7 +145,7 @@ JS = '''// Compare products: toggles on cards / product page, tray, link to so-s
     buy.after(b); }
   // tray
   const tray=document.createElement('div'); tray.className='cmp-tray'; tray.setAttribute('role','region'); tray.setAttribute('aria-label','Sản phẩm so sánh');
-  tray.innerHTML='<div class="container"><ul class="cmp-items"></ul><div class="cmp-actions"><button type="button" class="cmp-clear">Xoá hết</button><a class="btn btn-primary cmp-go" href="so-sanh.html">So sánh</a></div></div>';
+  tray.innerHTML='<div class="container"><ul class="cmp-items"></ul><div class="cmp-actions"><button type="button" class="cmp-clear">Xoá hết</button><a class="btn btn-primary cmp-go" href="/so-sanh">So sánh</a></div></div>';
   if(!compare) document.body.appendChild(tray);
   tray.querySelector('.cmp-clear').addEventListener('click',()=>save([]));
   function render(){
@@ -156,7 +157,7 @@ JS = '''// Compare products: toggles on cards / product page, tray, link to so-s
       Array.from({length:MAX-l.length},()=>'<li class="empty">Thêm sản phẩm</li>').join('');
     ul.querySelectorAll('[data-rm]').forEach(b=>b.addEventListener('click',()=>save(load().filter(x=>x.id!==b.dataset.rm))));
     const go=tray.querySelector('.cmp-go'); go.textContent='So sánh ('+l.length+')';
-    go.href='so-sanh.html?ids='+encodeURIComponent(l.map(x=>x.id).join(','));
+    go.href='/so-sanh?ids='+l.map(x=>encodeURIComponent(x.id.replace(/\.html$/,''))).join(',');
     go.setAttribute('aria-disabled',l.length<2);
     const on=l.length>0 && !compare; tray.classList.toggle('on',on); document.body.classList.toggle('cmp-open',on);
   }
@@ -197,9 +198,10 @@ PAGE_JS = '''// Compare page: render the table from embedded data
 (() => {
   const DATA = %s;
   const E=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const U=id=>id==='index.html'?'/trangchu':'/'+id.replace(/\.html$/,'');
   const C=window.spinlabCompare;
   const q=new URLSearchParams(location.search).get('ids');
-  if(q){ const l=q.split(',').filter(id=>DATA[id]).slice(0,%d).map(id=>({id,name:DATA[id].name,img:DATA[id].img,price:DATA[id].price})); C.save(l); }
+  if(q){ const l=q.split(',').map(id=>/\.html$/.test(id)?id:id+'.html').filter(id=>DATA[id]).slice(0,%d).map(id=>({id,name:DATA[id].name,img:DATA[id].img,price:DATA[id].price})); C.save(l); }
   const root=document.getElementById('cmp-root'), diff=document.getElementById('cmp-diff');
   const draw=()=>{
     const items=C.load().map(x=>DATA[x.id]).filter(Boolean);
@@ -209,7 +211,7 @@ PAGE_JS = '''// Compare page: render the table from embedded data
     items.forEach(p=>p.specs.forEach(([g,k])=>{ if(!rows[g]){ rows[g]=[]; groups.push(g); } if(!rows[g].includes(k)) rows[g].push(k); }));
     const val=(p,g,k)=>{ const r=p.specs.find(s=>s[0]===g&&s[1]===k); return r?r[2]:'—'; };
     let h='<div class="cmp-wrap"><table class="cmp-table"><thead><tr><th scope="col"><span class="sr-only">Thông số</span></th>'+
-      items.map(p=>`<th scope="col"><div class="cmp-card"><a class="ci" href="${E(p.id)}"><img src="${E(p.img)}" alt="${E(p.name)}"></a><a class="nm" href="${E(p.id)}">${E(p.name)}</a><span class="pr">${E(p.price)}</span><button type="button" class="rm" data-rm="${E(p.id)}">Bỏ khỏi so sánh</button></div></th>`).join('')+'</tr></thead><tbody>';
+      items.map(p=>`<th scope="col"><div class="cmp-card"><a class="ci" href="${E(U(p.id))}"><img src="${E(p.img)}" alt="${E(p.name)}"></a><a class="nm" href="${E(U(p.id))}">${E(p.name)}</a><span class="pr">${E(p.price)}</span><button type="button" class="rm" data-rm="${E(p.id)}">Bỏ khỏi so sánh</button></div></th>`).join('')+'</tr></thead><tbody>';
     groups.forEach(g=>{ h+=`<tr class="grp"><th scope="rowgroup">${E(g)}</th>${items.map(()=>'<td></td>').join('')}</tr>`;
       rows[g].forEach(k=>{ const vs=items.map(p=>val(p,g,k)); const same=vs.every(v=>v===vs[0]);
         h+=`<tr class="${same?'same':''}"><th scope="row">${E(k)}</th>${vs.map(v=>`<td>${E(v)}</td>`).join('')}</tr>`; }); });

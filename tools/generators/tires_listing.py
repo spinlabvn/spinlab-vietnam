@@ -11,7 +11,7 @@ grid_a = page.index('<div class="grid" id="tire-grid">') + len('<div class="grid
 grid_z = page.index('\n    </div>', grid_a)
 old = page[grid_a:grid_z]
 # Corsa PRO has a hand-built page; keep its card
-corsa = re.search(r'<article class="p-card"(?:(?!</article>).)*href="corsa-pro\.html".*?</article>', old, re.S).group(0)
+corsa = re.search(r'<article class="p-card"(?:(?!</article>).)*href="/?corsa-pro(?:\.html)?".*?</article>', old, re.S).group(0)
 cards = [corsa] + [c for f in ('road', 'mtb', 'dirtjump') for c in re.findall(r'<article class="p-card".*?</article>', rd(os.path.join(J, f'{f}-cards.html')), re.S)]
 cards += re.findall(r'<article class="p-card".*?</article>', rd(os.path.join(J, 'terreno-cards.html')), re.S)
 page = page[:grid_a] + '\n' + '\n'.join(cards) + page[grid_z:]

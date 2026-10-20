@@ -38,7 +38,7 @@ tabs = ''.join(f'<a role="tab" href="#{k}" data-type="{k}" aria-selected="{"true
 main = f'''<main id="main" class="pdp listing">
   <div class="container">
     <nav class="crumbs" aria-label="Đường dẫn"><ol>
-      <li><a href="index.html">Trang chủ</a></li><li><a href="index.html#hot">Phụ tùng</a></li><li aria-current="page">Lốp xe</li></ol></nav>
+      <li><a href="index.html">Trang chủ</a></li><li><a href="phu-tung.html">Phụ tùng</a></li><li aria-current="page">Lốp xe</li></ol></nav>
   </div>
 
   <section class="list-hero">

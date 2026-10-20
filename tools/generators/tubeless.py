@@ -217,7 +217,7 @@ def page(p, shell):
     main = f'''<main id="main" class="pdp">
   <div class="container">
     <nav class="crumbs" aria-label="Đường dẫn"><ol>
-      <li><a href="index.html">Trang chủ</a></li><li><a href="index.html#hot">Phụ tùng</a></li><li><a href="tubeless.html">Tubeless</a></li>
+      <li><a href="index.html">Trang chủ</a></li><li><a href="phu-tung.html">Phụ tùng</a></li><li><a href="tubeless.html">Tubeless</a></li>
       <li><a class="crumb" href="tubeless.html#{p["group"]}">{E(p["cat"])}</a></li><li aria-current="page">{E(p["name"])}</li></ol></nav>
     <div class="pdp-top">
       <div class="gallery">
@@ -292,7 +292,7 @@ for g, t, s_ in GROUPS:
     secs += (f'  <section class="brand-cat" id="{g}"><div class="container"><h2 class="bc-title">{E(t)}</h2><p class="bc-sub">{E(s_)}</p>'
              f'<div class="grid">{cs}</div></div></section>\n')
 main = f'''<main id="main" class="pdp listing">
-  <div class="container"><nav class="crumbs" aria-label="Đường dẫn"><ol><li><a href="index.html">Trang chủ</a></li><li><a href="index.html#hot">Phụ tùng</a></li><li aria-current="page">Tubeless &amp; phụ kiện</li></ol></nav></div>
+  <div class="container"><nav class="crumbs" aria-label="Đường dẫn"><ol><li><a href="index.html">Trang chủ</a></li><li><a href="phu-tung.html">Phụ tùng</a></li><li aria-current="page">Tubeless &amp; phụ kiện</li></ol></nav></div>
   <section class="list-hero">
     <img src="{img("air-liner-light-road", 1920)}" alt="Miếng lót tubeless Vittoria Air-Liner Light Road">
     <div class="container"><div class="lh-copy"><span class="kicker">Vittoria</span><h1>Tubeless &amp; phụ kiện</h1><p>Keo tự vá, chân van, băng keo vành, miếng lót Air-Liner, săm và phụ kiện chính hãng Vittoria.</p></div></div>

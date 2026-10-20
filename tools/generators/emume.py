@@ -157,7 +157,7 @@ def page(L, shell):
     main = f'''<main id="main" class="pdp">
   <div class="container">
     <nav class="crumbs" aria-label="Đường dẫn"><ol>
-      <li><a href="index.html">Trang chủ</a></li><li><a href="index.html#hot">Phụ tùng</a></li><li><a href="day-cuon-tay-lai.html">Dây cuốn tay lái</a></li>
+      <li><a href="index.html">Trang chủ</a></li><li><a href="phu-tung.html">Phụ tùng</a></li><li><a href="day-cuon-tay-lai.html">Dây cuốn tay lái</a></li>
       <li><a class="crumb" href="day-cuon-tay-lai.html#{L["group"]}">{E(L["series"])}</a></li><li aria-current="page">{E(L["name"])}</li></ol></nav>
     <div class="pdp-top">
       <div class="gallery">
@@ -246,7 +246,7 @@ secs = ''.join(f'  <section class="brand-cat" id="{g}"><div class="container"><h
 nav = ('  <nav class="brand-nav" aria-label="Dòng sản phẩm"><div class="container"><ul>' +
        ''.join(f'<li><a href="#{g}">{E(t)}<small>{sum(L["group"] == g for L in LINES)}</small></a></li>' for g, t, s_ in GROUPS) + '</ul></div></nav>')
 main = f'''<main id="main" class="pdp listing">
-  <div class="container"><nav class="crumbs" aria-label="Đường dẫn"><ol><li><a href="index.html">Trang chủ</a></li><li><a href="index.html#hot">Phụ tùng</a></li><li aria-current="page">Dây cuốn tay lái</li></ol></nav></div>
+  <div class="container"><nav class="crumbs" aria-label="Đường dẫn"><ol><li><a href="index.html">Trang chủ</a></li><li><a href="phu-tung.html">Phụ tùng</a></li><li aria-current="page">Dây cuốn tay lái</li></ol></nav></div>
   <section class="list-hero plain">
     <div class="container"><div class="lh-copy"><span class="kicker">Emume</span><h1>Dây cuốn tay lái</h1><p>Dây cuốn ghi đông và phụ kiện Emume chính hãng — Basic, Bastet, Galaxy, Anubis Feather. Phân phối bởi Spinlab.</p></div></div>
   </section>

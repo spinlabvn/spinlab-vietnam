@@ -11,7 +11,9 @@ Chạy sau mỗi lần thêm / gỡ sản phẩm (sau khi các trang thương hi
     python3 tools/build_new_products.py
 Tuỳ chọn: --home N (số sản phẩm trên trang chủ, mặc định 8), --page N (mặc định 24).
 """
-import argparse, glob, html, json, os, re
+import argparse, glob, html, json, os, re, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from clean_urls import norm  # noqa: E402
 from datetime import datetime
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -33,8 +35,8 @@ def scan():
     for f in sorted(glob.glob(os.path.join(ROOT, 'thuong-hieu-*.html'))):
         for a in re.findall(r'<article class="p-card"[^>]*>.*?</article>', open(f, encoding='utf-8').read(), re.S):
             m = re.search(r'class="stretch" href="([^"]+)"', a)
-            if m and m.group(1) not in cards:
-                cards[m.group(1)] = a
+            if m and norm(m.group(1)) not in cards:
+                cards[norm(m.group(1))] = a
     return cards
 
 
@@ -82,7 +84,7 @@ def main():
     grid = ''.join('\n        ' + clean(cards[p['href']]) for p in newest[:args.home])
     idx = idx[:a] + grid + idx[z:]
     idx = re.sub(r'(<section class="section" id="new"[^>]*>\s*<div class="container">\s*)<div class="sec-head"><h2>Sản phẩm mới</h2>(?:<a[^>]*>[^<]*</a>)?</div>',
-                 r'\1<div class="sec-head"><h2>Sản phẩm mới</h2><a class="see-all" href="san-pham-moi.html">Xem tất cả</a></div>', idx, 1)
+                 r'\1<div class="sec-head"><h2>Sản phẩm mới</h2><a class="see-all" href="/san-pham-moi">Xem tất cả</a></div>', idx, 1)
     write('index.html', idx)
 
     # full "new products" page, built on the brand-page shell
@@ -93,7 +95,7 @@ def main():
         c = clean(cards[p['href']]).replace('<span class="p-price">', f'<span class="p-date">Đăng ngày {d}</span><span class="p-price">', 1)
         items += c
     main_html = f'''<main id="main" class="pdp listing">
-  <div class="container"><nav class="crumbs" aria-label="Đường dẫn"><ol><li><a href="index.html">Trang chủ</a></li><li aria-current="page">Sản phẩm mới</li></ol></nav></div>
+  <div class="container"><nav class="crumbs" aria-label="Đường dẫn"><ol><li><a href="/trangchu">Trang chủ</a></li><li aria-current="page">Sản phẩm mới</li></ol></nav></div>
   <section class="list-hero plain">
     <div class="container"><div class="lh-copy"><span class="kicker">Spinlab</span><h1>Sản phẩm mới</h1><p>{len(newest[:args.page])} sản phẩm đăng gần đây nhất — xe đạp Polygon, lốp và phụ kiện Vittoria chính hãng.</p></div></div>
   </section>

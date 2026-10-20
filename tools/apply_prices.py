@@ -11,7 +11,9 @@ import glob, json, os, re, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, 'tools', 'generators'))
+sys.path.insert(0, os.path.join(ROOT, 'tools'))
 import stock  # noqa: E402
+from clean_urls import norm  # noqa: E402
 
 R = lambda f: open(os.path.join(ROOT, f), encoding='utf-8').read()
 W = lambda f, s: open(os.path.join(ROOT, f), 'w', encoding='utf-8').write(s)
@@ -49,7 +51,7 @@ n = 0
 card = re.compile(r'(<article class="p-card"[^>]*>(?:(?!</article>).)*?class="stretch" href="([^"#]+)"(?:(?!</article>).)*?<span class="p-price">)([^<]*)(</span>)', re.S)
 for f in pages:
     s = R(f)
-    t = card.sub(lambda m: m.group(1) + labels.get(m.group(2), m.group(3)) + m.group(4), s)
+    t = card.sub(lambda m: m.group(1) + labels.get(norm(m.group(2)), m.group(3)) + m.group(4), s)
     if t != s:
         W(f, t)
         n += 1

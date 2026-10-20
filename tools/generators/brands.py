@@ -43,7 +43,7 @@ def shell(src, title, desc, crumb, hero, body):
         p = p.replace('</style>', rg + '\n</style>', 1)
     main = (f'<main id="main" class="pdp listing">\n'
             f'  <div class="container"><nav class="crumbs" aria-label="Đường dẫn"><ol><li><a href="index.html">Trang chủ</a></li>'
-            f'<li><a href="index.html#brands">Thương hiệu</a></li><li aria-current="page">{E(crumb)}</li></ol></nav></div>\n'
+            f'<li><a href="thuong-hieu.html">Thương hiệu</a></li><li aria-current="page">{E(crumb)}</li></ol></nav></div>\n'
             f'{hero}\n{body}\n</main>')
     p = re.sub(r'<main id="main".*?</main>', lambda m: main, p, 1, flags=re.S)
     # listing-page scripts (tabs / tire filter) are not needed on brand pages

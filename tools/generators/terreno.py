@@ -153,7 +153,7 @@ def page(P):
     main = f'''<main id="main" class="pdp">
   <div class="container">
     <nav class="crumbs" aria-label="Đường dẫn"><ol>
-      <li><a href="index.html">Trang chủ</a></li><li><a href="index.html#hot">Phụ tùng</a></li><li><a href="lop-xe.html">Lốp xe</a></li>
+      <li><a href="index.html">Trang chủ</a></li><li><a href="phu-tung.html">Phụ tùng</a></li><li><a href="lop-xe.html">Lốp xe</a></li>
       <li><a class="crumb" href="lop-xe.html#gravel">Gravel</a></li><li aria-current="page">{E(P["short"])}</li></ol></nav>
     <div class="pdp-top">
       <div class="gallery">

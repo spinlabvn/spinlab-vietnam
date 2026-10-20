@@ -159,7 +159,7 @@ def page(slug):
     main = f'''<main id="main" class="pdp">
   <div class="container">
     <nav class="crumbs" aria-label="Đường dẫn"><ol>
-      <li><a href="index.html">Trang chủ</a></li><li><a href="index.html#hot">Xe đạp</a></li>
+      <li><a href="index.html">Trang chủ</a></li><li><a href="xe-dap.html">Xe đạp</a></li>
       <li><a href="{cat_href}">{E(cat_label)}</a></li><li aria-current="page">{E(name)}</li></ol></nav>
 
     <div class="pdp-top">
