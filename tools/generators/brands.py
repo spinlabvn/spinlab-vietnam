@@ -173,7 +173,7 @@ for f, name, kind, text, lines in EMPTY:
             f'<p>Spinlab đang cập nhật danh sách sản phẩm {E(name)} lên website. Liên hệ để được tư vấn và báo hàng có sẵn.</p>'
             '<ul class="lines">' + ''.join(f'<li>{E(l)}</li>' for l in lines) + '</ul>'
             '<div class="cta"><a class="btn btn-primary" href="tel:0399337533">Gọi 0399 337 533</a>'
-            '<a class="btn btn-zalo" href="https://zalo.me/0900000000" target="_blank" rel="noopener">Chat Zalo</a></div></div></div>')
+            '<a class="btn btn-zalo" href="https://zalo.me/0399337533" target="_blank" rel="noopener">Chat Zalo</a></div></div></div>')
     out = shell('xe-road.html', f'{name} — {kind} — Spinlab', f'{name} chính hãng tại Spinlab. {text}', name,
                 hero('', '', 'Thương hiệu', name, text), body)
     open(os.path.join(D, f), 'w', encoding='utf-8').write(out)

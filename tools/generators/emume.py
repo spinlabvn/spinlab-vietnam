@@ -9,7 +9,10 @@ D = sys.argv[1]
 SRC = sys.argv[2] if len(sys.argv) > 2 else None
 OUT = os.path.join(D, 'img', 'emume')
 IMG = 'img/emume/'
-PRICE = '980.000₫'   # demo price requested by Spinlab
+PRICE = '980.000₫'   # default demo price requested by Spinlab
+# retail prices set by Spinlab (2026-10-20), by product group
+GROUP_PRICE = {'basic': '550.000₫', 'bastet': '680.000₫', 'galaxy': '880.000₫'}
+price = lambda L: GROUP_PRICE.get(L['group'], PRICE)
 ZALO = 'https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg'
 
 # crop = fraction of height kept from the top (removes the printed Chinese colour label at the bottom)
@@ -134,7 +137,7 @@ def card(L):
     first = img_name(L, L['variants'][0][0])
     return (f'<article class="p-card" data-type="{L["group"]}"><div class="p-img"><img src="{first}" alt="Emume {E(L["name"])}" loading="lazy"></div>'
             f'<div class="p-body"><span class="p-brand">Emume · {E(L["series"])}</span><h3 class="p-name"><a class="stretch" href="{L["file"]}">{E(L["name"])}</a></h3>'
-            f'<p class="p-desc">{E(L["desc"])}</p><span class="p-price">{PRICE}</span></div></article>')
+            f'<p class="p-desc">{E(L["desc"])}</p><span class="p-price">{price(L)}</span></div></article>')
 
 
 def page(L, shell):
@@ -166,9 +169,9 @@ def page(L, shell):
         <h1>{E(L["name"])}</h1>
         <p class="tagline">{E(L["headline"])}</p>
         {pick}
-        <div class="price-row"><span class="label">Giá bán lẻ</span><span class="p-price big">{PRICE}</span></div>
+        <div class="price-row"><span class="label">Giá bán lẻ</span><span class="p-price big">{price(L)}</span></div>
         <div class="buy-ctas">
-          <a class="btn btn-zalo outline" href="https://zalo.me/0900000000" target="_blank" rel="noopener"><img src="{ZALO}" alt="" width="22" height="22">Chat Zalo</a>
+          <a class="btn btn-zalo outline" href="https://zalo.me/0399337533" target="_blank" rel="noopener"><img src="{ZALO}" alt="" width="22" height="22">Chat Zalo</a>
           <a class="btn btn-outline" href="tel:0399337533">Gọi 0399 337 533</a>
         </div>
         <ul class="assure">

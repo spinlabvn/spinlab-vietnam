@@ -62,7 +62,7 @@ main = f'''<main id="main" class="pdp listing">
     <section class="pdp-sec">
       <div class="help">
         <div><h2>Chưa biết chọn lốp nào?</h2><p>Gửi cho Spinlab loại xe, cỡ vành và cung đường bạn hay đi — chúng tôi sẽ tư vấn mẫu lốp và kích thước phù hợp.</p></div>
-        <div class="actions"><a class="btn btn-yellow" href="tel:0399337533">Gọi 0399 337 533</a><a class="btn btn-zalo" href="https://zalo.me/0900000000" target="_blank" rel="noopener"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="" width="22" height="22">Chat Zalo</a></div>
+        <div class="actions"><a class="btn btn-yellow" href="tel:0399337533">Gọi 0399 337 533</a><a class="btn btn-zalo" href="https://zalo.me/0399337533" target="_blank" rel="noopener"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="" width="22" height="22">Chat Zalo</a></div>
       </div>
     </section>
   </div>

@@ -144,7 +144,7 @@ def page(p, shell):
         <fieldset class="sizes"><legend>{E(p["opt"])} <span class="size-meta" aria-live="polite">Mã <span id="sz-sku">{p["rows"][0][-1]}</span></span></legend><div class="size-opts" id="size-opts">{opts}</div></fieldset>
         <div class="price-row"><span class="label">Giá bán lẻ</span><span class="p-price big">{price(p)}</span></div>
         <div class="buy-ctas">
-          <a class="btn btn-zalo outline" href="https://zalo.me/0900000000" target="_blank" rel="noopener"><img src="{ZALO}" alt="" width="22" height="22">Chat Zalo</a>
+          <a class="btn btn-zalo outline" href="https://zalo.me/0399337533" target="_blank" rel="noopener"><img src="{ZALO}" alt="" width="22" height="22">Chat Zalo</a>
           <a class="btn btn-outline" href="tel:0399337533">Gọi 0399 337 533</a>
         </div>
         <ul class="assure">
