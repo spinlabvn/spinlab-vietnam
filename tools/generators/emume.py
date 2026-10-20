@@ -42,7 +42,7 @@ LINES = [
                 ('Họa tiết dệt nổi', 'Bề mặt có vân giúp bám tay tốt khi đổ đèo và nước rút.'),
                 ('Dày 2.8mm', 'Cân bằng giữa cảm giác lái trực tiếp và độ êm.'),
                 ('Phối màu chuyển sắc', 'Nhiều mẫu chuyển màu ở phần đầu ghi đông, nổi bật trên xe.')]),
- dict(file='emume-bastet-ra.html', group='bastet', name='Bastet RA đổi màu', series='Bastet', crop=None,
+ dict(hidden=True, file='emume-bastet-ra.html', group='bastet', name='Bastet RA đổi màu', series='Bastet', crop=None,
       headline='Dây cuốn đổi màu dưới ánh nắng', desc='2 phối màu · đổi màu ngoài trời',
       intro='Phiên bản Gradient RA của dòng Bastet: họa tiết đổi màu khi ra ngoài trời dưới ánh nắng và trở lại màu gốc khi vào trong nhà. Dày 3mm, nặng 103g mỗi cặp (đã gồm nút bịt ghi đông).',
       spec=[('Kích thước', '215 x 3 cm'), ('Độ dày', '3 mm'), ('Trọng lượng (cặp)', '103 g (gồm nút bịt)'), ('Chất liệu', 'Silicone + EVA')],
@@ -50,7 +50,7 @@ LINES = [
       features=[('Đổi màu dưới nắng', 'Trong nhà giữ màu gốc, ra ngoài trời họa tiết chuyển màu.'),
                 ('Họa tiết chuyển sắc', 'Hiệu ứng gradient nổi bật trên ghi đông.'),
                 ('Kèm nút bịt', 'Trọng lượng 103g đã bao gồm nút bịt ghi đông.')]),
- dict(file='emume-bastet-tricolor.html', group='bastet', name='Bastet Tricolor', series='Bastet', crop=None,
+ dict(hidden=True, file='emume-bastet-tricolor.html', group='bastet', name='Bastet Tricolor', series='Bastet', crop=None,
       headline='Ba màu: nền, logo và họa tiết', desc='9 phối màu · 2.8mm · 93,5g',
       intro='Bastet Tricolor phối ba màu riêng biệt cho màu nền, màu logo EMUME và màu họa tiết — dễ chọn đúng tông với khung xe. Nhẹ 93,5g mỗi cặp, dày 2.8mm.',
       spec=[('Kích thước', '215 x 3 cm'), ('Độ dày', '2.8 mm'), ('Trọng lượng (cặp)', '93.5 g'), ('Chất liệu', 'Silicone + EVA')],
@@ -62,7 +62,7 @@ LINES = [
       features=[('Phối ba màu', 'Màu nền, màu logo và màu họa tiết riêng biệt.'),
                 ('Siêu nhẹ 93,5g', 'Cùng chất liệu và trọng lượng với dòng Bastet.'),
                 ('Kèm băng kết thúc & nút bịt', 'Hộp có băng dán kết thúc và cặp nút bịt logo Emume.')]),
- dict(file='emume-bastet-ultra-graphic.html', group='bastet', name='Bastet Ultra Graphic', series='Bastet', crop=None,
+ dict(hidden=True, file='emume-bastet-ultra-graphic.html', group='bastet', name='Bastet Ultra Graphic', series='Bastet', crop=None,
       headline='Họa tiết in đồ họa toàn thân', desc='2 mẫu · 2.8mm · 106g',
       intro='Bastet Ultra Graphic in đồ họa phủ kín cuộn dây, tạo điểm nhấn mạnh trên ghi đông. Dày 2.8mm, nặng 106g mỗi cặp.',
       spec=[('Kích thước', '215 x 3 cm'), ('Độ dày', '2.8 mm'), ('Trọng lượng (cặp)', '106 g'), ('Chất liệu', 'Silicone + EVA')],
@@ -106,7 +106,7 @@ LINES = [
       features=[('In 3D siêu nhẹ', 'Chỉ 4g, tối ưu cho xe đua.'), ('Họa tiết sao sáu cánh', 'Thiết kế độc đáo cho đầu ghi đông.')]),
 ]
 GROUPS = [('basic', 'Basic', 'Dây cuốn đục lỗ cơ bản, 24 phối màu.'),
-          ('bastet', 'Bastet', 'Dòng dây cuốn nhẹ 93,5g: Bastet, Bastet RA đổi màu, Tricolor và Ultra Graphic.'),
+          ('bastet', 'Bastet', 'Dòng dây cuốn nhẹ 93,5g, 12 phối màu.'),
           ('galaxy', 'Galaxy', 'Dây cuốn ánh nhũ dải ngân hà, 5 màu.'),
           ('anubis', 'Anubis Feather', 'Dây cuốn siêu nhẹ 42g.'),
           ('accessory', 'Phụ kiện', 'Băng keo kết thúc và nút bịt ghi đông titan.')]
@@ -228,6 +228,9 @@ def page(L, shell):
     s = s.replace('</style>', css + '</style>', 1)
     return s
 
+
+ALL_LINES = list(LINES)
+LINES[:] = [L for L in LINES if not L.get('hidden')]   # hidden lines (hidden=True) are kept here but not published
 
 if SRC:
     prepare_images()
