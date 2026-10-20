@@ -87,10 +87,10 @@ LINES = [
       terrain=['Sỏi to, đất rời', 'Đá, gồ ghề', 'Đua XC'],
       versions=[('barzo-xc-race', 'XC Race', 'Theo Vittoria, cấu trúc XC Race mới nhanh hơn 20%, bám hơn 8%, chống thủng tốt hơn 44% và êm hơn 9%.')]),
 
- dict(type='dirtjump', file='vittoria-tattoo.html', name='Tattoo', cat='BMX · Dirt Jump · Street', headline='Bám dính trên mọi bề mặt',
+ dict(type='dirtjump', file='vittoria-tattoo.html', name='Tattoo', cat='Dirt Jump · Street', headline='Bám dính trên mọi bề mặt',
       intro='Mặt gai siêu mịn như giũa kim cương cùng đặc tính mềm, bám của công nghệ Vittoria giúp Tattoo tăng độ bám, khả năng kiểm soát và độ bền cho mọi buổi chơi — pump track, freestyle park, ramp hay đường phố. Gai phủ kín từ tanh này sang tanh kia, bảo vệ lốp trên mọi bề mặt và luôn bám tốt khi lướt trên rail hay ramp.',
       terrain=['Dirt jump', 'Pump track', 'Street / Park'],
-      versions=[('tattoo', 'Tattoo BMX', 'Có 3 cỡ: 20x2.4 cho xe BMX, 26x2.3 và 29x2.3 cho xe dirt jump / street.')]),
+      versions=[('tattoo', 'Tattoo BMX', 'Cỡ 26x2.3 cho xe dirt jump / street.')]),
 ]
 
 
@@ -153,7 +153,7 @@ FAQ_ROAD = [('Nên chọn bản Tubeless-Ready hay dùng săm?', 'Bản Tubeless
             ('Chọn kích thước lốp road thế nào?', 'Chọn theo bề rộng lòng trong của vành và khoảng hở khung xe. Xem cột ETRTO trong Bảng kỹ thuật và liên hệ Spinlab để được tư vấn theo bánh xe bạn đang dùng.'),
             ('Có lắp được trên vành hookless không?', 'Tùy kích thước và phiên bản. Liên hệ Spinlab để được kiểm tra khả năng tương thích với vành của bạn trước khi lắp.')]
 
-FAQ_DJ = [('Chọn cỡ lốp nào?', 'Cỡ 20x2.4 dành cho xe BMX; 26x2.3 dành cho xe dirt jump / street bánh 26 inch; 29x2.3 cho xe bánh 29 inch. Liên hệ Spinlab nếu bạn chưa chắc cỡ bánh xe của mình.'),
+FAQ_DJ = [('Chọn cỡ lốp nào?', 'Spinlab hiện có cỡ 26x2.3 cho xe dirt jump / street bánh 26 inch. Liên hệ Spinlab nếu bạn chưa chắc cỡ bánh xe của mình.'),
           ('Nên bơm áp suất bao nhiêu?', 'Áp suất phụ thuộc cân nặng, kiểu chơi (park, street, pump track) và cỡ lốp. Đội kỹ thuật Spinlab sẽ tư vấn mức phù hợp cho bạn.')]
 
 
