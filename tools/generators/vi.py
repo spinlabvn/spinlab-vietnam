@@ -406,3 +406,7 @@ VI['story-curvet-c2-ultra'] = dict(file='story-curvet-c2-ultra', brand='Story', 
 # Old Helios A (A8X, A9X) removed from the website
 for _k in ['helios-a8x', 'helios-a9x-entity-wr5']:
     VI.pop(_k, None)
+
+# Tambora MY27 temporarily hidden from the website (pages kept in tools/removed-pages; delete this block to bring them back)
+for _k in ['tambora-9-axs', 'tambora-7-di2', 'tambora-6', 'tambora-4']:
+    VI.pop(_k, None)
