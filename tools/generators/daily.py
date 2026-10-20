@@ -16,7 +16,7 @@ REGIONS = [
    dict(name='Đại lý Huế', city='Huế', addr='Đang cập nhật địa chỉ', brands=['Vittoria'], sample=True),
    dict(name='Đại lý Nha Trang', city='Khánh Hòa', addr='Đang cập nhật địa chỉ', brands=['Polygon', 'Vittoria'], sample=True)]),
  ('mien-nam', 'Miền Nam', [
-   dict(name='Spinlab Việt Nam', city='TP. Hồ Chí Minh', addr='N1 Điện Biên Phủ, Phường Thạnh Mỹ Tây, TP. Hồ Chí Minh',
+   dict(name='Spinlab Việt Nam', city='TP. Hồ Chí Minh', addr='13 đường 14, khu phố 4, phường An Khánh, TP. Hồ Chí Minh',
         phone='0399337533', brands=['Polygon', 'Vittoria', 'Emume', 'Story Bike'], hq=True),
    dict(name='HP Cycle', city='TP. Hồ Chí Minh', addr='13 đường số 11, KDC Him Lam 6A, xã Bình Hưng, TP. Hồ Chí Minh', phone='0932019931'),
    dict(name='644 Store', city='TP. Hồ Chí Minh', addr='644 Đ. Cách Mạng Tháng Tám, Thủ Dầu Một, TP. Hồ Chí Minh', phone='0943435455'),
@@ -53,7 +53,7 @@ def fmt_phone(n):
 
 def card(d):
     """Real dealers carry their own phone; sample cards fall back to the Spinlab hotline. Hours/brands only shown when known."""
-    tag = '<span class="d-tag main">Văn phòng Spinlab</span>' if d.get('hq') else ('<span class="d-tag">Dữ liệu mẫu</span>' if d.get('sample') else '')
+    tag = '<span class="d-tag main">Showroom</span>' if d.get('hq') else ('<span class="d-tag">Dữ liệu mẫu</span>' if d.get('sample') else '')
     real = not d.get('sample')
     maps = 'https://www.google.com/maps/search/?api=1&query=' + quote(d['addr'] if real else 'Spinlab ' + d['city'])
     tel = d.get('phone', '0399337533')
