@@ -44,7 +44,7 @@ for f in pages:
     s = re.sub(r'(<span class="p-price big">)[^<]*(</span>)', lambda m: m.group(1) + lab + m.group(2), s, 1)
     s = re.sub(r'// Vittoria retail price: follows the selected SKU\n.*?\}\)\(\);\n', '', s, flags=re.S)
     i = s.rindex('</script>\n</body>')
-    s = s[:i] + JS % json.dumps({x: stock.fmt(stock.price(x)) for x in skus}, ensure_ascii=False) + s[i:]
+    s = s[:i] + JS % json.dumps({x: stock.fmt(stock.price(x)) if stock.price(x) else 'Liên hệ' for x in skus}, ensure_ascii=False) + s[i:]
     W(f, s)
 
 n = 0

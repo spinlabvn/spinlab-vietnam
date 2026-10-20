@@ -637,6 +637,27 @@
    "name": "Vittoria Bottle 550ml - anthracite+black",
    "price": 485000,
    "note": ""
+  },
+  {
+   "sku": "11A00458",
+   "segment": "Dirt Jump",
+   "name": "Tattoo 20x2.4 Black",
+   "price": null,
+   "note": "Không có trong nmt.xlsx — hiển thị theo yêu cầu Spinlab, chưa có giá (hiện \"Liên hệ\")"
+  },
+  {
+   "sku": "11A00457",
+   "segment": "Dirt Jump",
+   "name": "Tattoo 26x2.3 Black",
+   "price": null,
+   "note": "Không có trong nmt.xlsx — hiển thị theo yêu cầu Spinlab, chưa có giá (hiện \"Liên hệ\")"
+  },
+  {
+   "sku": "11A00456",
+   "segment": "Dirt Jump",
+   "name": "Tattoo 29x2.3 Black",
+   "price": null,
+   "note": "Không có trong nmt.xlsx — hiển thị theo yêu cầu Spinlab, chưa có giá (hiện \"Liên hệ\")"
   }
  ]
 }

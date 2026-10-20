@@ -16,7 +16,9 @@ cards = [corsa] + [c for f in ('road', 'mtb', 'dirtjump') for c in re.findall(r'
 cards += re.findall(r'<article class="p-card".*?</article>', rd(os.path.join(J, 'terreno-cards.html')), re.S)
 page = page[:grid_a] + '\n' + '\n'.join(cards) + page[grid_z:]
 page = page.replace('<a role="tab" href="xe-mtb.html" data-type="mtb"', '<a role="tab" href="#mtb" data-type="mtb"')
-if not any('data-type="dirtjump"' in c for c in cards):   # no DirtJump tire in stock: drop the tab
-    page = re.sub(r'<a role="tab" href="#dirtjump" data-type="dirtjump"[^>]*>DirtJump <span class="count"></span></a>', '', page)
+DJ_TAB = '<a role="tab" href="#dirtjump" data-type="dirtjump" aria-selected="false">DirtJump <span class="count"></span></a>'
+page = page.replace(DJ_TAB, '')
+if any('data-type="dirtjump"' in c for c in cards):   # DirtJump tab only while a DirtJump tire is in stock
+    page = re.sub(r'(<div class="mtb-tabs list-tabs" role="tablist" aria-label="Loại lốp">.*?)(</div>)', lambda m: m.group(1) + DJ_TAB + m.group(2), page, 1, flags=re.S)
 open(os.path.join(D, 'lop-xe.html'), 'w', encoding='utf-8').write(page)
 print('lop-xe.html', len(cards), 'lốp')

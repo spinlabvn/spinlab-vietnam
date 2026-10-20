@@ -2,6 +2,12 @@
  "note": "Ngày đăng sản phẩm — do tools/build_new_products.py quản lý",
  "products": [
   {
+   "href": "vittoria-tattoo.html",
+   "added": "2026-10-20 13:13",
+   "seq": 96,
+   "name": "Tattoo"
+  },
+  {
    "href": "vittoria-tubeless-rim-tape.html",
    "added": "2026-10-20 11:51",
    "seq": 95,

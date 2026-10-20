@@ -111,7 +111,6 @@ CSS = '''/* Compare */
 .cmp-actions .btn[aria-disabled="true"]{opacity:.45;pointer-events:none}
 .cmp-clear{border:0;background:none;font-size:13px;text-decoration:underline;color:var(--muted);min-height:44px}
 body.cmp-open .zalo-fab{bottom:96px}
-body.cmp-open .ribbon{bottom:96px}
 @media (max-width:600px){.cmp-items li{width:52px;height:52px}.cmp-items img{max-width:44px;max-height:44px}.cmp-clear{display:none}}
 '''
 
