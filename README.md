@@ -37,6 +37,7 @@ cd tools/generators && python3 brands.py ../.. bikes.json && cd ../..
 python3 tools/build_new_products.py
 python3 tools/apply_prices.py
 python3 tools/build_compare.py
+python3 tools/card_hover.py
 python3 tools/brand_logos.py
 python3 tools/build_hubs.py
 python3 tools/clean_urls.py      # luôn chạy cuối cùng
