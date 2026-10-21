@@ -271,9 +271,12 @@ svg.i{width:22px;height:22px;flex:none}
 .company{font-style:normal;display:grid;gap:4px;max-width:40ch;line-height:1.5}
 .company strong{color:#fff;font-size:15px;letter-spacing:.02em}
 .footer .social{display:flex;gap:10px;grid-template-columns:none}
-.social a{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:#262626;color:#fff;transition:background-color .2s,color .2s}
-.social a:hover{background:var(--brand-yellow);color:var(--brand-red)}
-.social svg{width:20px;height:20px}
+.social a{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:#262626;color:#fff;transition:transform .2s,filter .2s}
+.social a:hover,.social a:focus-visible{transform:translateY(-2px);filter:brightness(1.1)}
+.social a.fb{background:#1877F2}
+.social a.ig{background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285AEB 90%)}
+.social a.yt{background:#FF0000}
+.social svg{width:22px;height:22px}
 .nl-social{display:flex;align-items:center;gap:6px;margin-top:12px;font-size:14px;font-weight:600}
 .nl-social span{margin-right:4px}
 .nl-social a{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--brand-red);color:var(--brand-red);transition:background-color .2s,color .2s}
@@ -281,7 +284,7 @@ svg.i{width:22px;height:22px;flex:none}
 .nl-social svg{width:20px;height:20px}
 .social a.z,.nl-social a.z{background:none;border:0;padding:0;overflow:hidden}
 .social a.z img,.nl-social a.z img{width:44px;height:44px;border-radius:50%}
-.social a.z:hover img,.nl-social a.z:hover img{opacity:.85}
+.social a.z:hover,.social a.z:focus-visible{filter:none}
 
 /* Zalo */
 .btn-zalo{background:#fff;color:#0068FF}
@@ -637,9 +640,9 @@ body.cmp-open .zalo-fab{bottom:96px}
       <div class="f-about"><a href="/trangchu" class="logo-link" aria-label="Spinlab — Trang chủ"><span class="logo"></span></a><address class="company"><strong>CÔNG TY TNHH SPINLAB VIỆT NAM</strong><span>MST: 0318844446</span><span>N1 Điện Biên Phủ, Phường Thạnh Mỹ Tây, Thành phố Hồ Chí Minh</span></address>
         <h4 style="margin-top:24px">Theo dõi Spinlab</h4>
         <ul class="social">
-          <li><a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Spinlab trên Facebook (mở tab mới)"><svg aria-hidden="true"><use href="#i-facebook"/></svg></a></li>
-          <li><a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Spinlab trên Instagram (mở tab mới)"><svg aria-hidden="true"><use href="#i-instagram"/></svg></a></li>
-          <li><a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="Spinlab trên YouTube (mở tab mới)"><svg aria-hidden="true"><use href="#i-youtube"/></svg></a></li>
+          <li><a class="fb" href="https://www.facebook.com/profile.php?id=61573821032401" target="_blank" rel="noopener" aria-label="Spinlab trên Facebook (mở tab mới)"><svg aria-hidden="true"><use href="#i-facebook"/></svg></a></li>
+          <li><a class="ig" href="https://www.instagram.com/spinlabvn/" target="_blank" rel="noopener" aria-label="Spinlab trên Instagram (mở tab mới)"><svg aria-hidden="true"><use href="#i-instagram"/></svg></a></li>
+          <li><a class="yt" href="https://www.youtube.com/@Spinlabvn" target="_blank" rel="noopener" aria-label="Spinlab trên YouTube (mở tab mới)"><svg aria-hidden="true"><use href="#i-youtube"/></svg></a></li>
           <li><a class="z" href="https://zalo.me/0399337533" target="_blank" rel="noopener" aria-label="Spinlab trên Zalo (mở tab mới)"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="" width="44" height="44"></a></li>
         </ul>
       </div>
