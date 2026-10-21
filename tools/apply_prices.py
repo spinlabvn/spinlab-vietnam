@@ -1,4 +1,6 @@
-"""Vittoria retail prices from Spinlab's price list (data/vittoria-stock.json, via tools/generators/stock.py).
+"""Retail prices.
+Polygon bikes: data/polygon-prices.json (page -> VND); a Polygon bike page not in that file shows "Liên hệ".
+Vittoria: Spinlab's price list (data/vittoria-stock.json, via tools/generators/stock.py).
 
 - Product pages: the price follows the selected size/colour (the page shows the SKU in #sz-sku; a small script
   maps it to that SKU's price). Without JavaScript the page shows the lowest price ("Từ …" when sizes differ).
@@ -47,6 +49,18 @@ for f in pages:
     s = s[:i] + JS % json.dumps({x: stock.fmt(stock.price(x)) if stock.price(x) else 'Liên hệ' for x in skus}, ensure_ascii=False) + s[i:]
     W(f, s)
 
+# Polygon bikes: one retail price per model
+PP = json.load(open(os.path.join(ROOT, 'data', 'polygon-prices.json'), encoding='utf-8'))['prices']
+for f in pages:
+    if not f.startswith('polygon-'):
+        continue
+    s = R(f)
+    if '<span class="p-price big">' not in s:
+        continue
+    lab = stock.fmt(PP[f]) if f in PP else 'Liên hệ'
+    labels[f] = lab
+    W(f, re.sub(r'(<span class="p-price big">)[^<]*(</span>)', lambda m: m.group(1) + lab + m.group(2), s, 1))
+
 n = 0
 card = re.compile(r'(<article class="p-card"[^>]*>(?:(?!</article>).)*?class="stretch" href="([^"#]+)"(?:(?!</article>).)*?<span class="p-price">)([^<]*)(</span>)', re.S)
 for f in pages:
@@ -55,4 +69,4 @@ for f in pages:
     if t != s:
         W(f, t)
         n += 1
-print(f'{len(labels)} trang sản phẩm Vittoria có giá theo mã; cập nhật thẻ giá trên {n} trang')
+print(f'{len(labels)} trang sản phẩm có giá (Vittoria theo mã, Polygon theo mẫu); cập nhật thẻ giá trên {n} trang')
