@@ -473,12 +473,6 @@ tbody tr.on{background:#FFF7D6}
 .cmp-clear{border:0;background:none;font-size:13px;text-decoration:underline;color:var(--muted);min-height:44px}
 body.cmp-open .zalo-fab{bottom:96px}
 @media (max-width:600px){.cmp-items li{width:52px;height:52px}.cmp-items img{max-width:44px;max-height:44px}.cmp-clear{display:none}}
-/* Brand logos */
-.brand-logo{display:block;height:auto;width:min(calc(var(--lh,30px) * var(--wf,5)),calc(100cqi * var(--wf,5) / 6.5))}
-.brand-tile,.brand-menu a,.hub-logo .hi{container-type:inline-size}
-.brand-tile{--lh:30px}
-.brand-menu{--lh:20px}
-.hub-logo{--lh:40px}
 /* Hub pages */
 .hub-grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));margin:24px 0 56px}
 .hub{position:relative;display:flex;flex-direction:column;border:1px solid var(--line);border-radius:var(--radius);background:#fff;overflow:hidden;transition:box-shadow .2s}
@@ -491,6 +485,23 @@ body.cmp-open .zalo-fab{bottom:96px}
 .hub .n{font-size:13px;font-weight:700;color:var(--brand-red)}
 .hub a.stretch::after{content:"";position:absolute;inset:0}
 .hub-logo .hi{aspect-ratio:3/1;background:#fff;border-bottom:1px solid var(--line)}
+.guide{max-width:860px;margin:8px 0 56px}
+.guide h2{font-size:24px;margin:40px 0 8px}
+.guide>p{color:var(--muted);margin:0 0 16px}
+.size-grid{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.size-grid caption small{display:block;font-weight:400;color:var(--muted);font-size:13px}
+.tips{margin:0;padding-left:20px;display:grid;gap:8px}
+.guide .cta,.events .cta{display:flex;flex-wrap:wrap;gap:10px}
+.events{margin:40px 0 56px;padding:40px 24px;border:1px dashed var(--line);border-radius:var(--radius);text-align:center}
+.events h2{margin:0 0 8px;font-size:22px}
+.events p{margin:0 auto 20px;max-width:52ch;color:var(--muted)}
+.events .cta{justify-content:center}
+/* Brand logos */
+.brand-logo{display:block;height:auto;width:min(calc(var(--lh,30px) * var(--wf,5)),calc(100cqi * var(--wf,5) / 6.5))}
+.brand-tile,.brand-menu a,.hub-logo .hi{container-type:inline-size}
+.brand-tile{--lh:30px}
+.brand-menu{--lh:20px}
+.hub-logo{--lh:40px}
 </style>
 </head>
 <body>
@@ -613,6 +624,8 @@ body.cmp-open .zalo-fab{bottom:96px}
             </ul>
           </div>
         </li>
+        <li><a href="/su-kien">Sự kiện</a></li>
+        <li><a href="/huong-dan">Hướng dẫn</a></li>
         <li><a class="sale" href="#">Khuyến mãi</a></li>
       </ul>
     </div>
@@ -640,7 +653,7 @@ body.cmp-open .zalo-fab{bottom:96px}
           <li><a class="z" href="https://zalo.me/0399337533" target="_blank" rel="noopener" aria-label="Spinlab trên Zalo (mở tab mới)"><span class="zt" aria-hidden="true">Zalo</span></a></li>
         </ul>
       </div>
-      <div><h4>Hỗ trợ</h4><ul><li><a href="#">Chính sách bảo hành</a></li><li><a href="#">Giao hàng</a></li><li><a href="#">Hướng dẫn chọn size</a></li><li><a href="#">Câu hỏi thường gặp</a></li></ul></div>
+      <div><h4>Hỗ trợ</h4><ul><li><a href="#">Chính sách bảo hành</a></li><li><a href="#">Giao hàng</a></li><li><a href="/huong-dan#chon-size">Hướng dẫn chọn size</a></li><li><a href="#">Câu hỏi thường gặp</a></li></ul></div>
       <div><h4>Liên hệ</h4><ul><li>Showroom: 13 đường 14, khu phố 4, phường An Khánh, TP. Hồ Chí Minh</li><li><a href="tel:0399337533">0399 337 533</a></li><li><a href="/dai-ly">Hệ thống đại lý</a></li></ul></div>
     </div>
     <div class="f-bottom"><span>© 2026 Công ty TNHH Spinlab Việt Nam. Bảo lưu mọi quyền.</span><span>Chính sách bảo mật · Điều khoản</span></div>
