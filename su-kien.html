@@ -473,28 +473,17 @@ tbody tr.on{background:#FFF7D6}
 .cmp-clear{border:0;background:none;font-size:13px;text-decoration:underline;color:var(--muted);min-height:44px}
 body.cmp-open .zalo-fab{bottom:96px}
 @media (max-width:600px){.cmp-items li{width:52px;height:52px}.cmp-items img{max-width:44px;max-height:44px}.cmp-clear{display:none}}
-/* Card hover image */
-.p-img>img{transition:opacity .3s}
-.p-img>img.alt{position:absolute;inset:0;width:100%;height:100%;max-width:none;max-height:none;padding:12px;box-sizing:border-box;opacity:0;pointer-events:none}
-.p-img.tire>img.alt{padding:12px 14%}
-.p-img.part>img.alt{padding:12px 8%}
-@media (hover:hover){.p-card:hover .p-img>img.alt{opacity:1}.p-card:hover .p-img:has(>img.alt)>img:not(.alt){opacity:0}}
-/* Brand logos */
-.brand-logo{display:block;height:auto;width:min(calc(var(--lh,30px) * var(--wf,5)),calc(100cqi * var(--wf,5) / 6.5))}
-.brand-tile,.brand-menu a,.hub-logo .hi{container-type:inline-size}
-.brand-tile{--lh:30px}
-.brand-menu{--lh:20px}
-.hub-logo{--lh:40px}
 /* Hub pages */
-.hub-grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));margin:24px 0 56px}
+.hub-grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin:24px 0 56px}
 .hub{position:relative;display:flex;flex-direction:column;border:1px solid var(--line);border-radius:var(--radius);background:#fff;overflow:hidden;transition:box-shadow .2s}
 .hub:hover{box-shadow:0 6px 20px rgba(0,0,0,.08)}
-.hub .hi{aspect-ratio:4/3;background:var(--surface);display:grid;place-items:center;padding:16px}
-.hub .hi img{max-width:100%;max-height:100%;object-fit:contain;mix-blend-mode:multiply}
-.hub .hb{padding:14px 16px 16px;display:grid;gap:4px}
+.hub .hi{position:relative;aspect-ratio:4/3;background:var(--surface);display:grid;place-items:center;padding:16px}
+.hub:not(.hub-logo) .hi img{position:absolute;inset:16px;width:calc(100% - 32px);height:calc(100% - 32px);object-fit:contain;mix-blend-mode:multiply;transition:transform .3s}
+.hub:not(.hub-logo):hover .hi img{transform:scale(1.04)}
+.hub .hb{flex:1;padding:14px 16px 16px;display:flex;flex-direction:column;gap:4px}
 .hub h2{margin:0;font-size:20px;font-weight:800;text-transform:uppercase}
 .hub p{margin:0;color:var(--muted);font-size:14px}
-.hub .n{font-size:13px;font-weight:700;color:var(--brand-red)}
+.hub .n{margin-top:auto;padding-top:6px;font-size:13px;font-weight:700;color:var(--brand-red)}
 .hub a.stretch::after{content:"";position:absolute;inset:0}
 .hub-logo .hi{aspect-ratio:3/1;background:#fff;border-bottom:1px solid var(--line)}
 .guide{max-width:860px;margin:8px 0 56px}
@@ -508,6 +497,12 @@ body.cmp-open .zalo-fab{bottom:96px}
 .events h2{margin:0 0 8px;font-size:22px}
 .events p{margin:0 auto 20px;max-width:52ch;color:var(--muted)}
 .events .cta{justify-content:center}
+/* Brand logos */
+.brand-logo{display:block;height:auto;width:min(calc(var(--lh,30px) * var(--wf,5)),calc(100cqi * var(--wf,5) / 6.5))}
+.brand-tile,.brand-menu a,.hub-logo .hi{container-type:inline-size}
+.brand-tile{--lh:30px}
+.brand-menu{--lh:20px}
+.hub-logo{--lh:40px}
 </style>
 </head>
 <body>

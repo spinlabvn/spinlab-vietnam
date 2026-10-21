@@ -13,15 +13,16 @@ count = lambda f: R(f).count('<article class="p-card"') if os.path.exists(os.pat
 first_img = lambda f: (re.search(r'<article class="p-card".*?<img src="([^"]+)"', R(f), re.S) or [None, ''])[1]
 
 CSS = '''/* Hub pages */
-.hub-grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));margin:24px 0 56px}
+.hub-grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin:24px 0 56px}
 .hub{position:relative;display:flex;flex-direction:column;border:1px solid var(--line);border-radius:var(--radius);background:#fff;overflow:hidden;transition:box-shadow .2s}
 .hub:hover{box-shadow:0 6px 20px rgba(0,0,0,.08)}
-.hub .hi{aspect-ratio:4/3;background:var(--surface);display:grid;place-items:center;padding:16px}
-.hub .hi img{max-width:100%;max-height:100%;object-fit:contain;mix-blend-mode:multiply}
-.hub .hb{padding:14px 16px 16px;display:grid;gap:4px}
+.hub .hi{position:relative;aspect-ratio:4/3;background:var(--surface);display:grid;place-items:center;padding:16px}
+.hub:not(.hub-logo) .hi img{position:absolute;inset:16px;width:calc(100% - 32px);height:calc(100% - 32px);object-fit:contain;mix-blend-mode:multiply;transition:transform .3s}
+.hub:not(.hub-logo):hover .hi img{transform:scale(1.04)}
+.hub .hb{flex:1;padding:14px 16px 16px;display:flex;flex-direction:column;gap:4px}
 .hub h2{margin:0;font-size:20px;font-weight:800;text-transform:uppercase}
 .hub p{margin:0;color:var(--muted);font-size:14px}
-.hub .n{font-size:13px;font-weight:700;color:var(--brand-red)}
+.hub .n{margin-top:auto;padding-top:6px;font-size:13px;font-weight:700;color:var(--brand-red)}
 .hub a.stretch::after{content:"";position:absolute;inset:0}
 .hub-logo .hi{aspect-ratio:3/1;background:#fff;border-bottom:1px solid var(--line)}
 .guide{max-width:860px;margin:8px 0 56px}
@@ -62,13 +63,15 @@ def page(fname, title, crumb, kicker, h1, lead, tiles, desc, body=None):
 
 
 im = lambda src, alt: f'<img src="{src}" alt="{alt}" loading="lazy">'
+# square photos cropped to the 4:3 tile so every bike shows at the same size
+HUB_IMG = {'xe-trial.html': 'img/story/continue-yellow-43.jpg'}
 bikes = [('xe-road.html', 'Road', 'Xe đua aero, endurance và xe road nhập môn Polygon.'),
          ('xe-mtb.html', 'MTB', 'Downhill, Enduro, Trail-AM, Cross Country và Dirt Jump.'),
          ('xe-gravel.html', 'Gravel', 'Polygon Path X đa dụng cho phố và đường đất.'),
          ('xe-city.html', 'City - Hybrid', 'Polygon Heist và Path cho đi làm, đi phố.'),
          ('xe-trial.html', 'Trial', 'Xe street trial Story Bike.')]
 page('xe-dap.html', 'Xe đạp', 'Xe đạp', 'Spinlab', 'Xe đạp', 'Xe đạp Polygon và Story Bike chính hãng, phân phối bởi Spinlab.',
-     [tile(f, t, d, count(f), im(first_img(f), f'Xe đạp {t}'), 'mẫu xe') for f, t, d in bikes],
+     [tile(f, t, d, count(f), im(HUB_IMG.get(f) or first_img(f), f'Xe đạp {t}'), 'mẫu xe') for f, t, d in bikes],
      'Xe đạp Polygon và Story Bike chính hãng tại Spinlab: Road, MTB, Gravel, City - Hybrid, Trial.')
 parts = [('lop-xe.html', 'Lốp xe', 'Lốp Vittoria cho road, MTB và gravel.'),
          ('tubeless.html', 'Tubeless & phụ kiện', 'Keo tự vá, chân van, băng keo vành, Air-Liner, săm và phụ kiện.'),
