@@ -272,11 +272,8 @@ svg.i{width:22px;height:22px;flex:none}
 .company{font-style:normal;display:grid;gap:4px;max-width:40ch;line-height:1.5}
 .company strong{color:#fff;font-size:15px;letter-spacing:.02em}
 .footer .social{display:flex;gap:10px;grid-template-columns:none}
-.social a{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:#262626;color:#fff;transition:transform .2s,background .2s}
-.social a:hover,.social a:focus-visible{transform:translateY(-2px)}
-.social a.fb:hover,.social a.fb:focus-visible{background:#1877F2}
-.social a.ig:hover,.social a.ig:focus-visible{background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285AEB 90%)}
-.social a.yt:hover,.social a.yt:focus-visible{background:#FF0000}
+.social a{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:#262626;color:#fff;transition:transform .2s,background-color .2s,color .2s}
+.social a:hover,.social a:focus-visible{transform:translateY(-2px);background:var(--brand-yellow);color:var(--brand-red)}
 .social svg{width:22px;height:22px}
 .nl-social{display:flex;align-items:center;gap:6px;margin-top:12px;font-size:14px;font-weight:600}
 .nl-social span{margin-right:4px}
@@ -285,10 +282,9 @@ svg.i{width:22px;height:22px;flex:none}
 .nl-social svg{width:20px;height:20px}
 .social a.z,.nl-social a.z{background:none;border:0;padding:0;overflow:hidden}
 .social a.z img,.nl-social a.z img{width:44px;height:44px;border-radius:50%}
-.social a.z{position:relative;background:#262626}
-.social a.z .zt{font-size:12px;font-weight:800;letter-spacing:.02em;color:#fff}
-.social a.z img{position:absolute;inset:0;opacity:0;transition:opacity .2s}
-.social a.z:hover img,.social a.z:focus-visible img{opacity:1}
+.social a.z{background:#262626}
+.social a.z:hover,.social a.z:focus-visible{background:var(--brand-yellow)}
+.social a.z .zt{font-size:12px;font-weight:800;letter-spacing:.02em}
 
 /* Zalo */
 .btn-zalo{background:#fff;color:#0068FF}
@@ -670,7 +666,7 @@ body.cmp-open .zalo-fab{bottom:96px}
           <li><a class="fb" href="https://www.facebook.com/profile.php?id=61573821032401" target="_blank" rel="noopener" aria-label="Spinlab trên Facebook (mở tab mới)"><svg aria-hidden="true"><use href="#i-facebook"/></svg></a></li>
           <li><a class="ig" href="https://www.instagram.com/spinlabvn/" target="_blank" rel="noopener" aria-label="Spinlab trên Instagram (mở tab mới)"><svg aria-hidden="true"><use href="#i-instagram"/></svg></a></li>
           <li><a class="yt" href="https://www.youtube.com/@Spinlabvn" target="_blank" rel="noopener" aria-label="Spinlab trên YouTube (mở tab mới)"><svg aria-hidden="true"><use href="#i-youtube"/></svg></a></li>
-          <li><a class="z" href="https://zalo.me/0399337533" target="_blank" rel="noopener" aria-label="Spinlab trên Zalo (mở tab mới)"><span class="zt" aria-hidden="true">Zalo</span><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="" width="44" height="44"></a></li>
+          <li><a class="z" href="https://zalo.me/0399337533" target="_blank" rel="noopener" aria-label="Spinlab trên Zalo (mở tab mới)"><span class="zt" aria-hidden="true">Zalo</span></a></li>
         </ul>
       </div>
       <div><h4>Hỗ trợ</h4><ul><li><a href="#">Chính sách bảo hành</a></li><li><a href="#">Giao hàng</a></li><li><a href="#">Hướng dẫn chọn size</a></li><li><a href="#">Câu hỏi thường gặp</a></li></ul></div>
