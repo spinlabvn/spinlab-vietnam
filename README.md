@@ -35,6 +35,7 @@ Trên Hostinger, file `.htaccess` lo việc này: `/` chuyển tới `/trangchu`
 ```bash
 cd tools/generators && python3 brands.py ../.. bikes.json && cd ../..
 python3 tools/build_new_products.py
+python3 tools/build_articles.py
 python3 tools/apply_prices.py
 python3 tools/build_compare.py
 python3 tools/card_hover.py

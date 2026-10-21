@@ -16,6 +16,9 @@ RewriteCond %{THE_REQUEST} \s/+index\.html[\s?]
 RewriteRule ^ /trangchu [R=301,L]
 RewriteRule ^trangchu/?$ index.html [L]
 
+# Trang đã đổi tên
+RewriteRule ^su-kien/?$ /tin-tuc [R=301,L]
+
 # Link cũ .html -> link gọn
 RewriteCond %{THE_REQUEST} \s/+([a-z0-9-]+)\.html[\s?]
 RewriteRule ^ /%1 [R=301,L]
