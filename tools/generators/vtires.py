@@ -201,7 +201,7 @@ def page(L):
         <div class="price-row"><span class="label">Giá bán lẻ</span><span class="p-price big">{PRICE}</span></div>
         <div class="buy-ctas">
           <a class="btn btn-zalo outline" href="https://zalo.me/0399337533" target="_blank" rel="noopener"><img src="{ZALO}" alt="" width="22" height="22">Chat Zalo</a>
-          <a class="btn btn-outline" href="tel:0399337533">Gọi 0399 337 533</a>
+          <a class="btn btn-yellow" href="tel:0399337533">Gọi 0399 337 533</a>
         </div>
         <ul class="assure">
           <li><svg aria-hidden="true"><use href="#i-shield"/></svg>Hàng chính hãng Vittoria, phân phối bởi Spinlab</li>

@@ -57,7 +57,6 @@ main = f'''<main id="main" class="pdp listing">
     <p class="list-intro" id="list-intro" aria-live="polite">{INTRO["all"]}</p>
     <div class="grid" id="tire-grid">{cards}
     </div>
-    <div class="empty" id="tire-empty" hidden><p><b>Lốp DirtJump đang được cập nhật.</b> Liên hệ Spinlab để được tư vấn mẫu lốp phù hợp.</p><a class="btn btn-outline" href="tel:0399337533">Gọi 0399 337 533</a></div>
 
     <section class="pdp-sec">
       <div class="help">
