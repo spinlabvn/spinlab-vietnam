@@ -454,5 +454,6 @@ VI['path-4'] = dict(file='polygon-path-4', cat='city', series='Path', siblings=P
    intro='Path 4 là bản cao cấp nhất của dòng Path: phuộc carbon nhẹ và êm, bộ truyền động Shimano Tiagra 1x10 tốc độ với đĩa 48T cho tốc độ cao, trục xuyên 12mm, phanh đĩa dầu Shimano MT200 và lốp Vee 700x35c — xe đi phố nhanh, nhẹ cho người thích đạp xa.',
    features=PATH_FEAT)
 
-# Kid bikes removed from the website
-VI.pop('relic20', None)
+# Kid bikes and Cleo removed from the website
+for _k in ['relic20', 'cleo-2']:
+    VI.pop(_k, None)

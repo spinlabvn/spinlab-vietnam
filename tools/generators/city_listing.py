@@ -17,7 +17,6 @@ GROUPS = [
     ('Heist X', 'Hybrid · Khung nhôm AL6 · Phuộc hơi', 'Hybrid cao cấp, trục xuyên và lốp 700x45c.', [('heist-x7', 'Shimano Deore 1x11 · Phuộc hơi')]),
     ('Path', 'City · Khung nhôm ALX · Phuộc cứng', 'Xe đi phố ghi đông phẳng: nhanh như xe road, ngồi thẳng dễ quan sát, có sẵn lỗ bắt baga và chắn bùn.',
      [('path-4', 'Shimano Tiagra 1x10 · Phuộc carbon'), ('path-3', 'Shimano CUES 1x9 · Phanh đĩa dầu'), ('path-2', 'Shimano Altus 1x8')]),
-    ('Cleo', 'Leisure · Khung nhôm · Bánh 27.5"', 'Xe dạo phố và đường đất nhẹ, dễ làm quen.', [('cleo-2', 'Xe dạo phố')]),
 ]
 
 
@@ -40,14 +39,14 @@ main = f'''<main id="main" class="pdp listing">
   <div class="container"><nav class="crumbs" aria-label="Đường dẫn"><ol><li><a href="index.html">Trang chủ</a></li><li><a href="xe-dap.html">Xe đạp</a></li><li aria-current="page">City - Hybrid</li></ol></nav></div>
   <section class="list-hero">
     <img src="https://media.polygonbikes.com/wp-content/uploads/2026/04/23161748/Heist-Feature-1.jpg" alt="Xe đạp Polygon Heist trên đường phố">
-    <div class="container"><div class="lh-copy"><span class="kicker">Polygon City - Hybrid</span><h1>City - Hybrid</h1><p>Heist, Path và Cleo — xe đi phố, đi làm và dạo chơi cuối tuần chính hãng Polygon, phân phối bởi Spinlab.</p></div></div>
+    <div class="container"><div class="lh-copy"><span class="kicker">Polygon City - Hybrid</span><h1>City - Hybrid</h1><p>Heist và Path — xe đi phố, đi làm và dạo chơi cuối tuần chính hãng Polygon, phân phối bởi Spinlab.</p></div></div>
   </section>
   <div class="container">{"".join(sections)}</div>
 </main>'''
 
 p = open(os.path.join(D, 'xe-gravel.html'), encoding='utf-8').read()
 p = re.sub(r'<title>.*?</title>', '<title>Xe đạp City - Hybrid Polygon — Spinlab</title>', p, 1, flags=re.S)
-p = re.sub(r'<meta name="description"[^>]*>', '<meta name="description" content="Xe đạp City - Hybrid Polygon chính hãng tại Spinlab: Heist 2, 5, 7, Heist X7, Path 2, 3, 4 và Cleo 2.">', p, 1)
+p = re.sub(r'<meta name="description"[^>]*>', '<meta name="description" content="Xe đạp City - Hybrid Polygon chính hãng tại Spinlab: Heist 2, 5, 7, Heist X7 và Path 2, 3, 4.">', p, 1)
 p = re.sub(r'<main id="main".*?</main>', lambda m: main, p, 1, flags=re.S)
 p = re.sub(r'\s*<meta name="product-id"[^>]*>', '', p)
 open(os.path.join(D, 'xe-city.html'), 'w', encoding='utf-8').write(p)

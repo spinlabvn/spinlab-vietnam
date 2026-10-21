@@ -53,7 +53,7 @@ im = lambda src, alt: f'<img src="{src}" alt="{alt}" loading="lazy">'
 bikes = [('xe-road.html', 'Road', 'Xe đua aero, endurance và xe road nhập môn Polygon.'),
          ('xe-mtb.html', 'MTB', 'Downhill, Enduro, Trail-AM, Cross Country và Dirt Jump.'),
          ('xe-gravel.html', 'Gravel', 'Polygon Path X đa dụng cho phố và đường đất.'),
-         ('xe-city.html', 'City - Hybrid', 'Polygon Heist, Path và Cleo cho đi làm, đi phố.'),
+         ('xe-city.html', 'City - Hybrid', 'Polygon Heist và Path cho đi làm, đi phố.'),
          ('xe-trial.html', 'Trial', 'Xe street trial Story Bike.')]
 page('xe-dap.html', 'Xe đạp', 'Xe đạp', 'Spinlab', 'Xe đạp', 'Xe đạp Polygon và Story Bike chính hãng, phân phối bởi Spinlab.',
      [tile(f, t, d, count(f), im(first_img(f), f'Xe đạp {t}'), 'mẫu xe') for f, t, d in bikes],

@@ -104,7 +104,7 @@ other = [('gravel', 'Gravel', 'Xe đa địa hình cho đường nhựa lẫn đ
          ('city', 'City - Hybrid', 'Đi làm, đi phố và dạo chơi cuối tuần.', [('heist-7', 'Hybrid · Shimano Deore 1x12'), ('heist-5', 'Hybrid · Shimano CUES 1x'),
                                                                              ('heist-2', 'Hybrid · Shimano Altus 1x8'), ('heist-x7', 'Hybrid · Đi phố'),
                                                                              ('path-4', 'City · Phuộc carbon'), ('path-3', 'City · Shimano CUES 1x9'),
-                                                                             ('path-2', 'City · Shimano Altus 1x8'), ('cleo-2', 'Xe dạo phố')])]
+                                                                             ('path-2', 'City · Shimano Altus 1x8')])]
 for k, t, s, items in other:
     items = [(sl, d) for sl, d in items if sl in VI and sl in B]
     if items:
