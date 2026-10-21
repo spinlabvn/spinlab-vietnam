@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Polygon gravel bikes — Spinlab</title>
-<link rel="alternate" hreflang="vi" href="/xe-gravel">
-<link rel="alternate" hreflang="en" href="/en/xe-gravel">
+<title>Polygon mountain bikes — Spinlab</title>
+<link rel="alternate" hreflang="vi" href="/xe-mtb">
+<link rel="alternate" hreflang="en" href="/en/mountain-bikes">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/img/favicon/icon-192.png">
 <link rel="apple-touch-icon" href="/img/favicon/apple-touch-icon.png">
-<meta name="description" content="Genuine Polygon gravel bikes at Spinlab: the versatile Path X for city streets and dirt roads.">
+<meta name="description" content="Genuine Polygon mountain bikes: Downhill, Enduro, Trail-AM, Cross Country. Distributed by Spinlab.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -205,6 +205,7 @@ svg.i{width:22px;height:22px;flex:none}
 .s-body p{margin:0;font-size:13px;color:var(--muted)}
 .models{list-style:none;margin:4px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
 .models li{font-size:12px;font-weight:600;padding:4px 8px;border-radius:3px;background:var(--surface)}
+.models a{color:var(--brand-red);text-decoration:underline;text-underline-offset:2px}
 .empty{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding:32px;border:1px dashed var(--line);border-radius:var(--radius);background:var(--surface)}
 .empty p{margin:0;max-width:60ch}
 .p-body .models{margin:2px 0 0}
@@ -397,7 +398,6 @@ tbody tr.on{background:#FFF7D6}
 .faq details p{margin:0;padding:0 18px 16px;color:var(--muted);line-height:1.6}
 .related{grid-template-columns:repeat(2,minmax(0,1fr))}
 @media (min-width:1024px){.related{grid-template-columns:repeat(3,minmax(0,1fr))}}
-
 /* Road listing */
 .list-hero{position:relative;min-height:300px;display:flex;align-items:flex-end;color:#fff;overflow:hidden;margin-bottom:8px}
 .list-hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
@@ -412,6 +412,13 @@ tbody tr.on{background:#FFF7D6}
 .rg-head h2{margin:0;font-size:clamp(22px,2.6vw,30px);font-weight:800;text-transform:uppercase}
 .rg-sub{margin:4px 0 0;font-size:13px;font-weight:600;color:var(--brand-red)}
 .rg-desc{margin:0;max-width:52ch;color:var(--muted);font-size:14px}
+/* XC series groups */
+.road-group{padding:40px 0 8px}
+.rg-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:8px 24px;margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.rg-head h2{margin:0;font-size:clamp(22px,2.6vw,30px);font-weight:800;text-transform:uppercase}
+.rg-sub{margin:4px 0 0;font-size:13px;font-weight:600;color:var(--brand-red)}
+.rg-desc{margin:0;max-width:52ch;color:var(--muted);font-size:14px}
+.mtb-panel .road-group:first-of-type{padding-top:16px}
 /* Header in brand yellow (announcement bar removed) */
 .header{background:var(--brand-yellow);border-bottom-color:rgba(0,0,0,.08)}
 .header .nav{background:#fff;border-top-color:rgba(0,0,0,.08)}
@@ -453,6 +460,26 @@ tbody tr.on{background:#FFF7D6}
   .nav .fly a{min-height:42px;font-size:14px}
   .nav .sub-brands{min-width:0;padding:4px 16px 16px}
 }
+/* Brand page */
+.brand-nav{background:#fff;border-bottom:1px solid var(--line)}
+.brand-nav ul{list-style:none;margin:0;padding:12px 0;display:flex;gap:8px;overflow-x:auto;scrollbar-width:none}
+.brand-nav a{display:inline-flex;align-items:center;min-height:40px;padding:0 16px;border:1px solid var(--line);border-radius:999px;font-size:14px;font-weight:600;white-space:nowrap}
+.brand-nav a:hover{border-color:var(--text)}
+.brand-nav small{margin-left:6px;color:var(--muted);font-weight:500}
+.brand-cat{padding:40px 0 8px;scroll-margin-top:150px}
+.brand-cat+.brand-cat{border-top:1px solid var(--line)}
+.bc-title{margin:0 0 4px;font-size:clamp(26px,3.2vw,38px);font-weight:800;text-transform:uppercase;line-height:1.1}
+.bc-sub{margin:0 0 8px;color:var(--muted);font-size:15px}
+.brand-cat .road-group{padding-top:24px}
+.brand-cat .rg-head h3{margin:0;font-size:clamp(18px,2vw,22px);font-weight:800;text-transform:uppercase}
+.brand-cat>.grid{margin-top:20px}
+.brand-empty{margin:40px 0 56px;padding:40px 24px;border:1px dashed var(--line);border-radius:var(--radius);text-align:center}
+.brand-empty h2{margin:0 0 8px;font-size:22px}
+.brand-empty p{margin:0 auto 20px;max-width:52ch;color:var(--muted)}
+.brand-empty .lines{list-style:none;margin:0 0 20px;padding:0;display:flex;justify-content:center;flex-wrap:wrap;gap:8px}
+.brand-empty .lines li{padding:6px 14px;border-radius:999px;background:var(--surface);font-weight:600;font-size:14px}
+.brand-empty .cta{display:flex;justify-content:center;flex-wrap:wrap;gap:12px}
+.list-hero.plain{background:var(--text)}
 .p-img{min-height:0;overflow:hidden;grid-template-rows:minmax(0,1fr);grid-template-columns:minmax(0,1fr)}
 .p-img>img{min-height:0;max-height:100%;max-width:100%;object-fit:contain}
 /* Compare */
@@ -520,16 +547,16 @@ body.cmp-open .zalo-fab{bottom:96px}
   <div class="container">
     <div class="h-main">
       <button class="menu-btn" aria-label="Open menu" aria-expanded="false"><svg class="i" aria-hidden="true"><use href="#i-menu"/></svg></button>
-      <a href="/en/trangchu" aria-label="Spinlab — Home"><span class="logo"></span></a>
+      <a href="/en/home" aria-label="Spinlab — Home"><span class="logo"></span></a>
       <form class="search" role="search" onsubmit="return false">
         <label for="q" class="sr-only">Search products</label>
         <input id="q" type="search" placeholder="Search bikes, tyres, product codes…">
         <button aria-label="Search"><svg aria-hidden="true"><use href="#i-search"/></svg></button>
       </form>
       <div class="h-tools">
-        <a class="tool" href="/en/dai-ly"><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg><span class="t-text">Find a<b>Dealer</b></span><span class="sr-only">Dealer network</span></a>
+        <a class="tool" href="/en/dealers"><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg><span class="t-text">Find a<b>Dealer</b></span><span class="sr-only">Dealer network</span></a>
         <a class="tool" href="tel:0399337533"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg><span class="t-text">Advice<b>0399 337 533</b></span><span class="sr-only">Call for advice</span></a>
-        <span class="lang" role="group" aria-label="Language"><a href="/xe-gravel" lang="vi" hreflang="vi">VI</a><span aria-hidden="true">&nbsp;/&nbsp;</span><a href="/en/xe-gravel" lang="en" hreflang="en" aria-current="true">EN</a></span>
+        <span class="lang" role="group" aria-label="Language"><a href="/xe-mtb" lang="vi" hreflang="vi">VI</a><span aria-hidden="true">&nbsp;/&nbsp;</span><a href="/en/mountain-bikes" lang="en" hreflang="en" aria-current="true">EN</a></span>
       </div>
     </div>
     <div class="m-search">
@@ -547,25 +574,25 @@ body.cmp-open .zalo-fab{bottom:96px}
           <button class="nav-top" aria-expanded="false" aria-controls="sub-bikes">Bikes <svg aria-hidden="true"><use href="#i-down"/></svg></button>
           <div class="sub" id="sub-bikes">
             <ul>
-              <li><a href="/en/xe-road">Road</a></li>
+              <li><a href="/en/road-bikes">Road</a></li>
               <li class="has-fly">
                 <button class="fly-top" aria-expanded="false" aria-controls="fly-mtb">MTB <svg aria-hidden="true"><use href="#i-right"/></svg></button>
                 <div class="fly" id="fly-mtb">
                   <ul>
-                    <li><a href="/en/xe-mtb#dh">Downhill</a></li>
-                    <li><a href="/en/xe-mtb#enduro">Enduro</a></li>
-                    <li><a href="/en/xe-mtb#trail">Trail-AM</a></li>
-                    <li><a href="/en/xe-mtb#xc">Cross Country</a></li>
-                    <li><a href="/en/xe-mtb#dj">Dirt Jump</a></li>
+                    <li><a href="/en/mountain-bikes#dh">Downhill</a></li>
+                    <li><a href="/en/mountain-bikes#enduro">Enduro</a></li>
+                    <li><a href="/en/mountain-bikes#trail">Trail-AM</a></li>
+                    <li><a href="/en/mountain-bikes#xc">Cross Country</a></li>
+                    <li><a href="/en/mountain-bikes#dj">Dirt Jump</a></li>
                   </ul>
-                  <a class="sub-all" href="/en/xe-mtb">View all mountain bikes</a>
+                  <a class="sub-all" href="/en/mountain-bikes">View all mountain bikes</a>
                 </div>
               </li>
-              <li><a href="/en/xe-gravel">Gravel</a></li>
-              <li><a href="/en/xe-city">City - Hybrid</a></li>
-              <li><a href="/en/xe-trial">Trial</a></li>
+              <li><a href="/en/gravel-bikes">Gravel</a></li>
+              <li><a href="/en/city-hybrid-bikes">City - Hybrid</a></li>
+              <li><a href="/en/trial-bikes">Trial</a></li>
             </ul>
-            <a class="sub-all" href="/en/xe-dap">View all bikes</a>
+            <a class="sub-all" href="/en/bikes">View all bikes</a>
           </div>
         </li>
         <li class="has-sub">
@@ -573,14 +600,14 @@ body.cmp-open .zalo-fab{bottom:96px}
           <div class="sub" id="sub-parts">
             <ul>
               <li class="has-fly">
-                <a class="fly-top" href="/en/lop-xe" aria-expanded="false" aria-controls="fly-tires">Tyres <svg aria-hidden="true"><use href="#i-right"/></svg></a>
+                <a class="fly-top" href="/en/tyres" aria-expanded="false" aria-controls="fly-tires">Tyres <svg aria-hidden="true"><use href="#i-right"/></svg></a>
                 <div class="fly" id="fly-tires">
                   <ul>
-                    <li><a href="/en/lop-xe#road">Road</a></li>
-                    <li><a href="/en/lop-xe#mtb">MTB</a></li>
-                    <li><a href="/en/lop-xe#gravel">Gravel</a></li>
+                    <li><a href="/en/tyres#road">Road</a></li>
+                    <li><a href="/en/tyres#mtb">MTB</a></li>
+                    <li><a href="/en/tyres#gravel">Gravel</a></li>
                   </ul>
-                  <a class="sub-all" href="/en/lop-xe">View all tyres</a>
+                  <a class="sub-all" href="/en/tyres">View all tyres</a>
                 </div>
               </li>
               <li class="has-fly">
@@ -597,24 +624,24 @@ body.cmp-open .zalo-fab{bottom:96px}
                   <a class="sub-all" href="/en/tubeless">View all tubeless &amp; accessories</a>
                 </div>
               </li>
-              <li><a href="/en/day-cuon-tay-lai">Handlebar tape</a></li>
+              <li><a href="/en/handlebar-tape">Handlebar tape</a></li>
             </ul>
-            <a class="sub-all" href="/en/phu-tung">View all parts</a>
+            <a class="sub-all" href="/en/parts">View all parts</a>
           </div>
         </li>
         <li class="has-sub">
           <button class="nav-top" aria-expanded="false" aria-controls="sub-brands">Brands <svg aria-hidden="true"><use href="#i-down"/></svg></button>
           <div class="sub sub-brands" id="sub-brands">
             <ul class="brand-menu">
-              <li><a href="/en/thuong-hieu-polygon" aria-label="Polygon"><img class="brand-logo" style="--wf:6.5" src="/img/brands/polygon.png" alt="" width="200" height="40" loading="lazy"></a></li>
-              <li><a href="/en/thuong-hieu-vittoria" aria-label="Vittoria"><img class="brand-logo" style="--wf:5.019" src="https://vittoria.com/cdn/shop/files/Vittoria_logo_black.svg?v=1696407669" alt="" width="202" height="40" loading="lazy"></a></li>
-              <li><a href="/en/thuong-hieu-emume" aria-label="Emume"><img class="brand-logo" style="--wf:5.699" src="/img/brands/emume.png" alt="" width="180" height="40" loading="lazy"></a></li>
-              <li><a href="/en/thuong-hieu-story-bike" aria-label="Story Bike"><img class="brand-logo" style="--wf:6.024" src="/img/brands/story.png" alt="" width="322" height="40" loading="lazy"></a></li>
+              <li><a href="/en/brand-polygon" aria-label="Polygon"><img class="brand-logo" style="--wf:6.5" src="/img/brands/polygon.png" alt="" width="200" height="40" loading="lazy"></a></li>
+              <li><a href="/en/brand-vittoria" aria-label="Vittoria"><img class="brand-logo" style="--wf:5.019" src="https://vittoria.com/cdn/shop/files/Vittoria_logo_black.svg?v=1696407669" alt="" width="202" height="40" loading="lazy"></a></li>
+              <li><a href="/en/brand-emume" aria-label="Emume"><img class="brand-logo" style="--wf:5.699" src="/img/brands/emume.png" alt="" width="180" height="40" loading="lazy"></a></li>
+              <li><a href="/en/brand-story-bike" aria-label="Story Bike"><img class="brand-logo" style="--wf:6.024" src="/img/brands/story.png" alt="" width="322" height="40" loading="lazy"></a></li>
             </ul>
           </div>
         </li>
-        <li><a href="/en/tin-tuc">News</a></li>
-        <li><a href="/en/huong-dan">Guides</a></li>
+        <li><a href="/en/news">News</a></li>
+        <li><a href="/en/guides">Guides</a></li>
         <li><a class="sale" href="#">Promotions</a></li>
       </ul>
     </div>
@@ -622,19 +649,59 @@ body.cmp-open .zalo-fab{bottom:96px}
 </header>
 
 <main id="main" class="pdp listing">
-  <div class="container"><nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/en/trangchu">Home</a></li><li><a href="/en/xe-dap">Bikes</a></li><li aria-current="page">Gravel</li></ol></nav></div>
+  <div class="container"><nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/en/home">Home</a></li><li><a href="/en/bikes">Bikes</a></li><li aria-current="page">Mountain bikes (MTB)</li></ol></nav></div>
   <section class="list-hero">
-    <img src="https://vittoria.com/cdn/shop/files/Banner_HERO_Horizontal_3_69510693-5265-4d5e-95ae-4706d0cb7fdd.webp?width=1920" alt="Group of gravel riders on a dirt road">
-    <div class="container"><div class="lh-copy"><span class="kicker">Polygon Gravel</span><h1>Gravel bikes</h1><p>The versatile Path X for city streets and dirt roads — genuine Polygon, distributed by Spinlab.</p></div></div>
+    <img src="https://media.polygonbikes.com/wp-content/uploads/2024/11/15080846/design-asset-product-highlight-website-polygon-siskiu-t-3.jpg" alt="Polygon Siskiu T mountain bike on a trail">
+    <div class="container"><div class="lh-copy"><span class="kicker">Polygon Mountain</span><h1>Mountain bikes</h1><p>Downhill, Enduro, Trail-AM, Cross Country and Dirt Jump — genuine Polygon, distributed by Spinlab.</p></div></div>
   </section>
-  <div class="container"><section class="road-group"><div class="rg-head"><div><h2>Path X</h2><p class="rg-sub">Urban Adventure · ALX alloy frame</p></div><p class="rg-desc">City riding and dirt-road exploring — a light alloy frame, drop bars and 35mm tyres.</p></div><div class="grid"><article class="p-card"><div class="p-img"><img src="https://media.polygonbikes.com/wp-content/uploads/2022/09/14144207/MY23-PATH-X5-P.png" alt="Polygon PATH X5" loading="lazy"><img class="alt" src="https://media.polygonbikes.com/wp-content/uploads/2022/09/14144218/MY23-PATH-X5-RF.png" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Polygon · Path X</span><h3 class="p-name"><a class="stretch" href="/en/polygon-path-x5">PATH X5</a></h3><p class="p-desc">Gravel · Adventure</p><span class="p-price">Contact</span></div></article></div></section></div>
+  <!-- MTB BY DISCIPLINE -->
+  <section class="section mtb" id="mtb" style="padding-top:32px">
+    <div class="container">
+      
+      <div class="mtb-tabs" role="tablist" aria-label="Mountain bike types">
+        <button role="tab" id="tab-dh" aria-controls="panel-dh" aria-selected="true">Downhill</button>
+        <button role="tab" id="tab-enduro" aria-controls="panel-enduro" aria-selected="false" tabindex="-1">Enduro</button>
+        <button role="tab" id="tab-trail" aria-controls="panel-trail" aria-selected="false" tabindex="-1">Trail-AM</button>
+        <button role="tab" id="tab-xc" aria-controls="panel-xc" aria-selected="false" tabindex="-1">Cross Country</button>
+        <button role="tab" id="tab-dj" aria-controls="panel-dj" aria-selected="false" tabindex="-1">Dirt Jump</button>
+      </div>
+
+      <div class="mtb-panel" role="tabpanel" id="panel-dh" aria-labelledby="tab-dh">
+        <p class="mtb-intro">Purpose-built descending bikes with the longest travel — for downhill tracks and bike parks.</p>
+        <section class="road-group"><div class="rg-head"><div><h2>Collosus DH</h2><p class="rg-sub">Downhill · 200mm travel · ALX alloy</p></div><p class="rg-desc">Carries the DNA of the Collosus N, tested by the PFR team over two seasons — adjustable geometry, MX or 29" wheels.</p></div><div class="grid"><article class="p-card"><div class="p-img"><img src="https://media.polygonbikes.com/wp-content/uploads/2025/02/09112930/MY25-COLLOSUS-DH-R-P-1.png" alt="Polygon COLLOSUS DH9" loading="lazy"><img class="alt" src="https://media.polygonbikes.com/wp-content/uploads/2025/02/09112842/MY25-COLLOSUS-DH-R-RF-2.png" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Polygon · Collosus DH</span><h3 class="p-name"><a class="stretch" href="/en/polygon-collosus-dh9">COLLOSUS DH9</a></h3><p class="p-desc">SRAM X01 DH 1x7</p><span class="p-price">128.000.000₫</span></div></article><article class="p-card"><div class="p-img"><img src="https://media.polygonbikes.com/wp-content/uploads/2025/02/12132414/MY25-COLLOSUS-DH-M-P.png" alt="Polygon COLLOSUS DH7" loading="lazy"><img class="alt" src="https://media.polygonbikes.com/wp-content/uploads/2025/02/28142357/MY25-COLLOSUS-DH-M-RR-1.png" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Polygon · Collosus DH</span><h3 class="p-name"><a class="stretch" href="/en/polygon-collosus-dh7">COLLOSUS DH7</a></h3><p class="p-desc">SRAM GX DH 1x7</p><span class="p-price">89.500.000₫</span></div></article></div></section>
+      </div>
+
+      <div class="mtb-panel" role="tabpanel" id="panel-enduro" aria-labelledby="tab-enduro" hidden>
+        <p class="mtb-intro">Climbs well, descends hard — for steep, technical enduro trails and enduro racing.</p>
+        <section class="road-group"><div class="rg-head"><div><h2>Collosus N</h2><p class="rg-sub">Enduro · 170mm travel</p></div><p class="rg-desc">Polygon's flagship enduro bike, developed with the PFR team at EDR races — available with ACX carbon and ALX alloy frames.</p></div><div class="grid"><article class="p-card"><div class="p-img"><span class="tag">New</span><img src="https://media.polygonbikes.com/wp-content/uploads/2025/02/15101109/MY26-COLLOSUS-N9-XTR-P.png" alt="Polygon COLLOSUS N9 Di2 CARBON" loading="lazy"><img class="alt" src="https://media.polygonbikes.com/wp-content/uploads/2025/02/15101151/MY26-COLLOSUS-N9-XTR-RF.png" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Polygon · Collosus N</span><h3 class="p-name"><a class="stretch" href="/en/polygon-collosus-n9">COLLOSUS N9 Di2 CARBON</a></h3><p class="p-desc">Shimano XTR Di2 1x12</p><span class="p-price">132.500.000₫</span></div></article><article class="p-card"><div class="p-img"><span class="tag">New</span><img src="https://media.polygonbikes.com/wp-content/uploads/2025/02/15145518/MY25-COLLOSUS-N-CARBON-BLACK-FINAL-P-1.png" alt="Polygon COLLOSUS N8 CARBON" loading="lazy"><img class="alt" src="https://media.polygonbikes.com/wp-content/uploads/2025/02/15133946/MY25-COLLOSUS-N-CARBON-BLACK-FINAL-RR-1.png" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Polygon · Collosus N</span><h3 class="p-name"><a class="stretch" href="/en/polygon-collosus-n8-carbon">COLLOSUS N8 CARBON</a></h3><p class="p-desc">SRAM GX 1x12</p><span class="p-price">100.700.000₫</span></div></article><article class="p-card"><div class="p-img"><img src="https://media.polygonbikes.com/wp-content/uploads/2025/02/12132534/MY25-COLLOSUS-N-PURPLE-PINK-P.png" alt="Polygon COLLOSUS N9" loading="lazy"><img class="alt" src="https://media.polygonbikes.com/wp-content/uploads/2025/02/07152904/MY25-COLLOSUS-N-PURPLE-PINK-RR-1.png" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Polygon · Collosus N</span><h3 class="p-name"><a class="stretch" href="/en/polygon-collosus-n9-alloy">COLLOSUS N9</a></h3><p class="p-desc">Shimano XT 1x12</p><span class="p-price">82.500.000₫</span></div></article><article class="p-card"><div class="p-img"><img src="https://media.polygonbikes.com/wp-content/uploads/2025/02/07153120/PLG-COLLOSUS-N7-29X390-S-GRN.png" alt="Polygon COLLOSUS N7" loading="lazy"><img class="alt" src="https://media.polygonbikes.com/wp-content/uploads/2025/02/07153034/MY25-COLLOSUS-N-RR-1.png" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Polygon · Collosus N</span><h3 class="p-name"><a class="stretch" href="/en/polygon-collosus-n7">COLLOSUS N7</a></h3><p class="p-desc">Shimano Deore 1x12</p><span class="p-price">60.500.000₫</span></div></article></div></section>
+      </div>
+
+      <div class="mtb-panel" role="tabpanel" id="panel-trail" aria-labelledby="tab-trail" hidden>
+        <p class="mtb-intro">A balance of climbing and descending — the versatile bike for every trail.</p>
+        <section class="road-group"><div class="rg-head"><div><h2>Collosus T</h2><p class="rg-sub">Trail full-suspension · 160/140mm travel</p></div><p class="rg-desc">Sits between Siskiu T and Collosus N: a powerful trail platform with ACX carbon and ALX alloy frames, 29" or MX wheels.</p></div><div class="grid"><article class="p-card"><div class="p-img"><span class="tag">New</span><img src="https://media.polygonbikes.com/wp-content/uploads/2025/10/19211528/COLLOSUS-T9-DI2-P.png" alt="Polygon COLLOSUS T9 Di2 CARBON" loading="lazy"><img class="alt" src="https://media.polygonbikes.com/wp-content/uploads/2025/10/19211610/COLLOSUS-T9-DI2-RF.png" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Polygon · Collosus T</span><h3 class="p-name"><a class="stretch" href="/en/polygon-collosus-t9">COLLOSUS T9 Di2 CARBON</a></h3><p class="p-desc">Shimano XTR Di2 1x12</p><span class="p-price">128.000.000₫</span></div></article><article class="p-card"><div class="p-img"><span class="tag">New</span><img src="https://media.polygonbikes.com/wp-content/uploads/2025/10/20102142/COLLOSUS-T8-P.png" alt="Polygon COLLOSUS T8 CARBON" loading="lazy"><img class="alt" src="https://media.polygonbikes.com/wp-content/uploads/2025/10/20104220/COLLOSUS-T8-RF-I.png" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Polygon · Collosus T</span><h3 class="p-name"><a class="stretch" href="/en/polygon-collosus-t8-carbon">COLLOSUS T8 CARBON</a></h3><p class="p-desc">SRAM GX 1x12</p><span class="p-price">98.500.000₫</span></div></article><article class="p-card"><div class="p-img"><span class="tag">New</span><img src="https://media.polygonbikes.com/wp-content/uploads/2025/10/23083741/MY26-COLLOSUS-T6-METALLIC-P-1.png" alt="Polygon COLLOSUS T6 CARBON" loading="lazy"><img class="alt" src="https://media.polygonbikes.com/wp-content/uploads/2025/10/23083658/MY26-COLLOSUS-T6-METALLIC-RF-1.png" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Polygon · Collosus T</span><h3 class="p-name"><a class="stretch" href="/en/polygon-collosus-t6-carbon">COLLOSUS T6 CARBON</a></h3><p class="p-desc">Shimano Deore 1x12</p><span class="p-price">78.000.000₫</span></div></article><article class="p-card"><div class="p-img"><span class="tag">New</span><img src="https://media.polygonbikes.com/wp-content/uploads/2026/04/15173139/MY26-COLLOSUS-T8-BROWN-P.png" alt="Polygon COLLOSUS T8" loading="lazy"><img class="alt" src="https://media.polygonbikes.com/wp-content/uploads/2026/04/15172130/MY26-COLLOSUS-T8-BROWN-RF.png" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Polygon · Collosus T</span><h3 class="p-name"><a class="stretch" href="/en/polygon-collosus-t8">COLLOSUS T8</a></h3><p class="p-desc">SRAM Eagle 70 1x12</p><span class="p-price">75.000.000₫</span></div></article><article class="p-card"><div class="p-img"><span class="tag">New</span><img src="https://media.polygonbikes.com/wp-content/uploads/2026/04/15172733/MY26-COLLOSUS-T6-BLACK-P.png" alt="Polygon COLLOSUS T6" loading="lazy"><img class="alt" src="https://media.polygonbikes.com/wp-content/uploads/2026/04/15172703/MY26-COLLOSUS-T6-BLACK-LF.png" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Polygon · Collosus T</span><h3 class="p-name"><a class="stretch" href="/en/polygon-collosus-t6">COLLOSUS T6</a></h3><p class="p-desc">Shimano SLX 1x12</p><span class="p-price">65.000.000₫</span></div></article><article class="p-card"><div class="p-img"><span class="tag">New</span><img src="https://media.polygonbikes.com/wp-content/uploads/2026/04/15172359/MY26-COLLOSUS-T5-BLUE-P.png" alt="Polygon COLLOSUS T5" loading="lazy"><img class="alt" src="https://media.polygonbikes.com/wp-content/uploads/2026/04/15172500/MY26-COLLOSUS-T5-BLUE-RR.png" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Polygon · Collosus T</span><h3 class="p-name"><a class="stretch" href="/en/polygon-collosus-t5">COLLOSUS T5</a></h3><p class="p-desc">Shimano CUES 1x11</p><span class="p-price">55.800.000₫</span></div></article></div></section>
+        <section class="road-group"><div class="rg-head"><div><h2>Siskiu T</h2><p class="rg-sub">Trail full-suspension · 140/135mm travel</p></div><p class="rg-desc">Modern trail bike with an ALX alloy frame and 29" wheels — high performance without the high cost.</p></div><div class="grid"><article class="p-card"><div class="p-img"><img src="https://media.polygonbikes.com/wp-content/uploads/2025/08/08145309/MY26-SISKIU-T8-UDH-CHAMELEON-GREEN-P.png" alt="Polygon SISKIU T8" loading="lazy"><img class="alt" src="https://media.polygonbikes.com/wp-content/uploads/2025/08/08145226/MY26-SISKIU-T8-UDH-CHAMELEON-GREEN-RF.png" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Polygon · Siskiu T</span><h3 class="p-name"><a class="stretch" href="/en/polygon-siskiu-t8">SISKIU T8</a></h3><p class="p-desc">Shimano SLX 1x12</p><span class="p-price">61.800.000₫</span></div></article><article class="p-card"><div class="p-img"><img src="https://media.polygonbikes.com/wp-content/uploads/2025/08/08144030/MY26-SISKIU-T7-UDH-CANDY-TEAL-P.png" alt="Polygon SISKIU T7" loading="lazy"></div><div class="p-body"><span class="p-brand">Polygon · Siskiu T</span><h3 class="p-name"><a class="stretch" href="/en/polygon-siskiu-t7">SISKIU T7</a></h3><p class="p-desc">Shimano Deore 1x12</p><span class="p-price">49.950.000₫</span></div></article><article class="p-card"><div class="p-img"><img src="https://media.polygonbikes.com/wp-content/uploads/2025/08/08160020/MY26-SISKIU-T6-UDH-METALIC-GREEN-P.png" alt="Polygon SISKIU T6" loading="lazy"><img class="alt" src="https://media.polygonbikes.com/wp-content/uploads/2025/08/09141732/MY26-SISKIU-T6-UDH-SPARKLING-BLUE-P-1.png" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Polygon · Siskiu T</span><h3 class="p-name"><a class="stretch" href="/en/polygon-siskiu-t6">SISKIU T6</a></h3><p class="p-desc">Shimano CUES 1x10</p><span class="p-price">42.000.000₫</span></div></article></div></section>
+      </div>
+
+      <div class="mtb-panel" role="tabpanel" id="panel-xc" aria-labelledby="tab-xc" hidden>
+        <p class="mtb-intro">Light, fast and efficient on climbs — for cross-country trails and XC racing.</p>
+        <section class="road-group"><div class="rg-head"><div><h2>Syncline DR</h2><p class="rg-sub">XC full-suspension · Carbon ACX</p></div><p class="rg-desc">A modern XC race bike: ultralight ACX carbon frame, 120/110mm travel and gravity-influenced geometry.</p></div><div class="grid"><article class="p-card"><div class="p-img"><span class="tag">New</span><img src="https://media.polygonbikes.com/wp-content/uploads/2025/10/03130636/MY26-SYNCLINE-DR9-P.png" alt="Polygon SYNCLINE DR9" loading="lazy"><img class="alt" src="https://media.polygonbikes.com/wp-content/uploads/2025/10/03130718/MY26-SYNCLINE-DR9-RF.png" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Polygon · Syncline DR</span><h3 class="p-name"><a class="stretch" href="/en/polygon-syncline-dr9">SYNCLINE DR9</a></h3><p class="p-desc">Shimano XTR Di2 1x12</p><span class="p-price">198.000.000₫</span></div></article><article class="p-card"><div class="p-img"><img src="https://media.polygonbikes.com/wp-content/uploads/2025/10/03163005/MY26-SYNCLINE-DR8-P.png" alt="Polygon SYNCLINE DR8" loading="lazy"><img class="alt" src="https://media.polygonbikes.com/wp-content/uploads/2025/10/03163049/MY26-SYNCLINE-DR8-RF.png" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Polygon · Syncline DR</span><h3 class="p-name"><a class="stretch" href="/en/polygon-syncline-dr8">SYNCLINE DR8</a></h3><p class="p-desc">Shimano XT 1x12</p><span class="p-price">90.950.000₫</span></div></article><article class="p-card"><div class="p-img"><img src="https://media.polygonbikes.com/wp-content/uploads/2025/10/03162425/MY26-SYNCLINE-DR6-P.png" alt="Polygon SYNCLINE DR6" loading="lazy"><img class="alt" src="https://media.polygonbikes.com/wp-content/uploads/2025/10/03162508/MY26-SYNCLINE-DR6-RF.png" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Polygon · Syncline DR</span><h3 class="p-name"><a class="stretch" href="/en/polygon-syncline-dr6">SYNCLINE DR6</a></h3><p class="p-desc">Shimano Deore 1x12</p><span class="p-price">73.800.000₫</span></div></article></div></section>
+        <section class="road-group"><div class="rg-head"><div><h2>Xtrada</h2><p class="rg-sub">XC hardtail · ALX alloy</p></div><p class="rg-desc">Versatile alloy hardtail, 120mm fork, 29" wheels — fast, light and great value.</p></div><div class="grid"><article class="p-card"><div class="p-img"><span class="tag">New</span><img src="https://media.polygonbikes.com/wp-content/uploads/2026/01/05154307/MY26-XTRADA-7-G2-P.png" alt="Polygon XTRADA 7" loading="lazy"><img class="alt" src="https://media.polygonbikes.com/wp-content/uploads/2026/01/05154057/MY26-XTRADA-7-G2-RF.png" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Polygon · Xtrada</span><h3 class="p-name"><a class="stretch" href="/en/polygon-xtrada-7">XTRADA 7</a></h3><p class="p-desc">SRAM Eagle 70 T-Type 1x12</p><span class="p-price">23.500.000₫</span></div></article><article class="p-card"><div class="p-img"><span class="tag">New</span><img src="https://media.polygonbikes.com/wp-content/uploads/2026/01/05153720/MY26-XTRADA-6-G2-P.png" alt="Polygon XTRADA 6" loading="lazy"><img class="alt" src="https://media.polygonbikes.com/wp-content/uploads/2026/01/05153803/MY26-XTRADA-6-G2-RF.png" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Polygon · Xtrada</span><h3 class="p-name"><a class="stretch" href="/en/polygon-xtrada-6">XTRADA 6</a></h3><p class="p-desc">Shimano Deore 1x12</p><span class="p-price">19.680.000₫</span></div></article><article class="p-card"><div class="p-img"><span class="tag">New</span><img src="https://media.polygonbikes.com/wp-content/uploads/2026/01/05153551/MY26-XTRADA-5-P.png" alt="Polygon XTRADA 5" loading="lazy"><img class="alt" src="https://media.polygonbikes.com/wp-content/uploads/2026/01/05153508/MY26-XTRADA-5-LF-1.png" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Polygon · Xtrada</span><h3 class="p-name"><a class="stretch" href="/en/polygon-xtrada-5">XTRADA 5</a></h3><p class="p-desc">Shimano CUES 1x10</p><span class="p-price">16.800.000₫</span></div></article></div></section>
+        <section class="road-group"><div class="rg-head"><div><h2>Siskiu D</h2><p class="rg-sub">Full-suspension XC / trail · ALX alloy</p></div><p class="rg-desc">Accessible 120mm full suspension for riders of every level.</p></div><div class="grid"><article class="p-card"><div class="p-img"><img src="https://media.polygonbikes.com/wp-content/uploads/2021/11/13150642/MY25-SISKIU-D7-NEW-COLOR-P.png" alt="Polygon SISKIU D7" loading="lazy"><img class="alt" src="https://media.polygonbikes.com/wp-content/uploads/2021/11/13150809/MY25-SISKIU-D7-NEW-COLOR-RR.png" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Polygon · Siskiu D</span><h3 class="p-name"><a class="stretch" href="/en/polygon-siskiu-d7">SISKIU D7</a></h3><p class="p-desc">Shimano 1x11</p><span class="p-price">38.900.000₫</span></div></article><article class="p-card"><div class="p-img"><img src="https://media.polygonbikes.com/wp-content/uploads/2022/07/14144054/MY22-SISKIU-DSE-P.png" alt="Polygon SISKIU DSE" loading="lazy"><img class="alt" src="https://media.polygonbikes.com/wp-content/uploads/2022/07/14144100/MY22-SISKIU-DSE-RR.png" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Polygon · Siskiu D</span><h3 class="p-name"><a class="stretch" href="/en/polygon-siskiu-dse">SISKIU DSE</a></h3><p class="p-desc">Shimano Deore 1x11</p><span class="p-price">Contact</span></div></article><article class="p-card"><div class="p-img"><img src="https://media.polygonbikes.com/wp-content/uploads/2025/10/17105018/MY25-SISKIU-D6-P-1.png" alt="Polygon SISKIU D6" loading="lazy"><img class="alt" src="https://media.polygonbikes.com/wp-content/uploads/2025/10/17104932/MY25-SISKIU-D6-LF-1.png" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Polygon · Siskiu D</span><h3 class="p-name"><a class="stretch" href="/en/polygon-siskiu-d6">SISKIU D6</a></h3><p class="p-desc">Shimano Deore 1x10</p><span class="p-price">29.800.000₫</span></div></article><article class="p-card"><div class="p-img"><img src="https://media.polygonbikes.com/wp-content/uploads/2025/08/08102040/MY25-SISKIU-D5-P.png" alt="Polygon SISKIU D5" loading="lazy"><img class="alt" src="https://media.polygonbikes.com/wp-content/uploads/2021/11/10084541/MY25-SISKIU-D5-RF.png" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Polygon · Siskiu D</span><h3 class="p-name"><a class="stretch" href="/en/polygon-siskiu-d5">SISKIU D5</a></h3><p class="p-desc">Shimano 1x9</p><span class="p-price">25.800.000₫</span></div></article></div></section>
+        <section class="road-group"><div class="rg-head"><div><h2>Cascade</h2><p class="rg-sub">Leisure XC hardtail · Alloy · 100mm fork</p></div><p class="rg-desc">A light, durable entry-level hardtail with a 100mm suspension fork, disc brakes and 27.5" or 29" wheels depending on rider height.</p></div><div class="grid"><article class="p-card"><div class="p-img"><img src="https://media.polygonbikes.com/wp-content/uploads/2025/11/14130258/MY26-CASCADE-FIVE-G2-P.png" alt="Polygon CASCADE 5" loading="lazy"><img class="alt" src="https://media.polygonbikes.com/wp-content/uploads/2025/11/14130215/MY26-CASCADE-FIVE-G2-RF.png" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Polygon · Cascade</span><h3 class="p-name"><a class="stretch" href="/en/polygon-cascade-5">CASCADE 5</a></h3><p class="p-desc">Shimano CUES 1x10 · Hydraulic disc brakes</p><span class="p-price">14.500.000₫</span></div></article><article class="p-card"><div class="p-img"><img src="https://media.polygonbikes.com/wp-content/uploads/2025/10/24131851/MY25-CASCADE-FOUR-G2-P.png" alt="Polygon CASCADE 4" loading="lazy"><img class="alt" src="https://media.polygonbikes.com/wp-content/uploads/2025/07/30093430/MY26-CASCADE-FOUR-DECAL-RIMS-RR.png" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Polygon · Cascade</span><h3 class="p-name"><a class="stretch" href="/en/polygon-cascade-4">CASCADE 4</a></h3><p class="p-desc">Shimano CUES 1x9 · Hydraulic disc brakes</p><span class="p-price">12.500.000₫</span></div></article><article class="p-card"><div class="p-img"><img src="https://media.polygonbikes.com/wp-content/uploads/2022/09/24143203/PJ-MY-CASCADE-THREE-P.png" alt="Polygon CASCADE 3" loading="lazy"><img class="alt" src="https://media.polygonbikes.com/wp-content/uploads/2022/09/13150550/MY22-CASCADE-THREE-RF.png" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Polygon · Cascade</span><h3 class="p-name"><a class="stretch" href="/en/polygon-cascade-3">CASCADE 3</a></h3><p class="p-desc">Shimano 3x7 · 27.5" wheels</p><span class="p-price">10.300.000₫</span></div></article></div></section>
+      </div>
+      <div class="mtb-panel" role="tabpanel" id="panel-dj" aria-labelledby="tab-dj" hidden>
+        <p class="mtb-intro">Strong frames and compact geometry — for dirt jump, pump track and bike parks.</p>
+        <section class="road-group"><div class="rg-head"><div><h2>Story Curvet C2.0</h2><p class="rg-sub">Dirt jump · 26" wheels · 6061 alloy</p></div><p class="rg-desc">Dirt jump bike for pump tracks, bike parks and the street — compact geometry, 377mm chainstays.</p></div><div class="grid"><article class="p-card"><div class="p-img"><span class="tag">New</span><img src="/img/story/curvet-black.jpg" alt="Story Curvet C2.0 Ultra" loading="lazy"><img class="alt" src="/img/story/curvet-black-2.jpg" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Story · Curvet C2.0</span><h3 class="p-name"><a class="stretch" href="/en/story-curvet-c2-ultra">Curvet C2.0 Ultra</a></h3><p class="p-desc">X-Fusion Slant RC 34 · Single speed</p><span class="p-price">1.980.000₫</span></div></article></div></section>
+      </div>
+    </div>
+  </section>
 </main>
 
 
 <footer class="footer">
   <div class="container">
     <div class="f-grid">
-      <div class="f-about"><a href="/en/trangchu" class="logo-link" aria-label="Spinlab — Home"><span class="logo"></span></a><address class="company"><strong>SPINLAB VIETNAM CO., LTD.</strong><span>MST: 0318844446</span><span>N1 Dien Bien Phu, Thanh My Tay Ward, Ho Chi Minh City</span></address>
+      <div class="f-about"><a href="/en/home" class="logo-link" aria-label="Spinlab — Home"><span class="logo"></span></a><address class="company"><strong>SPINLAB VIETNAM CO., LTD.</strong><span>MST: 0318844446</span><span>N1 Dien Bien Phu, Thanh My Tay Ward, Ho Chi Minh City</span></address>
         <h4 style="margin-top:24px">Follow Spinlab</h4>
         <ul class="social">
           <li><a class="fb" href="https://www.facebook.com/profile.php?id=61573821032401" target="_blank" rel="noopener" aria-label="Spinlab on Facebook (opens in a new tab)"><svg aria-hidden="true"><use href="#i-facebook"/></svg></a></li>
@@ -643,8 +710,8 @@ body.cmp-open .zalo-fab{bottom:96px}
           <li><a class="z" href="https://zalo.me/0399337533" target="_blank" rel="noopener" aria-label="Spinlab on Zalo (opens in a new tab)"><span class="zt" aria-hidden="true">Zalo</span></a></li>
         </ul>
       </div>
-      <div><h4>Support</h4><ul><li><a href="#">Warranty policy</a></li><li><a href="#">Shipping</a></li><li><a href="/en/huong-dan-chon-size-xe-dap">Size guide</a></li><li><a href="#">FAQ</a></li></ul></div>
-      <div><h4>Contact</h4><ul><li>Showroom: 13 Street 14, Quarter 4, An Khanh Ward, Ho Chi Minh City</li><li><a href="tel:0399337533">0399 337 533</a></li><li><a href="/en/dai-ly">Dealer network</a></li></ul></div>
+      <div><h4>Support</h4><ul><li><a href="#">Warranty policy</a></li><li><a href="#">Shipping</a></li><li><a href="/en/guide-bike-size-by-height">Size guide</a></li><li><a href="#">FAQ</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li>Showroom: 13 Street 14, Quarter 4, An Khanh Ward, Ho Chi Minh City</li><li><a href="tel:0399337533">0399 337 533</a></li><li><a href="/en/dealers">Dealer network</a></li></ul></div>
     </div>
     <div class="f-bottom"><span>© 2026 Spinlab Vietnam Co., Ltd. All rights reserved.</span><span>Privacy policy · Terms</span></div>
   </div>
@@ -700,6 +767,8 @@ body.cmp-open .zalo-fab{bottom:96px}
   setPause(paused);
 })();
 
+// Open the discipline tab named in the URL hash (#dh, #enduro, #trail, #xc, #dj)
+(() => { const t=document.getElementById('tab-'+location.hash.slice(1)); if(t) t.click(); })();
 // Mobile menu drawer: ☰ opens the menu as a side panel; Escape, the backdrop, ✕ or a link closes it
 (() => {
   const btn=document.querySelector('.menu-btn'), nav=document.querySelector('.nav');
@@ -751,7 +820,7 @@ body.cmp-open .zalo-fab{bottom:96px}
     buy.after(b); }
   // tray
   const tray=document.createElement('div'); tray.className='cmp-tray'; tray.setAttribute('role','region'); tray.setAttribute('aria-label','Products to compare');
-  tray.innerHTML='<div class="container"><ul class="cmp-items"></ul><div class="cmp-actions"><button type="button" class="cmp-clear">Clear all</button><a class="btn btn-primary cmp-go" href="/en/so-sanh">Compare</a></div></div>';
+  tray.innerHTML='<div class="container"><ul class="cmp-items"></ul><div class="cmp-actions"><button type="button" class="cmp-clear">Clear all</button><a class="btn btn-primary cmp-go" href="/en/compare">Compare</a></div></div>';
   if(!compare) document.body.appendChild(tray);
   tray.querySelector('.cmp-clear').addEventListener('click',()=>save([]));
   function render(){
@@ -763,7 +832,7 @@ body.cmp-open .zalo-fab{bottom:96px}
       Array.from({length:MAX-l.length},()=>'<li class="empty">Add a product</li>').join('');
     ul.querySelectorAll('[data-rm]').forEach(b=>b.addEventListener('click',()=>save(load().filter(x=>x.id!==b.dataset.rm))));
     const go=tray.querySelector('.cmp-go'); go.textContent='Compare ('+l.length+')';
-    go.href='/en/so-sanh?ids='+l.map(x=>encodeURIComponent(x.id.replace(/\.html$/,''))).join(',');
+    go.href='/en/compare?ids='+l.map(x=>encodeURIComponent(x.id.replace(/\.html$/,''))).join(',');
     go.setAttribute('aria-disabled',l.length<2);
     const on=l.length>0 && !compare; tray.classList.toggle('on',on); document.body.classList.toggle('cmp-open',on);
   }

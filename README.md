@@ -47,4 +47,4 @@ python3 tools/build_en.py        # luôn chạy cuối cùng: bản tiếng Anh 
 
 ## Song ngữ (tiếng Anh)
 
-Bản tiếng Anh nằm trong `en/` và có đường dẫn `/en/<trang>` (trang chủ: `/en/trangchu`). `tools/build_en.py` dịch từng trang tiếng Việt bằng từ điển `data/en.json` (câu tiếng Việt → câu tiếng Anh) và gắn nút VI / EN trên mọi trang. Khi thêm nội dung mới, các câu chưa có bản dịch được liệt kê trong `tools/en-missing.txt` — thêm chúng vào `data/en.json` rồi chạy lại `build_en.py`.
+Bản tiếng Anh nằm trong `en/` với đường dẫn tiếng Anh `/en/<trang>` (trang chủ `/en/home`, ví dụ `/en/road-bikes`, `/en/tyres`; bảng đổi tên ở `EN_SLUG` trong `tools/build_en.py`; trang sản phẩm giữ nguyên tên). `tools/build_en.py` dịch từng trang tiếng Việt bằng từ điển `data/en.json` (câu tiếng Việt → câu tiếng Anh) và gắn nút VI / EN trên mọi trang. Khi thêm nội dung mới, các câu chưa có bản dịch được liệt kê trong `tools/en-missing.txt` — thêm chúng vào `data/en.json` rồi chạy lại `build_en.py`.

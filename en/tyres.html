@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>News — Spinlab</title>
-<link rel="alternate" hreflang="vi" href="/tin-tuc">
-<link rel="alternate" hreflang="en" href="/en/tin-tuc">
+<title>Genuine Vittoria bicycle tyres — Spinlab</title>
+<link rel="alternate" hreflang="vi" href="/lop-xe">
+<link rel="alternate" hreflang="en" href="/en/tyres">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/img/favicon/icon-192.png">
 <link rel="apple-touch-icon" href="/img/favicon/apple-touch-icon.png">
-<meta name="description" content="Product news, activities and events from Spinlab.">
+<meta name="description" content="Genuine Vittoria bicycle tyres: Road, MTB, Gravel and DirtJump. Distributed by Spinlab.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -398,20 +398,32 @@ tbody tr.on{background:#FFF7D6}
 .related{grid-template-columns:repeat(2,minmax(0,1fr))}
 @media (min-width:1024px){.related{grid-template-columns:repeat(3,minmax(0,1fr))}}
 
-/* Road listing */
+/* Tire listing page */
 .list-hero{position:relative;min-height:300px;display:flex;align-items:flex-end;color:#fff;overflow:hidden;margin-bottom:8px}
-.list-hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.list-hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 50%}
 .list-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.65),rgba(0,0,0,.15) 70%)}
 .list-hero .container{position:relative;z-index:1;width:100%}
 .lh-copy{padding:48px 0 40px;max-width:560px}
 .lh-copy .kicker{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
 .lh-copy h1{margin:8px 0 10px;font-size:clamp(34px,5vw,56px);font-weight:800;text-transform:uppercase;line-height:1}
 .lh-copy p{margin:0;font-size:17px}
-.road-group{padding:40px 0 8px}
-.rg-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:8px 24px;margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid var(--line)}
-.rg-head h2{margin:0;font-size:clamp(22px,2.6vw,30px);font-weight:800;text-transform:uppercase}
-.rg-sub{margin:4px 0 0;font-size:13px;font-weight:600;color:var(--brand-red)}
-.rg-desc{margin:0;max-width:52ch;color:var(--muted);font-size:14px}
+.list-bar{position:sticky;top:115px;z-index:20;background:#fff;padding-top:16px}
+@media (min-width:1024px){.list-bar{top:129px}}
+.list-tabs{margin-bottom:0}
+.list-tabs a{flex:none;display:flex;align-items:center;gap:6px;min-height:48px;padding:0 18px;border-bottom:3px solid transparent;font-weight:700;font-size:15px;text-transform:uppercase;letter-spacing:.02em;color:var(--muted);margin-bottom:-1px}
+.list-tabs a:hover{color:var(--text)}
+.list-tabs a[aria-selected=true]{color:var(--brand-red);border-bottom-color:var(--brand-red)}
+.list-tabs .count{font-size:12px;font-weight:600;color:var(--muted)}
+.list-intro{margin:20px 0;color:var(--muted)}
+#tire-grid .p-card[hidden]{display:none}
+
+.ts-explain{margin:0 0 24px;padding:20px;border-radius:var(--radius);background:var(--surface)}
+.ts-explain h2{margin:0 0 6px;font-size:18px;text-transform:uppercase}
+.ts-explain p{margin:0 0 14px;color:var(--muted);font-size:14px;max-width:75ch}
+.ts-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:8px}
+.ts-list a{display:flex;flex-direction:column;gap:2px;padding:10px 12px;border-radius:var(--radius);background:#fff;border:1px solid var(--line);font-size:13px;color:var(--muted)}
+.ts-list a:hover{border-color:var(--brand-red)}
+.ts-list b{font-size:18px;color:var(--brand-red)}
 /* Header in brand yellow (announcement bar removed) */
 .header{background:var(--brand-yellow);border-bottom-color:rgba(0,0,0,.08)}
 .header .nav{background:#fff;border-top-color:rgba(0,0,0,.08)}
@@ -475,47 +487,12 @@ tbody tr.on{background:#FFF7D6}
 .cmp-clear{border:0;background:none;font-size:13px;text-decoration:underline;color:var(--muted);min-height:44px}
 body.cmp-open .zalo-fab{bottom:96px}
 @media (max-width:600px){.cmp-items li{width:52px;height:52px}.cmp-items img{max-width:44px;max-height:44px}.cmp-clear{display:none}}
-/* Articles */
-.art-grid{display:grid;gap:24px;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));margin:24px 0 56px}
-@media (min-width:1024px){.art-grid{grid-template-columns:repeat(3,1fr)}}
-.art-card{display:flex;flex-direction:column}
-.art-card .n-img{aspect-ratio:16/10;border-radius:var(--radius);overflow:hidden;background:var(--surface);flex:none}
-.art-card .n-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
-.art-card .n-img.fit img{object-fit:contain;padding:8%;mix-blend-mode:multiply}
-.art-card:hover .n-img img{transform:scale(1.04)}
-.art-card small{display:block;margin-top:12px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--brand-red)}
-.art-card h3{margin:4px 0 6px;font-size:18px;line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:calc(2em * 1.35)}
-.art-card:hover h3{text-decoration:underline;text-underline-offset:3px}
-.art-card p{margin:0;color:var(--muted);font-size:14px;line-height:1.5;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;min-height:calc(3em * 1.5)}
-.article{max-width:780px;margin:0 auto 48px}
-.article .meta{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--brand-red);margin:8px 0}
-.article h1{font-size:clamp(28px,4vw,40px);line-height:1.15;margin:0 0 12px}
-.article .lead{font-size:18px;color:var(--muted);margin:0 0 24px}
-.article .hero-img{margin:0 0 32px;border-radius:var(--radius);overflow:hidden;aspect-ratio:16/9;background:var(--surface)}
-.article .hero-img img{width:100%;height:100%;object-fit:cover}
-.article .hero-img.fit img{object-fit:contain;padding:6%;mix-blend-mode:multiply}
-.article .body{font-size:17px;line-height:1.7}
-.article .body h2{font-size:24px;line-height:1.25;margin:36px 0 10px}
-.article .body ul{padding-left:22px;display:grid;gap:6px}
-.article .body figure{margin:24px 0}
-.article .body figure img{width:100%;border-radius:var(--radius)}
-.article .body a{color:var(--brand-red);text-decoration:underline;text-underline-offset:2px}
-.article .body table{font-size:15px}
-.art-help{max-width:780px;margin:0 auto 8px}
-.art-help .help{padding:20px 24px;gap:14px}
-.art-help .help h2{font-size:20px;margin-bottom:4px}
-.art-help .help p{font-size:14px}
-.art-help .help .actions{gap:8px}
-.art-help .help .btn{min-height:42px;padding:0 18px;font-size:13px}
-.art-help .help .btn-zalo img{width:20px;height:20px}
-@media (min-width:768px){.art-help .help{grid-template-columns:1fr auto;padding:22px 28px}.art-help .help .actions{justify-content:flex-end;flex-wrap:nowrap}}
-.article .cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
-.size-grid{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
-.size-grid caption small{display:block;font-weight:400;color:var(--muted);font-size:13px}
-.art-products{margin:40px 0 0}
-.art-products h2{font-size:22px;margin:0 0 16px}
-.art-more{border-top:1px solid var(--line);padding-top:32px;margin-top:8px}
-.art-more h2{font-size:22px;margin:0 0 4px}
+/* Card hover image */
+.p-img>img{transition:opacity .3s}
+.p-img>img.alt{position:absolute;inset:0;width:100%;height:100%;max-width:none;max-height:none;padding:12px;box-sizing:border-box;opacity:0;pointer-events:none}
+.p-img.tire>img.alt{padding:12px 14%}
+.p-img.part>img.alt{padding:12px 8%}
+@media (hover:hover){.p-card:hover .p-img>img.alt{opacity:1}.p-card:hover .p-img:has(>img.alt)>img:not(.alt){opacity:0}}
 /* Brand logos */
 .brand-logo{display:block;height:auto;width:min(calc(var(--lh,30px) * var(--wf,5)),calc(100cqi * var(--wf,5) / 6.5))}
 .brand-tile,.brand-menu a,.hub-logo .hi{container-type:inline-size}
@@ -555,16 +532,16 @@ body.cmp-open .zalo-fab{bottom:96px}
   <div class="container">
     <div class="h-main">
       <button class="menu-btn" aria-label="Open menu" aria-expanded="false"><svg class="i" aria-hidden="true"><use href="#i-menu"/></svg></button>
-      <a href="/en/trangchu" aria-label="Spinlab — Home"><span class="logo"></span></a>
+      <a href="/en/home" aria-label="Spinlab — Home"><span class="logo"></span></a>
       <form class="search" role="search" onsubmit="return false">
         <label for="q" class="sr-only">Search products</label>
         <input id="q" type="search" placeholder="Search bikes, tyres, product codes…">
         <button aria-label="Search"><svg aria-hidden="true"><use href="#i-search"/></svg></button>
       </form>
       <div class="h-tools">
-        <a class="tool" href="/en/dai-ly"><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg><span class="t-text">Find a<b>Dealer</b></span><span class="sr-only">Dealer network</span></a>
+        <a class="tool" href="/en/dealers"><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg><span class="t-text">Find a<b>Dealer</b></span><span class="sr-only">Dealer network</span></a>
         <a class="tool" href="tel:0399337533"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg><span class="t-text">Advice<b>0399 337 533</b></span><span class="sr-only">Call for advice</span></a>
-        <span class="lang" role="group" aria-label="Language"><a href="/tin-tuc" lang="vi" hreflang="vi">VI</a><span aria-hidden="true">&nbsp;/&nbsp;</span><a href="/en/tin-tuc" lang="en" hreflang="en" aria-current="true">EN</a></span>
+        <span class="lang" role="group" aria-label="Language"><a href="/lop-xe" lang="vi" hreflang="vi">VI</a><span aria-hidden="true">&nbsp;/&nbsp;</span><a href="/en/tyres" lang="en" hreflang="en" aria-current="true">EN</a></span>
       </div>
     </div>
     <div class="m-search">
@@ -582,25 +559,25 @@ body.cmp-open .zalo-fab{bottom:96px}
           <button class="nav-top" aria-expanded="false" aria-controls="sub-bikes">Bikes <svg aria-hidden="true"><use href="#i-down"/></svg></button>
           <div class="sub" id="sub-bikes">
             <ul>
-              <li><a href="/en/xe-road">Road</a></li>
+              <li><a href="/en/road-bikes">Road</a></li>
               <li class="has-fly">
                 <button class="fly-top" aria-expanded="false" aria-controls="fly-mtb">MTB <svg aria-hidden="true"><use href="#i-right"/></svg></button>
                 <div class="fly" id="fly-mtb">
                   <ul>
-                    <li><a href="/en/xe-mtb#dh">Downhill</a></li>
-                    <li><a href="/en/xe-mtb#enduro">Enduro</a></li>
-                    <li><a href="/en/xe-mtb#trail">Trail-AM</a></li>
-                    <li><a href="/en/xe-mtb#xc">Cross Country</a></li>
-                    <li><a href="/en/xe-mtb#dj">Dirt Jump</a></li>
+                    <li><a href="/en/mountain-bikes#dh">Downhill</a></li>
+                    <li><a href="/en/mountain-bikes#enduro">Enduro</a></li>
+                    <li><a href="/en/mountain-bikes#trail">Trail-AM</a></li>
+                    <li><a href="/en/mountain-bikes#xc">Cross Country</a></li>
+                    <li><a href="/en/mountain-bikes#dj">Dirt Jump</a></li>
                   </ul>
-                  <a class="sub-all" href="/en/xe-mtb">View all mountain bikes</a>
+                  <a class="sub-all" href="/en/mountain-bikes">View all mountain bikes</a>
                 </div>
               </li>
-              <li><a href="/en/xe-gravel">Gravel</a></li>
-              <li><a href="/en/xe-city">City - Hybrid</a></li>
-              <li><a href="/en/xe-trial">Trial</a></li>
+              <li><a href="/en/gravel-bikes">Gravel</a></li>
+              <li><a href="/en/city-hybrid-bikes">City - Hybrid</a></li>
+              <li><a href="/en/trial-bikes">Trial</a></li>
             </ul>
-            <a class="sub-all" href="/en/xe-dap">View all bikes</a>
+            <a class="sub-all" href="/en/bikes">View all bikes</a>
           </div>
         </li>
         <li class="has-sub">
@@ -608,14 +585,14 @@ body.cmp-open .zalo-fab{bottom:96px}
           <div class="sub" id="sub-parts">
             <ul>
               <li class="has-fly">
-                <a class="fly-top" href="/en/lop-xe" aria-expanded="false" aria-controls="fly-tires">Tyres <svg aria-hidden="true"><use href="#i-right"/></svg></a>
+                <a class="fly-top" href="/en/tyres" aria-expanded="false" aria-controls="fly-tires">Tyres <svg aria-hidden="true"><use href="#i-right"/></svg></a>
                 <div class="fly" id="fly-tires">
                   <ul>
-                    <li><a href="/en/lop-xe#road">Road</a></li>
-                    <li><a href="/en/lop-xe#mtb">MTB</a></li>
-                    <li><a href="/en/lop-xe#gravel">Gravel</a></li>
+                    <li><a href="/en/tyres#road">Road</a></li>
+                    <li><a href="/en/tyres#mtb">MTB</a></li>
+                    <li><a href="/en/tyres#gravel">Gravel</a></li>
                   </ul>
-                  <a class="sub-all" href="/en/lop-xe">View all tyres</a>
+                  <a class="sub-all" href="/en/tyres">View all tyres</a>
                 </div>
               </li>
               <li class="has-fly">
@@ -632,24 +609,24 @@ body.cmp-open .zalo-fab{bottom:96px}
                   <a class="sub-all" href="/en/tubeless">View all tubeless &amp; accessories</a>
                 </div>
               </li>
-              <li><a href="/en/day-cuon-tay-lai">Handlebar tape</a></li>
+              <li><a href="/en/handlebar-tape">Handlebar tape</a></li>
             </ul>
-            <a class="sub-all" href="/en/phu-tung">View all parts</a>
+            <a class="sub-all" href="/en/parts">View all parts</a>
           </div>
         </li>
         <li class="has-sub">
           <button class="nav-top" aria-expanded="false" aria-controls="sub-brands">Brands <svg aria-hidden="true"><use href="#i-down"/></svg></button>
           <div class="sub sub-brands" id="sub-brands">
             <ul class="brand-menu">
-              <li><a href="/en/thuong-hieu-polygon" aria-label="Polygon"><img class="brand-logo" style="--wf:6.5" src="/img/brands/polygon.png" alt="" width="200" height="40" loading="lazy"></a></li>
-              <li><a href="/en/thuong-hieu-vittoria" aria-label="Vittoria"><img class="brand-logo" style="--wf:5.019" src="https://vittoria.com/cdn/shop/files/Vittoria_logo_black.svg?v=1696407669" alt="" width="202" height="40" loading="lazy"></a></li>
-              <li><a href="/en/thuong-hieu-emume" aria-label="Emume"><img class="brand-logo" style="--wf:5.699" src="/img/brands/emume.png" alt="" width="180" height="40" loading="lazy"></a></li>
-              <li><a href="/en/thuong-hieu-story-bike" aria-label="Story Bike"><img class="brand-logo" style="--wf:6.024" src="/img/brands/story.png" alt="" width="322" height="40" loading="lazy"></a></li>
+              <li><a href="/en/brand-polygon" aria-label="Polygon"><img class="brand-logo" style="--wf:6.5" src="/img/brands/polygon.png" alt="" width="200" height="40" loading="lazy"></a></li>
+              <li><a href="/en/brand-vittoria" aria-label="Vittoria"><img class="brand-logo" style="--wf:5.019" src="https://vittoria.com/cdn/shop/files/Vittoria_logo_black.svg?v=1696407669" alt="" width="202" height="40" loading="lazy"></a></li>
+              <li><a href="/en/brand-emume" aria-label="Emume"><img class="brand-logo" style="--wf:5.699" src="/img/brands/emume.png" alt="" width="180" height="40" loading="lazy"></a></li>
+              <li><a href="/en/brand-story-bike" aria-label="Story Bike"><img class="brand-logo" style="--wf:6.024" src="/img/brands/story.png" alt="" width="322" height="40" loading="lazy"></a></li>
             </ul>
           </div>
         </li>
-        <li><a href="/en/tin-tuc">News</a></li>
-        <li><a href="/en/huong-dan">Guides</a></li>
+        <li><a href="/en/news">News</a></li>
+        <li><a href="/en/guides">Guides</a></li>
         <li><a class="sale" href="#">Promotions</a></li>
       </ul>
     </div>
@@ -657,18 +634,70 @@ body.cmp-open .zalo-fab{bottom:96px}
 </header>
 
 <main id="main" class="pdp listing">
-  <div class="container"><nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/en/trangchu">Home</a></li><li aria-current="page">News</li></ol></nav></div>
-  <section class="list-hero plain">
-    <div class="container"><div class="lh-copy"><span class="kicker">Spinlab</span><h1>News</h1><p>Product news, activities and events from Spinlab.</p></div></div>
+  <div class="container">
+    <nav class="crumbs" aria-label="Breadcrumb"><ol>
+      <li><a href="/en/home">Home</a></li><li><a href="/en/parts">Parts</a></li><li aria-current="page">Tyres</li></ol></nav>
+  </div>
+
+  <section class="list-hero">
+    <img src="https://vittoria.com/cdn/shop/files/Banner_HERO_Horizontal_3_69510693-5265-4d5e-95ae-4706d0cb7fdd.webp?width=1920" alt="Group of gravel riders on a dirt road">
+    <div class="container"><div class="lh-copy">
+      <span class="kicker">Vittoria Tires</span>
+      <h1>Bicycle tyres</h1>
+      <p>Genuine Vittoria bicycle tyres — the Italian tyre brand, distributed by Spinlab.</p>
+    </div></div>
   </section>
-  <div class="container"><div class="art-grid"><a class="art-card" href="/en/tin-tuc-polygon-strattos-c"><div class="n-img"><img src="https://media.polygonbikes.com/wp-content/uploads/2026/02/23154155/Header-Strattos-C-by-Velo-450x300.jpg" alt="" loading="lazy"></div><small>New products · 21/10/2026</small><h3>Polygon Strattos C: the new-generation endurance road bike</h3><p>A smooth ACX carbon frame, clearance for 34mm tyres and a semi-integrated LINC cockpit — Polygon designed the Strattos C for long days on the road. Three versions…</p></a></div><section class="art-more"><h2>Events &amp; community</h2><p>Spinlab's test rides, races and community meet-ups are announced on our social media.</p><div class="article"><div class="cta" style="margin-top:12px"><a class="btn btn-primary" href="https://www.facebook.com/profile.php?id=61573821032401" target="_blank" rel="noopener">Facebook Spinlab</a><a class="btn btn-outline" href="https://www.instagram.com/spinlabvn/" target="_blank" rel="noopener">Instagram</a><a class="btn btn-outline" href="https://www.youtube.com/@Spinlabvn" target="_blank" rel="noopener">YouTube</a></div></div></section></div>
+
+  <div class="container">
+    <div class="list-bar">
+      <div class="mtb-tabs list-tabs" role="tablist" aria-label="Tyre type"><a role="tab" href="#all" data-type="all" aria-selected="true">All <span class="count"></span></a><a role="tab" href="#road" data-type="road" aria-selected="false">Road <span class="count"></span></a><a role="tab" href="#mtb" data-type="mtb" aria-selected="false">MTB <span class="count"></span></a><a role="tab" href="#gravel" data-type="gravel" aria-selected="false">Gravel <span class="count"></span></a><a role="tab" href="#dirtjump" data-type="dirtjump" aria-selected="false">DirtJump <span class="count"></span></a></div>
+    </div>
+    <p class="list-intro" id="list-intro" aria-live="polite">Genuine Vittoria bicycle tyres for every road — from road racing and MTB trails to gravel.</p>
+    <div class="ts-explain" data-only="gravel" hidden><h2>Vittoria's T-score scale</h2><p>Every Terreno tyre has a T number: the lower the number, the faster it rolls on hard surfaces; the higher the number, the more it grips on coarse, loose gravel. Spinlab distributes Terreno PRO (T10–T60) and Terreno Endurance (T10–T70).</p><ol class="ts-list"><li><a href="/en/terreno-t10"><b>T10</b><span>Hardpack, packed dirt</span></a></li><li><a href="/en/terreno-t30"><b>T30</b><span>Fine gravel, loose dirt</span></a></li><li><a href="/en/terreno-t50"><b>T50</b><span>Mixed terrain</span></a></li><li class="ts-off"><b>T60</b><span>Mixed, rough</span></li><li><a href="/en/terreno-t70"><b>T70</b><span>Coarse gravel, loose dirt</span></a></li></ol></div>
+    <div class="grid" id="tire-grid">
+<article class="p-card" data-type="road">
+          <div class="p-img tire"><span class="tag ">Best seller</span><img src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/corsa-pro-tlr-01.webp?width=600" alt="Vittoria Corsa PRO tyre" loading="lazy"><img class="alt" src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/corsa-pro-road-pro-competition-tubeless-ready-2.webp?width=600" alt="" loading="lazy" aria-hidden="true"></div>
+          <div class="p-body"><span class="p-brand">Vittoria · Road</span><h3 class="p-name"><a class="stretch" href="/en/corsa-pro">Corsa PRO</a></h3><p class="p-desc">Premium race tyre · Grip in the dry and the wet</p><ul class="models"><li>Tubeless-ready</li><li>28–32mm</li></ul><span class="p-price">1.815.000₫</span></div>
+        </article>
+<article class="p-card" data-type="road"><div class="p-img tire"><span class="tag dark">Time Trial / Triathlon</span><img src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/corsa-pro-speed-size30-01-HPNEW.webp?width=600" alt="Vittoria Corsa PRO Speed tyre" loading="lazy"><img class="alt" src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/corsa-pro-speed-pro-competition-time-trial-01.webp?width=600" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Vittoria · Road</span><h3 class="p-name"><a class="stretch" href="/en/vittoria-corsa-pro-speed">Corsa PRO Speed</a></h3><p class="p-desc">The fastest tyre for time trials &amp; triathlon</p><ul class="models"><li>Tubeless-Ready</li></ul><span class="p-price">1.815.000₫</span></div></article>
+<article class="p-card" data-type="road"><div class="p-img tire"><span class="tag dark">Racing &amp; training</span><img src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/corsa-next-tlr-01.webp?width=600" alt="Vittoria Corsa N.Ext tyre" loading="lazy"><img class="alt" src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/corsa-next-road-competition-tubeless-ready-2.webp?width=600" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Vittoria · Road</span><h3 class="p-name"><a class="stretch" href="/en/vittoria-corsa-next">Corsa N.Ext</a></h3><p class="p-desc">Race speed with everyday training durability</p><ul class="models"><li>Tubeless-Ready · Tube-type</li></ul><span class="p-price">1.295.000₫</span></div></article>
+<article class="p-card" data-type="road"><div class="p-img tire"><span class="tag dark">Everyday training</span><img src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/Rubino_1_6f089a4e-6873-4881-88d4-189049504682.webp?width=600" alt="Vittoria Rubino tyre" loading="lazy"><img class="alt" src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/Rubino_2_eb318640-a8c4-4343-b3bc-a2b9af3ac549.webp?width=600" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Vittoria · Road</span><h3 class="p-name"><a class="stretch" href="/en/vittoria-rubino">Rubino</a></h3><p class="p-desc">Everyday training tyre, regenerated</p><ul class="models"><li>Tube-type</li></ul><span class="p-price">800.000₫</span></div></article>
+<article class="p-card" data-type="road"><div class="p-img tire"><span class="tag dark">Limited edition</span><img src="https://vittoria.com/cdn/shop/files/corsa-pro-pink-01.webp?width=600" alt="Vittoria Corsa PRO Limited Edition tyre" loading="lazy"><img class="alt" src="https://vittoria.com/cdn/shop/files/corsa-pro-pink-02.webp?width=1000" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Vittoria · Road</span><h3 class="p-name"><a class="stretch" href="/en/vittoria-corsa-pro-limited">Corsa PRO Limited Edition</a></h3><p class="p-desc">Corsa PRO in new colours</p><ul class="models"><li>Tubeless-Ready</li></ul><span class="p-price">1.895.000₫</span></div></article>
+<article class="p-card" data-type="road"><div class="p-img tire"><span class="tag dark">Racing · Tube-type</span><img src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/corsa-pro-tube-type_side-01.webp?width=600" alt="Vittoria Corsa PRO Tube-Type tyre" loading="lazy"><img class="alt" src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/corsa-pro-tube-type_side-02.webp?width=600" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Vittoria · Road</span><h3 class="p-name"><a class="stretch" href="/en/vittoria-corsa-pro-tube-type">Corsa PRO Tube-Type</a></h3><p class="p-desc">Corsa PRO for riders who use tubes</p><ul class="models"><li>Tube-type</li></ul><span class="p-price">1.450.000₫</span></div></article>
+<article class="p-card" data-type="road"><div class="p-img tire"><span class="tag dark">Racing · Tubular</span><img src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/corsa-pro-tubular-01.webp?width=600" alt="Vittoria Corsa PRO Tubular tyre" loading="lazy"><img class="alt" src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/corsa-pro-road-pro-competition-tubular-2_6f72d0cb-6c38-4808-9a23-bc92976073f3.webp?width=600" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Vittoria · Road</span><h3 class="p-name"><a class="stretch" href="/en/vittoria-corsa-pro-tubular">Corsa PRO Tubular</a></h3><p class="p-desc">The ultimate racing tubular</p><ul class="models"><li>Tubular</li></ul><span class="p-price">2.250.000₫</span></div></article>
+<article class="p-card" data-type="road"><div class="p-img tire"><span class="tag dark">Tubular for young racers</span><img src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/juniores-road-training-1.webp?width=600" alt="Vittoria Juniores Tubular tyre" loading="lazy"><img class="alt" src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/juniores-road-training-2.webp?width=600" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Vittoria · Road</span><h3 class="p-name"><a class="stretch" href="/en/vittoria-juniores-tubular">Juniores Tubular</a></h3><p class="p-desc">A tubular for the next generation of racers</p><ul class="models"><li>24" tubular</li></ul><span class="p-price">880.000₫</span></div></article>
+<article class="p-card" data-type="road"><div class="p-img tire"><span class="tag dark">Training · City</span><img src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/zaffiro-evo-01.webp?width=600" alt="Vittoria Zaffiro V tyre" loading="lazy"><img class="alt" src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/zaffiro-evo-02.webp?width=600" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Vittoria · Road</span><h3 class="p-name"><a class="stretch" href="/en/vittoria-zaffiro">Zaffiro V</a></h3><p class="p-desc">Durable road training tyre</p><ul class="models"><li>Wire bead</li></ul><span class="p-price">480.000₫</span></div></article>
+<article class="p-card" data-type="road"><div class="p-img tire"><span class="tag dark">Value combo</span><img src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/corsa-next-tlr-01.webp?width=600" alt="Vittoria Combo: 2 Corsa N.Ext TLR tyres + 80ml sealant" loading="lazy"><img class="alt" src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/corsa-next-road-competition-tubeless-ready-2.webp?width=600" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Vittoria · Road</span><h3 class="p-name"><a class="stretch" href="/en/vittoria-combo-corsa-n-ext">Combo: 2 Corsa N.Ext TLR tyres + 80ml sealant</a></h3><p class="p-desc">A complete tubeless setup for road bikes</p><ul class="models"><li>Combo</li></ul><span class="p-price">1.965.000₫</span></div></article>
+<article class="p-card" data-type="road"><div class="p-img tire"><span class="tag dark">Value combo</span><img src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/Rubino_1_6f089a4e-6873-4881-88d4-189049504682.webp?width=600" alt="Vittoria Combo: 2 Rubino tyres + 2 tubes" loading="lazy"><img class="alt" src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/Rubino_2_eb318640-a8c4-4343-b3bc-a2b9af3ac549.webp?width=600" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Vittoria · Road</span><h3 class="p-name"><a class="stretch" href="/en/vittoria-combo-rubino">Combo: 2 Rubino tyres + 2 tubes</a></h3><p class="p-desc">A complete training tyre set with tubes</p><ul class="models"><li>Combo</li></ul><span class="p-price">1.555.000₫</span></div></article>
+<article class="p-card" data-type="mtb"><div class="p-img tire"><span class="tag dark">Cross Country</span><img src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/01-terreno-xc-race-black.webp?width=600" alt="Vittoria Terreno XC tyre" loading="lazy"><img class="alt" src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/02-terreno-xc-race-brown.webp?width=600" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Vittoria · MTB</span><h3 class="p-name"><a class="stretch" href="/en/vittoria-terreno-xc">Terreno XC</a></h3><p class="p-desc">A rocket on hardpack</p><ul class="models"><li>XC Race · XC Trail</li></ul><span class="p-price">From 1.345.000₫</span></div></article>
+<article class="p-card" data-type="mtb"><div class="p-img tire"><span class="tag dark">Cross Country</span><img src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/peyote-mtb-cross-country-race-1.webp?width=600" alt="Vittoria Peyote tyre" loading="lazy"><img class="alt" src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/peyote-mtb-cross-country-race-2.webp?width=600" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Vittoria · MTB</span><h3 class="p-name"><a class="stretch" href="/en/vittoria-peyote">Peyote</a></h3><p class="p-desc">World Cup speed on all terrain</p><ul class="models"><li>XC Race · XC Trail</li></ul><span class="p-price">From 1.345.000₫</span></div></article>
+<article class="p-card" data-type="mtb"><div class="p-img tire"><span class="tag dark">Trail / Enduro</span><img src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/mazza-trail-01_2.webp?width=600" alt="Vittoria Mazza tyre" loading="lazy"><img class="alt" src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/mazza-trail-02_1.webp?width=600" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Vittoria · MTB</span><h3 class="p-name"><a class="stretch" href="/en/vittoria-mazza">Mazza</a></h3><p class="p-desc">Master technical trails</p><ul class="models"><li>Trail · Enduro Race</li></ul><span class="p-price">From 1.555.000₫</span></div></article>
+<article class="p-card" data-type="mtb"><div class="p-img tire"><span class="tag dark">Trail / Enduro</span><img src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/martello-trail-01_2.webp?width=600" alt="Vittoria Martello tyre" loading="lazy"><img class="alt" src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/martello-trail-02_1.webp?width=600" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Vittoria · MTB</span><h3 class="p-name"><a class="stretch" href="/en/vittoria-martello">Martello</a></h3><p class="p-desc">An enduro legend with grip in every condition</p><ul class="models"><li>Trail</li></ul><span class="p-price">1.345.000₫</span></div></article>
+<article class="p-card" data-type="mtb"><div class="p-img tire"><span class="tag dark">Cross Country</span><img src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/mezcal-mtb-cross-country-race-1_2724a060-7d95-4efc-8ac6-1b67b1ff2160.webp?width=600" alt="Vittoria Mezcal tyre" loading="lazy"><img class="alt" src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/mezcal-mtb-cross-country-race-2_0b6b7cbf-64d2-49e1-af55-d78618a86a6e.webp?width=600" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Vittoria · MTB</span><h3 class="p-name"><a class="stretch" href="/en/vittoria-mezcal">Mezcal</a></h3><p class="p-desc">Pure XC speed, a multiple champion</p><ul class="models"><li>XC Race</li></ul><span class="p-price">1.400.000₫</span></div></article>
+<article class="p-card" data-type="mtb"><div class="p-img tire"><span class="tag dark">Cross Country</span><img src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/01-barzo-xc-race-black.webp?width=600" alt="Vittoria Barzo tyre" loading="lazy"><img class="alt" src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/02-barzo-xc-race-brown.webp?width=600" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Vittoria · MTB</span><h3 class="p-name"><a class="stretch" href="/en/vittoria-barzo">Barzo</a></h3><p class="p-desc">Turns chaotic terrain into control</p><ul class="models"><li>XC Race</li></ul><span class="p-price">1.400.000₫</span></div></article>
+<article class="p-card" data-type="dirtjump"><div class="p-img tire"><span class="tag dark">Dirt Jump · Street</span><img src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/tattoo-bmx-dirt-1.webp?width=600" alt="Vittoria Tattoo tyre" loading="lazy"><img class="alt" src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/tattoo-bmx-dirt-02.webp?width=600" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Vittoria · DirtJump</span><h3 class="p-name"><a class="stretch" href="/en/vittoria-tattoo">Tattoo</a></h3><p class="p-desc">Grip on every surface</p><ul class="models"><li>Tattoo BMX</li></ul><span class="p-price">680.000₫</span></div></article>
+<article class="p-card" data-type="gravel"><div class="p-img tire"><span class="tag">PRO</span><img src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/terreno-PRO-T30-fineloose-gravel-01.webp?width=600" alt="Vittoria Terreno PRO T30 Fine Loose tyre" loading="lazy"><img class="alt" src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/terreno-PRO-T30-fineloose-gravel-02.webp?width=600" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Vittoria · Gravel</span><h3 class="p-name"><a class="stretch" href="/en/terreno-pro-t30">Terreno PRO T30 Fine Loose</a></h3><p class="p-desc">Fine gravel, loose dirt</p><ul class="models"><li>PRO Race · Racing</li></ul><span class="p-price">1.815.000₫</span></div></article>
+<article class="p-card" data-type="gravel"><div class="p-img tire"><span class="tag">PRO</span><img src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/terreno-PRO-T50-mixed-gravel-01.webp?width=600" alt="Vittoria Terreno PRO T50 Mixed tyre" loading="lazy"><img class="alt" src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/terreno-PRO-T50-mixed-gravel-02.webp?width=600" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Vittoria · Gravel</span><h3 class="p-name"><a class="stretch" href="/en/terreno-pro-t50">Terreno PRO T50 Mixed</a></h3><p class="p-desc">Mixed terrain</p><ul class="models"><li>PRO Race · Racing</li></ul><span class="p-price">1.815.000₫</span></div></article>
+<article class="p-card" data-type="gravel"><div class="p-img tire"><span class="tag dark">T10</span><img src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/terreno-T10-hardpack-gravel-endurance-01.webp?width=600" alt="Vittoria Terreno T10 Hardpack Endurance tyre" loading="lazy"><img class="alt" src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/terreno-T10-hardpack-gravel-endurance-02.webp?width=600" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Vittoria · Gravel</span><h3 class="p-name"><a class="stretch" href="/en/terreno-t10">Terreno T10 Hardpack Endurance</a></h3><p class="p-desc">Hardpack, packed dirt</p><ul class="models"><li>Endurance · Training, long rides</li></ul><span class="p-price">1.295.000₫</span></div></article>
+<article class="p-card" data-type="gravel"><div class="p-img tire"><span class="tag dark">T30</span><img src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/terreno-T30-fine-loose-gravel-endurance-01.webp?width=600" alt="Vittoria Terreno T30 Fine Loose Endurance tyre" loading="lazy"><img class="alt" src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/terreno-T30-fine-loose-gravel-endurance-02.webp?width=600" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Vittoria · Gravel</span><h3 class="p-name"><a class="stretch" href="/en/terreno-t30">Terreno T30 Fine Loose Endurance</a></h3><p class="p-desc">Fine gravel, loose dirt</p><ul class="models"><li>Endurance · Training, long rides</li></ul><span class="p-price">1.295.000₫</span></div></article>
+<article class="p-card" data-type="gravel"><div class="p-img tire"><span class="tag dark">T50</span><img src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/Terreno-T50-Mixed-01.webp?width=600" alt="Vittoria Terreno T50 Mixed Endurance tyre" loading="lazy"><img class="alt" src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/Terreno-T50-Mixed-02.webp?width=600" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Vittoria · Gravel</span><h3 class="p-name"><a class="stretch" href="/en/terreno-t50">Terreno T50 Mixed Endurance</a></h3><p class="p-desc">Mixed terrain</p><ul class="models"><li>Endurance · Training, long rides</li></ul><span class="p-price">1.295.000₫</span></div></article>
+<article class="p-card" data-type="gravel"><div class="p-img tire"><span class="tag dark">T70</span><img src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/terreno-T70-coarse-loose-gravel-endurance-01.webp?width=600" alt="Vittoria Terreno T70 Coarse Loose Endurance tyre" loading="lazy"><img class="alt" src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/terreno-T70-coarse-loose-gravel-endurance-02.webp?width=600" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Vittoria · Gravel</span><h3 class="p-name"><a class="stretch" href="/en/terreno-t70">Terreno T70 Coarse Loose Endurance</a></h3><p class="p-desc">Coarse gravel, loose dirt</p><ul class="models"><li>Endurance · Training, long rides</li></ul><span class="p-price">1.295.000₫</span></div></article>
+    </div>
+
+    <section class="pdp-sec">
+      <div class="help">
+        <div><h2>Not sure which tyre to choose?</h2><p>Tell Spinlab your bike type, rim size and the roads you ride — we'll recommend the right tyre model and size.</p></div>
+        <div class="actions"><a class="btn btn-yellow" href="tel:0399337533">Call 0399 337 533</a><a class="btn btn-zalo" href="https://zalo.me/0399337533" target="_blank" rel="noopener"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="" width="22" height="22">Chat Zalo</a></div>
+      </div>
+    </section>
+  </div>
 </main>
 
 
 <footer class="footer">
   <div class="container">
     <div class="f-grid">
-      <div class="f-about"><a href="/en/trangchu" class="logo-link" aria-label="Spinlab — Home"><span class="logo"></span></a><address class="company"><strong>SPINLAB VIETNAM CO., LTD.</strong><span>MST: 0318844446</span><span>N1 Dien Bien Phu, Thanh My Tay Ward, Ho Chi Minh City</span></address>
+      <div class="f-about"><a href="/en/home" class="logo-link" aria-label="Spinlab — Home"><span class="logo"></span></a><address class="company"><strong>SPINLAB VIETNAM CO., LTD.</strong><span>MST: 0318844446</span><span>N1 Dien Bien Phu, Thanh My Tay Ward, Ho Chi Minh City</span></address>
         <h4 style="margin-top:24px">Follow Spinlab</h4>
         <ul class="social">
           <li><a class="fb" href="https://www.facebook.com/profile.php?id=61573821032401" target="_blank" rel="noopener" aria-label="Spinlab on Facebook (opens in a new tab)"><svg aria-hidden="true"><use href="#i-facebook"/></svg></a></li>
@@ -677,8 +706,8 @@ body.cmp-open .zalo-fab{bottom:96px}
           <li><a class="z" href="https://zalo.me/0399337533" target="_blank" rel="noopener" aria-label="Spinlab on Zalo (opens in a new tab)"><span class="zt" aria-hidden="true">Zalo</span></a></li>
         </ul>
       </div>
-      <div><h4>Support</h4><ul><li><a href="#">Warranty policy</a></li><li><a href="#">Shipping</a></li><li><a href="/en/huong-dan-chon-size-xe-dap">Size guide</a></li><li><a href="#">FAQ</a></li></ul></div>
-      <div><h4>Contact</h4><ul><li>Showroom: 13 Street 14, Quarter 4, An Khanh Ward, Ho Chi Minh City</li><li><a href="tel:0399337533">0399 337 533</a></li><li><a href="/en/dai-ly">Dealer network</a></li></ul></div>
+      <div><h4>Support</h4><ul><li><a href="#">Warranty policy</a></li><li><a href="#">Shipping</a></li><li><a href="/en/guide-bike-size-by-height">Size guide</a></li><li><a href="#">FAQ</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li>Showroom: 13 Street 14, Quarter 4, An Khanh Ward, Ho Chi Minh City</li><li><a href="tel:0399337533">0399 337 533</a></li><li><a href="/en/dealers">Dealer network</a></li></ul></div>
     </div>
     <div class="f-bottom"><span>© 2026 Spinlab Vietnam Co., Ltd. All rights reserved.</span><span>Privacy policy · Terms</span></div>
   </div>
@@ -734,6 +763,19 @@ body.cmp-open .zalo-fab{bottom:96px}
   setPause(paused);
 })();
 
+// Tire listing: filter by type, synced with URL hash (#road, #mtb, #gravel, #dirtjump)
+(() => {
+  const intro = {"all": "Genuine Vittoria bicycle tyres for every road — from road racing and MTB trails to gravel.", "road": "Vittoria road tyres: from the Corsa PRO race tyre to the everyday Rubino training tyre.", "mtb": "Vittoria MTB tyres for cross country, trail and enduro: Terreno XC, Peyote, Mezcal, Mazza and Martello.", "gravel": "Vittoria gravel tyres: the Terreno PRO range for racing (T10–T60) and the Terreno Endurance range for training and long rides (T10–T70).", "dirtjump": "Vittoria tyres for dirt jump, BMX, pump track and street."};
+  const tabs=[...document.querySelectorAll('.list-tabs [role=tab]')], cards=[...document.querySelectorAll('#tire-grid .p-card')];
+  tabs.forEach(t=>{ const k=t.dataset.type; t.querySelector('.count').textContent='('+cards.filter(c=>k==='all'||c.dataset.type===k).length+')'; });
+  const show=k=>{ if(!intro[k]) k='all';
+    tabs.forEach(t=>t.setAttribute('aria-selected',t.dataset.type===k));
+    let n=0; cards.forEach(c=>{ const on=k==='all'||c.dataset.type===k; c.hidden=!on; n+=on; });
+    document.querySelectorAll('[data-only]').forEach(el=>el.hidden=el.dataset.only!==k); document.getElementById('list-intro').textContent=intro[k]; };
+  tabs.forEach(t=>t.addEventListener('click',e=>{ e.preventDefault(); const k=t.dataset.type; show(k); try{ history.replaceState(null,'',k==='all'?location.pathname+location.search:'#'+k); }catch(_){} }));
+  window.addEventListener('hashchange',()=>show(location.hash.slice(1)));
+  show(location.hash.slice(1));
+})();
 // Mobile menu drawer: ☰ opens the menu as a side panel; Escape, the backdrop, ✕ or a link closes it
 (() => {
   const btn=document.querySelector('.menu-btn'), nav=document.querySelector('.nav');
@@ -785,7 +827,7 @@ body.cmp-open .zalo-fab{bottom:96px}
     buy.after(b); }
   // tray
   const tray=document.createElement('div'); tray.className='cmp-tray'; tray.setAttribute('role','region'); tray.setAttribute('aria-label','Products to compare');
-  tray.innerHTML='<div class="container"><ul class="cmp-items"></ul><div class="cmp-actions"><button type="button" class="cmp-clear">Clear all</button><a class="btn btn-primary cmp-go" href="/en/so-sanh">Compare</a></div></div>';
+  tray.innerHTML='<div class="container"><ul class="cmp-items"></ul><div class="cmp-actions"><button type="button" class="cmp-clear">Clear all</button><a class="btn btn-primary cmp-go" href="/en/compare">Compare</a></div></div>';
   if(!compare) document.body.appendChild(tray);
   tray.querySelector('.cmp-clear').addEventListener('click',()=>save([]));
   function render(){
@@ -797,7 +839,7 @@ body.cmp-open .zalo-fab{bottom:96px}
       Array.from({length:MAX-l.length},()=>'<li class="empty">Add a product</li>').join('');
     ul.querySelectorAll('[data-rm]').forEach(b=>b.addEventListener('click',()=>save(load().filter(x=>x.id!==b.dataset.rm))));
     const go=tray.querySelector('.cmp-go'); go.textContent='Compare ('+l.length+')';
-    go.href='/en/so-sanh?ids='+l.map(x=>encodeURIComponent(x.id.replace(/\.html$/,''))).join(',');
+    go.href='/en/compare?ids='+l.map(x=>encodeURIComponent(x.id.replace(/\.html$/,''))).join(',');
     go.setAttribute('aria-disabled',l.length<2);
     const on=l.length>0 && !compare; tray.classList.toggle('on',on); document.body.classList.toggle('cmp-open',on);
   }

@@ -2,16 +2,15 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="page" content="home">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Spinlab — Polygon Bikes &amp; Vittoria Tyres</title>
-<link rel="alternate" hreflang="vi" href="/trangchu">
-<link rel="alternate" hreflang="en" href="/en/trangchu">
+<title>Tubeless tyre pressure: how much is right? — Spinlab</title>
+<link rel="alternate" hreflang="vi" href="/huong-dan-ap-suat-lop-tubeless">
+<link rel="alternate" hreflang="en" href="/en/guide-tubeless-tyre-pressure">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/img/favicon/icon-192.png">
 <link rel="apple-touch-icon" href="/img/favicon/apple-touch-icon.png">
-<meta name="description" content="Spinlab — Official distributor of Polygon bikes and Vittoria tyres.">
+<meta name="description" content="Tubeless tyres let you run lower pressure than tyres with tubes — smoother and grippier, without the risk of pinch flats. But how much should you pump? Here is how to choose your pressur">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -175,7 +174,6 @@ svg.i{width:22px;height:22px;flex:none}
 .p-img.part{background:#fff}
 .p-img.part img{width:84%}
 .tag{position:absolute;top:10px;left:10px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding:4px 8px;border-radius:3px;background:var(--brand-yellow);color:var(--brand-red)}
-.tag.hot{background:var(--brand-red);color:#fff}
 .tag.dark{background:var(--text);color:#fff}
 .p-body{padding:14px;display:flex;flex-direction:column;gap:4px;flex:1}
 .p-brand{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
@@ -207,7 +205,6 @@ svg.i{width:22px;height:22px;flex:none}
 .s-body p{margin:0;font-size:13px;color:var(--muted)}
 .models{list-style:none;margin:4px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
 .models li{font-size:12px;font-weight:600;padding:4px 8px;border-radius:3px;background:var(--surface)}
-.models a{color:var(--brand-red);text-decoration:underline;text-underline-offset:2px}
 .empty{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding:32px;border:1px dashed var(--line);border-radius:var(--radius);background:var(--surface)}
 .empty p{margin:0;max-width:60ch}
 .p-body .models{margin:2px 0 0}
@@ -223,7 +220,7 @@ svg.i{width:22px;height:22px;flex:none}
 .promo .copy{position:relative;z-index:1}
 .promo h3{margin:0 0 6px;font-size:26px;font-weight:800;text-transform:uppercase;line-height:1.1}
 .promo p{margin:0 0 16px}
-.promo a.y{background:#fff;border:1px solid var(--line);color:var(--brand-red);align-items:center}
+.promo a.y{background:var(--brand-yellow);color:var(--brand-red);align-items:center}
 .promo a.y::after{display:none}
 .promo a.y img{position:absolute;right:-20px;top:50%;transform:translateY(-50%);height:118%;width:auto;mix-blend-mode:multiply}
 .promo a.y .copy{max-width:55%}
@@ -234,7 +231,7 @@ svg.i{width:22px;height:22px;flex:none}
 .brand-tile{display:grid;place-items:center;min-height:120px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:20px;transition:border-color .2s}
 .brand-tile:hover{border-color:var(--text)}
 @media (min-width:768px){.brand-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
-@media (min-width:1024px){.brand-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media (min-width:1024px){.brand-grid{grid-template-columns:repeat(5,minmax(0,1fr))}}
 .brand-tile small{display:block;margin-top:8px;font-size:12px;color:var(--muted);text-align:center}
 .brand-tile .bt-inner{display:grid;justify-items:center}
 /* Emume logo cropped from official product image (591x532), box x36 y16 w188 h54 */
@@ -314,6 +311,107 @@ svg.i{width:22px;height:22px;flex:none}
 .stretch::after{content:"";position:absolute;inset:0;z-index:1}
 .p-card .p-cta{position:relative;z-index:2}
 .stretch:hover{color:var(--brand-red)}
+
+/* Product detail page */
+.pdp{padding-bottom:24px}
+.crumbs ol{list-style:none;margin:0;padding:16px 0;display:flex;flex-wrap:wrap;gap:6px;font-size:13px;color:var(--muted)}
+.crumbs li+li::before{content:"/";margin-right:6px;color:var(--line)}
+.crumbs a:hover{color:var(--brand-red);text-decoration:underline}
+.crumbs [aria-current]{color:var(--text);font-weight:600}
+.pdp-top{display:grid;gap:32px;padding-bottom:40px}
+@media (min-width:1024px){.pdp-top{grid-template-columns:1.1fr 1fr;gap:56px;align-items:start}}
+.g-main{aspect-ratio:1;background:var(--surface);border-radius:var(--radius);display:grid;place-items:center;overflow:hidden}
+.g-main img{width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply}
+.g-thumbs{list-style:none;margin:12px 0 0;padding:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px}
+.g-thumbs button{display:block;width:100%;aspect-ratio:1;padding:4px;border:2px solid transparent;border-radius:var(--radius);background:var(--surface);overflow:hidden}
+.g-thumbs button[aria-pressed=true]{border-color:var(--brand-red)}
+.g-thumbs img{width:100%;height:100%;object-fit:cover;mix-blend-mode:multiply}
+.buy{display:flex;flex-direction:column;gap:14px}
+@media (min-width:1024px){.buy{position:sticky;top:150px}}
+.buy h1{margin:0;font-size:clamp(28px,3.4vw,40px);font-weight:800;line-height:1.1;text-transform:uppercase;letter-spacing:-.01em}
+.tagline{margin:0;font-size:17px;color:var(--muted)}
+.sizes{border:0;margin:8px 0 0;padding:0}
+.sizes legend{padding:0;margin-bottom:10px;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.04em;display:flex;gap:10px;flex-wrap:wrap;align-items:baseline}
+.size-meta{font-weight:500;text-transform:none;letter-spacing:0;color:var(--muted);font-variant-numeric:tabular-nums}
+.size-opts{display:flex;flex-wrap:wrap;gap:8px}
+.size-opts label{position:relative}
+.size-opts input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.size-opts span{display:flex;align-items:center;min-height:44px;padding:0 16px;border:1.5px solid var(--line);border-radius:999px;font-weight:600;font-size:14px;transition:border-color .15s,background-color .15s}
+.size-opts input:hover+span{border-color:var(--text)}
+.size-opts input:checked+span{border-color:var(--brand-red);background:var(--brand-red);color:#fff}
+.size-opts input:focus-visible+span{outline:2px solid var(--text);outline-offset:2px}
+.hint{margin:8px 0 0;font-size:13px;color:var(--muted)}
+.price-row{display:flex;align-items:baseline;gap:12px;padding-top:14px;border-top:1px solid var(--line)}
+.price-row .label{font-size:13px;color:var(--muted)}
+.p-price.big{font-size:26px;padding:0}
+.buy-ctas{display:flex;flex-wrap:wrap;gap:10px}
+.buy-ctas .btn-primary{flex:1 1 100%}
+.btn-zalo.outline{border-color:#0068FF}
+.assure{list-style:none;margin:6px 0 0;padding:16px;background:var(--surface);border-radius:var(--radius);display:grid;gap:10px;font-size:14px}
+.assure li{display:flex;gap:10px;align-items:center}
+.assure svg{width:22px;height:22px;color:var(--brand-red);flex:none}
+.pdp-nav{position:sticky;top:115px;z-index:30;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:0 -16px;padding:0 16px}
+@media (min-width:1024px){.pdp-nav{top:129px;margin:0;padding:0}}
+.pdp-nav a{flex:none;display:flex;align-items:center;min-height:48px;padding:0 16px;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.02em;color:var(--muted);border-bottom:3px solid transparent}
+.pdp-nav a:hover{color:var(--brand-red);border-bottom-color:var(--brand-red)}
+.pdp-sec{padding:48px 0 8px;scroll-margin-top:190px}
+.pdp-sec h2{margin:0 0 16px;font-size:clamp(22px,2.6vw,30px);font-weight:800;text-transform:uppercase;line-height:1.1}
+.pdp-sec .sec-head h2{margin:0}
+.intro{display:grid;gap:32px}
+@media (min-width:1024px){.intro{grid-template-columns:1.1fr 1fr;align-items:center;gap:56px}}
+.intro p{margin:0 0 14px;max-width:65ch;line-height:1.7}
+.fit{list-style:none;margin:16px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.fit li{padding:6px 12px;border-radius:999px;background:var(--brand-yellow);color:var(--brand-red);font-weight:600;font-size:13px}
+.intro figure{margin:0}
+.intro figure img{width:100%;border-radius:var(--radius);aspect-ratio:4/3;object-fit:cover}
+.intro figcaption{margin-top:8px;font-size:13px;color:var(--muted)}
+.lead-sm{margin:0 0 24px;color:var(--muted);max-width:75ch}
+.tech{display:grid;gap:12px;grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (min-width:1024px){.tech{grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}}
+.tech article{padding:20px;border:1px solid var(--line);border-radius:var(--radius);background:#fff}
+.tech article.wide{grid-column:1/-1;background:var(--surface);border-color:var(--surface)}
+.tech .num{display:inline-block;font-weight:800;color:var(--brand-red);font-size:14px;margin-bottom:8px}
+.tech h3{margin:0 0 8px;font-size:16px;line-height:1.3}
+.tech p{margin:0;font-size:14px;color:var(--muted);line-height:1.6}
+@media (max-width:479px){.tech{grid-template-columns:1fr}}
+.specs-wrap{display:grid;gap:24px}
+@media (min-width:1024px){.specs-wrap{grid-template-columns:1fr 1fr;gap:40px}}
+.spec-list{margin:0;border-top:1px solid var(--line)}
+.spec-list div{display:grid;grid-template-columns:140px 1fr;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);font-size:15px}
+.spec-list dt{color:var(--muted)}
+.spec-list dd{margin:0;font-weight:600}
+.table-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:15px;font-variant-numeric:tabular-nums}
+caption{text-align:left;font-weight:700;padding-bottom:10px}
+th,td{text-align:left;padding:12px;border-bottom:1px solid var(--line)}
+thead th{background:var(--surface);font-size:13px;text-transform:uppercase;letter-spacing:.04em}
+tbody tr.on{background:#FFF7D6}
+.tech-graphic{margin:32px 0 0}
+.tech-graphic img{width:100%;border-radius:var(--radius)}
+.faq{display:grid;gap:8px;max-width:860px}
+.faq details{border:1px solid var(--line);border-radius:var(--radius);background:#fff}
+.faq summary{cursor:pointer;list-style:none;min-height:52px;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:0 18px;font-weight:700}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:22px;font-weight:400;color:var(--brand-red)}
+.faq details[open] summary::after{content:"−"}
+.faq details p{margin:0;padding:0 18px 16px;color:var(--muted);line-height:1.6}
+.related{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (min-width:1024px){.related{grid-template-columns:repeat(3,minmax(0,1fr))}}
+
+/* Road listing */
+.list-hero{position:relative;min-height:300px;display:flex;align-items:flex-end;color:#fff;overflow:hidden;margin-bottom:8px}
+.list-hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.list-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.65),rgba(0,0,0,.15) 70%)}
+.list-hero .container{position:relative;z-index:1;width:100%}
+.lh-copy{padding:48px 0 40px;max-width:560px}
+.lh-copy .kicker{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+.lh-copy h1{margin:8px 0 10px;font-size:clamp(34px,5vw,56px);font-weight:800;text-transform:uppercase;line-height:1}
+.lh-copy p{margin:0;font-size:17px}
+.road-group{padding:40px 0 8px}
+.rg-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:8px 24px;margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.rg-head h2{margin:0;font-size:clamp(22px,2.6vw,30px);font-weight:800;text-transform:uppercase}
+.rg-sub{margin:4px 0 0;font-size:13px;font-weight:600;color:var(--brand-red)}
+.rg-desc{margin:0;max-width:52ch;color:var(--muted);font-size:14px}
 /* Header in brand yellow (announcement bar removed) */
 .header{background:var(--brand-yellow);border-bottom-color:rgba(0,0,0,.08)}
 .header .nav{background:#fff;border-top-color:rgba(0,0,0,.08)}
@@ -355,9 +453,6 @@ svg.i{width:22px;height:22px;flex:none}
   .nav .fly a{min-height:42px;font-size:14px}
   .nav .sub-brands{min-width:0;padding:4px 16px 16px}
 }
-/* Homepage product cards: name + price only (details live on the product page) */
-#main .p-card .p-brand,#main .p-card .p-desc,#main .p-card .models{display:none}
-#main .p-card .p-name{margin-bottom:6px}
 .p-img{min-height:0;overflow:hidden;grid-template-rows:minmax(0,1fr);grid-template-columns:minmax(0,1fr)}
 .p-img>img{min-height:0;max-height:100%;max-width:100%;object-fit:contain}
 /* Compare */
@@ -380,6 +475,47 @@ svg.i{width:22px;height:22px;flex:none}
 .cmp-clear{border:0;background:none;font-size:13px;text-decoration:underline;color:var(--muted);min-height:44px}
 body.cmp-open .zalo-fab{bottom:96px}
 @media (max-width:600px){.cmp-items li{width:52px;height:52px}.cmp-items img{max-width:44px;max-height:44px}.cmp-clear{display:none}}
+/* Articles */
+.art-grid{display:grid;gap:24px;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));margin:24px 0 56px}
+@media (min-width:1024px){.art-grid{grid-template-columns:repeat(3,1fr)}}
+.art-card{display:flex;flex-direction:column}
+.art-card .n-img{aspect-ratio:16/10;border-radius:var(--radius);overflow:hidden;background:var(--surface);flex:none}
+.art-card .n-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.art-card .n-img.fit img{object-fit:contain;padding:8%;mix-blend-mode:multiply}
+.art-card:hover .n-img img{transform:scale(1.04)}
+.art-card small{display:block;margin-top:12px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--brand-red)}
+.art-card h3{margin:4px 0 6px;font-size:18px;line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:calc(2em * 1.35)}
+.art-card:hover h3{text-decoration:underline;text-underline-offset:3px}
+.art-card p{margin:0;color:var(--muted);font-size:14px;line-height:1.5;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;min-height:calc(3em * 1.5)}
+.article{max-width:780px;margin:0 auto 48px}
+.article .meta{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--brand-red);margin:8px 0}
+.article h1{font-size:clamp(28px,4vw,40px);line-height:1.15;margin:0 0 12px}
+.article .lead{font-size:18px;color:var(--muted);margin:0 0 24px}
+.article .hero-img{margin:0 0 32px;border-radius:var(--radius);overflow:hidden;aspect-ratio:16/9;background:var(--surface)}
+.article .hero-img img{width:100%;height:100%;object-fit:cover}
+.article .hero-img.fit img{object-fit:contain;padding:6%;mix-blend-mode:multiply}
+.article .body{font-size:17px;line-height:1.7}
+.article .body h2{font-size:24px;line-height:1.25;margin:36px 0 10px}
+.article .body ul{padding-left:22px;display:grid;gap:6px}
+.article .body figure{margin:24px 0}
+.article .body figure img{width:100%;border-radius:var(--radius)}
+.article .body a{color:var(--brand-red);text-decoration:underline;text-underline-offset:2px}
+.article .body table{font-size:15px}
+.art-help{max-width:780px;margin:0 auto 8px}
+.art-help .help{padding:20px 24px;gap:14px}
+.art-help .help h2{font-size:20px;margin-bottom:4px}
+.art-help .help p{font-size:14px}
+.art-help .help .actions{gap:8px}
+.art-help .help .btn{min-height:42px;padding:0 18px;font-size:13px}
+.art-help .help .btn-zalo img{width:20px;height:20px}
+@media (min-width:768px){.art-help .help{grid-template-columns:1fr auto;padding:22px 28px}.art-help .help .actions{justify-content:flex-end;flex-wrap:nowrap}}
+.article .cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.size-grid{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.size-grid caption small{display:block;font-weight:400;color:var(--muted);font-size:13px}
+.art-products{margin:40px 0 0}
+.art-products h2{font-size:22px;margin:0 0 16px}
+.art-more{border-top:1px solid var(--line);padding-top:32px;margin-top:8px}
+.art-more h2{font-size:22px;margin:0 0 4px}
 /* Card hover image */
 .p-img>img{transition:opacity .3s}
 .p-img>img.alt{position:absolute;inset:0;width:100%;height:100%;max-width:none;max-height:none;padding:12px;box-sizing:border-box;opacity:0;pointer-events:none}
@@ -425,16 +561,16 @@ body.cmp-open .zalo-fab{bottom:96px}
   <div class="container">
     <div class="h-main">
       <button class="menu-btn" aria-label="Open menu" aria-expanded="false"><svg class="i" aria-hidden="true"><use href="#i-menu"/></svg></button>
-      <a href="/en/trangchu" aria-label="Spinlab — Home"><span class="logo"></span></a>
+      <a href="/en/home" aria-label="Spinlab — Home"><span class="logo"></span></a>
       <form class="search" role="search" onsubmit="return false">
         <label for="q" class="sr-only">Search products</label>
         <input id="q" type="search" placeholder="Search bikes, tyres, product codes…">
         <button aria-label="Search"><svg aria-hidden="true"><use href="#i-search"/></svg></button>
       </form>
       <div class="h-tools">
-        <a class="tool" href="/en/dai-ly"><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg><span class="t-text">Find a<b>Dealer</b></span><span class="sr-only">Dealer network</span></a>
+        <a class="tool" href="/en/dealers"><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg><span class="t-text">Find a<b>Dealer</b></span><span class="sr-only">Dealer network</span></a>
         <a class="tool" href="tel:0399337533"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg><span class="t-text">Advice<b>0399 337 533</b></span><span class="sr-only">Call for advice</span></a>
-        <span class="lang" role="group" aria-label="Language"><a href="/trangchu" lang="vi" hreflang="vi">VI</a><span aria-hidden="true">&nbsp;/&nbsp;</span><a href="/en/trangchu" lang="en" hreflang="en" aria-current="true">EN</a></span>
+        <span class="lang" role="group" aria-label="Language"><a href="/huong-dan-ap-suat-lop-tubeless" lang="vi" hreflang="vi">VI</a><span aria-hidden="true">&nbsp;/&nbsp;</span><a href="/en/guide-tubeless-tyre-pressure" lang="en" hreflang="en" aria-current="true">EN</a></span>
       </div>
     </div>
     <div class="m-search">
@@ -452,25 +588,25 @@ body.cmp-open .zalo-fab{bottom:96px}
           <button class="nav-top" aria-expanded="false" aria-controls="sub-bikes">Bikes <svg aria-hidden="true"><use href="#i-down"/></svg></button>
           <div class="sub" id="sub-bikes">
             <ul>
-              <li><a href="/en/xe-road">Road</a></li>
+              <li><a href="/en/road-bikes">Road</a></li>
               <li class="has-fly">
                 <button class="fly-top" aria-expanded="false" aria-controls="fly-mtb">MTB <svg aria-hidden="true"><use href="#i-right"/></svg></button>
                 <div class="fly" id="fly-mtb">
                   <ul>
-                    <li><a href="/en/xe-mtb#dh">Downhill</a></li>
-                    <li><a href="/en/xe-mtb#enduro">Enduro</a></li>
-                    <li><a href="/en/xe-mtb#trail">Trail-AM</a></li>
-                    <li><a href="/en/xe-mtb#xc">Cross Country</a></li>
-                    <li><a href="/en/xe-mtb#dj">Dirt Jump</a></li>
+                    <li><a href="/en/mountain-bikes#dh">Downhill</a></li>
+                    <li><a href="/en/mountain-bikes#enduro">Enduro</a></li>
+                    <li><a href="/en/mountain-bikes#trail">Trail-AM</a></li>
+                    <li><a href="/en/mountain-bikes#xc">Cross Country</a></li>
+                    <li><a href="/en/mountain-bikes#dj">Dirt Jump</a></li>
                   </ul>
-                  <a class="sub-all" href="/en/xe-mtb">View all mountain bikes</a>
+                  <a class="sub-all" href="/en/mountain-bikes">View all mountain bikes</a>
                 </div>
               </li>
-              <li><a href="/en/xe-gravel">Gravel</a></li>
-              <li><a href="/en/xe-city">City - Hybrid</a></li>
-              <li><a href="/en/xe-trial">Trial</a></li>
+              <li><a href="/en/gravel-bikes">Gravel</a></li>
+              <li><a href="/en/city-hybrid-bikes">City - Hybrid</a></li>
+              <li><a href="/en/trial-bikes">Trial</a></li>
             </ul>
-            <a class="sub-all" href="/en/xe-dap">View all bikes</a>
+            <a class="sub-all" href="/en/bikes">View all bikes</a>
           </div>
         </li>
         <li class="has-sub">
@@ -478,14 +614,14 @@ body.cmp-open .zalo-fab{bottom:96px}
           <div class="sub" id="sub-parts">
             <ul>
               <li class="has-fly">
-                <a class="fly-top" href="/en/lop-xe" aria-expanded="false" aria-controls="fly-tires">Tyres <svg aria-hidden="true"><use href="#i-right"/></svg></a>
+                <a class="fly-top" href="/en/tyres" aria-expanded="false" aria-controls="fly-tires">Tyres <svg aria-hidden="true"><use href="#i-right"/></svg></a>
                 <div class="fly" id="fly-tires">
                   <ul>
-                    <li><a href="/en/lop-xe#road">Road</a></li>
-                    <li><a href="/en/lop-xe#mtb">MTB</a></li>
-                    <li><a href="/en/lop-xe#gravel">Gravel</a></li>
+                    <li><a href="/en/tyres#road">Road</a></li>
+                    <li><a href="/en/tyres#mtb">MTB</a></li>
+                    <li><a href="/en/tyres#gravel">Gravel</a></li>
                   </ul>
-                  <a class="sub-all" href="/en/lop-xe">View all tyres</a>
+                  <a class="sub-all" href="/en/tyres">View all tyres</a>
                 </div>
               </li>
               <li class="has-fly">
@@ -502,322 +638,89 @@ body.cmp-open .zalo-fab{bottom:96px}
                   <a class="sub-all" href="/en/tubeless">View all tubeless &amp; accessories</a>
                 </div>
               </li>
-              <li><a href="/en/day-cuon-tay-lai">Handlebar tape</a></li>
+              <li><a href="/en/handlebar-tape">Handlebar tape</a></li>
             </ul>
-            <a class="sub-all" href="/en/phu-tung">View all parts</a>
+            <a class="sub-all" href="/en/parts">View all parts</a>
           </div>
         </li>
         <li class="has-sub">
           <button class="nav-top" aria-expanded="false" aria-controls="sub-brands">Brands <svg aria-hidden="true"><use href="#i-down"/></svg></button>
           <div class="sub sub-brands" id="sub-brands">
             <ul class="brand-menu">
-              <li><a href="/en/thuong-hieu-polygon" aria-label="Polygon"><img class="brand-logo" style="--wf:6.5" src="/img/brands/polygon.png" alt="" width="200" height="40" loading="lazy"></a></li>
-              <li><a href="/en/thuong-hieu-vittoria" aria-label="Vittoria"><img class="brand-logo" style="--wf:5.019" src="https://vittoria.com/cdn/shop/files/Vittoria_logo_black.svg?v=1696407669" alt="" width="202" height="40" loading="lazy"></a></li>
-              <li><a href="/en/thuong-hieu-emume" aria-label="Emume"><img class="brand-logo" style="--wf:5.699" src="/img/brands/emume.png" alt="" width="180" height="40" loading="lazy"></a></li>
-              <li><a href="/en/thuong-hieu-story-bike" aria-label="Story Bike"><img class="brand-logo" style="--wf:6.024" src="/img/brands/story.png" alt="" width="322" height="40" loading="lazy"></a></li>
+              <li><a href="/en/brand-polygon" aria-label="Polygon"><img class="brand-logo" style="--wf:6.5" src="/img/brands/polygon.png" alt="" width="200" height="40" loading="lazy"></a></li>
+              <li><a href="/en/brand-vittoria" aria-label="Vittoria"><img class="brand-logo" style="--wf:5.019" src="https://vittoria.com/cdn/shop/files/Vittoria_logo_black.svg?v=1696407669" alt="" width="202" height="40" loading="lazy"></a></li>
+              <li><a href="/en/brand-emume" aria-label="Emume"><img class="brand-logo" style="--wf:5.699" src="/img/brands/emume.png" alt="" width="180" height="40" loading="lazy"></a></li>
+              <li><a href="/en/brand-story-bike" aria-label="Story Bike"><img class="brand-logo" style="--wf:6.024" src="/img/brands/story.png" alt="" width="322" height="40" loading="lazy"></a></li>
             </ul>
           </div>
         </li>
-        <li><a href="/en/tin-tuc">News</a></li>
-        <li><a href="/en/huong-dan">Guides</a></li>
+        <li><a href="/en/news">News</a></li>
+        <li><a href="/en/guides">Guides</a></li>
         <li><a class="sale" href="#">Promotions</a></li>
       </ul>
     </div>
   </nav>
 </header>
 
-<main id="main">
-  <!-- HERO SLIDER -->
-  <section class="hero" aria-roledescription="carousel" aria-label="Featured banners">
-    <div class="slides">
-      <div class="slide dark active" role="group" aria-roledescription="slide" aria-label="1 / 3">
-        <img class="slide-photo" src="https://media.polygonbikes.com/wp-content/uploads/2026/01/22110900/plg-strattos-c-header.jpg" alt="Polygon Strattos C road bike" fetchpriority="high">
-        <div class="container slide-inner">
-          <div class="slide-copy">
-            <span class="kicker">New · Polygon Road</span>
-            <h2>Strattos C</h2>
-            <p>A carbon road bike for long days in the saddle. Now available at Spinlab.</p>
-            <a class="btn btn-light" href="#">Explore</a>
-          </div>
-        </div>
-      </div>
-      <div class="slide dark" role="group" aria-roledescription="slide" aria-label="2 / 3">
-        <img class="slide-photo" src="https://vittoria.com/cdn/shop/files/Banner_HERO_Horizontal_3_69510693-5265-4d5e-95ae-4706d0cb7fdd.webp?width=1920" alt="Group of gravel riders on a dirt road with Vittoria tyres" style="object-position:70% 50%">
-        <div class="container slide-inner">
-          <div class="slide-copy">
-            <span class="kicker">Vittoria Tires</span>
-            <h2>Terreno gravel tyres</h2>
-            <p>Confident grip on gravel, dirt and every mixed surface.</p>
-            <a class="btn btn-light" href="/en/lop-xe">Shop Vittoria tyres</a>
-          </div>
-        </div>
-      </div>
-      <div class="slide dark" role="group" aria-roledescription="slide" aria-label="3 / 3">
-        <img class="slide-photo" src="https://media.polygonbikes.com/wp-content/uploads/2024/11/15080846/design-asset-product-highlight-website-polygon-siskiu-t-3.jpg" alt="Polygon Siskiu T mountain bike on a forest trail" style="object-position:60% 50%">
-        <div class="container slide-inner">
-          <div class="slide-copy">
-            <span class="kicker">Polygon Mountain</span>
-            <h2>Siskiu T</h2>
-            <p>Full-suspension mountain bikes for trails, mountain passes and weekend adventures.</p>
-            <a class="btn btn-light" href="/en/xe-mtb">Explore MTB</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <button class="arrow-btn prev" aria-label="Previous banner"><svg class="i" aria-hidden="true"><use href="#i-left"/></svg></button>
-    <button class="arrow-btn next" aria-label="Next banner"><svg class="i" aria-hidden="true"><use href="#i-right"/></svg></button>
-    <div class="slider-ui">
-      <button class="dot" aria-label="Banner 1" aria-current="true"></button>
-      <button class="dot" aria-label="Banner 2" aria-current="false"></button>
-      <button class="dot" aria-label="Banner 3" aria-current="false"></button>
-      <button class="pause" aria-label="Pause banner autoplay"><svg aria-hidden="true"><use href="#i-pause"/></svg></button>
-    </div>
-  </section>
-
-  <!-- USP -->
-  <div class="usp" hidden>
-    <div class="container">
-      <ul>
-        <li><svg aria-hidden="true"><use href="#i-shield"/></svg><span><b>100% genuine</b>Polygon &amp; Vittoria</span></li>
-        <li><svg aria-hidden="true"><use href="#i-truck"/></svg><span><b>Nationwide delivery</b>Safely packed</span></li>
-        <li><svg aria-hidden="true"><use href="#i-wrench"/></svg><span><b>Official warranty</b>Checked by frame number</span></li>
-        <li><svg aria-hidden="true"><use href="#i-chat"/></svg><span><b>Bike advice</b>Free via our hotline</span></li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- CATEGORIES -->
-  <section class="section" id="cats" hidden>
-    <div class="container">
-      <div class="sec-head"><h2>Shop bikes by type</h2><a class="see-all" href="#">View all</a></div>
-      <div class="cats">
-        <a class="cat" href="/en/xe-mtb"><div class="cat-img"><img src="https://media.polygonbikes.com/wp-content/uploads/2026/10/09145917/bike-category-banner-1-desktop-450x300.jpg" alt="" loading="lazy" width="450" height="300"></div><div class="cat-label">Mountain bikes <span>Explore</span></div></a>
-        <a class="cat" href="/en/xe-road"><div class="cat-img"><img src="https://media.polygonbikes.com/wp-content/uploads/2026/10/09150727/bike-category-banner-3-desktop-450x300.jpg" alt="" loading="lazy" width="450" height="300"></div><div class="cat-label">Road bikes <span>Explore</span></div></a>
-        <a class="cat" href="#"><div class="cat-img"><img src="https://media.polygonbikes.com/wp-content/uploads/2026/10/09151101/bike-category-banner-4-dekstop-450x300.jpg" alt="" loading="lazy" width="450" height="300"></div><div class="cat-label">Gravel &amp; Adventure <span>Explore</span></div></a>
-        <a class="cat" href="#"><div class="cat-img"><img src="https://media.polygonbikes.com/wp-content/uploads/2026/10/09151444/bike-category-banner-5-dekstop-450x300.jpg" alt="" loading="lazy" width="450" height="300"></div><div class="cat-label">City bikes <span>Explore</span></div></a>
-        <a class="cat" href="#"><div class="cat-img"><img src="https://media.polygonbikes.com/wp-content/uploads/2026/10/09151924/bike-category-banner-7-desktop-450x300.jpg" alt="" loading="lazy" width="450" height="300"></div><div class="cat-label">Kids' bikes <span>Explore</span></div></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- MTB BY DISCIPLINE -->
-  <section class="section mtb" id="mtb" style="padding-top:0" hidden>
-    <div class="container">
-      <div class="sec-head"><h2>Polygon mountain bikes</h2><a class="see-all" href="#">View all mountain bikes</a></div>
-      <div class="mtb-tabs" role="tablist" aria-label="Mountain bike types">
-        <button role="tab" id="tab-dh" aria-controls="panel-dh" aria-selected="true">Downhill</button>
-        <button role="tab" id="tab-enduro" aria-controls="panel-enduro" aria-selected="false" tabindex="-1">Enduro</button>
-        <button role="tab" id="tab-trail" aria-controls="panel-trail" aria-selected="false" tabindex="-1">Trail-AM</button>
-        <button role="tab" id="tab-xc" aria-controls="panel-xc" aria-selected="false" tabindex="-1">Cross Country</button>
-      </div>
-
-      <div class="mtb-panel" role="tabpanel" id="panel-dh" aria-labelledby="tab-dh">
-        <p class="mtb-intro">Purpose-built descending bikes with the longest travel — for downhill tracks and bike parks.</p>
-        <div class="series-grid">
-          <article class="series">
-            <div class="s-img"><img src="https://media.polygonbikes.com/wp-content/uploads/2025/02/12132414/MY25-COLLOSUS-DH-M-P-450x300.png" alt="Polygon Collosus DH" loading="lazy" width="450" height="300"></div>
-            <div class="s-body"><h3>Collosus DH</h3><p>Full-suspension downhill bike</p><ul class="models"><li>DH9</li><li>DH7</li></ul><a class="s-link" href="/en/polygon-collosus-dh9">View range</a></div>
-          </article>
-        </div>
-      </div>
-
-      <div class="mtb-panel" role="tabpanel" id="panel-enduro" aria-labelledby="tab-enduro" hidden>
-        <p class="mtb-intro">Climbs well, descends hard — for steep, technical enduro trails and enduro racing.</p>
-        <div class="series-grid">
-          <article class="series">
-            <div class="s-img"><img src="https://media.polygonbikes.com/wp-content/uploads/2025/02/15101109/MY26-COLLOSUS-N9-XTR-P-450x300.png" alt="Polygon Collosus N9" loading="lazy" width="450" height="300"></div>
-            <div class="s-body"><h3>Collosus N</h3><p>Enduro full-suspension</p><ul class="models"><li>N9 Carbon</li><li>N8 Carbon</li><li>N9</li><li>N7</li></ul><a class="s-link" href="/en/polygon-collosus-n9">View range</a></div>
-          </article>
-        </div>
-      </div>
-
-      <div class="mtb-panel" role="tabpanel" id="panel-trail" aria-labelledby="tab-trail" hidden>
-        <p class="mtb-intro">A balance of climbing and descending — the versatile bike for every trail.</p>
-        <div class="series-grid">
-          <article class="series">
-            <div class="s-img"><span class="tag">New</span><img src="https://media.polygonbikes.com/wp-content/uploads/2025/10/19211528/COLLOSUS-T9-DI2-P-450x300.png" alt="Polygon Collosus T9 Di2" loading="lazy" width="450" height="300"></div>
-            <div class="s-body"><h3>Collosus T</h3><p>Trail full-suspension</p><ul class="models"><li>T9 Di2 Carbon</li><li>T8 Carbon</li><li>T6 Carbon</li><li>T8</li><li>T6</li><li>T5</li></ul><a class="s-link" href="/en/polygon-collosus-t9">View range</a></div>
-          </article>
-          <article class="series">
-            <div class="s-img"><img src="https://media.polygonbikes.com/wp-content/uploads/2021/12/14143935/Siskiu-T8-P-450x300.png" alt="Polygon Siskiu T8" loading="lazy" width="450" height="300"></div>
-            <div class="s-body"><h3>Siskiu T</h3><p>Trail full-suspension</p><ul class="models"><li>T8</li><li>T7</li><li>T6</li></ul><a class="s-link" href="/en/polygon-siskiu-t8">View range</a></div>
-          </article>
-        </div>
-      </div>
-
-      <div class="mtb-panel" role="tabpanel" id="panel-xc" aria-labelledby="tab-xc" hidden>
-        <p class="mtb-intro">Light, fast and efficient on climbs — for cross-country trails and XC racing.</p>
-        <div class="series-grid">
-          <article class="series">
-            <div class="s-img"><span class="tag">New</span><img src="https://media.polygonbikes.com/wp-content/uploads/2025/10/03130636/MY26-SYNCLINE-DR9-P-450x300.png" alt="Polygon Syncline DR9" loading="lazy" width="450" height="300"></div>
-            <div class="s-body"><h3>Syncline DR</h3><p>XC full-suspension carbon</p><ul class="models"><li>DR9</li><li>DR8</li><li>DR6</li></ul><a class="s-link" href="/en/polygon-syncline-dr9">View range</a></div>
-          </article>
-          <article class="series">
-            <div class="s-img"><img src="https://media.polygonbikes.com/wp-content/uploads/2026/01/05153720/MY26-XTRADA-6-G2-P-450x300.png" alt="Polygon Xtrada 6" loading="lazy" width="450" height="300"></div>
-            <div class="s-body"><h3>Xtrada</h3><p>XC hardtail</p><ul class="models"><li><a href="/en/polygon-xtrada-7">Xtrada 7</a></li><li><a href="/en/polygon-xtrada-6">Xtrada 6</a></li><li><a href="/en/polygon-xtrada-5">Xtrada 5</a></li></ul><a class="s-link" href="/en/polygon-xtrada-6">View range</a></div>
-          </article>
-          <article class="series">
-            <div class="s-img"><img src="https://media.polygonbikes.com/wp-content/uploads/2021/11/13150642/MY25-SISKIU-D7-NEW-COLOR-P-450x300.png" alt="Polygon Siskiu D7" loading="lazy" width="450" height="300"></div>
-            <div class="s-body"><h3>Siskiu D</h3><p>Full-suspension XC / trail</p><ul class="models"><li>D7</li><li>DSE</li><li>D6</li><li>D5</li></ul><a class="s-link" href="/en/polygon-siskiu-d7">View range</a></div>
-          </article>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- BRANDS -->
-  <section class="section brands" id="brands" style="padding:40px 0">
-    <div class="container">
-      <h2 class="sr-only">Brands</h2>
-      <div class="brand-grid">
-        <a class="brand-tile" href="/en/thuong-hieu-polygon" aria-label="Polygon products"><span class="bt-inner"><img class="brand-logo" style="--wf:6.5" src="/img/brands/polygon.png" alt="Polygon" width="200" height="40" loading="lazy"></span></a>
-        <a class="brand-tile" href="/en/thuong-hieu-vittoria" aria-label="Vittoria products"><span class="bt-inner"><img class="brand-logo" style="--wf:5.019" src="https://vittoria.com/cdn/shop/files/Vittoria_logo_black.svg?v=1696407669" alt="Vittoria" width="202" height="40" loading="lazy"></span></a>
-        <a class="brand-tile" href="/en/thuong-hieu-emume" aria-label="Emume products"><span class="bt-inner"><img class="brand-logo" style="--wf:5.699" src="/img/brands/emume.png" alt="Emume" width="180" height="40" loading="lazy"></span></a>
-        <a class="brand-tile" href="/en/thuong-hieu-story-bike" aria-label="Story Bike products"><span class="bt-inner"><img class="brand-logo" style="--wf:6.024" src="/img/brands/story.png" alt="Story Bike" width="322" height="40" loading="lazy"></span></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- SẢN PHẨM MỚI -->
-  <section class="section" id="new">
-    <div class="container">
-      <div class="sec-head"><h2>New products</h2><a class="see-all" href="/en/san-pham-moi">View all</a></div>
-      <div class="grid">
-        <article class="p-card"><div class="p-img"><span class="tag">New</span><img src="https://media.polygonbikes.com/wp-content/uploads/2025/11/14130258/MY26-CASCADE-FIVE-G2-P.png" alt="Polygon CASCADE 5" loading="lazy"><img class="alt" src="https://media.polygonbikes.com/wp-content/uploads/2025/11/14130215/MY26-CASCADE-FIVE-G2-RF.png" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Polygon · Cascade</span><h3 class="p-name"><a class="stretch" href="/en/polygon-cascade-5">CASCADE 5</a></h3><p class="p-desc">Shimano CUES 1x10 · Hydraulic disc brakes</p><span class="p-price">14.500.000₫</span></div></article>
-        <article class="p-card"><div class="p-img"><span class="tag">New</span><img src="https://media.polygonbikes.com/wp-content/uploads/2025/10/24131851/MY25-CASCADE-FOUR-G2-P.png" alt="Polygon CASCADE 4" loading="lazy"><img class="alt" src="https://media.polygonbikes.com/wp-content/uploads/2025/07/30093430/MY26-CASCADE-FOUR-DECAL-RIMS-RR.png" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Polygon · Cascade</span><h3 class="p-name"><a class="stretch" href="/en/polygon-cascade-4">CASCADE 4</a></h3><p class="p-desc">Shimano CUES 1x9 · Hydraulic disc brakes</p><span class="p-price">12.500.000₫</span></div></article>
-        <article class="p-card"><div class="p-img"><span class="tag">New</span><img src="https://media.polygonbikes.com/wp-content/uploads/2022/09/24143203/PJ-MY-CASCADE-THREE-P.png" alt="Polygon CASCADE 3" loading="lazy"><img class="alt" src="https://media.polygonbikes.com/wp-content/uploads/2022/09/13150550/MY22-CASCADE-THREE-RF.png" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Polygon · Cascade</span><h3 class="p-name"><a class="stretch" href="/en/polygon-cascade-3">CASCADE 3</a></h3><p class="p-desc">Shimano 3x7 · 27.5" wheels</p><span class="p-price">10.300.000₫</span></div></article>
-        <article class="p-card"><div class="p-img"><span class="tag">New</span><img src="https://media.polygonbikes.com/wp-content/uploads/2026/03/04160756/MY26-HEIST-7-P.png" alt="Polygon HEIST 7" loading="lazy"><img class="alt" src="https://media.polygonbikes.com/wp-content/uploads/2026/03/04160840/MY26-HEIST-7-RF.png" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Polygon · Heist</span><h3 class="p-name"><a class="stretch" href="/en/polygon-heist-7">HEIST 7</a></h3><p class="p-desc">Hybrid · Shimano Deore 1x12</p><span class="p-price">20.950.000₫</span></div></article>
-        <article class="p-card"><div class="p-img"><span class="tag">New</span><img src="https://media.polygonbikes.com/wp-content/uploads/2026/03/04160459/MY26-HEIST-5-P.png" alt="Polygon HEIST 5" loading="lazy"><img class="alt" src="https://media.polygonbikes.com/wp-content/uploads/2026/03/04160624/MY26-HEIST-5-RR.png" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Polygon · Heist</span><h3 class="p-name"><a class="stretch" href="/en/polygon-heist-5">HEIST 5</a></h3><p class="p-desc">Hybrid · Shimano CUES 1x</p><span class="p-price">18.650.000₫</span></div></article>
-        <article class="p-card"><div class="p-img"><span class="tag">New</span><img src="https://media.polygonbikes.com/wp-content/uploads/2026/03/04160207/MY26-HEIST-2-P.png" alt="Polygon HEIST 2" loading="lazy"><img class="alt" src="https://media.polygonbikes.com/wp-content/uploads/2026/03/04160250/MY26-HEIST-2-RF.png" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Polygon · Heist</span><h3 class="p-name"><a class="stretch" href="/en/polygon-heist-2">HEIST 2</a></h3><p class="p-desc">Hybrid · Shimano Altus 1x8</p><span class="p-price">14.500.000₫</span></div></article>
-        <article class="p-card"><div class="p-img"><span class="tag">New</span><img src="https://media.polygonbikes.com/wp-content/uploads/2025/04/22074759/MY25-PATH-4-P.png" alt="Polygon PATH 4" loading="lazy"><img class="alt" src="https://media.polygonbikes.com/wp-content/uploads/2025/04/21164203/MY25-PATH-4-RR.png" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Polygon · Path</span><h3 class="p-name"><a class="stretch" href="/en/polygon-path-4">PATH 4</a></h3><p class="p-desc">City · Carbon fork</p><span class="p-price">22.500.000₫</span></div></article>
-        <article class="p-card"><div class="p-img"><span class="tag">New</span><img src="https://media.polygonbikes.com/wp-content/uploads/2025/04/21163703/MY25-PATH-3-P.png" alt="Polygon PATH 3" loading="lazy"><img class="alt" src="https://media.polygonbikes.com/wp-content/uploads/2025/04/21163859/MY25-PATH-3-RR.png" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Polygon · Path</span><h3 class="p-name"><a class="stretch" href="/en/polygon-path-3">PATH 3</a></h3><p class="p-desc">City · Shimano CUES 1x9</p><span class="p-price">16.800.000₫</span></div></article>
-      </div>
-    </div>
-  </section>
-
-  <!-- BIKES (ẩn — thay bằng Sản phẩm hot/mới) -->
-  <section class="section" id="bikes" hidden>
-    <div class="container">
-      <div class="sec-head"><h2>Featured Polygon bikes</h2><a class="see-all" href="#">View all bikes</a></div>
-      <div class="grid">
-        <article class="p-card">
-          <div class="p-img"><span class="tag dark">Best seller</span><img src="https://media.polygonbikes.com/wp-content/uploads/2021/11/13150642/MY25-SISKIU-D7-NEW-COLOR-P-450x300.png" alt="Polygon Siskiu D7" loading="lazy"><img class="alt" src="https://media.polygonbikes.com/wp-content/uploads/2021/11/13150642/MY25-SISKIU-D7-NEW-COLOR-P.png" alt="" loading="lazy" aria-hidden="true"></div>
-          <div class="p-body"><span class="p-brand">Polygon</span><h3 class="p-name"><a class="stretch" href="/en/polygon-siskiu-d7">Siskiu D7</a></h3><p class="p-desc">Mountain · Full suspension</p><span class="p-price">38.900.000₫</span></div>
-        </article>
-        <article class="p-card">
-          <div class="p-img"><img src="https://media.polygonbikes.com/wp-content/uploads/2022/09/14144207/MY23-PATH-X5-P-450x300.png" alt="Polygon Path X5" loading="lazy"><img class="alt" src="https://media.polygonbikes.com/wp-content/uploads/2022/09/14144207/MY23-PATH-X5-P.png" alt="" loading="lazy" aria-hidden="true"></div>
-          <div class="p-body"><span class="p-brand">Polygon</span><h3 class="p-name"><a class="stretch" href="/en/polygon-path-x5">Path X5</a></h3><p class="p-desc">City &amp; Hybrid</p><span class="p-price">Contact</span></div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROMO -->
-  <section class="section" style="padding-top:0">
-    <div class="container promo">
-      <a href="/en/polygon-strattos-c9">
-        <img class="bg" src="https://media.polygonbikes.com/wp-content/uploads/2026/02/02161557/plg-media-review-bikerada-strattos-c-review-header.jpg" alt="" loading="lazy">
-        <div class="copy"><h3>Road bike Polygon</h3><p>Strattos, Helios — for every level</p><span class="btn btn-light">Explore</span></div>
-      </a>
-      <a class="y" href="/en/terreno-pro-t30">
-        <img src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/terreno-PRO-T30-fineloose-gravel-01.webp?width=800" alt="" loading="lazy">
-        <div class="copy"><h3>Vittoria gravel tyres</h3><p>The Terreno PRO range for gravel, dirt and mixed terrain.</p><span class="btn btn-primary">Shop now</span></div>
-      </a>
-    </div>
-  </section>
-
-  <!-- SẢN PHẨM HOT -->
-  <section class="section" id="hot" style="padding-top:0">
-    <div class="container">
-      <div class="sec-head"><h2>Hot products</h2></div>
-      <div class="grid">
-        <article class="p-card"><div class="p-img"><span class="tag hot">Hot</span><img src="https://media.polygonbikes.com/wp-content/uploads/2025/05/23111054/Helios-A8-Chrome-Rocket-P.png" alt="Polygon HELIOS A8 Di2" loading="lazy"><img class="alt" src="https://media.polygonbikes.com/wp-content/uploads/2025/05/23111244/Helios-A8-Chrome-Rocket-RR.png" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Polygon</span><h3 class="p-name"><a class="stretch" href="/en/polygon-helios-a8-di2">HELIOS A8 Di2</a></h3><p class="p-desc">Shimano Ultegra Di2</p><span class="p-price">123.000.000₫</span></div></article>
-        <article class="p-card"><div class="p-img"><span class="tag hot">Hot</span><img src="https://media.polygonbikes.com/wp-content/uploads/2021/11/13150642/MY25-SISKIU-D7-NEW-COLOR-P-450x300.png" alt="Polygon Siskiu D7" loading="lazy"><img class="alt" src="https://media.polygonbikes.com/wp-content/uploads/2021/11/13150642/MY25-SISKIU-D7-NEW-COLOR-P.png" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Polygon</span><h3 class="p-name"><a class="stretch" href="/en/polygon-siskiu-d7">Siskiu D7</a></h3><p class="p-desc">Mountain · Full suspension</p><span class="p-price">38.900.000₫</span></div></article>
-        <article class="p-card"><div class="p-img"><span class="tag hot">Hot</span><img src="https://media.polygonbikes.com/wp-content/uploads/2026/01/05154307/MY26-XTRADA-7-G2-P.png" alt="Polygon XTRADA 7" loading="lazy"><img class="alt" src="https://media.polygonbikes.com/wp-content/uploads/2026/01/05154057/MY26-XTRADA-7-G2-RF.png" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Polygon</span><h3 class="p-name"><a class="stretch" href="/en/polygon-xtrada-7">XTRADA 7</a></h3><p class="p-desc">SRAM Eagle 70 T-Type 1x12</p><span class="p-price">23.500.000₫</span></div></article>
-        <article class="p-card"><div class="p-img tire"><span class="tag hot">Hot</span><img src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/corsa-pro-tlr-01.webp?width=600" alt="Vittoria Corsa PRO Tubeless-Ready tyre" loading="lazy"><img class="alt" src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/corsa-pro-road-pro-competition-tubeless-ready-2.webp?width=600" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Vittoria</span><h3 class="p-name"><a class="stretch" href="/en/corsa-pro">Corsa PRO</a></h3><p class="p-desc">Premium race tyre · Grip in the dry and the wet</p><ul class="models"><li>Tubeless-ready</li><li>28–32mm</li></ul><span class="p-price">1.815.000₫</span></div></article>
-        <article class="p-card"><div class="p-img tire"><span class="tag hot">Hot</span><img src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/terreno-PRO-T30-fineloose-gravel-01.webp?width=600" alt="Vittoria Terreno PRO T30 Fine Loose tyre" loading="lazy"><img class="alt" src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/terreno-PRO-T30-fineloose-gravel-02.webp?width=600" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Vittoria · Gravel</span><h3 class="p-name"><a class="stretch" href="/en/terreno-pro-t30">Terreno PRO T30 Fine Loose</a></h3><p class="p-desc">Fine gravel, loose dirt</p><ul class="models"><li>PRO Race · Racing</li></ul><span class="p-price">1.815.000₫</span></div></article>
-        <article class="p-card"><div class="p-img tire"><span class="tag hot">Hot</span><img src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/mezcal-mtb-cross-country-race-1_2724a060-7d95-4efc-8ac6-1b67b1ff2160.webp?width=600" alt="Vittoria Mezcal tyre" loading="lazy"><img class="alt" src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/mezcal-mtb-cross-country-race-2_0b6b7cbf-64d2-49e1-af55-d78618a86a6e.webp?width=600" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Vittoria · MTB</span><h3 class="p-name"><a class="stretch" href="/en/vittoria-mezcal">Mezcal</a></h3><p class="p-desc">Pure XC speed, a multiple champion</p><ul class="models"><li>XC Race · XC Trail</li></ul><span class="p-price">1.400.000₫</span></div></article>
-        <article class="p-card"><div class="p-img"><span class="tag hot">Hot</span><img src="https://media.polygonbikes.com/wp-content/uploads/2021/12/14143935/Siskiu-T8-P-450x300.png" alt="Polygon Siskiu T8" loading="lazy"><img class="alt" src="https://media.polygonbikes.com/wp-content/uploads/2025/08/08145309/MY26-SISKIU-T8-UDH-CHAMELEON-GREEN-P.png" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Polygon</span><h3 class="p-name"><a class="stretch" href="/en/polygon-siskiu-t8">Siskiu T8</a></h3><p class="p-desc">Mountain · Trail full suspension</p><span class="p-price">61.800.000₫</span></div></article>
-        <article class="p-card" data-type="mtb"><div class="p-img tire"><span class="tag hot">Hot</span><img src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/01-terreno-xc-race-black.webp?width=600" alt="Vittoria Terreno XC tyre" loading="lazy"><img class="alt" src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/02-terreno-xc-race-brown.webp?width=600" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Vittoria · MTB</span><h3 class="p-name"><a class="stretch" href="/en/vittoria-terreno-xc">Terreno XC</a></h3><p class="p-desc">A rocket on hardpack</p><ul class="models"><li>XC Race · XC Trail</li></ul><span class="p-price">From 1.345.000₫</span></div></article>
-      </div>
-    </div>
-  </section>
-
-  <!-- TIRES (ẩn) -->
-  <section class="section" id="tires" style="padding-top:0" hidden>
-    <div class="container">
-      <div class="sec-head"><h2>Vittoria tyres</h2><a class="see-all" href="/en/lop-xe">View all tyres</a></div>
-      <div class="mtb-tabs" role="tablist" aria-label="Tyre types">
-        <button role="tab" id="tab-tire-road" aria-controls="panel-tire-road" aria-selected="true">Road</button>
-        <button role="tab" id="tab-tire-mtb" aria-controls="panel-tire-mtb" aria-selected="false" tabindex="-1">MTB</button>
-        <button role="tab" id="tab-tire-gravel" aria-controls="panel-tire-gravel" aria-selected="false" tabindex="-1">Gravel</button>
-        <button role="tab" id="tab-tire-dj" aria-controls="panel-tire-dj" aria-selected="false" tabindex="-1">DirtJump</button>
-      </div>
-
-      <div class="mtb-panel" role="tabpanel" id="panel-tire-road" aria-labelledby="tab-tire-road">
-        <div class="grid">
-<article class="p-card">
-            <div class="p-img tire"><span class="tag">Best seller</span><img src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/corsa-pro-tlr-01.webp?width=600" alt="Vittoria Corsa PRO Tubeless-Ready tyre" loading="lazy"><img class="alt" src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/corsa-pro-road-pro-competition-tubeless-ready-2.webp?width=600" alt="" loading="lazy" aria-hidden="true"></div>
-            <div class="p-body"><span class="p-brand">Vittoria</span><h3 class="p-name"><a class="stretch" href="/en/corsa-pro">Corsa PRO</a></h3><p class="p-desc">Premium race tyre · Grip in the dry and the wet</p><ul class="models"><li>Tubeless-ready</li><li>28–32mm</li></ul><span class="p-price">1.815.000₫</span></div>
-          </article>
-<article class="p-card"><div class="p-img tire"><span class="tag">Limited</span><img src="https://vittoria.com/cdn/shop/files/corsa-pro-pink-01.webp?width=600" alt="Vittoria Corsa PRO Limited Edition tyre" loading="lazy"><img class="alt" src="https://vittoria.com/cdn/shop/files/corsa-pro-pink-02.webp?width=1000" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Vittoria · Road</span><h3 class="p-name"><a class="stretch" href="/en/vittoria-corsa-pro-limited">Corsa PRO Limited Edition</a></h3><p class="p-desc">Corsa PRO in new colours</p><ul class="models"><li>Tubeless-Ready</li></ul><span class="p-price">1.895.000₫</span></div></article>
-<article class="p-card"><div class="p-img tire"><span class="tag dark">Time Trial / Triathlon</span><img src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/corsa-pro-speed-size30-01-HPNEW.webp?width=600" alt="Vittoria Corsa PRO Speed tyre" loading="lazy"><img class="alt" src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/corsa-pro-speed-pro-competition-time-trial-01.webp?width=600" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Vittoria · Road</span><h3 class="p-name"><a class="stretch" href="/en/vittoria-corsa-pro-speed">Corsa PRO Speed</a></h3><p class="p-desc">The fastest tyre for time trials &amp; triathlon</p><ul class="models"><li>Tubeless-Ready</li></ul><span class="p-price">1.815.000₫</span></div></article>
-<article class="p-card"><div class="p-img tire"><span class="tag dark">Racing &amp; training</span><img src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/corsa-next-tlr-01.webp?width=600" alt="Vittoria Corsa N.Ext tyre" loading="lazy"><img class="alt" src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/corsa-next-road-competition-tubeless-ready-2.webp?width=600" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Vittoria · Road</span><h3 class="p-name"><a class="stretch" href="/en/vittoria-corsa-next">Corsa N.Ext</a></h3><p class="p-desc">Race speed with everyday training durability</p><ul class="models"><li>Tubeless-Ready · Tube-type</li></ul><span class="p-price">1.295.000₫</span></div></article>
-      </div>
-      </div>
-
-      <div class="mtb-panel" role="tabpanel" id="panel-tire-mtb" aria-labelledby="tab-tire-mtb" hidden>
-        <div class="grid">
-
-<article class="p-card"><div class="p-img tire"><span class="tag dark">Cross Country</span><img src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/01-terreno-xc-race-black.webp?width=600" alt="Vittoria Terreno XC tyre" loading="lazy"><img class="alt" src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/02-terreno-xc-race-brown.webp?width=600" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Vittoria · MTB</span><h3 class="p-name"><a class="stretch" href="/en/vittoria-terreno-xc">Terreno XC</a></h3><p class="p-desc">A rocket on hardpack</p><ul class="models"><li>XC Race · XC Trail</li></ul><span class="p-price">From 1.345.000₫</span></div></article>
-<article class="p-card"><div class="p-img tire"><span class="tag dark">Cross Country</span><img src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/peyote-mtb-cross-country-race-1.webp?width=600" alt="Vittoria Peyote tyre" loading="lazy"><img class="alt" src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/peyote-mtb-cross-country-race-2.webp?width=600" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Vittoria · MTB</span><h3 class="p-name"><a class="stretch" href="/en/vittoria-peyote">Peyote</a></h3><p class="p-desc">World Cup speed on all terrain</p><ul class="models"><li>XC Race · XC Trail</li></ul><span class="p-price">From 1.345.000₫</span></div></article>
-<article class="p-card"><div class="p-img tire"><span class="tag dark">Cross Country</span><img src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/mezcal-mtb-cross-country-race-1_2724a060-7d95-4efc-8ac6-1b67b1ff2160.webp?width=600" alt="Vittoria Mezcal tyre" loading="lazy"><img class="alt" src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/mezcal-mtb-cross-country-race-2_0b6b7cbf-64d2-49e1-af55-d78618a86a6e.webp?width=600" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Vittoria · MTB</span><h3 class="p-name"><a class="stretch" href="/en/vittoria-mezcal">Mezcal</a></h3><p class="p-desc">Pure XC speed, a multiple champion</p><ul class="models"><li>XC Race · XC Trail</li></ul><span class="p-price">1.400.000₫</span></div></article>
-<article class="p-card"><div class="p-img tire"><span class="tag dark">Trail / Enduro</span><img src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/mazza-trail-01_2.webp?width=600" alt="Vittoria Mazza tyre" loading="lazy"><img class="alt" src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/mazza-trail-02_1.webp?width=600" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Vittoria · MTB</span><h3 class="p-name"><a class="stretch" href="/en/vittoria-mazza">Mazza</a></h3><p class="p-desc">Master technical trails</p><ul class="models"><li>Trail · Enduro · Enduro Race</li></ul><span class="p-price">From 1.555.000₫</span></div></article>
-      </div>
-      </div>
-
-      <div class="mtb-panel" role="tabpanel" id="panel-tire-gravel" aria-labelledby="tab-tire-gravel" hidden>
-        <div class="grid">
-<article class="p-card"><div class="p-img tire"><span class="tag">PRO</span><img src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/terreno-PRO-T30-fineloose-gravel-01.webp?width=600" alt="Vittoria Terreno PRO T30 Fine Loose tyre" loading="lazy"><img class="alt" src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/terreno-PRO-T30-fineloose-gravel-02.webp?width=600" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Vittoria · Gravel</span><h3 class="p-name"><a class="stretch" href="/en/terreno-pro-t30">Terreno PRO T30 Fine Loose</a></h3><p class="p-desc">Fine gravel, loose dirt</p><ul class="models"><li>PRO Race · Racing</li></ul><span class="p-price">1.815.000₫</span></div></article>
-<article class="p-card"><div class="p-img tire"><span class="tag">PRO</span><img src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/terreno-PRO-T50-mixed-gravel-01.webp?width=600" alt="Vittoria Terreno PRO T50 Mixed tyre" loading="lazy"><img class="alt" src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/terreno-PRO-T50-mixed-gravel-02.webp?width=600" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Vittoria · Gravel</span><h3 class="p-name"><a class="stretch" href="/en/terreno-pro-t50">Terreno PRO T50 Mixed</a></h3><p class="p-desc">Mixed terrain</p><ul class="models"><li>PRO Race · Racing</li></ul><span class="p-price">1.815.000₫</span></div></article>
+<main id="main" class="pdp listing">
+  <div class="container"><nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/en/home">Home</a></li><li><a href="/en/guides">Guides</a></li><li aria-current="page">Tubeless tyre pressure: how much is right?</li></ol></nav></div>
+  <div class="container"><article class="article">
+    <p class="meta">Tyre tech · 21/10/2026</p>
+    <h1>Tubeless tyre pressure: how much is right?</h1>
+    <p class="lead">Tubeless tyres let you run lower pressure than tyres with tubes — smoother and grippier, without the risk of pinch flats. But how much should you pump? Here is how to choose your pressure, with a table of starting points.</p>
+    <figure class="hero-img"><img src="https://vittoria.com/cdn/shop/files/Banner_HERO_Horizontal_3_69510693-5265-4d5e-95ae-4706d0cb7fdd.webp?width=1600" alt="Tubeless tyre pressure: how much is right?"></figure>
+    <div class="body">
+<h2>Why can tubeless tyres run lower pressure?</h2>
+<p>Tyres with tubes are prone to “pinch flats” when under-inflated: the tube gets squeezed between the rim and an obstacle and punctures. Tubeless tyres have no tube, so this can't happen, and the sealant inside seals small punctures while you ride. That lets you lower the pressure so the tyre hugs the road better, rolls more smoothly on rough surfaces and grips more in corners.</p>
+<h2>What determines your pressure</h2>
+<ul>
+<li><strong>Total weight</strong> of rider and bike: the heavier, the higher the pressure you need.</li>
+<li><strong>Tyre width</strong>: the wider the tyre, the lower the pressure.</li>
+<li><strong>Internal rim width</strong>: wider rims make the tyre “balloon” more, usually allowing slightly lower pressure.</li>
+<li><strong>Road surface and weather</strong>: on rough roads, dirt or in the rain, drop the pressure slightly for more grip.</li>
+<li><strong>Front and rear</strong>: the rear wheel carries more load, so it usually runs slightly higher pressure than the front.</li>
+</ul>
+<h2>Starting-point reference table</h2>
+<p>For a combined rider and bike weight of about 75–85 kg. Add 5–10% for every 10 kg more; reduce accordingly if lighter.</p>
+<div class="table-wrap"><table><thead><tr><th scope="col">Tyre type</th><th scope="col">Tyre width</th><th scope="col">Pressure (bar)</th><th scope="col">Pressure (psi)</th></tr></thead><tbody>
+<tr><th scope="row">Road</th><td>28mm</td><td>4,5 – 5,5</td><td>65 – 80</td></tr>
+<tr><th scope="row">Road / All-road</th><td>32mm</td><td>3,8 – 4,8</td><td>55 – 70</td></tr>
+<tr><th scope="row">Gravel</th><td>38–40mm</td><td>2,2 – 3,0</td><td>32 – 44</td></tr>
+<tr><th scope="row">Gravel</th><td>45mm and wider</td><td>1,8 – 2,6</td><td>26 – 38</td></tr>
+<tr><th scope="row">MTB Cross Country</th><td>2.2–2.4"</td><td>1,4 – 1,8</td><td>20 – 26</td></tr>
+<tr><th scope="row">MTB Trail / Enduro</th><td>2.4–2.6"</td><td>1,3 – 1,7</td><td>19 – 25</td></tr>
+</tbody></table></div>
+<p>These are only starting points. Ride, then adjust in steps of about 0.1–0.2 bar until it feels right.</p>
+<h2>Limits you must not exceed</h2>
+<ul>
+<li>Always stay within the minimum – maximum pressure printed on the tyre sidewall.</li>
+<li>With <strong>hookless rims</strong>, the standard maximum pressure is <strong>5 bar (72.5 psi)</strong>, even if the tyre says higher. Also check your rim manufacturer's limits.</li>
+<li>Running too low on MTB/gravel can make the tyre bottom out on rocks and may dent the rim. Inserts such as Vittoria Air-Liner protect the rim and let you run low pressure more safely.</li>
+</ul>
+<h2>Signs your pressure is wrong</h2>
+<ul>
+<li><strong>Too hard:</strong> the bike bounces, your hands buzz and you lose grip in corners or on rough roads.</li>
+<li><strong>Too soft:</strong> the tyre squirms and folds in corners, feels sluggish and heavy, and you hear the rim hitting rocks.</li>
+</ul>
+<h2>Caring for tubeless tyres</h2>
+<ul>
+<li>Check your pressure before every ride with an accurate gauge — tubeless tyres slowly lose air over time.</li>
+<li>Top up or replace the sealant about every 3–6 months, sooner in hot weather or if you ride a lot.</li>
+<li>Use proper tubeless rim tape and valves to prevent air leaks.</li>
+</ul>
+<p>Need advice on tyres, sealant or converting your bike to tubeless? The Spinlab technical team is always ready to help.</p>
 </div>
-      </div>
-
-      <div class="mtb-panel" role="tabpanel" id="panel-tire-dj" aria-labelledby="tab-tire-dj" hidden>
-        <div class="grid">
-</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- HELP -->
-  <section class="section">
-    <div class="container">
-      <div class="help">
-        <div><h2>Not sure which bike to choose?</h2><p>The Spinlab technical team will help you choose the right size, bike and tyres.</p></div>
-        <div class="actions"><a class="btn btn-yellow" href="tel:0399337533">Call 0399 337 533</a><a class="btn btn-zalo" href="https://zalo.me/0399337533" target="_blank" rel="noopener"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="" width="22" height="22">Chat Zalo</a><a class="btn btn-light" href="/en/dai-ly">Find a dealer</a></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- NEWS -->
-  <section class="section" style="padding-top:0">
-    <div class="container">
-      <div class="sec-head"><h2>News &amp; Guides</h2><a class="see-all" href="/en/tin-tuc">View all</a></div>
-      <div class="news">
-        <a href="/en/tin-tuc-polygon-strattos-c"><div class="n-img"><img src="https://media.polygonbikes.com/wp-content/uploads/2026/02/23154155/Header-Strattos-C-by-Velo-450x300.jpg" alt="" loading="lazy"></div><small>New products</small><h3>Polygon Strattos C: the new-generation endurance road bike</h3></a>
-        <a href="/en/huong-dan-ap-suat-lop-tubeless"><div class="n-img"><img src="https://vittoria.com/cdn/shop/files/Banner_HERO_Horizontal_3_69510693-5265-4d5e-95ae-4706d0cb7fdd.webp?width=600" alt="" loading="lazy"></div><small>Tyre tech</small><h3>Tubeless tyre pressure: how much is right?</h3></a>
-        <a href="/en/huong-dan-chon-size-xe-dap"><div class="n-img"><img src="https://media.polygonbikes.com/wp-content/uploads/2026/04/23161748/Heist-Feature-1.jpg" alt="" loading="lazy"></div><small>Guides</small><h3>Choosing your bike size by height</h3></a>
-      </div>
-    </div>
-  </section>
+  </article>
+  <div class="art-help"><div class="help"><div><h2>Need more advice?</h2><p>The Spinlab technical team will help you choose the right size, bike and tyres.</p></div><div class="actions"><a class="btn btn-yellow" href="tel:0399337533">Call 0399 337 533</a><a class="btn btn-zalo" href="https://zalo.me/0399337533" target="_blank" rel="noopener"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="" width="22" height="22">Chat Zalo</a><a class="btn btn-light" href="/en/dealers">Find a dealer</a></div></div></div>
+  <section class="art-products"><h2>Products in this article</h2><div class="grid"><article class="p-card"><div class="p-img tire"><img src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/universal-tire-sealant-family.webp?width=600" alt="Vittoria Universal Tubeless Sealant" loading="lazy"><img class="alt" src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/vittoria-Universal-Tire-Sealant-80ml.webp?width=600" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Vittoria · Tubeless · Tyre sealant</span><h3 class="p-name"><a class="stretch" href="/en/vittoria-universal-sealant">Universal Tubeless Sealant</a></h3><span class="p-price">From 360.000₫</span></div></article><article class="p-card"><div class="p-img tire"><img src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/air-liner-light-gravel-tire-insert-1.webp?width=600" alt="Vittoria Air-Liner Light Gravel" loading="lazy"><img class="alt" src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/air-liner-light-gravel.webp?width=600" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Vittoria · Tubeless · Air-Liner Light</span><h3 class="p-name"><a class="stretch" href="/en/vittoria-air-liner-light-gravel">Air-Liner Light Gravel</a></h3><span class="p-price">1.250.000₫</span></div></article><article class="p-card"><div class="p-img tire"><img src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/tubeless-rim-tape-01_1.webp?width=600" alt="Vittoria Tubeless rim tape" loading="lazy"><img class="alt" src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/tubeless-rim-tape-04_1.webp?width=600" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Vittoria · Tubeless · Rim tape</span><h3 class="p-name"><a class="stretch" href="/en/vittoria-tubeless-rim-tape">Tubeless rim tape</a></h3><span class="p-price">From 620.000₫</span></div></article><article class="p-card"><div class="p-img tire"><img src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/corsa-next-tlr-01.webp?width=600" alt="Vittoria Corsa N.Ext" loading="lazy"><img class="alt" src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/corsa-next-road-competition-tubeless-ready-2.webp?width=600" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Vittoria · Road tyres · Racing &amp;amp; training</span><h3 class="p-name"><a class="stretch" href="/en/vittoria-corsa-next">Corsa N.Ext</a></h3><span class="p-price">1.295.000₫</span></div></article></div></section>
+  <section class="art-more"><h2>More articles</h2><div class="art-grid"><a class="art-card" href="/en/news-polygon-strattos-c"><div class="n-img"><img src="https://media.polygonbikes.com/wp-content/uploads/2026/02/23154155/Header-Strattos-C-by-Velo-450x300.jpg" alt="" loading="lazy"></div><small>New products · 21/10/2026</small><h3>Polygon Strattos C: the new-generation endurance road bike</h3><p>A smooth ACX carbon frame, clearance for 34mm tyres and a semi-integrated LINC cockpit — Polygon designed the Strattos C for long days on the road. Three versions…</p></a><a class="art-card" href="/en/guide-bike-size-by-height"><div class="n-img"><img src="https://media.polygonbikes.com/wp-content/uploads/2026/04/23161748/Heist-Feature-1.jpg" alt="" loading="lazy"></div><small>Guides · 21/10/2026</small><h3>Choosing your bike size by height</h3><p>Choosing the right frame size is the most important step when buying a bike: a bike that fits is comfortable, handles well and avoids aches and pains. The table below…</p></a></div></section></div>
 </main>
 
 
 <footer class="footer">
   <div class="container">
     <div class="f-grid">
-      <div class="f-about"><a href="/en/trangchu" class="logo-link" aria-label="Spinlab — Home"><span class="logo"></span></a><address class="company"><strong>SPINLAB VIETNAM CO., LTD.</strong><span>MST: 0318844446</span><span>N1 Dien Bien Phu, Thanh My Tay Ward, Ho Chi Minh City</span></address>
+      <div class="f-about"><a href="/en/home" class="logo-link" aria-label="Spinlab — Home"><span class="logo"></span></a><address class="company"><strong>SPINLAB VIETNAM CO., LTD.</strong><span>MST: 0318844446</span><span>N1 Dien Bien Phu, Thanh My Tay Ward, Ho Chi Minh City</span></address>
         <h4 style="margin-top:24px">Follow Spinlab</h4>
         <ul class="social">
           <li><a class="fb" href="https://www.facebook.com/profile.php?id=61573821032401" target="_blank" rel="noopener" aria-label="Spinlab on Facebook (opens in a new tab)"><svg aria-hidden="true"><use href="#i-facebook"/></svg></a></li>
@@ -826,8 +729,8 @@ body.cmp-open .zalo-fab{bottom:96px}
           <li><a class="z" href="https://zalo.me/0399337533" target="_blank" rel="noopener" aria-label="Spinlab on Zalo (opens in a new tab)"><span class="zt" aria-hidden="true">Zalo</span></a></li>
         </ul>
       </div>
-      <div><h4>Support</h4><ul><li><a href="#">Warranty policy</a></li><li><a href="#">Shipping</a></li><li><a href="/en/huong-dan-chon-size-xe-dap">Size guide</a></li><li><a href="#">FAQ</a></li></ul></div>
-      <div><h4>Contact</h4><ul><li>Showroom: 13 Street 14, Quarter 4, An Khanh Ward, Ho Chi Minh City</li><li><a href="tel:0399337533">0399 337 533</a></li><li><a href="/en/dai-ly">Dealer network</a></li></ul></div>
+      <div><h4>Support</h4><ul><li><a href="#">Warranty policy</a></li><li><a href="#">Shipping</a></li><li><a href="/en/guide-bike-size-by-height">Size guide</a></li><li><a href="#">FAQ</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li>Showroom: 13 Street 14, Quarter 4, An Khanh Ward, Ho Chi Minh City</li><li><a href="tel:0399337533">0399 337 533</a></li><li><a href="/en/dealers">Dealer network</a></li></ul></div>
     </div>
     <div class="f-bottom"><span>© 2026 Spinlab Vietnam Co., Ltd. All rights reserved.</span><span>Privacy policy · Terms</span></div>
   </div>
@@ -882,6 +785,7 @@ body.cmp-open .zalo-fab{bottom:96px}
   hero.addEventListener('focusin',stop); hero.addEventListener('focusout',start);
   setPause(paused);
 })();
+
 // Mobile menu drawer: ☰ opens the menu as a side panel; Escape, the backdrop, ✕ or a link closes it
 (() => {
   const btn=document.querySelector('.menu-btn'), nav=document.querySelector('.nav');
@@ -933,7 +837,7 @@ body.cmp-open .zalo-fab{bottom:96px}
     buy.after(b); }
   // tray
   const tray=document.createElement('div'); tray.className='cmp-tray'; tray.setAttribute('role','region'); tray.setAttribute('aria-label','Products to compare');
-  tray.innerHTML='<div class="container"><ul class="cmp-items"></ul><div class="cmp-actions"><button type="button" class="cmp-clear">Clear all</button><a class="btn btn-primary cmp-go" href="/en/so-sanh">Compare</a></div></div>';
+  tray.innerHTML='<div class="container"><ul class="cmp-items"></ul><div class="cmp-actions"><button type="button" class="cmp-clear">Clear all</button><a class="btn btn-primary cmp-go" href="/en/compare">Compare</a></div></div>';
   if(!compare) document.body.appendChild(tray);
   tray.querySelector('.cmp-clear').addEventListener('click',()=>save([]));
   function render(){
@@ -945,7 +849,7 @@ body.cmp-open .zalo-fab{bottom:96px}
       Array.from({length:MAX-l.length},()=>'<li class="empty">Add a product</li>').join('');
     ul.querySelectorAll('[data-rm]').forEach(b=>b.addEventListener('click',()=>save(load().filter(x=>x.id!==b.dataset.rm))));
     const go=tray.querySelector('.cmp-go'); go.textContent='Compare ('+l.length+')';
-    go.href='/en/so-sanh?ids='+l.map(x=>encodeURIComponent(x.id.replace(/\.html$/,''))).join(',');
+    go.href='/en/compare?ids='+l.map(x=>encodeURIComponent(x.id.replace(/\.html$/,''))).join(',');
     go.setAttribute('aria-disabled',l.length<2);
     const on=l.length>0 && !compare; tray.classList.toggle('on',on); document.body.classList.toggle('cmp-open',on);
   }

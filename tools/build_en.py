@@ -1,4 +1,5 @@
-"""English version of the site: en/<page>.html, served as /en/<page> (and /en/trangchu for the homepage).
+"""English version of the site: en/<english-slug>.html, served as /en/<english-slug> (homepage: /en/home).
+Pages with Vietnamese slugs get English ones (EN_SLUG); product pages keep their slug.
 
 Every Vietnamese page is translated with data/en.json (see tools/i18n.py), internal links are moved under /en/,
 asset paths are made absolute, and both language versions get a VI / EN switch plus hreflang links.
@@ -16,7 +17,22 @@ import i18n  # noqa: E402
 D = json.load(open(os.path.join(ROOT, 'data', 'en.json'), encoding='utf-8'))
 PAGES = sorted(os.path.basename(f) for f in glob.glob(os.path.join(ROOT, '*.html')) if not f.endswith('v1-premium.html'))
 NAMES = {p[:-5] for p in PAGES} | {'trangchu'}
-url = lambda page, en: ('/en' if en else '') + ('/trangchu' if page == 'index.html' else '/' + page[:-5])
+EN_SLUG = {
+    'index': 'home', 'trangchu': 'home', 'xe-dap': 'bikes', 'xe-road': 'road-bikes', 'xe-mtb': 'mountain-bikes', 'xe-gravel': 'gravel-bikes',
+    'xe-city': 'city-hybrid-bikes', 'xe-trial': 'trial-bikes', 'phu-tung': 'parts', 'lop-xe': 'tyres', 'day-cuon-tay-lai': 'handlebar-tape',
+    'thuong-hieu': 'brands', 'thuong-hieu-polygon': 'brand-polygon', 'thuong-hieu-vittoria': 'brand-vittoria', 'thuong-hieu-emume': 'brand-emume',
+    'thuong-hieu-story-bike': 'brand-story-bike', 'dai-ly': 'dealers', 'so-sanh': 'compare', 'san-pham-moi': 'new-products', 'tin-tuc': 'news',
+    'huong-dan': 'guides', 'tin-tuc-polygon-strattos-c': 'news-polygon-strattos-c',
+    'huong-dan-ap-suat-lop-tubeless': 'guide-tubeless-tyre-pressure', 'huong-dan-chon-size-xe-dap': 'guide-bike-size-by-height',
+}
+en_slug = lambda name: EN_SLUG.get(name, name)
+
+
+def url(page, en):
+    name = page[:-5]
+    if en:
+        return '/en/' + en_slug(name)
+    return '/trangchu' if name == 'index' else '/' + name
 
 SWITCH_RE = re.compile(r'<button class="lang"[^>]*>.*?</button>|<span class="lang"[^>]*>.*?>EN</a></span>(?:<a href="[^"]*" lang="en" hreflang="en"[^>]*>EN</a></span>)*', re.S)
 ALT_RE = re.compile(r'\s*<link rel="alternate" hreflang="[^"]*" href="[^"]*">')
@@ -48,13 +64,13 @@ def common(s, page, en):
 def to_en(s):
     s = re.sub(r'<html lang="vi"', '<html lang="en"', s, 1)
     # internal links -> /en/...
-    s = re.sub(r'(href=\\?")/([a-z0-9-]+)(?=[#?"\\])', lambda m: m.group(1) + ('/en/' if m.group(2) in NAMES else '/') + m.group(2), s)
+    s = re.sub(r'(href=\\?")/([a-z0-9-]+)(?=[#?"\\])', lambda m: m.group(1) + ('/en/' + en_slug(m.group(2)) if m.group(2) in NAMES else '/' + m.group(2)), s)
     # relative assets -> absolute (pages now live one folder down)
     s = re.sub(r'((?:src|href|data-src)=\\?")(img/)', r'\1/\2', s)
     s = re.sub(r'url\((["\']?)img/', r'url(\1/img/', s)
     # scripts that build URLs / read product ids from links
     s = s.replace(".replace(/^\\//,'')", ".replace(/^\\/(?:en\\/)?/,'')")
-    s = s.replace("'/so-sanh", "'/en/so-sanh").replace("'/trangchu'", "'/en/trangchu'").replace("'/'+id", "'/en/'+id")
+    s = s.replace("'/so-sanh", "'/en/compare").replace("'/trangchu'", "'/en/home'").replace("'/'+id", "'/en/'+id")
     return s
 
 
@@ -70,10 +86,11 @@ for page in PAGES:
     for k in miss:
         missing.setdefault(k, page)
     en = common(to_en(en), page, True)
-    open(os.path.join(ROOT, 'en', page), 'w', encoding='utf-8').write(en)
-# English pages whose Vietnamese page no longer exists
+    open(os.path.join(ROOT, 'en', en_slug(page[:-5]) + '.html'), 'w', encoding='utf-8').write(en)
+# English pages whose Vietnamese page no longer exists (or that were renamed)
+keep = {en_slug(p[:-5]) + '.html' for p in PAGES}
 for f in glob.glob(os.path.join(ROOT, 'en', '*.html')):
-    if os.path.basename(f) not in PAGES:
+    if os.path.basename(f) not in keep:
         os.remove(f)
 with open(os.path.join(ROOT, 'tools', 'en-missing.txt'), 'w', encoding='utf-8') as fh:
     for k, page in missing.items():

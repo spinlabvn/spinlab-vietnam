@@ -28,14 +28,14 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             return self._redirect('/' + m.group(1) + q)
         if re.match(r'/(tools|\.git)(/|$)', path):
             return self.send_error(403)
-        if path in ('/en', '/en/'):
-            return self._redirect('/en/trangchu' + q)
+        if path in ('/en', '/en/', '/en/trangchu', '/en/trangchu/'):
+            return self._redirect('/en/home' + q)
         m = re.fullmatch(r'/(en/)?([a-z0-9-]+)\.html', path)
         if m and m.group(1):
-            return self._redirect('/en/' + ('trangchu' if m.group(2) == 'index' else m.group(2)) + q)
+            return self._redirect('/en/' + m.group(2) + q)
         m = re.fullmatch(r'/(en/)?([a-z0-9-]+)/?', path)
         if m:
-            name = 'index' if m.group(2) == 'trangchu' else m.group(2)
+            name = 'index' if m.group(2) == 'trangchu' and not m.group(1) else m.group(2)
             if os.path.isfile(os.path.join(ROOT, (m.group(1) or '') + name + '.html')):
                 self.path = '/' + (m.group(1) or '') + name + '.html' + q
         return super().do_GET()
