@@ -102,8 +102,7 @@ for k, t, s in [('dh', 'Downhill', 'Hành trình 200mm cho đường đổ đèo
     pc.append((k, t, s, ''.join(groups_from('xe-mtb.html', k))))
 other = [('gravel', 'Gravel', 'Xe đa địa hình cho đường nhựa lẫn đường đất.', [('tambora-9-axs', 'SRAM Force XPLR AXS 1x13'), ('tambora-7-di2', 'Shimano GRX Di2 1x12'), ('tambora-6', 'Shimano GRX 2x12'), ('tambora-4', 'Shimano CUES 2x10'), ('path-x5', 'Gravel · Adventure')]),
          ('city', 'City - Hybrid', 'Đi làm, đi phố và dạo chơi cuối tuần.', [('heist-7', 'Hybrid · Shimano Deore 1x12'), ('heist-5', 'Hybrid · Shimano CUES 1x'),
-                                                                             ('heist-2', 'Hybrid · Shimano Altus 1x8'), ('heist-x7', 'Hybrid · Đi phố'),
-                                                                             ('path-4', 'City · Phuộc carbon'), ('path-3', 'City · Shimano CUES 1x9'),
+                                                                             ('heist-2', 'Hybrid · Shimano Altus 1x8'), ('path-4', 'City · Phuộc carbon'), ('path-3', 'City · Shimano CUES 1x9'),
                                                                              ('path-2', 'City · Shimano Altus 1x8')])]
 for k, t, s, items in other:
     items = [(sl, d) for sl, d in items if sl in VI and sl in B]
