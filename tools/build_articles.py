@@ -19,9 +19,11 @@ BK = {b['slug']: b for b in json.load(open(os.path.join(ROOT, 'tools', 'generato
 PRICES = json.load(open(os.path.join(ROOT, 'data', 'polygon-prices.json'), encoding='utf-8'))['prices']
 vnd = lambda n: f'{n:,}'.replace(',', '.') + '₫'
 CATS = {'tin-tuc': ('Tin tức', 'tin-tuc.html'), 'huong-dan': ('Hướng dẫn', 'huong-dan.html')}
-CTA = ('<div class="cta"><a class="btn btn-primary" href="tel:0399337533">Gọi 0399 337 533</a>'
-       '<a class="btn btn-zalo" href="https://zalo.me/0399337533" target="_blank" rel="noopener">Chat Zalo</a>'
-       '<a class="btn btn-outline" href="dai-ly.html">Tìm đại lý</a></div>')
+# same contact block as the homepage ("Chưa biết chọn xe nào?")
+CTA = ('<div class="help"><div><h2>Cần tư vấn thêm?</h2><p>Đội ngũ kỹ thuật Spinlab sẽ tư vấn chọn size, dòng xe và lốp phù hợp với bạn.</p></div>'
+       '<div class="actions"><a class="btn btn-yellow" href="tel:0399337533">Gọi 0399 337 533</a>'
+       '<a class="btn btn-zalo" href="https://zalo.me/0399337533" target="_blank" rel="noopener"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="" width="22" height="22">Chat Zalo</a>'
+       '<a class="btn btn-light" href="dai-ly.html">Tìm đại lý</a></div></div>')
 
 
 def product_card(f, desc=''):
@@ -196,6 +198,7 @@ CSS = '''/* Articles */
 .article .body figure img{width:100%;border-radius:var(--radius)}
 .article .body a{color:var(--brand-red);text-decoration:underline;text-underline-offset:2px}
 .article .body table{font-size:15px}
+.art-help{margin:8px 0 8px}
 .article .cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
 .size-grid{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
 .size-grid caption small{display:block;font-weight:400;color:var(--muted);font-size:13px}
@@ -236,8 +239,9 @@ for a in ARTICLES:
     <h1>{E(a['title'])}</h1>
     <p class="lead">{E(a['lead'])}</p>
     <figure class="hero-img{fit}"><img src="{E(a['image'])}" alt="{E(a['title'])}"></figure>
-    <div class="body">{a['body']}{CTA}</div>
+    <div class="body">{a['body']}</div>
   </article>
+  <div class="art-help">{CTA}</div>
   {products(a['products']) if a['products'] else ''}
   <section class="art-more"><h2>Bài viết khác</h2><div class="art-grid">{"".join(art_card(x) for x in more)}</div></section></div>
 </main>'''
