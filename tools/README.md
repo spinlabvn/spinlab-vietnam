@@ -30,6 +30,7 @@ python3 ../clean_urls.py              # LUÔN chạy cuối: đổi link sang d�
 | `story.py` | Dữ liệu Story Continue Pro (chỉ các thông tin thấy được trên ảnh); gộp vào `bikes.json` |
 | `city.py` | Dữ liệu Heist 2/5/7 (MY27) và Path 2/3/4 (MY26) lấy từ polygonbikes.com; gộp vào `bikes.json` |
 | `city_listing.py` | Tạo trang danh sách `xe-city.html` (City - Hybrid): `python3 city_listing.py ../.. bikes.json` — sửa `GROUPS` để thêm/bớt xe |
+| `cascade.py` | Dữ liệu Cascade 3/4/5 (Leisure MTB) lấy từ polygonbikes.com; gộp vào `bikes.json` và dựng tab Leisure của `xe-mtb.html`: `python3 cascade.py ../..` |
 
 Thêm một xe mới: lấy dữ liệu (extract.py hoặc nhập tay như tambora.py) → gộp vào `bikes.json` → thêm mục trong `vi.py` → chạy `gen.py` cho slug đó → thêm thẻ vào trang danh sách (xe-road / xe-mtb / xe-gravel) → chạy hai lệnh ở trên.
 

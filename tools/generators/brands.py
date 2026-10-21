@@ -98,7 +98,8 @@ pc.append(('road', 'Road', 'Xe đua aero, endurance và xe road nhập môn.', r
 for k, t, s in [('dh', 'Downhill', 'Hành trình 200mm cho đường đổ đèo và giải đua downhill.'),
                 ('enduro', 'Enduro', 'Leo được, đổ đèo mạnh — hành trình 170mm.'),
                 ('trail', 'Trail-AM', 'Cân bằng giữa leo dốc và đổ đèo.'),
-                ('xc', 'Cross Country', 'Nhẹ, đạp nhanh, leo dốc hiệu quả.')]:
+                ('xc', 'Cross Country', 'Nhẹ, đạp nhanh, leo dốc hiệu quả.'),
+                ('leisure', 'Leisure MTB', 'Xe địa hình phổ thông cho đi phố và đường mòn nhẹ.')]:
     pc.append((k, t, s, ''.join(groups_from('xe-mtb.html', k))))
 other = [('gravel', 'Gravel', 'Xe đa địa hình cho đường nhựa lẫn đường đất.', [('tambora-9-axs', 'SRAM Force XPLR AXS 1x13'), ('tambora-7-di2', 'Shimano GRX Di2 1x12'), ('tambora-6', 'Shimano GRX 2x12'), ('tambora-4', 'Shimano CUES 2x10'), ('path-x5', 'Gravel · Adventure')]),
          ('city', 'City - Hybrid', 'Đi làm, đi phố và dạo chơi cuối tuần.', [('heist-7', 'Hybrid · Shimano Deore 1x12'), ('heist-5', 'Hybrid · Shimano CUES 1x'),

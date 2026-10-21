@@ -2,6 +2,24 @@
  "note": "Ngày đăng sản phẩm — do tools/build_new_products.py quản lý",
  "products": [
   {
+   "href": "polygon-cascade-5.html",
+   "added": "2026-10-21 12:32",
+   "seq": 105,
+   "name": "CASCADE 5"
+  },
+  {
+   "href": "polygon-cascade-4.html",
+   "added": "2026-10-21 12:32",
+   "seq": 104,
+   "name": "CASCADE 4"
+  },
+  {
+   "href": "polygon-cascade-3.html",
+   "added": "2026-10-21 12:32",
+   "seq": 103,
+   "name": "CASCADE 3"
+  },
+  {
    "href": "polygon-heist-7.html",
    "added": "2026-10-21 10:12",
    "seq": 102,
