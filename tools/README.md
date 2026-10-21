@@ -14,7 +14,8 @@ python3 ../build_compare.py           # cập nhật dữ liệu so sánh (so-sa
 python3 ../card_hover.py              # ảnh thứ hai khi trỏ chuột vào thẻ sản phẩm
 python3 ../brand_logos.py             # logo thương hiệu cùng cỡ (trang chủ, menu, /thuong-hieu)
 python3 ../build_hubs.py              # trang tổng hợp /xe-dap, /phu-tung, /thuong-hieu + /huong-dan, /su-kien
-python3 ../clean_urls.py              # LUÔN chạy cuối: đổi link sang dạng gọn (/xe-road, /trangchu)
+python3 ../clean_urls.py              # đổi link sang dạng gọn (/xe-road, /trangchu)
+python3 ../build_en.py                # LUÔN chạy cuối: bản tiếng Anh en/ (từ điển data/en.json; câu thiếu -> en-missing.txt)
 ```
 
 ## Xe đạp (Polygon, Story)

@@ -4,6 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Xe đạp — Spinlab</title>
+<link rel="alternate" hreflang="vi" href="/xe-dap">
+<link rel="alternate" hreflang="en" href="/en/xe-dap">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/img/favicon/icon-192.png">
@@ -473,6 +475,18 @@ tbody tr.on{background:#FFF7D6}
 .cmp-clear{border:0;background:none;font-size:13px;text-decoration:underline;color:var(--muted);min-height:44px}
 body.cmp-open .zalo-fab{bottom:96px}
 @media (max-width:600px){.cmp-items li{width:52px;height:52px}.cmp-items img{max-width:44px;max-height:44px}.cmp-clear{display:none}}
+/* Card hover image */
+.p-img>img{transition:opacity .3s}
+.p-img>img.alt{position:absolute;inset:0;width:100%;height:100%;max-width:none;max-height:none;padding:12px;box-sizing:border-box;opacity:0;pointer-events:none}
+.p-img.tire>img.alt{padding:12px 14%}
+.p-img.part>img.alt{padding:12px 8%}
+@media (hover:hover){.p-card:hover .p-img>img.alt{opacity:1}.p-card:hover .p-img:has(>img.alt)>img:not(.alt){opacity:0}}
+/* Brand logos */
+.brand-logo{display:block;height:auto;width:min(calc(var(--lh,30px) * var(--wf,5)),calc(100cqi * var(--wf,5) / 6.5))}
+.brand-tile,.brand-menu a,.hub-logo .hi{container-type:inline-size}
+.brand-tile{--lh:30px}
+.brand-menu{--lh:20px}
+.hub-logo{--lh:40px}
 /* Hub pages */
 .hub-grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin:24px 0 56px}
 .hub{position:relative;display:flex;flex-direction:column;border:1px solid var(--line);border-radius:var(--radius);background:#fff;overflow:hidden;transition:box-shadow .2s}
@@ -486,12 +500,10 @@ body.cmp-open .zalo-fab{bottom:96px}
 .hub .n{margin-top:auto;padding-top:6px;font-size:13px;font-weight:700;color:var(--brand-red)}
 .hub a.stretch::after{content:"";position:absolute;inset:0}
 .hub-logo .hi{aspect-ratio:3/1;background:#fff;border-bottom:1px solid var(--line)}
-/* Brand logos */
-.brand-logo{display:block;height:auto;width:min(calc(var(--lh,30px) * var(--wf,5)),calc(100cqi * var(--wf,5) / 6.5))}
-.brand-tile,.brand-menu a,.hub-logo .hi{container-type:inline-size}
-.brand-tile{--lh:30px}
-.brand-menu{--lh:20px}
-.hub-logo{--lh:40px}
+/* Language switch */
+.lang a{padding:4px 2px;color:var(--muted)}
+.lang a[aria-current]{color:var(--text);font-weight:800}
+.lang a:hover{color:var(--brand-red)}
 </style>
 </head>
 <body>
@@ -530,7 +542,7 @@ body.cmp-open .zalo-fab{bottom:96px}
       <div class="h-tools">
         <a class="tool" href="/dai-ly"><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg><span class="t-text">Hệ thống<b>Đại lý</b></span><span class="sr-only">Hệ thống đại lý</span></a>
         <a class="tool" href="tel:0399337533"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg><span class="t-text">Tư vấn<b>0399 337 533</b></span><span class="sr-only">Gọi tư vấn</span></a>
-        <button class="lang" aria-label="Đổi ngôn ngữ, hiện tại: Tiếng Việt">VI / EN</button>
+        <span class="lang" role="group" aria-label="Ngôn ngữ"><a href="/xe-dap" lang="vi" hreflang="vi" aria-current="true">VI</a><span aria-hidden="true">&nbsp;/&nbsp;</span><a href="/en/xe-dap" lang="en" hreflang="en">EN</a></span>
       </div>
     </div>
     <div class="m-search">

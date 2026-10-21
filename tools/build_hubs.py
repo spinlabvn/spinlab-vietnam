@@ -70,7 +70,7 @@ page('phu-tung.html', 'Phụ tùng', 'Phụ tùng', 'Spinlab', 'Phụ tùng', 'L
      'Phụ tùng chính hãng tại Spinlab: lốp Vittoria, phụ kiện tubeless, dây cuốn tay lái Emume.')
 idx = R('index.html')
 logos = re.findall(r'<a class="brand-tile" href="([^"]+)" aria-label="Sản phẩm ([^"]+)"><span class="bt-inner">(.*?)</span></a>', idx, re.S)
-blurb = {'Polygon': 'Xe đạp road, MTB, gravel, thành phố và trẻ em.', 'Vittoria': 'Lốp xe đạp và phụ kiện tubeless từ Ý.',
+blurb = {'Polygon': 'Xe đạp road, MTB, gravel và City - Hybrid.', 'Vittoria': 'Lốp xe đạp và phụ kiện tubeless từ Ý.',
          'Emume': 'Dây cuốn tay lái và phụ kiện ghi đông.', 'Story Bike': 'Xe dirt jump và street trial.'}
 brand_tiles = []
 for href, name, inner in logos:

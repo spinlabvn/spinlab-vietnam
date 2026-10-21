@@ -111,9 +111,9 @@ for k, t, s, items in other:
 pc = [c for c in pc if ncards(c[3])]
 total = sum(ncards(c[3]) for c in pc)
 body = nav([(k, t, ncards(h)) for k, t, s, h in pc]) + '\n' + '\n'.join(cat(k, t, s, h) for k, t, s, h in pc)
-out = shell('xe-mtb.html', 'Polygon — Toàn bộ xe đạp — Spinlab', f'Toàn bộ {total} mẫu xe đạp Polygon chính hãng tại Spinlab: Road, MTB, Gravel, xe thành phố và xe trẻ em.',
+out = shell('xe-mtb.html', 'Polygon — Toàn bộ xe đạp — Spinlab', f'Toàn bộ {total} mẫu xe đạp Polygon chính hãng tại Spinlab: Road, MTB, Gravel và City - Hybrid.',
             'Polygon', hero('https://media.polygonbikes.com/wp-content/uploads/2024/11/15080846/design-asset-product-highlight-website-polygon-siskiu-t-3.jpg',
-                            'Xe đạp Polygon trên đường mòn', 'Thương hiệu', 'Polygon', f'{total} mẫu xe đạp chính hãng — từ xe đua road, xe địa hình đến xe thành phố và xe trẻ em. Phân phối bởi Spinlab.'), body)
+                            'Xe đạp Polygon trên đường mòn', 'Thương hiệu', 'Polygon', f'{total} mẫu xe đạp chính hãng — từ xe đua road, xe địa hình đến xe thành phố. Phân phối bởi Spinlab.'), body)
 open(os.path.join(D, 'thuong-hieu-polygon.html'), 'w', encoding='utf-8').write(out)
 print('polygon', total, [(k, ncards(h)) for k, t, s, h in pc])
 

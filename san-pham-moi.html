@@ -4,6 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sản phẩm mới — Spinlab</title>
+<link rel="alternate" hreflang="vi" href="/san-pham-moi">
+<link rel="alternate" hreflang="en" href="/en/san-pham-moi">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/img/favicon/icon-192.png">
@@ -485,6 +487,7 @@ tbody tr.on{background:#FFF7D6}
 .cmp-clear{border:0;background:none;font-size:13px;text-decoration:underline;color:var(--muted);min-height:44px}
 body.cmp-open .zalo-fab{bottom:96px}
 @media (max-width:600px){.cmp-items li{width:52px;height:52px}.cmp-items img{max-width:44px;max-height:44px}.cmp-clear{display:none}}
+
 /* Brand page */
 .brand-nav{background:#fff;border-bottom:1px solid var(--line)}
 .brand-nav ul{list-style:none;margin:0;padding:12px 0;display:flex;gap:8px;overflow-x:auto;scrollbar-width:none}
@@ -518,6 +521,10 @@ body.cmp-open .zalo-fab{bottom:96px}
 .brand-tile{--lh:30px}
 .brand-menu{--lh:20px}
 .hub-logo{--lh:40px}
+/* Language switch */
+.lang a{padding:4px 2px;color:var(--muted)}
+.lang a[aria-current]{color:var(--text);font-weight:800}
+.lang a:hover{color:var(--brand-red)}
 </style>
 </head>
 <body>
@@ -556,7 +563,7 @@ body.cmp-open .zalo-fab{bottom:96px}
       <div class="h-tools">
         <a class="tool" href="/dai-ly"><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg><span class="t-text">Hệ thống<b>Đại lý</b></span><span class="sr-only">Hệ thống đại lý</span></a>
         <a class="tool" href="tel:0399337533"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg><span class="t-text">Tư vấn<b>0399 337 533</b></span><span class="sr-only">Gọi tư vấn</span></a>
-        <button class="lang" aria-label="Đổi ngôn ngữ, hiện tại: Tiếng Việt">VI / EN</button>
+        <span class="lang" role="group" aria-label="Ngôn ngữ"><a href="/san-pham-moi" lang="vi" hreflang="vi" aria-current="true">VI</a><span aria-hidden="true">&nbsp;/&nbsp;</span><a href="/en/san-pham-moi" lang="en" hreflang="en">EN</a></span>
       </div>
     </div>
     <div class="m-search">

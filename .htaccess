@@ -19,6 +19,17 @@ RewriteRule ^trangchu/?$ index.html [L]
 # Trang đã đổi tên
 RewriteRule ^su-kien/?$ /tin-tuc [R=301,L]
 
+# Tiếng Anh: /en/trangchu, /en/xe-road -> en/*.html
+RewriteRule ^en/?$ /en/trangchu [R=301,L]
+RewriteCond %{THE_REQUEST} \s/+en/index\.html[\s?]
+RewriteRule ^ /en/trangchu [R=301,L]
+RewriteRule ^en/trangchu/?$ en/index.html [L]
+RewriteCond %{THE_REQUEST} \s/+en/([a-z0-9-]+)\.html[\s?]
+RewriteRule ^ /en/%1 [R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{DOCUMENT_ROOT}/en/$1.html -f
+RewriteRule ^en/([a-z0-9-]+)/?$ en/$1.html [L]
+
 # Link cũ .html -> link gọn
 RewriteCond %{THE_REQUEST} \s/+([a-z0-9-]+)\.html[\s?]
 RewriteRule ^ /%1 [R=301,L]

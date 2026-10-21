@@ -1,4 +1,4 @@
-"""Local preview server with the same clean URLs as .htaccess on Hostinger.
+"""Local preview server with the same clean URLs as .htaccess on Hostinger (/x and /en/x).
     python3 tools/serve.py            (http://127.0.0.1:8765/trangchu)
 """
 import http.server, os, re, sys
@@ -28,11 +28,16 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             return self._redirect('/' + m.group(1) + q)
         if re.match(r'/(tools|\.git)(/|$)', path):
             return self.send_error(403)
-        m = re.fullmatch(r'/([a-z0-9-]+)/?', path)
+        if path in ('/en', '/en/'):
+            return self._redirect('/en/trangchu' + q)
+        m = re.fullmatch(r'/(en/)?([a-z0-9-]+)\.html', path)
+        if m and m.group(1):
+            return self._redirect('/en/' + ('trangchu' if m.group(2) == 'index' else m.group(2)) + q)
+        m = re.fullmatch(r'/(en/)?([a-z0-9-]+)/?', path)
         if m:
-            name = 'index' if m.group(1) == 'trangchu' else m.group(1)
-            if os.path.isfile(os.path.join(ROOT, name + '.html')):
-                self.path = '/' + name + '.html' + q
+            name = 'index' if m.group(2) == 'trangchu' else m.group(2)
+            if os.path.isfile(os.path.join(ROOT, (m.group(1) or '') + name + '.html')):
+                self.path = '/' + (m.group(1) or '') + name + '.html' + q
         return super().do_GET()
 
 
