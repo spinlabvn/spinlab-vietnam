@@ -1,5 +1,5 @@
 """Dealer network page dai-ly.html (Bắc / Trung / Nam), built on xe-road.html shell.
-Dealers below are SAMPLE placeholders except the Spinlab office. Usage: python3 daily.py <design-preview dir>"""
+Real dealer list (no sample data); a region without dealers shows a hotline note. Usage: python3 daily.py <design-preview dir>"""
 import sys, os, re, html
 from urllib.parse import quote
 E = html.escape
@@ -8,13 +8,10 @@ HOT = '0399 337 533'
 
 REGIONS = [
  ('mien-bac', 'Miền Bắc', [
-   dict(name='Đại lý Hà Nội', city='Hà Nội', addr='Đang cập nhật địa chỉ', brands=['Polygon', 'Vittoria'], sample=True),
-   dict(name='Đại lý Hải Phòng', city='Hải Phòng', addr='Đang cập nhật địa chỉ', brands=['Polygon', 'Vittoria'], sample=True),
-   dict(name='Đại lý Quảng Ninh', city='Quảng Ninh', addr='Đang cập nhật địa chỉ', brands=['Vittoria'], sample=True)]),
- ('mien-trung', 'Miền Trung', [
-   dict(name='Đại lý Đà Nẵng', city='Đà Nẵng', addr='Đang cập nhật địa chỉ', brands=['Polygon', 'Vittoria'], sample=True),
-   dict(name='Đại lý Huế', city='Huế', addr='Đang cập nhật địa chỉ', brands=['Vittoria'], sample=True),
-   dict(name='Đại lý Nha Trang', city='Khánh Hòa', addr='Đang cập nhật địa chỉ', brands=['Polygon', 'Vittoria'], sample=True)]),
+   dict(name='Tuấn Biker', city='Hà Nội', addr='79 Đường 23, KĐT Thành Phố Giao Lưu, Cổ Nhuế 1, Bắc Từ Liêm, Hà Nội', phone='0888967777',
+        brands=['Emume', 'Vittoria']),
+   dict(name='Bon Bon Bike', city='Hải Phòng', addr='18 P. Thế Lữ, Hồng Bàng, Hải Phòng', phone='0936635489', brands=['Emume', 'Vittoria'])]),
+ ('mien-trung', 'Miền Trung', []),
  ('mien-nam', 'Miền Nam', [
    dict(name='Spinlab Việt Nam', city='TP. Hồ Chí Minh', addr='13 đường 14, khu phố 4, phường An Khánh, TP. Hồ Chí Minh',
         phone='0399337533', brands=['Polygon', 'Vittoria', 'Emume', 'Story Bike'], hq=True),
@@ -44,6 +41,8 @@ CSS = '''
 .dealer .d-cta{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:6px}
 .dealer .d-cta .btn{min-height:44px;padding:0 16px;font-size:13px}
 .dealer-note{margin:12px 0 0;padding:12px 16px;border-radius:var(--radius);background:#FFF7D6;font-size:14px}
+.dealer-empty{margin-top:20px;padding:24px;border:1px dashed var(--line);border-radius:var(--radius);display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center;justify-content:space-between}
+.dealer-empty p{margin:0;max-width:60ch;color:var(--muted)}
 '''
 
 
@@ -73,9 +72,12 @@ brand_css = re.search(r'/\* Brand page \*/.*?(?=</style>)', open(os.path.join(D,
 p = p.replace('</style>', brand_css + CSS + '</style>', 1)
 total = sum(len(ds) for _, _, ds in REGIONS)
 nav = ('  <nav class="brand-nav" aria-label="Khu vực"><div class="container"><ul>' +
-       ''.join(f'<li><a href="#{rid}">{E(t)}<small>{len(ds)}</small></a></li>' for rid, t, ds in REGIONS) + '</ul></div></nav>')
-secs = ''.join(f'  <section class="brand-cat" id="{rid}"><div class="container"><h2 class="bc-title">{E(t)}</h2><p class="bc-sub">{len(ds)} điểm bán</p>'
-               f'<div class="dealer-grid">{"".join(card(d) for d in ds)}</div></div></section>\n' for rid, t, ds in REGIONS)
+       ''.join(f'<li><a href="#{rid}">{E(t)}' + (f'<small>{len(ds)}</small>' if ds else '') + '</a></li>' for rid, t, ds in REGIONS) + '</ul></div></nav>')
+EMPTY = ('<div class="dealer-empty"><p>Spinlab đang mở rộng hệ thống đại lý tại khu vực này. Gọi hotline để được tư vấn, đặt hàng và giao tận nơi.</p>'
+         f'<a class="btn btn-yellow" href="tel:0399337533">Gọi {HOT}</a></div>')
+secs = ''.join(f'  <section class="brand-cat" id="{rid}"><div class="container"><h2 class="bc-title">{E(t)}</h2>'
+               + (f'<p class="bc-sub">{len(ds)} điểm bán</p><div class="dealer-grid">{"".join(card(d) for d in ds)}</div>' if ds else '<p class="bc-sub">Đang cập nhật</p>' + EMPTY)
+               + '</div></section>\n' for rid, t, ds in REGIONS)
 main = f'''<main id="main" class="pdp listing">
   <div class="container"><nav class="crumbs" aria-label="Đường dẫn"><ol><li><a href="index.html">Trang chủ</a></li><li aria-current="page">Hệ thống đại lý</li></ol></nav></div>
   <section class="list-hero">
@@ -83,7 +85,6 @@ main = f'''<main id="main" class="pdp listing">
     <div class="container"><div class="lh-copy"><span class="kicker">Spinlab</span><h1>Hệ thống đại lý</h1><p>Mua xe đạp Polygon, lốp Vittoria và phụ kiện chính hãng tại các đại lý Spinlab trên khắp ba miền.</p></div></div>
   </section>
 {nav}
-  <div class="container"><p class="dealer-note"><b>Bản xem trước:</b> đại lý miền Bắc và miền Trung bên dưới đang là dữ liệu mẫu — sẽ thay bằng thông tin đại lý thật. Gọi hotline <a href="tel:0399337533"><b>{HOT}</b></a> để được giới thiệu đại lý gần bạn.</p></div>
 {secs}</main>'''
 p = re.sub(r'<title>.*?</title>', '<title>Hệ thống đại lý — Spinlab</title>', p, 1, flags=re.S)
 p = re.sub(r'<meta name="description"[^>]*>', '<meta name="description" content="Hệ thống đại lý Spinlab tại miền Bắc, miền Trung và miền Nam — mua xe đạp Polygon, lốp Vittoria chính hãng gần bạn.">', p, 1)
