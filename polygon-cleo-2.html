@@ -392,26 +392,6 @@ tbody tr.on{background:#FFF7D6}
 .faq details p{margin:0;padding:0 18px 16px;color:var(--muted);line-height:1.6}
 .related{grid-template-columns:repeat(2,minmax(0,1fr))}
 @media (min-width:1024px){.related{grid-template-columns:repeat(3,minmax(0,1fr))}}
-
-/* Bike detail extras */
-.swatches-pick{display:flex;flex-wrap:wrap;gap:8px}
-.opt-group{border:0;margin:8px 0 0;padding:0}
-.opt-group legend{padding:0;margin-bottom:10px;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.04em;display:flex;gap:10px;flex-wrap:wrap;align-items:baseline}
-.siblings{margin:16px 0 0;font-size:14px;color:var(--muted)}
-.siblings b{color:var(--text)}
-.feat-imgs{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:20px}
-.feat-imgs img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--radius)}
-.spec-groups{display:grid;gap:24px}
-@media (min-width:1024px){.spec-groups{grid-template-columns:1fr 1fr;gap:24px 40px}}
-.spec-groups h3{margin:0 0 4px;font-size:15px;text-transform:uppercase;letter-spacing:.04em;color:var(--brand-red)}
-.spec-groups .spec-list div{grid-template-columns:150px 1fr}
-.spec-groups dd{font-weight:500;font-size:14px}
-.geo td,.geo th{white-space:nowrap;text-align:center}
-.geo tbody th{text-align:left;font-weight:500}
-.geo .col-on{background:#FFF7D6}
-.geo-note{font-size:13px;color:var(--muted);margin:10px 0 0}
-.geo-img{margin:20px 0 0;max-width:720px}
-.geo-img img{width:100%;mix-blend-mode:multiply}
 /* Header in brand yellow (announcement bar removed) */
 .header{background:var(--brand-yellow);border-bottom-color:rgba(0,0,0,.08)}
 .header .nav{background:#fff;border-top-color:rgba(0,0,0,.08)}
@@ -475,6 +455,26 @@ tbody tr.on{background:#FFF7D6}
 .cmp-clear{border:0;background:none;font-size:13px;text-decoration:underline;color:var(--muted);min-height:44px}
 body.cmp-open .zalo-fab{bottom:96px}
 @media (max-width:600px){.cmp-items li{width:52px;height:52px}.cmp-items img{max-width:44px;max-height:44px}.cmp-clear{display:none}}
+/* Bike detail extras */
+.swatches-pick{display:flex;flex-wrap:wrap;gap:8px}
+.opt-group{border:0;margin:8px 0 0;padding:0}
+.opt-group legend{padding:0;margin-bottom:10px;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.04em;display:flex;gap:10px;flex-wrap:wrap;align-items:baseline}
+.siblings{margin:16px 0 0;font-size:14px;color:var(--muted)}
+.siblings b{color:var(--text)}
+.siblings a{color:var(--brand-red);font-weight:600;text-decoration:underline;text-underline-offset:2px}
+.feat-imgs{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:20px}
+.feat-imgs img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--radius)}
+.spec-groups{display:grid;gap:24px}
+@media (min-width:1024px){.spec-groups{grid-template-columns:1fr 1fr;gap:24px 40px}}
+.spec-groups h3{margin:0 0 4px;font-size:15px;text-transform:uppercase;letter-spacing:.04em;color:var(--brand-red)}
+.spec-groups .spec-list div{grid-template-columns:150px 1fr}
+.spec-groups dd{font-weight:500;font-size:14px}
+.geo td,.geo th{white-space:nowrap;text-align:center}
+.geo tbody th{text-align:left;font-weight:500}
+.geo .col-on{background:#FFF7D6}
+.geo-note{font-size:13px;color:var(--muted);margin:10px 0 0}
+.geo-img{margin:20px 0 0;max-width:720px}
+.geo-img img{width:100%;mix-blend-mode:multiply}
 /* Brand logos */
 .brand-logo{display:block;height:auto;width:min(calc(var(--lh,30px) * var(--wf,5)),calc(100cqi * var(--wf,5) / 6.5))}
 .brand-tile,.brand-menu a,.hub-logo .hi{container-type:inline-size}
@@ -552,7 +552,7 @@ body.cmp-open .zalo-fab{bottom:96px}
                 </div>
               </li>
               <li><a href="/xe-gravel">Gravel</a></li>
-              <li><a href="/thuong-hieu-polygon#kid">Kid</a></li>
+              <li><a href="/xe-city">City - Hybrid</a></li>
               <li class="has-fly">
                 <button class="fly-top" aria-expanded="false" aria-controls="fly-trial">Trial <svg aria-hidden="true"><use href="#i-right"/></svg></button>
                 <div class="fly" id="fly-trial">
@@ -622,7 +622,7 @@ body.cmp-open .zalo-fab{bottom:96px}
   <div class="container">
     <nav class="crumbs" aria-label="Đường dẫn"><ol>
       <li><a href="/trangchu">Trang chủ</a></li><li><a href="/xe-dap">Xe đạp</a></li>
-      <li><a href="/xe-dap">Xe địa hình phổ thông</a></li><li aria-current="page">CLEO 2</li></ol></nav>
+      <li><a href="/xe-city">Xe địa hình phổ thông</a></li><li aria-current="page">CLEO 2</li></ol></nav>
 
     <div class="pdp-top">
       <div class="gallery">
@@ -670,8 +670,7 @@ body.cmp-open .zalo-fab{bottom:96px}
 
     <section class="pdp-sec" id="hoi-dap"><h2>Hỏi đáp</h2><div class="faq"><details><summary>Chọn size xe như thế nào?</summary><p>Hãy tham khảo hàng “Chiều cao người lái” trong bảng Kích thước khung. Nếu chiều cao của bạn nằm giữa hai size, liên hệ Spinlab để được tư vấn theo tư thế và nhu cầu đạp.</p></details><details><summary>Xe được bảo hành thế nào?</summary><p>Xe chính hãng Polygon phân phối bởi Spinlab được bảo hành theo chính sách của Polygon. Liên hệ hotline để biết chi tiết điều kiện và thời hạn.</p></details><details><summary>Có thể nâng cấp linh kiện không?</summary><p>Có. Liên hệ Spinlab để được tư vấn nâng cấp phù hợp, ví dụ lốp Vittoria hay dây cuốn ghi đông Emume.</p></details></div></section>
 
-    <section class="pdp-sec"><div class="sec-head"><h2>Xe đạp tương tự</h2><a class="see-all" href="/xe-dap">Xem tất cả</a></div>
-      <div class="grid related"></div></section>
+
   </div>
 </main>
 
@@ -747,14 +746,14 @@ body.cmp-open .zalo-fab{bottom:96px}
 
 // Bike gallery, colour & size selector
 (() => {
-  const D = {"colors": {"cream-us": {"label": "Cream", "images": ["https://media.polygonbikes.com/wp-content/uploads/2021/11/14144719/CLEO_4_P.png", "https://media.polygonbikes.com/wp-content/uploads/2021/10/14142719/CLEO_4_LF.png", "https://media.polygonbikes.com/wp-content/uploads/2021/10/14142718/CLEO_4_RF.png"]}}, "skus": {"cream-us|xs-us": "502470002", "cream-us|s-us": "502470001"}, "name": "CLEO 2"};
+  const D = {"colors": {"cream-us": {"label": "Cream", "images": ["https://media.polygonbikes.com/wp-content/uploads/2021/11/14144719/CLEO_4_P.png", "https://media.polygonbikes.com/wp-content/uploads/2021/10/14142719/CLEO_4_LF.png", "https://media.polygonbikes.com/wp-content/uploads/2021/10/14142718/CLEO_4_RF.png"]}}, "skus": {"cream-us|xs-us": "502470002", "cream-us|s-us": "502470001"}, "name": "CLEO 2", "brand": "Polygon"};
   const main=document.getElementById('g-main'), list=document.querySelector('.g-thumbs');
   const bindThumbs=()=>{ const t=[...list.querySelectorAll('button')]; t.forEach(b=>b.addEventListener('click',()=>{ main.src=b.dataset.src; main.alt=b.dataset.alt; t.forEach(x=>x.setAttribute('aria-pressed',x===b)); })); };
   const val=n=>(document.querySelector(`input[name=${n}]:checked`)||{}).value||'';
   const updSku=()=>{ const el=document.getElementById('sz-sku'); if(el) el.textContent=D.skus[val('color')+'|'+val('size')]||'—'; };
   document.querySelectorAll('input[name=color]').forEach(r=>r.addEventListener('change',()=>{
     const c=D.colors[r.value]; document.getElementById('color-name').textContent=c.label;
-    if(c.images.length){ main.src=c.images[0]; list.innerHTML=c.images.map((u,i)=>`<li><button aria-pressed="${i===0}" data-src="${u}" data-alt="Polygon ${D.name} – ${c.label} – ảnh ${i+1}"><img src="${u}" alt="Ảnh ${i+1}"></button></li>`).join(''); bindThumbs(); }
+    if(c.images.length){ main.src=c.images[0]; list.innerHTML=c.images.map((u,i)=>`<li><button aria-pressed="${i===0}" data-src="${u}" data-alt="${D.brand} ${D.name} – ${c.label} – ảnh ${i+1}"><img src="${u}" alt="Ảnh ${i+1}"></button></li>`).join(''); bindThumbs(); }
     updSku(); }));
   const geo=document.querySelector('table.geo');
   const hl=()=>{ if(!geo) return; const r=document.querySelector('input[name=size]:checked'); if(!r) return;
@@ -783,6 +782,14 @@ body.cmp-open .zalo-fab{bottom:96px}
   document.addEventListener('keydown',e=>{ if(e.key==='Escape'&&document.body.classList.contains('nav-open')){ set(false); btn.focus(); } });
   const sync=()=>{ if(mq.matches){ nav.toggleAttribute('inert',!document.body.classList.contains('nav-open')); } else { set(false); nav.removeAttribute('inert'); } };
   mq.addEventListener('change',sync); sync();
+})();
+// Vittoria retail price: follows the selected SKU
+(() => {
+  const P = {"11A00389": "1.815.000₫", "11A00390": "1.815.000₫", "11A00391": "1.815.000₫", "11A00630": "1.815.000₫"}, el = document.querySelector('.p-price.big'), code = document.getElementById('sz-sku');
+  if (!el || !code) return;
+  const upd = () => { const p = P[(code.textContent || '').trim()]; if (p) el.textContent = p; };
+  new MutationObserver(upd).observe(code, {childList: true, characterData: true, subtree: true});
+  upd();
 })();
 // Compare products: toggles on cards / product page, tray, link to so-sanh.html (max 4)
 (() => {

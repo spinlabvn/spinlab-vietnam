@@ -20162,5 +20162,2116 @@
     }
    ]
   }
+ },
+ {
+  "slug": "heist-2",
+  "source": "https://www.polygonbikes.com/us/2027-heist-2-hybrid-bike/",
+  "name": "HEIST 2",
+  "headline": "HEIST: For Urban Adventures",
+  "tagline": "Hybrid | ALX Alloy frame | 3 Available Builds",
+  "bike_type": "HYBRID",
+  "intro": "The Polygon Heist is your all-access past to urban adventures. It's a city hybrid that’s fast enough to win the sprint to the office and tough enough to take the dirt path home.",
+  "feature_images": [
+   "https://media.polygonbikes.com/wp-content/uploads/2026/04/23161748/Heist-Feature-1.jpg",
+   "https://media.polygonbikes.com/wp-content/uploads/2026/04/23161755/Heist-Feature-2.jpg",
+   "https://media.polygonbikes.com/wp-content/uploads/2026/04/23161802/Heist-Feature-3.jpg",
+   "https://media.polygonbikes.com/wp-content/uploads/2026/04/23161808/Heist-Feature-4.jpg",
+   "https://media.polygonbikes.com/wp-content/uploads/2026/04/23161812/Heist-Feature-5.jpg"
+  ],
+  "features": [
+   {
+    "title": "Rider Focussed Geometry",
+    "text": "Lightweight alloy frame, heads-up position and flat bar."
+   },
+   {
+    "title": "Front Suspension",
+    "text": "Suspension fork for potholes, gravel and rough tracks."
+   },
+   {
+    "title": "1x Drivetrain",
+    "text": "Simplified 1x gearing: less weight and maintenance."
+   },
+   {
+    "title": "Hydraulic Disc Brakes",
+    "text": "One-finger stopping power."
+   },
+   {
+    "title": "Fast-Rolling Adventure Tires",
+    "text": "700x45c tires."
+   }
+  ],
+  "colors": [
+   {
+    "id": "purple-us",
+    "label": "Purple",
+    "images": [
+     "https://media.polygonbikes.com/wp-content/uploads/2026/03/04160207/MY26-HEIST-2-P.png",
+     "https://media.polygonbikes.com/wp-content/uploads/2026/03/04160250/MY26-HEIST-2-RF.png",
+     "https://media.polygonbikes.com/wp-content/uploads/2026/03/04160125/MY26-HEIST-2-LF.png"
+    ]
+   }
+  ],
+  "sizes": [
+   {
+    "id": "s-us",
+    "label": "S"
+   },
+   {
+    "id": "m-us",
+    "label": "M"
+   },
+   {
+    "id": "l-us",
+    "label": "L"
+   },
+   {
+    "id": "xl-us",
+    "label": "XL"
+   }
+  ],
+  "skus": {
+   "purple-us|s-us": "503755001",
+   "purple-us|m-us": "503755002",
+   "purple-us|l-us": "503755003",
+   "purple-us|xl-us": "503755004"
+  },
+  "specs": [
+   {
+    "group": "Frameset",
+    "rows": [
+     [
+      "Frameset",
+      "ALX HYBRID 700C"
+     ],
+     [
+      "Fork",
+      "SUNTOUR NEX 63MM TRAVEL, COIL SPRING, PRELOAD ADJUSTER"
+     ],
+     [
+      "Size",
+      "S, M, L, XL"
+     ],
+     [
+      "Frame Color",
+      "PURPLE"
+     ],
+     [
+      "Decal Color",
+      "SILVER BLACK"
+     ]
+    ]
+   },
+   {
+    "group": "Drivetrain",
+    "rows": [
+     [
+      "Shifter",
+      "SHIMANO ALTUS SL-M315, 1x8 SPEED, RAPID FIRE SHIFTER"
+     ],
+     [
+      "Crank",
+      "PROWHEEL C10Y-NW 36T"
+     ],
+     [
+      "Cassette",
+      "SHIMANO ACERA CS-HG400, 11-45T"
+     ],
+     [
+      "Rear Derailleur",
+      "SHIMANO ESSA RD-U2000"
+     ],
+     [
+      "BB",
+      "SQUARE BB 68X119mm"
+     ],
+     [
+      "Chain",
+      "KMC Z-8.3"
+     ],
+     [
+      "Pedal",
+      "PP PEDAL"
+     ]
+    ]
+   },
+   {
+    "group": "Cockpit",
+    "rows": [
+     [
+      "Saddle",
+      "SELLE ROYAL A059H, RAIL: STEEL ø7mm"
+     ],
+     [
+      "Seatpost",
+      "POLYGON SPORT, DxL: 27.2 x 350mm"
+     ],
+     [
+      "Handlebar",
+      "POLYGON SPORT, W: 680mm, BB: 31.8mm, R/D: 0mm, B: 6degree"
+     ],
+     [
+      "Handlestem",
+      "POLYGON SPORT, E: 75mm, BB: 31.8mm, R/D: 10degree"
+     ],
+     [
+      "Headset",
+      "ZERO STACK W/ CAGED BEARING, ZS 44/28.6 | ZS 56/30"
+     ]
+    ]
+   },
+   {
+    "group": "Wheel & Tire",
+    "rows": [
+     [
+      "Wheel Set",
+      "ALLOY WHEELS"
+     ],
+     [
+      "Wheel Size",
+      "700C"
+     ],
+     [
+      "Tire",
+      "KENDA K-1172 700X45C"
+     ],
+     [
+      "Rim",
+      "F: ALLOY DOUBLE WALL H: 20mm W: 21mm 32H FOR TYRE 622, R: ALLOY DOUBLE WALL H: 20mm W: 21mm 32H FOR TYRE 622"
+     ],
+     [
+      "Hub",
+      "F: ALLOY HUB QR M9x100mm 32H, R: ALLOY HUB QR M9X135mm 32H"
+     ],
+     [
+      "Spokes",
+      "F: 14G STAINLESS NDS: 290mm DS: 290mm 12MM NIPPLE BRASS, R: 14G STAINLESS NDS: 290mm DS: 290mm 12MM NIPPLE BRASS"
+     ]
+    ]
+   },
+   {
+    "group": "Brake",
+    "rows": [
+     [
+      "Brake Lever",
+      "TEKTRO HD-M280"
+     ],
+     [
+      "Brake Caliper",
+      "TEKTRO HD-M280 HYDRAULIC DISC"
+     ],
+     [
+      "Rotor",
+      "TEKTRO TR-160-52 160mm"
+     ]
+    ]
+   }
+  ],
+  "geometry": {
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL"
+   ],
+   "image": "https://media.polygonbikes.com/wp-content/uploads/2026/03/05051123/GE-HEIST-1024x824.jpg",
+   "rows": [
+    {
+     "label": "Height",
+     "unit": "cm",
+     "values": [
+      "155-165",
+      "165-175",
+      "175-185",
+      "185-195"
+     ]
+    },
+    {
+     "label": "Seat Tube Length (A)",
+     "unit": "",
+     "values": [
+      "405",
+      "432",
+      "470",
+      "516"
+     ]
+    },
+    {
+     "label": "Seat Tube Angle (B)",
+     "unit": "",
+     "values": [
+      "74",
+      "74",
+      "74",
+      "74"
+     ]
+    },
+    {
+     "label": "Effective Seat Tube Angle (C)",
+     "unit": "",
+     "values": [
+      "74",
+      "74",
+      "74",
+      "74"
+     ]
+    },
+    {
+     "label": "Head Tube Length (D)",
+     "unit": "",
+     "values": [
+      "90",
+      "99",
+      "100",
+      "110"
+     ]
+    },
+    {
+     "label": "Head Tube Angle (E)",
+     "unit": "",
+     "values": [
+      "71",
+      "71",
+      "71",
+      "71"
+     ]
+    },
+    {
+     "label": "Effective Top Tube (F)",
+     "unit": "",
+     "values": [
+      "556",
+      "579",
+      "599",
+      "622"
+     ]
+    },
+    {
+     "label": "Bb Height (G)",
+     "unit": "",
+     "values": [
+      "294",
+      "294",
+      "294",
+      "294"
+     ]
+    },
+    {
+     "label": "Bb Offset (H)",
+     "unit": "",
+     "values": [
+      "70",
+      "70",
+      "70",
+      "70"
+     ]
+    },
+    {
+     "label": "Chainstay Length (I)",
+     "unit": "",
+     "values": [
+      "440",
+      "440",
+      "440",
+      "440"
+     ]
+    },
+    {
+     "label": "Wheelbase (J)",
+     "unit": "",
+     "values": [
+      "1050",
+      "1073",
+      "1093",
+      "1116"
+     ]
+    },
+    {
+     "label": "Frame Reach (K)",
+     "unit": "",
+     "values": [
+      "384",
+      "405",
+      "425",
+      "445"
+     ]
+    },
+    {
+     "label": "Frame Stack (L)",
+     "unit": "",
+     "values": [
+      "597",
+      "607",
+      "607",
+      "616"
+     ]
+    },
+    {
+     "label": "Standover Height (M)",
+     "unit": "",
+     "values": [
+      "697",
+      "711",
+      "737",
+      "777"
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "slug": "heist-5",
+  "source": "https://www.polygonbikes.com/us/2027-heist-5-hybrid-bike/",
+  "name": "HEIST 5",
+  "headline": "HEIST: For Urban Adventures",
+  "tagline": "Hybrid | ALX Alloy frame | 3 Available Builds",
+  "bike_type": "HYBRID",
+  "intro": "The Polygon Heist is your all-access past to urban adventures. It's a city hybrid that’s fast enough to win the sprint to the office and tough enough to take the dirt path home.",
+  "feature_images": [
+   "https://media.polygonbikes.com/wp-content/uploads/2026/04/23161748/Heist-Feature-1.jpg",
+   "https://media.polygonbikes.com/wp-content/uploads/2026/04/23161755/Heist-Feature-2.jpg",
+   "https://media.polygonbikes.com/wp-content/uploads/2026/04/23161802/Heist-Feature-3.jpg",
+   "https://media.polygonbikes.com/wp-content/uploads/2026/04/23161808/Heist-Feature-4.jpg",
+   "https://media.polygonbikes.com/wp-content/uploads/2026/04/23161812/Heist-Feature-5.jpg"
+  ],
+  "features": [
+   {
+    "title": "Rider Focussed Geometry",
+    "text": "Lightweight alloy frame, heads-up position and flat bar."
+   },
+   {
+    "title": "Front Suspension",
+    "text": "Suspension fork for potholes, gravel and rough tracks."
+   },
+   {
+    "title": "1x Drivetrain",
+    "text": "Simplified 1x gearing: less weight and maintenance."
+   },
+   {
+    "title": "Hydraulic Disc Brakes",
+    "text": "One-finger stopping power."
+   },
+   {
+    "title": "Fast-Rolling Adventure Tires",
+    "text": "700x45c tires."
+   }
+  ],
+  "colors": [
+   {
+    "id": "blue-us",
+    "label": "Blue",
+    "images": [
+     "https://media.polygonbikes.com/wp-content/uploads/2026/03/04160459/MY26-HEIST-5-P.png",
+     "https://media.polygonbikes.com/wp-content/uploads/2026/03/04160624/MY26-HEIST-5-RR.png",
+     "https://media.polygonbikes.com/wp-content/uploads/2026/03/04160416/MY26-HEIST-5-LF.png"
+    ]
+   }
+  ],
+  "sizes": [
+   {
+    "id": "s-us",
+    "label": "S"
+   },
+   {
+    "id": "m-us",
+    "label": "M"
+   },
+   {
+    "id": "l-us",
+    "label": "L"
+   },
+   {
+    "id": "xl-us",
+    "label": "XL"
+   }
+  ],
+  "skus": {
+   "blue-us|s-us": "503756001",
+   "blue-us|m-us": "503756002",
+   "blue-us|l-us": "503756003",
+   "blue-us|xl-us": "503756004"
+  },
+  "specs": [
+   {
+    "group": "Frameset",
+    "rows": [
+     [
+      "Frameset",
+      "ALX HYBRID 700C"
+     ],
+     [
+      "Fork",
+      "SUNTOUR NVX32-5TA 63MM TRAVEL, COIL SPRING, HYDRAULIC SPEED LOCKOUT"
+     ],
+     [
+      "Size",
+      "S, M, L, XL"
+     ],
+     [
+      "Frame Color",
+      "BLUE"
+     ],
+     [
+      "Decal Color",
+      "BLACK"
+     ]
+    ]
+   },
+   {
+    "group": "Drivetrain",
+    "rows": [
+     [
+      "Crank",
+      "PROWHEEL CHARM 36T"
+     ],
+     [
+      "Cassette",
+      "SHIMANO CUES CS-LG300, 11-48T"
+     ],
+     [
+      "Rear Derailleur",
+      "SHIMANO CUES RD-U6000"
+     ],
+     [
+      "BB",
+      "PROWHEEL 2 PIECES"
+     ],
+     [
+      "Chain",
+      "KMC X-GLIDE"
+     ],
+     [
+      "Pedal",
+      "PP PEDAL"
+     ]
+    ]
+   },
+   {
+    "group": "Cockpit",
+    "rows": [
+     [
+      "Saddle",
+      "SELLE ROYAL A059H, RAIL: STEEL ø7mm"
+     ],
+     [
+      "Seatpost",
+      "POLYGON SPORT, DxL: 27.2 x 350mm"
+     ],
+     [
+      "Handlebar",
+      "POLYGON SPORT, W: 680mm, BB: 31.8mm, R/D: 0mm, B: 6degree"
+     ],
+     [
+      "Handlestem",
+      "POLYGON SPORT, E: 75mm, BB: 31.8mm, R/D: 10degree"
+     ],
+     [
+      "Headset",
+      "ZERO STACK W/ CAGED BEARING S.H., ZS 44/28.6 | ZS 56/40"
+     ]
+    ]
+   },
+   {
+    "group": "Wheel & Tire",
+    "rows": [
+     [
+      "Wheel Set",
+      "ALLOY WHEELS"
+     ],
+     [
+      "Wheel Size",
+      "700C"
+     ],
+     [
+      "Tire",
+      "WTB RIDDLER 700X45C"
+     ],
+     [
+      "Rim",
+      "F: ALLOY DOUBLE WALL H: 20mm W: 21mm 32H FOR TYRE 622, R: ALLOY DOUBLE WALL H: 20mm W: 21mm 32H FOR TYRE 622"
+     ],
+     [
+      "Hub",
+      "F: ALLOY QR HUB M9x100mm 32H, R: ALLOY QR HUB M9X135mm 32H"
+     ],
+     [
+      "Spokes",
+      "F: 14G STAINLESS NDS: 290mm DS: 290mm 12MM NIPPLE BRASS, R: 14G STAINLESS NDS: 290mm DS: 290mm 12MM NIPPLE BRASS"
+     ]
+    ]
+   },
+   {
+    "group": "Brake",
+    "rows": [
+     [
+      "Brake Lever",
+      "SHIMANO MT200"
+     ],
+     [
+      "Brake Caliper",
+      "SHIMANO MT200 HYDRAULIC DISC"
+     ],
+     [
+      "Rotor",
+      "SHIMANO SM-RT26 180mm"
+     ]
+    ]
+   }
+  ],
+  "geometry": {
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL"
+   ],
+   "image": "https://media.polygonbikes.com/wp-content/uploads/2026/03/05051123/GE-HEIST-1024x824.jpg",
+   "rows": [
+    {
+     "label": "Height",
+     "unit": "cm",
+     "values": [
+      "155-165",
+      "165-175",
+      "175-185",
+      "185-195"
+     ]
+    },
+    {
+     "label": "Seat Tube Length (A)",
+     "unit": "",
+     "values": [
+      "405",
+      "432",
+      "470",
+      "516"
+     ]
+    },
+    {
+     "label": "Seat Tube Angle (B)",
+     "unit": "",
+     "values": [
+      "74",
+      "74",
+      "74",
+      "74"
+     ]
+    },
+    {
+     "label": "Effective Seat Tube Angle (C)",
+     "unit": "",
+     "values": [
+      "74",
+      "74",
+      "74",
+      "74"
+     ]
+    },
+    {
+     "label": "Head Tube Length (D)",
+     "unit": "",
+     "values": [
+      "90",
+      "100",
+      "100",
+      "110"
+     ]
+    },
+    {
+     "label": "Head Tube Angle (E)",
+     "unit": "",
+     "values": [
+      "71",
+      "71",
+      "71",
+      "71"
+     ]
+    },
+    {
+     "label": "Effective Top Tube (F)",
+     "unit": "",
+     "values": [
+      "556",
+      "579",
+      "599",
+      "622"
+     ]
+    },
+    {
+     "label": "Bb Height (G)",
+     "unit": "",
+     "values": [
+      "294",
+      "294",
+      "294",
+      "294"
+     ]
+    },
+    {
+     "label": "Bb Offset (H)",
+     "unit": "",
+     "values": [
+      "70",
+      "70",
+      "70",
+      "70"
+     ]
+    },
+    {
+     "label": "Chainstay Length (I)",
+     "unit": "",
+     "values": [
+      "440",
+      "440",
+      "440",
+      "440"
+     ]
+    },
+    {
+     "label": "Wheelbase (J)",
+     "unit": "",
+     "values": [
+      "1050",
+      "1073",
+      "1093",
+      "1116"
+     ]
+    },
+    {
+     "label": "Frame Reach (K)",
+     "unit": "",
+     "values": [
+      "385",
+      "405",
+      "425",
+      "445"
+     ]
+    },
+    {
+     "label": "Frame Stack (L)",
+     "unit": "",
+     "values": [
+      "597",
+      "607",
+      "607",
+      "616"
+     ]
+    },
+    {
+     "label": "Standover Height (M)",
+     "unit": "",
+     "values": [
+      "696",
+      "711",
+      "737",
+      "777"
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "slug": "heist-7",
+  "source": "https://www.polygonbikes.com/us/2027-heist-7-hybrid-bike/",
+  "name": "HEIST 7",
+  "headline": "HEIST: For Urban Adventures",
+  "tagline": "Hybrid | ALX Alloy frame | 3 Available Builds",
+  "bike_type": "HYBRID",
+  "intro": "The Polygon Heist is your all-access past to urban adventures. It's a city hybrid that’s fast enough to win the sprint to the office and tough enough to take the dirt path home.",
+  "feature_images": [
+   "https://media.polygonbikes.com/wp-content/uploads/2026/04/23161748/Heist-Feature-1.jpg",
+   "https://media.polygonbikes.com/wp-content/uploads/2026/04/23161755/Heist-Feature-2.jpg",
+   "https://media.polygonbikes.com/wp-content/uploads/2026/04/23161802/Heist-Feature-3.jpg",
+   "https://media.polygonbikes.com/wp-content/uploads/2026/04/23161808/Heist-Feature-4.jpg",
+   "https://media.polygonbikes.com/wp-content/uploads/2026/04/23161812/Heist-Feature-5.jpg"
+  ],
+  "features": [
+   {
+    "title": "Rider Focussed Geometry",
+    "text": "Lightweight alloy frame, heads-up position and flat bar."
+   },
+   {
+    "title": "Front Suspension",
+    "text": "Suspension fork for potholes, gravel and rough tracks."
+   },
+   {
+    "title": "1x Drivetrain",
+    "text": "Simplified 1x gearing: less weight and maintenance."
+   },
+   {
+    "title": "Hydraulic Disc Brakes",
+    "text": "One-finger stopping power."
+   },
+   {
+    "title": "Fast-Rolling Adventure Tires",
+    "text": "700x45c tires."
+   }
+  ],
+  "colors": [
+   {
+    "id": "cream-us",
+    "label": "Cream",
+    "images": [
+     "https://media.polygonbikes.com/wp-content/uploads/2026/03/04160756/MY26-HEIST-7-P.png",
+     "https://media.polygonbikes.com/wp-content/uploads/2026/03/04160840/MY26-HEIST-7-RF.png",
+     "https://media.polygonbikes.com/wp-content/uploads/2026/03/04160711/MY26-HEIST-7-LF.png"
+    ]
+   }
+  ],
+  "sizes": [
+   {
+    "id": "s-us",
+    "label": "S"
+   },
+   {
+    "id": "m-us",
+    "label": "M"
+   },
+   {
+    "id": "l-us",
+    "label": "L"
+   },
+   {
+    "id": "xl-us",
+    "label": "XL"
+   }
+  ],
+  "skus": {
+   "cream-us|s-us": "503757001",
+   "cream-us|m-us": "503757002",
+   "cream-us|l-us": "503757003",
+   "cream-us|xl-us": "503757004"
+  },
+  "specs": [
+   {
+    "group": "Frameset",
+    "rows": [
+     [
+      "Frameset",
+      "ALX HYBRID 700C"
+     ],
+     [
+      "Fork",
+      "SUNTOUR NVX32-5TA 63MM TRAVEL, AIR SPRING, HYDRAULIC SPEED LOCKOUT"
+     ],
+     [
+      "Size",
+      "S, M, L, XL"
+     ],
+     [
+      "Frame Color",
+      "CREAM"
+     ],
+     [
+      "Decal Color",
+      "BLACK"
+     ]
+    ]
+   },
+   {
+    "group": "Drivetrain",
+    "rows": [
+     [
+      "Shifter",
+      "SHIMANO DEORE SL-M6100, 1x12 SPEED, RAPID FIRE SHIFTER"
+     ],
+     [
+      "Crank",
+      "PROWHEEL DMG-FD04S 36T"
+     ],
+     [
+      "Cassette",
+      "SHIMANO DEORE CS-M6100, 10-51T"
+     ],
+     [
+      "Rear Derailleur",
+      "SHIMANO DEORE RD-M6100"
+     ],
+     [
+      "BB",
+      "PROWHEEL 2-PIECES"
+     ],
+     [
+      "Chain",
+      "KMC X12"
+     ],
+     [
+      "Pedal",
+      "PP PEDAL"
+     ]
+    ]
+   },
+   {
+    "group": "Cockpit",
+    "rows": [
+     [
+      "Saddle",
+      "SELLE ROYAL A059H, RAIL: STEEL ø7mm"
+     ],
+     [
+      "Seatpost",
+      "ALLOY SUSPENSION SEATPOST, DxL: 27.2x340mm"
+     ],
+     [
+      "Handlebar",
+      "POLYGON SPORT, W: 680mm, BB: 31.8mm, R/D: 0mm, B: 6degree"
+     ],
+     [
+      "Handlestem",
+      "POLYGON SPORT, E: 75mm, BB: 31.8mm, R/D: ADJUSTABLE"
+     ],
+     [
+      "Headset",
+      "ZERO STACK W/ CAGED BEARING, ZS 44/28.6 | ZS 56/40"
+     ]
+    ]
+   },
+   {
+    "group": "Wheel & Tire",
+    "rows": [
+     [
+      "Wheel Set",
+      "ALLOY WHEELS"
+     ],
+     [
+      "Wheel Size",
+      "700C"
+     ],
+     [
+      "Tire",
+      "WTB RIDDLER 700X45C"
+     ],
+     [
+      "Rim",
+      "ALLOY DOUBLE WALL H: 20mm W: 21mm 32H FOR TYRE 622"
+     ],
+     [
+      "Hub",
+      "F: SHIMANO QC 400 M9X100mm 32H, R: SHIMANO QC 500 MICROSPLINE M9X135mm 32H"
+     ],
+     [
+      "Spokes",
+      "F: 14G STAINLESS NDS: 290mm DS: 292mm 12MM NIPPLE BRASS, R: 14G STAINLESS NDS: 292mm DS: 290mm 12MM NIPPLE BRASS"
+     ]
+    ]
+   },
+   {
+    "group": "Brake",
+    "rows": [
+     [
+      "Brake Lever",
+      "SHIMANO MT200"
+     ],
+     [
+      "Brake Caliper",
+      "SHIMANO MT200 HYDRAULIC DISC"
+     ],
+     [
+      "Rotor",
+      "SHIMANO SM-RT10 180mm"
+     ]
+    ]
+   }
+  ],
+  "geometry": {
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL"
+   ],
+   "image": "https://media.polygonbikes.com/wp-content/uploads/2026/03/05051123/GE-HEIST-1024x824.jpg",
+   "rows": [
+    {
+     "label": "Height",
+     "unit": "cm",
+     "values": [
+      "155-165",
+      "165-175",
+      "175-185",
+      "185-195"
+     ]
+    },
+    {
+     "label": "Seat Tube Length (A)",
+     "unit": "",
+     "values": [
+      "405",
+      "432",
+      "470",
+      "516"
+     ]
+    },
+    {
+     "label": "Seat Tube Angle (B)",
+     "unit": "",
+     "values": [
+      "74",
+      "74",
+      "74",
+      "74"
+     ]
+    },
+    {
+     "label": "Effective Seat Tube Angle (C)",
+     "unit": "",
+     "values": [
+      "74",
+      "74",
+      "74",
+      "74"
+     ]
+    },
+    {
+     "label": "Head Tube Length (D)",
+     "unit": "",
+     "values": [
+      "90",
+      "100",
+      "100",
+      "110"
+     ]
+    },
+    {
+     "label": "Head Tube Angle (E)",
+     "unit": "",
+     "values": [
+      "71",
+      "71",
+      "71",
+      "71"
+     ]
+    },
+    {
+     "label": "Effective Top Tube (F)",
+     "unit": "",
+     "values": [
+      "556",
+      "579",
+      "599",
+      "622"
+     ]
+    },
+    {
+     "label": "Bb Height (G)",
+     "unit": "",
+     "values": [
+      "294",
+      "294",
+      "294",
+      "294"
+     ]
+    },
+    {
+     "label": "Bb Offset (H)",
+     "unit": "",
+     "values": [
+      "70",
+      "70",
+      "70",
+      "70"
+     ]
+    },
+    {
+     "label": "Chainstay Length (I)",
+     "unit": "",
+     "values": [
+      "440",
+      "440",
+      "440",
+      "440"
+     ]
+    },
+    {
+     "label": "Wheelbase (J)",
+     "unit": "",
+     "values": [
+      "1050",
+      "1073",
+      "1093",
+      "1116"
+     ]
+    },
+    {
+     "label": "Frame Reach (K)",
+     "unit": "",
+     "values": [
+      "385",
+      "405",
+      "425",
+      "445"
+     ]
+    },
+    {
+     "label": "Frame Stack (L)",
+     "unit": "",
+     "values": [
+      "597",
+      "607",
+      "607",
+      "616"
+     ]
+    },
+    {
+     "label": "Standover Height (M)",
+     "unit": "",
+     "values": [
+      "696",
+      "711",
+      "737",
+      "777"
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "slug": "path-2",
+  "source": "https://www.polygonbikes.com/us/2026-path-2-city-bike/",
+  "name": "PATH 2",
+  "headline": "PATH: Flat-Bar for Urban Adventures",
+  "tagline": "Urban | ALX Alloy frame | Alloy fork",
+  "bike_type": "DAILY",
+  "intro": "The Polygon PATH combines the speed of a road bike with the upright visibility of a flat-bar commuter.",
+  "feature_images": [
+   "https://media.polygonbikes.com/wp-content/uploads/2026/06/02161709/Path-Feature-1.jpg",
+   "https://media.polygonbikes.com/wp-content/uploads/2026/06/02161715/Path-Feature-2.jpg",
+   "https://media.polygonbikes.com/wp-content/uploads/2026/06/02161719/Path-Feature-3.jpg",
+   "https://media.polygonbikes.com/wp-content/uploads/2026/06/02161724/Path-Feature-4.jpg"
+  ],
+  "features": [
+   {
+    "title": "ALX Urban Frame & Fork",
+    "text": "Lightweight hydroformed aluminium frame."
+   },
+   {
+    "title": "Versatile Drivetrain & Disc Brakes",
+    "text": "Shimano drivetrain and disc brakes."
+   },
+   {
+    "title": "Comfortable & Fast",
+    "text": "700c wheels and high-volume tires."
+   },
+   {
+    "title": "Utility Ready",
+    "text": "Mounts for fenders, racks and bottles."
+   }
+  ],
+  "colors": [
+   {
+    "id": "metalic-blue-us",
+    "label": "Metallic Blue",
+    "images": [
+     "https://media.polygonbikes.com/wp-content/uploads/2025/10/23113629/MY25-PATH-2-KENDA-TIRE-P.png",
+     "https://media.polygonbikes.com/wp-content/uploads/2025/10/23113754/MY25-PATH-2-KENDA-TIRE-RR.png",
+     "https://media.polygonbikes.com/wp-content/uploads/2025/10/23114401/MY25-PATH-2-KENDA-TIRE-LF.png"
+    ]
+   }
+  ],
+  "sizes": [
+   {
+    "id": "s-us",
+    "label": "S"
+   },
+   {
+    "id": "m-us",
+    "label": "M"
+   },
+   {
+    "id": "l-us",
+    "label": "L"
+   },
+   {
+    "id": "xl-us",
+    "label": "XL"
+   }
+  ],
+  "skus": {
+   "metalic-blue-us|s-us": "503347001",
+   "metalic-blue-us|m-us": "503347002",
+   "metalic-blue-us|l-us": "503347003",
+   "metalic-blue-us|xl-us": "503347004"
+  },
+  "specs": [
+   {
+    "group": "Frameset",
+    "rows": [
+     [
+      "Frameset",
+      "ALX URBAN FITNESS"
+     ],
+     [
+      "Fork",
+      "ALLOY RIGID"
+     ],
+     [
+      "Size",
+      "S, M, L, XL"
+     ],
+     [
+      "Frame Color",
+      "METALLIC BLUE"
+     ],
+     [
+      "Decal Color",
+      "BLACK"
+     ]
+    ]
+   },
+   {
+    "group": "Drivetrain",
+    "rows": [
+     [
+      "Shifter",
+      "SHIMANO ALTUS M315, 1x8 SPEED RAPIDFIRE"
+     ],
+     [
+      "Crank",
+      "ALLOY, 42T"
+     ],
+     [
+      "Cassette",
+      "SHIMANO HG400, 11-45T"
+     ],
+     [
+      "Rear Derailleur",
+      "SHIMANO ESSA U2000 GS"
+     ],
+     [
+      "BB",
+      "SQUARE BB, 68mm"
+     ],
+     [
+      "Chain",
+      "KMC Z-8.3"
+     ],
+     [
+      "Pedal",
+      "ONE PIECE PP FLAT"
+     ]
+    ]
+   },
+   {
+    "group": "Cockpit",
+    "rows": [
+     [
+      "Saddle",
+      "LINC EASE"
+     ],
+     [
+      "Seatpost",
+      "POLYGON SPORT, DxL: 27.2x350mm, OFFSET: 15mm, SEAT CLAMP: 31.8mm BOLT"
+     ],
+     [
+      "Handlebar",
+      "POLYGON SPORT, W: 680mm, BB: 31.8mm, R/D: 0mm, B: 6degree"
+     ],
+     [
+      "Handlestem",
+      "POLYGON SPORT, EXT: 75mm, BB: 31.8mm, R/D: 41mm"
+     ],
+     [
+      "Headset",
+      "THREADLESS SEMI-INTEGRATED, IS 44/28.6 | IS 44/30"
+     ]
+    ]
+   },
+   {
+    "group": "Wheel & Tire",
+    "rows": [
+     [
+      "Wheel Set",
+      "ALLOY DOUBLE WALL 32H"
+     ],
+     [
+      "Wheel Size",
+      "700C"
+     ],
+     [
+      "Tire",
+      "KENDA 700x40C 622x40"
+     ],
+     [
+      "Rim",
+      "ALLOY DOUBLE WALL FV H:20 622X21 32H FOR TYRE 622-28/62 DISC"
+     ],
+     [
+      "Hub",
+      "F: ALLOY DISC BRAKE M9x100mm 32H 6 BOLT / R: ALLOY DISC BRAKE 10x135mm 32H 6 BOLT"
+     ],
+     [
+      "Spokes",
+      "F: STAINLESS 14G NDS:290 & DS:290 / R: STAINLESS 14G NDS:290 & DS:290"
+     ]
+    ]
+   },
+   {
+    "group": "Brake",
+    "rows": [
+     [
+      "Brake Lever",
+      "TEKTRO TS-325A"
+     ],
+     [
+      "Brake Caliper",
+      "TEKTRO M280 DISC"
+     ],
+     [
+      "Rotor",
+      "TEKTRO TR 160-52, 160mm"
+     ]
+    ]
+   }
+  ],
+  "geometry": {
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL"
+   ],
+   "image": "https://www.polygonbikes.com/wp-content/themes/polygon2021/assets/images/heist-x7-geo.png",
+   "rows": [
+    {
+     "label": "Height",
+     "unit": "cm",
+     "values": [
+      "150-163",
+      "163-175",
+      "175-188",
+      "188-195"
+     ]
+    },
+    {
+     "label": "Seat Tube Length (A)",
+     "unit": "",
+     "values": [
+      "430",
+      "460",
+      "490",
+      "520"
+     ]
+    },
+    {
+     "label": "Seat Tube Angle (B)",
+     "unit": "",
+     "values": [
+      "74.5",
+      "74.5",
+      "74",
+      "73.5"
+     ]
+    },
+    {
+     "label": "Effective Seat Tube Angle (C)",
+     "unit": "",
+     "values": [
+      "74.5",
+      "74.5",
+      "74",
+      "73.5"
+     ]
+    },
+    {
+     "label": "Head Tube Length (D)",
+     "unit": "",
+     "values": [
+      "95",
+      "125",
+      "155",
+      "185"
+     ]
+    },
+    {
+     "label": "Head Tube Angle (E)",
+     "unit": "",
+     "values": [
+      "70.5",
+      "70.5",
+      "71",
+      "71"
+     ]
+    },
+    {
+     "label": "Effective Top Tube (F)",
+     "unit": "",
+     "values": [
+      "530",
+      "548",
+      "572",
+      "596"
+     ]
+    },
+    {
+     "label": "Bb Height (G)",
+     "unit": "",
+     "values": [
+      "284",
+      "284",
+      "284",
+      "284"
+     ]
+    },
+    {
+     "label": "Bb Offset (H)",
+     "unit": "",
+     "values": [
+      "72",
+      "72",
+      "72",
+      "72"
+     ]
+    },
+    {
+     "label": "Chainstay Length (I)",
+     "unit": "",
+     "values": [
+      "440",
+      "440",
+      "440",
+      "440"
+     ]
+    },
+    {
+     "label": "Wheelbase (J)",
+     "unit": "",
+     "values": [
+      "1028",
+      "1048",
+      "1064",
+      "1083"
+     ]
+    },
+    {
+     "label": "Frame Reach (K)",
+     "unit": "",
+     "values": [
+      "379",
+      "390",
+      "399",
+      "409"
+     ]
+    },
+    {
+     "label": "Frame Stack (L)",
+     "unit": "",
+     "values": [
+      "543",
+      "571",
+      "603",
+      "630"
+     ]
+    },
+    {
+     "label": "Standover Height (M)",
+     "unit": "",
+     "values": [
+      "705",
+      "734",
+      "766",
+      "794"
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "slug": "path-3",
+  "source": "https://www.polygonbikes.com/us/path-3-2/",
+  "name": "PATH 3",
+  "headline": "PATH: Flat-Bar for Urban Adventures",
+  "tagline": "Urban | ALX Alloy frame | Alloy fork",
+  "bike_type": "DAILY",
+  "intro": "The Polygon PATH combines the speed of a road bike with the upright visibility of a flat-bar commuter.",
+  "feature_images": [
+   "https://media.polygonbikes.com/wp-content/uploads/2026/06/02161709/Path-Feature-1.jpg",
+   "https://media.polygonbikes.com/wp-content/uploads/2026/06/02161715/Path-Feature-2.jpg",
+   "https://media.polygonbikes.com/wp-content/uploads/2026/06/02161719/Path-Feature-3.jpg",
+   "https://media.polygonbikes.com/wp-content/uploads/2026/06/02161724/Path-Feature-4.jpg"
+  ],
+  "features": [
+   {
+    "title": "ALX Urban Frame & Fork",
+    "text": "Lightweight hydroformed aluminium frame."
+   },
+   {
+    "title": "Versatile Drivetrain & Disc Brakes",
+    "text": "Shimano drivetrain and disc brakes."
+   },
+   {
+    "title": "Comfortable & Fast",
+    "text": "700c wheels and high-volume tires."
+   },
+   {
+    "title": "Utility Ready",
+    "text": "Mounts for fenders, racks and bottles."
+   }
+  ],
+  "colors": [
+   {
+    "id": "green-us",
+    "label": "Olive Green",
+    "images": [
+     "https://media.polygonbikes.com/wp-content/uploads/2025/04/21163703/MY25-PATH-3-P.png",
+     "https://media.polygonbikes.com/wp-content/uploads/2025/04/21163859/MY25-PATH-3-RR.png",
+     "https://media.polygonbikes.com/wp-content/uploads/2025/04/21163803/MY25-PATH-3-RF.png"
+    ]
+   }
+  ],
+  "sizes": [
+   {
+    "id": "s-us",
+    "label": "S"
+   },
+   {
+    "id": "m-us",
+    "label": "M"
+   },
+   {
+    "id": "l-us",
+    "label": "L"
+   },
+   {
+    "id": "xl-us",
+    "label": "XL"
+   }
+  ],
+  "skus": {
+   "green-us|s-us": "503348001",
+   "green-us|m-us": "503348002",
+   "green-us|l-us": "503348003",
+   "green-us|xl-us": "503348004"
+  },
+  "specs": [
+   {
+    "group": "Frameset",
+    "rows": [
+     [
+      "Frameset",
+      "ALX URBAN FITNESS"
+     ],
+     [
+      "Fork",
+      "ALLOY RIGID"
+     ],
+     [
+      "Size",
+      "S, M, L, XL"
+     ],
+     [
+      "Frame Color",
+      "OLIVE GREEN"
+     ],
+     [
+      "Decal Color",
+      "BLACK"
+     ]
+    ]
+   },
+   {
+    "group": "Drivetrain",
+    "rows": [
+     [
+      "Shifter",
+      "SHIMANO CUES U4000, 1x9-SPEED RAPIDFIRE"
+     ],
+     [
+      "Crank",
+      "PROWHEEL, 42T"
+     ],
+     [
+      "Cassette",
+      "SHIMANO CUES LG300 11-46T"
+     ],
+     [
+      "Rear Derailleur",
+      "SHIMANO CUES U4000"
+     ],
+     [
+      "BB",
+      "SQUARE BB 68mm"
+     ],
+     [
+      "Chain",
+      "KMC X-GLIDE"
+     ],
+     [
+      "Pedal",
+      "ONE PIECE PP FLAT"
+     ]
+    ]
+   },
+   {
+    "group": "Cockpit",
+    "rows": [
+     [
+      "Saddle",
+      "SELLE ROYAL EASE"
+     ],
+     [
+      "Seatpost",
+      "POLYGON SPORT, DxL: 27.2 x 350mm"
+     ],
+     [
+      "Handlebar",
+      "POLYGON SPORT, W: 680mm, BB: 31.8mm, R/D: 0mm, B: 6degree"
+     ],
+     [
+      "Handlestem",
+      "POLYGON SPORT, EXT: 60mm (S, M) / 80mm (L, XL), BB: 31.8mm, R/D: 41mm"
+     ],
+     [
+      "Headset",
+      "THREADLESS SEMI-INTEGRATED, IS 44/28.6 | IS 44/30"
+     ]
+    ]
+   },
+   {
+    "group": "Wheel & Tire",
+    "rows": [
+     [
+      "Wheel Set",
+      "ALLOY DOUBLE WALL 32H"
+     ],
+     [
+      "Wheel Size",
+      "700C"
+     ],
+     [
+      "Tire",
+      "VEE SPEEDSTER 700x40C 622x40"
+     ],
+     [
+      "Rim",
+      "ALLOY DOUBLE WALL FV H:20 622X21 32H FOR TYRE 622-28/62 DISC"
+     ],
+     [
+      "Hub",
+      "F: ALLOY DISC BRAKE M9x100mm 32H CENTERLOCK / R: ALLOY DISC BRAKE 10x135mm 32H CENTERLOCK"
+     ],
+     [
+      "Spokes",
+      "F: STAINLESS 14G NDS:292 & DS:292 / R: STAINLESS 14G NDS:292 & DS:292"
+     ]
+    ]
+   },
+   {
+    "group": "Brake",
+    "rows": [
+     [
+      "Brake Lever",
+      "SHIMANO BL-MT200"
+     ],
+     [
+      "Brake Caliper",
+      "SHIMANO MT200 HYDRAULIC DISC"
+     ],
+     [
+      "Rotor",
+      "SHIMANO SM-RT10, 160mm CENTERLOCK"
+     ]
+    ]
+   }
+  ],
+  "geometry": {
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL"
+   ],
+   "image": "https://www.polygonbikes.com/wp-content/themes/polygon2021/assets/images/heist-x7-geo.png",
+   "rows": [
+    {
+     "label": "Height",
+     "unit": "cm",
+     "values": [
+      "150-163",
+      "163-175",
+      "175-188",
+      "188-195"
+     ]
+    },
+    {
+     "label": "Seat Tube Length (A)",
+     "unit": "",
+     "values": [
+      "430",
+      "460",
+      "490",
+      "520"
+     ]
+    },
+    {
+     "label": "Seat Tube Angle (B)",
+     "unit": "",
+     "values": [
+      "74.5",
+      "74.5",
+      "74",
+      "73.5"
+     ]
+    },
+    {
+     "label": "Effective Seat Tube Angle (C)",
+     "unit": "",
+     "values": [
+      "74.5",
+      "74.5",
+      "74",
+      "73.5"
+     ]
+    },
+    {
+     "label": "Head Tube Length (D)",
+     "unit": "",
+     "values": [
+      "95",
+      "125",
+      "155",
+      "185"
+     ]
+    },
+    {
+     "label": "Head Tube Angle (E)",
+     "unit": "",
+     "values": [
+      "70.5",
+      "70.5",
+      "71",
+      "71"
+     ]
+    },
+    {
+     "label": "Effective Top Tube (F)",
+     "unit": "",
+     "values": [
+      "530",
+      "548",
+      "572",
+      "596"
+     ]
+    },
+    {
+     "label": "Bb Height (G)",
+     "unit": "",
+     "values": [
+      "284",
+      "284",
+      "284",
+      "284"
+     ]
+    },
+    {
+     "label": "Bb Offset (H)",
+     "unit": "",
+     "values": [
+      "72",
+      "72",
+      "72",
+      "72"
+     ]
+    },
+    {
+     "label": "Chainstay Length (I)",
+     "unit": "",
+     "values": [
+      "440",
+      "440",
+      "440",
+      "440"
+     ]
+    },
+    {
+     "label": "Wheelbase (J)",
+     "unit": "",
+     "values": [
+      "1028",
+      "1048",
+      "1064",
+      "1083"
+     ]
+    },
+    {
+     "label": "Frame Reach (K)",
+     "unit": "",
+     "values": [
+      "379",
+      "390",
+      "399",
+      "409"
+     ]
+    },
+    {
+     "label": "Frame Stack (L)",
+     "unit": "",
+     "values": [
+      "543",
+      "571",
+      "603",
+      "630"
+     ]
+    },
+    {
+     "label": "Standover Height (M)",
+     "unit": "",
+     "values": [
+      "705",
+      "734",
+      "766",
+      "794"
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "slug": "path-4",
+  "source": "https://www.polygonbikes.com/us/path-4/",
+  "name": "PATH 4",
+  "headline": "PATH: Flat-Bar for Urban Adventures",
+  "tagline": "Urban | ALX Alloy frame | Carbon fork",
+  "bike_type": "DAILY",
+  "intro": "The Polygon PATH combines the speed of a road bike with the upright visibility of a flat-bar commuter.",
+  "feature_images": [
+   "https://media.polygonbikes.com/wp-content/uploads/2026/06/02161709/Path-Feature-1.jpg",
+   "https://media.polygonbikes.com/wp-content/uploads/2026/06/02161715/Path-Feature-2.jpg",
+   "https://media.polygonbikes.com/wp-content/uploads/2026/06/02161719/Path-Feature-3.jpg",
+   "https://media.polygonbikes.com/wp-content/uploads/2026/06/02161724/Path-Feature-4.jpg"
+  ],
+  "features": [
+   {
+    "title": "ALX Urban Frame & Fork",
+    "text": "Lightweight hydroformed aluminium frame."
+   },
+   {
+    "title": "Versatile Drivetrain & Disc Brakes",
+    "text": "Shimano drivetrain and disc brakes."
+   },
+   {
+    "title": "Comfortable & Fast",
+    "text": "700c wheels and high-volume tires."
+   },
+   {
+    "title": "Utility Ready",
+    "text": "Mounts for fenders, racks and bottles."
+   }
+  ],
+  "colors": [
+   {
+    "id": "chameleon-purple-us",
+    "label": "Chameleon Purple",
+    "images": [
+     "https://media.polygonbikes.com/wp-content/uploads/2025/04/22074759/MY25-PATH-4-P.png",
+     "https://media.polygonbikes.com/wp-content/uploads/2025/04/21164203/MY25-PATH-4-RR.png",
+     "https://media.polygonbikes.com/wp-content/uploads/2025/04/21164100/MY25-PATH-4-RF.png"
+    ]
+   }
+  ],
+  "sizes": [
+   {
+    "id": "s-us",
+    "label": "S"
+   },
+   {
+    "id": "m-us",
+    "label": "M"
+   },
+   {
+    "id": "l-us",
+    "label": "L"
+   },
+   {
+    "id": "xl-us",
+    "label": "XL"
+   }
+  ],
+  "skus": {
+   "chameleon-purple-us|s-us": "503349001",
+   "chameleon-purple-us|m-us": "503349002",
+   "chameleon-purple-us|l-us": "503349003",
+   "chameleon-purple-us|xl-us": "503349004"
+  },
+  "specs": [
+   {
+    "group": "Frameset",
+    "rows": [
+     [
+      "Frameset",
+      "ALX URBAN FITNESS"
+     ],
+     [
+      "Fork",
+      "CARBON RIGID"
+     ],
+     [
+      "Size",
+      "S, M, L, XL"
+     ],
+     [
+      "Frame Color",
+      "CHAMELEON GREEN PURPLE"
+     ],
+     [
+      "Decal Color",
+      "BLACK"
+     ]
+    ]
+   },
+   {
+    "group": "Drivetrain",
+    "rows": [
+     [
+      "Shifter",
+      "SHIMANO TIAGRA SL-4700, 1x10-SPEED RAPIDFIRE PLUS"
+     ],
+     [
+      "Crank",
+      "PROWHEEL OUNCE, 48T"
+     ],
+     [
+      "Cassette",
+      "SHIMANO TIAGRA CS-HG500-10"
+     ],
+     [
+      "Rear Derailleur",
+      "SHIMANO TIAGRA RD-4700"
+     ],
+     [
+      "BB",
+      "PROWHEEL 68mm"
+     ],
+     [
+      "Chain",
+      "KMC X10"
+     ],
+     [
+      "Pedal",
+      "ONE PIECE PP FLAT"
+     ]
+    ]
+   },
+   {
+    "group": "Cockpit",
+    "rows": [
+     [
+      "Saddle",
+      "SELLE ROYAL EASE"
+     ],
+     [
+      "Seatpost",
+      "POLYGON EXPERT, DxL: 27.2 x 350mm"
+     ],
+     [
+      "Handlebar",
+      "POLYGON EXPERT, W: 680mm, BB: 31.8mm, R/D: 0mm, B: 6degree"
+     ],
+     [
+      "Handlestem",
+      "POLYGON EXPERT, EXT: 60mm (S, M) / 80mm (L, XL), BB: 31.8mm, R/D: 41mm"
+     ],
+     [
+      "Headset",
+      "FSA TH-881 W/ SEALED BEARING, IS 42/28.6 | IS 52/40"
+     ]
+    ]
+   },
+   {
+    "group": "Wheel & Tire",
+    "rows": [
+     [
+      "Wheel Set",
+      "ALLOY DOUBLE WALL 24H"
+     ],
+     [
+      "Wheel Size",
+      "700C"
+     ],
+     [
+      "Tire",
+      "VEE GOODIE GOODIE 700x35C 622x35"
+     ],
+     [
+      "Rim",
+      "ALLOY DOUBLE WALL FV H: 30 622X19 24H FOR TYRE 622-28/62 DISC"
+     ],
+     [
+      "Hub",
+      "F: ALLOY DISC BRAKE 12x100mm 24H / R: ALLOY DISC BRAKE 12x142mm 24H CENTERLOCK"
+     ],
+     [
+      "Spokes",
+      "F: STAINLESS 14G NDS:276 & DS:280 / R: STAINLESS 14G NDS:278 & DS:278"
+     ]
+    ]
+   },
+   {
+    "group": "Brake",
+    "rows": [
+     [
+      "Brake Lever",
+      "SHIMANO BL-MT200"
+     ],
+     [
+      "Brake Caliper",
+      "SHIMANO BR-MT200 HYDRAULIC DISC"
+     ],
+     [
+      "Rotor",
+      "SHIMANO SM-RT26, 160mm"
+     ]
+    ]
+   }
+  ],
+  "geometry": {
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL"
+   ],
+   "image": "https://www.polygonbikes.com/wp-content/themes/polygon2021/assets/images/heist-x7-geo.png",
+   "rows": [
+    {
+     "label": "Height",
+     "unit": "cm",
+     "values": [
+      "150-163",
+      "163-175",
+      "175-188",
+      "188-195"
+     ]
+    },
+    {
+     "label": "Seat Tube Length (A)",
+     "unit": "",
+     "values": [
+      "430",
+      "460",
+      "490",
+      "520"
+     ]
+    },
+    {
+     "label": "Seat Tube Angle (B)",
+     "unit": "",
+     "values": [
+      "74.5",
+      "74.5",
+      "74",
+      "73.5"
+     ]
+    },
+    {
+     "label": "Effective Seat Tube Angle (C)",
+     "unit": "",
+     "values": [
+      "74.5",
+      "74.5",
+      "74",
+      "73.5"
+     ]
+    },
+    {
+     "label": "Head Tube Length (D)",
+     "unit": "",
+     "values": [
+      "115",
+      "145",
+      "175",
+      "205"
+     ]
+    },
+    {
+     "label": "Head Tube Angle (E)",
+     "unit": "",
+     "values": [
+      "70.5",
+      "70.5",
+      "71",
+      "71"
+     ]
+    },
+    {
+     "label": "Effective Top Tube (F)",
+     "unit": "",
+     "values": [
+      "530",
+      "548",
+      "572",
+      "596"
+     ]
+    },
+    {
+     "label": "Bb Height (G)",
+     "unit": "",
+     "values": [
+      "286",
+      "286",
+      "286",
+      "286"
+     ]
+    },
+    {
+     "label": "Bb Offset (H)",
+     "unit": "",
+     "values": [
+      "72",
+      "72",
+      "72",
+      "72"
+     ]
+    },
+    {
+     "label": "Chainstay Length (I)",
+     "unit": "",
+     "values": [
+      "440",
+      "440",
+      "440",
+      "440"
+     ]
+    },
+    {
+     "label": "Wheelbase (J)",
+     "unit": "",
+     "values": [
+      "1033",
+      "1053",
+      "1069",
+      "1088"
+     ]
+    },
+    {
+     "label": "Frame Reach (K)",
+     "unit": "",
+     "values": [
+      "380",
+      "390",
+      "400",
+      "410"
+     ]
+    },
+    {
+     "label": "Frame Stack (L)",
+     "unit": "",
+     "values": [
+      "541",
+      "570",
+      "600",
+      "628"
+     ]
+    },
+    {
+     "label": "Standover Height (M)",
+     "unit": "",
+     "values": [
+      "703",
+      "735",
+      "763",
+      "793"
+     ]
+    }
+   ]
+  }
  }
 ]

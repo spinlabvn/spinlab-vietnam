@@ -2,6 +2,42 @@
  "note": "Ngày đăng sản phẩm — do tools/build_new_products.py quản lý",
  "products": [
   {
+   "href": "polygon-heist-7.html",
+   "added": "2026-10-21 10:12",
+   "seq": 102,
+   "name": "HEIST 7"
+  },
+  {
+   "href": "polygon-heist-5.html",
+   "added": "2026-10-21 10:12",
+   "seq": 101,
+   "name": "HEIST 5"
+  },
+  {
+   "href": "polygon-heist-2.html",
+   "added": "2026-10-21 10:12",
+   "seq": 100,
+   "name": "HEIST 2"
+  },
+  {
+   "href": "polygon-path-4.html",
+   "added": "2026-10-21 10:12",
+   "seq": 99,
+   "name": "PATH 4"
+  },
+  {
+   "href": "polygon-path-3.html",
+   "added": "2026-10-21 10:12",
+   "seq": 98,
+   "name": "PATH 3"
+  },
+  {
+   "href": "polygon-path-2.html",
+   "added": "2026-10-21 10:12",
+   "seq": 97,
+   "name": "PATH 2"
+  },
+  {
    "href": "vittoria-tattoo.html",
    "added": "2026-10-20 13:13",
    "seq": 96,
@@ -396,12 +432,6 @@
    "added": "2026-10-13 09:00",
    "seq": 20,
    "name": "Corsa PRO"
-  },
-  {
-   "href": "polygon-relic-20.html",
-   "added": "2026-10-13 09:00",
-   "seq": 19,
-   "name": "RELIC 20"
   },
   {
    "href": "polygon-cleo-2.html",

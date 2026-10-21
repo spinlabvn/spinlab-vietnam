@@ -9,9 +9,9 @@ CATS = {
     'dj': ('Dirt Jump', 'xe-mtb.html#dj'),
     'trial': ('Trial', 'xe-trial.html'),
     'gravel': ('Gravel', 'xe-gravel.html'),
-    'city': ('Xe thành phố', 'xe-dap.html'),
+    'city': ('City - Hybrid', 'xe-city.html'),
     'kids': ('Xe trẻ em', 'xe-dap.html'),
-    'leisure': ('Xe địa hình phổ thông', 'xe-dap.html'),
+    'leisure': ('Xe địa hình phổ thông', 'xe-city.html'),
 }
 
 VI = {
@@ -410,3 +410,49 @@ for _k in ['helios-a8x', 'helios-a9x-entity-wr5']:
 # Tambora MY27 temporarily hidden from the website (pages kept in tools/removed-pages; delete this block to bring them back)
 for _k in ['tambora-9-axs', 'tambora-7-di2', 'tambora-6', 'tambora-4']:
     VI.pop(_k, None)
+
+# ---- City - Hybrid: Heist (MY27) and Path (MY26), data from city.py ----
+HEIST_FEAT = [('Hình học thoải mái', 'Khung nhôm ALX nhẹ, tư thế ngồi thẳng lưng và ghi đông phẳng: dễ quan sát giao thông, dễ điều khiển trong phố.'),
+              ('Phuộc nhún trước 63mm', 'Phuộc SR Suntour êm ái qua ổ gà, gờ giảm tốc và những đoạn đường đất, sỏi đá.'),
+              ('Truyền động 1x', 'Một đĩa trước, không cần củ đề trước: nhẹ hơn, ít bảo dưỡng mà vẫn đủ dải số để leo dốc.'),
+              ('Phanh đĩa dầu', 'Lực phanh mạnh, đều trong cả trời mưa, bóp nhẹ chỉ với một ngón tay.'),
+              ('Lốp 700x45c lăn nhanh', 'Lốp bản lớn bám tốt: nhanh như xe road trên đường nhựa, chắc chắn như xe địa hình khi rẽ vào đường đất.')]
+HEIST_SIB = 'Heist 7 · Heist 5 · Heist 2'
+VI['heist-2'] = dict(file='polygon-heist-2', cat='city', series='Heist', siblings=HEIST_SIB,
+   chips=['Mới MY27', 'Hybrid', 'Khung nhôm ALX', 'Phuộc nhún trước', 'Shimano 1x8'],
+   headline='Hybrid cho mọi chuyến đi trong phố',
+   intro='Heist 2 là chiếc hybrid nhập môn của dòng Heist đời 2027: đủ nhanh để đi làm mỗi ngày, đủ bền để rẽ vào đường đất cuối tuần. Khung nhôm ALX, phuộc SR Suntour NEX hành trình 63mm, bộ truyền động Shimano Altus 1x8 tốc độ (líp 11-45T), phanh đĩa dầu Tektro và lốp Kenda 700x45c.',
+   features=HEIST_FEAT)
+VI['heist-5'] = dict(file='polygon-heist-5', cat='city', series='Heist', siblings=HEIST_SIB,
+   chips=['Mới MY27', 'Hybrid', 'Khung nhôm ALX', 'Phuộc khoá nhún', 'Shimano CUES'],
+   headline='Hybrid đa năng, nâng cấp truyền động CUES',
+   intro='Heist 5 nâng cấp lên bộ truyền động Shimano CUES 1x (líp 11-48T) bền bỉ, phuộc SR Suntour NVX32 hành trình 63mm có khoá nhún thuỷ lực, phanh đĩa dầu Shimano MT200 với đĩa 180mm và lốp WTB Riddler 700x45c — một chiếc xe cho cả đi làm lẫn khám phá đường đất.',
+   features=HEIST_FEAT)
+VI['heist-7'] = dict(file='polygon-heist-7', cat='city', series='Heist', siblings=HEIST_SIB,
+   chips=['Mới MY27', 'Hybrid', 'Khung nhôm ALX', 'Phuộc hơi', 'Shimano Deore 1x12'],
+   headline='Phiên bản cao nhất của dòng Heist',
+   intro='Heist 7 là bản cao cấp nhất của dòng Heist đời 2027: phuộc hơi SR Suntour NVX32 hành trình 63mm có khoá nhún thuỷ lực, bộ truyền động Shimano Deore 1x12 tốc độ (líp 10-51T), cốt yên nhún giảm chấn, pô tăng chỉnh được góc, phanh đĩa dầu Shimano MT200 và lốp WTB Riddler 700x45c.',
+   features=HEIST_FEAT)
+PATH_FEAT = [('Khung nhôm ALX Urban', 'Khung nhôm định hình thuỷ lực nhẹ, bền và linh hoạt khi len lỏi trong phố.'),
+             ('Truyền động Shimano & phanh đĩa', 'Linh kiện Shimano tin cậy với dải số rộng, phanh đĩa cho lực phanh ổn định trong mọi thời tiết.'),
+             ('Thoải mái và nhanh', 'Bánh 700c cùng lốp bản lớn giúp hấp thụ rung động mặt đường mà vẫn giữ được tốc độ.'),
+             ('Sẵn sàng cho đi lại hằng ngày', 'Khung có sẵn lỗ bắt chắn bùn, baga và bình nước.')]
+PATH_SIB = 'Path 4 · Path 3 · Path 2'
+VI['path-2'] = dict(file='polygon-path-2', cat='city', series='Path', siblings=PATH_SIB,
+   chips=['City', 'Khung nhôm ALX', 'Phuộc nhôm', 'Shimano 1x8'],
+   headline='Xe thành phố ghi đông phẳng cho mỗi ngày',
+   intro='Path 2 kết hợp tốc độ của xe road với tư thế ngồi thẳng, dễ quan sát của xe đi phố ghi đông phẳng. Khung nhôm ALX, phuộc nhôm cứng nhẹ, bộ truyền động Shimano Altus 1x8 tốc độ (líp 11-45T), phanh đĩa Tektro và lốp Kenda 700x40c — người bạn đồng hành cho những chuyến đi hằng ngày.',
+   features=PATH_FEAT)
+VI['path-3'] = dict(file='polygon-path-3', cat='city', series='Path', siblings=PATH_SIB,
+   chips=['City', 'Khung nhôm ALX', 'Shimano CUES 1x9', 'Phanh đĩa dầu'],
+   headline='Đi phố nhanh, phanh đĩa dầu chắc chắn',
+   intro='Path 3 nâng cấp lên bộ truyền động Shimano CUES 1x9 tốc độ (líp 11-46T) và phanh đĩa dầu Shimano MT200, cùng khung nhôm ALX, phuộc nhôm và lốp Vee Speedster 700x40c lăn nhẹ — lựa chọn cân bằng cho người đi làm và tập luyện nhẹ trong phố.',
+   features=PATH_FEAT)
+VI['path-4'] = dict(file='polygon-path-4', cat='city', series='Path', siblings=PATH_SIB,
+   chips=['City', 'Khung nhôm ALX', 'Phuộc carbon', 'Shimano Tiagra 1x10'],
+   headline='Phiên bản cao nhất của dòng Path',
+   intro='Path 4 là bản cao cấp nhất của dòng Path: phuộc carbon nhẹ và êm, bộ truyền động Shimano Tiagra 1x10 tốc độ với đĩa 48T cho tốc độ cao, trục xuyên 12mm, phanh đĩa dầu Shimano MT200 và lốp Vee 700x35c — xe đi phố nhanh, nhẹ cho người thích đạp xa.',
+   features=PATH_FEAT)
+
+# Kid bikes removed from the website
+VI.pop('relic20', None)
