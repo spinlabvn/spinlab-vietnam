@@ -150,6 +150,9 @@ M = [
          [['Brake Lever', 'SHIMANO BL-MT200'], ['Brake Caliper', 'SHIMANO BR-MT200 HYDRAULIC DISC'], ['Rotor', 'SHIMANO SM-RT26, 160mm']], PATH4_GEO),
 ]
 
+from latest_colors import latest  # noqa: E402
+for _b in M:
+    latest(_b)
 p = os.path.join(HERE, 'bikes.json')
 b = json.load(open(p, encoding='utf-8'))
 b = [x for x in b if x['slug'] not in {o['slug'] for o in M}] + M

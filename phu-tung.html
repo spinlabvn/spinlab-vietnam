@@ -473,6 +473,12 @@ tbody tr.on{background:#FFF7D6}
 .cmp-clear{border:0;background:none;font-size:13px;text-decoration:underline;color:var(--muted);min-height:44px}
 body.cmp-open .zalo-fab{bottom:96px}
 @media (max-width:600px){.cmp-items li{width:52px;height:52px}.cmp-items img{max-width:44px;max-height:44px}.cmp-clear{display:none}}
+/* Card hover image */
+.p-img>img{transition:opacity .3s}
+.p-img>img.alt{position:absolute;inset:0;width:100%;height:100%;max-width:none;max-height:none;padding:12px;box-sizing:border-box;opacity:0;pointer-events:none}
+.p-img.tire>img.alt{padding:12px 14%}
+.p-img.part>img.alt{padding:12px 8%}
+@media (hover:hover){.p-card:hover .p-img>img.alt{opacity:1}.p-card:hover .p-img:has(>img.alt)>img:not(.alt){opacity:0}}
 /* Brand logos */
 .brand-logo{display:block;height:auto;width:min(calc(var(--lh,30px) * var(--wf,5)),calc(100cqi * var(--wf,5) / 6.5))}
 .brand-tile,.brand-menu a,.hub-logo .hi{container-type:inline-size}

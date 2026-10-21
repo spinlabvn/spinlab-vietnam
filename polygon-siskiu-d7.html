@@ -396,27 +396,6 @@ tbody tr.on{background:#FFF7D6}
 .faq details p{margin:0;padding:0 18px 16px;color:var(--muted);line-height:1.6}
 .related{grid-template-columns:repeat(2,minmax(0,1fr))}
 @media (min-width:1024px){.related{grid-template-columns:repeat(3,minmax(0,1fr))}}
-
-/* Bike detail extras */
-.swatches-pick{display:flex;flex-wrap:wrap;gap:8px}
-.opt-group{border:0;margin:8px 0 0;padding:0}
-.opt-group legend{padding:0;margin-bottom:10px;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.04em;display:flex;gap:10px;flex-wrap:wrap;align-items:baseline}
-.siblings{margin:16px 0 0;font-size:14px;color:var(--muted)}
-.siblings b{color:var(--text)}
-.siblings a{color:var(--brand-red);font-weight:600;text-decoration:underline;text-underline-offset:2px}
-.feat-imgs{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:20px}
-.feat-imgs img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--radius)}
-.spec-groups{display:grid;gap:24px}
-@media (min-width:1024px){.spec-groups{grid-template-columns:1fr 1fr;gap:24px 40px}}
-.spec-groups h3{margin:0 0 4px;font-size:15px;text-transform:uppercase;letter-spacing:.04em;color:var(--brand-red)}
-.spec-groups .spec-list div{grid-template-columns:150px 1fr}
-.spec-groups dd{font-weight:500;font-size:14px}
-.geo td,.geo th{white-space:nowrap;text-align:center}
-.geo tbody th{text-align:left;font-weight:500}
-.geo .col-on{background:#FFF7D6}
-.geo-note{font-size:13px;color:var(--muted);margin:10px 0 0}
-.geo-img{margin:20px 0 0;max-width:720px}
-.geo-img img{width:100%;mix-blend-mode:multiply}
 /* Header in brand yellow (announcement bar removed) */
 .header{background:var(--brand-yellow);border-bottom-color:rgba(0,0,0,.08)}
 .header .nav{background:#fff;border-top-color:rgba(0,0,0,.08)}
@@ -480,18 +459,39 @@ tbody tr.on{background:#FFF7D6}
 .cmp-clear{border:0;background:none;font-size:13px;text-decoration:underline;color:var(--muted);min-height:44px}
 body.cmp-open .zalo-fab{bottom:96px}
 @media (max-width:600px){.cmp-items li{width:52px;height:52px}.cmp-items img{max-width:44px;max-height:44px}.cmp-clear{display:none}}
-/* Brand logos */
-.brand-logo{display:block;height:auto;width:min(calc(var(--lh,30px) * var(--wf,5)),calc(100cqi * var(--wf,5) / 6.5))}
-.brand-tile,.brand-menu a,.hub-logo .hi{container-type:inline-size}
-.brand-tile{--lh:30px}
-.brand-menu{--lh:20px}
-.hub-logo{--lh:40px}
+
+/* Bike detail extras */
+.swatches-pick{display:flex;flex-wrap:wrap;gap:8px}
+.opt-group{border:0;margin:8px 0 0;padding:0}
+.opt-group legend{padding:0;margin-bottom:10px;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.04em;display:flex;gap:10px;flex-wrap:wrap;align-items:baseline}
+.siblings{margin:16px 0 0;font-size:14px;color:var(--muted)}
+.siblings b{color:var(--text)}
+.siblings a{color:var(--brand-red);font-weight:600;text-decoration:underline;text-underline-offset:2px}
+.feat-imgs{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:20px}
+.feat-imgs img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--radius)}
+.spec-groups{display:grid;gap:24px}
+@media (min-width:1024px){.spec-groups{grid-template-columns:1fr 1fr;gap:24px 40px}}
+.spec-groups h3{margin:0 0 4px;font-size:15px;text-transform:uppercase;letter-spacing:.04em;color:var(--brand-red)}
+.spec-groups .spec-list div{grid-template-columns:150px 1fr}
+.spec-groups dd{font-weight:500;font-size:14px}
+.geo td,.geo th{white-space:nowrap;text-align:center}
+.geo tbody th{text-align:left;font-weight:500}
+.geo .col-on{background:#FFF7D6}
+.geo-note{font-size:13px;color:var(--muted);margin:10px 0 0}
+.geo-img{margin:20px 0 0;max-width:720px}
+.geo-img img{width:100%;mix-blend-mode:multiply}
 /* Card hover image */
 .p-img>img{transition:opacity .3s}
 .p-img>img.alt{position:absolute;inset:0;width:100%;height:100%;max-width:none;max-height:none;padding:12px;box-sizing:border-box;opacity:0;pointer-events:none}
 .p-img.tire>img.alt{padding:12px 14%}
 .p-img.part>img.alt{padding:12px 8%}
 @media (hover:hover){.p-card:hover .p-img>img.alt{opacity:1}.p-card:hover .p-img:has(>img.alt)>img:not(.alt){opacity:0}}
+/* Brand logos */
+.brand-logo{display:block;height:auto;width:min(calc(var(--lh,30px) * var(--wf,5)),calc(100cqi * var(--wf,5) / 6.5))}
+.brand-tile,.brand-menu a,.hub-logo .hi{container-type:inline-size}
+.brand-tile{--lh:30px}
+.brand-menu{--lh:20px}
+.hub-logo{--lh:40px}
 </style>
 </head>
 <body>
@@ -639,7 +639,7 @@ body.cmp-open .zalo-fab{bottom:96px}
         <p class="tagline">Full-suspension thực thụ, giá dễ chịu</p>
         <ul class="models"><li>Cross Country</li><li>Hành trình 120mm</li><li>Khung nhôm ALX</li><li>Bánh 27.5&quot; / 29&quot;</li></ul>
         <fieldset class="opt-group"><legend>Màu sắc <span class="size-meta" id="color-name">Blue White</span></legend>
-          <div class="size-opts"><label><input type="radio" name="color" value="blue-white-us" checked><span>Blue White</span></label><label><input type="radio" name="color" value="green-black-us"><span>Green Black</span></label></div></fieldset>
+          <div class="size-opts"><label><input type="radio" name="color" value="blue-white-us" checked><span>Blue White</span></label></div></fieldset>
         <fieldset class="sizes"><legend>Size <span class="size-meta" aria-live="polite">Mã <span id="sz-sku"></span></span></legend>
           <div class="size-opts"><label><input type="radio" name="size" value="27-5-small-us" data-col="0" checked><span>27.5” SMALL</span></label><label><input type="radio" name="size" value="27-5-medium-us" data-col="1"><span>27.5” MEDIUM</span></label><label><input type="radio" name="size" value="29-medium-us" data-col="2"><span>29” MEDIUM</span></label><label><input type="radio" name="size" value="29-large-us" data-col="3"><span>29” LARGE</span></label><label><input type="radio" name="size" value="29-xtra-large-us" data-col="4"><span>29” XTRA LARGE</span></label></div><p class="hint"><a href="#kich-thuoc">Xem bảng kích thước khung để chọn size</a></p></fieldset>
         <div class="price-row"><span class="label">Giá bán lẻ</span><span class="p-price big">38.900.000₫</span></div>
@@ -666,7 +666,7 @@ body.cmp-open .zalo-fab{bottom:96px}
     <section class="pdp-sec" id="tinh-nang"><h2>Tính năng nổi bật</h2><div class="tech"><article><span class="num">01</span><h3>Khung ALX</h3><p>Khung nhôm ALX tạo hình thủy lực, nhẹ, sản xuất tại nhà máy của chính Polygon.</p></article><article><span class="num">02</span><h3>Truyền động Shimano</h3><p>Công nghệ Shadow+ giữ xích chắc chắn và vận hành êm, để bạn tập trung vào đường mòn phía trước.</p></article><article><span class="num">03</span><h3>Cọc yên tăng chỉnh (dropper)</h3><p>Trang bị thiết yếu cho MTB hiện đại — hạ yên nhanh khi đổ dốc, tăng sự tự tin khi xuống đèo.</p></article></div>
       <div class="feat-imgs"><img src="https://media.polygonbikes.com/wp-content/uploads/2026/04/22104546/Siskiu-D-Feature-1.jpg" alt="Polygon Siskiu D – hình ảnh tính năng" loading="lazy"><img src="https://media.polygonbikes.com/wp-content/uploads/2026/04/22104556/Siskiu-D-Feature-2.jpg" alt="Polygon Siskiu D – hình ảnh tính năng" loading="lazy"><img src="https://media.polygonbikes.com/wp-content/uploads/2026/04/22104603/Siskiu-D-Feature-3.jpg" alt="Polygon Siskiu D – hình ảnh tính năng" loading="lazy"></div></section>
 
-    <section class="pdp-sec" id="thong-so"><h2>Thông số kỹ thuật</h2><div class="spec-groups"><section><h3>Khung sườn</h3><dl class="spec-list"><div><dt>Khung</dt><dd>ALX XC TRAIL FRAME</dd></div><div><dt>Phuộc trước</dt><dd>ROCKSHOX RECON SILVER RL 120MM TRAVEL</dd></div><div><dt>Phuộc sau</dt><dd>ROCKSHOX DELUXE SELECT PLUS E2E: 190x45MM</dd></div><div><dt>Màu khung</dt><dd>BITTER LEMON - BLACK</dd></div><div><dt>Màu tem</dt><dd>MUSTARD GREEN - DAVY GREY</dd></div></dl></section><section><h3>Bộ truyền động</h3><dl class="spec-list"><div><dt>Tay đề</dt><dd>SHIMANO 1x11-SPEED TRIGGER</dd></div><div><dt>Giò đĩa</dt><dd>170mm, 32T</dd></div><div><dt>Líp</dt><dd>SHIMANO 11-50T</dd></div><div><dt>Củ đề sau</dt><dd>SHIMANO 11-SPEED</dd></div><div><dt>Trục giữa</dt><dd>THREADED 68/73mm</dd></div><div><dt>Xích</dt><dd>KMC CHAIN</dd></div><div><dt>Bàn đạp</dt><dd>ALLOY CAGE PEDAL W/ REFLECTOR</dd></div></dl></section><section><h3>Tay lái &amp; yên</h3><dl class="spec-list"><div><dt>Yên</dt><dd>LINC VOID SADDLE</dd></div><div><dt>Cọc yên</dt><dd>TRANZ X DROPPER 150mm</dd></div><div><dt>Ghi đông</dt><dd>POLYGON XPERT, ALLOY</dd></div><div><dt>Pô tăng</dt><dd>POLYGON XPERT, ALLOY</dd></div><div><dt>Chén cổ</dt><dd>THREADLESS ZERO STACK HEADSET, ZS 44/28.6 | ZS 56/40</dd></div></dl></section><section><h3>Bánh &amp; lốp</h3><dl class="spec-list"><div><dt>Bộ bánh</dt><dd>ALLOY DOUBLE WALL</dd></div><div><dt>Cỡ bánh</dt><dd>27.5&quot; / 29&quot;</dd></div><div><dt>Lốp</dt><dd>PERFORMANCE TIRE 27.5&quot;x2.25&quot; / 29&quot;x2.25&quot;</dd></div><div><dt>Vành</dt><dd>ALLOY DOUBLE WALL 584 / 622-30 32H FOR TYRE 584 / 622-54/76</dd></div><div><dt>Đùm</dt><dd>F: SHIMANO HB-MT400 THRU AXLE 15x100mm 32H CENTER LOCK / R: SHIMANO FH-MT400 THRU AXLE 12X148mm 32H CENTER LOCK</dd></div></dl></section><section><h3>Phanh</h3><dl class="spec-list"><div><dt>Tay phanh</dt><dd>SHIMANO LEVER</dd></div><div><dt>Củ phanh</dt><dd>SHIMANO HYDRAULIC DISC</dd></div><div><dt>Đĩa phanh</dt><dd>ROTOR: FRONT:180MM REAR:160MM CENTER-LOCK</dd></div></dl></section></div>
+    <section class="pdp-sec" id="thong-so"><h2>Thông số kỹ thuật</h2><div class="spec-groups"><section><h3>Khung sườn</h3><dl class="spec-list"><div><dt>Khung</dt><dd>ALX XC TRAIL FRAME</dd></div><div><dt>Phuộc trước</dt><dd>ROCKSHOX RECON SILVER RL 120MM TRAVEL</dd></div><div><dt>Phuộc sau</dt><dd>ROCKSHOX DELUXE SELECT PLUS E2E: 190x45MM</dd></div><div><dt>Màu khung</dt><dd>BLUE - WHITE</dd></div></dl></section><section><h3>Bộ truyền động</h3><dl class="spec-list"><div><dt>Tay đề</dt><dd>SHIMANO 1x11-SPEED TRIGGER</dd></div><div><dt>Giò đĩa</dt><dd>170mm, 32T</dd></div><div><dt>Líp</dt><dd>SHIMANO 11-50T</dd></div><div><dt>Củ đề sau</dt><dd>SHIMANO 11-SPEED</dd></div><div><dt>Trục giữa</dt><dd>THREADED 68/73mm</dd></div><div><dt>Xích</dt><dd>KMC CHAIN</dd></div><div><dt>Bàn đạp</dt><dd>ALLOY CAGE PEDAL W/ REFLECTOR</dd></div></dl></section><section><h3>Tay lái &amp; yên</h3><dl class="spec-list"><div><dt>Yên</dt><dd>LINC VOID SADDLE</dd></div><div><dt>Cọc yên</dt><dd>TRANZ X DROPPER 150mm</dd></div><div><dt>Ghi đông</dt><dd>POLYGON XPERT, ALLOY</dd></div><div><dt>Pô tăng</dt><dd>POLYGON XPERT, ALLOY</dd></div><div><dt>Chén cổ</dt><dd>THREADLESS ZERO STACK HEADSET, ZS 44/28.6 | ZS 56/40</dd></div></dl></section><section><h3>Bánh &amp; lốp</h3><dl class="spec-list"><div><dt>Bộ bánh</dt><dd>ALLOY DOUBLE WALL</dd></div><div><dt>Cỡ bánh</dt><dd>27.5&quot; / 29&quot;</dd></div><div><dt>Lốp</dt><dd>PERFORMANCE TIRE 27.5&quot;x2.25&quot; / 29&quot;x2.25&quot;</dd></div><div><dt>Vành</dt><dd>ALLOY DOUBLE WALL 584 / 622-30 32H FOR TYRE 584 / 622-54/76</dd></div><div><dt>Đùm</dt><dd>F: SHIMANO HB-MT400 THRU AXLE 15x100mm 32H CENTER LOCK / R: SHIMANO FH-MT400 THRU AXLE 12X148mm 32H CENTER LOCK</dd></div></dl></section><section><h3>Phanh</h3><dl class="spec-list"><div><dt>Tay phanh</dt><dd>SHIMANO LEVER</dd></div><div><dt>Củ phanh</dt><dd>SHIMANO HYDRAULIC DISC</dd></div><div><dt>Đĩa phanh</dt><dd>ROTOR: FRONT:180MM REAR:160MM CENTER-LOCK</dd></div></dl></section></div>
       <p class="geo-note">Thông số có thể thay đổi theo lô hàng. Vui lòng liên hệ Spinlab để xác nhận cấu hình xe tại Việt Nam.</p></section>
 
     <section class="pdp-sec" id="kich-thuoc"><h2>Kích thước khung (geometry)</h2>
@@ -676,7 +676,7 @@ body.cmp-open .zalo-fab{bottom:96px}
     <section class="pdp-sec" id="hoi-dap"><h2>Hỏi đáp</h2><div class="faq"><details><summary>Chọn size xe như thế nào?</summary><p>Hãy tham khảo hàng “Chiều cao người lái” trong bảng Kích thước khung. Nếu chiều cao của bạn nằm giữa hai size, liên hệ Spinlab để được tư vấn theo tư thế và nhu cầu đạp.</p></details><details><summary>Xe được bảo hành thế nào?</summary><p>Xe chính hãng Polygon phân phối bởi Spinlab được bảo hành theo chính sách của Polygon. Liên hệ hotline để biết chi tiết điều kiện và thời hạn.</p></details><details><summary>Có thể nâng cấp linh kiện không?</summary><p>Có. Liên hệ Spinlab để được tư vấn nâng cấp phù hợp, ví dụ lốp Vittoria hay dây cuốn ghi đông Emume.</p></details></div></section>
 
     <section class="pdp-sec"><div class="sec-head"><h2>Xe đạp tương tự</h2><a class="see-all" href="/xe-mtb">Xem tất cả</a></div>
-      <div class="grid related"><article class="p-card"><div class="p-img"><img src="https://media.polygonbikes.com/wp-content/uploads/2022/07/14144054/MY22-SISKIU-DSE-P.png" alt="Polygon SISKIU DSE" loading="lazy"><img class="alt" src="https://media.polygonbikes.com/wp-content/uploads/2022/07/14144100/MY22-SISKIU-DSE-RR.png" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Polygon · Cross Country</span><h3 class="p-name"><a class="stretch" href="/polygon-siskiu-dse">SISKIU DSE</a></h3><p class="p-desc">Full-suspension thực thụ, giá dễ chịu</p><span class="p-price">Liên hệ</span></div></article><article class="p-card"><div class="p-img"><img src="https://media.polygonbikes.com/wp-content/uploads/2025/10/17105018/MY25-SISKIU-D6-P-1.png" alt="Polygon SISKIU D6" loading="lazy"><img class="alt" src="https://media.polygonbikes.com/wp-content/uploads/2025/10/17104932/MY25-SISKIU-D6-LF-1.png" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Polygon · Cross Country</span><h3 class="p-name"><a class="stretch" href="/polygon-siskiu-d6">SISKIU D6</a></h3><p class="p-desc">Full-suspension thực thụ, giá dễ chịu</p><span class="p-price">29.800.000₫</span></div></article><article class="p-card"><div class="p-img"><img src="https://media.polygonbikes.com/wp-content/uploads/2021/11/14144129/MY22-SISKIU-D5-RED-P.png" alt="Polygon SISKIU D5" loading="lazy"><img class="alt" src="https://media.polygonbikes.com/wp-content/uploads/2021/12/13154303/Siskiu-D5-RF.png" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Polygon · Cross Country</span><h3 class="p-name"><a class="stretch" href="/polygon-siskiu-d5">SISKIU D5</a></h3><p class="p-desc">Full-suspension thực thụ, giá dễ chịu</p><span class="p-price">25.800.000₫</span></div></article></div></section>
+      <div class="grid related"><article class="p-card"><div class="p-img"><img src="https://media.polygonbikes.com/wp-content/uploads/2022/07/14144054/MY22-SISKIU-DSE-P.png" alt="Polygon SISKIU DSE" loading="lazy"><img class="alt" src="https://media.polygonbikes.com/wp-content/uploads/2022/07/14144100/MY22-SISKIU-DSE-RR.png" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Polygon · Cross Country</span><h3 class="p-name"><a class="stretch" href="/polygon-siskiu-dse">SISKIU DSE</a></h3><p class="p-desc">Full-suspension thực thụ, giá dễ chịu</p><span class="p-price">Liên hệ</span></div></article><article class="p-card"><div class="p-img"><img src="https://media.polygonbikes.com/wp-content/uploads/2025/10/17105018/MY25-SISKIU-D6-P-1.png" alt="Polygon SISKIU D6" loading="lazy"><img class="alt" src="https://media.polygonbikes.com/wp-content/uploads/2025/10/17104932/MY25-SISKIU-D6-LF-1.png" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Polygon · Cross Country</span><h3 class="p-name"><a class="stretch" href="/polygon-siskiu-d6">SISKIU D6</a></h3><p class="p-desc">Full-suspension thực thụ, giá dễ chịu</p><span class="p-price">29.800.000₫</span></div></article><article class="p-card"><div class="p-img"><img src="https://media.polygonbikes.com/wp-content/uploads/2025/08/08102040/MY25-SISKIU-D5-P.png" alt="Polygon SISKIU D5" loading="lazy"><img class="alt" src="https://media.polygonbikes.com/wp-content/uploads/2021/11/10084541/MY25-SISKIU-D5-RF.png" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Polygon · Cross Country</span><h3 class="p-name"><a class="stretch" href="/polygon-siskiu-d5">SISKIU D5</a></h3><p class="p-desc">Full-suspension thực thụ, giá dễ chịu</p><span class="p-price">25.800.000₫</span></div></article></div></section>
   </div>
 </main>
 
@@ -752,14 +752,14 @@ body.cmp-open .zalo-fab{bottom:96px}
 
 // Bike gallery, colour & size selector
 (() => {
-  const D = {"colors": {"blue-white-us": {"label": "Blue White", "images": ["https://media.polygonbikes.com/wp-content/uploads/2021/11/13150642/MY25-SISKIU-D7-NEW-COLOR-P.png", "https://media.polygonbikes.com/wp-content/uploads/2021/11/13150809/MY25-SISKIU-D7-NEW-COLOR-RR.png", "https://media.polygonbikes.com/wp-content/uploads/2021/11/13150725/MY25-SISKIU-D7-NEW-COLOR-RF.png"]}, "green-black-us": {"label": "Green Black", "images": ["https://media.polygonbikes.com/wp-content/uploads/2021/11/14144120/MY22-SISKIU-D7-P-REV.01.png", "https://media.polygonbikes.com/wp-content/uploads/2021/12/13154257/Siskiu-D7-RF.png", "https://media.polygonbikes.com/wp-content/uploads/2021/12/13154259/Siskiu-D7-P.png"]}}, "skus": {"blue-white-us|27-5-small-us": "503302001", "blue-white-us|27-5-medium-us": "503302002", "blue-white-us|29-medium-us": "503303001", "blue-white-us|29-large-us": "503303002", "blue-white-us|29-xtra-large-us": "503303003", "green-black-us|27-5-small-us": "502739001", "green-black-us|27-5-medium-us": "502739002", "green-black-us|29-medium-us": "502740001", "green-black-us|29-large-us": "502740002", "green-black-us|29-xtra-large-us": "502740003"}, "name": "SISKIU D7"};
+  const D = {"colors": {"blue-white-us": {"label": "Blue White", "images": ["https://media.polygonbikes.com/wp-content/uploads/2021/11/13150642/MY25-SISKIU-D7-NEW-COLOR-P.png", "https://media.polygonbikes.com/wp-content/uploads/2021/11/13150809/MY25-SISKIU-D7-NEW-COLOR-RR.png", "https://media.polygonbikes.com/wp-content/uploads/2021/11/13150725/MY25-SISKIU-D7-NEW-COLOR-RF.png"]}}, "skus": {"blue-white-us|27-5-small-us": "503302001", "blue-white-us|27-5-medium-us": "503302002", "blue-white-us|29-medium-us": "503303001", "blue-white-us|29-large-us": "503303002", "blue-white-us|29-xtra-large-us": "503303003"}, "name": "SISKIU D7", "brand": "Polygon"};
   const main=document.getElementById('g-main'), list=document.querySelector('.g-thumbs');
   const bindThumbs=()=>{ const t=[...list.querySelectorAll('button')]; t.forEach(b=>b.addEventListener('click',()=>{ main.src=b.dataset.src; main.alt=b.dataset.alt; t.forEach(x=>x.setAttribute('aria-pressed',x===b)); })); };
   const val=n=>(document.querySelector(`input[name=${n}]:checked`)||{}).value||'';
   const updSku=()=>{ const el=document.getElementById('sz-sku'); if(el) el.textContent=D.skus[val('color')+'|'+val('size')]||'—'; };
   document.querySelectorAll('input[name=color]').forEach(r=>r.addEventListener('change',()=>{
     const c=D.colors[r.value]; document.getElementById('color-name').textContent=c.label;
-    if(c.images.length){ main.src=c.images[0]; list.innerHTML=c.images.map((u,i)=>`<li><button aria-pressed="${i===0}" data-src="${u}" data-alt="Polygon ${D.name} – ${c.label} – ảnh ${i+1}"><img src="${u}" alt="Ảnh ${i+1}"></button></li>`).join(''); bindThumbs(); }
+    if(c.images.length){ main.src=c.images[0]; list.innerHTML=c.images.map((u,i)=>`<li><button aria-pressed="${i===0}" data-src="${u}" data-alt="${D.brand} ${D.name} – ${c.label} – ảnh ${i+1}"><img src="${u}" alt="Ảnh ${i+1}"></button></li>`).join(''); bindThumbs(); }
     updSku(); }));
   const geo=document.querySelector('table.geo');
   const hl=()=>{ if(!geo) return; const r=document.querySelector('input[name=size]:checked'); if(!r) return;
@@ -788,6 +788,14 @@ body.cmp-open .zalo-fab{bottom:96px}
   document.addEventListener('keydown',e=>{ if(e.key==='Escape'&&document.body.classList.contains('nav-open')){ set(false); btn.focus(); } });
   const sync=()=>{ if(mq.matches){ nav.toggleAttribute('inert',!document.body.classList.contains('nav-open')); } else { set(false); nav.removeAttribute('inert'); } };
   mq.addEventListener('change',sync); sync();
+})();
+// Vittoria retail price: follows the selected SKU
+(() => {
+  const P = {"11A00389": "1.815.000₫", "11A00390": "1.815.000₫", "11A00391": "1.815.000₫", "11A00630": "1.815.000₫"}, el = document.querySelector('.p-price.big'), code = document.getElementById('sz-sku');
+  if (!el || !code) return;
+  const upd = () => { const p = P[(code.textContent || '').trim()]; if (p) el.textContent = p; };
+  new MutationObserver(upd).observe(code, {childList: true, characterData: true, subtree: true});
+  upd();
 })();
 // Compare products: toggles on cards / product page, tray, link to so-sanh.html (max 4)
 (() => {

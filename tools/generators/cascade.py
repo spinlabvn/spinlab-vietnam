@@ -96,6 +96,9 @@ BIKES = [
                        '596 601 606 610 620 624 629 638', '646 704 734 756 709 736 759 780'])),
 ]
 
+from latest_colors import latest  # noqa: E402
+for _b in BIKES:
+    latest(_b)
 p = os.path.join(HERE, 'bikes.json')
 b = json.load(open(p, encoding='utf-8'))
 b = [x for x in b if x['slug'] not in {o['slug'] for o in BIKES}] + BIKES
