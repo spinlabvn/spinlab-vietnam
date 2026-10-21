@@ -475,15 +475,16 @@ body.cmp-open .zalo-fab{bottom:96px}
 @media (max-width:600px){.cmp-items li{width:52px;height:52px}.cmp-items img{max-width:44px;max-height:44px}.cmp-clear{display:none}}
 /* Articles */
 .art-grid{display:grid;gap:24px;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));margin:24px 0 56px}
-.art-card{display:block}
-.art-card .n-img{aspect-ratio:16/10;border-radius:var(--radius);overflow:hidden;background:var(--surface)}
+@media (min-width:1024px){.art-grid{grid-template-columns:repeat(3,1fr)}}
+.art-card{display:flex;flex-direction:column}
+.art-card .n-img{aspect-ratio:16/10;border-radius:var(--radius);overflow:hidden;background:var(--surface);flex:none}
 .art-card .n-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
 .art-card .n-img.fit img{object-fit:contain;padding:8%;mix-blend-mode:multiply}
 .art-card:hover .n-img img{transform:scale(1.04)}
 .art-card small{display:block;margin-top:12px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--brand-red)}
-.art-card h3{margin:4px 0 6px;font-size:18px;line-height:1.35}
+.art-card h3{margin:4px 0 6px;font-size:18px;line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:calc(2em * 1.35)}
 .art-card:hover h3{text-decoration:underline;text-underline-offset:3px}
-.art-card p{margin:0;color:var(--muted);font-size:14px;line-height:1.5}
+.art-card p{margin:0;color:var(--muted);font-size:14px;line-height:1.5;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;min-height:calc(3em * 1.5)}
 .article{max-width:780px;margin:0 auto 48px}
 .article .meta{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--brand-red);margin:8px 0}
 .article h1{font-size:clamp(28px,4vw,40px);line-height:1.15;margin:0 0 12px}
@@ -677,7 +678,7 @@ body.cmp-open .zalo-fab{bottom:96px}
   </article>
   <div class="art-help"><div class="help"><div><h2>Cần tư vấn thêm?</h2><p>Đội ngũ kỹ thuật Spinlab sẽ tư vấn chọn size, dòng xe và lốp phù hợp với bạn.</p></div><div class="actions"><a class="btn btn-yellow" href="tel:0399337533">Gọi 0399 337 533</a><a class="btn btn-zalo" href="https://zalo.me/0399337533" target="_blank" rel="noopener"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="" width="22" height="22">Chat Zalo</a><a class="btn btn-light" href="/dai-ly">Tìm đại lý</a></div></div></div>
   
-  <section class="art-more"><h2>Bài viết khác</h2><div class="art-grid"><a class="art-card" href="/tin-tuc-polygon-strattos-c"><div class="n-img"><img src="https://media.polygonbikes.com/wp-content/uploads/2026/02/23154155/Header-Strattos-C-by-Velo-450x300.jpg" alt="" loading="lazy"></div><small>Sản phẩm mới · 21/10/2026</small><h3>Polygon Strattos C: road bike endurance thế hệ mới</h3><p>Khung carbon ACX êm ái, lốp tới 34mm và buồng lái LINC bán tích hợp — Strattos C được Polygon thiết kế cho những cung đường dài cả ngày. Ba phiên bản…</p></a><a class="art-card" href="/huong-dan-ap-suat-lop-tubeless"><div class="n-img fit"><img src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/corsa-next-tlr-01.webp?width=500" alt="" loading="lazy"></div><small>Kỹ thuật lốp · 21/10/2026</small><h3>Áp suất lốp tubeless: bơm bao nhiêu là đúng?</h3><p>Lốp tubeless cho phép chạy áp suất thấp hơn lốp có săm — êm hơn, bám hơn mà không lo thủng do kẹp săm. Nhưng bơm bao nhiêu là vừa? Dưới đây là cách…</p></a></div></section></div>
+  <section class="art-more"><h2>Bài viết khác</h2><div class="art-grid"><a class="art-card" href="/tin-tuc-polygon-strattos-c"><div class="n-img"><img src="https://media.polygonbikes.com/wp-content/uploads/2026/02/23154155/Header-Strattos-C-by-Velo-450x300.jpg" alt="" loading="lazy"></div><small>Sản phẩm mới · 21/10/2026</small><h3>Polygon Strattos C: road bike endurance thế hệ mới</h3><p>Khung carbon ACX êm ái, lốp tới 34mm và buồng lái LINC bán tích hợp — Strattos C được Polygon thiết kế cho những cung đường dài cả ngày. Ba phiên bản…</p></a><a class="art-card" href="/huong-dan-ap-suat-lop-tubeless"><div class="n-img"><img src="https://vittoria.com/cdn/shop/files/Banner_HERO_Horizontal_3_69510693-5265-4d5e-95ae-4706d0cb7fdd.webp?width=600" alt="" loading="lazy"></div><small>Kỹ thuật lốp · 21/10/2026</small><h3>Áp suất lốp tubeless: bơm bao nhiêu là đúng?</h3><p>Lốp tubeless cho phép chạy áp suất thấp hơn lốp có săm — êm hơn, bám hơn mà không lo thủng do kẹp săm. Nhưng bơm bao nhiêu là vừa? Dưới đây là cách…</p></a></div></section></div>
 </main>
 
 

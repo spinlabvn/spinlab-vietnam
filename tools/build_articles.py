@@ -103,7 +103,7 @@ ARTICLES = [
     dict(slug='huong-dan-ap-suat-lop-tubeless', cat='huong-dan', tag='Kỹ thuật lốp', date='2026-10-21',
          title='Áp suất lốp tubeless: bơm bao nhiêu là đúng?',
          lead='Lốp tubeless cho phép chạy áp suất thấp hơn lốp có săm — êm hơn, bám hơn mà không lo thủng do kẹp săm. Nhưng bơm bao nhiêu là vừa? Dưới đây là cách chọn áp suất và bảng điểm khởi đầu tham khảo.',
-         image='https://cdn.shopify.com/s/files/1/0800/0549/7120/files/corsa-next-tlr-01.webp?width=1200', thumb='https://cdn.shopify.com/s/files/1/0800/0549/7120/files/corsa-next-tlr-01.webp?width=500', contain=True,
+         image='https://vittoria.com/cdn/shop/files/Banner_HERO_Horizontal_3_69510693-5265-4d5e-95ae-4706d0cb7fdd.webp?width=1600', thumb='https://vittoria.com/cdn/shop/files/Banner_HERO_Horizontal_3_69510693-5265-4d5e-95ae-4706d0cb7fdd.webp?width=600',
          body='''
 <h2>Vì sao lốp tubeless chạy được áp suất thấp hơn?</h2>
 <p>Lốp có săm khi bơm non dễ bị “kẹp săm” (pinch flat): săm bị ép giữa vành và chướng ngại vật rồi thủng. Lốp tubeless không có săm nên không gặp lỗi này; keo tự vá bên trong còn bịt kín các lỗ thủng nhỏ ngay khi đang chạy. Nhờ vậy bạn có thể giảm áp suất để lốp ôm mặt đường tốt hơn, lăn êm hơn trên đường xấu và bám hơn khi vào cua.</p>
@@ -175,15 +175,16 @@ date_vi = lambda d: '/'.join(reversed(d.split('-')))
 
 CSS = '''/* Articles */
 .art-grid{display:grid;gap:24px;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));margin:24px 0 56px}
-.art-card{display:block}
-.art-card .n-img{aspect-ratio:16/10;border-radius:var(--radius);overflow:hidden;background:var(--surface)}
+@media (min-width:1024px){.art-grid{grid-template-columns:repeat(3,1fr)}}
+.art-card{display:flex;flex-direction:column}
+.art-card .n-img{aspect-ratio:16/10;border-radius:var(--radius);overflow:hidden;background:var(--surface);flex:none}
 .art-card .n-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
 .art-card .n-img.fit img{object-fit:contain;padding:8%;mix-blend-mode:multiply}
 .art-card:hover .n-img img{transform:scale(1.04)}
 .art-card small{display:block;margin-top:12px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--brand-red)}
-.art-card h3{margin:4px 0 6px;font-size:18px;line-height:1.35}
+.art-card h3{margin:4px 0 6px;font-size:18px;line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:calc(2em * 1.35)}
 .art-card:hover h3{text-decoration:underline;text-underline-offset:3px}
-.art-card p{margin:0;color:var(--muted);font-size:14px;line-height:1.5}
+.art-card p{margin:0;color:var(--muted);font-size:14px;line-height:1.5;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;min-height:calc(3em * 1.5)}
 .article{max-width:780px;margin:0 auto 48px}
 .article .meta{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--brand-red);margin:8px 0}
 .article h1{font-size:clamp(28px,4vw,40px);line-height:1.15;margin:0 0 12px}
