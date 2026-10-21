@@ -9,16 +9,16 @@ HOT = '0399 337 533'
 REGIONS = [
  ('mien-bac', 'Miền Bắc', [
    dict(name='Tuấn Biker', city='Hà Nội', addr='79 Đường 23, KĐT Thành Phố Giao Lưu, Cổ Nhuế 1, Bắc Từ Liêm, Hà Nội', phone='0888967777',
-        brands=['Emume', 'Vittoria']),
-   dict(name='Bon Bon Bike', city='Hải Phòng', addr='18 P. Thế Lữ, Hồng Bàng, Hải Phòng', phone='0936635489', brands=['Emume', 'Vittoria'])]),
+        brands=['Vittoria', 'Emume']),
+   dict(name='Bon Bon Bike', city='Hải Phòng', addr='18 P. Thế Lữ, Hồng Bàng, Hải Phòng', phone='0936635489', brands=['Vittoria', 'Emume'])]),
  ('mien-trung', 'Miền Trung', []),
  ('mien-nam', 'Miền Nam', [
    dict(name='Spinlab Việt Nam', city='TP. Hồ Chí Minh', addr='13 đường 14, khu phố 4, phường An Khánh, TP. Hồ Chí Minh',
         phone='0399337533', brands=['Polygon', 'Vittoria', 'Emume', 'Story Bike'], hq=True),
-   dict(name='HP Cycle', city='TP. Hồ Chí Minh', addr='13 đường số 11, KDC Him Lam 6A, xã Bình Hưng, TP. Hồ Chí Minh', phone='0932019931'),
-   dict(name='644 Store', city='TP. Hồ Chí Minh', addr='644 Đ. Cách Mạng Tháng Tám, Thủ Dầu Một, TP. Hồ Chí Minh', phone='0943435455'),
-   dict(name='Phú Quý Bike', city='TP. Hồ Chí Minh', addr='106/14 Vạn Kiếp, phường Gia Định, TP. Hồ Chí Minh', phone='0319204022'),
-   dict(name='2Bike', city='TP. Hồ Chí Minh', addr='54B Nguyễn Bỉnh Khiêm, Tân Định, TP. Hồ Chí Minh', phone='0936313213')]),
+   dict(name='HP Cycle', city='TP. Hồ Chí Minh', addr='13 đường số 11, KDC Him Lam 6A, xã Bình Hưng, TP. Hồ Chí Minh', phone='0932019931', brands=['Vittoria', 'Emume']),
+   dict(name='644 Store', city='TP. Hồ Chí Minh', addr='644 Đ. Cách Mạng Tháng Tám, Thủ Dầu Một, TP. Hồ Chí Minh', phone='0943435455', brands=['Vittoria', 'Emume']),
+   dict(name='Phú Quý Bike', city='TP. Hồ Chí Minh', addr='106/14 Vạn Kiếp, phường Gia Định, TP. Hồ Chí Minh', phone='0319204022', brands=['Vittoria', 'Emume']),
+   dict(name='2Bike', city='TP. Hồ Chí Minh', addr='54B Nguyễn Bỉnh Khiêm, Tân Định, TP. Hồ Chí Minh', phone='0936313213', brands=['Vittoria', 'Emume'])]),
 ]
 
 CSS = '''
