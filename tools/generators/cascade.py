@@ -1,6 +1,6 @@
 """Polygon Cascade 3 / 4 / 5 (Leisure MTB hardtail), read from polygonbikes.com/us on 2026-10-21:
 Cascade 4 and 5 are MY26; Cascade 3 is the newest Cascade 3 Polygon lists (MY22 photos, 27.5" S/M).
-Merges the bikes into bikes.json and (re)builds the "Leisure" tab of xe-mtb.html.
+Merges the bikes into bikes.json and (re)builds the Cascade group in the Cross Country tab of xe-mtb.html.
     python3 cascade.py ../..
 """
 import html, json, os, re, sys
@@ -101,7 +101,7 @@ b = json.load(open(p, encoding='utf-8'))
 b = [x for x in b if x['slug'] not in {o['slug'] for o in BIKES}] + BIKES
 json.dump(b, open(p, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 
-# ---- Leisure tab on xe-mtb.html ----
+# ---- Cascade group in the Cross Country panel of xe-mtb.html ----
 sys.path.insert(0, HERE)
 from vi import VI  # noqa: E402
 DESC = {'cascade-5': 'Shimano CUES 1x10 · Phanh đĩa dầu', 'cascade-4': 'Shimano CUES 1x9 · Phanh đĩa dầu', 'cascade-3': 'Shimano 3x7 · Bánh 27.5"'}
@@ -111,19 +111,18 @@ for o in sorted(BIKES, key=lambda o: o['slug'], reverse=True):
         cards += (f'<article class="p-card"><div class="p-img"><img src="{E(o["colors"][0]["images"][0])}" alt="Polygon {E(o["name"])}" loading="lazy"></div>'
                   f'<div class="p-body"><span class="p-brand">Polygon · Cascade</span><h3 class="p-name"><a class="stretch" href="{VI[o["slug"]]["file"]}.html">{E(o["name"])}</a></h3>'
                   f'<p class="p-desc">{E(DESC[o["slug"]])}</p><span class="p-price">1.980.000₫</span></div></article>')
-TAB = '        <button role="tab" id="tab-leisure" aria-controls="panel-leisure" aria-selected="false" tabindex="-1">Leisure</button>\n'
-PANEL = (f'      <div class="mtb-panel" role="tabpanel" id="panel-leisure" aria-labelledby="tab-leisure" hidden>\n'
-         f'        <p class="mtb-intro">Xe địa hình phổ thông: đi phố hằng ngày, dạo đường mòn cuối tuần — dễ làm quen, bền bỉ.</p>\n'
-         f'        <section class="road-group"><div class="rg-head"><div><h2>Cascade</h2><p class="rg-sub">Leisure MTB · Hardtail nhôm · Phuộc 100mm</p></div>'
-         f'<p class="rg-desc">Hardtail nhập môn nhẹ và bền, phuộc nhún 100mm, phanh đĩa, bánh 27.5" hoặc 29" theo chiều cao người đạp.</p></div>'
-         f'<div class="grid">{cards}</div></section>\n      </div>\n')
+GROUP = ('<section class="road-group"><div class="rg-head"><div><h2>Cascade</h2><p class="rg-sub">XC hardtail phổ thông · Nhôm · Phuộc 100mm</p></div>'
+         '<p class="rg-desc">Hardtail nhập môn nhẹ và bền, phuộc nhún 100mm, phanh đĩa, bánh 27.5" hoặc 29" theo chiều cao người đạp.</p></div>'
+         f'<div class="grid">{cards}</div></section>')
 f = os.path.join(D, 'xe-mtb.html')
 s = open(f, encoding='utf-8').read()
-s = s.replace(TAB, '')
+# remove the old Leisure tab/panel and any previous Cascade group
+s = s.replace('        <button role="tab" id="tab-leisure" aria-controls="panel-leisure" aria-selected="false" tabindex="-1">Leisure</button>\n', '')
 s = re.sub(r'      <div class="mtb-panel" role="tabpanel" id="panel-leisure".*?\n      </div>\n', '', s, flags=re.S)
-if cards:
-    s = s.replace('Dirt Jump</button>\n', 'Dirt Jump</button>\n' + TAB, 1)
-    i = s.index('<div class="mtb-panel" role="tabpanel" id="panel-dj"')
-    s = s[:i] + PANEL.lstrip() + '      ' + s[i:]
+s = re.sub(r'\s*<section class="road-group"><div class="rg-head"><div><h2>Cascade</h2>.*?</section>', '', s, flags=re.S)
+if cards:   # last group of the Cross Country panel
+    a = s.index('id="panel-xc"')
+    z = s.index('\n      </div>', a)
+    s = s[:z] + '\n        ' + GROUP + s[z:]
 open(f, 'w', encoding='utf-8').write(s)
-print(len(BIKES), 'Cascade merged;', len(b), 'bikes total; Leisure tab', cards.count('<article'), 'xe')
+print(len(BIKES), 'Cascade merged;', len(b), 'bikes total; Cross Country', cards.count('<article'), 'xe')

@@ -63,7 +63,7 @@ def page(fname, title, crumb, kicker, h1, lead, tiles, desc, body=None):
 
 im = lambda src, alt: f'<img src="{src}" alt="{alt}" loading="lazy">'
 bikes = [('xe-road.html', 'Road', 'Xe đua aero, endurance và xe road nhập môn Polygon.'),
-         ('xe-mtb.html', 'MTB', 'Downhill, Enduro, Trail-AM, Cross Country, Dirt Jump và Leisure.'),
+         ('xe-mtb.html', 'MTB', 'Downhill, Enduro, Trail-AM, Cross Country và Dirt Jump.'),
          ('xe-gravel.html', 'Gravel', 'Polygon Path X đa dụng cho phố và đường đất.'),
          ('xe-city.html', 'City - Hybrid', 'Polygon Heist và Path cho đi làm, đi phố.'),
          ('xe-trial.html', 'Trial', 'Xe street trial Story Bike.')]
@@ -93,7 +93,7 @@ sys.path.insert(0, os.path.join(ROOT, 'tools', 'generators'))
 from vi import VI  # noqa: E402
 BK = {b['slug']: b for b in json.load(open(os.path.join(ROOT, 'tools', 'generators', 'bikes.json'), encoding='utf-8'))}
 GROUPS = [('Xe Road', 'Polygon Helios, Strattos', lambda v, s: v['cat'] == 'road'),
-          ('Xe MTB', 'Downhill, Enduro, Trail, Cross Country, Leisure', lambda v, s: v['cat'] in ('dh', 'enduro', 'trail', 'xc', 'leisure')),
+          ('Xe MTB', 'Downhill, Enduro, Trail, Cross Country', lambda v, s: v['cat'] in ('dh', 'enduro', 'trail', 'xc')),
           ('Heist (City - Hybrid)', 'Heist 2, 5, 7', lambda v, s: v['series'] == 'Heist'),
           ('Path (City & Gravel)', 'Path 2, 3, 4, Path X5', lambda v, s: v['series'] in ('Path', 'Path X'))]
 ORDER = ['XXS', 'XS', 'S', 'M', 'L', 'XL', 'XXL']

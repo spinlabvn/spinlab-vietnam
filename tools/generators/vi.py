@@ -458,24 +458,24 @@ VI['path-4'] = dict(file='polygon-path-4', cat='city', series='Path', siblings=P
 for _k in ['relic20', 'cleo-2', 'heist-x7']:
     VI.pop(_k, None)
 
-# ---- Leisure MTB: Cascade (data from cascade.py) ----
+# ---- Cross Country hardtail: Cascade (data from cascade.py) ----
 CASCADE_FEAT = [('Khung nhôm nhẹ', 'Khung nhôm định hình thuỷ lực do chính nhà máy Polygon sản xuất: nhẹ, bền, dễ điều khiển.'),
                 ('Phuộc nhún 100mm', 'Phuộc SR Suntour hành trình 100mm êm ái trên đường đất, sỏi đá và ổ gà trong phố.'),
                 ('Phanh đĩa', 'Lực phanh ổn định trong cả điều kiện mưa ướt, tự tin khi xuống dốc.'),
                 ('Bánh 27.5" hoặc 29"', 'Size nhỏ dùng bánh 27.5" linh hoạt, size lớn dùng bánh 29" lăn êm — phù hợp vóc dáng người đạp.')]
 CASCADE_SIB = 'Cascade 5 · Cascade 4 · Cascade 3'
-VI['cascade-5'] = dict(file='polygon-cascade-5', cat='leisure', series='Cascade', siblings=CASCADE_SIB,
-   chips=['MY26', 'Leisure MTB', 'Khung nhôm ALX', 'Shimano CUES 1x10', 'Phanh đĩa dầu'],
+VI['cascade-5'] = dict(file='polygon-cascade-5', cat='xc', series='Cascade', siblings=CASCADE_SIB,
+   chips=['MY26', 'XC hardtail', 'Khung nhôm ALX', 'Shimano CUES 1x10', 'Phanh đĩa dầu'],
    headline='Hardtail phổ thông, truyền động CUES 1x10',
    intro='Cascade 5 là bản cao nhất của dòng Cascade đời 2026: khung nhôm ALX, phuộc SR Suntour XCM 32 hành trình 100mm, bộ truyền động Shimano CUES 1x10 tốc độ (líp 11-48T), phanh đĩa dầu Shimano MT200 và lốp 2.25". Có bánh 27.5" (size XS–L) và 29" (size S–XL).',
    features=CASCADE_FEAT)
-VI['cascade-4'] = dict(file='polygon-cascade-4', cat='leisure', series='Cascade', siblings=CASCADE_SIB,
-   chips=['MY26', 'Leisure MTB', 'Khung nhôm ALX', 'Shimano CUES 1x9', 'Phanh đĩa dầu'],
+VI['cascade-4'] = dict(file='polygon-cascade-4', cat='xc', series='Cascade', siblings=CASCADE_SIB,
+   chips=['MY26', 'XC hardtail', 'Khung nhôm ALX', 'Shimano CUES 1x9', 'Phanh đĩa dầu'],
    headline='Xe địa hình nhập môn, dễ làm quen',
    intro='Cascade 4 đời 2026 dành cho người muốn vượt ra khỏi đường nhựa: khung nhôm ALX, phuộc SR Suntour XCM 32 hành trình 100mm, bộ truyền động Shimano CUES 1x9 tốc độ (líp 11-46T) đơn giản, phanh đĩa dầu Shimano MT200. Có bánh 27.5" (size XS–L) và 29" (size S–XL).',
    features=CASCADE_FEAT)
-VI['cascade-3'] = dict(file='polygon-cascade-3', cat='leisure', series='Cascade', siblings=CASCADE_SIB,
-   chips=['Leisure MTB', 'Khung nhôm AL6', 'Shimano 3x7', 'Bánh 27.5"'],
+VI['cascade-3'] = dict(file='polygon-cascade-3', cat='xc', series='Cascade', siblings=CASCADE_SIB,
+   chips=['XC hardtail', 'Khung nhôm AL6', 'Shimano 3x7', 'Bánh 27.5"'],
    headline='Xe địa hình phổ thông cho mỗi ngày',
    intro='Cascade 3 là chiếc hardtail phổ thông để đi phố và dạo đường mòn: khung nhôm AL6, phuộc SR Suntour XCE28 hành trình 100mm, bộ truyền động Shimano 3x7 tốc độ, phanh đĩa cơ Tektro và bánh 27.5". Có size S và M.',
    features=CASCADE_FEAT)
