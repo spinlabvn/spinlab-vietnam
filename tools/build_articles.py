@@ -198,7 +198,14 @@ CSS = '''/* Articles */
 .article .body figure img{width:100%;border-radius:var(--radius)}
 .article .body a{color:var(--brand-red);text-decoration:underline;text-underline-offset:2px}
 .article .body table{font-size:15px}
-.art-help{margin:8px 0 8px}
+.art-help{max-width:780px;margin:0 auto 8px}
+.art-help .help{padding:20px 24px;gap:14px}
+.art-help .help h2{font-size:20px;margin-bottom:4px}
+.art-help .help p{font-size:14px}
+.art-help .help .actions{gap:8px}
+.art-help .help .btn{min-height:42px;padding:0 18px;font-size:13px}
+.art-help .help .btn-zalo img{width:20px;height:20px}
+@media (min-width:768px){.art-help .help{grid-template-columns:1fr auto;padding:22px 28px}.art-help .help .actions{justify-content:flex-end;flex-wrap:nowrap}}
 .article .cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
 .size-grid{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
 .size-grid caption small{display:block;font-weight:400;color:var(--muted);font-size:13px}
