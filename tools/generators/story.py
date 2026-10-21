@@ -7,16 +7,15 @@ IMG = 'img/story/'
 BIKE = dict(
     slug='story-continue-pro', source='Story Bike — ảnh do Spinlab cung cấp', name='Continue Pro',
     headline='', tagline='Street trial | 24"', intro='', bike_type='TRIAL',
-    colors=[{'id': 'yellow', 'label': 'Vàng', 'images': [IMG + f for f in ('continue-yellow.jpg', 'continue-yellow-2.jpg', 'continue-yellow-3.jpg', 'continue-yellow-4.jpg')]},
-            {'id': 'silver', 'label': 'Bạc', 'images': [IMG + f for f in ('continue-silver.jpg', 'continue-silver-2.jpg', 'continue-silver-3.jpg')]},
-            {'id': 'purple', 'label': 'Tím', 'images': [IMG + f for f in ('continue-purple.jpg', 'continue-purple-2.jpg', 'continue-purple-3.jpg')]}],
+    colors=[{'id': 'purple', 'label': 'Tím', 'images': [IMG + f for f in ('continue-purple.jpg', 'continue-purple-2.jpg', 'continue-purple-3.jpg')]},
+            {'id': 'silver', 'label': 'Bạc', 'images': [IMG + f for f in ('continue-silver.jpg', 'continue-silver-2.jpg', 'continue-silver-3.jpg')]}],
     sizes=[{'id': '24', 'label': '24"'}], skus={},
     feature_images=[IMG + 'continue-lifestyle-1.jpg', IMG + 'continue-silver-3.jpg', IMG + 'continue-detail-1.jpg'],
     features=[],
     specs=[{'group': 'Wheel & Tire', 'rows': [['Wheel Size', '24"'], ['Tire', 'MAXXIS HOLY ROLLER 24"'], ['Rim', 'STORY']]},
            {'group': 'Drivetrain', 'rows': [['Gearing', 'SINGLE SPEED (1 TỐC ĐỘ)'], ['Crank', 'STORY']]},
            {'group': 'Brake', 'rows': [['Brakes', 'PHANH ĐĨA TRƯỚC / SAU']]},
-           {'group': 'Other', 'rows': [['Frame Color', 'VÀNG / BẠC / TÍM'], ['Details', 'ĐANG CẬP NHẬT (vật liệu khung, trọng lượng, bộ phanh, giò đĩa)']]}],
+           {'group': 'Other', 'rows': [['Frame Color', 'TÍM / BẠC'], ['Details', 'ĐANG CẬP NHẬT (vật liệu khung, trọng lượng, bộ phanh, giò đĩa)']]}],
     geometry=None)
 
 p = os.path.join(HERE, 'bikes.json')

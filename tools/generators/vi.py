@@ -377,9 +377,9 @@ VI['tambora-4'] = dict(file='polygon-tambora-4', cat='gravel', series='Tambora',
 
 # ---- Story Bike (street trial) ----
 VI['story-continue-pro'] = dict(file='story-continue-pro', brand='Story', cat='trial', series='Continue', siblings='Continue Pro',
-   chips=['Street trial', 'Bánh 24"', 'Lốp Maxxis Holy Roller', '3 màu'],
+   chips=['Street trial', 'Bánh 24"', 'Lốp Maxxis Holy Roller', '2 màu'],
    headline='Xe street trial bánh 24 inch',
-   intro='Story Continue Pro là mẫu xe street trial bánh 24 inch của Story Bike, dành cho những pha bật nhảy, giữ thăng bằng và vượt chướng ngại trên đường phố, công viên hay địa hình tự nhiên. Xe dùng lốp Maxxis Holy Roller, vành và giò đĩa Story, truyền động 1 tốc độ và phanh đĩa trước/sau; có 3 màu vàng, bạc và tím.',
+   intro='Story Continue Pro là mẫu xe street trial bánh 24 inch của Story Bike, dành cho những pha bật nhảy, giữ thăng bằng và vượt chướng ngại trên đường phố, công viên hay địa hình tự nhiên. Xe dùng lốp Maxxis Holy Roller, vành và giò đĩa Story, truyền động 1 tốc độ và phanh đĩa trước/sau; có 2 màu tím và bạc.',
    features=[('Bánh 24 inch', 'Cỡ bánh phổ biến cho street trial: linh hoạt khi bật nhảy và xoay xe, đủ ổn định khi tiếp đất.'),
              ('Lốp Maxxis Holy Roller', 'Dòng lốp street và dirt trial nổi tiếng của Maxxis, bám tốt trên bê tông, gạch và gờ đá.'),
              ('Truyền động 1 tốc độ', 'Gọn gàng, ít phải bảo dưỡng và không có củ đề vướng víu khi chạm gờ.'),

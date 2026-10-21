@@ -439,27 +439,6 @@ tbody tr.on{background:#FFF7D6}
   .nav .fly a{min-height:42px;font-size:14px}
   .nav .sub-brands{min-width:0;padding:4px 16px 16px}
 }
-
-/* Bike detail extras */
-.swatches-pick{display:flex;flex-wrap:wrap;gap:8px}
-.opt-group{border:0;margin:8px 0 0;padding:0}
-.opt-group legend{padding:0;margin-bottom:10px;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.04em;display:flex;gap:10px;flex-wrap:wrap;align-items:baseline}
-.siblings{margin:16px 0 0;font-size:14px;color:var(--muted)}
-.siblings b{color:var(--text)}
-.siblings a{color:var(--brand-red);font-weight:600;text-decoration:underline;text-underline-offset:2px}
-.feat-imgs{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:20px}
-.feat-imgs img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--radius)}
-.spec-groups{display:grid;gap:24px}
-@media (min-width:1024px){.spec-groups{grid-template-columns:1fr 1fr;gap:24px 40px}}
-.spec-groups h3{margin:0 0 4px;font-size:15px;text-transform:uppercase;letter-spacing:.04em;color:var(--brand-red)}
-.spec-groups .spec-list div{grid-template-columns:150px 1fr}
-.spec-groups dd{font-weight:500;font-size:14px}
-.geo td,.geo th{white-space:nowrap;text-align:center}
-.geo tbody th{text-align:left;font-weight:500}
-.geo .col-on{background:#FFF7D6}
-.geo-note{font-size:13px;color:var(--muted);margin:10px 0 0}
-.geo-img{margin:20px 0 0;max-width:720px}
-.geo-img img{width:100%;mix-blend-mode:multiply}
 .p-img{min-height:0;overflow:hidden;grid-template-rows:minmax(0,1fr);grid-template-columns:minmax(0,1fr)}
 .p-img>img{min-height:0;max-height:100%;max-width:100%;object-fit:contain}
 /* Compare */
@@ -482,6 +461,27 @@ tbody tr.on{background:#FFF7D6}
 .cmp-clear{border:0;background:none;font-size:13px;text-decoration:underline;color:var(--muted);min-height:44px}
 body.cmp-open .zalo-fab{bottom:96px}
 @media (max-width:600px){.cmp-items li{width:52px;height:52px}.cmp-items img{max-width:44px;max-height:44px}.cmp-clear{display:none}}
+
+/* Bike detail extras */
+.swatches-pick{display:flex;flex-wrap:wrap;gap:8px}
+.opt-group{border:0;margin:8px 0 0;padding:0}
+.opt-group legend{padding:0;margin-bottom:10px;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.04em;display:flex;gap:10px;flex-wrap:wrap;align-items:baseline}
+.siblings{margin:16px 0 0;font-size:14px;color:var(--muted)}
+.siblings b{color:var(--text)}
+.siblings a{color:var(--brand-red);font-weight:600;text-decoration:underline;text-underline-offset:2px}
+.feat-imgs{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:20px}
+.feat-imgs img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--radius)}
+.spec-groups{display:grid;gap:24px}
+@media (min-width:1024px){.spec-groups{grid-template-columns:1fr 1fr;gap:24px 40px}}
+.spec-groups h3{margin:0 0 4px;font-size:15px;text-transform:uppercase;letter-spacing:.04em;color:var(--brand-red)}
+.spec-groups .spec-list div{grid-template-columns:150px 1fr}
+.spec-groups dd{font-weight:500;font-size:14px}
+.geo td,.geo th{white-space:nowrap;text-align:center}
+.geo tbody th{text-align:left;font-weight:500}
+.geo .col-on{background:#FFF7D6}
+.geo-note{font-size:13px;color:var(--muted);margin:10px 0 0}
+.geo-img{margin:20px 0 0;max-width:720px}
+.geo-img img{width:100%;mix-blend-mode:multiply}
 /* Brand logos */
 .brand-logo{display:block;height:auto;width:min(calc(var(--lh,30px) * var(--wf,5)),calc(100cqi * var(--wf,5) / 6.5))}
 .brand-tile,.brand-menu a,.hub-logo .hi{container-type:inline-size}
@@ -630,16 +630,16 @@ body.cmp-open .zalo-fab{bottom:96px}
 
     <div class="pdp-top">
       <div class="gallery">
-        <div class="g-main"><img src="/img/story/continue-yellow.jpg" alt="Story Continue Pro" id="g-main" width="1400" height="1050"></div>
-        <ul class="g-thumbs" aria-label="Product photos"><li><button aria-pressed="true" data-src="/img/story/continue-yellow.jpg" data-alt="Story Continue Pro – photo 1"><img src="/img/story/continue-yellow.jpg" alt="Photo 1" loading="lazy"></button></li><li><button aria-pressed="false" data-src="/img/story/continue-yellow-2.jpg" data-alt="Story Continue Pro – photo 2"><img src="/img/story/continue-yellow-2.jpg" alt="Photo 2" loading="lazy"></button></li><li><button aria-pressed="false" data-src="/img/story/continue-yellow-3.jpg" data-alt="Story Continue Pro – photo 3"><img src="/img/story/continue-yellow-3.jpg" alt="Photo 3" loading="lazy"></button></li><li><button aria-pressed="false" data-src="/img/story/continue-yellow-4.jpg" data-alt="Story Continue Pro – photo 4"><img src="/img/story/continue-yellow-4.jpg" alt="Photo 4" loading="lazy"></button></li></ul>
+        <div class="g-main"><img src="/img/story/continue-purple.jpg" alt="Story Continue Pro" id="g-main" width="1400" height="1050"></div>
+        <ul class="g-thumbs" aria-label="Product photos"><li><button aria-pressed="true" data-src="/img/story/continue-purple.jpg" data-alt="Story Continue Pro – photo 1"><img src="/img/story/continue-purple.jpg" alt="Photo 1" loading="lazy"></button></li><li><button aria-pressed="false" data-src="/img/story/continue-purple-2.jpg" data-alt="Story Continue Pro – photo 2"><img src="/img/story/continue-purple-2.jpg" alt="Photo 2" loading="lazy"></button></li><li><button aria-pressed="false" data-src="/img/story/continue-purple-3.jpg" data-alt="Story Continue Pro – photo 3"><img src="/img/story/continue-purple-3.jpg" alt="Photo 3" loading="lazy"></button></li></ul>
       </div>
       <div class="buy">
         <span class="p-brand">Story · Trial</span>
         <h1>Story Continue Pro</h1>
         <p class="tagline">24-inch street trial bike</p>
-        <ul class="models"><li>Street trial</li><li>24" wheels</li><li>Maxxis Holy Roller tyres</li><li>3 colours</li></ul>
-        <fieldset class="opt-group"><legend>Colour <span class="size-meta" id="color-name">Yellow</span></legend>
-          <div class="size-opts"><label><input type="radio" name="color" value="yellow" checked><span>Yellow</span></label><label><input type="radio" name="color" value="silver"><span>Silver</span></label><label><input type="radio" name="color" value="purple"><span>Purple</span></label></div></fieldset>
+        <ul class="models"><li>Street trial</li><li>24" wheels</li><li>Maxxis Holy Roller tyres</li><li>2 colours</li></ul>
+        <fieldset class="opt-group"><legend>Colour <span class="size-meta" id="color-name">Purple</span></legend>
+          <div class="size-opts"><label><input type="radio" name="color" value="purple" checked><span>Purple</span></label><label><input type="radio" name="color" value="silver"><span>Silver</span></label></div></fieldset>
         <fieldset class="sizes"><legend>Size </legend>
           <div class="size-opts"><label><input type="radio" name="size" value="24" data-col="-1" checked><span>24&quot;</span></label></div></fieldset>
         <div class="price-row"><span class="label">Retail price</span><span class="p-price big">22.300.000₫</span></div>
@@ -658,7 +658,7 @@ body.cmp-open .zalo-fab{bottom:96px}
     <nav class="pdp-nav" aria-label="Product details"><a href="#gioi-thieu">Overview</a><a href="#tinh-nang">Features</a><a href="#thong-so">Specifications</a><a href="#hoi-dap">FAQ</a></nav>
 
     <section class="pdp-sec intro" id="gioi-thieu">
-      <div><h2>24-inch street trial bike</h2><p>Story Continue Pro is Story Bike's 24-inch street trial bike, built for hops, balancing and clearing obstacles in the street, at the skatepark or in natural terrain. It uses Maxxis Holy Roller tyres, Story rims and crankset, a single-speed drivetrain and front/rear disc brakes; available in yellow, silver and purple.</p>
+      <div><h2>24-inch street trial bike</h2><p>Story Continue Pro is Story Bike's 24-inch street trial bike, built for hops, balancing and clearing obstacles in the street, at the skatepark or in natural terrain. It uses Maxxis Holy Roller tyres, Story rims and crankset, a single-speed drivetrain and front/rear disc brakes; available in purple and silver.</p>
         <p class="siblings">Versions in the <b>Continue</b> range: Continue Pro</p></div>
       <figure><img src="/img/story/continue-lifestyle-1.jpg" alt="Story Continue" loading="lazy"></figure>
     </section>
@@ -666,7 +666,7 @@ body.cmp-open .zalo-fab{bottom:96px}
     <section class="pdp-sec" id="tinh-nang"><h2>Key features</h2><div class="tech"><article><span class="num">01</span><h3>24-inch wheels</h3><p>The popular wheel size for street trial: agile for hops and pivots, stable enough on landings.</p></article><article><span class="num">02</span><h3>Maxxis Holy Roller tyres</h3><p>Maxxis's famous street and dirt trial tyre, with great grip on concrete, brick and kerbs.</p></article><article><span class="num">03</span><h3>Single-speed drivetrain</h3><p>Simple, low-maintenance and no derailleur to snag on obstacles.</p></article><article><span class="num">04</span><h3>Front / rear disc brakes</h3><p>Strong, consistent braking — essential for balancing and setting up hops.</p></article></div>
       <div class="feat-imgs"><img src="/img/story/continue-lifestyle-1.jpg" alt="Story Continue – feature image" loading="lazy"><img src="/img/story/continue-silver-3.jpg" alt="Story Continue – feature image" loading="lazy"><img src="/img/story/continue-detail-1.jpg" alt="Story Continue – feature image" loading="lazy"></div></section>
 
-    <section class="pdp-sec" id="thong-so"><h2>Technical specifications</h2><div class="spec-groups"><section><h3>Wheel &amp; Tire</h3><dl class="spec-list"><div><dt>Wheel Size</dt><dd>24&quot;</dd></div><div><dt>Tire</dt><dd>MAXXIS HOLY ROLLER 24&quot;</dd></div><div><dt>Rim</dt><dd>STORY</dd></div></dl></section><section><h3>Drivetrain</h3><dl class="spec-list"><div><dt>Gearing</dt><dd>SINGLE SPEED</dd></div><div><dt>Crank</dt><dd>STORY</dd></div></dl></section><section><h3>Brakes</h3><dl class="spec-list"><div><dt>Brakes</dt><dd>FRONT / REAR DISC BRAKES</dd></div></dl></section><section><h3>Other</h3><dl class="spec-list"><div><dt>Frame Color</dt><dd>YELLOW / SILVER / PURPLE</dd></div><div><dt>Details</dt><dd>BEING UPDATED (frame material, weight, brakes, crankset)</dd></div></dl></section></div>
+    <section class="pdp-sec" id="thong-so"><h2>Technical specifications</h2><div class="spec-groups"><section><h3>Wheel &amp; Tire</h3><dl class="spec-list"><div><dt>Wheel Size</dt><dd>24&quot;</dd></div><div><dt>Tire</dt><dd>MAXXIS HOLY ROLLER 24&quot;</dd></div><div><dt>Rim</dt><dd>STORY</dd></div></dl></section><section><h3>Drivetrain</h3><dl class="spec-list"><div><dt>Gearing</dt><dd>SINGLE SPEED</dd></div><div><dt>Crank</dt><dd>STORY</dd></div></dl></section><section><h3>Brakes</h3><dl class="spec-list"><div><dt>Brakes</dt><dd>FRONT / REAR DISC BRAKES</dd></div></dl></section><section><h3>Other</h3><dl class="spec-list"><div><dt>Frame Color</dt><dd>PURPLE / SILVER</dd></div><div><dt>Details</dt><dd>BEING UPDATED (frame material, weight, brakes, crankset)</dd></div></dl></section></div>
       <p class="geo-note">Specifications may change between shipments. Please contact Spinlab to confirm the bike's configuration in Vietnam.</p></section>
 
     
@@ -749,7 +749,7 @@ body.cmp-open .zalo-fab{bottom:96px}
 
 // Bike gallery, colour & size selector
 (() => {
-  const D = {"colors": {"yellow": {"label": "Yellow", "images": ["img/story/continue-yellow.jpg", "img/story/continue-yellow-2.jpg", "img/story/continue-yellow-3.jpg", "img/story/continue-yellow-4.jpg"]}, "silver": {"label": "Silver", "images": ["img/story/continue-silver.jpg", "img/story/continue-silver-2.jpg", "img/story/continue-silver-3.jpg"]}, "purple": {"label": "Purple", "images": ["img/story/continue-purple.jpg", "img/story/continue-purple-2.jpg", "img/story/continue-purple-3.jpg"]}}, "skus": {}, "name": "Continue Pro", "brand": "Story"};
+  const D = {"colors": {"purple": {"label": "Purple", "images": ["img/story/continue-purple.jpg", "img/story/continue-purple-2.jpg", "img/story/continue-purple-3.jpg"]}, "silver": {"label": "Silver", "images": ["img/story/continue-silver.jpg", "img/story/continue-silver-2.jpg", "img/story/continue-silver-3.jpg"]}}, "skus": {}, "name": "Continue Pro", "brand": "Story"};
   const main=document.getElementById('g-main'), list=document.querySelector('.g-thumbs');
   const bindThumbs=()=>{ const t=[...list.querySelectorAll('button')]; t.forEach(b=>b.addEventListener('click',()=>{ main.src=b.dataset.src; main.alt=b.dataset.alt; t.forEach(x=>x.setAttribute('aria-pressed',x===b)); })); };
   const val=n=>(document.querySelector(`input[name=${n}]:checked`)||{}).value||'';
@@ -785,6 +785,14 @@ body.cmp-open .zalo-fab{bottom:96px}
   document.addEventListener('keydown',e=>{ if(e.key==='Escape'&&document.body.classList.contains('nav-open')){ set(false); btn.focus(); } });
   const sync=()=>{ if(mq.matches){ nav.toggleAttribute('inert',!document.body.classList.contains('nav-open')); } else { set(false); nav.removeAttribute('inert'); } };
   mq.addEventListener('change',sync); sync();
+})();
+// Vittoria retail price: follows the selected SKU
+(() => {
+  const P = {"11A00389": "1.815.000₫", "11A00390": "1.815.000₫", "11A00391": "1.815.000₫", "11A00630": "1.815.000₫"}, el = document.querySelector('.p-price.big'), code = document.getElementById('sz-sku');
+  if (!el || !code) return;
+  const upd = () => { const p = P[(code.textContent || '').trim()]; if (p) el.textContent = p; };
+  new MutationObserver(upd).observe(code, {childList: true, characterData: true, subtree: true});
+  upd();
 })();
 // Compare products: toggles on cards / product page, tray, link to so-sanh.html (max 4)
 (() => {

@@ -19804,313 +19804,6 @@
   }
  },
  {
-  "slug": "story-continue-pro",
-  "source": "Story Bike — ảnh do Spinlab cung cấp",
-  "name": "Continue Pro",
-  "headline": "",
-  "tagline": "Street trial | 24\"",
-  "intro": "",
-  "bike_type": "TRIAL",
-  "colors": [
-   {
-    "id": "yellow",
-    "label": "Vàng",
-    "images": [
-     "img/story/continue-yellow.jpg",
-     "img/story/continue-yellow-2.jpg",
-     "img/story/continue-yellow-3.jpg",
-     "img/story/continue-yellow-4.jpg"
-    ]
-   },
-   {
-    "id": "silver",
-    "label": "Bạc",
-    "images": [
-     "img/story/continue-silver.jpg",
-     "img/story/continue-silver-2.jpg",
-     "img/story/continue-silver-3.jpg"
-    ]
-   },
-   {
-    "id": "purple",
-    "label": "Tím",
-    "images": [
-     "img/story/continue-purple.jpg",
-     "img/story/continue-purple-2.jpg",
-     "img/story/continue-purple-3.jpg"
-    ]
-   }
-  ],
-  "sizes": [
-   {
-    "id": "24",
-    "label": "24\""
-   }
-  ],
-  "skus": {},
-  "feature_images": [
-   "img/story/continue-lifestyle-1.jpg",
-   "img/story/continue-silver-3.jpg",
-   "img/story/continue-detail-1.jpg"
-  ],
-  "features": [],
-  "specs": [
-   {
-    "group": "Wheel & Tire",
-    "rows": [
-     [
-      "Wheel Size",
-      "24\""
-     ],
-     [
-      "Tire",
-      "MAXXIS HOLY ROLLER 24\""
-     ],
-     [
-      "Rim",
-      "STORY"
-     ]
-    ]
-   },
-   {
-    "group": "Drivetrain",
-    "rows": [
-     [
-      "Gearing",
-      "SINGLE SPEED (1 TỐC ĐỘ)"
-     ],
-     [
-      "Crank",
-      "STORY"
-     ]
-    ]
-   },
-   {
-    "group": "Brake",
-    "rows": [
-     [
-      "Brakes",
-      "PHANH ĐĨA TRƯỚC / SAU"
-     ]
-    ]
-   },
-   {
-    "group": "Other",
-    "rows": [
-     [
-      "Frame Color",
-      "VÀNG / BẠC / TÍM"
-     ],
-     [
-      "Details",
-      "ĐANG CẬP NHẬT (vật liệu khung, trọng lượng, bộ phanh, giò đĩa)"
-     ]
-    ]
-   }
-  ],
-  "geometry": null
- },
- {
-  "slug": "story-curvet-c2-ultra",
-  "source": "Bảng thông số Story Curvet C2.0 (cột Ultra)",
-  "name": "Curvet C2.0 Ultra",
-  "headline": "",
-  "tagline": "Dirt jump | 26\"",
-  "intro": "",
-  "bike_type": "DIRT JUMP",
-  "colors": [
-   {
-    "id": "black",
-    "label": "Đen nhám",
-    "images": [
-     "img/story/curvet-black.jpg",
-     "img/story/curvet-black-2.jpg"
-    ]
-   },
-   {
-    "id": "white",
-    "label": "Trắng",
-    "images": [
-     "img/story/curvet-white.jpg",
-     "img/story/curvet-white-2.jpg",
-     "img/story/curvet-pumptrack.jpg",
-     "img/story/curvet-jump.jpg"
-    ]
-   }
-  ],
-  "sizes": [
-   {
-    "id": "26",
-    "label": "26\""
-   }
-  ],
-  "skus": {},
-  "feature_images": [
-   "img/story/curvet-pumptrack.jpg",
-   "img/story/curvet-jump.jpg",
-   "img/story/curvet-white-2.jpg"
-  ],
-  "features": [],
-  "specs": [
-   {
-    "group": "Frameset",
-    "rows": [
-     [
-      "Frameset",
-      "STORY CURVET 2.0 26\", 6061 ALLOY"
-     ],
-     [
-      "Headset",
-      "41.8/52mm TAPERED"
-     ],
-     [
-      "Dropout",
-      "135x10mm, INTEGRATED CNC FISH-TAIL DROPOUTS"
-     ],
-     [
-      "Brake Mount",
-      "B-POST"
-     ],
-     [
-      "Fork",
-      "X-FUSION SLANT RC 34, TAPERED, 100mm TRAVEL, 100x15mm THRU AXLE / QR"
-     ],
-     [
-      "Frame Color",
-      "TRẮNG / ĐEN / HỒNG / XANH STARRY / CAM ĐỎ HUỲNH QUANG"
-     ]
-    ]
-   },
-   {
-    "group": "Cockpit",
-    "rows": [
-     [
-      "Handlebar",
-      "STORY ALLOY, RISE 35mm, W: 740mm"
-     ],
-     [
-      "Handlestem",
-      "STORY CNC, EXT: 35mm, BB: 31.8mm"
-     ],
-     [
-      "Grips",
-      "STORY SINGLE-SIDE LOCK-ON"
-     ],
-     [
-      "Saddle",
-      "STORY, CR-MO RAIL"
-     ],
-     [
-      "Seatpost",
-      "STORY CNC LIGHTWEIGHT ALLOY"
-     ]
-    ]
-   },
-   {
-    "group": "Wheel & Tire",
-    "rows": [
-     [
-      "Hub",
-      "F: STORY 100x15mm THRU AXLE / R: STORY 120-CLICK SINGLE SPEED CASSETTE HUB"
-     ],
-     [
-      "Rim",
-      "STORY 35mm, HIGH-STRENGTH ANODIZED, RIVETED"
-     ],
-     [
-      "Spokes",
-      "14G x 258mm STAINLESS"
-     ],
-     [
-      "Tire",
-      "MAXXIS DTH 26x2.3, SKINWALL"
-     ]
-    ]
-   },
-   {
-    "group": "Drivetrain",
-    "rows": [
-     [
-      "Crank",
-      "STORY 7050 DUB29"
-     ],
-     [
-      "Chainring",
-      "STORY 7075 GXP 32T NARROW-WIDE"
-     ],
-     [
-      "Cog",
-      "STORY 17T HIGH-STRENGTH CASSETTE COG"
-     ],
-     [
-      "Chain",
-      "KMC Z1eHX NARROW"
-     ],
-     [
-      "Chain Tensioner",
-      "INTEGRATED CRESCENT TENSIONER BOLTS"
-     ],
-     [
-      "Pedal",
-      "SG NYLON, BEARING"
-     ]
-    ]
-   },
-   {
-    "group": "Brake",
-    "rows": [
-     [
-      "Brakes",
-      "KHÔNG KÈM PHANH — TUỲ CHỌN: SHIMANO MT200, MAGURA MT30, MAGURA MT5, MAGURA MT (BẢN GIỚI HẠN)"
-     ]
-    ]
-   }
-  ],
-  "geometry": {
-   "sizes": [
-    "26\""
-   ],
-   "image": "",
-   "rows": [
-    {
-     "label": "Head Tube Angle",
-     "unit": "",
-     "values": [
-      "70"
-     ]
-    },
-    {
-     "label": "Chainstay Length",
-     "unit": "",
-     "values": [
-      "377"
-     ]
-    },
-    {
-     "label": "Bb Offset",
-     "unit": "",
-     "values": [
-      "-14"
-     ]
-    },
-    {
-     "label": "Wheelbase",
-     "unit": "",
-     "values": [
-      "1027"
-     ]
-    },
-    {
-     "label": "Frame Reach",
-     "unit": "",
-     "values": [
-      "410"
-     ]
-    }
-   ]
-  }
- },
- {
   "headline": "CASCADE: Lightweight & Durable Entry-Level Hardtail",
   "bike_type": "LEISURE",
   "tagline": "Leisure MTB | 100mm Travel | AL6 Alloy | 27.5\" Wheels",
@@ -23331,6 +23024,303 @@
       "735",
       "763",
       "793"
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "slug": "story-continue-pro",
+  "source": "Story Bike — ảnh do Spinlab cung cấp",
+  "name": "Continue Pro",
+  "headline": "",
+  "tagline": "Street trial | 24\"",
+  "intro": "",
+  "bike_type": "TRIAL",
+  "colors": [
+   {
+    "id": "purple",
+    "label": "Tím",
+    "images": [
+     "img/story/continue-purple.jpg",
+     "img/story/continue-purple-2.jpg",
+     "img/story/continue-purple-3.jpg"
+    ]
+   },
+   {
+    "id": "silver",
+    "label": "Bạc",
+    "images": [
+     "img/story/continue-silver.jpg",
+     "img/story/continue-silver-2.jpg",
+     "img/story/continue-silver-3.jpg"
+    ]
+   }
+  ],
+  "sizes": [
+   {
+    "id": "24",
+    "label": "24\""
+   }
+  ],
+  "skus": {},
+  "feature_images": [
+   "img/story/continue-lifestyle-1.jpg",
+   "img/story/continue-silver-3.jpg",
+   "img/story/continue-detail-1.jpg"
+  ],
+  "features": [],
+  "specs": [
+   {
+    "group": "Wheel & Tire",
+    "rows": [
+     [
+      "Wheel Size",
+      "24\""
+     ],
+     [
+      "Tire",
+      "MAXXIS HOLY ROLLER 24\""
+     ],
+     [
+      "Rim",
+      "STORY"
+     ]
+    ]
+   },
+   {
+    "group": "Drivetrain",
+    "rows": [
+     [
+      "Gearing",
+      "SINGLE SPEED (1 TỐC ĐỘ)"
+     ],
+     [
+      "Crank",
+      "STORY"
+     ]
+    ]
+   },
+   {
+    "group": "Brake",
+    "rows": [
+     [
+      "Brakes",
+      "PHANH ĐĨA TRƯỚC / SAU"
+     ]
+    ]
+   },
+   {
+    "group": "Other",
+    "rows": [
+     [
+      "Frame Color",
+      "TÍM / BẠC"
+     ],
+     [
+      "Details",
+      "ĐANG CẬP NHẬT (vật liệu khung, trọng lượng, bộ phanh, giò đĩa)"
+     ]
+    ]
+   }
+  ],
+  "geometry": null
+ },
+ {
+  "slug": "story-curvet-c2-ultra",
+  "source": "Bảng thông số Story Curvet C2.0 (cột Ultra)",
+  "name": "Curvet C2.0 Ultra",
+  "headline": "",
+  "tagline": "Dirt jump | 26\"",
+  "intro": "",
+  "bike_type": "DIRT JUMP",
+  "colors": [
+   {
+    "id": "black",
+    "label": "Đen nhám",
+    "images": [
+     "img/story/curvet-black.jpg",
+     "img/story/curvet-black-2.jpg"
+    ]
+   },
+   {
+    "id": "white",
+    "label": "Trắng",
+    "images": [
+     "img/story/curvet-white.jpg",
+     "img/story/curvet-white-2.jpg",
+     "img/story/curvet-pumptrack.jpg",
+     "img/story/curvet-jump.jpg"
+    ]
+   }
+  ],
+  "sizes": [
+   {
+    "id": "26",
+    "label": "26\""
+   }
+  ],
+  "skus": {},
+  "feature_images": [
+   "img/story/curvet-pumptrack.jpg",
+   "img/story/curvet-jump.jpg",
+   "img/story/curvet-white-2.jpg"
+  ],
+  "features": [],
+  "specs": [
+   {
+    "group": "Frameset",
+    "rows": [
+     [
+      "Frameset",
+      "STORY CURVET 2.0 26\", 6061 ALLOY"
+     ],
+     [
+      "Headset",
+      "41.8/52mm TAPERED"
+     ],
+     [
+      "Dropout",
+      "135x10mm, INTEGRATED CNC FISH-TAIL DROPOUTS"
+     ],
+     [
+      "Brake Mount",
+      "B-POST"
+     ],
+     [
+      "Fork",
+      "X-FUSION SLANT RC 34, TAPERED, 100mm TRAVEL, 100x15mm THRU AXLE / QR"
+     ],
+     [
+      "Frame Color",
+      "TRẮNG / ĐEN / HỒNG / XANH STARRY / CAM ĐỎ HUỲNH QUANG"
+     ]
+    ]
+   },
+   {
+    "group": "Cockpit",
+    "rows": [
+     [
+      "Handlebar",
+      "STORY ALLOY, RISE 35mm, W: 740mm"
+     ],
+     [
+      "Handlestem",
+      "STORY CNC, EXT: 35mm, BB: 31.8mm"
+     ],
+     [
+      "Grips",
+      "STORY SINGLE-SIDE LOCK-ON"
+     ],
+     [
+      "Saddle",
+      "STORY, CR-MO RAIL"
+     ],
+     [
+      "Seatpost",
+      "STORY CNC LIGHTWEIGHT ALLOY"
+     ]
+    ]
+   },
+   {
+    "group": "Wheel & Tire",
+    "rows": [
+     [
+      "Hub",
+      "F: STORY 100x15mm THRU AXLE / R: STORY 120-CLICK SINGLE SPEED CASSETTE HUB"
+     ],
+     [
+      "Rim",
+      "STORY 35mm, HIGH-STRENGTH ANODIZED, RIVETED"
+     ],
+     [
+      "Spokes",
+      "14G x 258mm STAINLESS"
+     ],
+     [
+      "Tire",
+      "MAXXIS DTH 26x2.3, SKINWALL"
+     ]
+    ]
+   },
+   {
+    "group": "Drivetrain",
+    "rows": [
+     [
+      "Crank",
+      "STORY 7050 DUB29"
+     ],
+     [
+      "Chainring",
+      "STORY 7075 GXP 32T NARROW-WIDE"
+     ],
+     [
+      "Cog",
+      "STORY 17T HIGH-STRENGTH CASSETTE COG"
+     ],
+     [
+      "Chain",
+      "KMC Z1eHX NARROW"
+     ],
+     [
+      "Chain Tensioner",
+      "INTEGRATED CRESCENT TENSIONER BOLTS"
+     ],
+     [
+      "Pedal",
+      "SG NYLON, BEARING"
+     ]
+    ]
+   },
+   {
+    "group": "Brake",
+    "rows": [
+     [
+      "Brakes",
+      "KHÔNG KÈM PHANH — TUỲ CHỌN: SHIMANO MT200, MAGURA MT30, MAGURA MT5, MAGURA MT (BẢN GIỚI HẠN)"
+     ]
+    ]
+   }
+  ],
+  "geometry": {
+   "sizes": [
+    "26\""
+   ],
+   "image": "",
+   "rows": [
+    {
+     "label": "Head Tube Angle",
+     "unit": "",
+     "values": [
+      "70"
+     ]
+    },
+    {
+     "label": "Chainstay Length",
+     "unit": "",
+     "values": [
+      "377"
+     ]
+    },
+    {
+     "label": "Bb Offset",
+     "unit": "",
+     "values": [
+      "-14"
+     ]
+    },
+    {
+     "label": "Wheelbase",
+     "unit": "",
+     "values": [
+      "1027"
+     ]
+    },
+    {
+     "label": "Frame Reach",
+     "unit": "",
+     "values": [
+      "410"
      ]
     }
    ]

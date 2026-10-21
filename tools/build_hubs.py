@@ -53,7 +53,7 @@ def page(fname, title, crumb, kicker, h1, lead, tiles, desc, body=None):
 
 im = lambda src, alt: f'<img src="{src}" alt="{alt}" loading="lazy">'
 # square photos cropped to the 4:3 tile so every bike shows at the same size
-HUB_IMG = {'xe-trial.html': 'img/story/continue-yellow-43.jpg'}
+HUB_IMG = {'xe-trial.html': 'img/story/continue-purple-43.jpg'}
 bikes = [('xe-road.html', 'Road', 'Xe đua aero, endurance và xe road nhập môn Polygon.'),
          ('xe-mtb.html', 'MTB', 'Downhill, Enduro, Trail-AM, Cross Country và Dirt Jump.'),
          ('xe-gravel.html', 'Gravel', 'Polygon Path X đa dụng cho phố và đường đất.'),
