@@ -16,7 +16,7 @@ R = lambda f: open(os.path.join(ROOT, f), encoding='utf-8').read()
 W = lambda f, s: open(os.path.join(ROOT, f), 'w', encoding='utf-8').write(s)
 E = lambda s: html.escape(s, quote=True)
 BK = {b['slug']: b for b in json.load(open(os.path.join(ROOT, 'tools', 'generators', 'bikes.json'), encoding='utf-8'))}
-PRICES = json.load(open(os.path.join(ROOT, 'data', 'polygon-prices.json'), encoding='utf-8'))['prices']
+PRICES = json.load(open(os.path.join(ROOT, 'data', 'bike-prices.json'), encoding='utf-8'))['prices']
 vnd = lambda n: f'{n:,}'.replace(',', '.') + '₫'
 CATS = {'tin-tuc': ('Tin tức', 'tin-tuc.html'), 'huong-dan': ('Hướng dẫn', 'huong-dan.html')}
 # same contact block as the homepage ("Chưa biết chọn xe nào?")

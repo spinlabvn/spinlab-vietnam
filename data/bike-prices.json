@@ -1,5 +1,5 @@
 {
- "source": "Úp giá lên web.xlsx — báo giá Polygon 18-9-2026, cột \"Giá bán lẻ\" (VND). Xe Polygon không có trong file hiện \"Liên hệ\".",
+ "source": "Giá bán lẻ xe đạp (VND). Polygon: Úp giá lên web.xlsx — báo giá Polygon 18-9-2026, cột \"Giá bán lẻ\". Story: Spinlab báo 21-10-2026. Xe không có trong file hiện \"Liên hệ\".",
  "prices": {
   "polygon-helios-a0-axs.html": 228000000,
   "polygon-helios-a9-di2-power.html": 185000000,
@@ -50,6 +50,8 @@
   "polygon-heist-2.html": 14500000,
   "polygon-path-4.html": 22500000,
   "polygon-path-3.html": 16800000,
-  "polygon-path-2.html": 14600000
+  "polygon-path-2.html": 14600000,
+  "story-curvet-c2-ultra.html": 26800000,
+  "story-continue-pro.html": 22300000
  }
 }

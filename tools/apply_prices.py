@@ -1,5 +1,5 @@
 """Retail prices.
-Polygon bikes: data/polygon-prices.json (page -> VND); a Polygon bike page not in that file shows "Liên hệ".
+Bikes (Polygon, Story): data/bike-prices.json (page -> VND); a bike page not in that file shows "Liên hệ".
 Vittoria: Spinlab's price list (data/vittoria-stock.json, via tools/generators/stock.py).
 
 - Product pages: the price follows the selected size/colour (the page shows the SKU in #sz-sku; a small script
@@ -49,10 +49,10 @@ for f in pages:
     s = s[:i] + JS % json.dumps({x: stock.fmt(stock.price(x)) if stock.price(x) else 'Liên hệ' for x in skus}, ensure_ascii=False) + s[i:]
     W(f, s)
 
-# Polygon bikes: one retail price per model
-PP = json.load(open(os.path.join(ROOT, 'data', 'polygon-prices.json'), encoding='utf-8'))['prices']
+# Bikes (Polygon, Story): one retail price per model
+PP = json.load(open(os.path.join(ROOT, 'data', 'bike-prices.json'), encoding='utf-8'))['prices']
 for f in pages:
-    if not f.startswith('polygon-'):
+    if not f.startswith(('polygon-', 'story-')):
         continue
     s = R(f)
     if '<span class="p-price big">' not in s:

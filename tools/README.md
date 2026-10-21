@@ -9,7 +9,7 @@ Các lệnh dưới đây chạy từ thư mục `design-preview/tools/generator
 python3 brands.py ../.. bikes.json        # tạo lại 4 trang thương hiệu
 python3 ../build_new_products.py      # cập nhật "Sản phẩm mới" (trang chủ + san-pham-moi.html)
 python3 ../build_articles.py           # bài viết Tin tức / Hướng dẫn (sửa ARTICLES) + mục tin tức trang chủ
-python3 ../apply_prices.py            # giá bán lẻ: Polygon theo mẫu (data/polygon-prices.json), Vittoria theo từng mã (data/vittoria-stock.json)
+python3 ../apply_prices.py            # giá bán lẻ: xe Polygon & Story theo mẫu (data/bike-prices.json), Vittoria theo từng mã (data/vittoria-stock.json)
 python3 ../build_compare.py           # cập nhật dữ liệu so sánh (so-sanh.html) + nút So sánh trên mọi trang
 python3 ../card_hover.py              # ảnh thứ hai khi trỏ chuột vào thẻ sản phẩm
 python3 ../brand_logos.py             # logo thương hiệu cùng cỡ (trang chủ, menu, /thuong-hieu)
