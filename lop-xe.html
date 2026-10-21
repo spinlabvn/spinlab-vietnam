@@ -677,7 +677,6 @@ body.cmp-open .zalo-fab{bottom:96px}
 <article class="p-card" data-type="gravel"><div class="p-img tire"><span class="tag dark">T50</span><img src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/Terreno-T50-Mixed-01.webp?width=600" alt="Lốp Vittoria Terreno T50 Mixed Endurance" loading="lazy"><img class="alt" src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/Terreno-T50-Mixed-02.webp?width=600" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Vittoria · Gravel</span><h3 class="p-name"><a class="stretch" href="/terreno-t50">Terreno T50 Mixed Endurance</a></h3><p class="p-desc">Địa hình hỗn hợp</p><ul class="models"><li>Endurance · Tập luyện, đường dài</li></ul><span class="p-price">1.295.000₫</span></div></article>
 <article class="p-card" data-type="gravel"><div class="p-img tire"><span class="tag dark">T70</span><img src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/terreno-T70-coarse-loose-gravel-endurance-01.webp?width=600" alt="Lốp Vittoria Terreno T70 Coarse Loose Endurance" loading="lazy"><img class="alt" src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/terreno-T70-coarse-loose-gravel-endurance-02.webp?width=600" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Vittoria · Gravel</span><h3 class="p-name"><a class="stretch" href="/terreno-t70">Terreno T70 Coarse Loose Endurance</a></h3><p class="p-desc">Sỏi to, đất rời</p><ul class="models"><li>Endurance · Tập luyện, đường dài</li></ul><span class="p-price">1.295.000₫</span></div></article>
     </div>
-    <div class="empty" id="tire-empty" hidden><p><b>Lốp DirtJump đang được cập nhật.</b> Liên hệ Spinlab để được tư vấn mẫu lốp phù hợp.</p><a class="btn btn-outline" href="tel:0399337533">Gọi 0399 337 533</a></div>
 
     <section class="pdp-sec">
       <div class="help">
@@ -766,7 +765,7 @@ body.cmp-open .zalo-fab{bottom:96px}
   const show=k=>{ if(!intro[k]) k='all';
     tabs.forEach(t=>t.setAttribute('aria-selected',t.dataset.type===k));
     let n=0; cards.forEach(c=>{ const on=k==='all'||c.dataset.type===k; c.hidden=!on; n+=on; });
-    document.getElementById('tire-empty').hidden=n>0; document.querySelectorAll('[data-only]').forEach(el=>el.hidden=el.dataset.only!==k); document.getElementById('list-intro').textContent=intro[k]; };
+    document.querySelectorAll('[data-only]').forEach(el=>el.hidden=el.dataset.only!==k); document.getElementById('list-intro').textContent=intro[k]; };
   tabs.forEach(t=>t.addEventListener('click',e=>{ e.preventDefault(); const k=t.dataset.type; show(k); try{ history.replaceState(null,'',k==='all'?location.pathname+location.search:'#'+k); }catch(_){} }));
   window.addEventListener('hashchange',()=>show(location.hash.slice(1)));
   show(location.hash.slice(1));
