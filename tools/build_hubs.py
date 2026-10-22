@@ -48,6 +48,7 @@ def page(fname, title, crumb, kicker, h1, lead, tiles, desc, body=None):
     p = re.sub(r'<main id="main".*?</main>', lambda m: main, p, 1, flags=re.S)
     p = re.sub(r'/\* Hub pages \*/.*?(?=</style>)', '', p, flags=re.S).replace('</style>', CSS + '</style>', 1)
     p = re.sub(r'\s*<meta name="product-id"[^>]*>', '', p)
+    p = re.sub(r'/\* Card hover image \*/\n(?:[.@][^\n]*\n)+', '', p)   # hubs have no product cards
     W(fname, p)
 
 

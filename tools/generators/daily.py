@@ -18,7 +18,8 @@ REGIONS = [
    dict(name='HP Cycle', city='TP. Hồ Chí Minh', addr='13 đường số 11, KDC Him Lam 6A, xã Bình Hưng, TP. Hồ Chí Minh', phone='0932019931', brands=['Vittoria', 'Emume']),
    dict(name='644 Store', city='TP. Hồ Chí Minh', addr='644 Đ. Cách Mạng Tháng Tám, Thủ Dầu Một, TP. Hồ Chí Minh', phone='0943435455', brands=['Vittoria', 'Emume']),
    dict(name='Phú Quý Bike', city='TP. Hồ Chí Minh', addr='106/14 Vạn Kiếp, phường Gia Định, TP. Hồ Chí Minh', phone='0319204022', brands=['Vittoria', 'Emume']),
-   dict(name='2Bike', city='TP. Hồ Chí Minh', addr='54B Nguyễn Bỉnh Khiêm, Tân Định, TP. Hồ Chí Minh', phone='0936313213', brands=['Vittoria', 'Emume'])]),
+   dict(name='2Bike', city='TP. Hồ Chí Minh', addr='54B Nguyễn Bỉnh Khiêm, Tân Định, TP. Hồ Chí Minh', phone='0936313213', brands=['Vittoria', 'Emume']),
+   dict(name='S-Cycle 66', city='Đồng Tháp', addr='1N Nguyễn Trường Tộ, phường Cao Lãnh, Đồng Tháp', phone='0907315091', brands=['Vittoria', 'Emume'])]),
 ]
 
 CSS = '''
