@@ -3,17 +3,21 @@
 Các công cụ dùng để tạo trang sản phẩm cho bản thiết kế xem trước. Chạy bằng `python3` (3.9 trở lên), không cần cài thêm gì.
 Các lệnh dưới đây chạy từ thư mục `design-preview/tools/generators`.
 
+Nội dung hằng ngày (bài viết, giá, ẩn/hiện, mô tả) sửa bằng trang quản lý: `python3 ../admin.py` (xem README gốc).
+
 ## Sau mỗi lần thêm hoặc gỡ sản phẩm
 
 ```bash
 python3 brands.py ../.. bikes.json        # tạo lại 4 trang thương hiệu
-python3 ../build_new_products.py      # cập nhật "Sản phẩm mới" (trang chủ + san-pham-moi.html)
-python3 ../build_articles.py           # bài viết Tin tức / Hướng dẫn (sửa ARTICLES) + mục tin tức trang chủ
-python3 ../apply_prices.py            # giá bán lẻ: xe Polygon & Story theo mẫu (data/bike-prices.json), Vittoria theo từng mã (data/vittoria-stock.json)
+python3 ../build_articles.py           # bài viết Tin tức / Hướng dẫn (data/articles.json) + mục tin tức trang chủ
+python3 ../apply_overrides.py          # mô tả sản phẩm sửa trong trang quản lý (data/overrides.json)
+python3 ../apply_hidden.py             # ẩn / hiện sản phẩm (data/hidden.json)
+python3 ../build_new_products.py       # cập nhật "Sản phẩm mới" (trang chủ + san-pham-moi.html)
+python3 ../apply_prices.py            # giá bán lẻ: xe Polygon, Story & Emume theo trang (data/page-prices.json), Vittoria theo từng mã (data/vittoria-stock.json)
 python3 ../build_compare.py           # cập nhật dữ liệu so sánh (so-sanh.html) + nút So sánh trên mọi trang
 python3 ../card_hover.py              # ảnh thứ hai khi trỏ chuột vào thẻ sản phẩm
 python3 ../brand_logos.py             # logo thương hiệu cùng cỡ (trang chủ, menu, /thuong-hieu)
-python3 ../build_hubs.py              # trang tổng hợp /xe-dap, /phu-tung, /thuong-hieu + /huong-dan, /su-kien
+python3 ../build_hubs.py              # trang tổng hợp /xe-dap, /phu-tung, /thuong-hieu 
 python3 ../clean_urls.py              # đổi link sang dạng gọn (/xe-road, /trangchu)
 python3 ../build_en.py                # LUÔN chạy cuối: bản tiếng Anh en/ (từ điển data/en.json; câu thiếu -> en-missing.txt)
 ```

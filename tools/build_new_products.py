@@ -68,12 +68,17 @@ def main():
             # new items in one run: the first card on the brand pages gets the highest seq, so it is shown first
             p = {'href': href, 'added': now, 'seq': seq + len(fresh) - fresh.index(href)}
             products.append(p); added.append(href)
-    removed = [h for h in known if h not in cards]
+    # products hidden from the admin page keep their date, so showing them again does not make them "new"
+    hp = os.path.join(ROOT, 'data', 'hidden.json')
+    hidden = set(json.load(open(hp, encoding='utf-8'))['pages']) if os.path.exists(hp) else set()
+    kept = [known[h] for h in known if h not in cards and h in hidden]
+    removed = [h for h in known if h not in cards and h not in hidden]
     products.sort(key=lambda p: (p['added'], p['seq']), reverse=True)
     for p in products:
         nm = re.search(r'class="stretch" href="[^"]+">([^<]+)</a>', cards[p['href']])
         p['name'] = html.unescape(nm.group(1)) if nm else p['href']
-    json.dump({'note': 'Ngày đăng sản phẩm — do tools/build_new_products.py quản lý', 'products': products},
+    json.dump({'note': 'Ngày đăng sản phẩm — do tools/build_new_products.py quản lý',
+               'products': sorted(products + kept, key=lambda p: (p['added'], p['seq']), reverse=True)},
               open(CATALOG, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 
     newest = products[:max(args.home, args.page)]

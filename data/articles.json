@@ -1,0 +1,89 @@
+{
+ "note": "Bài viết Tin tức / Hướng dẫn. cat: tin-tuc | huong-dan. Trong body có thể dùng {{bang_gia_strattos_c}} và {{bang_size}} (bảng tự tính). Sửa qua trang quản lý (tools/admin.py).",
+ "articles": [
+  {
+   "slug": "tin-tuc-polygon-strattos-c",
+   "cat": "tin-tuc",
+   "tag": "Sản phẩm mới",
+   "date": "2026-10-21",
+   "title": "Polygon Strattos C: road bike endurance thế hệ mới",
+   "lead": "Khung carbon ACX êm ái, lốp tới 34mm và buồng lái LINC bán tích hợp — Strattos C được Polygon thiết kế cho những cung đường dài cả ngày. Ba phiên bản C7, C8 và C9 đã có mặt tại Spinlab.",
+   "image": "https://media.polygonbikes.com/wp-content/uploads/2026/01/22110900/plg-strattos-c-header.jpg",
+   "thumb": "https://media.polygonbikes.com/wp-content/uploads/2026/02/23154155/Header-Strattos-C-by-Velo-450x300.jpg",
+   "body": "<p>Strattos C là dòng road bike <strong>endurance</strong> mới của Polygon, dành cho những chuyến đi dài nơi sự thoải mái quan trọng không kém tốc độ. Thay vì hình học thi đấu gò bó, Strattos C cho tư thế ngồi thả lỏng hơn, khung hấp thụ rung động tốt và đủ chỗ cho lốp bản lớn — một chiếc xe để đạp cả ngày mà vẫn nhanh.</p>\n<h2>Khung carbon ACX được tinh chỉnh cho sự êm ái</h2>\n<p>Khung và phuộc Strattos C làm từ carbon ACX của Polygon, với cách xếp lớp sợi được điều chỉnh để cân bằng giữa trọng lượng nhẹ và khả năng giảm rung. Gióng sau hạ thấp (dropped seat stays) giúp phần đuôi xe hấp thụ rung động mặt đường, trong khi vùng trục giữa vẫn đủ cứng để truyền lực đạp hiệu quả.</p>\n<figure><img src=\"https://media.polygonbikes.com/wp-content/uploads/2025/12/03115939/AZZ_1147-803x488.jpg\" alt=\"Polygon Strattos C trên đường\" loading=\"lazy\"></figure>\n<h2>Lốp tới 34mm cho mọi mặt đường</h2>\n<p>Khoảng hở lốp tới <strong>34mm</strong> cho phép chạy lốp bản lớn ở áp suất thấp hơn để tăng độ bám và sự êm ái — dù là đường nhựa phẳng, đường bê tông xấu hay đoạn đường đất nhẹ. Cả ba phiên bản xuất xưởng với lốp Schwalbe One Addix TLE 700x28C và vành sẵn băng keo tubeless.</p>\n<h2>Buồng lái LINC bán tích hợp và pát SRAM UDH</h2>\n<p>Ghi đông carbon LINC đi dây âm hoàn toàn cho vẻ ngoài gọn gàng và khí động học, nhưng vẫn giữ khả năng tinh chỉnh như hệ ghi đông – pô tăng rời, giúp việc bảo dưỡng dễ dàng hơn. Khung dùng pát đề chuẩn <strong>SRAM UDH</strong>: tương thích bộ truyền động SRAM Transmission đời mới và dễ tìm phụ tùng thay thế.</p>\n<h2>Ba phiên bản tại Spinlab</h2>\n{{bang_gia_strattos_c}}\n<p>Cả ba phiên bản dùng khung ACX All-Round, phanh đĩa dầu, đĩa phanh 160mm và có 7 size từ XXS đến XXL.</p>\n<h2>Strattos C dành cho ai?</h2>\n<ul>\n<li>Người đạp đường dài, tour cuối tuần, gran fondo — cần sự thoải mái suốt nhiều giờ trên yên.</li>\n<li>Người muốn một chiếc road carbon hiệu năng cao nhưng không cần tư thế thi đấu như dòng aero Helios A.</li>\n<li>Người hay gặp đường xấu, muốn chạy lốp bản lớn để êm và bám hơn.</li>\n</ul>\n<p>Chưa chắc chọn size nào? Xem <a href=\"huong-dan-chon-size-xe-dap.html\">hướng dẫn chọn size xe theo chiều cao</a> hoặc liên hệ Spinlab để được tư vấn và đặt lịch xem xe.</p>",
+   "products": [
+    [
+     "polygon-strattos-c9.html",
+     "SRAM Force AXS"
+    ],
+    [
+     "polygon-strattos-c8.html",
+     "Shimano Ultegra Di2"
+    ],
+    [
+     "polygon-strattos-c7.html",
+     "Shimano 105 Di2"
+    ]
+   ],
+   "en": {
+    "tag": "New products",
+    "title": "Polygon Strattos C: the new-generation endurance road bike",
+    "lead": "A smooth ACX carbon frame, clearance for 34mm tyres and a semi-integrated LINC cockpit — Polygon designed the Strattos C for long days on the road. Three versions, C7, C8 and C9, are now available at Spinlab.",
+    "body": "<p>Strattos C is Polygon's new <strong>endurance</strong> road bike, made for long rides where comfort matters as much as speed. Instead of cramped race geometry, Strattos C gives a more relaxed position, a frame that absorbs vibration well and room for wide tyres — a bike you can ride all day and still go fast.</p>\n<h2>An ACX carbon frame tuned for comfort</h2>\n<p>The Strattos C frame and fork are made from Polygon's ACX carbon, with a fibre layup tuned to balance low weight and vibration damping. Dropped seat stays let the rear end absorb road buzz, while the bottom-bracket area stays stiff enough to transfer pedalling power efficiently.</p>\n<figure><img src=\"https://media.polygonbikes.com/wp-content/uploads/2025/12/03115939/AZZ_1147-803x488.jpg\" alt=\"Polygon Strattos C on the road\" loading=\"lazy\"></figure>\n<h2>Tyres up to 34mm for every surface</h2>\n<p>Clearance for tyres up to <strong>34mm</strong> lets you run wide tyres at lower pressure for more grip and comfort — on smooth tarmac, rough concrete or light dirt roads. All three versions come with Schwalbe One Addix TLE 700x28C tyres and rims pre-taped for tubeless.</p>\n<h2>Semi-integrated LINC cockpit and SRAM UDH</h2>\n<p>The fully internally routed LINC carbon handlebar looks clean and aerodynamic, yet stays as adjustable as a separate bar and stem, making maintenance easier. The frame uses the <strong>SRAM UDH</strong> derailleur hanger standard: compatible with the latest SRAM Transmission drivetrains, with replacement parts easy to find.</p>\n<h2>Three versions at Spinlab</h2>\n{{bang_gia_strattos_c}}\n<p>All three versions use the ACX All-Round frame, hydraulic disc brakes and 160mm rotors, and come in 7 sizes from XXS to XXL.</p>\n<h2>Who is the Strattos C for?</h2>\n<ul>\n<li>Long-distance riders, weekend tourers and gran fondo riders — who need comfort for hours in the saddle.</li>\n<li>Riders who want a high-performance carbon road bike without the race position of the aero Helios A.</li>\n<li>Riders who often meet rough roads and want wide tyres for comfort and grip.</li>\n</ul>\n<p>Not sure which size? See our <a href=\"huong-dan-chon-size-xe-dap.html\">guide to choosing your bike size by height</a> or contact Spinlab for advice and to book a viewing.</p>"
+   }
+  },
+  {
+   "slug": "huong-dan-ap-suat-lop-tubeless",
+   "cat": "huong-dan",
+   "tag": "Kỹ thuật lốp",
+   "date": "2026-10-21",
+   "title": "Áp suất lốp tubeless: bơm bao nhiêu là đúng?",
+   "lead": "Lốp tubeless cho phép chạy áp suất thấp hơn lốp có săm — êm hơn, bám hơn mà không lo thủng do kẹp săm. Nhưng bơm bao nhiêu là vừa? Dưới đây là cách chọn áp suất và bảng điểm khởi đầu tham khảo.",
+   "image": "https://vittoria.com/cdn/shop/files/Banner_HERO_Horizontal_3_69510693-5265-4d5e-95ae-4706d0cb7fdd.webp?width=1600",
+   "thumb": "https://vittoria.com/cdn/shop/files/Banner_HERO_Horizontal_3_69510693-5265-4d5e-95ae-4706d0cb7fdd.webp?width=600",
+   "body": "<h2>Vì sao lốp tubeless chạy được áp suất thấp hơn?</h2>\n<p>Lốp có săm khi bơm non dễ bị “kẹp săm” (pinch flat): săm bị ép giữa vành và chướng ngại vật rồi thủng. Lốp tubeless không có săm nên không gặp lỗi này; keo tự vá bên trong còn bịt kín các lỗ thủng nhỏ ngay khi đang chạy. Nhờ vậy bạn có thể giảm áp suất để lốp ôm mặt đường tốt hơn, lăn êm hơn trên đường xấu và bám hơn khi vào cua.</p>\n<h2>Những yếu tố quyết định áp suất</h2>\n<ul>\n<li><strong>Tổng cân nặng</strong> người và xe: càng nặng càng cần áp suất cao hơn.</li>\n<li><strong>Bản lốp</strong>: lốp càng to, áp suất cần càng thấp.</li>\n<li><strong>Bề rộng trong của vành</strong>: vành rộng làm lốp “nở” hơn, thường cho phép giảm thêm một chút.</li>\n<li><strong>Mặt đường và thời tiết</strong>: đường xấu, đường đất hoặc trời mưa nên giảm nhẹ để tăng độ bám.</li>\n<li><strong>Bánh trước và bánh sau</strong>: bánh sau chịu nhiều tải hơn nên thường bơm cao hơn bánh trước một chút.</li>\n</ul>\n<h2>Bảng điểm khởi đầu tham khảo</h2>\n<p>Áp dụng cho tổng cân nặng người và xe khoảng 75–85 kg. Nặng hơn khoảng 10 kg thì tăng 5–10%; nhẹ hơn thì giảm tương ứng.</p>\n<div class=\"table-wrap\"><table><thead><tr><th scope=\"col\">Loại lốp</th><th scope=\"col\">Bản lốp</th><th scope=\"col\">Áp suất (bar)</th><th scope=\"col\">Áp suất (psi)</th></tr></thead><tbody>\n<tr><th scope=\"row\">Road</th><td>28mm</td><td>4,5 – 5,5</td><td>65 – 80</td></tr>\n<tr><th scope=\"row\">Road / All-road</th><td>32mm</td><td>3,8 – 4,8</td><td>55 – 70</td></tr>\n<tr><th scope=\"row\">Gravel</th><td>38–40mm</td><td>2,2 – 3,0</td><td>32 – 44</td></tr>\n<tr><th scope=\"row\">Gravel</th><td>45mm trở lên</td><td>1,8 – 2,6</td><td>26 – 38</td></tr>\n<tr><th scope=\"row\">MTB Cross Country</th><td>2.2–2.4\"</td><td>1,4 – 1,8</td><td>20 – 26</td></tr>\n<tr><th scope=\"row\">MTB Trail / Enduro</th><td>2.4–2.6\"</td><td>1,3 – 1,7</td><td>19 – 25</td></tr>\n</tbody></table></div>\n<p>Đây chỉ là điểm bắt đầu. Hãy chạy thử, rồi điều chỉnh mỗi lần khoảng 0,1–0,2 bar cho đến khi thấy vừa ý.</p>\n<h2>Giới hạn không được vượt qua</h2>\n<ul>\n<li>Luôn bơm trong khoảng áp suất tối thiểu – tối đa in trên thành lốp.</li>\n<li>Với <strong>vành hookless</strong> (vành không móc), áp suất tối đa theo tiêu chuẩn là <strong>5 bar (72,5 psi)</strong>, kể cả khi lốp ghi cao hơn. Hãy kiểm tra cả giới hạn của nhà sản xuất vành.</li>\n<li>Bơm quá non trên MTB/gravel dễ làm lốp “ăn” vào vành khi đi đá, có thể méo vành. Ruột lót chống thủng như Vittoria Air-Liner giúp bảo vệ vành và cho phép chạy áp suất thấp an toàn hơn.</li>\n</ul>\n<h2>Dấu hiệu bơm chưa đúng</h2>\n<ul>\n<li><strong>Quá căng:</strong> xe nảy, rung tay, mất bám khi vào cua hoặc trên đường xấu.</li>\n<li><strong>Quá non:</strong> lốp lắc, “lả” khi vào cua, cảm giác ì và nặng, nghe tiếng vành chạm đá.</li>\n</ul>\n<h2>Chăm sóc lốp tubeless</h2>\n<ul>\n<li>Kiểm tra áp suất trước mỗi chuyến đi bằng đồng hồ chính xác — lốp tubeless mất hơi chậm theo thời gian.</li>\n<li>Bổ sung hoặc thay keo tự vá khoảng 3–6 tháng một lần, sớm hơn nếu trời nóng hoặc đạp nhiều.</li>\n<li>Dùng băng keo vành và chân van tubeless đúng chuẩn để tránh xì hơi.</li>\n</ul>\n<p>Cần tư vấn chọn lốp, keo hay chuyển đổi xe sang tubeless? Đội ngũ kỹ thuật Spinlab luôn sẵn sàng hỗ trợ.</p>",
+   "products": [
+    [
+     "vittoria-universal-sealant.html",
+     ""
+    ],
+    [
+     "vittoria-air-liner-light-gravel.html",
+     ""
+    ],
+    [
+     "vittoria-tubeless-rim-tape.html",
+     ""
+    ],
+    [
+     "vittoria-corsa-next.html",
+     ""
+    ]
+   ],
+   "en": {
+    "tag": "Tyre tech",
+    "title": "Tubeless tyre pressure: how much is right?",
+    "lead": "Tubeless tyres let you run lower pressure than tyres with tubes — smoother and grippier, without the risk of pinch flats. But how much should you pump? Here is how to choose your pressure, with a table of starting points.",
+    "body": "<h2>Why can tubeless tyres run lower pressure?</h2>\n<p>Tyres with tubes are prone to “pinch flats” when under-inflated: the tube gets squeezed between the rim and an obstacle and punctures. Tubeless tyres have no tube, so this can't happen, and the sealant inside seals small punctures while you ride. That lets you lower the pressure so the tyre hugs the road better, rolls more smoothly on rough surfaces and grips more in corners.</p>\n<h2>What determines your pressure</h2>\n<ul>\n<li><strong>Total weight</strong> of rider and bike: the heavier, the higher the pressure you need.</li>\n<li><strong>Tyre width</strong>: the wider the tyre, the lower the pressure.</li>\n<li><strong>Internal rim width</strong>: wider rims make the tyre “balloon” more, usually allowing slightly lower pressure.</li>\n<li><strong>Road surface and weather</strong>: on rough roads, dirt or in the rain, drop the pressure slightly for more grip.</li>\n<li><strong>Front and rear</strong>: the rear wheel carries more load, so it usually runs slightly higher pressure than the front.</li>\n</ul>\n<h2>Starting-point reference table</h2>\n<p>For a combined rider and bike weight of about 75–85 kg. Add 5–10% for every 10 kg more; reduce accordingly if lighter.</p>\n<div class=\"table-wrap\"><table><thead><tr><th scope=\"col\">Tyre type</th><th scope=\"col\">Tyre width</th><th scope=\"col\">Pressure (bar)</th><th scope=\"col\">Pressure (psi)</th></tr></thead><tbody>\n<tr><th scope=\"row\">Road</th><td>28mm</td><td>4,5 – 5,5</td><td>65 – 80</td></tr>\n<tr><th scope=\"row\">Road / All-road</th><td>32mm</td><td>3,8 – 4,8</td><td>55 – 70</td></tr>\n<tr><th scope=\"row\">Gravel</th><td>38–40mm</td><td>2,2 – 3,0</td><td>32 – 44</td></tr>\n<tr><th scope=\"row\">Gravel</th><td>45mm and wider</td><td>1,8 – 2,6</td><td>26 – 38</td></tr>\n<tr><th scope=\"row\">MTB Cross Country</th><td>2.2–2.4\"</td><td>1,4 – 1,8</td><td>20 – 26</td></tr>\n<tr><th scope=\"row\">MTB Trail / Enduro</th><td>2.4–2.6\"</td><td>1,3 – 1,7</td><td>19 – 25</td></tr>\n</tbody></table></div>\n<p>These are only starting points. Ride, then adjust in steps of about 0.1–0.2 bar until it feels right.</p>\n<h2>Limits you must not exceed</h2>\n<ul>\n<li>Always stay within the minimum – maximum pressure printed on the tyre sidewall.</li>\n<li>With <strong>hookless rims</strong>, the standard maximum pressure is <strong>5 bar (72.5 psi)</strong>, even if the tyre says higher. Also check your rim manufacturer's limits.</li>\n<li>Running too low on MTB/gravel can make the tyre bottom out on rocks and may dent the rim. Inserts such as Vittoria Air-Liner protect the rim and let you run low pressure more safely.</li>\n</ul>\n<h2>Signs your pressure is wrong</h2>\n<ul>\n<li><strong>Too hard:</strong> the bike bounces, your hands buzz and you lose grip in corners or on rough roads.</li>\n<li><strong>Too soft:</strong> the tyre squirms and folds in corners, feels sluggish and heavy, and you hear the rim hitting rocks.</li>\n</ul>\n<h2>Caring for tubeless tyres</h2>\n<ul>\n<li>Check your pressure before every ride with an accurate gauge — tubeless tyres slowly lose air over time.</li>\n<li>Top up or replace the sealant about every 3–6 months, sooner in hot weather or if you ride a lot.</li>\n<li>Use proper tubeless rim tape and valves to prevent air leaks.</li>\n</ul>\n<p>Need advice on tyres, sealant or converting your bike to tubeless? The Spinlab technical team is always ready to help.</p>"
+   }
+  },
+  {
+   "slug": "huong-dan-chon-size-xe-dap",
+   "cat": "huong-dan",
+   "tag": "Hướng dẫn",
+   "date": "2026-10-21",
+   "title": "Chọn size xe đạp theo chiều cao",
+   "lead": "Chọn đúng size khung là bước quan trọng nhất khi mua xe: xe vừa người giúp đạp thoải mái, kiểm soát tốt và tránh đau mỏi. Bảng dưới đây tổng hợp khuyến nghị của Polygon cho các mẫu xe Spinlab đang phân phối.",
+   "image": "https://media.polygonbikes.com/wp-content/uploads/2026/04/23161748/Heist-Feature-1.jpg",
+   "thumb": "https://media.polygonbikes.com/wp-content/uploads/2026/04/23161748/Heist-Feature-1.jpg",
+   "body": "<h2 id=\"chon-size\">Bảng size theo chiều cao</h2>\n<p>Số liệu tham khảo theo bảng kích thước khung của Polygon. Mỗi trang sản phẩm có bảng chi tiết của riêng mẫu xe đó.</p>\n{{bang_size}}\n<h2>Khi chiều cao nằm giữa hai size</h2>\n<ul>\n<li>Chọn size nhỏ hơn nếu bạn thích xe linh hoạt, dễ xoay trở; chọn size lớn hơn nếu bạn ưu tiên sự ổn định khi đi đường dài.</li>\n<li>Người có chân dài hơn so với thân thường hợp size lớn hơn; thân dài, chân ngắn thường hợp size nhỏ hơn.</li>\n<li>Chiều cao yên, độ dài pô tăng và vị trí ghi đông có thể tinh chỉnh thêm sau khi chọn đúng size khung.</li>\n</ul>\n<h2>Cách đo chiều cao cho chính xác</h2>\n<ul>\n<li>Đứng thẳng, không mang giày, lưng và gót chân sát tường; đặt một vật phẳng lên đầu và đánh dấu.</li>\n<li>Đo thêm chiều dài chân trong (từ sàn đến đáy chậu) để nhân viên tư vấn chọn size và chiều cao yên chuẩn hơn.</li>\n</ul>\n<h2>Thử xe trước khi mua</h2>\n<p>Bảng size là điểm khởi đầu; cảm giác thực tế trên xe mới là quan trọng nhất. Hãy ghé đại lý Spinlab gần nhất để ngồi thử và điều chỉnh xe cho vừa người.</p>",
+   "products": [],
+   "en": {
+    "tag": "Guides",
+    "title": "Choosing your bike size by height",
+    "lead": "Choosing the right frame size is the most important step when buying a bike: a bike that fits is comfortable, handles well and avoids aches and pains. The table below summarises Polygon's recommendations for the models Spinlab distributes.",
+    "body": "<h2 id=\"chon-size\">Size chart by height</h2>\n<p>Reference figures from Polygon's frame size charts. Each product page has the detailed chart for that model.</p>\n{{bang_size}}\n<h2>When you are between two sizes</h2>\n<ul>\n<li>Choose the smaller size if you like a nimble, agile bike; choose the larger size if you prefer stability on long rides.</li>\n<li>Riders with long legs relative to their torso usually suit the larger size; a long torso with shorter legs usually suits the smaller size.</li>\n<li>Saddle height, stem length and handlebar position can be fine-tuned once you have the right frame size.</li>\n</ul>\n<h2>How to measure your height accurately</h2>\n<ul>\n<li>Stand straight without shoes, back and heels against a wall; place a flat object on your head and mark the wall.</li>\n<li>Also measure your inseam (from the floor to the crotch) so our staff can recommend the size and saddle height more precisely.</li>\n</ul>\n<h2>Try before you buy</h2>\n<p>The size chart is a starting point; how the bike actually feels matters most. Visit your nearest Spinlab dealer to sit on the bike and have it adjusted to fit you.</p>"
+   }
+  }
+ ]
+}

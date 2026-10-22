@@ -30,12 +30,22 @@ Trên Hostinger, file `.htaccess` lo việc này: `/` chuyển tới `/trangchu`
 | `data/` | Dữ liệu sản phẩm và ngày đăng (`catalog.json`) |
 | `tools/` | Công cụ tạo trang — xem `tools/README.md` |
 
+## Trang quản lý (sửa nội dung không cần code)
+
+Bấm đúp **`Quan ly website.command`** (hoặc chạy `python3 tools/admin.py`) — trình duyệt mở http://127.0.0.1:8770/admin, chỉ dùng được trên máy này.
+
+- **Bài viết**: thêm / sửa / xoá bài Tin tức và Hướng dẫn, tải ảnh, chọn sản phẩm trong bài, nhập bản tiếng Anh → `data/articles.json`
+- **Sản phẩm**: giá bán lẻ (`data/page-prices.json`, `data/vittoria-stock.json`), ẩn / hiện (`data/hidden.json`), mô tả VI + EN (`data/overrides.json`)
+- **Đăng lên web**: “Cập nhật bản xem trước” chạy lại các bước dưới đây; “Đăng lên web” build rồi commit + push lên GitHub.
+
 ## Cập nhật sau khi thêm / gỡ sản phẩm
 
 ```bash
 cd tools/generators && python3 brands.py ../.. bikes.json && cd ../..
-python3 tools/build_new_products.py
 python3 tools/build_articles.py
+python3 tools/apply_overrides.py
+python3 tools/apply_hidden.py
+python3 tools/build_new_products.py
 python3 tools/apply_prices.py
 python3 tools/build_compare.py
 python3 tools/card_hover.py

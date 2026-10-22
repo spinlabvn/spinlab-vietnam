@@ -1,5 +1,5 @@
 {
- "source": "Giá bán lẻ xe đạp (VND). Polygon: Úp giá lên web.xlsx — báo giá Polygon 18-9-2026, cột \"Giá bán lẻ\". Story: Spinlab báo 21-10-2026. Xe không có trong file hiện \"Liên hệ\".",
+ "source": "Giá bán lẻ theo trang sản phẩm (VND) — xe Polygon, Story và sản phẩm Emume. Polygon: báo giá 18-9-2026 (cột \"Giá bán lẻ\"); Story: Spinlab báo 21-10-2026; Emume: Spinlab 20-10-2026. Lốp và phụ kiện Vittoria có giá theo từng mã trong vittoria-stock.json. Xe không có trong file hiện \"Liên hệ\". Sửa qua trang quản lý (tools/admin.py).",
  "prices": {
   "polygon-helios-a0-axs.html": 228000000,
   "polygon-helios-a9-di2-power.html": 185000000,
@@ -52,6 +52,13 @@
   "polygon-path-3.html": 16800000,
   "polygon-path-2.html": 14600000,
   "story-curvet-c2-ultra.html": 26800000,
-  "story-continue-pro.html": 22300000
+  "story-continue-pro.html": 22300000,
+  "emume-anubis-feather.html": 980000,
+  "emume-basic.html": 550000,
+  "emume-bastet.html": 680000,
+  "emume-end-tape.html": 980000,
+  "emume-galaxy.html": 880000,
+  "emume-titanium-3d-bar-plug.html": 980000,
+  "emume-titanium-bar-plug.html": 980000
  }
 }

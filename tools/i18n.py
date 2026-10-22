@@ -22,15 +22,36 @@ SCRIPT = re.compile(r'(<script\b[^>]*>)(.*?)(</script>)', re.S)
 STYLE = re.compile(r'<style\b[^>]*>.*?</style>', re.S)
 JSSTR = re.compile(r'"((?:[^"\\\n]|\\.)*)"|\'((?:[^\'\\\n]|\\.)*)\'')
 TEXT = re.compile(r'>([^<>]+)<')
+# patterns whose numbers change with the data (prices, counts, dates)
+RULES = [(re.compile(r'Từ ([\d.]+₫)'), r'From \1'),
+         (re.compile(r'(\d+) sản phẩm'), r'\1 products'), (re.compile(r'(\d+) mẫu xe'), r'\1 models'),
+         (re.compile(r'(\d+) điểm bán'), r'\1 stores'), (re.compile(r'(\d+) lựa chọn'), r'\1 options'),
+         (re.compile(r'Đăng ngày (\d\d/\d\d/\d{4})'), r'Listed \1'),
+         (re.compile(r'Các phiên bản trong dòng (<b>[^<]*</b>): ((?:(?![àáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđ]).)*)', re.S),
+          r'Versions in the \1 range: \2')]
 
 
-def translate(page, d):
+def rule(key):
+    for rx, rep in RULES:
+        if rx.fullmatch(key):
+            return rx.sub(rep, key)
+    return None
+
+
+def translate(page, d, collect_all=False):
     missing = []
 
     def look(raw, unescape=True):
         key = norm(H.unescape(raw) if unescape else raw)
+        if collect_all:
+            if re.search(r'[^\W\d_]', key):
+                missing.append(key)
+            return None
         if key in d:          # also Vietnamese without diacritics, e.g. "Xem ngay"
             return d[key]
+        r = rule(key)
+        if r is not None:
+            return r
         if VI.search(raw):
             missing.append(key)
         return None
@@ -80,3 +101,14 @@ def _js(q, look):
         return q.group(0)
     esc = t.replace('\\', '\\\\').replace(quote, '\\' + quote)
     return quote + esc + quote
+
+
+def units(fragment):
+    """Translatable units of an HTML fragment, in document order (same segmentation as translate)."""
+    return translate(fragment, {}, collect_all=True)[1]
+
+
+def pairs(vi_html, en_html):
+    """Dictionary entries from a Vietnamese fragment and its English version with the same structure."""
+    a, b = units(vi_html), units(en_html)
+    return dict(zip(a, b)) if len(a) == len(b) else {}

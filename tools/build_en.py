@@ -15,6 +15,49 @@ sys.path.insert(0, os.path.join(ROOT, 'tools'))
 import i18n  # noqa: E402
 
 D = json.load(open(os.path.join(ROOT, 'data', 'en.json'), encoding='utf-8'))
+
+
+def extra_pairs():
+    """English text typed in the admin page: articles (data/articles.json) and product texts (data/overrides.json)."""
+    out = {}
+    cut = lambda t: t[:150].rsplit(' ', 1)[0] + '…'
+    dv = lambda d: '/'.join(reversed(d.split('-')))
+    try:
+        arts = json.load(open(os.path.join(ROOT, 'data', 'articles.json'), encoding='utf-8'))['articles']
+    except FileNotFoundError:
+        arts = []
+    for a in arts:
+        en = a.get('en') or {}
+        for k in ('title', 'lead', 'tag'):
+            if en.get(k):
+                out[i18n.norm(a[k])] = en[k]
+        if en.get('title'):
+            out[i18n.norm(a['title'] + ' — Spinlab')] = en['title'] + ' — Spinlab'
+        if en.get('lead'):
+            out[i18n.norm(cut(a['lead']))] = cut(en['lead'])
+            out[i18n.norm(a['lead'][:155])] = en['lead'][:155]
+        if en.get('tag'):
+            out[i18n.norm(f"{a['tag']} · {dv(a['date'])}")] = f"{en['tag']} · {dv(a['date'])}"
+        if en.get('body'):
+            out.update(i18n.pairs(a['body'], en['body']))
+    try:
+        ov = json.load(open(os.path.join(ROOT, 'data', 'overrides.json'), encoding='utf-8'))['pages']
+    except FileNotFoundError:
+        ov = {}
+    for o in ov.values():
+        en = o.get('en') or {}
+        for k in ('tagline', 'heading'):
+            if o.get(k) and en.get(k):
+                out[i18n.norm(o[k])] = en[k]
+        for v, e in zip(o.get('intro') or [], en.get('intro') or []):
+            out[i18n.norm(v)] = e
+        for (vt, vx), (et, ex) in zip(o.get('features') or [], en.get('features') or []):
+            out[i18n.norm(vt)] = et
+            out[i18n.norm(vx)] = ex
+    return {k: v for k, v in out.items() if k and v}
+
+
+D = {**D, **extra_pairs()}
 PAGES = sorted(os.path.basename(f) for f in glob.glob(os.path.join(ROOT, '*.html')) if not f.endswith('v1-premium.html'))
 NAMES = {p[:-5] for p in PAGES} | {'trangchu'}
 EN_SLUG = {
@@ -25,7 +68,14 @@ EN_SLUG = {
     'huong-dan': 'guides', 'tin-tuc-polygon-strattos-c': 'news-polygon-strattos-c',
     'huong-dan-ap-suat-lop-tubeless': 'guide-tubeless-tyre-pressure', 'huong-dan-chon-size-xe-dap': 'guide-bike-size-by-height',
 }
-en_slug = lambda name: EN_SLUG.get(name, name)
+def en_slug(name):
+    """English slug: fixed table first, then new articles (tin-tuc-x -> news-x, huong-dan-x -> guide-x)."""
+    if name in EN_SLUG:
+        return EN_SLUG[name]
+    for vi, en in (('tin-tuc-', 'news-'), ('huong-dan-', 'guide-')):
+        if name.startswith(vi):
+            return en + name[len(vi):]
+    return name
 
 
 def url(page, en):

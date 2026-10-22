@@ -1,6 +1,6 @@
-"""Articles: the "Tin tức" and "Hướng dẫn" menus.
+"""Articles: the "Tin tức" and "Hướng dẫn" menus (data/articles.json).
 
-Each entry in ARTICLES becomes its own page (<slug>.html); tin-tuc.html and huong-dan.html list the articles of
+Each article becomes its own page (<slug>.html); tin-tuc.html and huong-dan.html list the articles of
 their category, and the homepage "Tin tức & Hướng dẫn" section shows the newest ones. Product cards inside an
 article are read from the product pages (name, photo, category), so prices and hover photos follow the usual
 post-processing. Run after build_new_products.py and before apply_prices.py:
@@ -16,7 +16,7 @@ R = lambda f: open(os.path.join(ROOT, f), encoding='utf-8').read()
 W = lambda f, s: open(os.path.join(ROOT, f), 'w', encoding='utf-8').write(s)
 E = lambda s: html.escape(s, quote=True)
 BK = {b['slug']: b for b in json.load(open(os.path.join(ROOT, 'tools', 'generators', 'bikes.json'), encoding='utf-8'))}
-PRICES = json.load(open(os.path.join(ROOT, 'data', 'bike-prices.json'), encoding='utf-8'))['prices']
+PRICES = json.load(open(os.path.join(ROOT, 'data', 'page-prices.json'), encoding='utf-8'))['prices']
 vnd = lambda n: f'{n:,}'.replace(',', '.') + '₫'
 CATS = {'tin-tuc': ('Tin tức', 'tin-tuc.html'), 'huong-dan': ('Hướng dẫn', 'huong-dan.html')}
 # same contact block as the homepage ("Chưa biết chọn xe nào?")
@@ -74,101 +74,18 @@ SC = [('2026-strattos-c9-axs-road-bike', 'SRAM Force AXS E1 2x12, điện tử k
 sc_rows = ''.join(f'<tr><th scope="row"><a href="{VI[s]["file"]}.html">{E(BK[s]["name"])}</a></th><td>{g}</td><td>{w}</td>'
                   f'<td>{vnd(PRICES[VI[s]["file"] + ".html"]) if VI[s]["file"] + ".html" in PRICES else "Liên hệ"}</td></tr>' for s, g, w in SC)
 
-ARTICLES = [
-    dict(slug='tin-tuc-polygon-strattos-c', cat='tin-tuc', tag='Sản phẩm mới', date='2026-10-21',
-         title='Polygon Strattos C: road bike endurance thế hệ mới',
-         lead='Khung carbon ACX êm ái, lốp tới 34mm và buồng lái LINC bán tích hợp — Strattos C được Polygon thiết kế cho những cung đường dài cả ngày. Ba phiên bản C7, C8 và C9 đã có mặt tại Spinlab.',
-         image='https://media.polygonbikes.com/wp-content/uploads/2026/01/22110900/plg-strattos-c-header.jpg', thumb='https://media.polygonbikes.com/wp-content/uploads/2026/02/23154155/Header-Strattos-C-by-Velo-450x300.jpg',
-         body=f'''
-<p>Strattos C là dòng road bike <strong>endurance</strong> mới của Polygon, dành cho những chuyến đi dài nơi sự thoải mái quan trọng không kém tốc độ. Thay vì hình học thi đấu gò bó, Strattos C cho tư thế ngồi thả lỏng hơn, khung hấp thụ rung động tốt và đủ chỗ cho lốp bản lớn — một chiếc xe để đạp cả ngày mà vẫn nhanh.</p>
-<h2>Khung carbon ACX được tinh chỉnh cho sự êm ái</h2>
-<p>Khung và phuộc Strattos C làm từ carbon ACX của Polygon, với cách xếp lớp sợi được điều chỉnh để cân bằng giữa trọng lượng nhẹ và khả năng giảm rung. Gióng sau hạ thấp (dropped seat stays) giúp phần đuôi xe hấp thụ rung động mặt đường, trong khi vùng trục giữa vẫn đủ cứng để truyền lực đạp hiệu quả.</p>
-<figure><img src="https://media.polygonbikes.com/wp-content/uploads/2025/12/03115939/AZZ_1147-803x488.jpg" alt="Polygon Strattos C trên đường" loading="lazy"></figure>
-<h2>Lốp tới 34mm cho mọi mặt đường</h2>
-<p>Khoảng hở lốp tới <strong>34mm</strong> cho phép chạy lốp bản lớn ở áp suất thấp hơn để tăng độ bám và sự êm ái — dù là đường nhựa phẳng, đường bê tông xấu hay đoạn đường đất nhẹ. Cả ba phiên bản xuất xưởng với lốp Schwalbe One Addix TLE 700x28C và vành sẵn băng keo tubeless.</p>
-<h2>Buồng lái LINC bán tích hợp và pát SRAM UDH</h2>
-<p>Ghi đông carbon LINC đi dây âm hoàn toàn cho vẻ ngoài gọn gàng và khí động học, nhưng vẫn giữ khả năng tinh chỉnh như hệ ghi đông – pô tăng rời, giúp việc bảo dưỡng dễ dàng hơn. Khung dùng pát đề chuẩn <strong>SRAM UDH</strong>: tương thích bộ truyền động SRAM Transmission đời mới và dễ tìm phụ tùng thay thế.</p>
-<h2>Ba phiên bản tại Spinlab</h2>
-<div class="table-wrap"><table><thead><tr><th scope="col">Phiên bản</th><th scope="col">Bộ truyền động</th><th scope="col">Bộ vành</th><th scope="col">Giá bán lẻ</th></tr></thead><tbody>{sc_rows}</tbody></table></div>
-<p>Cả ba phiên bản dùng khung ACX All-Round, phanh đĩa dầu, đĩa phanh 160mm và có 7 size từ XXS đến XXL.</p>
-<h2>Strattos C dành cho ai?</h2>
-<ul>
-<li>Người đạp đường dài, tour cuối tuần, gran fondo — cần sự thoải mái suốt nhiều giờ trên yên.</li>
-<li>Người muốn một chiếc road carbon hiệu năng cao nhưng không cần tư thế thi đấu như dòng aero Helios A.</li>
-<li>Người hay gặp đường xấu, muốn chạy lốp bản lớn để êm và bám hơn.</li>
-</ul>
-<p>Chưa chắc chọn size nào? Xem <a href="huong-dan-chon-size-xe-dap.html">hướng dẫn chọn size xe theo chiều cao</a> hoặc liên hệ Spinlab để được tư vấn và đặt lịch xem xe.</p>
-''', products=[('polygon-strattos-c9.html', 'SRAM Force AXS'), ('polygon-strattos-c8.html', 'Shimano Ultegra Di2'), ('polygon-strattos-c7.html', 'Shimano 105 Di2')]),
-
-    dict(slug='huong-dan-ap-suat-lop-tubeless', cat='huong-dan', tag='Kỹ thuật lốp', date='2026-10-21',
-         title='Áp suất lốp tubeless: bơm bao nhiêu là đúng?',
-         lead='Lốp tubeless cho phép chạy áp suất thấp hơn lốp có săm — êm hơn, bám hơn mà không lo thủng do kẹp săm. Nhưng bơm bao nhiêu là vừa? Dưới đây là cách chọn áp suất và bảng điểm khởi đầu tham khảo.',
-         image='https://vittoria.com/cdn/shop/files/Banner_HERO_Horizontal_3_69510693-5265-4d5e-95ae-4706d0cb7fdd.webp?width=1600', thumb='https://vittoria.com/cdn/shop/files/Banner_HERO_Horizontal_3_69510693-5265-4d5e-95ae-4706d0cb7fdd.webp?width=600',
-         body='''
-<h2>Vì sao lốp tubeless chạy được áp suất thấp hơn?</h2>
-<p>Lốp có săm khi bơm non dễ bị “kẹp săm” (pinch flat): săm bị ép giữa vành và chướng ngại vật rồi thủng. Lốp tubeless không có săm nên không gặp lỗi này; keo tự vá bên trong còn bịt kín các lỗ thủng nhỏ ngay khi đang chạy. Nhờ vậy bạn có thể giảm áp suất để lốp ôm mặt đường tốt hơn, lăn êm hơn trên đường xấu và bám hơn khi vào cua.</p>
-<h2>Những yếu tố quyết định áp suất</h2>
-<ul>
-<li><strong>Tổng cân nặng</strong> người và xe: càng nặng càng cần áp suất cao hơn.</li>
-<li><strong>Bản lốp</strong>: lốp càng to, áp suất cần càng thấp.</li>
-<li><strong>Bề rộng trong của vành</strong>: vành rộng làm lốp “nở” hơn, thường cho phép giảm thêm một chút.</li>
-<li><strong>Mặt đường và thời tiết</strong>: đường xấu, đường đất hoặc trời mưa nên giảm nhẹ để tăng độ bám.</li>
-<li><strong>Bánh trước và bánh sau</strong>: bánh sau chịu nhiều tải hơn nên thường bơm cao hơn bánh trước một chút.</li>
-</ul>
-<h2>Bảng điểm khởi đầu tham khảo</h2>
-<p>Áp dụng cho tổng cân nặng người và xe khoảng 75–85 kg. Nặng hơn khoảng 10 kg thì tăng 5–10%; nhẹ hơn thì giảm tương ứng.</p>
-<div class="table-wrap"><table><thead><tr><th scope="col">Loại lốp</th><th scope="col">Bản lốp</th><th scope="col">Áp suất (bar)</th><th scope="col">Áp suất (psi)</th></tr></thead><tbody>
-<tr><th scope="row">Road</th><td>28mm</td><td>4,5 – 5,5</td><td>65 – 80</td></tr>
-<tr><th scope="row">Road / All-road</th><td>32mm</td><td>3,8 – 4,8</td><td>55 – 70</td></tr>
-<tr><th scope="row">Gravel</th><td>38–40mm</td><td>2,2 – 3,0</td><td>32 – 44</td></tr>
-<tr><th scope="row">Gravel</th><td>45mm trở lên</td><td>1,8 – 2,6</td><td>26 – 38</td></tr>
-<tr><th scope="row">MTB Cross Country</th><td>2.2–2.4"</td><td>1,4 – 1,8</td><td>20 – 26</td></tr>
-<tr><th scope="row">MTB Trail / Enduro</th><td>2.4–2.6"</td><td>1,3 – 1,7</td><td>19 – 25</td></tr>
-</tbody></table></div>
-<p>Đây chỉ là điểm bắt đầu. Hãy chạy thử, rồi điều chỉnh mỗi lần khoảng 0,1–0,2 bar cho đến khi thấy vừa ý.</p>
-<h2>Giới hạn không được vượt qua</h2>
-<ul>
-<li>Luôn bơm trong khoảng áp suất tối thiểu – tối đa in trên thành lốp.</li>
-<li>Với <strong>vành hookless</strong> (vành không móc), áp suất tối đa theo tiêu chuẩn là <strong>5 bar (72,5 psi)</strong>, kể cả khi lốp ghi cao hơn. Hãy kiểm tra cả giới hạn của nhà sản xuất vành.</li>
-<li>Bơm quá non trên MTB/gravel dễ làm lốp “ăn” vào vành khi đi đá, có thể méo vành. Ruột lót chống thủng như Vittoria Air-Liner giúp bảo vệ vành và cho phép chạy áp suất thấp an toàn hơn.</li>
-</ul>
-<h2>Dấu hiệu bơm chưa đúng</h2>
-<ul>
-<li><strong>Quá căng:</strong> xe nảy, rung tay, mất bám khi vào cua hoặc trên đường xấu.</li>
-<li><strong>Quá non:</strong> lốp lắc, “lả” khi vào cua, cảm giác ì và nặng, nghe tiếng vành chạm đá.</li>
-</ul>
-<h2>Chăm sóc lốp tubeless</h2>
-<ul>
-<li>Kiểm tra áp suất trước mỗi chuyến đi bằng đồng hồ chính xác — lốp tubeless mất hơi chậm theo thời gian.</li>
-<li>Bổ sung hoặc thay keo tự vá khoảng 3–6 tháng một lần, sớm hơn nếu trời nóng hoặc đạp nhiều.</li>
-<li>Dùng băng keo vành và chân van tubeless đúng chuẩn để tránh xì hơi.</li>
-</ul>
-<p>Cần tư vấn chọn lốp, keo hay chuyển đổi xe sang tubeless? Đội ngũ kỹ thuật Spinlab luôn sẵn sàng hỗ trợ.</p>
-''', products=[('vittoria-universal-sealant.html', ''), ('vittoria-air-liner-light-gravel.html', ''), ('vittoria-tubeless-rim-tape.html', ''), ('vittoria-corsa-next.html', '')]),
-
-    dict(slug='huong-dan-chon-size-xe-dap', cat='huong-dan', tag='Hướng dẫn', date='2026-10-21',
-         title='Chọn size xe đạp theo chiều cao',
-         lead='Chọn đúng size khung là bước quan trọng nhất khi mua xe: xe vừa người giúp đạp thoải mái, kiểm soát tốt và tránh đau mỏi. Bảng dưới đây tổng hợp khuyến nghị của Polygon cho các mẫu xe Spinlab đang phân phối.',
-         image='https://media.polygonbikes.com/wp-content/uploads/2026/04/23161748/Heist-Feature-1.jpg', thumb='https://media.polygonbikes.com/wp-content/uploads/2026/04/23161748/Heist-Feature-1.jpg',
-         body=f'''
-<h2 id="chon-size">Bảng size theo chiều cao</h2>
-<p>Số liệu tham khảo theo bảng kích thước khung của Polygon. Mỗi trang sản phẩm có bảng chi tiết của riêng mẫu xe đó.</p>
-<div class="size-grid">{"".join(tables)}</div>
-<h2>Khi chiều cao nằm giữa hai size</h2>
-<ul>
-<li>Chọn size nhỏ hơn nếu bạn thích xe linh hoạt, dễ xoay trở; chọn size lớn hơn nếu bạn ưu tiên sự ổn định khi đi đường dài.</li>
-<li>Người có chân dài hơn so với thân thường hợp size lớn hơn; thân dài, chân ngắn thường hợp size nhỏ hơn.</li>
-<li>Chiều cao yên, độ dài pô tăng và vị trí ghi đông có thể tinh chỉnh thêm sau khi chọn đúng size khung.</li>
-</ul>
-<h2>Cách đo chiều cao cho chính xác</h2>
-<ul>
-<li>Đứng thẳng, không mang giày, lưng và gót chân sát tường; đặt một vật phẳng lên đầu và đánh dấu.</li>
-<li>Đo thêm chiều dài chân trong (từ sàn đến đáy chậu) để nhân viên tư vấn chọn size và chiều cao yên chuẩn hơn.</li>
-</ul>
-<h2>Thử xe trước khi mua</h2>
-<p>Bảng size là điểm khởi đầu; cảm giác thực tế trên xe mới là quan trọng nhất. Hãy ghé đại lý Spinlab gần nhất để ngồi thử và điều chỉnh xe cho vừa người.</p>
-''', products=[]),
-]
+# Articles live in data/articles.json (edited from the admin page, tools/admin.py).
+# Placeholders in a body are filled with tables computed from the current data.
+PLACEHOLDERS = {
+    'bang_gia_strattos_c': ('<div class="table-wrap"><table><thead><tr><th scope="col">Phiên bản</th><th scope="col">Bộ truyền động</th>'
+                            f'<th scope="col">Bộ vành</th><th scope="col">Giá bán lẻ</th></tr></thead><tbody>{sc_rows}</tbody></table></div>'),
+    'bang_size': f'<div class="size-grid">{"".join(tables)}</div>',
+}
+fill = lambda body: re.sub(r'(?:<p>\s*)?\{\{(\w+)\}\}(?:\s*</p>)?', lambda m: PLACEHOLDERS.get(m.group(1), m.group(0)), body)
+ARTICLES = json.load(open(os.path.join(ROOT, 'data', 'articles.json'), encoding='utf-8'))['articles']
+for _a in ARTICLES:
+    _a['body'] = fill(_a['body'])
+    _a['products'] = [tuple(x) for x in _a.get('products', []) if os.path.exists(os.path.join(ROOT, x[0]))]
 
 ARTICLES.sort(key=lambda a: a['date'], reverse=True)
 date_vi = lambda d: '/'.join(reversed(d.split('-')))
@@ -235,6 +152,13 @@ def art_card(a):
 
 crumbs = lambda items: ('<div class="container"><nav class="crumbs" aria-label="Đường dẫn"><ol><li><a href="index.html">Trang chủ</a></li>'
                         + ''.join(f'<li><a href="{h}">{E(t)}</a></li>' if h else f'<li aria-current="page">{E(t)}</li>' for t, h in items) + '</ol></nav></div>')
+
+# remove pages of articles deleted from data/articles.json
+_keep = {a['slug'] + '.html' for a in ARTICLES}
+for _f in os.listdir(ROOT):
+    if _f.endswith('.html') and _f not in _keep and '<article class="article">' in R(_f):
+        os.remove(os.path.join(ROOT, _f))
+        print('xoá bài:', _f)
 
 for a in ARTICLES:
     cname, chref = CATS[a['cat']]

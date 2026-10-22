@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quản lý website — Spinlab</title>
+<link rel="icon" href="/favicon.ico">
+<style>
+:root{--y:#FDD752;--r:#8E210A;--r2:#6f1906;--t:#1a1a1a;--m:#666;--l:#e4e4e0;--s:#f6f5f1;--ok:#1d7a3d;--warn:#b26b00;--err:#b3261e;--rad:10px}
+*{box-sizing:border-box}
+body{margin:0;font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--t);background:var(--s)}
+header{position:sticky;top:0;z-index:20;background:var(--y);display:flex;flex-wrap:wrap;align-items:center;gap:6px 20px;padding:6px 24px;min-height:60px;box-shadow:0 1px 0 rgba(0,0,0,.08)}
+header .t{white-space:nowrap}
+@media (max-width:700px){header{padding:6px 12px}header .t{display:none}header nav button{padding:8px 10px}main{padding:16px 12px}}
+header b{font-size:20px;color:var(--r);letter-spacing:-.02em}
+header nav{display:flex;gap:4px}
+header nav button{border:0;background:none;font:inherit;font-weight:700;padding:10px 14px;border-radius:8px;cursor:pointer;color:var(--t);white-space:nowrap}
+header nav button[aria-selected=true]{background:#fff;color:var(--r)}
+header .sp{flex:1}
+header a{color:var(--r);font-weight:700}
+main{max-width:1180px;margin:0 auto;padding:24px}
+h1{font-size:24px;margin:0 0 4px}
+.sub{color:var(--m);margin:0 0 20px}
+.card{background:#fff;border:1px solid var(--l);border-radius:var(--rad);padding:20px;margin-bottom:16px}
+.row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.grid2{display:grid;gap:14px;grid-template-columns:1fr 1fr}
+@media (max-width:800px){.grid2{grid-template-columns:1fr}}
+label{display:block;font-size:13px;font-weight:700;margin-bottom:4px}
+label small{font-weight:400;color:var(--m)}
+input[type=text],input[type=date],input[type=number],input[type=search],select,textarea{width:100%;font:inherit;padding:9px 11px;border:1px solid #cfcfc9;border-radius:8px;background:#fff}
+textarea{min-height:90px;resize:vertical}
+input:focus,select:focus,textarea:focus,.editor:focus{outline:2px solid var(--r);outline-offset:0;border-color:var(--r)}
+.btn{display:inline-flex;align-items:center;gap:6px;border:1.5px solid transparent;border-radius:999px;padding:9px 18px;font:inherit;font-weight:700;cursor:pointer;background:#fff;border-color:#cfcfc9;color:var(--t)}
+.btn:hover{border-color:var(--t)}
+.btn.pri{background:var(--r);border-color:var(--r);color:#fff}
+.btn.pri:hover{background:var(--r2)}
+.btn.yel{background:var(--y);border-color:var(--y);color:var(--r)}
+.btn.del{color:var(--err);border-color:#e9c4c1}
+.btn:disabled{opacity:.5;cursor:wait}
+.btn.sm{padding:5px 12px;font-size:13px}
+.list{display:grid;gap:8px}
+.item{display:flex;gap:14px;align-items:center;background:#fff;border:1px solid var(--l);border-radius:var(--rad);padding:10px 14px;cursor:pointer}
+.item:hover{border-color:var(--t)}
+.item img{width:72px;height:48px;object-fit:cover;border-radius:6px;background:var(--s)}
+.item .grow{flex:1;min-width:0}
+.item b{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.item small{overflow-wrap:anywhere}
+.tag{display:inline-block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding:2px 8px;border-radius:4px;background:var(--s);color:var(--m)}
+.tag.r{background:#fbe9e5;color:var(--r)}.tag.g{background:#e3f3e8;color:var(--ok)}.tag.w{background:#fff3d6;color:var(--warn)}
+.toolbar{display:flex;flex-wrap:wrap;gap:4px;padding:6px;border:1px solid #cfcfc9;border-bottom:0;border-radius:8px 8px 0 0;background:var(--s)}
+.toolbar button{border:1px solid transparent;background:none;border-radius:6px;padding:4px 9px;font:inherit;font-size:13px;font-weight:700;cursor:pointer}
+.toolbar button:hover{background:#fff;border-color:#cfcfc9}
+.editor{min-height:260px;max-height:520px;overflow:auto;padding:12px 14px;border:1px solid #cfcfc9;border-radius:0 0 8px 8px;background:#fff}
+.editor h2{font-size:20px;margin:18px 0 6px}.editor p{margin:0 0 10px}.editor ul{margin:0 0 10px;padding-left:22px}
+.editor table{border-collapse:collapse;font-size:13px}.editor td,.editor th{border:1px solid var(--l);padding:4px 8px}
+textarea.code{font-family:ui-monospace,Menlo,monospace;font-size:13px;min-height:260px;border-radius:0 0 8px 8px}
+details.en{border:1px dashed #cfcfc9;border-radius:var(--rad);padding:12px 16px;margin-top:14px;background:#fcfcfa}
+details.en summary{cursor:pointer;font-weight:700}
+.thumbpick{display:flex;gap:12px;align-items:center}
+.thumbpick img{width:160px;height:100px;object-fit:cover;border-radius:8px;border:1px solid var(--l);background:var(--s)}
+.prods .p{display:flex;gap:8px;margin-bottom:6px}
+.prods .p select{flex:2}.prods .p input{flex:3}
+table.pt{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--l);border-radius:var(--rad);overflow:hidden}
+.pt th,.pt td{padding:10px 12px;border-bottom:1px solid var(--l);text-align:left;vertical-align:top;font-size:14px}
+.pt th{background:var(--s);font-size:12px;text-transform:uppercase;letter-spacing:.04em}
+.pt tr.hid td{opacity:.55}
+.pt .price{width:150px}
+.pt .skus div{display:flex;gap:6px;align-items:center;margin-bottom:4px}
+.pt .skus span{font-size:12px;color:var(--m);flex:1;min-width:140px}
+.pt .skus input{width:120px}
+.switch{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;cursor:pointer;white-space:nowrap}
+.bar{position:sticky;bottom:0;z-index:15;margin:16px -24px -24px;padding:12px 24px;background:#fff;border-top:1px solid var(--l);display:flex;gap:12px;align-items:center}
+.bar .msg{flex:1;color:var(--m);font-size:14px}
+dialog{border:0;border-radius:14px;padding:0;width:min(900px,96vw);max-height:92vh;box-shadow:0 20px 60px rgba(0,0,0,.3)}
+dialog::backdrop{background:rgba(0,0,0,.4)}
+dialog .dh{position:sticky;top:0;background:#fff;padding:16px 20px;border-bottom:1px solid var(--l);display:flex;align-items:center;gap:12px;z-index:2}
+dialog .dh h2{margin:0;font-size:18px;flex:1}
+dialog .db{padding:20px}
+.feat{display:grid;grid-template-columns:1fr 2fr auto;gap:6px;margin-bottom:6px}
+pre.log{background:#141414;color:#e8e8e8;padding:14px;border-radius:8px;max-height:380px;overflow:auto;font-size:12px;white-space:pre-wrap}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--t);color:#fff;padding:10px 18px;border-radius:999px;font-weight:700;z-index:50;opacity:0;transition:opacity .2s;pointer-events:none}
+.toast.on{opacity:1}.toast.err{background:var(--err)}
+.hint{font-size:13px;color:var(--m);margin:6px 0 0}
+.warn{color:var(--warn);font-size:13px;font-weight:700}
+.empty{padding:40px;text-align:center;color:var(--m)}
+</style>
+</head>
+<body>
+<header>
+  <b>Spinlab</b><span class="t">Quản lý website</span>
+  <nav role="tablist">
+    <button role="tab" data-tab="articles" aria-selected="true">Bài viết</button>
+    <button role="tab" data-tab="products" aria-selected="false">Sản phẩm</button>
+    <button role="tab" data-tab="publish" aria-selected="false">Đăng lên web <span id="pending" class="tag r" hidden></span></button>
+  </nav>
+  <span class="sp"></span>
+  <a href="/trangchu" target="_blank" rel="noopener">Xem web ↗</a>
+</header>
+<main id="app"><p class="empty">Đang tải…</p></main>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<dialog id="dlg"><div class="dh"><h2 id="dlg-title"></h2><button class="btn sm" id="dlg-close" type="button">Đóng</button></div><div class="db" id="dlg-body"></div></dialog>
+
+<script>
+const API = (path, body) => fetch(path, body === undefined ? {headers: {'X-Spinlab-Admin': '1'}} :
+  {method: 'POST', headers: {'X-Spinlab-Admin': '1', 'Content-Type': 'application/json'}, body: JSON.stringify(body)})
+  .then(async r => { const j = await r.json(); if (!r.ok) throw new Error(j.error || r.statusText); return j; });
+const $ = (s, el = document) => el.querySelector(s), $$ = (s, el = document) => [...el.querySelectorAll(s)];
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
+const vnd = n => n == null || n === '' ? '' : Number(n).toLocaleString('vi-VN') + '₫';
+const imgSrc = p => !p ? '' : /^https?:/.test(p) ? p : '/' + p.replace(/^\//, '');
+let S = null, TAB = 'articles', DIRTY = {prices: {}, skus: {}, hidden: null};
+function toast(msg, err) { const t = $('#toast'); t.textContent = msg; t.className = 'toast on' + (err ? ' err' : ''); clearTimeout(toast.h); toast.h = setTimeout(() => t.className = 'toast', err ? 5000 : 2500); }
+async function load() { S = await API('/api/state'); const g = S.git, n = g.changed + g.ahead, b = $('#pending'); b.hidden = !n; b.textContent = n ? 'chưa đăng' : ''; render(); }
+function render() { ({articles: renderArticles, products: renderProducts, publish: renderPublish})[TAB](); }
+$$('header [role=tab]').forEach(b => b.onclick = () => { TAB = b.dataset.tab; $$('header [role=tab]').forEach(x => x.setAttribute('aria-selected', x === b)); render(); });
+
+/* ---------- Bài viết ---------- */
+const CATS = {'tin-tuc': 'Tin tức', 'huong-dan': 'Hướng dẫn'};
+const slugify = s => s.normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/đ/g, 'd').replace(/Đ/g, 'D').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 70);
+function renderArticles() {
+  const arts = [...S.articles].sort((a, b) => b.date.localeCompare(a.date));
+  $('#app').innerHTML = `<div class="row" style="justify-content:space-between;margin-bottom:16px"><div><h1>Bài viết</h1><p class="sub" style="margin:0">Tin tức và Hướng dẫn. Bài mới nhất tự hiện ở mục “Tin tức &amp; Hướng dẫn” trên trang chủ.</p></div>
+    <button class="btn pri" id="new-art">+ Viết bài mới</button></div>
+    <div class="list">${arts.map(a => `<div class="item" data-slug="${esc(a.slug)}"><img src="${esc(imgSrc(a.thumb || a.image))}" alt=""><div class="grow"><b>${esc(a.title)}</b>
+      <span class="tag ${a.cat === 'tin-tuc' ? 'r' : 'g'}">${CATS[a.cat]}</span> <small>${a.date.split('-').reverse().join('/')} · /${esc(a.slug)}</small>
+      ${a.en && a.en.title ? '' : ' <span class="tag w">chưa có bản tiếng Anh</span>'}${a._en_body_ok === false ? ' <span class="tag w">bản tiếng Anh lệch cấu trúc</span>' : ''}</div><span>Sửa →</span></div>`).join('') || '<p class="empty">Chưa có bài viết.</p>'}</div>`;
+  $('#new-art').onclick = () => editArticle(null);
+  $$('.item[data-slug]').forEach(el => el.onclick = () => editArticle(S.articles.find(a => a.slug === el.dataset.slug)));
+}
+function richEditor(id, html) {
+  return `<div class="toolbar" data-for="${id}">
+    <button type="button" data-cmd="formatBlock" data-arg="p">Đoạn văn</button><button type="button" data-cmd="formatBlock" data-arg="h2">Tiêu đề mục</button>
+    <button type="button" data-cmd="bold"><b>Đậm</b></button><button type="button" data-cmd="insertUnorderedList">• Danh sách</button>
+    <button type="button" data-cmd="link">Liên kết</button><button type="button" data-cmd="removeFormat">Xoá định dạng</button>
+    <button type="button" data-cmd="html">&lt;/&gt; HTML</button></div>
+    <div class="editor" id="${id}" contenteditable="true">${html}</div><textarea class="code" id="${id}-code" hidden></textarea>`;
+}
+function wireEditor(root, id) {
+  const ed = $('#' + id, root), code = $('#' + id + '-code', root);
+  $$(`.toolbar[data-for="${id}"] button`, root).forEach(b => b.onclick = () => {
+    const c = b.dataset.cmd;
+    if (c === 'html') { if (code.hidden) { code.value = cleanHTML(ed.innerHTML); code.hidden = false; ed.hidden = true; } else { ed.innerHTML = code.value; code.hidden = true; ed.hidden = false; } return; }
+    ed.focus();
+    if (c === 'link') { const u = prompt('Địa chỉ liên kết (vd. /xe-road hoặc https://...)'); if (u) document.execCommand('createLink', false, u); return; }
+    document.execCommand(c, false, b.dataset.arg || null);
+  });
+  return () => code.hidden ? cleanHTML(ed.innerHTML) : code.value.trim();
+}
+function cleanHTML(h) {
+  const d = document.createElement('div'); d.innerHTML = h;
+  $$('[style],[class]:not(table):not(div)', d).forEach(e => { e.removeAttribute('style'); if (!/^(TABLE|DIV)$/.test(e.tagName)) e.removeAttribute('class'); });
+  $$('span', d).forEach(s => s.replaceWith(...s.childNodes));
+  $$('div:not([class])', d).forEach(x => { const p = document.createElement('p'); p.innerHTML = x.innerHTML; x.replaceWith(p); });
+  $$('b', d).forEach(x => { const s = document.createElement('strong'); s.innerHTML = x.innerHTML; x.replaceWith(s); });
+  $$('p', d).forEach(p => { if (!p.textContent.trim() && !p.querySelector('img')) p.remove(); });
+  return d.innerHTML.replace(/&nbsp;/g, ' ').replace(/(<\/(p|h2|ul|ol|li|table|div)>)/g, '$1\n').replace(/\n+/g, '\n').trim();
+}
+function productOptions(sel) {
+  return '<option value="">— chọn sản phẩm —</option>' + S.products.filter(p => !p.hidden).map(p => `<option value="${esc(p.file)}"${p.file === sel ? ' selected' : ''}>${esc(p.name)} (${esc(p.brand.split(' · ')[0])})</option>`).join('');
+}
+function editArticle(a) {
+  const isNew = !a, today = new Date().toISOString().slice(0, 10);
+  a = a ? structuredClone(a) : {slug: '', cat: 'tin-tuc', tag: 'Tin tức', date: today, title: '', lead: '', image: '', thumb: '', body: '<p></p>', products: [], en: {}};
+  a.en = a.en || {};
+  const D = openDlg(isNew ? 'Bài viết mới' : 'Sửa bài viết', `
+    <div class="grid2"><div><label>Chuyên mục</label><select id="f-cat">${Object.entries(CATS).map(([k, v]) => `<option value="${k}"${a.cat === k ? ' selected' : ''}>${v}</option>`).join('')}</select></div>
+      <div><label>Ngày đăng</label><input type="date" id="f-date" value="${esc(a.date)}"></div></div>
+    <div style="margin-top:14px"><label>Tiêu đề</label><input type="text" id="f-title" value="${esc(a.title)}"></div>
+    <div class="grid2" style="margin-top:14px"><div><label>Nhãn nhỏ <small>(vd. Sản phẩm mới, Kỹ thuật lốp)</small></label><input type="text" id="f-tag" value="${esc(a.tag)}"></div>
+      <div><label>Đường dẫn <small>spinlab.vn/…${isNew ? '' : ' (không đổi được)'}</small></label><input type="text" id="f-slug" value="${esc(a.slug)}" ${isNew ? '' : 'readonly'}></div></div>
+    <div style="margin-top:14px"><label>Mô tả ngắn <small>(hiện dưới tiêu đề và trên thẻ bài viết)</small></label><textarea id="f-lead">${esc(a.lead)}</textarea></div>
+    <div style="margin-top:14px"><label>Ảnh đại diện</label><div class="thumbpick"><img id="f-img-prev" src="${esc(imgSrc(a.image))}" alt="">
+      <div><input type="file" id="f-img-file" accept="image/*"><p class="hint">Hoặc dán địa chỉ ảnh:</p><input type="text" id="f-img" value="${esc(a.image)}" placeholder="img/articles/... hoặc https://..."></div></div></div>
+    <div style="margin-top:14px"><label>Nội dung</label>${richEditor('f-body', a.body)}
+      <p class="hint">Có thể chèn bảng tự tính bằng cách gõ <code>{{bang_size}}</code> (bảng chọn size) hoặc <code>{{bang_gia_strattos_c}}</code> thành một đoạn riêng.</p></div>
+    <div style="margin-top:14px" class="prods"><label>Sản phẩm trong bài <small>(hiện thẻ sản phẩm cuối bài)</small></label><div id="f-prods"></div>
+      <button class="btn sm" type="button" id="f-addp">+ Thêm sản phẩm</button></div>
+    <details class="en"${a.en.title ? '' : ' open'}><summary>Bản tiếng Anh ${a.en.title ? '' : '<span class="tag w">chưa có</span>'}</summary>
+      <p class="hint">Trang tiếng Anh dùng phần này. Nội dung tiếng Anh nên giữ cùng số đoạn / mục như bản tiếng Việt (bấm “Chép từ tiếng Việt” rồi dịch từng đoạn).</p>
+      <div class="grid2" style="margin-top:10px"><div><label>Title</label><input type="text" id="e-title" value="${esc(a.en.title)}"></div><div><label>Tag</label><input type="text" id="e-tag" value="${esc(a.en.tag)}"></div></div>
+      <div style="margin-top:10px"><label>Lead</label><textarea id="e-lead">${esc(a.en.lead)}</textarea></div>
+      <div style="margin-top:10px"><label>Body <button class="btn sm" type="button" id="e-copy">Chép từ tiếng Việt</button></label>${richEditor('e-body', a.en.body || '')}</div>
+    </details>
+    <div class="bar" style="margin:20px -20px -20px;padding:14px 20px">
+      ${isNew ? '' : '<button class="btn del" type="button" id="f-del">Xoá bài</button>'}<span class="msg">Lưu xong, vào “Đăng lên web” để cập nhật trang.</span>
+      <button class="btn pri" type="button" id="f-save">Lưu bài viết</button></div>`);
+  const getBody = wireEditor(D, 'f-body'), getEn = wireEditor(D, 'e-body');
+  const prods = $('#f-prods', D);
+  const addP = (f = '', d = '') => { const r = document.createElement('div'); r.className = 'p';
+    r.innerHTML = `<select>${productOptions(f)}</select><input type="text" placeholder="Mô tả ngắn (tuỳ chọn)" value="${esc(d)}"><button class="btn sm del" type="button">×</button>`;
+    $('button', r).onclick = () => r.remove(); prods.append(r); };
+  (a.products || []).forEach(p => addP(p[0], p[1])); $('#f-addp', D).onclick = () => addP();
+  const title = $('#f-title', D), slug = $('#f-slug', D);
+  if (isNew) title.oninput = () => { if (!slug.dataset.touched) slug.value = ($('#f-cat', D).value === 'huong-dan' ? 'huong-dan-' : 'tin-tuc-') + slugify(title.value); };
+  slug.oninput = () => slug.dataset.touched = 1;
+  $('#f-cat', D).onchange = e => { if (isNew && !slug.dataset.touched) title.oninput(); if (!$('#f-tag', D).value || Object.values(CATS).includes($('#f-tag', D).value)) $('#f-tag', D).value = CATS[e.target.value]; };
+  $('#f-img', D).oninput = e => $('#f-img-prev', D).src = imgSrc(e.target.value);
+  $('#f-img-file', D).onchange = async e => {
+    const f = e.target.files[0]; if (!f) return;
+    const data = await new Promise(r => { const fr = new FileReader(); fr.onload = () => r(fr.result); fr.readAsDataURL(f); });
+    try { const r = await API('/api/upload', {name: (slug.value || 'anh') + '-' + f.name, data}); $('#f-img', D).value = r.path; $('#f-img-prev', D).src = imgSrc(r.path); toast('Đã tải ảnh lên'); }
+    catch (err) { toast(err.message, true); }
+  };
+  $('#e-copy', D).onclick = () => { if (!$('#e-body', D).textContent.trim() || confirm('Thay nội dung tiếng Anh bằng bản tiếng Việt?')) { $('#e-body', D).innerHTML = getBody(); $('#e-body-code', D).hidden = true; $('#e-body', D).hidden = false; } };
+  $('#f-save', D).onclick = async e => {
+    const img = $('#f-img', D).value.trim();
+    const item = {slug: slug.value.trim(), cat: $('#f-cat', D).value, tag: $('#f-tag', D).value.trim(), date: $('#f-date', D).value, title: title.value.trim(),
+      lead: $('#f-lead', D).value.trim(), image: img, thumb: img === a.image ? (a.thumb || img) : img, body: getBody(),
+      products: $$('.p', prods).map(r => [$('select', r).value, $('input', r).value.trim()]).filter(p => p[0]),
+      en: {title: $('#e-title', D).value.trim(), tag: $('#e-tag', D).value.trim(), lead: $('#e-lead', D).value.trim(), body: getEn()}};
+    if (!item.en.body.replace(/<[^>]+>/g, '').trim()) item.en.body = '';
+    const list = S.articles.filter(x => x.slug !== a.slug); list.push(item);
+    e.target.disabled = true;
+    try { await API('/api/articles', {articles: list}); closeDlg(); toast('Đã lưu bài viết'); await load(); }
+    catch (err) { toast(err.message, true); } finally { e.target.disabled = false; }
+  };
+  if (!isNew) $('#f-del', D).onclick = async () => {
+    if (!confirm('Xoá bài “' + a.title + '”? Trang của bài sẽ bị gỡ khi đăng lên web.')) return;
+    try { await API('/api/articles', {articles: S.articles.filter(x => x.slug !== a.slug)}); closeDlg(); toast('Đã xoá bài'); await load(); } catch (err) { toast(err.message, true); }
+  };
+}
+
+/* ---------- Sản phẩm ---------- */
+let PQ = '', PB = '';
+function renderProducts() {
+  const brands = [...new Set(S.products.map(p => p.brand.split(' · ')[0]))].filter(Boolean).sort();
+  const hid = DIRTY.hidden || new Set(S.products.filter(p => p.hidden).map(p => p.file));
+  const list = S.products.filter(p => (!PB || p.brand.startsWith(PB)) && (!PQ || (p.name + ' ' + p.file).toLowerCase().includes(PQ.toLowerCase())));
+  const priceCell = p => p.price.kind === 'page'
+    ? `<input class="price" type="number" min="0" step="1000" data-page="${esc(p.file)}" value="${DIRTY.prices[p.file] ?? p.price.value ?? ''}" placeholder="Liên hệ"><div class="hint">${vnd(DIRTY.prices[p.file] ?? p.price.value) || 'Liên hệ'}</div>`
+    : `<div class="skus">${p.price.skus.map(k => `<div><span>${esc(k.name)} · ${esc(k.sku)}</span><input type="number" min="0" step="1000" data-sku="${esc(k.sku)}" value="${DIRTY.skus[k.sku] ?? k.price ?? ''}"></div>`).join('') || '<span class="hint">Không có mã nào trong danh sách hàng</span>'}</div>`;
+  $('#app').innerHTML = `<h1>Sản phẩm</h1><p class="sub">Sửa giá bán lẻ, ẩn / hiện sản phẩm và mô tả. Bấm “Lưu thay đổi” rồi vào “Đăng lên web”.</p>
+    <div class="row" style="margin-bottom:12px"><input type="search" id="pq" placeholder="Tìm sản phẩm…" value="${esc(PQ)}" style="max-width:320px">
+      <select id="pb" style="max-width:220px"><option value="">Tất cả thương hiệu</option>${brands.map(b => `<option${b === PB ? ' selected' : ''}>${esc(b)}</option>`).join('')}</select>
+      <span class="hint">${list.length} sản phẩm</span></div>
+    <div style="overflow-x:auto"><table class="pt"><thead><tr><th>Sản phẩm</th><th>Giá bán lẻ (VND)</th><th>Hiển thị</th><th>Mô tả</th></tr></thead><tbody>
+    ${list.map(p => `<tr class="${hid.has(p.file) ? 'hid' : ''}"><td><b>${esc(p.name)}</b><div class="hint">${esc(p.brand)}</div>
+      <a href="/${esc(p.file.replace(/\.html$/, ''))}" target="_blank" rel="noopener" class="hint">Xem trang ↗</a></td><td>${priceCell(p)}</td>
+      <td><label class="switch"><input type="checkbox" data-show="${esc(p.file)}"${hid.has(p.file) ? '' : ' checked'}> ${hid.has(p.file) ? 'Đang ẩn' : 'Hiện'}</label></td>
+      <td><button class="btn sm" data-texts="${esc(p.file)}">Sửa mô tả</button>${p.override ? ' <span class="tag g">đã sửa</span>' : ''}</td></tr>`).join('')}
+    </tbody></table></div>
+    <div class="bar"><span class="msg" id="pmsg">Chưa có thay đổi.</span><button class="btn" id="preset" type="button">Bỏ thay đổi</button><button class="btn pri" id="psave" type="button">Lưu thay đổi</button></div>`;
+  const msg = () => { const n = Object.keys(DIRTY.prices).length + Object.keys(DIRTY.skus).length + (DIRTY.hidden ? 1 : 0); $('#pmsg').textContent = n ? 'Có thay đổi chưa lưu.' : 'Chưa có thay đổi.'; };
+  msg();
+  $('#pq').oninput = e => { PQ = e.target.value; renderProducts(); $('#pq').focus(); $('#pq').setSelectionRange(PQ.length, PQ.length); };
+  $('#pb').onchange = e => { PB = e.target.value; renderProducts(); };
+  $$('input[data-page]').forEach(i => i.oninput = () => { DIRTY.prices[i.dataset.page] = i.value; i.nextElementSibling.textContent = vnd(i.value) || 'Liên hệ'; msg(); });
+  $$('input[data-sku]').forEach(i => i.oninput = () => { DIRTY.skus[i.dataset.sku] = i.value; msg(); });
+  $$('input[data-show]').forEach(i => i.onchange = () => { DIRTY.hidden = new Set(hid); i.checked ? DIRTY.hidden.delete(i.dataset.show) : DIRTY.hidden.add(i.dataset.show); renderProducts(); });
+  $$('[data-texts]').forEach(b => b.onclick = () => editTexts(S.products.find(p => p.file === b.dataset.texts)));
+  $('#preset').onclick = () => { DIRTY = {prices: {}, skus: {}, hidden: null}; renderProducts(); };
+  $('#psave').onclick = async e => {
+    e.target.disabled = true;
+    try {
+      if (Object.keys(DIRTY.prices).length || Object.keys(DIRTY.skus).length) await API('/api/prices', {page_prices: DIRTY.prices, sku_prices: DIRTY.skus});
+      if (DIRTY.hidden) await API('/api/hidden', {pages: [...DIRTY.hidden]});
+      DIRTY = {prices: {}, skus: {}, hidden: null}; toast('Đã lưu'); await load();
+    } catch (err) { toast(err.message, true); } finally { e.target.disabled = false; }
+  };
+}
+function editTexts(p) {
+  const cur = p.override || {}, t = p.texts, en = cur.en || p.texts_en || {};
+  const v = k => cur[k] ?? t[k];
+  const featRow = (a = '', b = '', ea = '', eb = '') => `<div class="feat"><input type="text" value="${esc(a)}" placeholder="Tên tính năng"><input type="text" value="${esc(b)}" placeholder="Mô tả"><button class="btn sm del" type="button">×</button>
+    <input type="text" value="${esc(ea)}" placeholder="EN: feature name" class="en-f"><input type="text" value="${esc(eb)}" placeholder="EN: description" class="en-f"><span></span></div>`;
+  const feats = v('features') || [], efeats = en.features || [];
+  const D = openDlg('Mô tả — ' + p.name, `
+    <p class="hint" style="margin-top:0">Bỏ trống ô nào thì giữ nguyên nội dung hiện tại của ô đó. Phần tiếng Anh dùng cho trang /en/.</p>
+    <div class="grid2"><div><label>Dòng giới thiệu ngắn <small>(dưới tên sản phẩm)</small></label><input type="text" id="t-tag" value="${esc(v('tagline'))}"></div>
+      <div><label>English</label><input type="text" id="te-tag" value="${esc(en.tagline)}"></div></div>
+    <div class="grid2" style="margin-top:14px"><div><label>Tiêu đề mục Giới thiệu</label><input type="text" id="t-head" value="${esc(v('heading'))}"></div>
+      <div><label>English</label><input type="text" id="te-head" value="${esc(en.heading)}"></div></div>
+    <div class="grid2" style="margin-top:14px"><div><label>Đoạn giới thiệu <small>(mỗi đoạn cách nhau một dòng trống)</small></label><textarea id="t-intro" rows="7">${esc((v('intro') || []).join('\n\n'))}</textarea></div>
+      <div><label>English</label><textarea id="te-intro" rows="7">${esc((en.intro || []).join('\n\n'))}</textarea></div></div>
+    ${t.features_editable ? `<div style="margin-top:14px"><label>Tính năng nổi bật <small>(dòng trên: tiếng Việt · dòng dưới: English)</small></label><div id="t-feats">${feats.map((f, i) => featRow(f[0], f[1], (efeats[i] || [])[0], (efeats[i] || [])[1])).join('')}</div>
+      <button class="btn sm" type="button" id="t-addf">+ Thêm tính năng</button></div>` : '<p class="hint">Trang này có nhiều bảng công nghệ theo phiên bản nên phần tính năng chưa sửa ở đây được.</p>'}
+    <div class="bar" style="margin:20px -20px -20px;padding:14px 20px">${p.override ? '<button class="btn del" type="button" id="t-reset">Khôi phục mô tả gốc</button>' : ''}<span class="msg"></span><button class="btn pri" type="button" id="t-save">Lưu mô tả</button></div>`);
+  const wire = () => $$('.feat .del', D).forEach(b => b.onclick = () => b.closest('.feat').remove()); wire();
+  if (t.features_editable) $('#t-addf', D).onclick = () => { $('#t-feats', D).insertAdjacentHTML('beforeend', featRow()); wire(); };
+  const paras = s => s.split(/\n\s*\n/).map(x => x.replace(/\s+/g, ' ').trim()).filter(Boolean);
+  $('#t-save', D).onclick = async e => {
+    const rows = $$('.feat', D).map(r => $$('input', r).map(i => i.value.trim()));
+    const o = {tagline: $('#t-tag', D).value.trim(), heading: $('#t-head', D).value.trim(), intro: paras($('#t-intro', D).value),
+      en: {tagline: $('#te-tag', D).value.trim(), heading: $('#te-head', D).value.trim(), intro: paras($('#te-intro', D).value)}};
+    if (t.features_editable) { o.features = rows.filter(r => r[0]).map(r => [r[0], r[1]]); o.en.features = rows.filter(r => r[0]).map(r => [r[2], r[3]]); if (!o.en.features.some(f => f[0])) delete o.en.features; }
+    const same = JSON.stringify([o.tagline, o.heading, o.intro, o.features || t.features]) === JSON.stringify([t.tagline, t.heading, t.intro, t.features]);
+    const noEn = !o.en.tagline && !o.en.heading && !o.en.intro.length && !o.en.features;
+    e.target.disabled = true;
+    try { await API('/api/texts', {file: p.file, override: same && noEn && !p.override ? null : o}); closeDlg(); toast('Đã lưu mô tả'); await load(); }
+    catch (err) { toast(err.message, true); } finally { e.target.disabled = false; }
+  };
+  if (p.override) $('#t-reset', D).onclick = async () => { if (!confirm('Bỏ mọi chỉnh sửa mô tả của sản phẩm này?')) return; await API('/api/texts', {file: p.file, override: null}); closeDlg(); toast('Đã khôi phục'); await load(); };
+}
+
+/* ---------- Đăng lên web ---------- */
+function renderPublish() {
+  const g = S.git;
+  $('#app').innerHTML = `<h1>Đăng lên web</h1><p class="sub">Cập nhật lại toàn bộ trang (cả bản tiếng Anh) từ dữ liệu đã lưu, xem thử, rồi đăng lên GitHub.</p>
+    <div class="card"><p style="margin-top:0">${g.changed || g.ahead ? `<span class="tag r">Có thay đổi chưa đăng</span> ${g.changed} tệp thay đổi${g.ahead ? `, ${g.ahead} lần lưu chưa đẩy lên` : ''}.` : '<span class="tag g">Web đã khớp với GitHub</span>'}</p>
+      <div class="row"><button class="btn" id="b-build" type="button">1. Cập nhật bản xem trước</button><a class="btn" href="/trangchu" target="_blank" rel="noopener">2. Mở web xem thử ↗</a></div>
+      <div style="margin-top:16px"><label>Ghi chú cho lần đăng <small>(tuỳ chọn)</small></label><input type="text" id="b-msg" placeholder="vd. Thêm bài viết mới, đổi giá Heist 5"></div>
+      <div class="row" style="margin-top:12px"><button class="btn pri" id="b-pub" type="button">3. Đăng lên web</button><span class="hint">Đẩy lên GitHub; Hostinger tự cập nhật nếu đã nối Git.</span></div></div>
+    <div id="b-out"></div>`;
+  const run = async (btn, path, body) => {
+    $$('#app .btn').forEach(b => b.disabled = true); $('#b-out').innerHTML = '<p class="hint">Đang chạy… (khoảng 10–30 giây)</p>';
+    try { const r = await API(path, body);
+      $('#b-out').innerHTML = (r.missing.length ? `<div class="card"><p class="warn" style="margin-top:0">${r.missing.length} câu chưa có bản tiếng Anh — trang /en/ sẽ hiện tiếng Việt ở các chỗ này:</p><ul>${r.missing.slice(0, 30).map(m => `<li>${esc(m.slice(0, 160))}</li>`).join('')}</ul><p class="hint">Thêm phần tiếng Anh trong bài viết / mô tả sản phẩm tương ứng.</p></div>` : '')
+        + `<details class="card"><summary>Nhật ký</summary><pre class="log">${esc(r.log)}</pre></details>`;
+      toast(path === '/api/publish' ? 'Đã đăng lên web' : 'Đã cập nhật bản xem trước'); await load();
+    } catch (err) { $('#b-out').innerHTML = `<div class="card"><p class="warn" style="color:var(--err)">Có lỗi:</p><pre class="log">${esc(err.message)}</pre></div>`; toast('Có lỗi', true); }
+    finally { $$('#app .btn').forEach(b => b.disabled = false); }
+  };
+  $('#b-build').onclick = e => run(e.target, '/api/build', {});
+  $('#b-pub').onclick = e => run(e.target, '/api/publish', {message: $('#b-msg').value});
+}
+
+/* ---------- Dialog ---------- */
+function openDlg(title, body) { const d = $('#dlg'); $('#dlg-title').textContent = title; $('#dlg-body').innerHTML = body; if (!d.open) d.showModal(); d.scrollTop = 0; return $('#dlg-body'); }
+function closeDlg() { $('#dlg').close(); }
+$('#dlg-close').onclick = closeDlg;
+load().catch(e => $('#app').innerHTML = `<p class="empty">Không tải được dữ liệu: ${esc(e.message)}</p>`);
+</script>
+</body>
+</html>
