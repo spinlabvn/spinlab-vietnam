@@ -1,4 +1,4 @@
 {
  "note": "Cài đặt chung của website (sửa trong trang quản lý). show_prices: false = ẩn toàn bộ giá bán lẻ, hiện \"Liên hệ\".",
- "show_prices": false
+ "show_prices": true
 }
