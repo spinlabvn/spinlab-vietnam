@@ -134,6 +134,10 @@ CSS = '''/* Articles */
 .art-products h2{font-size:22px;margin:0 0 16px}
 .art-more{border-top:1px solid var(--line);padding-top:32px;margin-top:8px}
 .art-more h2{font-size:22px;margin:0 0 4px}
+.follow{list-style:none;margin:16px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:10px}
+.follow a{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px 0 14px;border-radius:999px;background:#262626;color:#fff;font-weight:700;font-size:14px;transition:transform .2s,background-color .2s,color .2s}
+.follow a:hover,.follow a:focus-visible{transform:translateY(-2px);background:var(--brand-yellow);color:var(--brand-red)}
+.follow svg{width:20px;height:20px}
 '''
 
 
@@ -184,11 +188,14 @@ for a in ARTICLES:
 
 LEADS = {'tin-tuc': 'Tin sản phẩm mới, hoạt động và sự kiện của Spinlab.',
          'huong-dan': 'Chọn size xe, chọn lốp và chăm sóc xe — hướng dẫn từ đội ngũ kỹ thuật Spinlab.'}
+SOCIAL = [('Facebook', 'https://www.facebook.com/profile.php?id=61573821032401', 'i-facebook'),
+          ('Instagram', 'https://www.instagram.com/spinlabvn/', 'i-instagram'),
+          ('YouTube', 'https://www.youtube.com/@Spinlabvn', 'i-youtube'),
+          ('TikTok', 'https://www.tiktok.com/@spinlab.vn', 'i-tiktok')]
+# same colours and hover effect as "Theo dõi Spinlab" in the footer
 FOLLOW = ('<section class="art-more"><h2>Sự kiện &amp; cộng đồng</h2><p>Lịch chạy thử xe, giải đua và các buổi gặp gỡ cộng đồng của Spinlab được thông báo trên mạng xã hội.</p>'
-          '<div class="article"><div class="cta" style="margin-top:12px"><a class="btn btn-primary" href="https://www.facebook.com/profile.php?id=61573821032401" target="_blank" rel="noopener">Facebook Spinlab</a>'
-          '<a class="btn btn-outline" href="https://www.instagram.com/spinlabvn/" target="_blank" rel="noopener">Instagram</a>'
-          '<a class="btn btn-outline" href="https://www.youtube.com/@Spinlabvn" target="_blank" rel="noopener">YouTube</a>'
-          '<a class="btn btn-outline" href="https://www.tiktok.com/@spinlab.vn" target="_blank" rel="noopener">TikTok</a></div></div></section>')
+          '<ul class="follow">' + ''.join(f'<li><a href="{u}" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#{i}"/></svg>{n}</a></li>'
+                                          for n, u, i in SOCIAL) + '</ul></section>')
 for cat, (cname, chref) in CATS.items():
     items = [a for a in ARTICLES if a['cat'] == cat]
     main = f'''<main id="main" class="pdp listing">
