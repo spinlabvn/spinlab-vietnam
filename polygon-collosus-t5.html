@@ -398,27 +398,6 @@ tbody tr.on{background:#FFF7D6}
 .faq details p{margin:0;padding:0 18px 16px;color:var(--muted);line-height:1.6}
 .related{grid-template-columns:repeat(2,minmax(0,1fr))}
 @media (min-width:1024px){.related{grid-template-columns:repeat(3,minmax(0,1fr))}}
-
-/* Bike detail extras */
-.swatches-pick{display:flex;flex-wrap:wrap;gap:8px}
-.opt-group{border:0;margin:8px 0 0;padding:0}
-.opt-group legend{padding:0;margin-bottom:10px;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.04em;display:flex;gap:10px;flex-wrap:wrap;align-items:baseline}
-.siblings{margin:16px 0 0;font-size:14px;color:var(--muted)}
-.siblings b{color:var(--text)}
-.siblings a{color:var(--brand-red);font-weight:600;text-decoration:underline;text-underline-offset:2px}
-.feat-imgs{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:20px}
-.feat-imgs img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--radius)}
-.spec-groups{display:grid;gap:24px}
-@media (min-width:1024px){.spec-groups{grid-template-columns:1fr 1fr;gap:24px 40px}}
-.spec-groups h3{margin:0 0 4px;font-size:15px;text-transform:uppercase;letter-spacing:.04em;color:var(--brand-red)}
-.spec-groups .spec-list div{grid-template-columns:150px 1fr}
-.spec-groups dd{font-weight:500;font-size:14px}
-.geo td,.geo th{white-space:nowrap;text-align:center}
-.geo tbody th{text-align:left;font-weight:500}
-.geo .col-on{background:#FFF7D6}
-.geo-note{font-size:13px;color:var(--muted);margin:10px 0 0}
-.geo-img{margin:20px 0 0;max-width:720px}
-.geo-img img{width:100%;mix-blend-mode:multiply}
 /* Header in brand yellow (announcement bar removed) */
 .header{background:var(--brand-yellow);border-bottom-color:rgba(0,0,0,.08)}
 .header .nav{background:#fff;border-top-color:rgba(0,0,0,.08)}
@@ -489,18 +468,39 @@ body.cmp-open .zalo-fab{bottom:96px}
 .msg-label{display:none;font-weight:700;font-size:14px;color:#7a2fd6;padding-right:18px}
 @media (min-width:1024px){.msg-fab{right:24px;bottom:92px}.msg-label{display:block}}
 body.cmp-open .msg-fab{bottom:164px}
-/* Brand logos */
-.brand-logo{display:block;height:auto;width:min(calc(var(--lh,30px) * var(--wf,5)),calc(100cqi * var(--wf,5) / 6.5))}
-.brand-tile,.brand-menu a,.hub-logo .hi{container-type:inline-size}
-.brand-tile{--lh:30px}
-.brand-menu{--lh:20px}
-.hub-logo{--lh:40px}
+
+/* Bike detail extras */
+.swatches-pick{display:flex;flex-wrap:wrap;gap:8px}
+.opt-group{border:0;margin:8px 0 0;padding:0}
+.opt-group legend{padding:0;margin-bottom:10px;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.04em;display:flex;gap:10px;flex-wrap:wrap;align-items:baseline}
+.siblings{margin:16px 0 0;font-size:14px;color:var(--muted)}
+.siblings b{color:var(--text)}
+.siblings a{color:var(--brand-red);font-weight:600;text-decoration:underline;text-underline-offset:2px}
+.feat-imgs{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:20px}
+.feat-imgs img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--radius)}
+.spec-groups{display:grid;gap:24px}
+@media (min-width:1024px){.spec-groups{grid-template-columns:1fr 1fr;gap:24px 40px}}
+.spec-groups h3{margin:0 0 4px;font-size:15px;text-transform:uppercase;letter-spacing:.04em;color:var(--brand-red)}
+.spec-groups .spec-list div{grid-template-columns:150px 1fr}
+.spec-groups dd{font-weight:500;font-size:14px}
+.geo td,.geo th{white-space:nowrap;text-align:center}
+.geo tbody th{text-align:left;font-weight:500}
+.geo .col-on{background:#FFF7D6}
+.geo-note{font-size:13px;color:var(--muted);margin:10px 0 0}
+.geo-img{margin:20px 0 0;max-width:720px}
+.geo-img img{width:100%;mix-blend-mode:multiply}
 /* Card hover image */
 .p-img>img{transition:opacity .3s}
 .p-img>img.alt{position:absolute;inset:0;width:100%;height:100%;max-width:none;max-height:none;padding:12px;box-sizing:border-box;opacity:0;pointer-events:none}
 .p-img.tire>img.alt{padding:12px 14%}
 .p-img.part>img.alt{padding:12px 8%}
 @media (hover:hover){.p-card:hover .p-img>img.alt{opacity:1}.p-card:hover .p-img:has(>img.alt)>img:not(.alt){opacity:0}}
+/* Brand logos */
+.brand-logo{display:block;height:auto;width:min(calc(var(--lh,30px) * var(--wf,5)),calc(100cqi * var(--wf,5) / 6.5))}
+.brand-tile,.brand-menu a,.hub-logo .hi{container-type:inline-size}
+.brand-tile{--lh:30px}
+.brand-menu{--lh:20px}
+.hub-logo{--lh:40px}
 /* Language switch */
 .lang a{padding:4px 2px;color:var(--muted)}
 .lang a[aria-current]{color:var(--text);font-weight:800}
@@ -640,7 +640,7 @@ body.cmp-open .msg-fab{bottom:164px}
   <div class="container">
     <nav class="crumbs" aria-label="Đường dẫn"><ol>
       <li><a href="/trangchu">Trang chủ</a></li><li><a href="/xe-dap">Xe đạp</a></li>
-      <li><a href="/xe-mtb">Trail-AM</a></li><li aria-current="page">COLLOSUS T5</li></ol></nav>
+      <li><a href="/xe-mtb#trail">Trail-AM</a></li><li aria-current="page">COLLOSUS T5</li></ol></nav>
 
     <div class="pdp-top">
       <div class="gallery">
@@ -689,7 +689,7 @@ body.cmp-open .msg-fab{bottom:164px}
 
     <section class="pdp-sec" id="hoi-dap"><h2>Hỏi đáp</h2><div class="faq"><details><summary>Chọn size xe như thế nào?</summary><p>Hãy tham khảo hàng “Chiều cao người lái” trong bảng Kích thước khung. Nếu chiều cao của bạn nằm giữa hai size, liên hệ Spinlab để được tư vấn theo tư thế và nhu cầu đạp.</p></details><details><summary>Xe được bảo hành thế nào?</summary><p>Xe chính hãng Polygon phân phối bởi Spinlab được bảo hành theo chính sách của Polygon. Liên hệ hotline để biết chi tiết điều kiện và thời hạn.</p></details><details><summary>Có thể nâng cấp linh kiện không?</summary><p>Có. Liên hệ Spinlab để được tư vấn nâng cấp phù hợp, ví dụ lốp Vittoria hay dây cuốn ghi đông Emume.</p></details></div></section>
 
-    <section class="pdp-sec"><div class="sec-head"><h2>Xe đạp tương tự</h2><a class="see-all" href="/xe-mtb">Xem tất cả</a></div>
+    <section class="pdp-sec"><div class="sec-head"><h2>Xe đạp tương tự</h2><a class="see-all" href="/xe-mtb#trail">Xem tất cả</a></div>
       <div class="grid related"><article class="p-card"><div class="p-img"><img src="https://media.polygonbikes.com/wp-content/uploads/2025/10/19211528/COLLOSUS-T9-DI2-P.png" alt="Polygon COLLOSUS T9 Di2 CARBON" loading="lazy"><img class="alt" src="https://media.polygonbikes.com/wp-content/uploads/2025/10/19211610/COLLOSUS-T9-DI2-RF.png" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Polygon · Trail-AM</span><h3 class="p-name"><a class="stretch" href="/polygon-collosus-t9">COLLOSUS T9 Di2 CARBON</a></h3><p class="p-desc">Xe trail thiết kế hiện đại</p><span class="p-price">Liên hệ</span></div></article><article class="p-card"><div class="p-img"><img src="https://media.polygonbikes.com/wp-content/uploads/2025/10/20102142/COLLOSUS-T8-P.png" alt="Polygon COLLOSUS T8 CARBON" loading="lazy"><img class="alt" src="https://media.polygonbikes.com/wp-content/uploads/2025/10/20104220/COLLOSUS-T8-RF-I.png" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Polygon · Trail-AM</span><h3 class="p-name"><a class="stretch" href="/polygon-collosus-t8-carbon">COLLOSUS T8 CARBON</a></h3><p class="p-desc">Xe trail thiết kế hiện đại</p><span class="p-price">Liên hệ</span></div></article><article class="p-card"><div class="p-img"><img src="https://media.polygonbikes.com/wp-content/uploads/2025/10/23083741/MY26-COLLOSUS-T6-METALLIC-P-1.png" alt="Polygon COLLOSUS T6 CARBON" loading="lazy"><img class="alt" src="https://media.polygonbikes.com/wp-content/uploads/2025/10/23083658/MY26-COLLOSUS-T6-METALLIC-RF-1.png" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Polygon · Trail-AM</span><h3 class="p-name"><a class="stretch" href="/polygon-collosus-t6-carbon">COLLOSUS T6 CARBON</a></h3><p class="p-desc">Xe trail thiết kế hiện đại</p><span class="p-price">Liên hệ</span></div></article></div></section>
   </div>
 </main>
@@ -768,14 +768,14 @@ body.cmp-open .msg-fab{bottom:164px}
 
 // Bike gallery, colour & size selector
 (() => {
-  const D = {"colors": {"blue-us": {"label": "Blue", "images": ["https://media.polygonbikes.com/wp-content/uploads/2026/04/15172359/MY26-COLLOSUS-T5-BLUE-P.png", "https://media.polygonbikes.com/wp-content/uploads/2026/04/15172500/MY26-COLLOSUS-T5-BLUE-RR.png", "https://media.polygonbikes.com/wp-content/uploads/2026/04/15172429/MY26-COLLOSUS-T5-BLUE-RF.png"]}, "green-us": {"label": "Green", "images": ["https://media.polygonbikes.com/wp-content/uploads/2026/04/15173408/MY26-COLLOSUS-T5-GREEN-P.png", "https://media.polygonbikes.com/wp-content/uploads/2026/04/15172632/MY26-COLLOSUS-T5-GREEN-RR.png", "https://media.polygonbikes.com/wp-content/uploads/2026/04/15172601/MY26-COLLOSUS-T5-GREEN-RF.png"]}}, "skus": {"blue-us|s-us": "503685001", "blue-us|m-us": "503685002", "blue-us|l-us": "503685003", "blue-us|xl-us": "503685004", "green-us|s-us": "503684001", "green-us|m-us": "503684002", "green-us|l-us": "503684003", "green-us|xl-us": "503684004"}, "name": "COLLOSUS T5"};
+  const D = {"colors": {"blue-us": {"label": "Blue", "images": ["https://media.polygonbikes.com/wp-content/uploads/2026/04/15172359/MY26-COLLOSUS-T5-BLUE-P.png", "https://media.polygonbikes.com/wp-content/uploads/2026/04/15172500/MY26-COLLOSUS-T5-BLUE-RR.png", "https://media.polygonbikes.com/wp-content/uploads/2026/04/15172429/MY26-COLLOSUS-T5-BLUE-RF.png"]}, "green-us": {"label": "Green", "images": ["https://media.polygonbikes.com/wp-content/uploads/2026/04/15173408/MY26-COLLOSUS-T5-GREEN-P.png", "https://media.polygonbikes.com/wp-content/uploads/2026/04/15172632/MY26-COLLOSUS-T5-GREEN-RR.png", "https://media.polygonbikes.com/wp-content/uploads/2026/04/15172601/MY26-COLLOSUS-T5-GREEN-RF.png"]}}, "skus": {"blue-us|s-us": "503685001", "blue-us|m-us": "503685002", "blue-us|l-us": "503685003", "blue-us|xl-us": "503685004", "green-us|s-us": "503684001", "green-us|m-us": "503684002", "green-us|l-us": "503684003", "green-us|xl-us": "503684004"}, "name": "COLLOSUS T5", "brand": "Polygon"};
   const main=document.getElementById('g-main'), list=document.querySelector('.g-thumbs');
   const bindThumbs=()=>{ const t=[...list.querySelectorAll('button')]; t.forEach(b=>b.addEventListener('click',()=>{ main.src=b.dataset.src; main.alt=b.dataset.alt; t.forEach(x=>x.setAttribute('aria-pressed',x===b)); })); };
   const val=n=>(document.querySelector(`input[name=${n}]:checked`)||{}).value||'';
   const updSku=()=>{ const el=document.getElementById('sz-sku'); if(el) el.textContent=D.skus[val('color')+'|'+val('size')]||'—'; };
   document.querySelectorAll('input[name=color]').forEach(r=>r.addEventListener('change',()=>{
     const c=D.colors[r.value]; document.getElementById('color-name').textContent=c.label;
-    if(c.images.length){ main.src=c.images[0]; list.innerHTML=c.images.map((u,i)=>`<li><button aria-pressed="${i===0}" data-src="${u}" data-alt="Polygon ${D.name} – ${c.label} – ảnh ${i+1}"><img src="${u}" alt="Ảnh ${i+1}"></button></li>`).join(''); bindThumbs(); }
+    if(c.images.length){ main.src=c.images[0]; list.innerHTML=c.images.map((u,i)=>`<li><button aria-pressed="${i===0}" data-src="${u}" data-alt="${D.brand} ${D.name} – ${c.label} – ảnh ${i+1}"><img src="${u}" alt="Ảnh ${i+1}"></button></li>`).join(''); bindThumbs(); }
     updSku(); }));
   const geo=document.querySelector('table.geo');
   const hl=()=>{ if(!geo) return; const r=document.querySelector('input[name=size]:checked'); if(!r) return;

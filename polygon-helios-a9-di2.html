@@ -404,27 +404,6 @@ tbody tr.on{background:#FFF7D6}
 .header .search input{background:#fff;border-color:transparent}
 .header .search input:focus{border-color:var(--text)}
 .header .tool:hover,.header .lang:hover,.header .menu-btn:hover{background:rgba(0,0,0,.06)}
-
-/* Bike detail extras */
-.swatches-pick{display:flex;flex-wrap:wrap;gap:8px}
-.opt-group{border:0;margin:8px 0 0;padding:0}
-.opt-group legend{padding:0;margin-bottom:10px;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.04em;display:flex;gap:10px;flex-wrap:wrap;align-items:baseline}
-.siblings{margin:16px 0 0;font-size:14px;color:var(--muted)}
-.siblings b{color:var(--text)}
-.siblings a{color:var(--brand-red);font-weight:600;text-decoration:underline;text-underline-offset:2px}
-.feat-imgs{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:20px}
-.feat-imgs img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--radius)}
-.spec-groups{display:grid;gap:24px}
-@media (min-width:1024px){.spec-groups{grid-template-columns:1fr 1fr;gap:24px 40px}}
-.spec-groups h3{margin:0 0 4px;font-size:15px;text-transform:uppercase;letter-spacing:.04em;color:var(--brand-red)}
-.spec-groups .spec-list div{grid-template-columns:150px 1fr}
-.spec-groups dd{font-weight:500;font-size:14px}
-.geo td,.geo th{white-space:nowrap;text-align:center}
-.geo tbody th{text-align:left;font-weight:500}
-.geo .col-on{background:#FFF7D6}
-.geo-note{font-size:13px;color:var(--muted);margin:10px 0 0}
-.geo-img{margin:20px 0 0;max-width:720px}
-.geo-img img{width:100%;mix-blend-mode:multiply}
 /* Brand logos dropdown */
 .nav .sub-brands{min-width:400px;padding:12px}
 .nav .sub .brand-menu{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
@@ -489,18 +468,39 @@ body.cmp-open .zalo-fab{bottom:96px}
 .msg-label{display:none;font-weight:700;font-size:14px;color:#7a2fd6;padding-right:18px}
 @media (min-width:1024px){.msg-fab{right:24px;bottom:92px}.msg-label{display:block}}
 body.cmp-open .msg-fab{bottom:164px}
-/* Brand logos */
-.brand-logo{display:block;height:auto;width:min(calc(var(--lh,30px) * var(--wf,5)),calc(100cqi * var(--wf,5) / 6.5))}
-.brand-tile,.brand-menu a,.hub-logo .hi{container-type:inline-size}
-.brand-tile{--lh:30px}
-.brand-menu{--lh:20px}
-.hub-logo{--lh:40px}
+
+/* Bike detail extras */
+.swatches-pick{display:flex;flex-wrap:wrap;gap:8px}
+.opt-group{border:0;margin:8px 0 0;padding:0}
+.opt-group legend{padding:0;margin-bottom:10px;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.04em;display:flex;gap:10px;flex-wrap:wrap;align-items:baseline}
+.siblings{margin:16px 0 0;font-size:14px;color:var(--muted)}
+.siblings b{color:var(--text)}
+.siblings a{color:var(--brand-red);font-weight:600;text-decoration:underline;text-underline-offset:2px}
+.feat-imgs{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:20px}
+.feat-imgs img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--radius)}
+.spec-groups{display:grid;gap:24px}
+@media (min-width:1024px){.spec-groups{grid-template-columns:1fr 1fr;gap:24px 40px}}
+.spec-groups h3{margin:0 0 4px;font-size:15px;text-transform:uppercase;letter-spacing:.04em;color:var(--brand-red)}
+.spec-groups .spec-list div{grid-template-columns:150px 1fr}
+.spec-groups dd{font-weight:500;font-size:14px}
+.geo td,.geo th{white-space:nowrap;text-align:center}
+.geo tbody th{text-align:left;font-weight:500}
+.geo .col-on{background:#FFF7D6}
+.geo-note{font-size:13px;color:var(--muted);margin:10px 0 0}
+.geo-img{margin:20px 0 0;max-width:720px}
+.geo-img img{width:100%;mix-blend-mode:multiply}
 /* Card hover image */
 .p-img>img{transition:opacity .3s}
 .p-img>img.alt{position:absolute;inset:0;width:100%;height:100%;max-width:none;max-height:none;padding:12px;box-sizing:border-box;opacity:0;pointer-events:none}
 .p-img.tire>img.alt{padding:12px 14%}
 .p-img.part>img.alt{padding:12px 8%}
 @media (hover:hover){.p-card:hover .p-img>img.alt{opacity:1}.p-card:hover .p-img:has(>img.alt)>img:not(.alt){opacity:0}}
+/* Brand logos */
+.brand-logo{display:block;height:auto;width:min(calc(var(--lh,30px) * var(--wf,5)),calc(100cqi * var(--wf,5) / 6.5))}
+.brand-tile,.brand-menu a,.hub-logo .hi{container-type:inline-size}
+.brand-tile{--lh:30px}
+.brand-menu{--lh:20px}
+.hub-logo{--lh:40px}
 /* Language switch */
 .lang a{padding:4px 2px;color:var(--muted)}
 .lang a[aria-current]{color:var(--text);font-weight:800}
@@ -768,14 +768,14 @@ body.cmp-open .msg-fab{bottom:164px}
 
 // Bike gallery, colour & size selector
 (() => {
-  const D = {"colors": {"candy-us": {"label": "Candy", "images": ["https://media.polygonbikes.com/wp-content/uploads/2025/10/02150312/MY25-PJ-HELIOS-A-DURA-ACE-WBK-P-1.png", "https://media.polygonbikes.com/wp-content/uploads/2025/10/02150354/MY25-PJ-HELIOS-A-DURA-ACE-WBK-RF.png", "https://media.polygonbikes.com/wp-content/uploads/2025/10/02150228/MY25-PJ-HELIOS-A-DURA-ACE-WBK-LF.png"]}, "velvet-ember-us": {"label": "Velvet Ember", "images": ["https://media.polygonbikes.com/wp-content/uploads/2025/10/02150006/MY25-PJ-HELIOS-A-DURA-ACE-BRP-P-1.png", "https://media.polygonbikes.com/wp-content/uploads/2025/10/02150057/MY25-PJ-HELIOS-A-DURA-ACE-BRP-RF.png", "https://media.polygonbikes.com/wp-content/uploads/2025/10/02145920/MY25-PJ-HELIOS-A-DURA-ACE-BRP-LF.png"]}}, "skus": {"candy-us|xxxs-us": "503371008", "candy-us|xxs-us": "503371009", "candy-us|xs-us": "503371010", "candy-us|s-us": "503371011", "candy-us|m-us": "503371012", "candy-us|l-us": "503371013", "candy-us|xl-us": "503371014", "velvet-ember-us|xxxs-us": "503371001", "velvet-ember-us|xxs-us": "503371002", "velvet-ember-us|xs-us": "503371003", "velvet-ember-us|s-us": "503371004", "velvet-ember-us|m-us": "503371005", "velvet-ember-us|l-us": "503371006", "velvet-ember-us|xl-us": "503371007"}, "name": "HELIOS A9 Di2"};
+  const D = {"colors": {"candy-us": {"label": "Candy", "images": ["https://media.polygonbikes.com/wp-content/uploads/2025/10/02150312/MY25-PJ-HELIOS-A-DURA-ACE-WBK-P-1.png", "https://media.polygonbikes.com/wp-content/uploads/2025/10/02150354/MY25-PJ-HELIOS-A-DURA-ACE-WBK-RF.png", "https://media.polygonbikes.com/wp-content/uploads/2025/10/02150228/MY25-PJ-HELIOS-A-DURA-ACE-WBK-LF.png"]}, "velvet-ember-us": {"label": "Velvet Ember", "images": ["https://media.polygonbikes.com/wp-content/uploads/2025/10/02150006/MY25-PJ-HELIOS-A-DURA-ACE-BRP-P-1.png", "https://media.polygonbikes.com/wp-content/uploads/2025/10/02150057/MY25-PJ-HELIOS-A-DURA-ACE-BRP-RF.png", "https://media.polygonbikes.com/wp-content/uploads/2025/10/02145920/MY25-PJ-HELIOS-A-DURA-ACE-BRP-LF.png"]}}, "skus": {"candy-us|xxxs-us": "503371008", "candy-us|xxs-us": "503371009", "candy-us|xs-us": "503371010", "candy-us|s-us": "503371011", "candy-us|m-us": "503371012", "candy-us|l-us": "503371013", "candy-us|xl-us": "503371014", "velvet-ember-us|xxxs-us": "503371001", "velvet-ember-us|xxs-us": "503371002", "velvet-ember-us|xs-us": "503371003", "velvet-ember-us|s-us": "503371004", "velvet-ember-us|m-us": "503371005", "velvet-ember-us|l-us": "503371006", "velvet-ember-us|xl-us": "503371007"}, "name": "HELIOS A9 Di2", "brand": "Polygon"};
   const main=document.getElementById('g-main'), list=document.querySelector('.g-thumbs');
   const bindThumbs=()=>{ const t=[...list.querySelectorAll('button')]; t.forEach(b=>b.addEventListener('click',()=>{ main.src=b.dataset.src; main.alt=b.dataset.alt; t.forEach(x=>x.setAttribute('aria-pressed',x===b)); })); };
   const val=n=>(document.querySelector(`input[name=${n}]:checked`)||{}).value||'';
   const updSku=()=>{ const el=document.getElementById('sz-sku'); if(el) el.textContent=D.skus[val('color')+'|'+val('size')]||'—'; };
   document.querySelectorAll('input[name=color]').forEach(r=>r.addEventListener('change',()=>{
     const c=D.colors[r.value]; document.getElementById('color-name').textContent=c.label;
-    if(c.images.length){ main.src=c.images[0]; list.innerHTML=c.images.map((u,i)=>`<li><button aria-pressed="${i===0}" data-src="${u}" data-alt="Polygon ${D.name} – ${c.label} – ảnh ${i+1}"><img src="${u}" alt="Ảnh ${i+1}"></button></li>`).join(''); bindThumbs(); }
+    if(c.images.length){ main.src=c.images[0]; list.innerHTML=c.images.map((u,i)=>`<li><button aria-pressed="${i===0}" data-src="${u}" data-alt="${D.brand} ${D.name} – ${c.label} – ảnh ${i+1}"><img src="${u}" alt="Ảnh ${i+1}"></button></li>`).join(''); bindThumbs(); }
     updSku(); }));
   const geo=document.querySelector('table.geo');
   const hl=()=>{ if(!geo) return; const r=document.querySelector('input[name=size]:checked'); if(!r) return;

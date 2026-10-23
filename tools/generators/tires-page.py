@@ -98,8 +98,12 @@ js = '''// Tire listing: filter by type, synced with URL hash (#road, #mtb, #gra
     let n=0; cards.forEach(c=>{ const on=k==='all'||c.dataset.type===k; c.hidden=!on; n+=on; });
     document.getElementById('tire-empty').hidden=n>0; document.getElementById('list-intro').textContent=intro[k]; };
   tabs.forEach(t=>t.addEventListener('click',e=>{ e.preventDefault(); const k=t.dataset.type; show(k); try{ history.replaceState(null,'',k==='all'?location.pathname+location.search:'#'+k); }catch(_){} }));
-  window.addEventListener('hashchange',()=>show(location.hash.slice(1)));
-  show(location.hash.slice(1));
+  // menu / breadcrumb links (#road, #mtb...): open that type and scroll to the type bar, below the sticky header
+  const jump=(smooth=true)=>{ const bar=document.querySelector('.list-tabs'), head=document.querySelector('.header');
+    document.querySelectorAll('.nav-top[aria-expanded="true"]').forEach(b=>b.setAttribute('aria-expanded','false'));
+    window.scrollTo({top:bar.getBoundingClientRect().top+scrollY-(head?head.getBoundingClientRect().height:0)-12, behavior:smooth?'smooth':'auto'}); };
+  window.addEventListener('hashchange',()=>{ show(location.hash.slice(1)); jump(); });
+  show(location.hash.slice(1)); if(intro[location.hash.slice(1)]) requestAnimationFrame(()=>jump(false));
 })();
 ''' % repr(INTRO).replace("'", '"')
 

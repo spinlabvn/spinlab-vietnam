@@ -2,10 +2,10 @@
 # cat: breadcrumb/category key used for menus & related bikes.
 CATS = {
     'road': ('Xe đường trường (Road)', 'xe-road.html'),
-    'dh': ('Downhill', 'xe-mtb.html'),
-    'enduro': ('Enduro', 'xe-mtb.html'),
-    'trail': ('Trail-AM', 'xe-mtb.html'),
-    'xc': ('Cross Country', 'xe-mtb.html'),
+    'dh': ('Downhill', 'xe-mtb.html#dh'),
+    'enduro': ('Enduro', 'xe-mtb.html#enduro'),
+    'trail': ('Trail-AM', 'xe-mtb.html#trail'),
+    'xc': ('Cross Country', 'xe-mtb.html#xc'),
     'dj': ('Dirt Jump', 'xe-mtb.html#dj'),
     'trial': ('Trial', 'xe-trial.html'),
     'gravel': ('Gravel', 'xe-gravel.html'),
