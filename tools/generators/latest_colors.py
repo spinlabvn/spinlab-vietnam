@@ -1,6 +1,6 @@
 """Keep only the newest colour version of each bike (Spinlab's request, 2026-10-21).
 Chosen by model year of the photos, SKU series and the "NEW COLOR" rows of Polygon's price list.
-Cascade 3 and 5 keep both colours (Spinlab's request, 2026-10-23). Bikes whose colours are all the same generation (Helios, Collosus T, Siskiu T...) keep every colour.
+Cascade 3, 4 and 5 keep both colours (Spinlab's request, 2026-10-23). Bikes whose colours are all the same generation (Helios, Collosus T, Siskiu T...) keep every colour.
 cascade.py and city.py apply it themselves; run it after extract.py or any other merge into bikes.json:
     python3 latest_colors.py
 """
@@ -12,7 +12,6 @@ KEEP = {
     'siskiu-d7': ('blue-white-us', 'BLUE - WHITE'),
     'siskiu-d6': ('green-brown', 'GREEN - BROWN'),
     'siskiu-d5': ('cream-orange-us', 'CREAM - ORANGE'),
-    'cascade-4': ('green-latte-us', 'GREEN LATTE'),
 }
 
 

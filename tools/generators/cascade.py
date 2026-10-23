@@ -65,9 +65,9 @@ BIKES = [
                         '1085 1108 1129 1151 1142 1142 1161 1182', '380 400 420 440 420 420 440 453', '596 601 606 610 624 624 629 638',
                         '684 703 733 756 737 737 759 780'])),
     dict(BASE, slug='cascade-4', source='https://www.polygonbikes.com/us/cascade-4-2/', name='CASCADE 4',
-         colors=[{'id': 'green-latte-us', 'label': 'Green Latte', 'images': [M + '2025/10/24131851/MY25-CASCADE-FOUR-G2-P.png', M + '2025/07/30093430/MY26-CASCADE-FOUR-DECAL-RIMS-RR.png',
-                                                                           M + '2025/07/30093219/MY26-CASCADE-FOUR-DECAL-RIMS-RF.png', M + '2025/07/30093137/MY26-CASCADE-FOUR-DECAL-RIMS-LF.png']},
-                 {'id': 'charcoal', 'label': 'Charcoal', 'images': [M + '2025/07/30091822/MY26-CASCADE-FOUR-DECAL-RIMS-P.png', M + '2025/07/30093219/MY26-CASCADE-FOUR-DECAL-RIMS-RF.png']}],
+         colors=[{'id': 'green-latte-us', 'label': 'Green Latte', 'images': [M + '2025/10/24131851/MY25-CASCADE-FOUR-G2-P.png']},  # Polygon's other angles show the charcoal bike
+                 {'id': 'charcoal', 'label': 'Charcoal', 'images': [M + '2025/07/30091822/MY26-CASCADE-FOUR-DECAL-RIMS-P.png', M + '2025/07/30093430/MY26-CASCADE-FOUR-DECAL-RIMS-RR.png',
+                                                                  M + '2025/07/30093219/MY26-CASCADE-FOUR-DECAL-RIMS-RF.png', M + '2025/07/30093137/MY26-CASCADE-FOUR-DECAL-RIMS-LF.png']}],
          sizes=SIZES2,
          skus=dict(**{f'green-latte-us|{i}': s for (i, _), s in zip(WS, ['503670001', '503670002-en', '503670003-en', '503670004-en', '503671001', '503671002', '503671003', '503671004'])},
                    **{f'charcoal|{i}': s for (i, _), s in zip(WS, ['503441001', '503441002', '503441003', '503441004', '503442001', '503442002', '503442003', '503442004'])}),

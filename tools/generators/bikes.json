@@ -22601,7 +22601,14 @@
     "id": "green-latte-us",
     "label": "Green Latte",
     "images": [
-     "https://media.polygonbikes.com/wp-content/uploads/2025/10/24131851/MY25-CASCADE-FOUR-G2-P.png",
+     "https://media.polygonbikes.com/wp-content/uploads/2025/10/24131851/MY25-CASCADE-FOUR-G2-P.png"
+    ]
+   },
+   {
+    "id": "charcoal",
+    "label": "Charcoal",
+    "images": [
+     "https://media.polygonbikes.com/wp-content/uploads/2025/07/30091822/MY26-CASCADE-FOUR-DECAL-RIMS-P.png",
      "https://media.polygonbikes.com/wp-content/uploads/2025/07/30093430/MY26-CASCADE-FOUR-DECAL-RIMS-RR.png",
      "https://media.polygonbikes.com/wp-content/uploads/2025/07/30093219/MY26-CASCADE-FOUR-DECAL-RIMS-RF.png",
      "https://media.polygonbikes.com/wp-content/uploads/2025/07/30093137/MY26-CASCADE-FOUR-DECAL-RIMS-LF.png"
@@ -22635,7 +22642,12 @@
    "green-latte-us|29-small-us": "503671001",
    "green-latte-us|29-medium-us": "503671002",
    "green-latte-us|29-large-us": "503671003",
-   "green-latte-us|29-xtra-large-us": "503671004"
+   "green-latte-us|29-xtra-large-us": "503671004",
+   "charcoal|27-5-xtra-small-us": "503441001",
+   "charcoal|29-small-us": "503442001",
+   "charcoal|29-medium-us": "503442002",
+   "charcoal|29-large-us": "503442003",
+   "charcoal|29-xtra-large-us": "503442004"
   },
   "specs": [
    {
@@ -22655,7 +22667,11 @@
      ],
      [
       "Frame Color",
-      "GREEN LATTE"
+      "GREEN LATTE / CHARCOAL CHROME"
+     ],
+     [
+      "Decal Color",
+      "WHITE - BLACK"
      ]
     ]
    },
