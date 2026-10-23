@@ -135,8 +135,8 @@ CSS = '''/* Articles */
 .art-more{border-top:1px solid var(--line);padding-top:32px;margin-top:8px}
 .art-more h2{font-size:22px;margin:0 0 4px}
 .follow{list-style:none;margin:16px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:10px}
-.follow a{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px 0 14px;border-radius:999px;background:#262626;color:#fff;font-weight:700;font-size:14px;transition:transform .2s,background-color .2s,color .2s}
-.follow a:hover,.follow a:focus-visible{transform:translateY(-2px);background:var(--brand-yellow);color:var(--brand-red)}
+.follow a{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px 0 14px;border-radius:999px;border:1.5px solid var(--text);background:#fff;color:var(--text);font-weight:700;font-size:14px;transition:transform .2s,background-color .2s,border-color .2s,color .2s}
+.follow a:hover,.follow a:focus-visible{transform:translateY(-2px);background:var(--brand-yellow);border-color:var(--brand-yellow);color:var(--brand-red)}
 .follow svg{width:20px;height:20px}
 '''
 
@@ -192,7 +192,7 @@ SOCIAL = [('Facebook', 'https://www.facebook.com/profile.php?id=61573821032401',
           ('Instagram', 'https://www.instagram.com/spinlabvn/', 'i-instagram'),
           ('YouTube', 'https://www.youtube.com/@Spinlabvn', 'i-youtube'),
           ('TikTok', 'https://www.tiktok.com/@spinlab.vn', 'i-tiktok')]
-# same colours and hover effect as "Theo dõi Spinlab" in the footer
+# white buttons; hover like "Theo dõi Spinlab" in the footer (yellow, red text, lift)
 FOLLOW = ('<section class="art-more"><h2>Sự kiện &amp; cộng đồng</h2><p>Lịch chạy thử xe, giải đua và các buổi gặp gỡ cộng đồng của Spinlab được thông báo trên mạng xã hội.</p>'
           '<ul class="follow">' + ''.join(f'<li><a href="{u}" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#{i}"/></svg>{n}</a></li>'
                                           for n, u, i in SOCIAL) + '</ul></section>')
