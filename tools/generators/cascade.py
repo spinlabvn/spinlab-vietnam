@@ -1,5 +1,5 @@
 """Polygon Cascade 3 / 4 / 5 (Leisure MTB hardtail), read from polygonbikes.com/us on 2026-10-21:
-Cascade 4 and 5 are MY26; Cascade 3 is the newest Cascade 3 Polygon lists (MY22 photos, 27.5" S/M).
+Cascade 3 (polygonbikes.com/cascade-3, re-read 2026-10-23), 4 and 5 are MY26. Spinlab sells size XS with 27.5" wheels, S-XL with 29".
 Merges the bikes into bikes.json and (re)builds the Cascade group in the Cross Country tab of xe-mtb.html.
     python3 cascade.py ../..
 """
@@ -17,7 +17,12 @@ BASE = dict(headline='CASCADE: Lightweight & Durable Entry-Level Hardtail', bike
             features=[{'title': 'ALX frame', 'text': "Lightweight hydroformed ALX frame, manufactured in-house at Polygon's factory."}])
 WS = [('27-5-xtra-small-us', 'XS (27.5″)'), ('27-5-small-us', 'S (27.5″)'), ('27-5-medium-us', 'M (27.5″)'), ('27-5-large-us', 'L (27.5″)'),
       ('29-small-us', 'S (29″)'), ('29-medium-us', 'M (29″)'), ('29-large-us', 'L (29″)'), ('29-xtra-large-us', 'XL (29″)')]
-SIZES2 = [{'id': i, 'label': l} for i, l in WS]
+# Spinlab sells every Cascade as XS with 27.5" wheels and S / M / L / XL with 29" wheels
+SALE = ['XS (27.5″)', 'S (29″)', 'M (29″)', 'L (29″)', 'XL (29″)']
+SIZES2 = [{'id': i, 'label': l} for i, l in WS if l in SALE]
+SIZE_ROW = 'XS (27.5") / S, M, L, XL (29")'
+WHEEL_ROW = '27.5" (XS) / 29" (S–XL)'
+TIRE_ROW = '27.5" (XS) / 29" (S–XL)'
 COCKPIT45 = [['Saddle', 'BLACK STEEL ø7mm'], None, ['Handlebar', 'POLYGON SPORT W: 700MM, B: 31.8MM, R/D: 20MM'],
              ['Handlestem', 'POLYGON SPORT E: 40MM, B: 31.8MM, R/D: 7'], ['Headset', 'ZERO STACK W/ SEALED BEARING, ZS 44/28.6 | ZS 44/30']]
 BRAKE45 = [['Brake Lever', 'SHIMANO MT200'], ['Brake Caliper', 'SHIMANO MT200 HYDRAULIC DISC'], ['Rotor', 'SHIMANO SM-RT10, 160mm']]
@@ -29,29 +34,36 @@ def geo(sizes, image, rows):
     return dict(sizes=sizes, image=image, rows=[{'label': l, 'unit': 'cm' if l == 'Height' else '', 'values': v.split()} for l, v in zip(labels, rows)])
 
 
+def geo8(rows):
+    """Geometry given for all 8 Polygon sizes (WS order), keeping only the sizes Spinlab sells."""
+    keep = [k for k, (_, l) in enumerate(WS) if l in SALE]
+    return geo(SALE, GEO_IMG, [' '.join(v.split()[k] for k in keep) for v in rows])
+
+
 GEO_IMG = M + '2025/07/31151317/GEOMETRY-DRAWING-CASCADE-FA-01-1024x724.png'
 BIKES = [
-    dict(BASE, slug='cascade-3', source='https://www.polygonbikes.com/us/cascade-3/', name='CASCADE 3',
-         tagline='Leisure MTB | 100mm Travel | AL6 Alloy | 27.5" Wheels',
-         colors=[{'id': 'red-black-us', 'label': 'Red Black', 'images': [M + '2022/09/24143203/PJ-MY-CASCADE-THREE-P.png', M + '2022/09/13150550/MY22-CASCADE-THREE-RF.png',
-                                                                       M + '2022/09/13150548/MY22-CASCADE-THREE-RR.png', M + '2022/09/13150554/MY22-CASCADE-THREE-LF.png']},
-                 {'id': 'blue-us', 'label': 'Blue', 'images': [M + '2022/09/13150552/MY22-CASCADE-THREE-P.png', M + '2022/09/13150554/MY22-CASCADE-THREE-LF.png',
-                                                             M + '2022/09/13150548/MY22-CASCADE-THREE-RR.png']}],
-         sizes=[{'id': 's-us', 'label': 'S'}, {'id': 'm-us', 'label': 'M'}],
-         skus={'red-black-us|s-us': '502874004', 'red-black-us|m-us': '502874005', 'blue-us|s-us': '502874002', 'blue-us|m-us': '502874001'},
-         specs=[{'group': 'Frameset', 'rows': [['Frameset', 'AL6 XC SPORT FRAME'], ['Fork', 'SUNTOUR XCE28 100mm TRAVEL'], ['Size', 'S, M'], ['Frame Color', 'RED BLACK / INDIGO BLUE'], ['Decal Color', 'CHARCOAL - BLACK']]},
-                {'group': 'Drivetrain', 'rows': [['Shifter', 'SHIMANO ST-EF41, 3x7 SPEED TRIGGER'], ['Crank', 'STEEL CRANK 42x34x24T'], ['Cassette', 'SHIMANO MF-TZ500 7-SPEED 14-28T FREEWHEEL'],
-                                                 ['Rear Derailleur', 'SHIMANO RD-TY300 6/7-SPEED DIRECT ATTACH'],
-                                                 ['BB', 'CARTRIDGE BEARING W/ CAGED BEARING & 119mm SQUARE AXLE'], ['Chain', 'KMC HV-500'], ['Pedal', 'PP CAGE W/ REFLECTOR']]},
-                {'group': 'Cockpit', 'rows': [['Saddle', 'MTB SADDLE, STEEL ø7mm'], ['Seatpost', 'ENTITY, 27.2x350mm'], ['Handlebar', 'STEEL, W: 680MM, B: 31.8MM, R/D: 40MM'],
-                                              ['Handlestem', 'ENTITY ALLOY, E: 45MM, B: 31.8MM, R/D: 0'], ['Headset', 'ZERO STACK (ZS) THREADLESS, ZS 44/28.6 | 44/30']]},
-                {'group': 'Wheel & Tire', 'rows': [['Wheel Set', 'ALLOY DOUBLE WALL'], ['Wheel Size', '27.5"'], ['Tire', '27.5"x2.1" 584x54'],
-                                                   ['Rim', 'ALLOY DOUBLE WALL AV H: 20 584x20 32H FOR TIRE 584-28/62 DISC'],
-                                                   ['Hub', 'F: ALLOY DISC BRAKE QR9x100mm 32H 6B / R: ALLOY DISC BRAKE QR9x135mm 32H 6B FOR FREEWHEEL'],
-                                                   ['Spokes', 'STEEL 14G NDS:270 & DS:272 W/ UCP BRASS']]},
-                {'group': 'Brake', 'rows': [['Brake Lever', 'SHIMANO ST-EF41'], ['Brake Caliper', 'TEKTRO MD-M280 MECHANICAL DISC'], ['Rotor', 'TEKTRO TR160-24 160mm 6-BOLTS']]}],
-         geometry=geo(['S', 'M'], 'https://www.polygonbikes.com/wp-content/themes/polygon2021/assets/images/heist-x7-geo.png',
-                      ['152-165 162-175', '406 456', '73 73', '73 73', '100 105', '69 69', '565 585', '303 303', '47 47', '430 429', '1065.7 1086.1', '383.7 402.2', '593.1 597.8', '700 742'])),
+    dict(BASE, slug='cascade-3', source='https://www.polygonbikes.com/cascade-3/', name='CASCADE 3',
+         colors=[{'id': 'cream', 'label': 'Cream', 'images': [M + '2025/10/24133041/MY25-CASCADE-THREE-G2-P.png']},  # Polygon's other angles show the red bike
+                 {'id': 'red', 'label': 'Red', 'images': [M + '2025/07/29213652/MY26-CASCADE-THREE-P.png', M + '2025/07/29214318/MY26-CASCADE-THREE-RR.png',
+                                                       M + '2025/07/29214123/MY26-CASCADE-THREE-lf.png', M + '2025/07/29213803/MY26-CASCADE-THREE-RF.png']}],
+         sizes=SIZES2,
+         skus=dict(**{f'cream|{i}': s for (i, _), s in zip(WS, ['503668001', '503668002', '503668003', '503668004', '503669001', '503669002', '503669003', '503669004'])},
+                   **{f'red|{i}': s for (i, _), s in zip(WS, ['503682001', '503439001', '503439002', '503439003', '503440001', '503440002', '503440003', '503683001'])}),
+         specs=[{'group': 'Frameset', 'rows': [['Frameset', 'ALX XC SPORT FRAME'], ['Fork', 'SUNTOUR XCE 28 100mm TRAVEL'], ['Size', SIZE_ROW],
+                                               ['Frame Color', 'CREAM / RED'], ['Decal Color', 'WHITE - BLACK']]},
+                {'group': 'Drivetrain', 'rows': [['Shifter', 'SHIMANO ALTUS SL-M315, 1x8-SPEED TRIGGER'], ['Crank', 'PROWHEEL C10Y, 36T'], ['Cassette', 'SHIMANO CS-HG400, 11-45T'],
+                                                 ['Rear Derailleur', 'SHIMANO ESSA RD-U2000'], ['BB', 'SQUARE BB, 68mm'], ['Chain', 'KMC Z-8.3'], ['Pedal', 'ONE PIECE PP BODY']]},
+                {'group': 'Cockpit', 'rows': [r if r else ['Seatpost', 'ALLOY SEATPOST 27.2x350mm'] for r in COCKPIT45]},
+                {'group': 'Wheel & Tire', 'rows': [['Wheel Set', 'ALLOY DOUBLE WALL'], ['Wheel Size', WHEEL_ROW], ['Tire', TIRE_ROW + ' x 2.25"'], ['Rim', 'ALLOY DOUBLE WALL'],
+                                                   ['Hub', 'F: ALLOY, 100mm 32H QR / R: ALLOY, 135mm 32H QR'],
+                                                   ['Spokes', '27.5": 14G STAINLESS NDS:270mm / DS:272mm · 29": 14G STAINLESS NDS:290mm / DS:292mm, 12mm NIPPLE BRASS']]},
+                {'group': 'Brake', 'rows': [['Brake Lever', 'HYDRAULIC DISC BRAKE'], ['Brake Caliper', 'HYDRAULIC DISC BRAKE'], ['Rotor', '6-BOLTS 160mm']]}],
+         # Polygon lists S/M/L 27.5" and S/M/L 29" for Cascade 3; XS and XL come from Cascade 4 / 5 (same ALX XC Sport frame)
+         geometry=geo8(['145-155 155-165 165-175 175-185 155-165 165-175 175-185 185-195', '360 390 430 460 390 430 460 491', '75 75 75 75 75 75 75 75',
+                        '75 75 75 73 74 75 75 75', '110 115 120 125 90 95 100 110', '68 68 68 68 68 68 68 68', '538 561 582 603 566 585 604 624',
+                        '310 310 310 310 304 303 304 304', '-45 -45 -45 -45 -69 -69 -69 -69', '440 440 440 440 455 455 455 455',
+                        '1085 1108 1129 1151 1142 1142 1161 1182', '380 400 420 440 420 420 440 453', '596 601 606 610 624 624 629 638',
+                        '684 703 733 756 737 737 759 780'])),
     dict(BASE, slug='cascade-4', source='https://www.polygonbikes.com/us/cascade-4-2/', name='CASCADE 4',
          colors=[{'id': 'green-latte-us', 'label': 'Green Latte', 'images': [M + '2025/10/24131851/MY25-CASCADE-FOUR-G2-P.png', M + '2025/07/30093430/MY26-CASCADE-FOUR-DECAL-RIMS-RR.png',
                                                                            M + '2025/07/30093219/MY26-CASCADE-FOUR-DECAL-RIMS-RF.png', M + '2025/07/30093137/MY26-CASCADE-FOUR-DECAL-RIMS-LF.png']},
@@ -59,19 +71,19 @@ BIKES = [
          sizes=SIZES2,
          skus=dict(**{f'green-latte-us|{i}': s for (i, _), s in zip(WS, ['503670001', '503670002-en', '503670003-en', '503670004-en', '503671001', '503671002', '503671003', '503671004'])},
                    **{f'charcoal|{i}': s for (i, _), s in zip(WS, ['503441001', '503441002', '503441003', '503441004', '503442001', '503442002', '503442003', '503442004'])}),
-         specs=[{'group': 'Frameset', 'rows': [['Frameset', 'ALX XC SPORT FRAME'], ['Fork', 'SUNTOUR XCM 32 100MM TRAVEL'], ['Size', 'XS, S, M, L (27.5") / S, M, L, XL (29")'],
+         specs=[{'group': 'Frameset', 'rows': [['Frameset', 'ALX XC SPORT FRAME'], ['Fork', 'SUNTOUR XCM 32 100MM TRAVEL'], ['Size', SIZE_ROW],
                                                ['Frame Color', 'GREEN LATTE / CHARCOAL CHROME'], ['Decal Color', 'WHITE - BLACK']]},
                 {'group': 'Drivetrain', 'rows': [['Shifter', 'SHIMANO CUES SL-U4010, 1x9 RAPID FIRE'], ['Crank', 'PROWHEEL C10Y-NW, 36T'], ['Cassette', 'SHIMANO CUES CS-LG300, 11-46T'],
                                                  ['Rear Derailleur', 'SHIMANO CUES RD-U4000GS'], ['BB', 'SQUARE BB, 68mm'], ['Chain', 'KMC X-GLIDE'], ['Pedal', 'ONE PIECE PP BODY']]},
                 {'group': 'Cockpit', 'rows': [r if r else ['Seatpost', 'POLYGON SPORT 27.2 x 350mm'] for r in COCKPIT45]},
-                {'group': 'Wheel & Tire', 'rows': [['Wheel Set', 'ALLOY DOUBLE WALL'], ['Wheel Size', '27.5" / 29"'], ['Tire', '27.5" / 29" x 2.25"'], ['Rim', 'ALLOY DOUBLE WALL'],
+                {'group': 'Wheel & Tire', 'rows': [['Wheel Set', 'ALLOY DOUBLE WALL'], ['Wheel Size', WHEEL_ROW], ['Tire', TIRE_ROW + ' x 2.25"'], ['Rim', 'ALLOY DOUBLE WALL'],
                                                    ['Hub', 'F: ALLOY, 100mm 32H QR / R: ALLOY, 135mm 32H QR'],
                                                    ['Spokes', '27.5": 14G STAINLESS NDS:270mm / DS:272mm · 29": 14G STAINLESS NDS:290mm / DS:292mm, 12mm NIPPLE BRASS']]},
                 {'group': 'Brake', 'rows': BRAKE45}],
-         geometry=geo(['XS (27.5″)', 'S (27.5″)', 'M (27.5″)', 'L (27.5″)', 'S (29″)', 'M (29″)', 'L (29″)'], GEO_IMG,
-                      ['145-155 155-165 165-175 175-185 155-165 165-175 175-185', '360 390 430 460 390 430 460', '75 75 75 75 75 75 75', '75 74 74 74 75 75 74',
-                       '110 115 120 125 90 95 100', '68 67 68 68 67 68 68', '538 561 582 603 566 585 604', '310 310 310 310 304 303 303', '-45 -45 -45 -45 -69 -69 -69',
-                       '440 439 439 439 455 454 454', '1085 1108 1129 1151 1122 1142 1161', '380 400 420 440 400 420 440', '596 601 606 610 620 624 629', '684 703 734 755 709 736 759'])),
+         # Polygon has no XL (29") column for Cascade 4; it comes from Cascade 5 (same ALX XC Sport frame)
+         geometry=geo8(['145-155 155-165 165-175 175-185 155-165 165-175 175-185 185-195', '360 390 430 460 390 430 460 491', '75 75 75 75 75 75 75 75', '75 74 74 74 75 75 74 75',
+                        '110 115 120 125 90 95 100 110', '68 67 68 68 67 68 68 68', '538 561 582 603 566 585 604 624', '310 310 310 310 304 303 303 304', '-45 -45 -45 -45 -69 -69 -69 -69',
+                        '440 439 439 439 455 454 454 455', '1085 1108 1129 1151 1122 1142 1161 1182', '380 400 420 440 400 420 440 453', '596 601 606 610 620 624 629 638', '684 703 734 755 709 736 759 780'])),
     dict(BASE, slug='cascade-5', source='https://www.polygonbikes.com/us/2026-cascade-5-mountain-bike/', name='CASCADE 5',
          colors=[{'id': 'brown-us', 'label': 'Brown', 'images': [M + '2025/07/29154405/MY26-CASCADE-FIVE-P.png', M + '2025/07/29154635/MY26-CASCADE-FIVE-RF.png',
                                                                M + '2025/07/29154510/MY26-CASCADE-FIVE-LF.png', M + '2025/07/29155848/MY26-CASCADE-FIVE-RR.png']},
@@ -80,16 +92,16 @@ BIKES = [
          sizes=SIZES2,
          skus=dict(**{f'brown-us|{i}': s for (i, _), s in zip(WS, ['503443001', '503443002', '503443003', '503443004', '503444001', '503444002', '503444003', '503444004'])},
                    **{f'white-us|{i}': s for (i, _), s in zip(WS, ['503672001', '503665001', '503665002', '503665003', '503673001', '503673002', '503673003', '503673004'])}),
-         specs=[{'group': 'Frameset', 'rows': [['Frameset', 'ALX XC SPORT FRAME'], ['Fork', 'SUNTOUR XCM 32 100MM TRAVEL'], ['Size', 'XS, S, M, L (27.5") / S, M, L, XL (29")'],
+         specs=[{'group': 'Frameset', 'rows': [['Frameset', 'ALX XC SPORT FRAME'], ['Fork', 'SUNTOUR XCM 32 100MM TRAVEL'], ['Size', SIZE_ROW],
                                                ['Frame Color', 'BROWN METALLIC / WHITE'], ['Decal Color', 'WHITE - BLACK']]},
                 {'group': 'Drivetrain', 'rows': [['Shifter', 'SHIMANO CUES SL-U6000, 1x10 RAPID FIRE'], ['Crank', 'PROWHEEL CHARM, 36T'], ['Cassette', 'SHIMANO CUES CS-LG300, 11-48T'],
                                                  ['Rear Derailleur', 'SHIMANO CUES RD-U6000GS'], ['BB', 'PROWHEEL TWO PIECE BB'], ['Chain', 'KMC X-GLIDE'], ['Pedal', 'ONE PIECE PP BODY']]},
                 {'group': 'Cockpit', 'rows': [r if r else ['Seatpost', 'ALLOY SEATPOST 27.2x350mm'] for r in COCKPIT45]},
-                {'group': 'Wheel & Tire', 'rows': [['Wheel Set', 'ALLOY DOUBLE WALL'], ['Wheel Size', '27.5" / 29"'], ['Tire', 'DELI 27.5" / 29" x 2.25"'],
+                {'group': 'Wheel & Tire', 'rows': [['Wheel Set', 'ALLOY DOUBLE WALL'], ['Wheel Size', WHEEL_ROW], ['Tire', 'DELI ' + TIRE_ROW + ' x 2.25"'],
                                                    ['Rim', 'ALLOY DOUBLE WALL H: 20mm W: 21mm 32H'], ['Hub', 'F: ALLOY, 100mm 32H QR / R: ALLOY, 135mm 32H QR'],
                                                    ['Spokes', '14G STAINLESS, 12mm NIPPLE BRASS']]},
                 {'group': 'Brake', 'rows': BRAKE45}],
-         geometry=geo([l for _, l in WS], GEO_IMG,
+         geometry=geo8(
                       ['145-155 155-165 165-175 175-185 155-165 165-175 175-185 185-195', '360 390 430 460 390 430 460 491', '75 75 75 75 75 75 75 75', '75 75 74 75 73 74 75 75',
                        '110 115 120 125 90 95 99 110', '69 70 68 69 68 69 68 68', '539 561 581 603 565 585 604 624', '310 310 309 310 304 303 303 304',
                        '-45 -45 -45 -45 -69 -69 -69 -69', '440 440 440 440 455 455 454 455', '1085 1108 1129 1151 1122 1142 1161 1182', '380 400 420 440 400 420 440 453',
@@ -97,8 +109,10 @@ BIKES = [
 ]
 
 from latest_colors import latest  # noqa: E402
+SOLD = {i for i, l in WS if l in SALE}
 for _b in BIKES:
     latest(_b)
+    _b['skus'] = {k: v for k, v in _b['skus'].items() if k.split('|')[1] in SOLD}
 p = os.path.join(HERE, 'bikes.json')
 b = json.load(open(p, encoding='utf-8'))
 b = [x for x in b if x['slug'] not in {o['slug'] for o in BIKES}] + BIKES
@@ -107,7 +121,7 @@ json.dump(b, open(p, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 # ---- Cascade group in the Cross Country panel of xe-mtb.html ----
 sys.path.insert(0, HERE)
 from vi import VI  # noqa: E402
-DESC = {'cascade-5': 'Shimano CUES 1x10 · Phanh đĩa dầu', 'cascade-4': 'Shimano CUES 1x9 · Phanh đĩa dầu', 'cascade-3': 'Shimano 3x7 · Bánh 27.5"'}
+DESC = {'cascade-5': 'Shimano CUES 1x10 · Phanh đĩa dầu', 'cascade-4': 'Shimano CUES 1x9 · Phanh đĩa dầu', 'cascade-3': 'Shimano 1x8 · Phanh đĩa dầu'}
 cards = ''
 for o in sorted(BIKES, key=lambda o: o['slug'], reverse=True):
     if o['slug'] in VI:
@@ -115,7 +129,7 @@ for o in sorted(BIKES, key=lambda o: o['slug'], reverse=True):
                   f'<div class="p-body"><span class="p-brand">Polygon · Cascade</span><h3 class="p-name"><a class="stretch" href="{VI[o["slug"]]["file"]}.html">{E(o["name"])}</a></h3>'
                   f'<p class="p-desc">{E(DESC[o["slug"]])}</p><span class="p-price">1.980.000₫</span></div></article>')
 GROUP = ('<section class="road-group"><div class="rg-head"><div><h2>Cascade</h2><p class="rg-sub">XC hardtail phổ thông · Nhôm · Phuộc 100mm</p></div>'
-         '<p class="rg-desc">Hardtail nhập môn nhẹ và bền, phuộc nhún 100mm, phanh đĩa, bánh 27.5" hoặc 29" theo chiều cao người đạp.</p></div>'
+         '<p class="rg-desc">Hardtail nhập môn nhẹ và bền, phuộc nhún 100mm, phanh đĩa; size XS bánh 27.5", size S–XL bánh 29".</p></div>'
          f'<div class="grid">{cards}</div></section>')
 f = os.path.join(D, 'xe-mtb.html')
 s = open(f, encoding='utf-8').read()

@@ -14,6 +14,7 @@ KEEP = {
     'siskiu-d5': ('cream-orange-us', 'CREAM - ORANGE'),
     'cascade-5': ('white-us', 'WHITE'),
     'cascade-4': ('green-latte-us', 'GREEN LATTE'),
+    'cascade-3': ('cream', 'CREAM'),
 }
 
 
