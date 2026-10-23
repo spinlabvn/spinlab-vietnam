@@ -85,7 +85,7 @@ def state():
     st = subprocess.run(['git', 'status', '--porcelain'], cwd=ROOT, capture_output=True, text=True).stdout
     ahead = subprocess.run(['git', 'rev-list', '--count', 'origin/main..main'], cwd=ROOT, capture_output=True, text=True).stdout.strip()
     pages = sorted(p[:-5] for p in os.listdir(ROOT) if p.endswith('.html'))
-    return {'articles': arts, 'products': products(), 'pages': pages,
+    return {'articles': arts, 'products': products(), 'pages': pages, 'settings': jload('settings.json', {'show_prices': True}),
             'git': {'changed': len([l for l in st.splitlines() if l.strip()]), 'ahead': int(ahead or 0)}}
 
 
@@ -230,6 +230,11 @@ class Admin(serve.Handler):
                     return self._json(200, {'ok': True})
                 if p == '/api/texts':
                     save_texts(req['file'], req.get('override'))
+                    return self._json(200, {'ok': True})
+                if p == '/api/settings':
+                    d = jload('settings.json', {'note': 'Cài đặt chung của website.'})
+                    d['show_prices'] = bool(req['show_prices'])
+                    jsave('settings.json', d)
                     return self._json(200, {'ok': True})
                 if p == '/api/upload':
                     return self._json(200, {'path': upload(req['name'], req['data'])})

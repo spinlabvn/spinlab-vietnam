@@ -26,7 +26,7 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         m = re.fullmatch(r'/([a-z0-9-]+)\.html', path)
         if m:
             return self._redirect('/' + m.group(1) + q)
-        if re.match(r'/(tools|\.git)(/|$)', path):
+        if re.match(r'/(tools|data|\.git)(/|$)', path):
             return self.send_error(403)
         if path in ('/en', '/en/', '/en/trangchu', '/en/trangchu/'):
             return self._redirect('/en/home' + q)

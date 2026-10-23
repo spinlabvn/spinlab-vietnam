@@ -8,7 +8,7 @@ DirectoryIndex index.html
 RewriteEngine On
 
 # Không công khai công cụ nội bộ và dữ liệu git
-RewriteRule ^(tools|\.git)(/|$) - [F,L]
+RewriteRule ^(tools|data|\.git)(/|$) - [F,L]
 RewriteRule \.(command|py|md)$ - [F,L]
 
 # Trang chủ

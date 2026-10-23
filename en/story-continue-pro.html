@@ -649,7 +649,7 @@ body.cmp-open .msg-fab{bottom:164px}
           <div class="size-opts"><label><input type="radio" name="color" value="purple" checked><span>Purple</span></label><label><input type="radio" name="color" value="silver"><span>Silver</span></label></div></fieldset>
         <fieldset class="sizes"><legend>Size </legend>
           <div class="size-opts"><label><input type="radio" name="size" value="24" data-col="-1" checked><span>24&quot;</span></label></div></fieldset>
-        <div class="price-row"><span class="label">Retail price</span><span class="p-price big">22.300.000₫</span></div>
+        <div class="price-row"><span class="label">Retail price</span><span class="p-price big">Contact</span></div>
         <div class="buy-ctas">
           <a class="btn btn-zalo outline" href="https://zalo.me/0399337533" target="_blank" rel="noopener"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="" width="22" height="22">Chat Zalo</a>
           <a class="btn btn-yellow" href="tel:0399337533">Call 0399 337 533</a>
@@ -794,14 +794,6 @@ body.cmp-open .msg-fab{bottom:164px}
   document.addEventListener('keydown',e=>{ if(e.key==='Escape'&&document.body.classList.contains('nav-open')){ set(false); btn.focus(); } });
   const sync=()=>{ if(mq.matches){ nav.toggleAttribute('inert',!document.body.classList.contains('nav-open')); } else { set(false); nav.removeAttribute('inert'); } };
   mq.addEventListener('change',sync); sync();
-})();
-// Vittoria retail price: follows the selected SKU
-(() => {
-  const P = {"11A00389": "1.815.000₫", "11A00390": "1.815.000₫", "11A00391": "1.815.000₫", "11A00630": "1.815.000₫"}, el = document.querySelector('.p-price.big'), code = document.getElementById('sz-sku');
-  if (!el || !code) return;
-  const upd = () => { const p = P[(code.textContent || '').trim()]; if (p) el.textContent = p; };
-  new MutationObserver(upd).observe(code, {childList: true, characterData: true, subtree: true});
-  upd();
 })();
 // Compare products: toggles on cards / product page, tray, link to so-sanh.html (max 4)
 (() => {

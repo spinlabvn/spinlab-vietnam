@@ -17,6 +17,9 @@ W = lambda f, s: open(os.path.join(ROOT, f), 'w', encoding='utf-8').write(s)
 E = lambda s: html.escape(s, quote=True)
 BK = {b['slug']: b for b in json.load(open(os.path.join(ROOT, 'tools', 'generators', 'bikes.json'), encoding='utf-8'))}
 PRICES = json.load(open(os.path.join(ROOT, 'data', 'page-prices.json'), encoding='utf-8'))['prices']
+_set = os.path.join(ROOT, 'data', 'settings.json')
+if os.path.exists(_set) and not json.load(open(_set, encoding='utf-8')).get('show_prices', True):
+    PRICES = {}   # prices hidden site-wide: tables show "Liên hệ"
 vnd = lambda n: f'{n:,}'.replace(',', '.') + '₫'
 CATS = {'tin-tuc': ('Tin tức', 'tin-tuc.html'), 'huong-dan': ('Hướng dẫn', 'huong-dan.html')}
 # same contact block as the homepage ("Chưa biết chọn xe nào?")

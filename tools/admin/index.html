@@ -230,7 +230,11 @@ function renderProducts() {
   const priceCell = p => p.price.kind === 'page'
     ? `<input class="price" type="number" min="0" step="1000" data-page="${esc(p.file)}" value="${DIRTY.prices[p.file] ?? p.price.value ?? ''}" placeholder="Liên hệ"><div class="hint">${vnd(DIRTY.prices[p.file] ?? p.price.value) || 'Liên hệ'}</div>`
     : `<div class="skus">${p.price.skus.map(k => `<div><span>${esc(k.name)} · ${esc(k.sku)}</span><input type="number" min="0" step="1000" data-sku="${esc(k.sku)}" value="${DIRTY.skus[k.sku] ?? k.price ?? ''}"></div>`).join('') || '<span class="hint">Không có mã nào trong danh sách hàng</span>'}</div>`;
+  const show = S.settings.show_prices !== false;
   $('#app').innerHTML = `<h1>Sản phẩm</h1><p class="sub">Sửa giá bán lẻ, ẩn / hiện sản phẩm và mô tả. Bấm “Lưu thay đổi” rồi vào “Đăng lên web”.</p>
+    <div class="card row" style="justify-content:space-between"><div><b>Giá bán lẻ trên web: ${show ? '<span class="tag g">đang hiện</span>' : '<span class="tag r">đang ẩn — mọi giá hiện “Liên hệ”</span>'}</b>
+      <div class="hint">Giá bạn nhập bên dưới vẫn được lưu; khi bật lại sẽ hiện đúng các giá này.</div></div>
+      <button class="btn ${show ? '' : 'yel'}" id="toggle-prices" type="button">${show ? 'Ẩn toàn bộ giá' : 'Hiện lại giá'}</button></div>
     <div class="row" style="margin-bottom:12px"><input type="search" id="pq" placeholder="Tìm sản phẩm…" value="${esc(PQ)}" style="max-width:320px">
       <select id="pb" style="max-width:220px"><option value="">Tất cả thương hiệu</option>${brands.map(b => `<option${b === PB ? ' selected' : ''}>${esc(b)}</option>`).join('')}</select>
       <span class="hint">${list.length} sản phẩm</span></div>
@@ -250,6 +254,7 @@ function renderProducts() {
   $$('input[data-show]').forEach(i => i.onchange = () => { DIRTY.hidden = new Set(hid); i.checked ? DIRTY.hidden.delete(i.dataset.show) : DIRTY.hidden.add(i.dataset.show); renderProducts(); });
   $$('[data-texts]').forEach(b => b.onclick = () => editTexts(S.products.find(p => p.file === b.dataset.texts)));
   $('#preset').onclick = () => { DIRTY = {prices: {}, skus: {}, hidden: null}; renderProducts(); };
+  $('#toggle-prices').onclick = async () => { try { await API('/api/settings', {show_prices: !show}); toast(show ? 'Đã ẩn giá — vào “Đăng lên web” để cập nhật' : 'Đã bật hiện giá — vào “Đăng lên web” để cập nhật'); await load(); } catch (err) { toast(err.message, true); } };
   $('#psave').onclick = async e => {
     e.target.disabled = true;
     try {
