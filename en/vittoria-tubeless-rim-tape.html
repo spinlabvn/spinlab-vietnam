@@ -486,6 +486,13 @@ tbody tr.on{background:#FFF7D6}
 .cmp-clear{border:0;background:none;font-size:13px;text-decoration:underline;color:var(--muted);min-height:44px}
 body.cmp-open .zalo-fab{bottom:96px}
 @media (max-width:600px){.cmp-items li{width:52px;height:52px}.cmp-items img{max-width:44px;max-height:44px}.cmp-clear{display:none}}
+/* Messenger chat */
+.msg-fab{position:fixed;right:16px;bottom:88px;z-index:60;display:flex;align-items:center;gap:10px;border-radius:999px;background:#fff;box-shadow:0 6px 20px rgba(0,0,0,.18);transition:transform .2s,box-shadow .2s}
+.msg-fab:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(0,0,0,.22)}
+.msg-ic{display:grid;place-items:center;width:56px;height:56px;border-radius:50%;background:linear-gradient(45deg,#0099FF 0%,#A033FF 60%,#FF5280 90%,#FF7061 100%)}
+.msg-label{display:none;font-weight:700;font-size:14px;color:#7a2fd6;padding-right:18px}
+@media (min-width:1024px){.msg-fab{right:24px;bottom:92px}.msg-label{display:block}}
+body.cmp-open .msg-fab{bottom:164px}
 /* Card hover image */
 .p-img>img{transition:opacity .3s}
 .p-img>img.alt{position:absolute;inset:0;width:100%;height:100%;max-width:none;max-height:none;padding:12px;box-sizing:border-box;opacity:0;pointer-events:none}
@@ -522,6 +529,7 @@ body.cmp-open .zalo-fab{bottom:96px}
   <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.5 6.5a4 4 0 0 0 5 5L12 19a2.1 2.1 0 0 1-3-3l7.5-7.5a4 4 0 0 1-2-2Zm0 0 2.5-2.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
   <symbol id="i-facebook" viewBox="0 0 24 24"><path d="M13.5 21v-7.5H16l.4-3h-2.9V8.6c0-.9.3-1.5 1.5-1.5h1.5V4.4c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8v2.4H8.1v3h2.5V21h2.9Z" fill="currentColor"/></symbol>
   <symbol id="i-instagram" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/></g><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor"/></symbol>
+  <symbol id="i-tiktok" viewBox="0 0 24 24"><path d="M12.53.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" fill="currentColor"/></symbol>
   <symbol id="i-youtube" viewBox="0 0 24 24"><path d="M21.6 7.2a2.6 2.6 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4a2.6 2.6 0 0 0-1.8 1.8C2 8.8 2 12 2 12s0 3.2.4 4.8a2.6 2.6 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.6 2.6 0 0 0 1.8-1.8c.4-1.6.4-4.8.4-4.8s0-3.2-.4-4.8ZM10 15V9l5.2 3L10 15Z" fill="currentColor"/></symbol>
   <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4V5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
 </defs></svg>
@@ -686,6 +694,7 @@ body.cmp-open .zalo-fab{bottom:96px}
           <li><a class="fb" href="https://www.facebook.com/profile.php?id=61573821032401" target="_blank" rel="noopener" aria-label="Spinlab on Facebook (opens in a new tab)"><svg aria-hidden="true"><use href="#i-facebook"/></svg></a></li>
           <li><a class="ig" href="https://www.instagram.com/spinlabvn/" target="_blank" rel="noopener" aria-label="Spinlab on Instagram (opens in a new tab)"><svg aria-hidden="true"><use href="#i-instagram"/></svg></a></li>
           <li><a class="yt" href="https://www.youtube.com/@Spinlabvn" target="_blank" rel="noopener" aria-label="Spinlab on YouTube (opens in a new tab)"><svg aria-hidden="true"><use href="#i-youtube"/></svg></a></li>
+          <li><a class="tt" href="https://www.tiktok.com/@spinlab.vn" target="_blank" rel="noopener" aria-label="Spinlab on TikTok (opens in a new tab)"><svg aria-hidden="true"><use href="#i-tiktok"/></svg></a></li>
           <li><a class="z" href="https://zalo.me/0399337533" target="_blank" rel="noopener" aria-label="Spinlab on Zalo (opens in a new tab)"><span class="zt" aria-hidden="true">Zalo</span></a></li>
         </ul>
       </div>
@@ -696,6 +705,7 @@ body.cmp-open .zalo-fab{bottom:96px}
   </div>
 </footer>
 
+<a class="msg-fab" href="https://m.me/61573821032401" target="_blank" rel="noopener" aria-label="Chat with the Spinlab page on Messenger (opens in a new tab)"><span class="msg-ic"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path fill="#fff" d="M12 2C6.36 2 2 6.13 2 11.7c0 2.91 1.19 5.44 3.14 7.17.16.14.26.35.27.57l.05 1.78c.02.57.6.94 1.12.71l1.99-.88c.17-.07.36-.09.53-.04.91.25 1.89.39 2.9.39 5.64 0 10-4.13 10-9.7S17.64 2 12 2zm6 7.46-2.94 4.66c-.47.74-1.47.93-2.17.4l-2.34-1.75a.6.6 0 0 0-.72 0l-3.16 2.4c-.42.32-.97-.18-.69-.63l2.94-4.66c.47-.74 1.47-.93 2.17-.4l2.34 1.75a.6.6 0 0 0 .72 0l3.16-2.4c.42-.32.97.18.69.63z"/></svg></span><span class="msg-label">Chat Messenger</span></a>
 <a class="zalo-fab" href="https://zalo.me/0399337533" target="_blank" rel="noopener" aria-label="Chat with Spinlab on Zalo (opens in a new tab)"><span class="zalo-ic"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="" width="56" height="56"></span><span class="zalo-label">Chat Zalo</span></a>
 
 

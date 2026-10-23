@@ -184,7 +184,8 @@ LEADS = {'tin-tuc': 'Tin sản phẩm mới, hoạt động và sự kiện củ
 FOLLOW = ('<section class="art-more"><h2>Sự kiện &amp; cộng đồng</h2><p>Lịch chạy thử xe, giải đua và các buổi gặp gỡ cộng đồng của Spinlab được thông báo trên mạng xã hội.</p>'
           '<div class="article"><div class="cta" style="margin-top:12px"><a class="btn btn-primary" href="https://www.facebook.com/profile.php?id=61573821032401" target="_blank" rel="noopener">Facebook Spinlab</a>'
           '<a class="btn btn-outline" href="https://www.instagram.com/spinlabvn/" target="_blank" rel="noopener">Instagram</a>'
-          '<a class="btn btn-outline" href="https://www.youtube.com/@Spinlabvn" target="_blank" rel="noopener">YouTube</a></div></div></section>')
+          '<a class="btn btn-outline" href="https://www.youtube.com/@Spinlabvn" target="_blank" rel="noopener">YouTube</a>'
+          '<a class="btn btn-outline" href="https://www.tiktok.com/@spinlab.vn" target="_blank" rel="noopener">TikTok</a></div></div></section>')
 for cat, (cname, chref) in CATS.items():
     items = [a for a in ARTICLES if a['cat'] == cat]
     main = f'''<main id="main" class="pdp listing">
