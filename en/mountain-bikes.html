@@ -778,7 +778,17 @@ body.cmp-open .msg-fab{bottom:164px}
 })();
 
 // Open the discipline tab named in the URL hash (#dh, #enduro, #trail, #xc, #dj)
-(() => { const t=document.getElementById('tab-'+location.hash.slice(1)); if(t) t.click(); })();
+// Open the tab named in the URL (#dh, #enduro, #trail, #xc, #dj) — on load and whenever a menu link changes the hash
+(() => {
+  const go=scroll=>{ const t=document.getElementById('tab-'+location.hash.slice(1)); if(!t) return;
+    t.click();
+    document.querySelectorAll('.nav-top[aria-expanded="true"]').forEach(b=>b.setAttribute('aria-expanded','false'));
+    if(document.activeElement && document.activeElement.closest && document.activeElement.closest('.nav')) document.activeElement.blur();
+    const bar=t.closest('[role=tablist]'); bar.scrollLeft+=t.getBoundingClientRect().left-bar.getBoundingClientRect().left-(bar.clientWidth-t.offsetWidth)/2;
+    if(scroll){ const list=t.closest('[role=tablist]'), head=document.querySelector('.header'); const off=(head?head.getBoundingClientRect().height:0)+12;
+      window.scrollTo({top:list.getBoundingClientRect().top+scrollY-off, behavior:'smooth'}); } };
+  addEventListener('hashchange',()=>go(true)); go(!!location.hash);
+})();
 // Mobile menu drawer: ☰ opens the menu as a side panel; Escape, the backdrop, ✕ or a link closes it
 (() => {
   const btn=document.querySelector('.menu-btn'), nav=document.querySelector('.nav');

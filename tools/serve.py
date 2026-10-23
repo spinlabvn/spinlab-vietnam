@@ -11,6 +11,11 @@ class Handler(http.server.SimpleHTTPRequestHandler):
     def __init__(self, *a, **k):
         super().__init__(*a, directory=ROOT, **k)
 
+    def end_headers(self):
+        # preview only: always fetch the freshly built page (no stale cached HTML after a rebuild)
+        self.send_header('Cache-Control', 'no-store')
+        super().end_headers()
+
     def _redirect(self, to):
         self.send_response(301)
         self.send_header('Location', to)
