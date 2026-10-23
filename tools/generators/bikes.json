@@ -22235,6 +22235,16 @@
     "images": [
      "https://media.polygonbikes.com/wp-content/uploads/2025/10/24133041/MY25-CASCADE-THREE-G2-P.png"
     ]
+   },
+   {
+    "id": "red",
+    "label": "Red",
+    "images": [
+     "https://media.polygonbikes.com/wp-content/uploads/2025/07/29213652/MY26-CASCADE-THREE-P.png",
+     "https://media.polygonbikes.com/wp-content/uploads/2025/07/29214318/MY26-CASCADE-THREE-RR.png",
+     "https://media.polygonbikes.com/wp-content/uploads/2025/07/29214123/MY26-CASCADE-THREE-lf.png",
+     "https://media.polygonbikes.com/wp-content/uploads/2025/07/29213803/MY26-CASCADE-THREE-RF.png"
+    ]
    }
   ],
   "sizes": [
@@ -22264,7 +22274,12 @@
    "cream|29-small-us": "503669001",
    "cream|29-medium-us": "503669002",
    "cream|29-large-us": "503669003",
-   "cream|29-xtra-large-us": "503669004"
+   "cream|29-xtra-large-us": "503669004",
+   "red|27-5-xtra-small-us": "503682001",
+   "red|29-small-us": "503440001",
+   "red|29-medium-us": "503440002",
+   "red|29-large-us": "503440003",
+   "red|29-xtra-large-us": "503683001"
   },
   "specs": [
    {
@@ -22284,7 +22299,11 @@
      ],
      [
       "Frame Color",
-      "CREAM"
+      "CREAM / RED"
+     ],
+     [
+      "Decal Color",
+      "WHITE - BLACK"
      ]
     ]
    },
@@ -22938,6 +22957,16 @@
      "https://media.polygonbikes.com/wp-content/uploads/2025/11/14130215/MY26-CASCADE-FIVE-G2-RF.png",
      "https://media.polygonbikes.com/wp-content/uploads/2025/11/14130342/MY26-CASCADE-FIVE-G2-LF.png"
     ]
+   },
+   {
+    "id": "brown-us",
+    "label": "Brown",
+    "images": [
+     "https://media.polygonbikes.com/wp-content/uploads/2025/07/29154405/MY26-CASCADE-FIVE-P.png",
+     "https://media.polygonbikes.com/wp-content/uploads/2025/07/29154635/MY26-CASCADE-FIVE-RF.png",
+     "https://media.polygonbikes.com/wp-content/uploads/2025/07/29154510/MY26-CASCADE-FIVE-LF.png",
+     "https://media.polygonbikes.com/wp-content/uploads/2025/07/29155848/MY26-CASCADE-FIVE-RR.png"
+    ]
    }
   ],
   "sizes": [
@@ -22963,6 +22992,11 @@
    }
   ],
   "skus": {
+   "brown-us|27-5-xtra-small-us": "503443001",
+   "brown-us|29-small-us": "503444001",
+   "brown-us|29-medium-us": "503444002",
+   "brown-us|29-large-us": "503444003",
+   "brown-us|29-xtra-large-us": "503444004",
    "white-us|27-5-xtra-small-us": "503672001",
    "white-us|29-small-us": "503673001",
    "white-us|29-medium-us": "503673002",
@@ -22987,7 +23021,11 @@
      ],
      [
       "Frame Color",
-      "WHITE"
+      "WHITE / BROWN METALLIC"
+     ],
+     [
+      "Decal Color",
+      "WHITE - BLACK"
      ]
     ]
    },
