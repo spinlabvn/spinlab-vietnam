@@ -362,6 +362,12 @@
    "name": "Terreno T70 Coarse Loose Endurance"
   },
   {
+   "href": "terreno-t60.html",
+   "added": "2026-10-13 09:00",
+   "seq": 37,
+   "name": "Terreno T60 Mixed Endurance"
+  },
+  {
    "href": "terreno-t50.html",
    "added": "2026-10-13 09:00",
    "seq": 36,
@@ -380,6 +386,12 @@
    "name": "Terreno T10 Hardpack Endurance"
   },
   {
+   "href": "terreno-pro-t60.html",
+   "added": "2026-10-13 09:00",
+   "seq": 33,
+   "name": "Terreno PRO T60 Mixed"
+  },
+  {
    "href": "terreno-pro-t50.html",
    "added": "2026-10-13 09:00",
    "seq": 32,
@@ -390,6 +402,12 @@
    "added": "2026-10-13 09:00",
    "seq": 31,
    "name": "Terreno PRO T30 Fine Loose"
+  },
+  {
+   "href": "terreno-pro-t10.html",
+   "added": "2026-10-13 09:00",
+   "seq": 30,
+   "name": "Terreno PRO T10 Hardpack"
   },
   {
    "href": "vittoria-martello.html",

@@ -43,7 +43,7 @@ Thêm một xe mới: lấy dữ liệu (extract.py hoặc nhập tay như tambo
 
 ## Lốp và phụ kiện Vittoria
 
-Giá bán lẻ và hàng có sẵn lấy từ `data/vittoria-stock.json` (chuyển từ bảng giá của Spinlab). Chỉ những mã có trong file này mới hiện trên web; dòng lốp không còn mã nào thì không tạo trang. Sau khi chạy `vtires.py` / `terreno.py`, chạy `python3 tires_listing.py ../..` để dựng lại lưới sản phẩm của `lop-xe.html`.
+Giá bán lẻ và hàng có sẵn lấy từ `data/vittoria-stock.json` (chuyển từ bảng giá của Spinlab). Chỉ những mã có trong file này mới hiện trên web; dòng lốp không còn mã nào thì không tạo trang. Riêng lốp gravel Terreno (`terreno.py`) hiện đủ mọi kích cỡ như trước; mã không có trong file hiện giá "Liên hệ". Sau khi chạy `vtires.py` / `terreno.py`, chạy `python3 tires_listing.py ../..` để dựng lại lưới sản phẩm của `lop-xe.html`.
 
 | File | Vai trò |
 |---|---|

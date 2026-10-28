@@ -63,12 +63,13 @@ def load(h):
     p = json.load(open(os.path.join(J, h + '.json'), encoding='utf-8'))['product']
     imgs = [i['src'].split('?')[0] for i in p['images']]
     imgs = [u for u in imgs if not re.search(r'-08(_[0-9a-f-]+)?\.(webp|jpg)$', u)][:6]   # drop carbon-neutral graphics
-    variants = vcommon.in_stock(h, [dict(size=v['option1'], color=v['option2'], sku=v['sku']) for v in p['variants']])
+    # every Vittoria size, not only the stock list (Spinlab's request, 2026-10-28: gravel tyres as before)
+    variants = vcommon.all_variants(h, [dict(size=v['option1'], color=v['option2'], sku=v['sku']) for v in p['variants']])
     return dict(title=p['title'], url=f'https://vittoria.com/products/{h}', images=imgs, variants=variants)
 
 
 ALL_PRODUCTS = list(PRODUCTS)
-PRODUCTS[:] = [P for P in PRODUCTS if load(P['versions'][0][0])['variants']]   # only lines with in-stock sizes
+PRODUCTS[:] = [P for P in PRODUCTS if load(P['versions'][0][0])['variants']]
 
 
 def meter(P):

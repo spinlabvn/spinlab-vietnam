@@ -13,11 +13,15 @@ OVERRIDES = {
 EXCLUDE_SIZES = {}   # kept for older callers; stock filtering replaces it
 
 
+def all_variants(h, variants):
+    """Apply OVERRIDES for handle h (SKU fixes, extra variants), keeping every variant."""
+    o = OVERRIDES.get(h, {})
+    return [dict(v, sku=o.get('sku', {}).get((v['size'], v['color']), v['sku'])) for v in variants] + [dict(v) for v in o.get('add', [])]
+
+
 def in_stock(h, variants):
     """Apply OVERRIDES for handle h, then keep only SKUs on Spinlab's stock list."""
-    o = OVERRIDES.get(h, {})
-    vs = [dict(v, sku=o.get('sku', {}).get((v['size'], v['color']), v['sku'])) for v in variants] + [dict(v) for v in o.get('add', [])]
-    return [v for v in vs if stock.ok(v['sku'])]
+    return [v for v in all_variants(h, variants) if stock.ok(v['sku'])]
 
 COLOR_VI = {'Anthracite': 'Xám than', 'Brown': 'Thành nâu', 'Black': 'Đen', 'Para': 'Thành da (Para)', 'Tan': 'Thành nâu nhạt (Tan)',
             'Blue': 'Xanh dương', 'Red': 'Đỏ', 'Pink': 'Hồng', 'White': 'Trắng', 'Yellow': 'Vàng'}

@@ -32,6 +32,7 @@ JS = '''// Vittoria retail price: follows the selected SKU
 
 pages = [os.path.basename(f) for f in glob.glob(os.path.join(ROOT, '*.html')) if not f.endswith('v1-premium.html')]
 labels = {}
+PP = json.load(open(os.path.join(ROOT, 'data', 'page-prices.json'), encoding='utf-8'))['prices']
 # data/settings.json: show_prices false = every price shows "Liên hệ" (temporary, switched in the admin page)
 _set = os.path.join(ROOT, 'data', 'settings.json')
 SHOW = json.load(open(_set, encoding='utf-8')).get('show_prices', True) if os.path.exists(_set) else True
@@ -48,10 +49,11 @@ for f in pages:
         continue
     main = re.search(r'<main id="main".*?</main>', s, re.S)
     skus = set(re.findall(r'data-sku="([^"]+)"', main.group(0) if main else '')) | set(re.findall(r'"sku": "([^"]+)"', s))
-    skus = sorted(x for x in skus if stock.ok(x))
-    if not skus:
+    if not skus or f in PP or f.startswith(('polygon-', 'story-')):   # bikes / Emume: page prices below
         continue
-    lab = stock.label(skus) if SHOW else HIDDEN_LABEL
+    skus = sorted(skus)
+    priced = [x for x in skus if stock.ok(x)]   # sizes not on Spinlab's price list show "Liên hệ"
+    lab = (stock.label(priced) if priced else 'Liên hệ') if SHOW else HIDDEN_LABEL
     labels[f] = lab
     s = re.sub(r'(<span class="p-price big">)[^<]*(</span>)', lambda m: m.group(1) + lab + m.group(2), s, 1)
     s = re.sub(r'// Vittoria retail price: follows the selected SKU\n.*?\}\)\(\);\n', '', s, flags=re.S)
@@ -61,7 +63,6 @@ for f in pages:
     W(f, s)
 
 # Page prices (bikes, Emume): one retail price per product page
-PP = json.load(open(os.path.join(ROOT, 'data', 'page-prices.json'), encoding='utf-8'))['prices']
 for f in pages:
     if not (f in PP or f.startswith(('polygon-', 'story-'))):
         continue
