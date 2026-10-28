@@ -33,6 +33,7 @@ JS = '''// Vittoria retail price: follows the selected SKU
 pages = [os.path.basename(f) for f in glob.glob(os.path.join(ROOT, '*.html')) if not f.endswith('v1-premium.html')]
 labels = {}
 PP = json.load(open(os.path.join(ROOT, 'data', 'page-prices.json'), encoding='utf-8'))['prices']
+LINE = json.load(open(os.path.join(ROOT, 'data', 'vittoria-stock.json'), encoding='utf-8')).get('line_prices', {})
 # data/settings.json: show_prices false = every price shows "Liên hệ" (temporary, switched in the admin page)
 _set = os.path.join(ROOT, 'data', 'settings.json')
 SHOW = json.load(open(_set, encoding='utf-8')).get('show_prices', True) if os.path.exists(_set) else True
@@ -52,14 +53,17 @@ for f in pages:
     if not skus or f in PP or f.startswith(('polygon-', 'story-')):   # bikes / Emume: page prices below
         continue
     skus = sorted(skus)
-    priced = [x for x in skus if stock.ok(x)]   # sizes not on Spinlab's price list show "Liên hệ"
-    lab = (stock.label(priced) if priced else 'Liên hệ') if SHOW else HIDDEN_LABEL
+    # a line price (e.g. every Terreno PRO size) covers SKUs without their own price; otherwise "Liên hệ"
+    base = next((v for k, v in LINE.items() if isinstance(v, int) and f.startswith(k)), None)
+    price = {x: stock.price(x) or base for x in skus}
+    priced = sorted({v for v in price.values() if v})
+    lab = (('Từ ' if len(priced) > 1 else '') + stock.fmt(priced[0]) if priced else 'Liên hệ') if SHOW else HIDDEN_LABEL
     labels[f] = lab
     s = re.sub(r'(<span class="p-price big">)[^<]*(</span>)', lambda m: m.group(1) + lab + m.group(2), s, 1)
     s = re.sub(r'// Vittoria retail price: follows the selected SKU\n.*?\}\)\(\);\n', '', s, flags=re.S)
     if SHOW:
         i = s.rindex('</script>\n</body>')
-        s = s[:i] + JS % json.dumps({x: stock.fmt(stock.price(x)) if stock.price(x) else 'Liên hệ' for x in skus}, ensure_ascii=False) + s[i:]
+        s = s[:i] + JS % json.dumps({x: stock.fmt(price[x]) if price[x] else 'Liên hệ' for x in skus}, ensure_ascii=False) + s[i:]
     W(f, s)
 
 # Page prices (bikes, Emume): one retail price per product page

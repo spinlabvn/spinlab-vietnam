@@ -1,5 +1,10 @@
 {
  "source": "nmt.xlsx (Spinlab, 2026-10-20) — giá bán lẻ & hàng có sẵn Vittoria",
+ "line_prices": {
+  "note": "Giá chung cho mọi kích cỡ của một dòng lốp (theo tên trang), dùng khi mã không có giá riêng trong items",
+  "terreno-pro-": 1815000,
+  "terreno-t": 1295000
+ },
  "items": [
   {
    "sku": "11A00734",
