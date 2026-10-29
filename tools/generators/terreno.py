@@ -65,7 +65,8 @@ def load(h):
     imgs = [u for u in imgs if not re.search(r'-08(_[0-9a-f-]+)?\.(webp|jpg)$', u)][:6]   # drop carbon-neutral graphics
     # every Vittoria size, not only the stock list (Spinlab's request, 2026-10-28: gravel tyres as before)
     variants = vcommon.all_variants(h, [dict(size=v['option1'], color=v['option2'], sku=v['sku']) for v in p['variants']])
-    return dict(title=p['title'], url=f'https://vittoria.com/products/{h}', images=imgs, variants=variants)
+    return dict(title=p['title'], url=f'https://vittoria.com/products/{h}', images=imgs, variants=variants,
+                cimg=vcommon.color_images(imgs, variants, p.get('color_images')))
 
 
 ALL_PRODUCTS = list(PRODUCTS)
@@ -203,7 +204,7 @@ def page(P):
   </div>
 </main>'''
 
-    data = [dict(label=lab, blurb=b, images=d['images'], variants=d['variants']) for h, lab, b, d in vers]
+    data = [dict(label=lab, blurb=b, images=d['images'], cimg=d['cimg'], variants=d['variants']) for h, lab, b, d in vers]
     js = '''// Terreno page: version -> colour -> size selector, gallery
 (() => {
   const V = %s, CV = %s;
@@ -211,6 +212,9 @@ def page(P):
   let ver = 0, color = null, size = null;
   const radios = (box, name, items, cur) => { box.innerHTML = items.map(x => `<label><input type="radio" name="${name}" value="${x}"${x===cur?' checked':''}><span>${CV[x]||x}</span></label>`).join(''); };
   const bindThumbs = () => { const t=[...list.querySelectorAll('button')]; t.forEach(b=>b.onclick=()=>{ main.src=b.dataset.src; main.alt=b.dataset.alt; t.forEach(x=>x.setAttribute('aria-pressed',x===b)); }); };
+  const setImgs = (imgs, label) => { main.src = imgs[0] + '?width=1000';
+    list.innerHTML = imgs.map((u,i)=>`<li><button aria-pressed="${i===0}" data-src="${u}?width=1000" data-alt="${label} – ảnh ${i+1}"><img src="${u}?width=160" alt="Ảnh ${i+1}"></button></li>`).join(''); bindThumbs(); };
+  const colorImgs = () => { const ci=(V[ver].cimg||{})[color]; if(ci&&ci.length) setImgs(ci, V[ver].label+' – '+(CV[color]||color)); };
   const render = () => {
     const v = V[ver], colors = [...new Set(v.variants.map(x=>x.color))];
     if (!colors.includes(color)) color = colors[0];
@@ -221,15 +225,15 @@ def page(P):
     const m = v.variants.find(x=>x.color===color && x.size===size); const sku = (m && m.sku) ? m.sku : '—';
     $('sz-sku').textContent = sku;
     document.querySelectorAll('.sku-table tbody tr').forEach(tr=>tr.classList.toggle('on', tr.dataset.key ? tr.dataset.key===size+'|'+color && (!tr.closest('[data-ver]') ) && (tr.dataset.ver===undefined || +tr.dataset.ver===ver) && (V.length===1 || tr.cells[0].textContent===V[ver].label) : tr.dataset.sku===sku));
-    document.querySelectorAll('#color-opts input').forEach(r=>r.onchange=()=>{ color=r.value; render(); });
+    document.querySelectorAll('#color-opts input').forEach(r=>r.onchange=()=>{ color=r.value; render(); colorImgs(); });
     document.querySelectorAll('#size-opts input').forEach(r=>r.onchange=()=>{ size=r.value; render(); });
   };
   const setVer = k => { ver = +k; const v = V[ver]; if ($('ver-desc')) $('ver-desc').textContent = v.blurb;
     main.src = v.images[0] + '?width=1000';
     list.innerHTML = v.images.map((u,i)=>`<li><button aria-pressed="${i===0}" data-src="${u}?width=1000" data-alt="${v.label} – ảnh ${i+1}"><img src="${u}?width=160" alt="Ảnh ${i+1}"></button></li>`).join('');
-    bindThumbs(); render(); };
+    bindThumbs(); render(); colorImgs(); };
   document.querySelectorAll('input[name=ver]').forEach(r=>r.addEventListener('change',()=>setVer(r.value)));
-  bindThumbs(); render();
+  bindThumbs(); render(); colorImgs();
 })();
 ''' % (json.dumps(data, ensure_ascii=False), json.dumps(COLOR_VI, ensure_ascii=False))
 

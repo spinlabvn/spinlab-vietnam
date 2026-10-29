@@ -19,6 +19,16 @@ def all_variants(h, variants):
     return [dict(v, sku=o.get('sku', {}).get((v['size'], v['color']), v['sku'])) for v in variants] + [dict(v) for v in o.get('add', [])]
 
 
+def color_images(imgs, variants, given=None):
+    """Photos per colour. Vittoria often lists none: then photo 1 is the black tyre, photo 2 the tan-wall one
+    and the rest fit both colours (true for Terreno, Barzo, Mezcal, Peyote, Martello)."""
+    if given:
+        return given
+    if {v['color'] for v in variants} == {'Black', 'Brown'} and len(imgs) > 2:
+        return {'Black': [imgs[0]] + imgs[2:], 'Brown': [imgs[1]] + imgs[2:]}
+    return {}
+
+
 def in_stock(h, variants):
     """Apply OVERRIDES for handle h, then keep only SKUs on Spinlab's stock list."""
     return [v for v in all_variants(h, variants) if stock.ok(v['sku'])]

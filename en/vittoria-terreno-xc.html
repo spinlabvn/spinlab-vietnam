@@ -461,6 +461,14 @@ tbody tr.on{background:#FFF7D6}
 .cmp-clear{border:0;background:none;font-size:13px;text-decoration:underline;color:var(--muted);min-height:44px}
 body.cmp-open .zalo-fab{bottom:96px}
 @media (max-width:600px){.cmp-items li{width:52px;height:52px}.cmp-items img{max-width:44px;max-height:44px}.cmp-clear{display:none}}
+/* Messenger chat */
+.msg-fab{position:fixed;right:16px;bottom:88px;z-index:60;display:flex;align-items:center;gap:10px;border-radius:999px;background:#fff;box-shadow:0 6px 20px rgba(0,0,0,.18);transition:transform .2s,box-shadow .2s}
+.msg-fab:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(0,0,0,.22)}
+.msg-ic{display:grid;place-items:center;width:56px;height:56px;border-radius:50%;background:linear-gradient(45deg,#0099FF 0%,#A033FF 60%,#FF5280 90%,#FF7061 100%)}
+.msg-label{display:none;font-weight:700;font-size:14px;color:#7a2fd6;padding-right:18px}
+@media (min-width:1024px){.msg-fab{right:24px;bottom:92px}.msg-label{display:block}}
+body.cmp-open .msg-fab{bottom:164px}
+
 /* MTB tire pages */
 .opt-group{border:0;margin:8px 0 0;padding:0}
 .opt-group legend{padding:0;margin-bottom:10px;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.04em;display:flex;gap:10px;flex-wrap:wrap;align-items:baseline}
@@ -485,13 +493,6 @@ body.cmp-open .zalo-fab{bottom:96px}
 .spec-table td,.spec-table th{white-space:nowrap}
 .spec-table td:nth-child(5){font-variant-numeric:tabular-nums;font-weight:600}
 .spec-table tr.on{background:#FFF7D6}
-/* Messenger chat */
-.msg-fab{position:fixed;right:16px;bottom:88px;z-index:60;display:flex;align-items:center;gap:10px;border-radius:999px;background:#fff;box-shadow:0 6px 20px rgba(0,0,0,.18);transition:transform .2s,box-shadow .2s}
-.msg-fab:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(0,0,0,.22)}
-.msg-ic{display:grid;place-items:center;width:56px;height:56px;border-radius:50%;background:linear-gradient(45deg,#0099FF 0%,#A033FF 60%,#FF5280 90%,#FF7061 100%)}
-.msg-label{display:none;font-weight:700;font-size:14px;color:#7a2fd6;padding-right:18px}
-@media (min-width:1024px){.msg-fab{right:24px;bottom:92px}.msg-label{display:block}}
-body.cmp-open .msg-fab{bottom:164px}
 /* Card hover image */
 .p-img>img{transition:opacity .3s}
 .p-img>img.alt{position:absolute;inset:0;width:100%;height:100%;max-width:none;max-height:none;padding:12px;box-sizing:border-box;opacity:0;pointer-events:none}
@@ -766,7 +767,7 @@ body.cmp-open .msg-fab{bottom:164px}
 
 // MTB tire page: version -> colour -> size selector, gallery
 (() => {
-  const V = [{"label": "XC Race", "blurb": "The race version for cross-country racers — every detail aimed at speed and precision.", "images": ["https://cdn.shopify.com/s/files/1/0800/0549/7120/files/01-terreno-xc-race-black.webp", "https://cdn.shopify.com/s/files/1/0800/0549/7120/files/02-terreno-xc-race-brown.webp", "https://cdn.shopify.com/s/files/1/0800/0549/7120/files/03-terreno-xc-race-top-view.webp", "https://cdn.shopify.com/s/files/1/0800/0549/7120/files/08-terreno-xc-race-brown.webp", "https://cdn.shopify.com/s/files/1/0800/0549/7120/files/06-terreno-xc-race-brown-packaging.webp"], "cimg": {}, "variants": [{"size": "29x2.25", "color": "Brown", "sku": "11A00740"}, {"size": "29x2.25", "color": "Black", "sku": "11A00739"}, {"size": "29x2.4", "color": "Brown", "sku": "11A00738"}, {"size": "29x2.4", "color": "Black", "sku": "11A00737"}]}, {"label": "XC Trail", "blurb": "A tougher Trail Case casing for hardpack trails. The 4Compound puts four rubbers exactly where they are needed — combining speed, grip and durability.", "images": ["https://cdn.shopify.com/s/files/1/0800/0549/7120/files/terreno-xc-trail-01_1.webp", "https://cdn.shopify.com/s/files/1/0800/0549/7120/files/terreno-xc-trail-02.webp", "https://cdn.shopify.com/s/files/1/0800/0549/7120/files/terreno-xc-trail-03.webp", "https://cdn.shopify.com/s/files/1/0800/0549/7120/files/terreno-xc-trail-07_1.png", "https://cdn.shopify.com/s/files/1/0800/0549/7120/files/terreno-xc-trail-06.webp", "https://cdn.shopify.com/s/files/1/0800/0549/7120/files/terreno-xc-trail-04.webp"], "cimg": {}, "variants": [{"size": "29x2.25", "color": "Black", "sku": "11A00746"}, {"size": "29x2.4", "color": "Brown", "sku": "11A00747"}, {"size": "29x2.4", "color": "Black", "sku": "11A00748"}]}], CV = {"Anthracite": "Anthracite", "Brown": "Brown", "Black": "Black", "Para": "Para", "Tan": "Tan", "Blue": "Blue", "Red": "Red", "Pink": "Pink", "White": "White", "Yellow": "Yellow"};
+  const V = [{"label": "XC Race", "blurb": "The race version for cross-country racers — every detail aimed at speed and precision.", "images": ["https://cdn.shopify.com/s/files/1/0800/0549/7120/files/01-terreno-xc-race-black.webp", "https://cdn.shopify.com/s/files/1/0800/0549/7120/files/02-terreno-xc-race-brown.webp", "https://cdn.shopify.com/s/files/1/0800/0549/7120/files/03-terreno-xc-race-top-view.webp", "https://cdn.shopify.com/s/files/1/0800/0549/7120/files/08-terreno-xc-race-brown.webp", "https://cdn.shopify.com/s/files/1/0800/0549/7120/files/06-terreno-xc-race-brown-packaging.webp"], "cimg": {"Black": ["https://cdn.shopify.com/s/files/1/0800/0549/7120/files/01-terreno-xc-race-black.webp", "https://cdn.shopify.com/s/files/1/0800/0549/7120/files/03-terreno-xc-race-top-view.webp", "https://cdn.shopify.com/s/files/1/0800/0549/7120/files/08-terreno-xc-race-brown.webp", "https://cdn.shopify.com/s/files/1/0800/0549/7120/files/06-terreno-xc-race-brown-packaging.webp"], "Brown": ["https://cdn.shopify.com/s/files/1/0800/0549/7120/files/02-terreno-xc-race-brown.webp", "https://cdn.shopify.com/s/files/1/0800/0549/7120/files/03-terreno-xc-race-top-view.webp", "https://cdn.shopify.com/s/files/1/0800/0549/7120/files/08-terreno-xc-race-brown.webp", "https://cdn.shopify.com/s/files/1/0800/0549/7120/files/06-terreno-xc-race-brown-packaging.webp"]}, "variants": [{"size": "29x2.25", "color": "Brown", "sku": "11A00740"}, {"size": "29x2.25", "color": "Black", "sku": "11A00739"}, {"size": "29x2.4", "color": "Brown", "sku": "11A00738"}, {"size": "29x2.4", "color": "Black", "sku": "11A00737"}]}, {"label": "XC Trail", "blurb": "A tougher Trail Case casing for hardpack trails. The 4Compound puts four rubbers exactly where they are needed — combining speed, grip and durability.", "images": ["https://cdn.shopify.com/s/files/1/0800/0549/7120/files/terreno-xc-trail-01_1.webp", "https://cdn.shopify.com/s/files/1/0800/0549/7120/files/terreno-xc-trail-02.webp", "https://cdn.shopify.com/s/files/1/0800/0549/7120/files/terreno-xc-trail-03.webp", "https://cdn.shopify.com/s/files/1/0800/0549/7120/files/terreno-xc-trail-07_1.png", "https://cdn.shopify.com/s/files/1/0800/0549/7120/files/terreno-xc-trail-06.webp", "https://cdn.shopify.com/s/files/1/0800/0549/7120/files/terreno-xc-trail-04.webp"], "cimg": {"Black": ["https://cdn.shopify.com/s/files/1/0800/0549/7120/files/terreno-xc-trail-01_1.webp", "https://cdn.shopify.com/s/files/1/0800/0549/7120/files/terreno-xc-trail-03.webp", "https://cdn.shopify.com/s/files/1/0800/0549/7120/files/terreno-xc-trail-07_1.png", "https://cdn.shopify.com/s/files/1/0800/0549/7120/files/terreno-xc-trail-06.webp", "https://cdn.shopify.com/s/files/1/0800/0549/7120/files/terreno-xc-trail-04.webp"], "Brown": ["https://cdn.shopify.com/s/files/1/0800/0549/7120/files/terreno-xc-trail-02.webp", "https://cdn.shopify.com/s/files/1/0800/0549/7120/files/terreno-xc-trail-03.webp", "https://cdn.shopify.com/s/files/1/0800/0549/7120/files/terreno-xc-trail-07_1.png", "https://cdn.shopify.com/s/files/1/0800/0549/7120/files/terreno-xc-trail-06.webp", "https://cdn.shopify.com/s/files/1/0800/0549/7120/files/terreno-xc-trail-04.webp"]}, "variants": [{"size": "29x2.25", "color": "Black", "sku": "11A00746"}, {"size": "29x2.4", "color": "Brown", "sku": "11A00747"}, {"size": "29x2.4", "color": "Black", "sku": "11A00748"}]}], CV = {"Anthracite": "Anthracite", "Brown": "Brown", "Black": "Black", "Para": "Para", "Tan": "Tan", "Blue": "Blue", "Red": "Red", "Pink": "Pink", "White": "White", "Yellow": "Yellow"};
   const $ = id => document.getElementById(id), main = $('g-main'), list = document.querySelector('.g-thumbs');
   let ver = 0, color = null, size = null;
   const radios = (box, name, items, cur) => { box.innerHTML = items.map(x => `<label><input type="radio" name="${name}" value="${x}"${x===cur?' checked':''}><span>${CV[x]||x}</span></label>`).join(''); };
@@ -789,9 +790,9 @@ body.cmp-open .msg-fab{bottom:164px}
   const setVer = k => { ver = +k; const v = V[ver]; $('ver-desc').textContent = v.blurb; document.querySelectorAll('[data-tech]').forEach(el=>el.hidden=el.dataset.tech!=String(ver));
     main.src = v.images[0] + '?width=1000';
     list.innerHTML = v.images.map((u,i)=>`<li><button aria-pressed="${i===0}" data-src="${u}?width=1000" data-alt="${v.label} – photo ${i+1}"><img src="${u}?width=160" alt="Photo ${i+1}"></button></li>`).join('');
-    bindThumbs(); render(); };
+    bindThumbs(); render(); const ci=(v.cimg||{})[color]; if(ci&&ci.length) setImgs(ci, (CV[color]||color)); };
   document.querySelectorAll('input[name=ver]').forEach(r=>r.addEventListener('change',()=>setVer(r.value)));
-  bindThumbs(); render();
+  bindThumbs(); render(); { const ci=(V[ver].cimg||{})[color]; if(ci&&ci.length) setImgs(ci, (CV[color]||color)); }
 })();
 // Mobile menu drawer: ☰ opens the menu as a side panel; Escape, the backdrop, ✕ or a link closes it
 (() => {

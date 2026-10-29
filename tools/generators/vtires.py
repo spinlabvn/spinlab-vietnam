@@ -113,7 +113,8 @@ def load(h):
     p = json.load(open(os.path.join(J, (c['base'] if c else h) + '.json'), encoding='utf-8'))['product']
     imgs = [i['src'].split('?')[0] for i in p['images']][:6]
     raw = c['variants'] if c else [dict(size=v['option1'], color=v['option2'], sku=v['sku']) for v in p['variants']]
-    return dict(images=imgs, cimg=p.get('color_images', {}), variants=vcommon.in_stock(h, raw))
+    variants = vcommon.in_stock(h, raw)
+    return dict(images=imgs, cimg=vcommon.color_images(imgs, variants, p.get('color_images')), variants=variants)
 
 
 def live(L):
@@ -260,9 +261,9 @@ def page(L):
   const setVer = k => { ver = +k; const v = V[ver]; $('ver-desc').textContent = v.blurb; document.querySelectorAll('[data-tech]').forEach(el=>el.hidden=el.dataset.tech!=String(ver));
     main.src = v.images[0] + '?width=1000';
     list.innerHTML = v.images.map((u,i)=>`<li><button aria-pressed="${i===0}" data-src="${u}?width=1000" data-alt="${v.label} – ảnh ${i+1}"><img src="${u}?width=160" alt="Ảnh ${i+1}"></button></li>`).join('');
-    bindThumbs(); render(); };
+    bindThumbs(); render(); const ci=(v.cimg||{})[color]; if(ci&&ci.length) setImgs(ci, (CV[color]||color)); };
   document.querySelectorAll('input[name=ver]').forEach(r=>r.addEventListener('change',()=>setVer(r.value)));
-  bindThumbs(); render();
+  bindThumbs(); render(); { const ci=(V[ver].cimg||{})[color]; if(ci&&ci.length) setImgs(ci, (CV[color]||color)); }
 })();
 ''' % (json.dumps(data, ensure_ascii=False), json.dumps(COLOR_VI, ensure_ascii=False))
 
