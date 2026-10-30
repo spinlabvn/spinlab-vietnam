@@ -179,12 +179,13 @@ P = [
       note='Ảnh minh họa dòng bình FLY 550ml của Vittoria.',
       faq=[('Bình có vừa giá đỡ bình thông thường không?', 'Có, bình 550ml dùng với giá đỡ bình tiêu chuẩn.')]),
 ]
-GROUPS = [('sealant', 'Keo tự vá', 'Keo tubeless không amoniac cho road, gravel và MTB.'),
-          ('valve', 'Chân van', 'Van tubeless Multiway bằng nhôm, bộ 2 van, 4 chiều dài.'),
+# alphabetical (Vietnamese), same order as the menu
+GROUPS = [('air-liner', 'Air-Liner', 'Miếng lót tubeless: chống va vành, chống thủng rắn cắn và chạy run-flat khi xì lốp.'),
           ('rim-tape', 'Băng keo vành', 'Băng keo bịt kín lòng vành để lên tubeless.'),
-          ('air-liner', 'Air-Liner', 'Miếng lót tubeless: chống va vành, chống thủng rắn cắn và chạy run-flat khi xì lốp.'),
-          ('care', 'Vệ sinh lốp', 'Dung dịch làm sạch thành lốp cotton và nylon.'),
-          ('other', 'Săm & phụ kiện khác', 'Săm butyl và bình nước Vittoria.')]
+          ('valve', 'Chân van', 'Van tubeless Multiway bằng nhôm, bộ 2 van, 4 chiều dài.'),
+          ('sealant', 'Keo tự vá', 'Keo tubeless không amoniac cho road, gravel và MTB.'),
+          ('other', 'Săm & phụ kiện khác', 'Săm butyl và bình nước Vittoria.'),
+          ('care', 'Vệ sinh lốp', 'Dung dịch làm sạch thành lốp cotton và nylon.')]
 
 # Spinlab's stock list decides which rows (sizes) are shown; a product with no row in stock is not published
 for _p in P:

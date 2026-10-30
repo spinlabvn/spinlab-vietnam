@@ -398,31 +398,6 @@ tbody tr.on{background:#FFF7D6}
 .faq details p{margin:0;padding:0 18px 16px;color:var(--muted);line-height:1.6}
 .related{grid-template-columns:repeat(2,minmax(0,1fr))}
 @media (min-width:1024px){.related{grid-template-columns:repeat(3,minmax(0,1fr))}}
-
-/* MTB tire pages */
-.opt-group{border:0;margin:8px 0 0;padding:0}
-.opt-group legend{padding:0;margin-bottom:10px;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.04em;display:flex;gap:10px;flex-wrap:wrap;align-items:baseline}
-.siblings{margin:16px 0 0;font-size:14px;color:var(--muted)}
-.siblings b{color:var(--text)}
-.geo-note{font-size:13px;color:var(--muted);margin:10px 0 0}
-.ver-desc{margin:8px 0 0;font-size:14px;color:var(--muted);line-height:1.55}
-.vtable td,.vtable th{vertical-align:top}
-.vtable td:last-child{min-width:240px}
-.sku-table tr.on{background:#FFF7D6}
-
-/* Vittoria technology + spec chart */
-.tech-v[hidden]{display:none}
-.tech{display:grid;gap:12px;grid-template-columns:repeat(2,minmax(0,1fr))}
-@media (min-width:1024px){.tech{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}}
-@media (max-width:479px){.tech{grid-template-columns:1fr}}
-.tech article{padding:20px;border:1px solid var(--line);border-radius:var(--radius);background:#fff}
-.tech .num{display:inline-block;font-weight:800;color:var(--brand-red);font-size:14px;margin-bottom:8px}
-.tech h3{margin:0 0 8px;font-size:16px;line-height:1.3}
-.tech p{margin:0;font-size:14px;color:var(--muted);line-height:1.6}
-.tech-of{margin:0 0 14px;font-size:14px;color:var(--muted)}
-.spec-table td,.spec-table th{white-space:nowrap}
-.spec-table td:nth-child(5){font-variant-numeric:tabular-nums;font-weight:600}
-.spec-table tr.on{background:#FFF7D6}
 /* Header in brand yellow (announcement bar removed) */
 .header{background:var(--brand-yellow);border-bottom-color:rgba(0,0,0,.08)}
 .header .nav{background:#fff;border-top-color:rgba(0,0,0,.08)}
@@ -493,6 +468,31 @@ body.cmp-open .zalo-fab{bottom:96px}
 .msg-label{display:none;font-weight:700;font-size:14px;color:#7a2fd6;padding-right:18px}
 @media (min-width:1024px){.msg-fab{right:24px;bottom:92px}.msg-label{display:block}}
 body.cmp-open .msg-fab{bottom:164px}
+
+/* MTB tire pages */
+.opt-group{border:0;margin:8px 0 0;padding:0}
+.opt-group legend{padding:0;margin-bottom:10px;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.04em;display:flex;gap:10px;flex-wrap:wrap;align-items:baseline}
+.siblings{margin:16px 0 0;font-size:14px;color:var(--muted)}
+.siblings b{color:var(--text)}
+.geo-note{font-size:13px;color:var(--muted);margin:10px 0 0}
+.ver-desc{margin:8px 0 0;font-size:14px;color:var(--muted);line-height:1.55}
+.vtable td,.vtable th{vertical-align:top}
+.vtable td:last-child{min-width:240px}
+.sku-table tr.on{background:#FFF7D6}
+
+/* Vittoria technology + spec chart */
+.tech-v[hidden]{display:none}
+.tech{display:grid;gap:12px;grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (min-width:1024px){.tech{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}}
+@media (max-width:479px){.tech{grid-template-columns:1fr}}
+.tech article{padding:20px;border:1px solid var(--line);border-radius:var(--radius);background:#fff}
+.tech .num{display:inline-block;font-weight:800;color:var(--brand-red);font-size:14px;margin-bottom:8px}
+.tech h3{margin:0 0 8px;font-size:16px;line-height:1.3}
+.tech p{margin:0;font-size:14px;color:var(--muted);line-height:1.6}
+.tech-of{margin:0 0 14px;font-size:14px;color:var(--muted)}
+.spec-table td,.spec-table th{white-space:nowrap}
+.spec-table td:nth-child(5){font-variant-numeric:tabular-nums;font-weight:600}
+.spec-table tr.on{background:#FFF7D6}
 /* Card hover image */
 .p-img>img{transition:opacity .3s}
 .p-img>img.alt{position:absolute;inset:0;width:100%;height:100%;max-width:none;max-height:none;padding:12px;box-sizing:border-box;opacity:0;pointer-events:none}
@@ -610,9 +610,12 @@ body.cmp-open .msg-fab{bottom:164px}
                 <a class="fly-top" href="/tubeless" aria-expanded="false" aria-controls="fly-tubeless">Tubeless &amp; phụ kiện <svg aria-hidden="true"><use href="#i-right"/></svg></a>
                 <div class="fly" id="fly-tubeless">
                   <ul>
-                    <li><a href="/tubeless#sealant">Keo tự vá</a></li>
                     <li><a href="/tubeless#air-liner">Air-Liner</a></li>
+                    <li><a href="/tubeless#rim-tape">Băng keo vành</a></li>
                     <li><a href="/tubeless#valve">Chân van</a></li>
+                    <li><a href="/tubeless#sealant">Keo tự vá</a></li>
+                    <li><a href="/tubeless#other">Săm &amp; phụ kiện khác</a></li>
+                    <li><a href="/tubeless#care">Vệ sinh lốp</a></li>
                   </ul>
                   <a class="sub-all" href="/tubeless">Xem tất cả tubeless &amp; phụ kiện</a>
                 </div>
