@@ -22,7 +22,7 @@ PORT = next((int(a) for a in sys.argv[1:] if a.isdigit()), 8770)
 DATA = lambda f: os.path.join(ROOT, 'data', f)
 LOCK = threading.Lock()
 STEPS = ['build_articles.py', 'apply_overrides.py', 'apply_hidden.py', 'build_new_products.py', 'apply_prices.py',
-         'build_compare.py', 'card_hover.py', 'brand_logos.py', 'build_hubs.py', 'clean_urls.py', 'build_en.py']
+         'build_compare.py', 'card_hover.py', 'brand_logos.py', 'build_hubs.py', 'footer.py', 'clean_urls.py', 'build_en.py']
 SLUG = re.compile(r'^[a-z0-9]+(?:-[a-z0-9]+)*$')
 
 

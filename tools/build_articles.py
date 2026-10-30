@@ -48,12 +48,13 @@ def products(items, title='Sản phẩm trong bài'):
 
 
 # ---------- size chart (from the geometry tables of the bikes on the site) ----------
-GROUPS = [('Xe Road', 'Polygon Helios, Strattos', lambda v: v['cat'] == 'road'),
-          ('Xe MTB', 'Downhill, Enduro, Trail, Cross Country', lambda v: v['cat'] in ('dh', 'enduro', 'trail', 'xc')),
-          ('Heist (City - Hybrid)', 'Heist 2, 5, 7', lambda v: v['series'] == 'Heist'),
-          ('Path (City & Gravel)', 'Path 2, 3, 4, Path X5', lambda v: v['series'] in ('Path', 'Path X'))]
+# One table: a row per size, a column per bike family, so every family lines up on the same sizes.
+GROUPS = [('Road', 'Helios, Strattos', lambda v: v['cat'] == 'road'),
+          ('MTB', 'Mọi dòng MTB', lambda v: v['cat'] in ('dh', 'enduro', 'trail', 'xc')),
+          ('Heist', 'City - Hybrid', lambda v: v['series'] == 'Heist'),
+          ('Path', 'City &amp; Gravel', lambda v: v['series'] in ('Path', 'Path X'))]
 ORDER = ['XXS', 'XS', 'S', 'M', 'L', 'XL', 'XXL']
-tables = []
+cols = []
 for title, sub, keep in GROUPS:
     agg = collections.defaultdict(collections.Counter)
     for slug, v in VI.items():
@@ -63,12 +64,17 @@ for title, sub, keep in GROUPS:
         for r in g['rows']:
             if r['label'] == 'Height':
                 for sz, val in zip(g['sizes'], r['values']):
+                    sz = re.sub(r'\s*\(.*\)$', '', sz)   # 'XS (27.5″)' -> 'XS'
                     if sz in ORDER:
-                        agg[sz][val] += 1
+                        agg[sz][val.replace('-', '–')] += 1
     if agg:
-        rows = ''.join(f'<tr><th scope="row">{sz}</th><td>{agg[sz].most_common(1)[0][0]} cm</td></tr>' for sz in ORDER if sz in agg)
-        tables.append(f'<div class="table-wrap"><table><caption>{title}<small>{sub}</small></caption><thead><tr><th scope="col">Size</th>'
-                      f'<th scope="col">Chiều cao người đạp</th></tr></thead><tbody>{rows}</tbody></table></div>')
+        cols.append((title, sub, {sz: c.most_common(1)[0][0] for sz, c in agg.items()}))
+sizes = [sz for sz in ORDER if any(sz in c for _, _, c in cols)]
+head = ''.join(f'<th scope="col">{t}<small>{s}</small></th>' for t, s, _ in cols)
+body = ''.join(f'<tr><th scope="row">{sz}</th>' + ''.join(f'<td>{c[sz]}</td>' if sz in c else '<td class="na">—</td>' for _, _, c in cols) + '</tr>'
+               for sz in sizes)
+SIZE_TABLE = (f'<div class="table-wrap size-table"><table><caption>Chiều cao người đạp (cm) theo size khung</caption>'
+              f'<thead><tr><th scope="col">Size</th>{head}</tr></thead><tbody>{body}</tbody></table></div>')
 
 # ---------- Strattos C: builds from bikes.json + retail prices ----------
 SC = [('2026-strattos-c9-axs-road-bike', 'SRAM Force AXS E1 2x12, điện tử không dây', 'LINC Alpha Carbon 35mm'),
@@ -82,7 +88,7 @@ sc_rows = ''.join(f'<tr><th scope="row"><a href="{VI[s]["file"]}.html">{E(BK[s][
 PLACEHOLDERS = {
     'bang_gia_strattos_c': ('<div class="table-wrap"><table><thead><tr><th scope="col">Phiên bản</th><th scope="col">Bộ truyền động</th>'
                             f'<th scope="col">Bộ vành</th><th scope="col">Giá bán lẻ</th></tr></thead><tbody>{sc_rows}</tbody></table></div>'),
-    'bang_size': f'<div class="size-grid">{"".join(tables)}</div>',
+    'bang_size': SIZE_TABLE,
 }
 fill = lambda body: re.sub(r'(?:<p>\s*)?\{\{(\w+)\}\}(?:\s*</p>)?', lambda m: PLACEHOLDERS.get(m.group(1), m.group(0)), body)
 ARTICLES = json.load(open(os.path.join(ROOT, 'data', 'articles.json'), encoding='utf-8'))['articles']
@@ -128,8 +134,16 @@ CSS = '''/* Articles */
 .art-help .help .btn-zalo img{width:20px;height:20px}
 @media (min-width:768px){.art-help .help{grid-template-columns:1fr auto;padding:22px 28px}.art-help .help .actions{justify-content:flex-end;flex-wrap:nowrap}}
 .article .cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
-.size-grid{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
-.size-grid caption small{display:block;font-weight:400;color:var(--muted);font-size:13px}
+.size-table table{width:100%;table-layout:fixed}
+.size-table caption{text-align:left;font-weight:700;margin-bottom:8px}
+.size-table th,.size-table td{text-align:center;padding:10px 6px;white-space:nowrap;font-variant-numeric:tabular-nums}
+.size-table thead th{vertical-align:bottom;line-height:1.25;white-space:normal;text-transform:none;letter-spacing:0}
+.size-table thead th small{display:block;font-weight:400;color:var(--muted);font-size:12px;white-space:normal;margin-top:2px}
+.size-table thead th:first-child,.size-table tbody th{width:56px}
+.size-table tbody th{font-weight:800}
+.size-table tbody tr:nth-child(even){background:var(--surface)}
+.size-table .na{color:var(--muted)}
+@media (max-width:560px){.size-table th,.size-table td{padding:8px 3px;font-size:13px}.size-table thead th small{font-size:11px}}
 .art-products{margin:40px 0 0}
 .art-products h2{font-size:22px;margin:0 0 16px}
 .art-more{border-top:1px solid var(--line);padding-top:32px;margin-top:8px}

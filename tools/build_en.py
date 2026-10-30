@@ -120,6 +120,7 @@ def to_en(s):
     s = re.sub(r'url\((["\']?)img/', r'url(\1/img/', s)
     # scripts that build URLs / read product ids from links
     s = s.replace(".replace(/^\\//,'')", ".replace(/^\\/(?:en\\/)?/,'')")
+    s = s.replace('&hl=vi&z=16&output=embed', '&hl=en&z=16&output=embed')   # footer map labels in English
     s = s.replace("'/so-sanh", "'/en/compare").replace("'/trangchu'", "'/en/home'").replace("'/'+id", "'/en/'+id")
     return s
 
