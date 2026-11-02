@@ -2,6 +2,12 @@
  "note": "Ngày đăng sản phẩm — do tools/build_new_products.py quản lý",
  "products": [
   {
+   "href": "vittoria-corsa-next-tube-type.html",
+   "added": "2026-11-02 15:27",
+   "seq": 106,
+   "name": "Corsa N.Ext Tube-Type"
+  },
+  {
    "href": "polygon-cascade-5.html",
    "added": "2026-10-21 12:32",
    "seq": 105,
