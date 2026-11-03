@@ -236,16 +236,14 @@ for L in LINES:
 
 # listing page (shell: tubeless.html, which already carries the brand-page styles)
 T = open(os.path.join(D, 'tubeless.html'), encoding='utf-8').read()
-secs = ''.join(f'  <section class="brand-cat" id="{g}"><div class="container"><h2 class="bc-title">{E(t)}</h2><p class="bc-sub">{E(s_)}</p>'
-               f'<div class="grid">{"".join(card(L) for L in LINES if L["group"] == g)}</div></div></section>\n' for g, t, s_ in GROUPS)
-nav = ('  <nav class="brand-nav" aria-label="Dòng sản phẩm"><div class="container"><ul>' +
-       ''.join(f'<li><a href="#{g}">{E(t)}<small>{sum(L["group"] == g for L in LINES)}</small></a></li>' for g, t, s_ in GROUPS) + '</ul></div></nav>')
+# one section with every product (Spinlab 2026-11-03: no per-series sections on this page)
+secs = (f'  <section class="brand-cat" id="san-pham"><div class="container"><h2 class="bc-title">Tất cả sản phẩm</h2><p class="bc-sub">{len(LINES)} sản phẩm</p>'
+        f'<div class="grid">{"".join(card(L) for g, _, _ in GROUPS for L in LINES if L["group"] == g)}</div></div></section>\n')
 main = f'''<main id="main" class="pdp listing">
   <div class="container"><nav class="crumbs" aria-label="Đường dẫn"><ol><li><a href="index.html">Trang chủ</a></li><li><a href="phu-tung.html">Phụ tùng</a></li><li aria-current="page">Dây cuốn tay lái</li></ol></nav></div>
   <section class="list-hero plain">
     <div class="container"><div class="lh-copy"><span class="kicker">Emume</span><h1>Dây cuốn tay lái</h1><p>Dây cuốn ghi đông và phụ kiện Emume chính hãng — Basic, Bastet, Galaxy, Anubis Feather. Phân phối bởi Spinlab.</p></div></div>
   </section>
-{nav}
 {secs}</main>'''
 T = re.sub(r'<title>.*?</title>', '<title>Dây cuốn tay lái Emume — Spinlab</title>', T, 1, flags=re.S)
 T = re.sub(r'<meta name="description"[^>]*>', '<meta name="description" content="Dây cuốn tay lái Emume chính hãng tại Spinlab: Basic, Bastet, Galaxy, Anubis Feather và phụ kiện nút bịt titan.">', T, 1)
