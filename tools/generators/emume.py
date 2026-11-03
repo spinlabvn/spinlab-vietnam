@@ -237,16 +237,21 @@ for L in LINES:
 # listing page (shell: tubeless.html, which already carries the brand-page styles)
 T = open(os.path.join(D, 'tubeless.html'), encoding='utf-8').read()
 # one section with every product (Spinlab 2026-11-03: no per-series sections on this page)
-secs = (f'  <section class="brand-cat" id="san-pham"><div class="container"><h2 class="bc-title">Tất cả sản phẩm</h2><p class="bc-sub">{len(LINES)} sản phẩm</p>'
+# products hidden from the admin page (data/hidden.json) are not counted; apply_hidden.py hides their cards
+HID = set(json.load(open(os.path.join(D, 'data', 'hidden.json'), encoding='utf-8'))['pages'])
+SHOWN = [L for L in LINES if L['file'] not in HID]
+TAPES = ', '.join(L['name'] for L in SHOWN if L['group'] != 'accessory')
+ACC = any(L['group'] == 'accessory' for L in SHOWN)
+secs = (f'  <section class="brand-cat" id="san-pham"><div class="container"><h2 class="bc-title">Tất cả sản phẩm</h2><p class="bc-sub">{len(SHOWN)} sản phẩm</p>'
         f'<div class="grid">{"".join(card(L) for g, _, _ in GROUPS for L in LINES if L["group"] == g)}</div></div></section>\n')
 main = f'''<main id="main" class="pdp listing">
   <div class="container"><nav class="crumbs" aria-label="Đường dẫn"><ol><li><a href="index.html">Trang chủ</a></li><li><a href="phu-tung.html">Phụ tùng</a></li><li aria-current="page">Dây cuốn tay lái</li></ol></nav></div>
   <section class="list-hero plain">
-    <div class="container"><div class="lh-copy"><span class="kicker">Emume</span><h1>Dây cuốn tay lái</h1><p>Dây cuốn ghi đông và phụ kiện Emume chính hãng — Basic, Bastet, Galaxy, Anubis Feather. Phân phối bởi Spinlab.</p></div></div>
+    <div class="container"><div class="lh-copy"><span class="kicker">Emume</span><h1>Dây cuốn tay lái</h1><p>Dây cuốn ghi đông{' và phụ kiện' if ACC else ''} Emume chính hãng — {TAPES}. Phân phối bởi Spinlab.</p></div></div>
   </section>
 {secs}</main>'''
 T = re.sub(r'<title>.*?</title>', '<title>Dây cuốn tay lái Emume — Spinlab</title>', T, 1, flags=re.S)
-T = re.sub(r'<meta name="description"[^>]*>', '<meta name="description" content="Dây cuốn tay lái Emume chính hãng tại Spinlab: Basic, Bastet, Galaxy, Anubis Feather và phụ kiện nút bịt titan.">', T, 1)
+T = re.sub(r'<meta name="description"[^>]*>', f'<meta name="description" content="Dây cuốn tay lái Emume chính hãng tại Spinlab: {TAPES}{" và phụ kiện nút bịt titan" if ACC else ""}.">', T, 1)
 T = re.sub(r'<main id="main".*?</main>', lambda m: main, T, 1, flags=re.S)
 open(os.path.join(D, 'day-cuon-tay-lai.html'), 'w', encoding='utf-8').write(T)
 print('day-cuon-tay-lai.html', sum(len(L['variants']) for L in LINES), 'codes')

@@ -78,8 +78,14 @@ def groups_from(page, panel=None):
     return [g.replace('<h2>', '<h3>').replace('</h2>', '</h3>') for g in gs]
 
 
+_hp = os.path.join(D, 'data', 'hidden.json')
+HIDDEN = set(json.load(open(_hp, encoding='utf-8'))['pages']) if os.path.exists(_hp) else set()
+
+
 def ncards(html_):
-    return html_.count('<article class="p-card"')
+    # cards of products hidden from the admin page (apply_hidden.py) are not counted
+    return sum(1 for c in re.findall(r'<article class="p-card".*?</article>', html_, re.S)
+               if not any(f'href="{h}"' in c or f'href="/{h[:-5]}"' in c for h in HIDDEN))
 
 
 def bike_card(slug, desc):
