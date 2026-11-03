@@ -475,6 +475,14 @@ tbody tr.on{background:#FFF7D6}
 .cmp-clear{border:0;background:none;font-size:13px;text-decoration:underline;color:var(--muted);min-height:44px}
 body.cmp-open .zalo-fab{bottom:96px}
 @media (max-width:600px){.cmp-items li{width:52px;height:52px}.cmp-items img{max-width:44px;max-height:44px}.cmp-clear{display:none}}
+/* Messenger chat */
+.msg-fab{position:fixed;right:16px;bottom:88px;z-index:60;display:flex;align-items:center;gap:10px;border-radius:999px;background:#fff;box-shadow:0 6px 20px rgba(0,0,0,.18);transition:transform .2s,box-shadow .2s}
+.msg-fab:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(0,0,0,.22)}
+.msg-ic{display:grid;place-items:center;width:56px;height:56px;border-radius:50%;background:linear-gradient(45deg,#0099FF 0%,#A033FF 60%,#FF5280 90%,#FF7061 100%)}
+.msg-label{display:none;font-weight:700;font-size:14px;color:#7a2fd6;padding-right:18px}
+@media (min-width:1024px){.msg-fab{right:24px;bottom:92px}.msg-label{display:block}}
+body.cmp-open .msg-fab{bottom:164px}
+
 /* Brand page */
 .brand-nav{background:#fff;border-bottom:1px solid var(--line)}
 .brand-nav ul{list-style:none;margin:0;padding:12px 0;display:flex;gap:8px;overflow-x:auto;scrollbar-width:none}
@@ -495,13 +503,6 @@ body.cmp-open .zalo-fab{bottom:96px}
 .brand-empty .lines li{padding:6px 14px;border-radius:999px;background:var(--surface);font-weight:600;font-size:14px}
 .brand-empty .cta{display:flex;justify-content:center;flex-wrap:wrap;gap:12px}
 .list-hero.plain{background:var(--text)}
-/* Messenger chat */
-.msg-fab{position:fixed;right:16px;bottom:88px;z-index:60;display:flex;align-items:center;gap:10px;border-radius:999px;background:#fff;box-shadow:0 6px 20px rgba(0,0,0,.18);transition:transform .2s,box-shadow .2s}
-.msg-fab:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(0,0,0,.22)}
-.msg-ic{display:grid;place-items:center;width:56px;height:56px;border-radius:50%;background:linear-gradient(45deg,#0099FF 0%,#A033FF 60%,#FF5280 90%,#FF7061 100%)}
-.msg-label{display:none;font-weight:700;font-size:14px;color:#7a2fd6;padding-right:18px}
-@media (min-width:1024px){.msg-fab{right:24px;bottom:92px}.msg-label{display:block}}
-body.cmp-open .msg-fab{bottom:164px}
 /* Card hover image */
 .p-img>img{transition:opacity .3s}
 .p-img>img.alt{position:absolute;inset:0;width:100%;height:100%;max-width:none;max-height:none;padding:12px;box-sizing:border-box;opacity:0;pointer-events:none}
@@ -660,11 +661,11 @@ body.cmp-open .msg-fab{bottom:164px}
   <div class="container"><nav class="crumbs" aria-label="Đường dẫn"><ol><li><a href="/trangchu">Trang chủ</a></li><li><a href="/thuong-hieu">Thương hiệu</a></li><li aria-current="page">Story Bike</li></ol></nav></div>
   <section class="list-hero">
     <img src="img/story/continue-silver-3.jpg" alt="Rider bên xe trial Story Continue">
-    <div class="container"><div class="lh-copy"><span class="kicker">Thương hiệu</span><h1>Story Bike</h1><p>2 mẫu xe dirt jump và street trial chính hãng. Phân phối bởi Spinlab.</p></div></div>
+    <div class="container"><div class="lh-copy"><span class="kicker">Thương hiệu</span><h1>Story Bike</h1><p>3 mẫu xe dirt jump và street trial chính hãng. Phân phối bởi Spinlab.</p></div></div>
   </section>
-  <nav class="brand-nav" aria-label="Danh mục sản phẩm"><div class="container"><ul><li><a href="#dirt-jump">Dirt Jump<small>1</small></a></li><li><a href="#street">Street trial<small>1</small></a></li></ul></div></nav>
+  <nav class="brand-nav" aria-label="Danh mục sản phẩm"><div class="container"><ul><li><a href="#dirt-jump">Dirt Jump<small>1</small></a></li><li><a href="#street">Street trial<small>2</small></a></li></ul></div></nav>
   <section class="brand-cat" id="dirt-jump"><div class="container"><h2 class="bc-title">Dirt Jump</h2><div class="grid"><article class="p-card"><div class="p-img"><span class="tag">Mới</span><img src="img/story/curvet-black.jpg" alt="Story Curvet C2.0 Ultra" loading="lazy"><img class="alt" src="img/story/curvet-black-2.jpg" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Story · Curvet C2.0</span><h3 class="p-name"><a class="stretch" href="/story-curvet-c2-ultra">Curvet C2.0 Ultra</a></h3><p class="p-desc">X-Fusion Slant RC 34 · 1 tốc độ</p><span class="p-price">26.800.000₫</span></div></article></div></div></section>
-  <section class="brand-cat" id="street"><div class="container"><h2 class="bc-title">Street trial</h2><div class="grid"><article class="p-card"><div class="p-img"><span class="tag">Mới</span><img src="img/story/continue-purple.jpg" alt="Story Continue Pro" loading="lazy"><img class="alt" src="img/story/continue-purple-2.jpg" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Story · Street trial</span><h3 class="p-name"><a class="stretch" href="/story-continue-pro">Continue Pro</a></h3><p class="p-desc">Bánh 24" · Tím / Bạc</p><span class="p-price">22.300.000₫</span></div></article></div></div></section>
+  <section class="brand-cat" id="street"><div class="container"><h2 class="bc-title">Street trial</h2><div class="grid"><article class="p-card"><div class="p-img"><span class="tag">Mới</span><img src="img/story/continue-purple.jpg" alt="Story Continue Pro" loading="lazy"><img class="alt" src="img/story/continue-purple-2.jpg" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Story · Street trial</span><h3 class="p-name"><a class="stretch" href="/story-continue-pro">Continue Pro</a></h3><p class="p-desc">Bánh 24" · Tím / Bạc</p><span class="p-price">22.300.000₫</span></div></article><article class="p-card"><div class="p-img"><span class="tag">Mới</span><img src="img/story/basics-blue.jpg" alt="Story Basics 24" loading="lazy"></div><div class="p-body"><span class="p-brand">Story · Street trial</span><h3 class="p-name"><a class="stretch" href="/story-basics-24">Basics 24</a></h3><p class="p-desc">Bánh 24" · Xanh / Vàng</p><span class="p-price">14.680.000₫</span></div></article></div></div></section>
 </main>
 
 

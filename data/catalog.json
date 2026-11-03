@@ -2,6 +2,12 @@
  "note": "Ngày đăng sản phẩm — do tools/build_new_products.py quản lý",
  "products": [
   {
+   "href": "story-basics-24.html",
+   "added": "2026-11-03 19:11",
+   "seq": 107,
+   "name": "Basics 24"
+  },
+  {
    "href": "vittoria-corsa-next-tube-type.html",
    "added": "2026-11-02 15:27",
    "seq": 106,

@@ -279,7 +279,7 @@ SPEC_ROWS = {'Dropout': 'Pát sau', 'Brake Mount': 'Ngàm phanh', 'Grips': 'Bao 
              'Frame Weight': 'Trọng lượng khung', 'Frameset': 'Khung', 'Handlebar': 'Ghi đông', 'Handlestem': 'Pô tăng', 'Headset': 'Chén cổ',
              'Hub': 'Đùm', 'Motor': 'Động cơ', 'Pedal': 'Bàn đạp', 'Rear Derailleur': 'Củ đề sau', 'Rear Shock': 'Phuộc sau', 'Rim': 'Vành',
              'Rotor': 'Đĩa phanh', 'Saddle': 'Yên', 'Seatpost': 'Cọc yên', 'Sensor': 'Cảm biến', 'Shifter': 'Tay đề', 'Size': 'Kích cỡ',
-             'Spokes': 'Căm', 'Tire': 'Lốp', 'Wheel Set': 'Bộ bánh', 'Wheel Size': 'Cỡ bánh'}
+             'Spokes': 'Căm', 'Tire': 'Lốp', 'Tube': 'Săm', 'Wheel Set': 'Bộ bánh', 'Wheel Size': 'Cỡ bánh'}
 GEO_ROWS = {'Height': 'Chiều cao người lái (cm)', 'Seat Tube Length': 'Chiều dài ống yên', 'Seat Tube Angle': 'Góc ống yên',
             'Effective Seat Tube Angle': 'Góc ống yên hiệu dụng', 'Effective Top Tube': 'Ống ngang hiệu dụng', 'Head Tube Length': 'Chiều dài ống cổ',
             'Head Tube Angle': 'Góc ống cổ', 'Chainstay Length': 'Chiều dài gióng sau', 'Bb Height': 'Chiều cao trục giữa', 'Bb Offset': 'Độ hạ trục giữa',
@@ -401,6 +401,20 @@ VI['story-curvet-c2-ultra'] = dict(file='story-curvet-c2-ultra', brand='Story', 
    faq=[('Xe có kèm phanh không?', 'Không. Curvet C2.0 Ultra được bán không kèm phanh để người chơi tự chọn theo lối chơi; tuỳ chọn gồm Shimano MT200, Magura MT30, Magura MT5 hoặc Magura MT bản giới hạn. Liên hệ Spinlab để được tư vấn và lắp đặt.'),
         ('Có những màu nào?', 'Khung có 5 màu: trắng, đen, hồng, xanh Starry và cam đỏ huỳnh quang. Ảnh trên trang là màu đen nhám và trắng; liên hệ Spinlab để xem các màu còn lại và kiểm tra hàng có sẵn.'),
         ('Có phiên bản nào khác không?', 'Dòng Curvet C2.0 còn bản C2.0 PRO và C2.0 với phuộc và một số linh kiện khác. Gọi hotline 0399 337 533 để được báo cấu hình và giá từng bản.'),
+        ('Xe được bảo hành thế nào?', 'Xe chính hãng Story phân phối bởi Spinlab được bảo hành theo chính sách của Story. Liên hệ hotline để biết chi tiết điều kiện và thời hạn.')])
+
+VI['story-basics-24'] = dict(file='story-basics-24', brand='Story', cat='trial', series='Basics', siblings='Basics 24',
+   chips=['Street trial', 'Bánh 24"', 'Khung nhôm 6061', '≈ 9,9 kg'],
+   headline='Xe street trial 24 inch gọn nhẹ',
+   intro='Story Basics 24 là mẫu xe street trial bánh 24 inch: khung nhôm 6061 với cổ côn 44/49.8mm và pát đuôi cá CNC 135x10mm, phuộc cứng trục 15mm, giò đĩa Story rèn rỗng liền khối kèm chắn đĩa 7075, líp 16T, xích KMC Z1eHX và lốp Maxxis Holy Roller 24x2.4. Cả xe nặng khoảng 9,9 kg (chưa gồm phanh), hợp với người đạp cao 160–190 cm. Có 2 màu xanh và vàng.',
+   features=[('Khung nhôm 6061', 'Cổ côn 44/49.8mm và pát đuôi cá CNC 135x10mm: cứng vững khi bật nhảy và tiếp đất.'),
+             ('Hình học street trial', 'Chiều dài cơ sở 972mm, gióng sau 362mm, góc cổ 73,5° và trục giữa cao +15mm — linh hoạt khi xoay xe và nhảy gờ.'),
+             ('Nhẹ khoảng 9,9 kg', 'Trọng lượng cả xe chưa gồm phanh, dễ nhấc xe và giữ thăng bằng.'),
+             ('Bánh 24" Maxxis Holy Roller', 'Vành Story 35mm tán đinh, căm inox 14G, lốp Maxxis Holy Roller 24x2.4 bám tốt trên bê tông và gờ đá.'),
+             ('Truyền động 1 tốc độ', 'Giò Story rèn rỗng liền khối kèm chắn đĩa 7075, líp 16T, xích KMC Z1eHX Narrow và tăng xích Story 7075.'),
+             ('Chọn phanh theo ý', 'Ngàm phanh sau B-post 160mm, trước A-post 180mm: lắp Shimano MT200, Magura MT30, MT5 hoặc MT7.')],
+   faq=[('Xe có kèm phanh không?', 'Không. Basics 24 được bán không kèm phanh để người chơi tự chọn; tuỳ chọn gồm Shimano MT200, Magura MT30, Magura MT5 hoặc Magura MT7. Liên hệ Spinlab để được tư vấn và lắp đặt.'),
+        ('Xe hợp với chiều cao nào?', 'Basics 24 hợp với người đạp cao khoảng 160–190 cm. Dòng Basics còn bản 22 inch cho người cao 130–180 cm — gọi hotline 0399 337 533 để được tư vấn.'),
         ('Xe được bảo hành thế nào?', 'Xe chính hãng Story phân phối bởi Spinlab được bảo hành theo chính sách của Story. Liên hệ hotline để biết chi tiết điều kiện và thời hạn.')])
 
 # Old Helios A (A8X, A9X) removed from the website

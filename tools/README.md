@@ -33,7 +33,7 @@ python3 ../build_en.py                # LUÔN chạy cuối: bản tiếng Anh e
 | `gen.py` | Tạo trang chi tiết xe: `python3 gen.py ../.. bikes.json [slug ...]` (bỏ trống slug = tạo lại tất cả) |
 | `extract.py` | Đọc trang sản phẩm Polygon đã tải về → JSON: `python3 extract.py <thư mục html> <out.json> <slug ...>` |
 | `tambora.py` | Dữ liệu Tambora MY27 nhập từ spec sheet; gộp vào `bikes.json` |
-| `story.py` | Dữ liệu Story Continue Pro (chỉ các thông tin thấy được trên ảnh); gộp vào `bikes.json` |
+| `story.py` | Dữ liệu Story Continue Pro (chỉ các thông tin thấy được trên ảnh), Curvet C2.0 Ultra và Basics 24 (theo bảng thông số Story); gộp vào `bikes.json`. Thẻ xe trên `xe-trial.html` thêm tay |
 | `city.py` | Dữ liệu Heist 2/5/7 (MY27) và Path 2/3/4 (MY26) lấy từ polygonbikes.com; gộp vào `bikes.json` |
 | `city_listing.py` | Tạo trang danh sách `xe-city.html` (City - Hybrid): `python3 city_listing.py ../.. bikes.json` — sửa `GROUPS` để thêm/bớt xe |
 | `cascade.py` | Dữ liệu Cascade 3/4/5 lấy từ polygonbikes.com; gộp vào `bikes.json` và dựng nhóm Cascade trong tab Cross Country của `xe-mtb.html`: `python3 cascade.py ../..` |

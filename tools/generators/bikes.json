@@ -23316,5 +23316,213 @@
     }
    ]
   }
+ },
+ {
+  "slug": "story-basics-24",
+  "source": "Bảng thông số Story Basics (cột 24\")",
+  "name": "Basics 24",
+  "headline": "",
+  "tagline": "Street trial | 24\"",
+  "intro": "",
+  "bike_type": "TRIAL",
+  "colors": [
+   {
+    "id": "blue",
+    "label": "Xanh",
+    "images": [
+     "img/story/basics-blue.jpg"
+    ]
+   },
+   {
+    "id": "yellow",
+    "label": "Vàng",
+    "images": [
+     "img/story/basics-yellow.jpg"
+    ]
+   }
+  ],
+  "sizes": [
+   {
+    "id": "24",
+    "label": "24\""
+   }
+  ],
+  "skus": {},
+  "feature_images": [
+   "img/story/basics-blue.jpg",
+   "img/story/basics-yellow.jpg"
+  ],
+  "features": [],
+  "specs": [
+   {
+    "group": "Frameset",
+    "rows": [
+     [
+      "Frameset",
+      "STORY BASICS 24\", 6061 ALLOY"
+     ],
+     [
+      "Headset",
+      "44/49.8mm TAPERED"
+     ],
+     [
+      "Dropout",
+      "135x10mm, CNC FISH-TAIL DROPOUTS"
+     ],
+     [
+      "Brake Mount",
+      "R: B-POST, 160mm DIRECT MOUNT / F: A-POST, 180mm DIRECT MOUNT"
+     ],
+     [
+      "Fork",
+      "STORY RIGID, TAPERED STEERER (INTERNAL THREAD), ALLOY TOP CAP, 100x15mm THRU AXLE"
+     ],
+     [
+      "Frame Color",
+      "XANH / VÀNG"
+     ]
+    ]
+   },
+   {
+    "group": "Cockpit",
+    "rows": [
+     [
+      "Handlebar",
+      "STORY 6061 THICKENED ALLOY (GEN 3)"
+     ],
+     [
+      "Handlestem",
+      "STORY FORGED LIGHTWEIGHT"
+     ],
+     [
+      "Grips",
+      "STORY RUBBER"
+     ],
+     [
+      "Saddle",
+      "STORY 25.4mm, BALLISTIC FABRIC COVER"
+     ]
+    ]
+   },
+   {
+    "group": "Wheel & Tire",
+    "rows": [
+     [
+      "Wheel Size",
+      "24\""
+     ],
+     [
+      "Hub",
+      "F: STORY 100x15mm THRU AXLE / R: STORY 135mm, M10 BOLT-ON, FREEWHEEL"
+     ],
+     [
+      "Rim",
+      "STORY 35mm, HIGH-STRENGTH ANODIZED, RIVETED"
+     ],
+     [
+      "Spokes",
+      "14G x 230mm STAINLESS"
+     ],
+     [
+      "Tire",
+      "MAXXIS HOLY ROLLER 24x2.4"
+     ],
+     [
+      "Tube",
+      "CST / KENDA 24x2.125"
+     ]
+    ]
+   },
+   {
+    "group": "Drivetrain",
+    "rows": [
+     [
+      "Gearing",
+      "SINGLE SPEED (1 TỐC ĐỘ)"
+     ],
+     [
+      "Crank",
+      "STORY FORGED ONE-PIECE HOLLOW CRANKSET + 7075 BASH GUARD"
+     ],
+     [
+      "Cog",
+      "STORY 16T FREEWHEEL (9 x 108)"
+     ],
+     [
+      "Chain",
+      "KMC Z1eHX NARROW"
+     ],
+     [
+      "Chain Tensioner",
+      "STORY 7075"
+     ],
+     [
+      "Pedal",
+      "SG NYLON, BEARING"
+     ]
+    ]
+   },
+   {
+    "group": "Brake",
+    "rows": [
+     [
+      "Brakes",
+      "KHÔNG KÈM PHANH — TUỲ CHỌN: SHIMANO MT200, MAGURA MT30, MAGURA MT5, MAGURA MT7"
+     ]
+    ]
+   },
+   {
+    "group": "Other",
+    "rows": [
+     [
+      "Bike Weight",
+      "≈ 9.9 KG (CHƯA GỒM PHANH)"
+     ]
+    ]
+   }
+  ],
+  "geometry": {
+   "sizes": [
+    "24\""
+   ],
+   "image": "",
+   "rows": [
+    {
+     "label": "Height",
+     "unit": "",
+     "values": [
+      "160–190"
+     ]
+    },
+    {
+     "label": "Head Tube Angle",
+     "unit": "",
+     "values": [
+      "73.5"
+     ]
+    },
+    {
+     "label": "Chainstay Length",
+     "unit": "",
+     "values": [
+      "362"
+     ]
+    },
+    {
+     "label": "Bb Height",
+     "unit": "",
+     "values": [
+      "+15"
+     ]
+    },
+    {
+     "label": "Wheelbase",
+     "unit": "",
+     "values": [
+      "972"
+     ]
+    }
+   ]
+  }
  }
 ]
