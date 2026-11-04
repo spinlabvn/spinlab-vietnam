@@ -69,7 +69,10 @@ LINES = [
  dict(type='road', file='vittoria-corsa-pro-tubular.html', name='Corsa PRO Tubular', cat='Thi đấu · Lốp ống', headline='Lốp ống (tubular) đua đỉnh cao',
       intro='Không loại lốp nào phản hồi như lốp ống, và không lốp ống nào có cảm giác như Corsa PRO: bám vào cua cao cả khi khô lẫn ướt, lực cản lăn thấp và thân lốp mềm mại ôm mặt đường. Corsa PRO Tubular còn cực nhẹ — theo Vittoria, mỗi cặp nhẹ hơn 190g so với Corsa PRO tubeless-ready dùng keo hoặc săm latex.',
       terrain=['Đua road', 'Leo đèo', 'Vành dùng lốp ống'],
-      versions=[('corsa-pro-tubular', 'Lốp ống', 'Thân lốp cotton-corespun 320 TPI, hợp chất Graphene + Silica, đai chống thủng; dùng cho vành lốp ống (tubular).')]),
+      versions=[('corsa-pro-tubular', 'Lốp ống', 'Cỡ 25-28" và 28-28" (bề rộng 25 hoặc 28 mm, vành 700c); thân lốp cotton-corespun 320 TPI, săm latex bên trong, hợp chất Graphene + Silica, đai chống thủng, thành lốp màu da (Para).')],
+      faq=[('Lốp ống (tubular) khác lốp thường thế nào?', 'Lốp ống may kín cùng săm latex bên trong và được dán trực tiếp lên vành lốp ống bằng keo hoặc băng dán chuyên dụng. Lốp nhẹ, êm và bám cua rất tốt, nhưng chỉ lắp được trên vành dành cho lốp ống, không lắp trên vành dùng săm hay vành tubeless.'),
+           ('Size 25-28" và 28-28" nghĩa là gì?', 'Số đầu là bề rộng lốp (25 mm hoặc 28 mm), số sau là cỡ vành 28 inch, tức vành 700c của xe road. Chọn bề rộng theo khoảng hở khung, phuộc và bề rộng vành của bạn.'),
+           ('Spinlab có hỗ trợ dán lốp ống không?', 'Có. Liên hệ Spinlab để được tư vấn keo hoặc băng dán phù hợp và hỗ trợ dán lốp đúng kỹ thuật, an toàn khi đổ dốc và vào cua.')]),
  dict(type='road', file='vittoria-juniores-tubular.html', name='Juniores Tubular', cat='Lốp ống cho tay đua trẻ', headline='Lốp ống cho thế hệ tay đua kế tiếp',
       intro='Juniores Tubular đưa lốp ống — công nghệ gắn với mọi thế hệ tay đua huyền thoại — đến với các tay đua trẻ. Cấu trúc tương tự lốp Rally nhưng thu nhỏ cho bánh xe cỡ nhỏ; thân lốp cotton giữ cảm giác mặt đường mềm mại đặc trưng của lốp ống, hợp chất ưu tiên độ bền và chống thủng.',
       terrain=['Xe đua trẻ em / thiếu niên', 'Tập luyện', 'Vành lốp ống 24"'],
@@ -182,7 +185,7 @@ def page(L):
     spec_html = vcommon.spec_section([(h, lab) for h, lab, b, d in vers], lambda h: load(h)['variants'])
     vfield = (f'<fieldset class="opt-group"><legend>Phiên bản</legend><div class="size-opts">{vopts}</div><p class="ver-desc" id="ver-desc">{E(vers[0][2])}</p></fieldset>' if len(vers) > 1 else f'<p class="ver-desc" id="ver-desc"><b>{E(vers[0][1])}</b> — {E(vers[0][2])}</p>')
     terrain = ''.join(f'<li>{E(x)}</li>' for x in L['terrain'])
-    faq = ''.join(f'<details><summary>{E(q)}</summary><p>{E(a)}</p></details>' for q, a in {'road': FAQ_ROAD, 'dirtjump': FAQ_DJ}.get(L['type'], FAQ_MTB))
+    faq = ''.join(f'<details><summary>{E(q)}</summary><p>{E(a)}</p></details>' for q, a in L.get('faq') or {'road': FAQ_ROAD, 'dirtjump': FAQ_DJ}.get(L['type'], FAQ_MTB))
     fig = imgs0[2] if len(imgs0) > 2 else imgs0[-1]
     vtable_open, vtable_close = ('', '') if len(vers) > 1 else ('<!--', '-->')
 

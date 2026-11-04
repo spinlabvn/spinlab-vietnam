@@ -1830,7 +1830,18 @@
  },
  "corsa-pro-tubular": {
   "tech_intro": "The revolutionary grip and durability of Graphene + Silica compounds. The timeless perfection of a 320 TPI cotton casing. The inimitable ride quality of a latex innertube. The Corsa PRO Tubular creates an impossibly supple connection to the road, erasing rolling resistance, denying road debris, and inspiring confidence through sweeping corners. It even boosts aerodynamics with its seamless, electrical curing.",
-  "chart": [],
+  "chart": [
+   {
+    "Size": "25-28\"",
+    "Color": "Para",
+    "Weight": "295 g"
+   },
+   {
+    "Size": "28-28\"",
+    "Color": "Para",
+    "Weight": "335 g"
+   }
+  ],
   "features": [
    {
     "title": "Race Formulation Graphene + Silica",
