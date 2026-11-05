@@ -80,7 +80,7 @@ LINES = [
  dict(type='road', file='vittoria-zaffiro.html', name='Zaffiro V', cat='Tập luyện · Đi phố', headline='Lốp road tập luyện bền bỉ',
       intro='Zaffiro là dòng lốp road tập luyện mọi điều kiện của Vittoria: bền, chống thủng tốt và ổn định cho những chặng đường dài, tập luyện đầu mùa hay đi làm hằng ngày. Bản Spinlab đang có là Zaffiro V 700x25c, tanh cứng (rigid), màu đen toàn phần.',
       terrain=['Tập luyện', 'Đi làm, đạp phố', 'Mọi thời tiết'],
-      versions=[('zaffiro-v', 'Tanh cứng', 'Zaffiro V 700x25c (ETRTO 25-622), tanh thép (rigid), thân lốp nylon 26 TPI, đen toàn phần, dùng săm. Ảnh minh họa dòng Zaffiro.')],
+      versions=[('zaffiro-v', 'Tanh cứng', 'Zaffiro V 700x25c (ETRTO 25-622), tanh thép (rigid), thân lốp nylon 26 TPI, đen toàn phần, dùng săm.')],
       faq=[('Zaffiro V lắp được cho xe nào?', 'Xe road, xe touring hoặc xe đi phố dùng vành 700c có lòng vành phù hợp lốp 25 mm. Đây là lốp dùng săm (clincher), không lắp không săm (tubeless).'),
            ('Có lắp được trên vành hookless không?', 'Không. Zaffiro V là lốp dùng săm tanh thép, không dùng cho vành hookless. Liên hệ Spinlab nếu bạn chưa chắc loại vành của mình.'),
            ('Nên bơm áp suất bao nhiêu?', 'Bơm trong dải áp suất in trên thành lốp, tùy cân nặng người lái và mặt đường. Đội kỹ thuật Spinlab sẽ tư vấn mức phù hợp cho bạn.')]),
@@ -109,7 +109,8 @@ TYPE = {'mtb': ('MTB', 'lop-xe.html#mtb', 'Lốp MTB'), 'road': ('Road', 'lop-xe
 
 # versions sold by Spinlab that Vittoria's shop data does not list: images/tech from a base handle, variants given here
 CUSTOM = {
-    'zaffiro-v': dict(base='zaffiro-evo', variants=[dict(size='700x25c', color='Black', sku='11A00304')]),
+    'zaffiro-v': dict(base='zaffiro-evo', images=['img/vittoria/zaffiro-v-1.jpg', 'img/vittoria/zaffiro-v-2.jpg'],
+                      variants=[dict(size='700x25c', color='Black', sku='11A00304')]),
     'combo-corsa-n-ext-tlr': dict(base='corsa-n-ext-tubeless-ready', variants=[dict(size='2 x 700x28c + keo 80ml', color='Black', sku='11P00084')]),
     'combo-rubino': dict(base='rubino-tube-type', variants=[dict(size='2 x 700x28c + 2 săm', color='Black', sku='11P00089')]),
 }
@@ -121,7 +122,7 @@ for _h, _c in CUSTOM.items():   # share the base product's technology section (n
 def load(h):
     c = CUSTOM.get(h)
     p = json.load(open(os.path.join(J, (c['base'] if c else h) + '.json'), encoding='utf-8'))['product']
-    imgs = [i['src'].split('?')[0] for i in p['images']][:6]
+    imgs = (c or {}).get('images') or [i['src'].split('?')[0] for i in p['images']][:6]
     raw = c['variants'] if c else [dict(size=v['option1'], color=v['option2'], sku=v['sku']) for v in p['variants']]
     variants = vcommon.in_stock(h, raw)
     return dict(images=imgs, cimg=vcommon.color_images(imgs, variants, p.get('color_images')), variants=variants)
