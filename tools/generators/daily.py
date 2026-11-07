@@ -10,7 +10,8 @@ REGIONS = [
  ('mien-bac', 'Miền Bắc', [
    dict(name='Tuấn Biker', city='Hà Nội', addr='79 Đường 23, KĐT Thành Phố Giao Lưu, Cổ Nhuế 1, Bắc Từ Liêm, Hà Nội', phone='0888967777',
         brands=['Vittoria', 'Emume']),
-   dict(name='Bon Bon Bike', city='Hải Phòng', addr='18 P. Thế Lữ, Hồng Bàng, Hải Phòng', phone='0936635489', brands=['Vittoria', 'Emume'])]),
+   dict(name='Bon Bon Bike', city='Hải Phòng', addr='18 P. Thế Lữ, Hồng Bàng, Hải Phòng', phone='0936635489', brands=['Vittoria', 'Emume']),
+   dict(name='Văn Xế Đẹp', city='Ninh Bình', addr='Xóm Thức Hoa, Giao Ninh, Ninh Bình', brands=['Vittoria', 'Emume'])]),
  ('mien-trung', 'Miền Trung', [
    dict(name='Cường Xe Đạp', city='Huế', addr='12 La Sơn Phu Tử, phường Phú Xuân, TP. Huế', phone='0965559966', brands=['Vittoria'])]),
  ('mien-nam', 'Miền Nam', [
