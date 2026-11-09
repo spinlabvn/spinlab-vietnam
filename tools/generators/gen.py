@@ -182,7 +182,7 @@ def page(slug):
         </div>
         <ul class="assure">
           <li><svg aria-hidden="true"><use href="#i-shield"/></svg>Xe chính hãng {E(brand)}, phân phối bởi Spinlab</li>
-          <li><svg aria-hidden="true"><use href="#i-truck"/></svg>Giao hàng toàn quốc</li>
+          <li><svg aria-hidden="true"><use href="#i-truck"/></svg>Freeship đơn từ 2 triệu</li>
           <li><svg aria-hidden="true"><use href="#i-chat"/></svg>Tư vấn chọn size miễn phí qua hotline</li>
         </ul>
       </div>
