@@ -12,6 +12,15 @@ COLOR_VI = vcommon.COLOR_VI
 C4 = ' Hợp chất 4Compound với bốn loại cao su được đặt đúng vị trí cần thiết — kết hợp tốc độ, độ bám và độ bền.'
 
 LINES = [
+ dict(type='mtb', file='vittoria-mezcal.html', name='Mezcal', cat='Cross Country', headline='Tốc độ XC thuần khiết, nhiều lần vô địch',
+      intro='Mezcal được thiết kế cho tốc độ cross country thuần túy và đã được chứng minh qua nhiều chức vô địch thế giới UCI và vô địch châu Âu XCO. Mẫu gai lăn nhanh, bám chắc khi vào cua — lựa chọn quen thuộc của các tay đua XC.',
+      terrain=['Đua XC', 'Đường mòn hỗn hợp', 'Khô và ẩm'],
+      versions=[('mezcal-xc-race', 'XC Race', 'Hợp chất Race Graphene + Silica cho tốc độ và độ bám không thỏa hiệp; thân lốp nylon 60 TPI mềm mại, đáng tin cậy, giảm mỏi khi thi đấu.'),
+                ('mezcal-xc-trail', 'XC Trail', 'Thân lốp Trail Case bền chắc cho đạp đường mòn hằng ngày.' + C4)]),
+ dict(type='mtb', file='vittoria-barzo.html', name='Barzo', cat='Cross Country', headline='Biến địa hình hỗn loạn thành kiểm soát',
+      intro='Barzo có mẫu gai đã giành chức vô địch thế giới cho địa hình sỏi to, đất rời, nay trên cấu trúc XC Race thế hệ mới. Gai giữa xen kẽ lăn nhanh trên mặt đường gồ ghề mà vẫn bám khi leo dốc; núm vai lấy cảm hứng từ lốp mô tô bám sâu khi vào cua mạnh; rãnh cắt toàn bộ và khoảng cách gai rộng giúp bám tốt và tự làm sạch.',
+      terrain=['Sỏi to, đất rời', 'Đá, gồ ghề', 'Đua XC'],
+      versions=[('barzo-xc-race', 'XC Race', 'Theo Vittoria, cấu trúc XC Race mới nhanh hơn 20%, bám hơn 8%, chống thủng tốt hơn 44% và êm hơn 9%.')]),
  dict(type='mtb', file='vittoria-terreno-xc.html', name='Terreno XC', cat='Cross Country', headline='Tên lửa trên đường cứng',
       intro='Terreno XC được thiết kế cho tốc độ tối đa trên đường mòn khô và cứng. Dải gai giữa hình vảy cá lăn cực nhanh trên đường thẳng mà vẫn giữ lực phanh và bám cua khi cần; chuyển tiếp đều từ dải giữa ra núm vai giúp mỗi khúc cua mượt mà, dễ đoán.',
       terrain=['Đường mòn cứng', 'Khô, nhanh', 'Đua XC'],
@@ -34,11 +43,6 @@ LINES = [
       versions=[('martello-trail', 'Trail', 'Lốp trail linh hoạt nhất cho đường cứng đến hỗn hợp; gai thưa tự làm sạch đất và bùn.' + C4),
                 ('martello-enduro', 'Enduro', 'Cho mọi thứ từ thi đấu gravity đến khám phá — bám chắc trên mọi chướng ngại.'),
                 ('martello-enduro-race', 'Enduro Race', 'Cấu trúc tinh chỉnh cho thi đấu — bám chắc, giảm rung, đàn hồi mượt trên những đoạn kỹ thuật và dốc nghiêng.')]),
- dict(type='mtb', file='vittoria-mezcal.html', name='Mezcal', cat='Cross Country', headline='Tốc độ XC thuần khiết, nhiều lần vô địch',
-      intro='Mezcal được thiết kế cho tốc độ cross country thuần túy và đã được chứng minh qua nhiều chức vô địch thế giới UCI và vô địch châu Âu XCO. Mẫu gai lăn nhanh, bám chắc khi vào cua — lựa chọn quen thuộc của các tay đua XC.',
-      terrain=['Đua XC', 'Đường mòn hỗn hợp', 'Khô và ẩm'],
-      versions=[('mezcal-xc-race', 'XC Race', 'Hợp chất Race Graphene + Silica cho tốc độ và độ bám không thỏa hiệp; thân lốp nylon 60 TPI mềm mại, đáng tin cậy, giảm mỏi khi thi đấu.'),
-                ('mezcal-xc-trail', 'XC Trail', 'Thân lốp Trail Case bền chắc cho đạp đường mòn hằng ngày.' + C4)]),
  dict(type='road', file='vittoria-corsa-pro-tubular.html', name='Corsa PRO Tubular', cat='Thi đấu · Lốp ống', headline='Lốp ống (tubular) đua đỉnh cao',
       intro='Không loại lốp nào phản hồi như lốp ống, và không lốp ống nào có cảm giác như Corsa PRO: bám vào cua cao cả khi khô lẫn ướt, lực cản lăn thấp và thân lốp mềm mại ôm mặt đường. Corsa PRO Tubular còn cực nhẹ — theo Vittoria, mỗi cặp nhẹ hơn 190g so với Corsa PRO tubeless-ready dùng keo hoặc săm latex.',
       terrain=['Đua road', 'Leo đèo', 'Vành dùng lốp ống'],
@@ -91,12 +95,6 @@ LINES = [
       intro='Combo gồm 2 lốp Rubino V 700x28c gấp được (fold) màu đen kèm 2 săm — bộ lốp tập luyện hằng ngày đầy đủ cho cả hai bánh.',
       terrain=['Tập luyện hằng ngày', 'Đi làm, đạp phố', 'Đường dài'],
       versions=[('combo-rubino', 'Combo', '2 lốp Rubino V 28-622 fold đen + 2 săm.')]),
-
- dict(type='mtb', file='vittoria-barzo.html', name='Barzo', cat='Cross Country', headline='Biến địa hình hỗn loạn thành kiểm soát',
-      intro='Barzo có mẫu gai đã giành chức vô địch thế giới cho địa hình sỏi to, đất rời, nay trên cấu trúc XC Race thế hệ mới. Gai giữa xen kẽ lăn nhanh trên mặt đường gồ ghề mà vẫn bám khi leo dốc; núm vai lấy cảm hứng từ lốp mô tô bám sâu khi vào cua mạnh; rãnh cắt toàn bộ và khoảng cách gai rộng giúp bám tốt và tự làm sạch.',
-      terrain=['Sỏi to, đất rời', 'Đá, gồ ghề', 'Đua XC'],
-      versions=[('barzo-xc-race', 'XC Race', 'Theo Vittoria, cấu trúc XC Race mới nhanh hơn 20%, bám hơn 8%, chống thủng tốt hơn 44% và êm hơn 9%.')]),
-
  dict(type='dirtjump', file='vittoria-tattoo.html', name='Tattoo', cat='Dirt Jump · Street', headline='Bám dính trên mọi bề mặt',
       intro='Mặt gai siêu mịn như giũa kim cương cùng đặc tính mềm, bám của công nghệ Vittoria giúp Tattoo tăng độ bám, khả năng kiểm soát và độ bền cho mọi buổi chơi — pump track, freestyle park, ramp hay đường phố. Gai phủ kín từ tanh này sang tanh kia, bảo vệ lốp trên mọi bề mặt và luôn bám tốt khi lướt trên rail hay ramp.',
       terrain=['Dirt jump', 'Pump track', 'Street / Park'],
