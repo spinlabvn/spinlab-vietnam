@@ -137,7 +137,7 @@
    "href": "vittoria-barzo.html",
    "added": "2026-10-20 11:51",
    "seq": 85,
-   "name": "Barzo"
+   "name": "Barzo XC Race"
   },
   {
    "href": "vittoria-air-liner-protect-trail.html",
@@ -437,19 +437,31 @@
    "href": "vittoria-mezcal.html",
    "added": "2026-10-13 09:00",
    "seq": 27,
-   "name": "Mezcal"
+   "name": "Mezcal XC Race"
   },
   {
    "href": "vittoria-peyote.html",
    "added": "2026-10-13 09:00",
    "seq": 26,
-   "name": "Peyote"
+   "name": "Peyote XC Race"
+  },
+  {
+   "href": "vittoria-peyote-xc-trail.html",
+   "added": "2026-10-13 09:00",
+   "seq": 26,
+   "name": "Peyote XC Trail"
   },
   {
    "href": "vittoria-terreno-xc.html",
    "added": "2026-10-13 09:00",
    "seq": 25,
-   "name": "Terreno XC"
+   "name": "Terreno XC Race"
+  },
+  {
+   "href": "vittoria-terreno-xc-trail.html",
+   "added": "2026-10-13 09:00",
+   "seq": 25,
+   "name": "Terreno XC Trail"
   },
   {
    "href": "vittoria-rubino.html",
