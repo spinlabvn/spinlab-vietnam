@@ -15,7 +15,10 @@ P = [
       intro=['Keo tự vá Universal Tubeless Sealant của Vittoria được phát triển để phục vụ mọi người đạp xe, dù bạn đi road, gravel hay MTB. Bí quyết nằm ở gốc dung dịch đủ loãng để nhanh chóng tìm và bịt kín cả những lỗ thủng nhỏ nhất.',
              'Bên trong dung dịch là các hạt vảy kết dính lại với nhau để bịt những lỗ thủng lớn hơn. Trong thử nghiệm của Vittoria, keo vá tức thì lỗ thủng tới 7mm và giữ hơi tốt tới 1.200 km. Công thức không chứa amoniac nên không làm hại lốp và dùng được cùng miếng lót Air-Liner.'],
       fit=['Road', 'Gravel', 'MTB', 'Dùng cùng Air-Liner'],
-      imgs=['universal-tire-sealant-family', 'vittoria-Universal-Tire-Sealant-80ml', 'vittoria-Universal-Tire-Sealant-250ml', 'vittoria-Universal-Tire-Sealant-500ml'],
+      imgs=['universal-tire-sealant-family', 'vittoria-Universal-Tire-Sealant-80ml', 'img/vittoria/universal-sealant-150ml.jpg', 'vittoria-Universal-Tire-Sealant-250ml',
+            'vittoria-Universal-Tire-Sealant-500ml', 'img/vittoria/universal-sealant-1000ml.jpg', 'img/vittoria/universal-sealant-5l.jpg'],
+      vimg={'80ml': 'vittoria-Universal-Tire-Sealant-80ml', '150ml': 'img/vittoria/universal-sealant-150ml.jpg', '250ml': 'vittoria-Universal-Tire-Sealant-250ml',
+            '500ml': 'vittoria-Universal-Tire-Sealant-500ml', '1000ml': 'img/vittoria/universal-sealant-1000ml.jpg', '5 lít': 'img/vittoria/universal-sealant-5l.jpg'},
       opt='Dung tích',
       features=[('Vá nhanh lỗ nhỏ', 'Gốc dung dịch loãng len vào và bịt kín những lỗ thủng nhỏ nhất trong tích tắc.'),
                 ('Hạt vảy bịt lỗ lớn', 'Các hạt vảy lơ lửng trong keo kết lại với nhau, vá tức thì lỗ thủng tới 7mm.'),
@@ -190,12 +193,15 @@ GROUPS = [('air-liner', 'Air-Liner', 'Miếng lót tubeless: chống va vành, c
 # Spinlab's stock list decides which rows (sizes) are shown; a product with no row in stock is not published
 for _p in P:
     _p['rows'] = [r for r in _p['rows'] if stock.ok(r[-1])]
+    if _p.get('vimg'):
+        _sold = {_p['vimg'].get(r[0]) for r in _p['rows']}
+        _p['imgs'] = [n for n in _p['imgs'] if n in _sold or n not in _p['vimg'].values()]
 ALL_P = list(P)
 P[:] = [p for p in P if p['rows']]
 
 price = lambda p: stock.label(r[-1] for r in p['rows'])
 _EXT = re.compile(r'\.(webp|png|jpe?g)$')
-img = lambda n, w: CDN + n + ('' if _EXT.search(n) else '.webp') + f'?width={w}'
+img = lambda n, w: n if n.startswith('img/') else CDN + n + ('' if _EXT.search(n) else '.webp') + f'?width={w}'
 
 
 def card(p):
@@ -207,7 +213,9 @@ def card(p):
 
 def page(p, shell):
     thumbs = ''.join(f'<li><button aria-pressed="{"true" if i == 0 else "false"}" data-src="{img(n, 1000)}" data-alt="{E(p["name"])} – ảnh {i+1}"><img src="{img(n, 160)}" alt="Ảnh {i+1}"></button></li>' for i, n in enumerate(p['imgs']))
-    opts = ''.join(f'<label><input type="radio" name="size" value="{E(r[0])}" data-sku="{r[-1]}"{" checked" if i == 0 else ""}><span>{E(r[0])}</span></label>' for i, r in enumerate(p['rows']))
+    vimg = p.get('vimg', {})
+    gi = lambda r: f' data-img="{p["imgs"].index(vimg[r[0]])}"' if vimg.get(r[0]) in p['imgs'] else ''
+    opts = ''.join(f'<label><input type="radio" name="size" value="{E(r[0])}" data-sku="{r[-1]}"{gi(r)}{" checked" if i == 0 else ""}><span>{E(r[0])}</span></label>' for i, r in enumerate(p['rows']))
     feats = ''.join(f'<article><span class="num">{i+1:02d}</span><h3>{E(t)}</h3><p>{E(x)}</p></article>' for i, (t, x) in enumerate(p['features']))
     head = ''.join(f'<th scope="col">{E(c)}</th>' for c in p['cols'])
     rows = ''.join(f'<tr data-sku="{r[-1]}">' + ''.join(f'<td>{E(c)}</td>' for c in r) + '</tr>' for r in p['rows'])
@@ -264,11 +272,15 @@ def page(p, shell):
     js = '''// Tubeless accessory page: gallery + size/volume selector
 (() => {
   const main=document.getElementById('g-main'), t=[...document.querySelectorAll('.g-thumbs button')];
-  t.forEach(b=>b.addEventListener('click',()=>{ main.src=b.dataset.src; main.alt=b.dataset.alt; t.forEach(x=>x.setAttribute('aria-pressed',x===b)); }));
+  const show=b=>{ main.src=b.dataset.src; main.alt=b.dataset.alt; t.forEach(x=>x.setAttribute('aria-pressed',x===b)); };
+  t.forEach(b=>b.addEventListener('click',()=>show(b)));
   const upd=()=>{ const r=document.querySelector('input[name=size]:checked'); if(!r) return;
+    if(r.dataset.img&&t[r.dataset.img]) show(t[r.dataset.img]);
     document.getElementById('sz-sku').textContent=r.dataset.sku;
     document.querySelectorAll('.sku-table tbody tr').forEach(tr=>tr.classList.toggle('on',tr.dataset.sku===r.dataset.sku)); };
-  document.querySelectorAll('input[name=size]').forEach(r=>r.addEventListener('change',upd)); upd();
+  document.querySelectorAll('input[name=size]').forEach(r=>r.addEventListener('change',upd));
+  { const r=document.querySelector('input[name=size]:checked'); document.getElementById('sz-sku').textContent=r.dataset.sku;
+    document.querySelectorAll('.sku-table tbody tr').forEach(tr=>tr.classList.toggle('on',tr.dataset.sku===r.dataset.sku)); }
 })();
 '''
     s = shell
