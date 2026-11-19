@@ -62,7 +62,7 @@ PAGES = sorted(os.path.basename(f) for f in glob.glob(os.path.join(ROOT, '*.html
 NAMES = {p[:-5] for p in PAGES} | {'trangchu'}
 EN_SLUG = {
     'index': 'home', 'trangchu': 'home', 'xe-dap': 'bikes', 'xe-road': 'road-bikes', 'xe-mtb': 'mountain-bikes', 'xe-gravel': 'gravel-bikes',
-    'xe-city': 'city-hybrid-bikes', 'xe-trial': 'trial-bikes', 'phu-tung': 'parts', 'lop-xe': 'tyres', 'day-cuon-tay-lai': 'handlebar-tape',
+    'xe-city': 'city-hybrid-bikes', 'xe-trial': 'trial-bikes', 'phu-tung': 'parts', 'lop-xe': 'tyres', 'day-cuon-tay-lai': 'handlebar-tape', 'phu-kien': 'accessories',
     'thuong-hieu': 'brands', 'thuong-hieu-polygon': 'brand-polygon', 'thuong-hieu-vittoria': 'brand-vittoria', 'thuong-hieu-emume': 'brand-emume',
     'thuong-hieu-story-bike': 'brand-story-bike', 'dai-ly': 'dealers', 'so-sanh': 'compare', 'san-pham-moi': 'new-products', 'tin-tuc': 'news',
     'huong-dan': 'guides', 'tin-tuc-polygon-strattos-c': 'news-polygon-strattos-c',

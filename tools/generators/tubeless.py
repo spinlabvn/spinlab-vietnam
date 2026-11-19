@@ -190,6 +190,10 @@ GROUPS = [('air-liner', 'Air-Liner', 'Miếng lót tubeless: chống va vành, c
           ('other', 'Săm & phụ kiện khác', 'Săm butyl và bình nước Vittoria.'),
           ('care', 'Vệ sinh lốp', 'Dung dịch làm sạch thành lốp cotton và nylon.')]
 
+# "Phụ kiện" menu (phu-kien.html): accessories that are not tubeless parts
+ACC = [('binh-nuoc', 'Bình nước', 'Bình nước Vittoria cho road, gravel và MTB.', ['vittoria-bottle-550.html']),
+       ('ve-sinh', 'Vệ sinh', 'Dung dịch vệ sinh và chăm sóc xe, lốp.', ['vittoria-sidewall-cleaner.html'])]
+
 # Spinlab's stock list decides which rows (sizes) are shown; a product with no row in stock is not published
 for _p in P:
     _p['rows'] = [r for r in _p['rows'] if stock.ok(r[-1])]
@@ -211,6 +215,14 @@ def card(p):
             f'<p class="p-desc">{E(p["desc"])}</p><span class="p-price">{price(p)}</span></div></article>')
 
 
+def crumbs(p):
+    acc = next((g for g, t, s_, files in ACC if p['file'] in files), None)
+    if acc:
+        return f'<li><a href="phu-kien.html">Phụ kiện</a></li><li><a class="crumb" href="phu-kien.html#{acc}">{E(next(t for g, t, s_, f in ACC if g == acc))}</a></li>'
+    return (f'<li><a href="phu-tung.html">Phụ tùng</a></li><li><a href="tubeless.html">Tubeless</a></li>'
+            f'<li><a class="crumb" href="tubeless.html#{p["group"]}">{E(p["cat"])}</a></li>')
+
+
 def page(p, shell):
     thumbs = ''.join(f'<li><button aria-pressed="{"true" if i == 0 else "false"}" data-src="{img(n, 1000)}" data-alt="{E(p["name"])} – ảnh {i+1}"><img src="{img(n, 160)}" alt="Ảnh {i+1}"></button></li>' for i, n in enumerate(p['imgs']))
     vimg = p.get('vimg', {})
@@ -226,8 +238,7 @@ def page(p, shell):
     main = f'''<main id="main" class="pdp">
   <div class="container">
     <nav class="crumbs" aria-label="Đường dẫn"><ol>
-      <li><a href="index.html">Trang chủ</a></li><li><a href="phu-tung.html">Phụ tùng</a></li><li><a href="tubeless.html">Tubeless</a></li>
-      <li><a class="crumb" href="tubeless.html#{p["group"]}">{E(p["cat"])}</a></li><li aria-current="page">{E(p["name"])}</li></ol></nav>
+      <li><a href="index.html">Trang chủ</a></li>{crumbs(p)}<li aria-current="page">{E(p["name"])}</li></ol></nav>
     <div class="pdp-top">
       <div class="gallery">
         <div class="g-main"><img id="g-main" src="{img(p["imgs"][0], 1000)}" alt="Vittoria {E(p["name"])}" width="1000" height="1000"></div>
@@ -320,4 +331,28 @@ brand_css = re.search(r'/\* Brand page \*/.*?(?=</style>)', open(os.path.join(D,
 L = L.replace('</style>', brand_css + '</style>', 1)
 open(os.path.join(D, 'tubeless.html'), 'w', encoding='utf-8').write(L)
 print('tubeless.html')
+# accessories listing, same shell as tubeless.html
+L = open(os.path.join(D, 'tubeless.html'), encoding='utf-8').read()
+secs = ''
+for g, t, s_, files in ACC:
+    cs = ''.join(card(p) for p in P if p['file'] in files)
+    secs += (f'  <section class="brand-cat" id="{g}"><div class="container"><h2 class="bc-title">{E(t)}</h2><p class="bc-sub">{E(s_)}</p>'
+             f'<div class="grid">{cs}</div></div></section>\n')
+main = f'''<main id="main" class="pdp listing">
+  <div class="container"><nav class="crumbs" aria-label="Đường dẫn"><ol><li><a href="index.html">Trang chủ</a></li><li aria-current="page">Phụ kiện</li></ol></nav></div>
+  <section class="list-hero plain">
+    <div class="container"><div class="lh-copy"><span class="kicker">Spinlab</span><h1>Phụ kiện</h1><p>Bình nước, dung dịch vệ sinh và phụ kiện chính hãng cho mọi chiếc xe.</p></div></div>
+  </section>
+  <nav class="brand-nav" aria-label="Danh mục phụ kiện"><div class="container"><ul>{"".join(f'<li><a href="#{g}">{E(t)}<small>{sum(p["file"] in files for p in P)}</small></a></li>' for g, t, s_, files in ACC)}</ul></div></nav>
+{secs}</main>'''
+L = re.sub(r'<title>.*?</title>', '<title>Phụ kiện xe đạp — Spinlab</title>', L, 1, flags=re.S)
+L = re.sub(r'<meta name="description"[^>]*>', '<meta name="description" content="Phụ kiện xe đạp chính hãng tại Spinlab: bình nước, dung dịch vệ sinh lốp và chăm sóc xe.">', L, 1)
+L = re.sub(r'<main id="main".*?</main>', lambda m: main, L, 1, flags=re.S)
+L = L.replace('</style>', '''/* Plain listing hero */
+.list-hero.plain{min-height:200px;background:var(--brand-yellow);color:var(--brand-red)}
+.list-hero.plain::after{display:none}
+.list-hero.plain .kicker,.list-hero.plain p{color:var(--brand-red)}
+</style>''', 1)
+open(os.path.join(D, 'phu-kien.html'), 'w', encoding='utf-8').write(L)
+print('phu-kien.html')
 json.dump([{k: p[k] for k in ('file', 'group', 'name', 'cat', 'tag', 'desc', 'imgs')} for p in P], open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'tubeless-cards.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
