@@ -356,9 +356,7 @@ def listing(fname, crumb, h1, lead, nav_label, groups, title, desc):
     L = re.sub(r'<meta name="description"[^>]*>', f'<meta name="description" content="{E(desc)}">', L, 1)
     L = re.sub(r'<main id="main".*?</main>', lambda m: main, L, 1, flags=re.S)
     L = L.replace('</style>', '''/* Plain listing hero */
-.list-hero.plain{min-height:200px;background:var(--brand-yellow);color:var(--brand-red)}
-.list-hero.plain::after{display:none}
-.list-hero.plain .kicker,.list-hero.plain p{color:var(--brand-red)}
+.list-hero.plain{min-height:300px;background:radial-gradient(120% 140% at 85% 20%,#3a3a3a 0,#1c1c1c 55%,#111 100%)}
 </style>''', 1)
     open(os.path.join(D, fname), 'w', encoding='utf-8').write(L)
     print(fname)
