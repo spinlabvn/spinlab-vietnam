@@ -65,6 +65,7 @@ page('xe-dap.html', 'Xe đạp', 'Xe đạp', 'Spinlab', 'Xe đạp', 'Xe đạp
      'Xe đạp Polygon và Story Bike chính hãng tại Spinlab: Road, MTB, Gravel, City - Hybrid, Trial.')
 parts = [('lop-xe.html', 'Lốp xe', 'Lốp Vittoria cho road, MTB và gravel.'),
          ('tubeless.html', 'Tubeless & phụ kiện', 'Keo tự vá, chân van, băng keo vành, Air-Liner, săm và phụ kiện.'),
+         ('ruot-xe.html', 'Ruột xe', 'Ruột xe (săm) butyl Vittoria cho xe road.'),
          ('day-cuon-tay-lai.html', 'Dây cuốn tay lái', 'Dây cuốn ghi đông và nút bịt Emume.')]
 page('phu-tung.html', 'Phụ tùng', 'Phụ tùng', 'Spinlab', 'Phụ tùng', 'Lốp, phụ kiện tubeless và dây cuốn tay lái chính hãng.',
      [tile(f, t, d, count(f), im(first_img(f), t)) for f, t, d in parts],
