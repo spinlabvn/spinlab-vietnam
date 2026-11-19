@@ -57,7 +57,7 @@ im = lambda src, alt: f'<img src="{src}" alt="{alt}" loading="lazy">'
 HUB_IMG = {'xe-trial.html': 'img/story/continue-purple-43.jpg'}
 bikes = [('xe-road.html', 'Road', 'Xe đua aero, endurance và xe road nhập môn Polygon.'),
          ('xe-mtb.html', 'MTB', 'Downhill, Enduro, Trail-AM, Cross Country và Dirt Jump.'),
-         ('xe-gravel.html', 'Gravel', 'Polygon Path X đa dụng cho phố và đường đất.'),
+         ('xe-gravel.html', 'Gravel', 'Polygon Tambora carbon và Path X đa dụng.'),
          ('xe-city.html', 'City - Hybrid', 'Polygon Heist và Path cho đi làm, đi phố.'),
          ('xe-trial.html', 'Trial', 'Xe street trial Story Bike.')]
 page('xe-dap.html', 'Xe đạp', 'Xe đạp', 'Spinlab', 'Xe đạp', 'Xe đạp Polygon và Story Bike chính hãng, phân phối bởi Spinlab.',

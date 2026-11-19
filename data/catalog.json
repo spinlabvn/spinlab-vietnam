@@ -2,6 +2,30 @@
  "note": "Ngày đăng sản phẩm — do tools/build_new_products.py quản lý",
  "products": [
   {
+   "href": "polygon-tambora-9-axs.html",
+   "added": "2026-11-19 23:08",
+   "seq": 111,
+   "name": "TAMBORA 9 AXS"
+  },
+  {
+   "href": "polygon-tambora-7-di2.html",
+   "added": "2026-11-19 23:08",
+   "seq": 110,
+   "name": "TAMBORA 7 Di2"
+  },
+  {
+   "href": "polygon-tambora-6.html",
+   "added": "2026-11-19 23:08",
+   "seq": 109,
+   "name": "TAMBORA 6"
+  },
+  {
+   "href": "polygon-tambora-4.html",
+   "added": "2026-11-19 23:08",
+   "seq": 108,
+   "name": "TAMBORA 4"
+  },
+  {
    "href": "story-basics-24.html",
    "added": "2026-11-03 19:11",
    "seq": 107,

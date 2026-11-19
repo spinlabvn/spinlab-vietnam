@@ -421,10 +421,6 @@ VI['story-basics-24'] = dict(file='story-basics-24', brand='Story', cat='trial',
 for _k in ['helios-a8x', 'helios-a9x-entity-wr5']:
     VI.pop(_k, None)
 
-# Tambora MY27 temporarily hidden from the website (pages kept in tools/removed-pages; delete this block to bring them back)
-for _k in ['tambora-9-axs', 'tambora-7-di2', 'tambora-6', 'tambora-4']:
-    VI.pop(_k, None)
-
 # ---- City - Hybrid: Heist (MY27) and Path (MY26), data from city.py ----
 HEIST_FEAT = [('Hình học thoải mái', 'Khung nhôm ALX nhẹ, tư thế ngồi thẳng lưng và ghi đông phẳng: dễ quan sát giao thông, dễ điều khiển trong phố.'),
               ('Phuộc nhún trước 63mm', 'Phuộc SR Suntour êm ái qua ổ gà, gờ giảm tốc và những đoạn đường đất, sỏi đá.'),
