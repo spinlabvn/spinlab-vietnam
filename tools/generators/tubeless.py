@@ -186,9 +186,7 @@ P = [
 GROUPS = [('air-liner', 'Air-Liner', 'Miếng lót tubeless: chống va vành, chống thủng rắn cắn và chạy run-flat khi xì lốp.'),
           ('rim-tape', 'Băng keo vành', 'Băng keo bịt kín lòng vành để lên tubeless.'),
           ('valve', 'Chân van', 'Van tubeless Multiway bằng nhôm, bộ 2 van, 4 chiều dài.'),
-          ('sealant', 'Keo tự vá', 'Keo tubeless không amoniac cho road, gravel và MTB.'),
-          ('other', 'Săm & phụ kiện khác', 'Săm butyl và bình nước Vittoria.'),
-          ('care', 'Vệ sinh lốp', 'Dung dịch làm sạch thành lốp cotton và nylon.')]
+          ('sealant', 'Keo tự vá', 'Keo tubeless không amoniac cho road, gravel và MTB.')]
 
 # "Phụ kiện" menu (phu-kien.html): accessories that are not tubeless parts
 ACC = [('binh-nuoc', 'Bình nước', 'Bình nước Vittoria cho road, gravel và MTB.', ['vittoria-bottle-550.html']),
@@ -217,6 +215,10 @@ def card(p):
             f'<p class="p-desc">{E(p["desc"])}</p><span class="p-price">{price(p)}</span></div></article>')
 
 
+# bottle, cleaner and inner tube are listed under Phụ kiện / Ruột xe, not on tubeless.html
+OTHER = {f for g, t, s_, files in ACC + TUBES for f in files}
+
+
 def crumbs(p):
     acc = next((g for g, t, s_, files in ACC if p['file'] in files), None)
     if acc:
@@ -236,7 +238,10 @@ def page(p, shell):
     head = ''.join(f'<th scope="col">{E(c)}</th>' for c in p['cols'])
     rows = ''.join(f'<tr data-sku="{r[-1]}">' + ''.join(f'<td>{E(c)}</td>' for c in r) + '</tr>' for r in p['rows'])
     faq = ''.join(f'<details><summary>{E(q)}</summary><p>{E(a)}</p></details>' for q, a in p['faq'])
-    rel = ''.join(card(o) for o in P if o is not p)
+    other = p['file'] in OTHER
+    rel = ''.join(card(o) for o in P if o is not p and (o['file'] in OTHER) == other)
+    tube = any(p['file'] in files for g, t, s_, files in TUBES)
+    line = 'Vittoria · Ruột xe' if tube else f'Vittoria · Phụ kiện · {E(p["cat"])}' if other else f'Vittoria · Tubeless · {E(p["cat"])}'
     intro = ''.join(f'<p>{E(t)}</p>' for t in p['intro'])
     fit = ''.join(f'<li>{E(f)}</li>' for f in p['fit'])
     main = f'''<main id="main" class="pdp">
@@ -249,7 +254,7 @@ def page(p, shell):
         <ul class="g-thumbs" aria-label="Ảnh sản phẩm">{thumbs}</ul>
       </div>
       <div class="buy">
-        <span class="p-brand">Vittoria · Tubeless · {E(p["cat"])}</span>
+        <span class="p-brand">{line}</span>
         <h1>{E(p["name"])}</h1>
         <p class="tagline">{E(p["headline"])}</p>
         <fieldset class="sizes"><legend>{E(p["opt"])} <span class="size-meta" aria-live="polite">Mã <span id="sz-sku">{p["rows"][0][-1]}</span></span></legend><div class="size-opts" id="size-opts">{opts}</div></fieldset>
@@ -261,7 +266,7 @@ def page(p, shell):
         <ul class="assure">
           <li><svg aria-hidden="true"><use href="#i-shield"/></svg>Hàng chính hãng Vittoria, phân phối bởi Spinlab</li>
           <li><svg aria-hidden="true"><use href="#i-truck"/></svg>Freeship đơn từ 2 triệu</li>
-          <li><svg aria-hidden="true"><use href="#i-chat"/></svg>Tư vấn và hỗ trợ lắp tubeless qua hotline</li>
+          <li><svg aria-hidden="true"><use href="#i-chat"/></svg>{"Tư vấn sản phẩm qua hotline" if other else "Tư vấn và hỗ trợ lắp tubeless qua hotline"}</li>
         </ul>
       </div>
     </div>
@@ -280,7 +285,7 @@ def page(p, shell):
 
     <section class="pdp-sec" id="hoi-dap"><h2>Hỏi đáp</h2><div class="faq">{faq}</div></section>
 
-    <section class="pdp-sec"><div class="sec-head"><h2>Phụ kiện tubeless khác</h2><a class="see-all" href="tubeless.html">Xem tất cả</a></div>
+    <section class="pdp-sec"><div class="sec-head"><h2>{"Phụ kiện khác" if other else "Phụ kiện tubeless khác"}</h2><a class="see-all" href="{"phu-kien.html" if other else "tubeless.html"}">Xem tất cả</a></div>
       <div class="grid related" style="grid-template-columns:repeat(auto-fill,minmax(220px,1fr))">{rel}</div></section>
   </div>
 </main>'''
@@ -320,14 +325,14 @@ for g, t, s_ in GROUPS:
     secs += (f'  <section class="brand-cat" id="{g}"><div class="container"><h2 class="bc-title">{E(t)}</h2><p class="bc-sub">{E(s_)}</p>'
              f'<div class="grid">{cs}</div></div></section>\n')
 main = f'''<main id="main" class="pdp listing">
-  <div class="container"><nav class="crumbs" aria-label="Đường dẫn"><ol><li><a href="index.html">Trang chủ</a></li><li><a href="phu-tung.html">Phụ tùng</a></li><li aria-current="page">Tubeless &amp; phụ kiện</li></ol></nav></div>
+  <div class="container"><nav class="crumbs" aria-label="Đường dẫn"><ol><li><a href="index.html">Trang chủ</a></li><li><a href="phu-tung.html">Phụ tùng</a></li><li aria-current="page">Tubeless</li></ol></nav></div>
   <section class="list-hero">
     <img src="{img("air-liner-light-road", 1920)}" alt="Miếng lót tubeless Vittoria Air-Liner Light Road">
-    <div class="container"><div class="lh-copy"><span class="kicker">Vittoria</span><h1>Tubeless &amp; phụ kiện</h1><p>Keo tự vá, chân van, băng keo vành, miếng lót Air-Liner, săm và phụ kiện chính hãng Vittoria.</p></div></div>
+    <div class="container"><div class="lh-copy"><span class="kicker">Vittoria</span><h1>Tubeless</h1><p>Keo tự vá, chân van, băng keo vành và miếng lót Air-Liner chính hãng Vittoria.</p></div></div>
   </section>
   <nav class="brand-nav" aria-label="Danh mục tubeless"><div class="container"><ul>{"".join(f'<li><a href="#{g}">{E(t)}<small>{sum(p["group"] == g for p in P)}</small></a></li>' for g, t, s_ in GROUPS)}</ul></div></nav>
 {secs}</main>'''
-L = re.sub(r'<title>.*?</title>', '<title>Tubeless &amp; phụ kiện Vittoria — Spinlab</title>', L, 1, flags=re.S)
+L = re.sub(r'<title>.*?</title>', '<title>Tubeless Vittoria — Spinlab</title>', L, 1, flags=re.S)
 L = re.sub(r'<meta name="description"[^>]*>', '<meta name="description" content="Phụ kiện tubeless Vittoria chính hãng tại Spinlab: keo tự vá Universal Sealant và miếng lót Air-Liner Light cho road, gravel, MTB.">', L, 1)
 L = re.sub(r'<main id="main".*?</main>', lambda m: main, L, 1, flags=re.S)
 L = re.sub(r'\n// Tire listing[^\n]*\n.*?\}\)\(\);\n', '\n', L, 1, flags=re.S)
