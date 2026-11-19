@@ -355,22 +355,22 @@ for slug, f, gs in [('2027-strattos-8-di2-road-bike', 'polygon-strattos-8-di2', 
 TAMBORA_SIB = '9 AXS · 7 Di2 · 6 · 4'
 TAMBORA_FEAT = [('Khung & phuộc carbon', 'Khung carbon gravel và phuộc full carbon, cổ côn 1-1/8" – 1-1/2": nhẹ, cứng vững và êm trên đường sỏi đá.'), ('Lốp tới 700x55C', 'Khoảng hở lốp rộng tới 55mm — lắp sẵn lốp 45–50mm, đủ chỗ cho lốp to hơn khi đi địa hình khó.'), ('Pát chuẩn UDH', 'Gióng sau dùng pát UDH (Universal Derailleur Hanger): pát thay thế dễ tìm, sẵn sàng cho bộ truyền động thế hệ mới.'), ('Trục giữa ren T47', 'Trục giữa ren T47 76.75mm bền, dễ bảo dưỡng và hạn chế tiếng kêu.'), ('Đi dây âm hoàn toàn', 'Dây phanh và dây đề đi trong khung: gọn gàng, được bảo vệ khỏi bùn đất.')]
 VI['tambora-9-axs'] = dict(file='polygon-tambora-9-axs', cat='gravel', series='Tambora', siblings=TAMBORA_SIB,
-   chips=['Mới MY27', 'Gravel', 'Carbon', 'SRAM Force XPLR AXS 1x13'],
+   chips=['Gravel', 'Carbon', 'SRAM Force XPLR AXS 1x13'],
    headline='Gravel carbon cho mọi cung đường',
    intro='Tambora 9 AXS là phiên bản cao nhất của dòng gravel Tambora: khung và phuộc carbon, bộ truyền động không dây SRAM Force XPLR AXS E1 1x13 tốc độ (líp 10-46T), phanh dầu SRAM Force, ghi đông carbon tích hợp LINC, bộ bánh carbon Novatec G29 và lốp Schwalbe G-One R Pro 50mm thành nâu.',
    features=TAMBORA_FEAT)
 VI['tambora-7-di2'] = dict(file='polygon-tambora-7-di2', cat='gravel', series='Tambora', siblings=TAMBORA_SIB,
-   chips=['Mới MY27', 'Gravel', 'Carbon', 'Shimano GRX Di2 1x12'],
+   chips=['Gravel', 'Carbon', 'Shimano GRX Di2 1x12'],
    headline='Gravel carbon cho mọi cung đường',
    intro='Tambora 7 Di2 kết hợp khung và phuộc carbon với bộ truyền động điện tử Shimano GRX Di2 1x12 tốc độ (líp 10-51T), phanh dầu Shimano GRX, bộ bánh carbon Novatec G29 35mm và lốp Schwalbe G-One R Pro 50mm thành nâu — sang số chính xác trên mọi loại địa hình.',
    features=TAMBORA_FEAT)
 VI['tambora-6'] = dict(file='polygon-tambora-6', cat='gravel', series='Tambora', siblings=TAMBORA_SIB,
-   chips=['Mới MY27', 'Gravel', 'Carbon', 'Shimano GRX 2x12'],
+   chips=['Gravel', 'Carbon', 'Shimano GRX 2x12'],
    headline='Gravel carbon cho mọi cung đường',
    intro='Tambora 6 mang khung và phuộc carbon cùng bộ truyền động Shimano GRX 2x12 tốc độ (đĩa 46/30T, líp 11-36T) cho dải số rộng, phanh dầu Shimano GRX, vành nhôm tubeless-ready và lốp Schwalbe G-One R 50mm.',
    features=TAMBORA_FEAT)
 VI['tambora-4'] = dict(file='polygon-tambora-4', cat='gravel', series='Tambora', siblings=TAMBORA_SIB,
-   chips=['Mới MY27', 'Gravel', 'Carbon', 'Shimano CUES 2x10'],
+   chips=['Gravel', 'Carbon', 'Shimano CUES 2x10'],
    headline='Gravel carbon cho mọi cung đường',
    intro='Tambora 4 là cửa ngõ vào dòng Tambora: vẫn khung và phuộc carbon, bộ truyền động Shimano CUES 2x10 tốc độ (đĩa 46/32T, líp 11-39T) bền bỉ, phanh dầu Shimano CUES với đĩa 180mm, vành nhôm tubeless-ready và lốp Delium SpeedX 45mm.',
    features=TAMBORA_FEAT)
