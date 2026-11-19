@@ -233,7 +233,7 @@ def page(L):
       </div>
     </div>
 
-    <nav class="pdp-nav" aria-label="Nội dung sản phẩm"><a href="#gioi-thieu">Giới thiệu</a>{'<a href="#phien-ban">Phiên bản</a>' if len(vers) > 1 else ''}<a href="#cong-nghe">Công nghệ</a><a href="#ma-san-pham">Bảng kỹ thuật</a><a href="#hoi-dap">Hỏi đáp</a></nav>
+    <nav class="pdp-nav" aria-label="Nội dung sản phẩm"><a href="#gioi-thieu">Giới thiệu</a>{'<a href="#phien-ban">Phiên bản</a>' if len(vers) > 1 else ''}{'<a href="#cong-nghe">Công nghệ</a>' if 'id="cong-nghe"' in tech_html else ''}<a href="#ma-san-pham">Bảng kỹ thuật</a><a href="#hoi-dap">Hỏi đáp</a></nav>
 
     <section class="pdp-sec intro" id="gioi-thieu">
       <div><h2>{E(L["headline"])}</h2><p>{E(L["intro"])}</p>

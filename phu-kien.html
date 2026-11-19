@@ -548,6 +548,9 @@ body{background-color:#FFFBF4;background-image:url("data:image/svg+xml,%3Csvg xm
 @keyframes xfall{to{background-position:0 200px}}
 @keyframes xglow{from{opacity:.15}to{opacity:1}}
 @media (prefers-reduced-motion:reduce){.header::before,.hero::after,.list-hero::before,.footer{animation:none}}
+/* Category filter */
+.brand-nav a.on{background:var(--text);border-color:var(--text);color:#fff}
+.brand-nav a.on small{color:rgba(255,255,255,.7)}
 /* Language switch */
 .lang a{padding:4px 2px;color:var(--muted)}
 .lang a[aria-current]{color:var(--text);font-weight:800}
@@ -697,7 +700,7 @@ body{background-color:#FFFBF4;background-image:url("data:image/svg+xml,%3Csvg xm
   <section class="list-hero plain">
     <div class="container"><div class="lh-copy"><span class="kicker">Spinlab</span><h1>Phụ kiện</h1><p>Bình nước, dung dịch vệ sinh và phụ kiện chính hãng cho mọi chiếc xe.</p></div></div>
   </section>
-  <nav class="brand-nav" aria-label="Danh mục phụ kiện"><div class="container"><ul><li><a href="#binh-nuoc">Bình nước<small>1</small></a></li><li><a href="#ve-sinh">Vệ sinh<small>1</small></a></li></ul></div></nav>
+  <nav class="brand-nav" aria-label="Danh mục phụ kiện"><div class="container"><ul><li><a href="#" data-all>Tất cả</a></li><li><a href="#binh-nuoc">Bình nước<small>1</small></a></li><li><a href="#ve-sinh">Vệ sinh<small>1</small></a></li></ul></div></nav>
   <section class="brand-cat" id="binh-nuoc"><div class="container"><h2 class="bc-title">Bình nước</h2><p class="bc-sub">Bình nước Vittoria cho road, gravel và MTB.</p><div class="grid"><article class="p-card" data-type="other"><div class="p-img tire"><span class="tag dark">550ml</span><img src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/vittoria-bottle.webp?width=600" alt="Vittoria Bình nước Vittoria 550ml" loading="lazy"><img class="alt" src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/vittoria-bottle-cage.webp?width=600" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Vittoria · Bình nước</span><h3 class="p-name"><a class="stretch" href="/vittoria-bottle-550">Bình nước Vittoria 550ml</a></h3><p class="p-desc">550ml · xám than + đen</p><span class="p-price">485.000₫</span></div></article></div></div></section>
   <section class="brand-cat" id="ve-sinh"><div class="container"><h2 class="bc-title">Vệ sinh</h2><p class="bc-sub">Dung dịch vệ sinh và chăm sóc xe, lốp.</p><div class="grid"><article class="p-card" data-type="care"><div class="p-img tire"><span class="tag dark">Vệ sinh</span><img src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/sidewall-cleaner-01_1.webp?width=600" alt="Vittoria Dung dịch vệ sinh thành lốp" loading="lazy"><img class="alt" src="https://cdn.shopify.com/s/files/1/0800/0549/7120/files/sidewall-cleaner-03_1.webp?width=600" alt="" loading="lazy" aria-hidden="true"></div><div class="p-body"><span class="p-brand">Vittoria · Vệ sinh lốp</span><h3 class="p-name"><a class="stretch" href="/vittoria-sidewall-cleaner">Dung dịch vệ sinh thành lốp</a></h3><p class="p-desc">Dùng được cho lốp cotton và nylon</p><span class="p-price">380.000₫</span></div></article></div></div></section>
 </main>
@@ -843,6 +846,18 @@ body{background-color:#FFFBF4;background-image:url("data:image/svg+xml,%3Csvg xm
   }
   window.spinlabCompare={load,save,render};
   render();
+})();
+// Category filter: #category shows only that category; "Tất cả" or the page without a hash shows everything
+(() => {
+  const secs=[...document.querySelectorAll('section.brand-cat[id]')], pills=[...document.querySelectorAll('.brand-nav a')], bar=document.querySelector('.brand-nav');
+  const apply=scroll=>{ const k=decodeURIComponent(location.hash.slice(1)), one=secs.some(s=>s.id===k);
+    secs.forEach(s=>s.hidden=one&&s.id!==k);
+    pills.forEach(a=>{ const on=one?a.getAttribute('href')==='#'+k:a.hasAttribute('data-all'); a.classList.toggle('on',on); on?a.setAttribute('aria-current','true'):a.removeAttribute('aria-current'); });
+    document.querySelectorAll('.nav-top[aria-expanded="true"]').forEach(b=>b.setAttribute('aria-expanded','false'));
+    if(scroll&&bar){ const head=document.querySelector('.header'); window.scrollTo({top:bar.getBoundingClientRect().top+scrollY-(head?head.getBoundingClientRect().height:0)-12, behavior:'smooth'}); } };
+  pills.filter(a=>a.hasAttribute('data-all')).forEach(a=>a.addEventListener('click',e=>{ e.preventDefault(); history.pushState(null,'',location.pathname+location.search); apply(true); }));
+  addEventListener('hashchange',()=>apply(true)); addEventListener('popstate',()=>apply(false));
+  apply(false); if(secs.some(s=>s.id===decodeURIComponent(location.hash.slice(1)))) requestAnimationFrame(()=>apply(true));
 })();
 </script>
 </body>
