@@ -19,6 +19,11 @@ CARD = re.compile(r'<article class="p-card"[^>]*>.*?</article>', re.S)
 HID_CARD = re.compile(r'<!--hidden-card:([A-Za-z0-9+/=]+)-->')
 LINK = re.compile(r'<a ([^>]*?)href="(/?[a-z0-9-]+(?:\.html)?)"([^>]*)>(.*?)</a>', re.S)
 HID_LINK = re.compile(r'<span data-hidden-href="([^"]+)"( data-a="[^"]*")?>(.*?)</span><!--/h-->', re.S)
+# in a "Các phiên bản trong dòng …" list, a hidden version disappears with its " · " separator (kept in a comment)
+HID_SIB = re.compile(r'<!--hidden-sib:([A-Za-z0-9+/=]+)-->')
+SIB_P = re.compile(r'<p class="siblings">.*?</p>', re.S)
+SIB_ITEM = re.compile(r' · <span data-hidden-href="[^"]+"(?: data-a="[^"]*")?>.*?</span><!--/h-->'
+                      r'|<span data-hidden-href="[^"]+"(?: data-a="[^"]*")?>.*?</span><!--/h--> · ', re.S)
 
 
 def load():
@@ -49,7 +54,8 @@ def run():
     n = 0
     for f in sorted(glob.glob(os.path.join(ROOT, '*.html'))):
         s = open(f, encoding='utf-8').read()
-        t = HID_CARD.sub(lambda m: base64.b64decode(m.group(1)).decode('utf-8'), s)
+        t = HID_SIB.sub(lambda m: base64.b64decode(m.group(1)).decode('utf-8'), s)
+        t = HID_CARD.sub(lambda m: base64.b64decode(m.group(1)).decode('utf-8'), t)
         t = HID_LINK.sub(lambda m: f'<a {base64.b64decode(m.group(2)[9:-1]).decode() if m.group(2) else ""}href="{m.group(1)}">{m.group(3)}</a>', t)
         t = CARD.sub(lambda m: f'<!--hidden-card:{base64.b64encode(m.group(0).encode()).decode()}-->'
                      if card_target(m.group(0)) in hidden else m.group(0), t)
@@ -61,6 +67,7 @@ def run():
             extra = f' data-a="{base64.b64encode((attrs + " ").encode()).decode()}"' if attrs else ''
             return f'<span data-hidden-href="{m.group(2)}"{extra}>{m.group(4)}</span><!--/h-->'
         t = LINK.sub(link, t)
+        t = SIB_P.sub(lambda p: SIB_ITEM.sub(lambda m: f'<!--hidden-sib:{base64.b64encode(m.group(0).encode()).decode()}-->', p.group(0)), t)
         if t != s:
             open(f, 'w', encoding='utf-8').write(t)
             n += 1
