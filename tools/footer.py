@@ -20,6 +20,13 @@ CSS = '''/* Footer map */
 '''
 OLD = re.compile(r'<div(?: class="f-contact")?><h4>Liên hệ</h4>.*?</ul>(?:<iframe class="f-map".*?</a>)?</div>', re.S)
 CSS_RX = re.compile(r'/\* Footer map \*/\n(?:\.footer \.f-[^\n]*\n)+')
+# short pages (categories with few products): the page fills the screen and the footer sits at the bottom,
+# instead of leaving an empty band of page background under it
+BOTTOM = '''/* Footer at bottom */
+body{min-height:100vh;min-height:100dvh;display:flex;flex-direction:column}
+body>main{flex:1 0 auto}
+'''
+BOTTOM_RX = re.compile(r'/\* Footer at bottom \*/\n(?:body[^\n]*\n)+')
 
 n = 0
 for f in sorted(glob.glob(os.path.join(ROOT, '*.html'))):
@@ -28,7 +35,7 @@ for f in sorted(glob.glob(os.path.join(ROOT, '*.html'))):
     if foot < 0:
         continue
     t = s[:foot] + OLD.sub(lambda m: COL, s[foot:], 1)
-    t = CSS_RX.sub('', t).replace('</style>', CSS + '</style>', 1)
+    t = BOTTOM_RX.sub('', CSS_RX.sub('', t)).replace('</style>', CSS + BOTTOM + '</style>', 1)
     if t != s:
         open(f, 'w', encoding='utf-8').write(t)
         n += 1
